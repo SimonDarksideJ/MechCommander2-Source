@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="077A6DC6074D77948C55A9F0E2F9F857" />
+  <Asset Name="..\treeclump1.ini" Type="Physical" Author="franksav" FileSize="210" ModificationTime="2006-03-03T01:28:54.1953486-08:00" CRC="D6FC3367EFEE957E14FE16322A5748F1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="TreeClump1.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="StumpClump.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

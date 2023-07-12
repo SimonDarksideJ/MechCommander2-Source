@@ -1,0 +1,17 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=0
+
+[ObjectType]
+st Name="pineclump.fit"
+st AppearanceName="pineclump"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TreeData]
+ul DmgLevel=15
+f ExtentRadius=0.000000
+
+FITend 

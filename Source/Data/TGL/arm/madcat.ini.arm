@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9162CBDDAFD73FED6282EE8315467EA2" />
+  <Asset Name="..\madcat.ini" Type="Physical" Author="franksav" FileSize="4103" ModificationTime="2006-03-03T01:28:34.2111015-08:00" CRC="E5E170667A553D1FD80D4B0AD55F99BB" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Madcat.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="MadcatL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="MadcatL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="MadcatX.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcat.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="madcatFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="madcatFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="madcatFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Mad Cat" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

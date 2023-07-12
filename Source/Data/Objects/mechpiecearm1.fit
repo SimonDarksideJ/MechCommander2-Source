@@ -1,0 +1,19 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=11
+
+[ObjectType]
+st Name="mechdebrisarm1"
+st AppearanceName="MechPiece_Arm1"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TerrainObjectData]
+ul DmgLevel=0
+f ExtentRadius=0.000000
+
+FITend 
+
+

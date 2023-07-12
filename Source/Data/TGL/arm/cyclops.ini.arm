@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0F9DEDFAD65A3D337B6B92E2768B6F92" />
+  <Asset Name="..\cyclops.ini" Type="Physical" Author="franksav" FileSize="4152" ModificationTime="2006-03-03T01:28:19.3518216-08:00" CRC="28869F3CF93B7C80675B2DB97148A261" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Cyclops.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="CyclopsL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="CyclopsL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="CyclopsX.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclops.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cyclopsFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="cyclopsFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="cyclopsFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Cyclops" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

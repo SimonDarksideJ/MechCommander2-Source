@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D42C2FFB39C79A44294E4E52A8EC637D" />
+  <Asset Name="..\l_elitebarracksX.ase" Type="Physical" Author="ngauvin" FileSize="41567" ModificationTime="2006-02-01T10:55:03.0764279-08:00" CRC="FB2F5E8802452C629092496D2261C742" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

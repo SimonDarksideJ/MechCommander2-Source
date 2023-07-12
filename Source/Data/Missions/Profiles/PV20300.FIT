@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20300   'Fuel Truck'  Type:  406 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20300 
+st Crew =                                                  "PCREWD"
+ul Chassis =                                                406 
+st Name =                                                  "Fuel Truck"
+ul VehicleTypeID =                                          406 
+l NameIndex =                                               26 
+l DescIndex =                                               520 
+f CurTonnage =                                              55 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          5500 
+l BattleRating =                                            55 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 0.75 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

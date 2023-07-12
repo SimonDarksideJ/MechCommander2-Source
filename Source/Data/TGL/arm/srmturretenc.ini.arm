@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A2C8B2DE4EF73A43C6A20CCDDD497F14" />
+  <Asset Name="..\srmturretenc.ini" Type="Physical" Author="franksav" FileSize="298" ModificationTime="2006-03-03T01:28:51.5547405-08:00" CRC="ACDD6BC197FCED97693009F2BB37C086" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="SRMTurretEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

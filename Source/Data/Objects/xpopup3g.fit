@@ -1,0 +1,44 @@
+FITini
+
+//-----------------------------------------------------
+// This is a Turret Object
+
+[ObjectClass]
+l ObjectTypeNum = 21
+
+[ObjectType]
+st Name 							= "pop3g"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 43				// ID number for this mech type
+l Appearance						= 0x090003B1
+l Duration							= -1				// Lasts forever = -1
+l MaxDamage							= 200				// Number of damage points before BOOM!
+l ExplosionObject					= 696				// Object Class Number of explosion for Mech
+l DestroyedObject					= 101				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 5					// Extent Radius in Meters
+l IconNumber						= 0
+
+[TurretData]
+ul DmgLevel							= 33				// How much damage before BOOM
+b BlocksLineOfFire = FALSE
+ul BlownEffectId					= -1
+ul NormalEffectId					= -1
+ul DamageEffectId					= -1
+l LowTemplate		= 0x18000000
+l HighTemplate		= 0x00000018
+f ExplosionRadius					= 0.0				// How big is my splash Damage Radius?
+f ExplosionDamage					= 0.0				// How much splash damage do I do?
+f Tonnage							= 20.0				// How much do I weigh (for sensors)
+f AttackRadius						= 375.0				// At what radius do I start trying to attack a target
+														// (i.e. When do I popup, start rotating, etc.)
+
+l WeaponType						= 120				// What do I shoot? (TURRET LRM - IS)
+														// This is the number in the first column of the 
+														// Compbas file for that weapon
+
+l BuildingName						= 400
+f maxTurretYawRate					= 45				//Degrees per second turret yaws
+l BasePixelOffsetX             		= -1               //Where on tile to draw this building.
+l BasePixelOffsetY              	= 60                //
+l PilotSkill						= 50
+
+FITEnd

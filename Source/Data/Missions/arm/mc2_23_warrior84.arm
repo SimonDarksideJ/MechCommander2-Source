@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="94FFFBB2B0D97B9792429BE3B97B40F2" />
+  <Asset Name="..\mc2_23_warrior84" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\pv20500.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\LRMC.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\LRMC.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWVeteran.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_23_Reb_vehs3.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

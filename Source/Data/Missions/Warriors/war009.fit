@@ -1,0 +1,41 @@
+FITini
+
+// MechWarrior iniFile
+
+[General]
+
+st Name =						"Todd Labonte"
+st Callsign =					"ANIMBOY"
+ul ID =							1000
+ul Profile =					1000
+ul HeadIcon =					1050
+l paintScheme = 				26
+st pilotAudio =					"pilotc"
+st pilotVideo = 				"plt1g001"
+st Picture = 					"pilot7.gif"
+
+[PersonalityTraits]
+c Professionalism =				45
+c Decorum =						55
+c Aggressiveness =				60
+c Courage =						80
+
+[Skills]
+c Piloting =					100
+c Jumping =						50
+c Sensors =						50
+c TargetingShort =				100
+c TargetingMedium =				100
+c TargetingLong =				100
+
+[Affinities]
+c MechClass =					0
+c MechType =					1
+c WeaponClass =					2
+uc[2] WeaponTypes =				10,
+								15
+
+[Status]
+c Wounds =						0
+
+FITend

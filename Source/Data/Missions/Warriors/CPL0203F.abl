@@ -1,0 +1,256 @@
+//***************************************************************************
+
+module CPatrolBrain0203f : integer;
+
+	const
+
+		#include_ "cconst.abi"	
+
+		NUM_PATROL_STEPS = 7;	// SET THIS CONSTANT TO DEFINE # STEPS (WAY POINTS).
+
+		NUM_PATROL_CYCLES = 1;	// SET this if PatrolType is cycleing. MAX IS 2,147,483,647.
+		
+		//  Use these to set VAR PatrolType. DON'T CHANGE THEIR VALUES, OK?!!!
+		PATROL_AND_STOP = 0;		// NON-cycling
+		PATROL_CIRCLE = 1;			// cycling
+		PATROL_BACK_N_FORTH = 2;	// cycling
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 150;		// Meters... Set this to distance Clanner will give up.
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[40]			dstring;
+		integer				x;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		integer				PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+		static integer		pathStep;
+		static integer		pathCycles;
+
+		static integer						PatrolType;
+		static real[NUM_PATROL_STEPS,2]		PatrolPath;
+		static boolean						PatrolForward;
+		static boolean						InitialForward;
+		boolean								MakeTurn;
+		static boolean 						Stopped;
+		static boolean						InWithdrawMode;
+		static boolean						Rerouted;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// This guy is just guarding his area but is under no compunction to return there.
+		setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 200.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 400.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 10.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+		setIntegerMemory(MI_OBJECT, 0);
+
+		IdentifyContacts = FALSE;		// Set this to TRUE to make them move to identify sensor contacts
+		challengesetting = CHALLENGE_ON;
+
+		PatrolType = PATROL_AND_STOP;		// use patrol constants to set patrol type
+										// PATROL_AND_STOP	PATROL_CIRCLE	 PATROL_BACK_N_FORTH
+
+		PatrolForward = TRUE;			// Set to False if you want to do it all in reverse
+
+		MoveSpeed = WALK;			// Set to WALK or RUN constant
+
+		PatrolPath[0,0] = 2400; // 3100;		//Have a pair of these lines for every step X,Y
+		PatrolPath[0,1] = 2200; // 2900;	//and increment the first number once for each pair.
+
+		PatrolPath[1,0] = 3772; // 3246;
+		PatrolPath[1,1] = -449; // -1577;
+
+		PatrolPath[2,0] = 1681;
+		PatrolPath[2,1] = -2400;
+
+		PatrolPath[3,0] = 606;
+		PatrolPath[3,1] = -4237;
+
+		PatrolPath[4,0] = -308;
+		PatrolPath[4,1] = -6467;
+
+		PatrolPath[5,0] = 606;
+		PatrolPath[5,1] = -4237;
+
+		PatrolPath[6,0] = -308;
+		PatrolPath[6,1] = -6467;
+
+
+		//*********************
+		// Don't change this
+		//--------------------
+		pathCycles = 0;
+		Stopped = FALSE;
+		MovingToObjective = FALSE;
+		InitialForward = PatrolForward;
+
+		if (PatrolForward) then
+			pathStep = 0;
+		else
+			pathStep = NUM_PATROL_STEPS - 1;
+		endif;
+		moveToPosition[0] = PatrolPath[pathStep,0];
+		moveToPosition[1] = PatrolPath[pathStep,1];
+		moveToPosition[2] = 0.0;
+
+		InWithdrawMode = FALSE;
+		Rerouted = FALSE;
+
+endfunction;
+
+//#include_ "miscfunc.abi"
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+
+		//**************************************************************************
+		// Patrol Code - Don't mess with this, but you may append to it.
+		//--------------------------------------------------------------------------
+		// They will remain in Combat_Mode_Wait until they see a contact.
+
+		if (CurrentTarget > 0) then
+			MovingToObjective = FALSE;
+		endif;
+
+		MakeTurn = FALSE;
+		aReal = distanceToPosition(CUR_OBJECT_ID, moveToPosition);
+		if ((NOT Stopped) AND (aReal < MIN_DISTANCE) AND (aReal <> -1)) then
+			MovingtoObjective = FALSE;
+			pathStep = pathStep + 1;
+			MakeTurn = TRUE;
+			if (pathStep > NUM_PATROL_STEPS - 1) then
+				Stopped = TRUE;
+				dString = "Stopped.";
+				print(dString);
+			endif;
+		endif;
+
+
+/*		if ((NOT Rerouted) AND (PathStep < 2)) then // change this # for other convoy groups
+			if (BridgeThreeDestroyed) then
+				PatrolPath[2,0] = 1681;		// if I don't set PatrolPath[1] then they'll go to bridgeone shoreline first
+				PatrolPath[2,1] = -2400;
+
+				PatrolPath[3,0] = 606;
+				PatrolPath[3,1] = -4237;
+
+				PatrolPath[4,0] = -358;
+				PatrolPath[4,1] = -6517;
+
+				dstring = "Vehicle A Rerouted";
+				print(dstring);				
+				Rerouted = TRUE;
+				MakeTurn = TRUE;
+			endif;
+		endif;
+*/
+
+		if ((MakeTurn) AND (NOT Stopped)) then
+			moveToPosition[0] = PatrolPath[pathStep,0];
+			moveToPosition[1] = PatrolPath[pathStep,1];
+			moveToPosition[2] = 0.0;
+		endif;
+
+		if ((NOT Stopped) AND (CurrentTarget == 0) AND (NOT MovingToObjective) AND (NOT MovingToIdentify)) then
+			orderMoveTo(moveToPosition,MoveSpeed);
+			MovingToObjective = TRUE;
+		endif;
+
+		if ((Stopped) and (NOT InWithdrawMode)) then
+			if (ConvoyCGone) then
+				orderWithdraw;
+				InWithdrawMode = TRUE;
+			endif;
+		endif;
+			
+		if ((CurrentTarget == 0) and (NOT InWithdrawMode)) then
+			for x = PLAYER_VEHICLE0_LANCE0 to PLAYER_VEHICLE0_LANCE0 + 5 do
+				if ((CurrentTarget == 0) and (gettarget(x) == Me) and (distancetoobject(Me,x) < getvisualrange(-1))) then
+					orderAttackObject(x,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+					challenge(x);
+					CurrentTarget = x;
+					setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+					MovingToObjective = FALSE;
+				endif;
+			endfor;
+		endif;
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

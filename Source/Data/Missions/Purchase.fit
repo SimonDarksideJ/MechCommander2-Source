@@ -1,0 +1,92 @@
+FITini
+
+[Components]
+
+b AllComponents = TRUE
+
+l Component0 = 10
+l Component1 = 13
+l Component2 = 14
+l Component3 = 15
+l Component4 = 25
+l Component5 = 36
+l Component6 = 38
+l Component7 = 99
+l Component8 = 100
+l Component9 = 101
+l Component10 = 102
+l Component11 = 103
+l Component12 = 104
+l Component13 = 105
+l Component14 = 106
+l Component15 = 107
+l Component16 = 108
+l Component17 = 109
+l Component18 = 110
+l Component19 = 111
+
+[Mechs]
+
+st Mech0 = "Anubis"
+st Mech1 = "Atlas"
+st Mech2 = "Bloodasp"
+st Mech3 = "Bushwacker"
+st Mech4 = "Catapult"
+st Mech5 = "Cyclops"
+st Mech6 = "Enfield"
+st Mech7 = "Flea"
+st Mech8 = "Highlander"
+st Mech9 = "Hollander"
+st Mech10 = "Hunchback"
+st Mech11 = "LaoHu"
+st Mech12 = "Raven"
+st Mech13 = "Shadowcat"
+st Mech14 = "ShaYu"
+st Mech15 = "Shootist"
+st Mech16 = "Starslayer"
+st Mech17 = "Uller"
+st Mech18 = "UrbanMech"
+st Mech19 = "Vulture"
+st Mech20 = "Wolfhound"
+st Mech21 = "Zeus"
+st Mech22 = "Jaegermech"
+st Mech23 = "Madcat"
+st Mech24 = "Menshen"
+st Mech25 = "Werewolf"
+st Mech26 = "Thor"
+st Mech27 = "Ryoken"
+st Mech28 = "Cougar"
+
+
+
+[Pilots]
+
+st Pilot0 = "pmp_Dagger"
+st Pilot1 = "pmp_Nuke"
+st Pilot2 = "pmp_PaleRider"
+st Pilot3 = "pmp_Payback"
+st Pilot4 = "pmp_Twitch"
+st Pilot5 = "pmp_Worm"
+st Pilot6 = "pmp_Chopper"
+st Pilot7 = "pmp_Claymore"
+st Pilot8 = "pmp_Cobra"
+st Pilot9 = "pmp_Creep"
+st Pilot10 = "pmp_Flash"
+st Pilot11 = "pmp_Hacksaw"
+st Pilot12 = "pmp_Hammer"
+st Pilot13 = "pmp_Jinx"
+st Pilot14 = "pmp_Longshot"
+st Pilot15 = "pmp_Psycho"
+st Pilot16 = "pmp_Bubba"
+st Pilot17 = "pmp_Scooter"
+st Pilot18 = "pmp_Venom"
+st Pilot19 = "pmp_Wicked"
+st Pilot20 = "pmp_Ghost"
+st Pilot21 = "pmp_Meat"
+st Pilot22 = "pmp_Mother"
+st Pilot23 = "pmp_Rooster"
+st Pilot24 = "pmp_Shadow"
+st Pilot25 = "pmp_Steel"
+
+
+FITend

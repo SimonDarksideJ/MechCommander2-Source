@@ -1,0 +1,16 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=11
+
+[ObjectType]
+st Name="longtent"
+st AppearanceName="longTent"
+l ExplosionObject=727
+l DestroyedObject=0
+f ExtentRadius=35.000000
+
+[TerrainObjectData]
+ul DmgLevel=1
+f ExtentRadius=20.000000
+FITend 

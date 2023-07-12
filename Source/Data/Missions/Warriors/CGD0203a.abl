@@ -1,0 +1,540 @@
+//***************************************************************************
+
+module CGuardBrain0203a : integer;
+
+	const
+
+		#include_ "cconst.abi"
+
+		NUM_GUARD_OBJECTS = 3;	// This is the number of objects in my guard list.
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;		// Meters... Set this to distance Clanner will give up.
+
+		NUM_PATH_STEPS = 4;  // This is for the Let Loose Path
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		static integer		PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+		static integer		CurrentGO;
+
+		static boolean			WithdrawAtPoint;
+		static real[3]			WithdrawPoint;
+		static boolean			InWithdrawMode;
+
+		static real[3]						getToPosition;
+		static boolean						GotThere;
+		static boolean						LetLoose;
+		static boolean						LetMeLoose;
+		static integer						LetLooseSteps;
+		static boolean						Withdraw;
+		static boolean						LetMeWithdraw;
+		static boolean						HangOut;
+		static boolean						HangHere;
+		static real[3]						HangOutPoint;
+		static integer[NUM_GUARD_OBJECTS]	GOList;
+		static boolean[NUM_GUARD_OBJECTS]	GODead;
+		boolean								NewGO;
+		integer								thisGO;
+		integer								numBastards;
+	    static IntList						bastardList;
+		real								closestDistance;
+		real								thisDistance;
+		integer								thisBastard;
+		integer								bastardID;
+		integer								closestBastard;
+		static integer						pathStep;
+		static real[NUM_PATH_STEPS,2]		LetLoosePath;
+		static integer						LetLooseTarget;
+		integer								GOClass;
+		static boolean						GuardSpeed;
+		static boolean						LetLooseSpeed;
+		static boolean						WithdrawSpeed;
+		static boolean						HangSpeed;
+		static position						MyLastPoint;
+		position							MyPoint;
+
+#include_ "miscfunc.abi"
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// 
+		setIntegerMemory(MI_MODE, COMBAT_MODE_GUARD);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 200.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 300.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 100.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_GUARD);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+
+
+		//***********************************
+		// Guard Brain Data Entry Here, too.
+
+		getToPosition[0] = StartPoint[0];	// Substitute ## coordinates if initially moving
+		getToPosition[1] = StartPoint[1];
+		getToPosition[2] = StartPoint[2];
+
+		//--------------------------------------------------------
+		// Enter Block and Vertex numbers in successive 'GOList[#]' lines.
+		// Have one line for every object on the list. Increment the #
+		// between the brackets '[#]' with every line.  Start at '0'.
+		// If the object is not a terrain object, substitute the
+		// 'getTerrainObjectPartId' function with one that will return
+		// the object ID or with the actual ID if it's known.
+		//
+		// Example:
+		// GOList[0] = getTerrainObjectPartId(28,274);	// A building at block 28, vertex 274
+		// GOList[1] = CLAN_VEHICLE0_STAR2;	// A constant equal to object # of clan unit
+
+		GOList[0] = VehicleID(CLAN_STAR0,0,0);		//Enter Object Block and Vertex Here
+		GOList[1] = VehicleID(CLAN_STAR0,1,0);		//Enter Object Block and Vertex Here
+		GOList[2] = VehicleID(CLAN_STAR0,2,0);		//Enter Object Block and Vertex Here
+
+		GuardSpeed = RUN;	// Enter WALK or RUN to set the speed he moves when guarding
+
+		//-----------------------------------------------------------------------
+		// If you want to Let Loose after guard objects are destroyed, edit this.
+		// Note, This takes precendence over withdraw and hanging out.
+
+		LetMeLoose = FALSE;	// Set this to TRUE to let it loose.
+
+		LetLooseSpeed = WALK;	// Enter WALK or RUN to set the speed he moves when let loose
+
+		LetLooseTarget = 0;	// If 0, he'll look for closest bastard to his last guard object.
+							// You may set this to a specific target instead using object ID.
+		HunterKiller = TRUE;	// Set this to TRUE to make it KNOW where its primary target is.
+
+		LetLooseSteps = NUM_PATH_STEPS;	// Set NUM_PATH_STEPS in const section above to number of steps
+
+		LetLoosePath[0,0] = 0;		//Have a pair of these lines for every step X,Y
+		LetLoosePath[0,1] = -2000;	//and increment the first number once for each pair.
+
+		LetLoosePath[1,0] = -2000;
+		LetLoosePath[1,1] = 0;
+
+		LetLoosePath[2,0] = 0;
+		LetLoosePath[2,1] = 2000;
+
+		LetLoosePath[3,0] = 2000;		//Make sure you don't have any extra LetLoosePath assignment pairs.
+		LetLoosePath[3,1] = 0;
+
+		//-----------------------------------------------------------------------
+		// If you want to withdraw after guard objects are destroyed, edit this.
+		// Note, LetMeLoose takes precendence over this.
+
+		LetMeWithdraw = FALSE;  // Set this to TRUE to let it happen.
+
+		WithdrawSpeed = RUN;	// Enter WALK or RUN to set the speed he moves when withdrawing
+								// Note:  This depends on use of WithdrawAtPoint below.
+
+		WithdrawAtPoint = FALSE;  // Set this to TRUE if specifying withdraw coordinates.
+		WithdrawPoint[0] = 4500.0; // X  Enter your coordinates here.
+		WithdrawPoint[1] = 4500.0; // Y
+		WithdrawPoint[2] = 0.0; // Z
+
+		//-----------------------------------------------------------------------
+		// If you just want the guy to hang out.  Tell him where.
+		// Note:  Hanging out means he'll guard where he stands.
+
+		HangHere = FALSE;	// Set this to true if specifiying coordinates, else
+							// he'll just hang out where he last guarded.
+
+		HangSpeed = WALK;	// Enter WALK or RUN to set the speed he moves when hanging out
+
+		HangOutPoint[0] = 0.0;	// X
+		HangOutPoint[1] = 0.0;	// Y
+		HangOutPoint[2] = 0.0;	// Z
+
+		//******************************
+		// Don't change this stuff.
+		//--------------------------
+
+		MoveSpeed = GuardSpeed;
+
+		if ((LetMeLoose) AND (LetLooseSteps > 0)) then
+			pathStep = 0;
+			moveToPosition[0] = LetLoosePath[pathStep,0];
+			moveToPosition[1] = LetLoosePath[pathStep,1];
+			moveToPosition[2] = 0.0;
+		else
+			moveToPosition[0] = StartPoint[0];
+			moveToPosition[1] = StartPoint[1];
+			moveToPosition[2] = StartPoint[2];
+		endif;
+
+		CurrentGO = -1;
+		for t = 0 to (NUM_GUARD_OBJECTS - 1) do
+			GuardObjectId = GOList[t];
+			GOClass = objectClass(GuardObjectId);
+			assert((GOClass == BUILDING_CLASS) OR (GOClass == MECH_CLASS) OR (GOClass == VEHICLE_CLASS) OR (GOClass == ELEMENTAL_CLASS),86,"Invalid Guard Object.");
+			dString = "Object = ";
+			concat(dString,t);
+			print(dString);
+			if (GOClass == 12) then // Building
+				if (getObjectDamage(GuardObjectId) < 100) then
+					if (CurrentGO == -1) then
+						CurrentGO = t;
+					endif;
+					GODead[t] = FALSE;
+				else
+					GODead[t] = TRUE;
+				endif;
+			else // assume it's a vehicle or mech or elemental
+				objstatus = ObjectStatus(GuardObjectId);
+				if ((objstatus <> 1) AND (objstatus <> 2) AND (objstatus <> -1)) then
+					if (CurrentGO == -1) then
+						CurrentGO = t;
+					endif;
+					GODead[t] = FALSE;
+				else
+					GODead[t] = TRUE;
+				endif;
+			endif;
+		endfor;
+		assert((CurrentGO <> -1),86,"Design Error.  All guard objects dead.");
+		print(CurrentGO);
+
+		GotThere = FALSE;
+		GuardObjectId = GOList[CurrentGO];
+		setIntegerMemory(MI_OBJECT, GuardObjectId);
+
+		InWithdrawMode = FALSE;
+		LetLoose = FALSE;
+		Withdraw = FALSE;
+		HangOut = FALSE;
+
+		PrimaryTarget = 0;
+
+endfunction;
+
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+	//************************
+	// Error checking code - if standing still, then issue order again		
+	getObjectPosition(CUR_OBJECT_ID, MyPoint);
+	if ((CurrentTarget == 0) and (MovingToObjective)) then
+		if ((MyPoint[0] == MyLastPoint[0]) AND (MyPoint[1] == MyLastPoint[1])) then
+			Print("PATCH: I stopped moving for some reason.  Reissue order ...");
+			orderMoveToObject(GuardObjective,MoveSpeed);
+		endif;
+	endif;
+	getObjectPosition(CUR_OBJECT_ID, MyLastPoint);
+
+
+		//**************************************************************************
+		// Guard Code - Don't mess with this, but you may append to it.
+		//--------------------------------------------------------------------------
+		// They will remain in Combat_Mode_Guard until they see a contact.  If what
+		// they are supposed to be guarding is destroyed, they will revert to combat
+		// mode destroy, with the primary target being the 'Mech/Vehicle who destroyed
+		// the guard object.  This will also give them the freedom to pursuit contacts.
+
+
+	if ((NOT LetLoose) AND (NOT Withdraw) AND (NOT HangOut)) then
+		if ((NOT GotThere) AND (distanceToPosition(CUR_OBJECT_ID, getToPosition) < MIN_DISTANCE)) then
+			GotThere = TRUE;
+		endif;
+		if ((CurrentCombatMode == COMBAT_MODE_GUARD) AND (CurrentTarget == 0) AND (NOT MovingtoObjective) AND (NOT MovingtoIdentify) AND (NOT GotThere)) then
+			orderMoveTo(getToPosition,MoveSpeed);	// This will get them moving to where you want
+			MovingToObjective = TRUE;		// them to guard if the getToPosition coordinates
+		endif;								// set in the INIT function are anything but
+											// the StartPoint.
+
+		NewGO = FALSE;
+		GOClass = objectClass(GuardObjectId);
+		if (GOClass == BUILDING_CLASS) then
+			if (getObjectDamage(GuardObjectId) >= 100) then
+				dString = "GO Died - ";
+				concat(dString,CurrentGO);
+				print(dstring);
+				GoDead[CurrentGO] = TRUE;
+			endif;
+		else
+			objstatus = ObjectStatus(CurrentGO);
+			if ((objstatus == 1) OR (objstatus == 2)) then
+				GoDead[CurrentGO] = TRUE;
+			endif;
+		endif;				
+		  // If what I'm guarding is dead look for another on the guard list
+		if (GoDead[CurrentGO]) then
+			for thisGO = 0 to NUM_GUARD_OBJECTS - 1 do
+				if ((NOT NewGO) AND (NOT GODead[thisGO])) then
+					GuardObjectId = GOList[thisGO];
+					CurrentGO = thisGO;
+					setIntegerMemory(MI_OBJECT, GuardObjectId);
+					dstring = "New GO is ";
+					concat(dstring,CurrentGO);
+					print(dstring);
+					NewGO = TRUE;
+				endif;
+			endfor;
+
+			if (NOT NewGO) then
+				if (LetMeLoose) then
+					LetLoose = TRUE;
+					PrimaryTarget = LetLooseTarget;
+					setIntegerMemory(MI_OBJECT, PrimaryTarget);
+					dstring = "Let Loose";
+					print(dstring);
+					MovingtoObjective = FALSE;
+					if (CurrentTarget == 0) then
+						orderwait(0.0); // clear out old orders
+					endif;
+
+					//-------------------------
+					// Find closest bastard if no other primary target
+					if (PrimaryTarget == 0) then
+						numBastards = getContacts(bastardList, CT_ENEMY + CT_LOS, CS_CV);
+						closestDistance = -1.0;
+						for thisBastard = 0 to (numBastards - 1) do
+							selectContact(1, bastardList[thisBastard]);
+							bastardID = getContactId;
+							thisDistance = distanceToObject(bastardId, GuardObjectID);
+							if (closestDistance == -1.0) then
+								closestDistance = thisDistance;
+								closestBastard = thisBastard;
+							else
+								if (thisDistance < closestDistance) then
+									closestDistance = thisDistance;
+									closestBastard = thisBastard;
+								endif;
+						 	endif;
+						endfor;
+						if (closestDistance <> -1.0) then
+							orderwait(0.0); // Clear out old orders
+							selectContact(1, bastardList[closestBastard]);
+							PrimaryTarget = getContactId;
+							challenge(PrimaryTarget);
+							if (NOT HunterKiller) then
+								orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+							else
+								orderAttackObject(PrimaryTarget,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+							endif;
+							setIntegerMemory(MI_MODE, COMBAT_MODE_DESTROY);
+							setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+						else
+							setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+							if (CurrentTarget == 0) then
+								setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+							else
+								setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+							endif;
+						endif;
+					else
+						setIntegerMemory(MI_MODE, COMBAT_MODE_DESTROY);
+						setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+						if (HunterKiller) then
+							orderAttackObject(PrimaryTarget,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+						endif;
+					endif;
+
+				else
+					if (LetMeWithdraw) then
+						dstring = "Withdraw";
+						print(dstring);
+						Withdraw = TRUE;
+					else
+						HangOut = TRUE;
+						dstring = "HangOut";
+						print(dstring);
+					endif;
+				endif;
+			endif;
+				
+		endif;
+
+		if (NewGO) then  // Enter any code here that occurs when a new Guard Object is assigned
+			getObjectPosition(GuardObjectId,aPoint);
+			setRealMemory(MI_COORD_X, aPoint[0]);
+			setRealMemory(MI_COORD_Y, aPoint[1]);
+			setRealMemory(MI_COORD_Z, aPoint[2]);
+			GuardDistance = distanceToObject(CUR_OBJECT_ID,GuardObjectId);
+			GuardObjectCF = 100 - getObjectDamage(GuardObjective);				//getObjectDamage returns percent
+		endif;
+
+	endif;
+
+	CurrentTarget = getTarget(CUR_OBJECT_ID);
+	if (LetLoose) then  // Let Loose will make him fire & pursue at will.
+						// You may append/modify this to make him move to
+						// or attack specific targets.
+
+		MoveSpeed = LetLooseSpeed;
+
+		//------------------------
+		// Move to here, then here ..
+
+		if (LetLooseSteps > 0) then
+
+			if (distanceToPosition(CUR_OBJECT_ID, moveToPosition) < MIN_DISTANCE) then
+				MovingToObjective = FALSE;
+				pathStep = pathStep + 1;
+			endif;
+
+			if ((CurrentTarget == 0) AND (NOT MovingToObjective) AND (pathStep <= (LetLooseSteps - 1))) then
+				moveToPosition[0] = LetLoosePath[pathStep,0];
+				moveToPosition[1] = LetLoosePath[pathStep,1];
+				moveToPosition[2] = 0.0;
+				orderMoveTo(moveToPosition,MoveSpeed);
+				dstring = "Moving to step ";
+				concat(dstring,pathStep);
+				print(dstring);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				MovingToObjective = TRUE;
+			endif;
+
+		endif;
+
+		//---------------------------------
+		// Change my ISSUED brains to destroy mode if I have a primary target .. Adjust these at your leisure
+		if (PrimaryTarget == 0) then
+			setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		else
+			setIntegerMemory(MI_MODE, COMBAT_MODE_DESTROY);
+ 		endif;
+		setRealMemory(MI_MIN_ACTION, 5.0);  // Set this to Zero and he will not attack anyone.
+
+	endif;
+
+	if (Withdraw) then	// Withraw will make him leave the mission area.
+						// If you want him to move to specific point to exit,
+						// set WithdrawAtPoint to TRUE (above) and edit the coordinates.
+		if (CurrentTarget <> 0) then
+			breakChallenge(CurrentTarget);
+		endif;
+
+		MoveSpeed = WithdrawSpeed;
+
+		if (WithdrawAtPoint) then
+
+			if ((NOT InWithdrawMode) AND (NOT MovingToObjective)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderMoveTo(WithdrawPoint,MoveSpeed);
+				MovingToObjective = TRUE;
+			endif;
+												  
+			if ((NOT InWithdrawMode) AND (distancetoposition(Me,WithdrawPoint) <= MIN_DISTANCE)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw(CUR_OBJECT_ID);
+				InWithdrawMode = TRUE;
+			endif;
+
+		else // Not WithdrawAtPoint
+
+			if (NOT InWithdrawMode) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw(CUR_OBJECT_ID);
+				InWithdrawMode = TRUE;
+			endif;
+
+		endif;
+
+	endif; // End of Withdraw Loop
+
+	if (HangOut) then	// This guy will guard whatever point he is currently at.
+						// You may modify this point or even give him a set of
+						// points to move to and guard.
+
+		MoveSpeed = HangSpeed;
+
+		setIntegerMemory(MI_OBJECT, GUARD_OBJECTIVE_POINT);
+
+		if (HangHere) then  // else Hangs at last guard point
+			setRealMemory(MI_COORD_X, HangOutPoint[0]);
+			setRealMemory(MI_COORD_Y, HangOutPoint[1]);
+			setRealMemory(MI_COORD_Z, HangOutPoint[2]);
+		endif;
+		GuardPoint[0] = getRealMemory(MI_COORD_X);
+		GuardPoint[1] = getRealMemory(MI_COORD_Y);
+		GuardPoint[2] = getRealMemory(MI_COORD_Z);
+		GuardDistance = distanceToPosition(CUR_OBJECT_ID, GuardPoint);			
+
+	endif;
+
+	CurrentCombatMode = getIntegerMemory(MC_MODE);		
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

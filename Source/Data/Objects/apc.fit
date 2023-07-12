@@ -1,0 +1,36 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name="apc.ini"
+st AppearanceName="apc"
+l ExplosionObject=656
+l DestroyedObject=101
+f ExtentRadius=14.000000
+
+[Header]
+st FileType="GroundVehicleType"
+
+[General]
+uc Chassis=0
+f TonnageClass=0.000000
+b MineLayer=FALSE
+b MineSweeper=FALSE
+l RefitPoints=0
+
+[InternalStructure]
+uc Front=1
+uc Rear=1
+uc Left=1
+uc Right=1
+uc Turret=1
+
+[VehicleDynamics]
+f MaxAccel=18.000000
+f MaxVelocity=18.000000
+l MaxTurretYawRate=150
+l MaxTurretYaw=360
+l MaxVehicleYawRate=720
+FITend 

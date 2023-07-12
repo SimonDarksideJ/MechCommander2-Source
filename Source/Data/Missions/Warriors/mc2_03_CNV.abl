@@ -1,0 +1,225 @@
+//****************************************************************************************//
+//
+//		Convoy A - Non-Combat Vehicles
+//				
+//
+//      MISSION:  Mc2_03
+//		Unit(s) that WAIT until TRIGGERED, then PATROL to BASE 1
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_03_CNV;
+
+	var
+
+//**************ORIGINAL******************
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState		startBase1PatrolState;
+		static PatrolPath		startBase1PatrolPath;
+		static boolean			CvA_Patrol_Triggered;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+//**************ORIGINAL******************
+
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+//		AttackStateHandle = getStateHandle("attack");
+
+//**************NEW***********************
+
+		CvA_Patrol_Triggered = FALSE; //LT, used to check Patrol has been triggered
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase1PatrolState Start
+
+		startBase1PatrolState[0] = PATROL_TYPE_LINEAR;
+		startBase1PatrolState[1] = 7;    //?num points
+		startBase1PatrolState[2] = 1;    //?num cycles
+		startBase1PatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startBase1PatrolState[4] = -1;    //reset cur point
+		startBase1PatrolState[5] = -1;    //reset cur cycle
+		startBase1PatrolState[6] = CONTACT_CRITERIA_NONE;
+
+		startBase1PatrolPath[0, 0] = -576.000;
+		startBase1PatrolPath[0, 1] = -5952.000;
+		startBase1PatrolPath[1, 0] = -576.000;
+		startBase1PatrolPath[1, 1] = -4032.000;
+		startBase1PatrolPath[2, 0] = -960.000;
+		startBase1PatrolPath[2, 1] = -4032.000;
+		startBase1PatrolPath[3, 0] = -960.000;
+		startBase1PatrolPath[3, 1] = -3008.000;
+		startBase1PatrolPath[4, 0] = -1728.000;
+		startBase1PatrolPath[4, 1] = -3008.000;
+		startBase1PatrolPath[5, 0] = -1728.000;
+		startBase1PatrolPath[5, 1] = -1344.000;
+		startBase1PatrolPath[6, 0] = -1856.000;
+		startBase1PatrolPath[6, 1] = -1344.000;
+
+		//XLs startBase1PatrolPath end
+		
+//**************ORIGINAL******************
+
+		willRequestHelp = false; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+//**************NEW***********************
+
+		curTime = getTime;
+
+//Trigger for CvA Movers to Start Base1 Patrol
+		if (CvA_Start_Trigger) then
+			if (NOT CvA_Patrol_Triggered) then
+				CvA_Patrol_Triggered = TRUE;
+				trans Base1Patrol;
+			endif;
+	  endif;
+	
+//**************ORIGINAL******************
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		//numFunctionalWeapons = getWeapons(weaponList, 1);
+		//if (numFunctionalWeapons == 0) then
+			//trans noWeapons;
+		//endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state Base1Patrol;
+
+	code
+
+//		coreRun = True;
+
+		update;
+		setDebugString(-1, 3, " Base1Patrol    ");
+		corePatrol(startBase1PatrolState, startBase1PatrolPath, AttackStateHandle);
+		CvA_End_Trigger = TRUE;
+		resetOrders(1);
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+	
+		setDebugString(-1, 3, " WAIT    ");
+		update;
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

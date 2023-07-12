@@ -1,0 +1,28 @@
+FITini
+
+// This is the xmech_bay data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xmech_bay_1"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x02000360
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 1			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 384
+b BlocksLineOfFire 	= TRUE
+ul DmgLevel			= 120
+l BattleRating		= 2000
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00002838
+b CanRefit			= TRUE
+b MechBay			= TRUE			
+
+FITend

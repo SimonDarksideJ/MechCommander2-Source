@@ -1,0 +1,811 @@
+FITini 
+
+// mp connection type screen
+
+
+
+
+
+
+
+
+
+
+[Buttons]
+l Buttoncount = 4
+
+[Button0] // main menu button
+l ID = 57 // MB_MSG_MAINMENU
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 26020 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27113
+
+st FileName = "mcl_mp_connectiontype_4.tga"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 40
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 40
+
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737s
+
+
+
+
+
+[Button1] // internet radio button
+l XLocation = 383
+l YLocation = 103
+l Width = 77
+l Height = 86
+b Toggle = 1  // 
+
+
+l XTextLocation = 72
+l YTextLocation = 135
+l TextWidth = 302
+l TextHeight = 26
+l color  = 0xff005392
+b TextOutline = FALSE
+l Alignment = 1
+
+l TextID = 26002
+l Font = 26021 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26006
+
+st FileName = "mcl_mp_connectiontype_4.tga"
+
+l UWidth = 77
+l VHeight = 86
+
+l UNormal = 0
+l VNormal = 80
+
+l UPressed = 77
+l VPressed = 80
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 80
+
+
+b AnimateBmp = 1 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737s
+
+
+[Button2] // lan radio button
+l XLocation = 383
+l YLocation = 199
+l Width = 77
+l Height = 86
+b Toggle = 1   
+
+
+l XTextLocation = 72
+l YTextLocation = 231
+l TextWidth = 302
+l TextHeight = 26
+l color  = 0xff005392
+b TextOutline = FALSE
+l Alignment = 1
+
+l TextID = 26003
+l Font = 26022 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26009
+
+st FileName = "mcl_mp_connectiontype_4.tga"
+
+l UWidth = 77
+l VHeight = 86
+
+l UNormal = 0
+l VNormal = 80
+
+l UPressed = 77
+l VPressed = 80
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 80
+
+
+b AnimateBmp = 1 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737s
+
+
+[Button3] // direct tcp/ip radio button
+l XLocation = 383
+l YLocation = 295
+l Width = 77
+l Height = 86
+b Toggle = 1  // 
+
+
+l XTextLocation = 72
+l YTextLocation = 327
+l TextWidth = 302
+l TextHeight = 26
+l color  = 0xff005392
+b TextOutline = FALSE
+l Alignment = 1
+
+l TextID = 26004
+l Font = 26023 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26068
+
+st FileName = "mcl_mp_connectiontype_4.tga"
+
+l UWidth = 77
+l VHeight = 86
+
+l UNormal = 0
+l VNormal = 80
+
+l UPressed = 77
+l VPressed = 80
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 80
+
+
+b AnimateBmp = 1 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737s
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Rects]
+l Rectcount = 5
+
+[Rect0] // zone button rect
+l XLocation = 60
+l YLocation = 103
+l Width = 388
+l Height = 86
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // outline for radio buttons' sub-area
+l XLocation = 459
+l YLocation = 103
+l Width = 280
+l Height = 374
+l Color = -10709310
+b outline = TRUE
+
+[Rect2] // lan button rect
+l XLocation = 60
+l YLocation = 199
+l Width = 388
+l Height = 86
+l Color = -16765099
+b outline = TRUE
+
+[Rect3] // tcp/ip button rect
+l XLocation = 60
+l YLocation = 295
+l Width = 388
+l Height = 86
+l Color = -16765099
+b outline = TRUE
+
+
+[Rect4] // help area rect
+l XLocation = 469
+l YLocation = 113
+l Width = 259
+l Height = 125
+l Color = -16765099
+b outline = TRUE
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 31
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 199
+l VNormal = 212
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 226
+l VNormal = 0
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 188
+l Height = 32
+l UNormal = 0
+l VNormal = 212
+l UWidth = 188
+l VHeight = 32
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static6]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 216
+l VNormal = 0
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static7]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static8]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 54
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static9]
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 30
+l UNormal = 150
+l VNormal = 171
+l UWidth = 102
+l VHeight = 30
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static10]
+l XLocation = 614
+l YLocation = 48
+l Width = 186
+l Height = 22
+l UNormal = 0
+l VNormal = 113
+l UWidth = 186
+l VHeight = 22
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+[Static11]
+l XLocation = 0
+l YLocation = 70
+l Width = 50
+l Height = 246
+l UNormal = 0
+l VNormal = 0
+l UWidth = 50
+l VHeight = 246
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static12]
+l XLocation = 750
+l YLocation = 70
+l Width = 50
+l Height = 246
+l UNormal = 50
+l VNormal = 0
+l UWidth = 50
+l VHeight = 246
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static13]
+l XLocation = 0
+l YLocation = 316
+l Width = 50
+l Height = 171
+l UNormal = 150
+l VNormal = 0
+l UWidth = 50
+l VHeight = 171
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static14]
+l XLocation = 750
+l YLocation = 316
+l Width = 50
+l Height = 220
+l UNormal = 100
+l VNormal = 0
+l UWidth = 50
+l VHeight = 220
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static15]
+l XLocation = 0
+l YLocation = 487
+l Width = 143
+l Height = 36
+l UNormal = 0
+l VNormal = 77
+l UWidth = 143
+l VHeight = 36
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+[Static16]
+l XLocation = 143
+l YLocation = 487
+l Width = 256
+l Height = 59
+l UNormal = 0
+l VNormal = 84
+l UWidth = 256
+l VHeight = 59
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static17]
+l XLocation = 399
+l YLocation = 487
+l Width = 256
+l Height = 59
+l UNormal = 0
+l VNormal = 143
+l UWidth = 256
+l VHeight = 59
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static18]
+l XLocation = 655
+l YLocation = 487
+l Width = 95
+l Height = 49
+l UNormal = 143
+l VNormal = 0
+l UWidth = 95
+l VHeight = 49
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+[Static19]
+l XLocation = 0
+l YLocation = 523
+l Width = 143
+l Height = 77
+l UNormal = 0
+l VNormal = 0
+l UWidth = 143
+l VHeight = 77
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+[Static20]
+l XLocation = 655
+l YLocation = 536
+l Width = 11
+l Height = 10
+l UNormal = 188
+l VNormal = 212
+l UWidth = 11
+l VHeight = 10
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static21]
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+l UNormal = 200
+l VNormal = 0
+l UWidth = 6
+l VHeight = 59
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static22]
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 206
+l VNormal = 0
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mp_connectiontype_2.tga"
+
+[Static23]
+l XLocation = 143
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 202
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static24]
+l XLocation = 399
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 207
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+[Static25]
+l XLocation = 655
+l YLocation = 595
+l Width = 145
+l Height = 5
+l UNormal = 0
+l VNormal = 244
+l UWidth = 145
+l VHeight = 5
+st FileName = "mcl_mp_connectiontype_1.tga"
+
+
+
+[Static26] // zone logo
+l XLocation = 71
+l YLocation = 114
+l Width = 64
+l Height = 64
+l UNormal = 0
+l VNormal = 166
+l UWidth = 64
+l VHeight = 64
+st FileName = "mcl_mp_connectiontype_4.tga"
+
+
+
+
+[Static27] // new static to cover over modem to modem
+l XLocation = 50
+l YLocation = 391
+l Width = 256
+l Height = 96
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 96
+st FileName = "mcl_mp_connectiontype_5.tga"
+
+
+
+[Static28] // new static to cover over modem to modem
+l XLocation = 306
+l YLocation = 391
+l Width = 143
+l Height = 96
+l UNormal = 0
+l VNormal = 96
+l UWidth = 143
+l VHeight = 96
+st FileName = "mcl_mp_connectiontype_5.tga"
+
+[Static29] // static to cover next button hole
+l XLocation = 666
+l YLocation = 536
+l Width = 128
+l Height = 32
+l UNormal = 0
+l VNormal = 192
+l UWidth = 128
+l VHeight = 32
+st FileName = "mcl_mp_connectiontype_5.tga"
+
+
+
+[Static30] // static  2 to cover next button
+l XLocation = 666
+l YLocation = 568
+l Width = 128
+l Height = 27
+l UNormal = 128
+l VNormal = 192
+l UWidth = 128
+l VHeight = 27
+st FileName = "mcl_mp_connectiontype_5.tga"
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+
+[Text0] // connection type header
+l XLocation = 18
+l YLocation = 12
+l Width = 402
+l Height = 26
+l Color = -30195
+b outline = FALSE
+l Font = 26024 // use agencyfb17
+l TextID = 26001 
+l Alignment = 0
+l HelpDesc = 26077
+
+
+[Text1] // secondary connection type header
+l XLocation = 60
+l YLocation = 75
+l Width = 154
+l Height = 26
+l Color = -16755822
+b outline = FALSE
+l Font = 26026 // use agencyfb14
+l TextID = 26001
+l Alignment = 0
+
+
+[Text2] // help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 26025 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+FITend 

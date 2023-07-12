@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3A1215FBFA76D3A31CE6A024E6D0D542" />
+  <Asset Name="..\l_residenceleft.ini" Type="Physical" Author="franksav" FileSize="590" ModificationTime="2006-03-03T01:28:31.8204918-08:00" CRC="7774BE58F05CE064ED5280F3192BA7A5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="l_residenceleft.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="l_residenceleftL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="l_residenceleftL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="l_residenceleftX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_residenceleftdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="l_residenceleftdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Mansion Left" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

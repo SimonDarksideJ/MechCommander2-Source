@@ -1,0 +1,4693 @@
+mFITini
+
+[Main]
+l numCursors = 243
+
+
+[Cursor0]		// walk
+ul NumFrames = 1
+c HotSpotX = 13
+c HotSpotY = 10
+l XLocation = 0
+l YLocation = 0
+l Width = 31
+l Height = 31
+
+st FileName = "Cursors1"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+[Cursor1]		// Walk LOS
+ul NumFrames = 1
+c HotSpotX = 13
+c HotSpotY = 10
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 32
+
+st FileName = "Cursors1"
+
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+
+[Cursor2]	// Run
+ul NumFrames = 1
+c HotSpotX = 13
+c HotSpotY = 12
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 32
+
+st FileName = "Cursors1"
+
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+
+[Cursor3] // Run LOS
+ul NumFrames = 1
+c HotSpotX = 13
+c HotSpotY = 12
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 32
+
+st FileName = "Cursors1"
+
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+
+[Cursor4]		// jump
+ul NumFrames = 1
+c HotSpotX = 13
+c HotSpotY = 14
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 32
+
+st FileName = "Cursors1"
+
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+[Cursor5]		// jump LOS
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 13
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor6]	// walk waypoint
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor7]	// WALK WP LOS
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor8]	// Run WP
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+[Cursor9] // RUN WP LOS
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+[Cursor10]		 // JUMP WP
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+[Cursor11] // JUMP WP LOS
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 3
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor12] // Link Patrol Path
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+[Cursor13]	// Attack
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor14] // attack LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 96
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+
+[Cursor15]	// attack from currentPos
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+
+[Cursor16] // Fire from currentPos LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 0
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors5"
+
+
+[Cursor17]	 // Energy Weapons only ?
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+
+[Cursor18]	// Energy Weapons LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 64
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors5"
+
+
+[Cursor19]	// Called Shot
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor20] // Called Shot LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 32
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors5"
+
+
+[Cursor21]	// pointer
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 1
+c HotSpotY = 1
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+
+[Cursor22] // get Info
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 8
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor23] // lay mines
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 7
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor24]	// rotate camera
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 14
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor25]	// airStrike
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 13
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor26]	// airStrike LOS
+ul NumFrames = 8
+l UNormal = 0
+l VNormal = 0
+
+f Framelength = .2
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors4"
+
+[Cursor27]	// sensorStrike
+ul NumFrames = 8
+l UNormal = 0
+l VNormal = 64
+
+f Framelength = .2
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors4"
+
+[Cursor28]	// call Vehicle
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 13
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor29]	// can't call Vehicle
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 13
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor30]	// can't do that
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 9
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor31]	// Repair
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+
+[Cursor32]	// Can't Repair
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor33]	// Eject
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor34]	// can't Eject
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor35]	// Capture
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 64
+
+f Framelength = .2
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+
+[Cursor36]	// can't capture
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor37]	// recover mech
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 13
+c HotSpotY = 13
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor38]	// can't recover
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 13
+c HotSpotY = 13
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor39]// guard
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 9
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor40]// suppression fire
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 96
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 11
+c HotSpotY = 11
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors1"
+
+[Cursor41]// suppression fire LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 96
+
+f Framelength = .2
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors5"
+
+[Cursor41]// suppression fire LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 96
+
+f Framelength = .2
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors5"
+
+[Cursor42]// can't lay mines 
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor43]// LOGISTICS 
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 1
+c HotSpotY = 1
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor44]// tutorial 
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 11
+c HotSpotY = 11
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors3"
+
+[Cursor45]// long range 
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor46]// shortrange 
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+[Cursor47]// medium range 
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 64
+
+l UWidth  = 31
+l VHeight = 31
+
+l Width = 31
+l Height = 31
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors2"
+
+
+
+[Cursor48]	// walk 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+
+[Cursor49] // walk 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor50] // walk 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor51] // walk 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor52] // walk 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor53] // walk 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor54] // walk 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor55] // walk 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor56] // walk 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor57] // walk 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor58] // walk 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor59] // walk 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor60] // walk 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor61] // walk 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor62] // walk 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor63] // walk 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor64] // walk 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor65] // walk 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor66] // walk 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor67] // walk 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor68] // walk 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor69] // walk 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor70] // walk 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor71] // walk 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor72] // walk 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor73] // walk 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor74] // walk 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor75] // walk 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor76] // walk 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor77] // walk 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor78] // walk 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor79] // walk 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+
+
+[Cursor80]	// walk LOS 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+
+[Cursor81] // walk LOS 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor82] // walk LOS 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor83] // walk LOS 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor84] // walk LOS 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor85] // walk LOS 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor86] // walk LOS 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor87] // walk LOS 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor88] // walk LOS 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor89] // walk LOS 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor90] // walk LOS 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor91] // walk LOS 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor92] // walk LOS 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor93] // walk LOS 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor94] // walk LOS 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor95] // walk LOS 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor96] // walk LOS 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor97] // walk LOS 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor98] // walk LOS 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor99] // walk LOS 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor100] // walk LOS 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor101] // walk LOS 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor102] // walk LOS 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor103] // walk LOS 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor104] // walk LOS 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor105] // walk LOS 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor106] // walk LOS 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor107] // walk LOS 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor108] // walk LOS 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor109] // walk LOS 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor110] // walk LOS 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+[Cursor111] // walk LOS 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+  
+
+[Cursor112]	// Run 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+
+[Cursor113] // run 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor114] // run 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor115] // run 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor116] // run 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor117] // run 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor118] // run 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor119] // run 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor120] // run 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor121] // run 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor122] // run 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor123] // run 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor124] // run 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor125] // run 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor126] // run 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor127] // run 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor128] // run 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor129] // run 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor130] // run 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor131] // run 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor132] // run 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor133] // run 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor134] // run 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor135] // run 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor136] // run 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor137] // run 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor138] // run 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor139] // run 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor140] // run 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor141] // run 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor142] // run 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor143] // run 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "walk"
+
+
+
+[Cursor144]	// run LOS 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+
+[Cursor145] // run LOS 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor146] // run LOS 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor147] // run LOS 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor148] // run LOS 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor149] // run LOS 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor150] // run LOS 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor151] // run LOS 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor152] // run LOS 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor153] // run LOS 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor154] // run LOS 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor155] // run LOS 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor156] // run LOS 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor157] // run LOS 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor158] // run LOS 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor159] // run LOS 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor160] // run LOS 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor161] // run LOS 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor162] // run LOS 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor163] // run LOS 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor164] // run LOS 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor165] // run LOS 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor166] // run LOS 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor167] // run LOS 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor168] // run LOS 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor169] // run LOS 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor170] // run LOS 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor171] // run LOS 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor172] // run LOS 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor173] // run LOS 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor174] // run LOS 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+[Cursor175] // run LOS 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "run"
+
+
+[Cursor176]	// jump 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+
+[Cursor177] // jump 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor178] // jump 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor179] // jump 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor180] // jump 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor181] // jump 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor182] // jump 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor183] // jump 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 0
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor184] // jump 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor185] // jump 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor186] // jump 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor187] // jump 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor188] // jump 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor189] // jump 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor190] // jump 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor191] // jump 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 32
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor192] // jump 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor193] // jump 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor194] // jump 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor195] // jump 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor196] // jump 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor197] // jump 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor198] // jump 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor199] // jump 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 64
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor200] // jump 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor201] // jump 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor202] // jump 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor203] // jump 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor204] // jump 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor205] // jump 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor206] // jump 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor207] // jump 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 96
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+
+
+[Cursor208]	// jump LOS 1
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 4
+c HotSpotY = 17
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+
+[Cursor209] // jump LOS 2
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor210] // jump LOS 3
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor211] // jump LOS 4
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor212] // jump LOS 5
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 8
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor213] // jump LOS 6
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor214] // jump LOS 7
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 11
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor215] // jump LOS 8
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 128
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor216] // jump LOS 9
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 5
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor217] // jump LOS 10
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor218] // jump LOS 11
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 6
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor219] // jump LOS 12
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 7
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor220] // jump LOS 13
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 23
+c HotSpotY = 9
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor221] // jump LOS 14
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 10
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor222] // jump LOS 15
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 12
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor223] // jump LOS 16
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 160
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 17
+c HotSpotY = 14
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor224] // jump LOS 17
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 16
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor225] // jump LOS 18
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 19
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor226] // jump LOS 19
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 26
+c HotSpotY = 21
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor227] // jump LOS 20
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 25
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor228] // jump LOS 21
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 24
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor229] // jump LOS 22
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 22
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor230] // jump LOS 23
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 20
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor231] // jump LOS 24
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 192
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 18
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor232] // jump LOS 25
+ul NumFrames = 1
+l UNormal = 0
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor233] // jump LOS 26
+ul NumFrames = 1
+l UNormal = 32
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 14
+c HotSpotY = 27
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor234] // jump LOS 27
+ul NumFrames = 1
+l UNormal = 64
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 12
+c HotSpotY = 26
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor235] // jump LOS 28
+ul NumFrames = 1
+l UNormal = 96
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 10
+c HotSpotY = 25
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor236] // jump LOS 29
+ul NumFrames = 1
+l UNormal = 128
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 8
+c HotSpotY = 24
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor237] // jump LOS 30
+ul NumFrames = 1
+l UNormal = 160
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 7
+c HotSpotY = 22
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor238] // jump LOS 31
+ul NumFrames = 1
+l UNormal = 192
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 6
+c HotSpotY = 20
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor239] // jump LOS 32
+ul NumFrames = 1
+l UNormal = 224
+l VNormal = 224
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 5
+c HotSpotY = 18
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "jump"
+
+[Cursor240]// long range LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 0
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors6"
+
+[Cursor241]// medium range LOS
+ul NumFrames = 4
+l UNormal = 0
+l VNormal = 32
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors6"
+
+[Cursor242]// short range LOS
+ul NumFrames = 8
+l UNormal = 0
+l VNormal = 64
+
+f Framelength = .08
+
+l UWidth  = 32
+l VHeight = 32
+
+l Width = 32
+l Height = 32
+
+c HotSpotX = 16
+c HotSpotY = 15
+
+l XLocation = 0
+l YLocation = 0
+
+st FileName = "Cursors6"
+
+FITend
+
+
+FITend

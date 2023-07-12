@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6BC8CCEA91CF1615C9FFA2032B9975CC" />
+  <Asset Name="..\Partisan.ase" Type="Physical" Author="ngauvin" FileSize="73211" ModificationTime="2006-02-01T10:55:14.8265031-08:00" CRC="A49CCD07FE953C9DF5C2F663133287D6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Partisan.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

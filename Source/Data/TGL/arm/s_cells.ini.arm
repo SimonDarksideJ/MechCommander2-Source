@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7EFB4F465CDE79011FB2174645CD80E7" />
+  <Asset Name="..\s_cells.ini" Type="Physical" Author="franksav" FileSize="187" ModificationTime="2006-03-03T01:28:43.9610391-08:00" CRC="AC4AB17DB75064C24B0D61ABF33FA72F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="s_cells.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_cellsdam.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

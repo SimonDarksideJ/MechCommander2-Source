@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="154125A617CA8D08834BE57652A75D56" />
+  <Asset Name="..\greenbeaconlight.ini" Type="Physical" Author="franksav" FileSize="468" ModificationTime="2006-03-03T01:28:24.914286-08:00" CRC="ACD231359D352C1A06BD037D9C8B646C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="greenbeaconlight.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="greenbeaconlightL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="greenbeaconlightL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="greenbeaconlightX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="greenbeaconlightdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="greenbeaconlightDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Green Beacon Light" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

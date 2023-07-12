@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2BC918AF0AB3716DA7F8B8A6EDA1094F" />
+  <Asset Name="..\MediumAutoCannonTurretX.ase" Type="Physical" Author="ngauvin" FileSize="29718" ModificationTime="2006-02-01T10:55:12.2171114-08:00" CRC="7D829653F41C9CFC59287F3DEBE09BC0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Turrets.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turrets2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

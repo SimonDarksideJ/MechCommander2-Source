@@ -1,0 +1,496 @@
+//*********************************************************************************
+
+module tut_01 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+
+			eternal real[3]			startCameraPosition;
+			eternal real[3]			startCameraRotation;
+			
+			static boolean			objective0completed;
+			static boolean			objective1completed;
+			static boolean			objective2completed;
+			static boolean			objective3completed;
+
+			static boolean			obj0check;
+			static boolean			obj1check;
+			static boolean			obj2check;
+			static boolean			obj3check;
+			static boolean			obj4check;
+
+			static real					obj0_TimerDelay;
+			static real					obj1_TimerDelay;
+			static real					obj2_TimerDelay;
+			static real					obj3_TimerDelay;
+			static real					obj4_TimerDelay;
+
+			static boolean			obj0_VO_check;
+			static boolean			obj1_VO_check;
+			static boolean			obj2_VO_check;
+			static boolean			obj3_VO_check;
+			static boolean			obj4_VO_check;
+
+
+
+//---------------------------------------
+// TUTORIAL STUFF
+        eternal integer missionTutorialStage;
+        eternal integer ObjectiveStage;
+        eternal real    startTime;
+        eternal real    currentTime;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+			getCameraPosition(startCameraPosition);
+			getCameraRotation(startCameraRotation);
+
+			objective0completed = FALSE;
+			objective1completed = FALSE;
+			objective2completed = FALSE;
+			objective3completed = FALSE;
+
+			obj0check = FALSE;
+			obj1check = FALSE;
+			obj2check = FALSE;
+			obj3check = FALSE;
+			obj4check = FALSE;
+
+			obj0_VO_check = FALSE;
+			obj1_VO_check = FALSE;
+			obj2_VO_check = FALSE;
+			obj3_VO_check = FALSE;
+			obj4_VO_check = FALSE;
+
+
+
+
+//---------------------------------------
+// TUTORIAL STUFF
+        missionTutorialStage = 0;
+        ObjectiveStage = 0;
+        startTime = 0.0;
+        currentTime = 0.0;
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+			StopMusic;
+			
+					
+
+					if (checkObjectiveStatus(0) == 1) then
+						if (NOT obj0check) then
+							obj0check = TRUE;
+							obj0_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj0_TimerDelay) AND (NOT obj0_VO_check)) then
+								obj0_VO_check = True;
+								missionTutorialStage = 21;
+							endif;
+						endif;
+					endif;																																		
+
+					
+					
+					if (checkObjectiveStatus(1) == 1) then
+						if (NOT obj1check) then
+							obj1check = TRUE;
+							obj1_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj1_TimerDelay) AND (NOT obj1_VO_check)) then
+								obj1_VO_check = True;
+								missionTutorialStage = 24;
+							endif;
+						endif;
+					endif;																																		
+
+					
+					if (checkObjectiveStatus(2) == 1) then
+						if (NOT obj2check) then
+							obj2check = TRUE;
+							obj2_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj2_TimerDelay) AND (NOT obj2_VO_check)) then
+								obj2_VO_check = True;
+								missionTutorialStage = 27;
+							endif;
+						endif;
+					endif;																																		
+
+
+					if (checkObjectiveStatus(3) == 1) then
+						if (NOT obj3check) then
+							obj3check = TRUE;
+							obj3_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj3_TimerDelay) AND (NOT obj3_VO_check)) then
+								obj3_VO_check = True;
+ 							missionTutorialStage = 33;
+							endif;
+						endif;
+					endif;																																		
+
+
+					if (missionTutorialStage == 128) then
+						if (NOT obj4check) then
+							obj4check = TRUE;
+							obj4_TimerDelay = getTime + 12;
+						else
+							if ((getTime > obj4_TimerDelay) AND (NOT obj4_VO_check)) then
+								obj4_VO_check = True;
+								playWave("tut_01_p",-1);
+								missionTutorialStage = 29;
+							endif;
+						endif;
+					endif;																																		
+
+
+
+        //-------------------------------------------------------------------------------
+        //Mission 1 Tutorial
+        //-------------------
+        setInvulnerable(true);
+
+
+					mcprint (missionTutorialStage);
+
+				if (missionTutorialStage == 0) then
+            startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 1) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 4000) then        //4 Seconds - Let camera get where its going
+							playWave("tut_01_0",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 2)) then
+						playWave("tut_01_1",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 3)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 4) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 10000) then        //10 Seconds - Let camera get where its going
+							playWave("tut_01_3",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 5)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 6) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 10000) then        //10 Seconds - Let camera get where its going
+							playWave("tut_01_4",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 7)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 8) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 10000) then        //10 Seconds - Let camera get where its going
+							playWave("tut_01_5",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 9)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 10) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 6000) then        //6 Seconds - Let camera get where its going
+							setCameraGoalPosition(startCameraPosition, 0.5);
+							setCameraGoalRotation(startCameraRotation, 0.5);
+							startTime = GetLogisticsTime;
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (missionTutorialStage == 11) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 2000) then        //2 Seconds
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 12) then
+						playWave("tut_01_6",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 13)) then
+						playWave("tut_01_7",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 14)) then
+						playWave("tut_01_8",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 15)) then
+						playWave("tut_01_9",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 16)) then
+						playWave("tut_01_a",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 17)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 18) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 10000) then        //10 Seconds - Let camera get where its going
+							playWave("tut_01_b",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 19)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 20) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 15000) then        //15 Seconds - Let camera get where its going
+							playWave("tut_01_c",-1);
+							missionTutorialStage = missionTutorialStage + 100;
+            endif;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 21)) then
+						playWave("tut_01_d",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+				
+				if (NOT isPlayingVoiceOver AND (missionTutorialStage == 22)) then
+						playWave("tut_01_e",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 23)) then
+						playWave("tut_01_f",-1);
+            missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 24)) then
+						playWave("tut_01_g",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+				
+				if (NOT isPlayingVoiceOver AND (missionTutorialStage == 25)) then
+						playWave("tut_01_h",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 26)) then
+						playWave("tut_01_i",-1);
+            missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 27)) then
+						playWave("tut_01_j",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+				
+				if (NOT isPlayingVoiceOver AND (missionTutorialStage == 28)) then
+						playWave("tut_01_k",-1);
+            missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 29)) then
+						playWave("tut_01_l",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 30)) then
+						playWave("tut_01_2",-1);
+						startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 31) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 15000) then        //15 Seconds - Let camera get where its going
+							playWave("tut_01_m",-1);
+							startTime = GetLogisticsTime;
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 32)) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 10000) then        //10 Seconds - Let camera get where its going
+							playWave("tut_01_n",-1);
+							missionTutorialStage = missionTutorialStage + 100;
+            endif;
+        endif;
+
+				if (NOT isPlayingVoiceOver AND (missionTutorialStage == 33)) then
+						playWave("tut_01_o",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+				
+
+        //DONE
+        //-------------------------------------------------------------------------------
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+
+             return (ScenarioResult);
+
+endmodule.
+//******************************************************************

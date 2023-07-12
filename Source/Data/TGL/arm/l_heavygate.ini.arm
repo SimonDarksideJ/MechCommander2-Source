@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0217BAD1BBF5BC352E860081897A74F2" />
+  <Asset Name="..\l_heavygate.ini" Type="Physical" Author="franksav" FileSize="969" ModificationTime="2006-03-03T01:28:30.3048765-08:00" CRC="B5964A80D2BF4D2BBF664DFA8949420C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="l_heavygate.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="l_heavygateL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="l_heavygateL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="l_heavygateX.ase" />
+        <Relationship Type="Animation" RelatedAsset="l_heavygate.ase" />
+        <Relationship Type="Animation" RelatedAsset="l_heavygateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="l_heavygateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="l_heavygateopen.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_heavyGateDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="l_heavygateDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Heavy Gate" ObjectType="Building" BuildingType="Editor Gate" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

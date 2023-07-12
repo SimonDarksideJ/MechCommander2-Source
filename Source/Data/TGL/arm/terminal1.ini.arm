@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="01AB38CB7B7ED5B9EB7E763E892C79DD" />
+  <Asset Name="..\terminal1.ini" Type="Physical" Author="franksav" FileSize="561" ModificationTime="2006-03-03T01:28:52.9141068-08:00" CRC="5E7FC891B319458A453969C3501467D8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="terminal1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="Terminal1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="Terminal1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="Terminal1X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="terminal1dam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="Terminal1DamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Terminal" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

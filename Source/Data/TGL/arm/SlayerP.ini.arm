@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="09AAE26DC2FE906421693DF3F61F0708" />
+  <Asset Name="..\SlayerP.ini" Type="Physical" Author="franksav" FileSize="332" ModificationTime="2006-03-03T01:28:50.4922473-08:00" CRC="80969E5278C4C491C4FCAA43CF498A32" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="slayerParked.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="SlayerParkedL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="SlayerParkedL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SlayerParkedX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="slayerPdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="SlayerParkedDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Slayer" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

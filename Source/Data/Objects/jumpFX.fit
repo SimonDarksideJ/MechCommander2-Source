@@ -1,0 +1,22 @@
+FITini
+
+// This is the Jump FX Data File -- The Jump FX work exactly like bullets which don't fly!
+
+[ObjectClass]
+l ObjectTypeNum = 16
+
+[ObjectType]
+st Name 					= "jfx"				// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 25				// ID number for this object type
+l Appearance				= 0					// Was 0x060001AE
+l Duration					= 2					// Lasts forever = -1 (s)  2 second burst
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+
+[JetData]
+ul SoundEffectId			= 8					// Id of soundEffect to play on Fire.
+ul SmokeObjectId			= 453				// No smoke on a bullet?
+ul LightObjectId			= 681
+FITend

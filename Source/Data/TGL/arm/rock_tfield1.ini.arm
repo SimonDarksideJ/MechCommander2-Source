@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FFC06C4714A1D9CF23EACD78E96727E0" />
+  <Asset Name="..\rock_tfield1.ini" Type="Physical" Author="franksav" FileSize="218" ModificationTime="2006-03-03T01:28:42.1641756-08:00" CRC="9B833252362A01EE36F8FFCB499C399A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="rock_TField1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_TField1X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Tundra Rock Field 1" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

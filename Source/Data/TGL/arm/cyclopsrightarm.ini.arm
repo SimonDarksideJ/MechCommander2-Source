@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7802C9736C131C9C8892356A4D66C156" />
+  <Asset Name="..\cyclopsrightarm.ini" Type="Physical" Author="franksav" FileSize="154" ModificationTime="2006-03-03T01:28:19.6799445-08:00" CRC="D0AA18B9BEA236EABD677C04E8F00423" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="CyclopsRightArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

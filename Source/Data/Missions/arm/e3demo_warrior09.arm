@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F825E34F040F080E0C6884E43B92748F" />
+  <Asset Name="..\e3demo_warrior09" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Anubis.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Anubis.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWGreen.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\e3_Liao_mPD.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

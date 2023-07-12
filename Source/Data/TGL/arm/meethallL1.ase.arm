@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5826F6AB656258BF03A1C03237EBB291" />
+  <Asset Name="..\meethallL1.ase" Type="Physical" Author="ngauvin" FileSize="50886" ModificationTime="2006-02-01T10:55:12.6858644-08:00" CRC="52EC86F8F487F82AB11299F2D418515A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MeetingHall.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

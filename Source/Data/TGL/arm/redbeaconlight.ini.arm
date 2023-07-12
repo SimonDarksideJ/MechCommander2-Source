@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9E1850D9EAA3D0006A715905955402C8" />
+  <Asset Name="..\redbeaconlight.ini" Type="Physical" Author="franksav" FileSize="458" ModificationTime="2006-03-03T01:28:40.5079362-08:00" CRC="69E1A087F874E9F6670B7FF5BE0B845E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="redbeaconlight.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="redbeaconlightL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="redbeaconlightL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="redbeaconlightX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="redbeaconlightdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="redbeaconlightDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Red Beacon Light" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

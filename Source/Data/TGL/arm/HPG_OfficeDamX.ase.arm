@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2070FD8607168334563D47F200740FC5" />
+  <Asset Name="..\HPG_OfficeDamX.ase" Type="Physical" Author="ngauvin" FileSize="22627" ModificationTime="2006-02-01T10:54:58.0607708-08:00" CRC="4523C19EA1DFB264A30CAF313951B53E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_HPG_Office1Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_HPG_Office2Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\SpRubble.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

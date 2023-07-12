@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EA77B2004F0B550C3E6CE2C15A9DAD43" />
+  <Asset Name="..\pine3.ini" Type="Physical" Author="franksav" FileSize="308" ModificationTime="2006-03-03T01:28:38.7266976-08:00" CRC="A86314DFBDE4407D9D80F8DEE8C388E6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="pine3.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="pine3L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="pine3L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="pine3X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Large Pine" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

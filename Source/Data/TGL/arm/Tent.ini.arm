@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7E072FDB8A8EE9AFBADABC9AD479E293" />
+  <Asset Name="..\Tent.ini" Type="Physical" Author="franksav" FileSize="299" ModificationTime="2006-03-03T01:28:52.882857-08:00" CRC="4C41094B8C3FA2978CCCE3472C6683E1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="tent.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="tentL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="tentL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="tentX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="tentdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="tentDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Tent" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

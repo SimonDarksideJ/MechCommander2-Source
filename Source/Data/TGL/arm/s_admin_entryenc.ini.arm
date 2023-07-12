@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="93FCA4D09C4990B87398C773B8922BCF" />
+  <Asset Name="..\s_admin_entryenc.ini" Type="Physical" Author="franksav" FileSize="391" ModificationTime="2006-03-03T01:28:43.5547917-08:00" CRC="FE4455907B1A5C36122549B3FFCDF8C2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="s_admin_entryEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

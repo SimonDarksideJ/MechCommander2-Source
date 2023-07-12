@@ -1,0 +1,1342 @@
+FITini
+
+// Mission Selection- first screen in logistics
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[CMStatics]
+
+l staticCount = 37
+
+
+[CMStatic0]  // A
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 256
+l VHeight = 8
+
+
+[CMStatic1]  // B
+
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 8
+l UWidth  = 256
+l VHeight = 8
+
+
+[CMStatic2]  // C
+
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 16
+l UWidth  = 256
+l VHeight = 8
+
+
+[CMStatic3]  // D
+
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 143
+l VNormal = 157
+l UWidth  = 32
+l VHeight = 8
+
+
+[CMStatic4]  // E
+
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 183
+l VNormal = 201
+l UWidth  = 10
+l VHeight = 32
+
+
+[CMStatic5]  // F
+
+l XLocation = 426
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 163
+l VNormal = 201
+l UWidth  = 20
+l VHeight = 32
+
+
+[CMStatic6]  // G
+
+l XLocation = 594
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 143
+l VNormal = 201
+l UWidth  = 20
+l VHeight = 32
+
+
+[CMStatic7]  // H
+
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 210
+l VNormal = 151
+l UWidth  = 10
+l VHeight = 39
+
+
+[CMStatic8]  // I
+
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 24
+l UWidth  = 256
+l VHeight = 18
+
+
+[CMStatic9]  // J
+
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 42
+l UWidth  = 256
+l VHeight = 18
+
+
+[CMStatic10]  // K
+
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 18
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 143
+l VNormal = 233
+l UWidth  = 102
+l VHeight = 18
+
+
+[CMStatic11]  // L
+
+l XLocation = 614
+l YLocation = 48
+l Width = 154
+l Height = 10
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 132
+l UWidth  = 154
+l VHeight = 10
+
+
+[CMStatic12]  // M
+
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 143
+l VNormal = 147
+l UWidth  = 32
+l VHeight = 10
+
+
+[CMStatic13]  // N
+
+l XLocation = 0
+l YLocation = 58
+l Width = 104
+l Height = 256
+
+st FileName = "MCL_CM_3"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 104
+l VHeight = 256
+
+
+[CMStatic14]  // O
+
+l XLocation = 710
+l YLocation = 58
+l Width = 25
+l Height = 256
+
+st FileName = "MCL_CM_3"
+
+
+l UNormal = 104
+l VNormal = 0
+l UWidth  = 25
+l VHeight = 256
+
+
+
+[CMStatic15]  // P
+
+l XLocation = 735
+l YLocation = 58
+l Width = 65
+l Height = 138
+
+st FileName = "MCL_CM_3"
+
+l UNormal = 129
+l VNormal = 0
+l UWidth  = 65
+l VHeight = 138
+
+
+
+
+[CMStatic16]  // Q
+
+l XLocation = 735
+l YLocation = 196
+l Width = 65
+l Height = 118
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 176
+l VNormal = 132
+l UWidth  = 65
+l VHeight = 118
+
+
+
+
+[CMStatic17]  // R
+
+l XLocation = 0
+l YLocation = 314
+l Width = 104
+l Height = 201
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 104
+l VHeight = 201
+
+
+
+
+[CMStatic18]  // S
+
+l XLocation = 710
+l YLocation = 314
+l Width = 90
+l Height = 201
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 104
+l VNormal = 0
+l UWidth  = 90
+l VHeight = 201
+
+
+
+
+[CMStatic19]  // T
+
+l XLocation = 0
+l YLocation = 515
+l Width = 256
+l Height = 31
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 60
+l UWidth  = 256
+l VHeight = 31
+
+
+
+
+[CMStatic20]  // U
+
+l XLocation = 256
+l YLocation = 515
+l Width = 256
+l Height = 31
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 91
+l UWidth  = 256
+l VHeight = 31
+
+
+
+
+[CMStatic21]  // V
+
+l XLocation = 512
+l YLocation = 515
+l Width = 64
+l Height = 31
+
+st FileName = "MCL_CM_4"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 64
+l VHeight = 31
+
+
+
+
+
+[CMStatic22]  // W
+
+l XLocation = 656
+l YLocation = 515
+l Width = 144
+l Height = 21
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 147
+l UWidth  = 143
+l VHeight = 21
+
+
+
+
+
+[CMStatic23]  // X
+
+l XLocation = 656
+l YLocation = 536
+l Width = 10
+l Height = 59
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 194
+l VNormal = 151
+l UWidth  = 10
+l VHeight = 58
+
+
+
+
+
+[CMStatic24]  // Y
+
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 204
+l VNormal = 151
+l UWidth  = 6
+l VHeight = 58
+
+
+[CMStatic25]  // Z
+
+l XLocation = 0
+l YLocation = 546
+l Width = 143
+l Height = 54
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 0
+l VNormal = 201
+l UWidth  = 143
+l VHeight = 54
+
+
+[CMStatic26]  // AA
+
+l XLocation = 143
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 122
+l UWidth  = 256
+l VHeight = 5
+
+
+
+
+[CMStatic27]  // BB
+ 
+l XLocation = 399
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 127
+l UWidth  = 256
+l VHeight = 5
+
+
+[CMStatic28]  // CC
+
+l XLocation = 655
+l YLocation = 595
+l Width = 145
+l Height = 5
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 0
+l VNormal = 142
+l UWidth  = 145
+l VHeight = 5
+
+
+
+[CMStatic29]  // CBills Icon
+
+l XLocation = 447
+l YLocation = 9
+l Width = 30
+l Height = 30
+
+st FileName = "MCL_CM_2"
+
+l UNormal = 194
+l VNormal = 120
+l UWidth  = 30
+l VHeight = 30
+
+
+[CMStatic30]  // v.2
+
+l XLocation = 576
+l YLocation = 515
+l Width = 64
+l Height = 31
+
+st FileName = "MCL_CM_4"
+
+l UNormal = 0
+l VNormal = 31
+l UWidth  = 64
+l VHeight = 31
+
+
+[CMStatic31]  // v.3
+
+l XLocation = 640
+l YLocation = 515
+l Width = 8
+l Height = 31
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 241
+l VNormal = 132
+l UWidth  = 8
+l VHeight = 31
+
+
+[CMStatic32]  // v.4
+
+l XLocation = 648
+l YLocation = 515
+l Width = 8
+l Height = 31
+
+st FileName = "MCL_CM_1"
+
+l UNormal = 241
+l VNormal = 163
+l UWidth  = 8
+l VHeight = 31
+
+
+
+[CMStatic33] //  black line to make connection for video box and buttons
+
+l XLocation = 381
+l YLocation = 227
+l Width = 1
+l Height = 125
+
+st FileName = "MCL_CM_5"
+
+l UNormal = 127
+l VNormal = 127
+l UWidth  = 1
+l VHeight = 1
+
+
+[CMStatic34] //  
+
+l XLocation = 383
+l YLocation = 87
+l Width = 51
+l Height = 64
+
+st FileName = "MCL_CM_5"
+
+l UNormal = 26
+l VNormal = 64
+l UWidth  = 51
+l VHeight = 64
+
+
+[CMStatic35] //  
+
+l XLocation = 383
+l YLocation = 151
+l Width = 51
+l Height = 74
+
+st FileName = "MCL_CM_5"
+
+l UNormal = 77
+l VNormal = 54
+l UWidth  = 51
+l VHeight = 74
+
+
+
+[CMStatic36] // no transmission thing 
+
+l XLocation = 121
+l YLocation = 92
+l Width = 256
+l Height = 256
+
+st FileName = "MCL_CM_notransmission.tga"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 256
+l VHeight = 256
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[CMRects]
+
+l rectCount = 11
+
+[CMRect0] //  black box to make connection for video box and buttons
+l left = 381
+l right = 381
+l top = 227
+l bottom = 351
+l color  = 0x00000000	
+b outline = 1
+
+
+[CMRect1] //  video is placed here
+l left = 121
+l right = 376
+l top = 92
+l bottom = 347
+l color  = 0x00000000
+l HelpDesc = 29007
+
+
+[CMRect2] //  box around map
+l left = 434
+l right = 699
+l top = 87
+l bottom = 352
+l color  = 0xff002f55	
+b outline = 1
+l HelpDesc = 29006
+
+
+[CMRect3] //  map is placed here
+l left = 439
+l right = 694
+l top = 92
+l bottom = 347
+l color  = 0xff000000	
+
+
+[CMRect4] //  outline rect for info text area
+l left = 116
+l right = 699
+l top = 363
+l bottom = 504
+l color  = 0xff43311C
+b outline = 1
+l HelpDesc = 29011
+
+
+[CMRect5] //  box around play stop pause buttons
+l left = 381
+l right = 418
+l top = 226
+l bottom = 352
+l color  = 0xff002f55	
+b outline = 1
+
+
+[CMRect6] //  cause it has to be there to allow for cmrect7
+l left = 0
+l right = 0
+l top = 1
+l bottom = 1
+l color  = 0x00000000	
+b outline = 1
+
+
+[CMRect7] //  outline rect around video window
+l left = 116
+l right = 381
+l top = 87
+l bottom = 352
+l color  = 0xff002f55	
+b outline = 1
+
+
+[CMRect8] //  black line to obscure part of cmrect7
+l XLocation = 381
+l YLocation = 227
+l Width = 1
+l Height = 123
+l color  = 0xff000000	
+b outline = 1
+
+[CMRect9] //  rect around screen title; because in other
+// screen, help text appears as though rectangle like this
+// even though only flagged at text
+l XLocation = 11
+l YLocation = 7
+l Width = 416
+l Height = 32
+l color  = 0
+b outline = FALSE
+l HelpDesc = 29012
+
+[CMRect10] //  rect around cbills; to get rid of disappearing
+// help text between icon and text
+l XLocation = 448
+l YLocation = 7
+l Width = 147
+l Height = 32
+l color  = 0
+b outline = FALSE
+l HelpDesc = 29003
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[CMButtons]
+
+l ButtonCount = 6
+
+
+[CMButton0] // NEXT button in lower right corner  
+// this button has four parts- bmp art for the button
+// bmp art for the next arrow, rectangle, and text
+
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27100
+l Font = 27418 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 29013
+
+st FileName = "MCL_cm_3"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 129
+l VNormal = 138
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 129
+l VPressed = 197
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l UHighlight = 129
+l VHighlight = 138
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 129
+l VDisabled = 197
+
+l DisabledColor = 0xff373737
+
+
+[CMButton0Bmp0]
+
+// coordinates for next arrow
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392  
+
+st FileName = "MCL_cm_2"
+
+b AnimateBmp = 1
+
+l UNormal = 193
+l VNormal = 209
+
+l UWidth = 11
+l VHeight = 22
+
+
+
+[CMButton1] // main menubutton in upper right corner  
+
+
+
+l ID = 57
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 27417  // use AgencyFB14
+
+l HelpCaption = 27104
+l HelpDesc = 27113
+
+st FileName = "MCL_cm_1"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 168
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 208
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 168
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UDisabled = 0
+l VDisabled = 208
+
+l DisabledColor = 0xff373737
+
+
+[CMButton2] // Play button for video window
+
+l ID = 80
+
+l XLocation = 381 
+l YLocation = 232
+l Width = 32
+l Height = 32
+b Toggle = 1  // ???
+
+
+l HelpCaption = 27411
+l HelpDesc = 27410
+
+st FileName = "MCL_CM_2"
+
+l UWidth = 32
+l VHeight = 32
+
+l UNormal = 224
+l VNormal = 120
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 224
+l VPressed = 120
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 224
+l VHighlight = 120
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+
+l UHighlightPressed = 224
+l VHighlightPressed = 120
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 224
+l VDisabled = 120
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+
+
+[CMButton3] // Pause button for video window
+
+l ID = 81
+
+l XLocation = 381 
+l YLocation = 274
+l Width = 32
+l Height = 32
+b Toggle = 1  // ???
+
+
+l HelpCaption = 27412
+l HelpDesc = 27413
+
+st FileName = "MCL_CM_2"
+
+l UWidth = 32
+l VHeight = 32
+
+l UNormal = 224
+l VNormal = 152
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 224
+l VPressed = 152
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 224
+l VHighlight = 152
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UHighlightPressed = 224
+l VHighlightPressed = 152
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 224
+l VDisabled = 152
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+
+
+[CMButton4] // Stop button for video window
+
+l ID = 82
+
+l XLocation = 381 
+l YLocation = 316
+l Width = 32
+l Height = 32
+b Toggle = 1  // ???
+
+
+l HelpCaption = 27414
+l HelpDesc = 27415
+
+st FileName = "MCL_CM_2"
+
+l UWidth = 32
+l VHeight = 32
+
+l UNormal = 224
+l VNormal = 184
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 224
+l VPressed = 184
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 224
+l VHighlight = 184
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+
+l UHighlightPressed = 224
+l VHighlightPressed = 184
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 224
+l VDisabled = 184
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+
+
+[CMButton5] // LAUNCH  button
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xffff0000
+b TextOutline = TRUE
+
+l TextID = 27171
+l Font = 27175 // use AgencyFB17
+
+l HelpCaption = 27100
+l HelpDesc = 29076
+
+st FileName = "MCL_PR_2"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 128
+l VNormal = 0
+
+l UPressed = 128
+l VPressed = 118
+
+l UHighlight = 128
+l VHighlight = 59
+
+l UDisabled = 128
+l VDisabled = 118
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC61C00
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC61C00
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC61C00
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xffC61C00
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.2
+l DisabledColor1 = 0xff373737
+
+
+[CMButton5Bmp0]
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xffC61C00  
+
+st FileName = "MCL_PR_1"
+
+b AnimateBmp = 1
+
+l UNormal = 238
+l VNormal = 186
+l UWidth = 11
+l VHeight = 22
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// below here are listed text entries for MP setup.
+
+
+
+[CMTextEntrys]
+
+l TextEntryCount = 5
+
+
+[CMTextEntry0]  // big header
+
+l XLocation = 18 //  Left Justify All Caps
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xffFF8A00
+l TextID = 27400
+l Font = 27401
+
+
+
+[CMTextEntry1]  // video area header
+l XLocation = 117 //  Left Justify All Caps
+l YLocation = 64 //  Use AgencyFB14
+l color  = 0xff005392
+l TextID = 27402
+l Font = 27403
+
+
+[CMTextEntry2]  // map window header
+l XLocation = 435 //  Left Justify All Caps
+l YLocation = 64 //  Use AgencyFB14
+l color  = 0xff005392
+l TextID = 27404
+l Font = 27405
+
+
+
+[CMTextEntry3]  // help text area
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 52
+l color  = 0xffffffff   
+l Font = 27322
+l TextID = 0
+
+
+[CMTextEntry4]  //  cbills readout
+l XLocation = 587 //  Right Justify 
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xff005392
+l TextID = 0
+l Font = 27408
+l Alignment = 1
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+FitEnd

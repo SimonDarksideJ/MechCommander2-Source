@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="87561885F91E5640F41A4BBEF368AC3F" />
+  <Asset Name="..\sensortowerenc.ase" Type="Physical" Author="ngauvin" FileSize="61131" ModificationTime="2006-02-01T10:55:28.0453377-08:00" CRC="CCE90DDFCBB5A49F7A0C1B4FCC64C64B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\SensorTower.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

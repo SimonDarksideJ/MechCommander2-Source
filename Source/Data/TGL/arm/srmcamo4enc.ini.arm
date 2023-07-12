@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A3D1F109151120217912623D300A2F5D" />
+  <Asset Name="..\srmcamo4enc.ini" Type="Physical" Author="franksav" FileSize="309" ModificationTime="2006-03-03T01:28:51.0234939-08:00" CRC="8CBC10B0CBD19F6E51C2B872545389C3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="SRMCamo4Enc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

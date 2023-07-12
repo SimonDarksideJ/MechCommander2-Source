@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="86730A976892B576A5C967181EF7E696" />
+  <Asset Name="..\mc2_m01_warrior74" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Hunchback.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Hunchback.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\pmp_dagger.fit" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

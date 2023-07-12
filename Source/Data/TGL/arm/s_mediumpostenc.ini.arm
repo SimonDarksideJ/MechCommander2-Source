@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3FE6959E09B6C8E5523FA5076459ACDC" />
+  <Asset Name="..\s_mediumpostenc.ini" Type="Physical" Author="franksav" FileSize="156" ModificationTime="2006-03-03T01:28:46.5547725-08:00" CRC="B26E033116CE6A519FAD1E21F63A36D4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="s_mediumPostEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

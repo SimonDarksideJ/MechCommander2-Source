@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="31EF2D8EF4AD57B1BEDA325660FCFDF1" />
+  <Asset Name="..\Bushwacker.ini" Type="Physical" Author="franksav" FileSize="4136" ModificationTime="2006-03-03T01:28:14.3674785-08:00" CRC="B28118AF898C6A9C99EF49E3E611D41E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="BushWacker.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="BushWackerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="BushWackerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="BushWackerX.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwacker.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bushwackerFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="bushwackerFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="bushwackerFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Bushwacker" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

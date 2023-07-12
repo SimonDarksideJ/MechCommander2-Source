@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B54A4E6EF8A33B652361D3EC291CCF10" />
+  <Asset Name="..\VultureX.ase" Type="Physical" Author="ngauvin" FileSize="129688" ModificationTime="2006-02-01T10:55:37.3891475-08:00" CRC="39ED732CD2DDED82BF46F65F67E97DA7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

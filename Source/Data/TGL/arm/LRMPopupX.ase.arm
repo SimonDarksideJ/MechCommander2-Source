@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C78E446BBAC78E672EB2E113DD6CD7A4" />
+  <Asset Name="..\LRMPopupX.ase" Type="Physical" Author="ngauvin" FileSize="58217" ModificationTime="2006-02-01T10:55:09.6389699-08:00" CRC="B53A06B63E0FB7FA08DCF6AD9E67265F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EDC2B8C34B7223A637570BB9D0F332CD" />
+  <Asset Name="..\l_palacewingdamX.ase" Type="Physical" Author="ngauvin" FileSize="22594" ModificationTime="2006-02-01T10:55:06.217073-08:00" CRC="C6104A6E0341DC637DAC7550A280A69E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

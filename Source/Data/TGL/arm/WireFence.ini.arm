@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2CD9F3A3D08571456B97CC41C27BFF63" />
+  <Asset Name="..\WireFence.ini" Type="Physical" Author="franksav" FileSize="328" ModificationTime="2006-03-03T01:28:57.4922025-08:00" CRC="996DF1BBC24DC103EE8D32158A7D83C5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="wirefence.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="wirefenceL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="wirefenceL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="wirefenceX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="wireFencedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="wirefenceDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Wire Fence" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F7C4214BBFC3C75B553791BDA2C0C38F" />
+  <Asset Name="..\Maple3.ini" Type="Physical" Author="franksav" FileSize="305" ModificationTime="2006-03-03T01:28:34.8360975-08:00" CRC="B3BFD62DD77777EA6FB9995FC1789C09" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="maple3.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="maple3L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="maple3L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="maple3X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Large Maple" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

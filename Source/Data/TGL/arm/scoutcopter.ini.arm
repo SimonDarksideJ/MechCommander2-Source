@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9E014A70FFE89FC02204393256065B00" />
+  <Asset Name="..\scoutcopter.ini" Type="Physical" Author="franksav" FileSize="3233" ModificationTime="2006-03-03T01:28:47.570391-08:00" CRC="A84BAC625915B68218B99E19B69A23C4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="scoutcopter.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="scoutcopterL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="scoutcopterL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="scoutcopterX.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopter.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="scoutcopterFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="scoutcopterFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="scoutcopterFallForwardDam.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="scoutcopterdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="scoutcopterX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

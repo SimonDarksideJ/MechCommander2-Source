@@ -1,0 +1,185 @@
+FITini 
+
+// LOW-RES KEYBOARD REFERENCE- FOR IN-GAME UI
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons] 
+l Buttoncount = 1
+
+[Button0] // close keyref "CLOSE REFERENCE"
+l ID = 91
+l XLocation = 354
+l YLocation = 418
+l Width = 256
+l Height = 32
+
+l XTextLocation = 359
+l YTextLocation = 423
+l TextWidth = 245
+l TextHeight = 21
+b TextOutline = FALSE
+
+l TextID = 27708
+l Font = 27621 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27609
+
+b AnimateBmp = 1  
+b AnimateText = 1
+
+st FileName = "mcl_mm_12.tga"
+
+l UWidth = 256
+l VHeight = 32
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 32
+
+l UHighlight = 0
+l VHighlight = 64
+
+l UDisabled = 0
+l VDisabled = 0
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xD3FF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xD3FF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xD3FF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xD3FF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[Rects]
+l rectCount = 4
+
+[Rect0] // full background
+l XLocation = 0
+l YLocation = 0
+l Width = 640
+l Height = 480
+l Color = 0x00000000
+b outline = FALSE
+ 
+[Rect1] // outline rect for whole keyref
+l XLocation = 20
+l YLocation = 20
+l Width = 599
+l Height = 439
+l Color = 0xff002f55
+b outline = TRUE
+
+[Rect2] // keyref scroll box outline
+l XLocation = 30
+l YLocation = 50
+l Width = 579
+l Height = 357
+l Color = 0xff002f55
+b outline = TRUE
+
+[Rect3] // divider between keys and description
+l XLocation = 226
+l YLocation = 51
+l Width = 0
+l Height = 355
+l Color = 0xff002f55
+b outline = TRUE
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Texts]
+l Textcount = 1
+
+[Text0] // main header text "KEYBOARD REFERENCE"
+l XLocation = 30
+l YLocation = 26
+l Width = 578
+l Height = 20
+l Color = 0xff005392
+b outline = FALSE
+l Font = 27655 // use agency fb 14
+l TextID = 43231
+l Alignment = 0
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+FITend 

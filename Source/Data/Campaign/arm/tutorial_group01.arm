@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E3DBB9FBBBDF47C995424777C61C51AE" />
+  <Asset Name="..\tutorial_group01" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission Group" />
+      <Relationships>
+        <Relationship Type="Operation" RelatedAsset="..\Art\MCL_CM_optutorials.fit" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\tut_01.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase.fit" Mission="tut_01" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\tut_02.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase.fit" Mission="tut_02" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\tut_03.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase.fit" Mission="tut_03" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\tut_04.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase.fit" Mission="tut_04" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\tut_05.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase.fit" Mission="tut_05" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

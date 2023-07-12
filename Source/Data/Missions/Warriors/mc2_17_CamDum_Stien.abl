@@ -1,0 +1,144 @@
+//****************************************************************************************//
+// 
+//		Brain Used for Camera Dummies for Mission 17 Cinema.. They do nothing..
+//
+//      MISSION:  Mc2_17
+//
+//
+//****************************************************************************************//
+
+fsm mc2_17_CamDum_Stien;
+
+	var
+
+		static WorldPosition		startPosition;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+
+		static boolean			poweredDown;
+
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+		static boolean			BeginFlankMove;
+	
+		static boolean			attackBase;
+		static boolean			playTaunt;
+		static boolean			MoveToMeeting;
+
+
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 0, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 0, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+			
+		//XLs searchPatrolPath end	
+
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 100; //?in meters
+		defenderHelpRadius = 125; //?in meters
+		lastHelpRequestTime = -100.0;
+
+		setWillHelp(False);
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+		curStateHandle = getCurrentStateHandle;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+
+state start;
+
+	code
+
+
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

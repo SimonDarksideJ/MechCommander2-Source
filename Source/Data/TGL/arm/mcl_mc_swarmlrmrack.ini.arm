@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="38A93F111620BC34A8B8F19E53151718" />
+  <Asset Name="..\mcl_mc_swarmlrmrack.ini" Type="Physical" Author="franksav" FileSize="156" ModificationTime="2006-03-03T01:28:35.7892164-08:00" CRC="37306D5570F94AB7A150AA082354D38E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_SwarmLRMRack.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

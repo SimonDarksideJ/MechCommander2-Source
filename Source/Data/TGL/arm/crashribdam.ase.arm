@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6B22E7A6EAE72F635DE71A2DFD119E90" />
+  <Asset Name="..\crashribdam.ase" Type="Physical" Author="ngauvin" FileSize="33529" ModificationTime="2006-02-01T10:54:43.9513055-08:00" CRC="17424DF277FEDAE4408F53F869F6DE64" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PanelsDamEdgeDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_CrashDebris.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_CrashDetails.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

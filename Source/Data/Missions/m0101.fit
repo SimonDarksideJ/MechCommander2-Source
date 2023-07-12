@@ -1,0 +1,219 @@
+FITini 
+
+[Cameras]
+f ProjectionAngle = 74.500000
+f PositionX = 3528.000000
+f PositionY = 3531.751465
+f PositionZ = 0.000000
+b Ready = TRUE
+uc LightRed = 255
+uc LightGreen = 255
+uc LightBlue = 255
+uc AmbientBlue = 84
+uc AmbientGreen = 84
+uc AmbientRed = 84
+uc DayLightRed = 255
+uc DayLightGreen = 255
+uc DayLightBlue = 255
+uc DayAmbientBlue = 96
+uc DayAmbientGreen = 96
+uc DayAmbientRed = 96
+uc SunsetLightRed = 205
+uc SunsetLightGreen = 84
+uc SunsetLightBlue = 31
+uc NightLightRed = 64
+uc NightLightGreen = 64
+uc NightLightBlue = 64
+uc NightAmbientBlue = 32
+uc NightAmbientGreen = 32
+uc NightAmbientRed = 32
+uc SeenBlue = 15
+uc SeenGreen = 64
+uc SeenRed = 128
+uc BaseBlue = 127
+uc BaseGreen = 95
+uc BaseRed = 95
+f LightDirPitch = 55.000000
+f DayLightPitch = 55.000000
+f DayToNightTime = -1.000000
+f LightDirYaw = 281.250000
+f NewScale = 0.763900
+f StartRotation = -90.000000
+f[3] LODScales = 1.00, 0.50, 0.30,
+f ElevationAdjustFactor = 150.000000
+f ZoomMax = 3.000000
+f ZoomMin = 0.100000
+f FOVMax = 90.000000
+f FOVMin = 20.000000
+f FogStart = 50.000000
+f FogFull = -200.000000
+ul FogColor = 5324544
+f FogTransparency = 0.686275
+l UserMin = 0
+l UserMax = 500
+l BaseTerrain = 2
+
+[Water]
+f Elevation = 50.000000
+f Frequency = 40.000000
+f Ampliture = 4.000000
+ul AlphaShallow = 1056964608
+ul AlphaMiddle = -1358954496
+ul AlphaDeep = -16777216
+f AlphaDepth = 8.671880
+f ShallowDepth = 20.000000
+
+[Terrain]
+l UserMin = 0
+l UserMax = 500
+f TerrainMinX = -7680.000000
+f TerrainMinY = 7680.000000
+
+[Warriors]
+ul NumWarriors = 2
+
+[Parts]
+ul NumParts = 2
+b AlliedTeam = TRUE
+
+[Warrior1]
+st Profile = "pmwbubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part1]
+ul ObjectNumber = 52
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 1
+f PositionX = 4544.000000
+f PositionY = 4672.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1
+ul HighlightColor1 = -1
+ul HighlightColor2 = -1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Madcat"
+ul VariantNumber = -1
+ul SquadNum = 16
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 4
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior2]
+st Profile = "pmwbubba"
+st Brain = "DredAttack01"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior2Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior2Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior2Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part2]
+ul ObjectNumber = 52
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 2
+f PositionX = 3818.666992
+f PositionY = 3904.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1
+ul HighlightColor1 = -1
+ul HighlightColor2 = -1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Madcat"
+ul VariantNumber = -1
+ul SquadNum = 17
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 5
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Teams]
+b AlliedTeam = FALSE
+
+[Commander0Group:0]
+l[12] Mates = 1,0,0,0,0,0,0,0,0,0,0,0,
+
+[Commander1Group:0]
+l[12] Mates = 2,0,0,0,0,0,0,0,0,0,0,0,
+
+[NavMarkers]
+ul NumNavMarkers = 0
+
+[Artillery]
+l NumLargeStrikes = 0
+l NumSmallStrikes = 0
+l NumSensorStrikes = 0
+l NumCameraStrikes = 0
+
+[MissionSettings]
+st MissionName = ""
+st Author = ""
+st Blurb = ""
+f TimeLimit = -1.000000
+l ResourcePoints = 100000
+ul IsSinglePlayer = 0
+ul MaximumNumberOfTeams = 2
+ul MaximumNumberOfPlayers = 2
+uc scenarioTuneNum = 0
+
+[Objectives Version]
+ul Version = 3
+
+[Team0Objectives]
+ul NumObjectives = 0
+
+[Team1Objectives]
+ul NumObjectives = 0
+
+[Team2Objectives]
+ul NumObjectives = 0
+
+[Team3Objectives]
+ul NumObjectives = 0
+
+[Team4Objectives]
+ul NumObjectives = 0
+
+[Team5Objectives]
+ul NumObjectives = 0
+
+[Team6Objectives]
+ul NumObjectives = 0
+
+[Team7Objectives]
+ul NumObjectives = 0
+
+[Music]
+uc scenarioTuneNum = 0
+
+[Script]
+st ScenarioScript = "m0101"
+FITend 

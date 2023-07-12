@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5670E4D930A84862D899738772D68C52" />
+  <Asset Name="..\straightpipe2.ini" Type="Physical" Author="franksav" FileSize="268" ModificationTime="2006-03-03T01:28:52.2891108-08:00" CRC="74B79B9ABED5DF43900D0BA70E98D656" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="straightPipe2.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="StraightPipe2X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="StraightPipe2dam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="StraightPipe2DamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Pipe" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

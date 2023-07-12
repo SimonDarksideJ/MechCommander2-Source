@@ -1,0 +1,301 @@
+//****************************************************************************************//
+//
+//		Convoy D - Non-Combat Vehicles
+//				???Vehicles
+//
+//      MISSION:  Mc2_12
+//		Unit(s) that WAIT until TRIGGERED, then PATROL to BASE 2
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_12_CvD_NCV2_TT2;
+
+	var
+
+//**************ORIGINAL******************
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState		startBase2PatrolState;
+		static PatrolPath			startBase2PatrolPath;
+		static boolean			CvD_Patrol_Triggered;
+		static real			timerDelay;
+		static boolean			timerDelay_Check;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+//**************ORIGINAL******************
+
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+//		AttackStateHandle = getStateHandle("attack");
+
+//**************NEW***********************
+
+		CvD_Patrol_Triggered = FALSE; //LT, used to check Patrol has been triggered
+		timerDelay_Check = FALSE;  //LT, used to check timer
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase2PatrolState Start
+
+		startBase2PatrolState[0] = PATROL_TYPE_LINEAR;
+		startBase2PatrolState[1] = 22;    //?num points
+		startBase2PatrolState[2] = 1;    //?num cycles
+		startBase2PatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startBase2PatrolState[4] = -1;    //reset cur point
+		startBase2PatrolState[5] = -1;    //reset cur cycle
+		startBase2PatrolState[6] = CONTACT_CRITERIA_NONE;
+
+		startBase2PatrolPath[0, 0] = 7317.333;
+		startBase2PatrolPath[0, 1] = 4160.000;
+		startBase2PatrolPath[1, 0] = 6464.000;
+		startBase2PatrolPath[1, 1] = 4160.000;
+		startBase2PatrolPath[2, 0] = 6464.000;
+		startBase2PatrolPath[2, 1] = 2752.000;
+		startBase2PatrolPath[3, 0] = 5696.000;
+		startBase2PatrolPath[3, 1] = 2624.000;
+		startBase2PatrolPath[4, 0] = 5312.000;
+		startBase2PatrolPath[4, 1] = 2624.000;
+		startBase2PatrolPath[5, 0] = 5312.000;
+		startBase2PatrolPath[5, 1] = -1600.000;
+		startBase2PatrolPath[6, 0] = 5696.000;
+		startBase2PatrolPath[6, 1] = -1600.000;
+		startBase2PatrolPath[7, 0] = 5696.000;
+		startBase2PatrolPath[7, 1] = -3520.000;
+		startBase2PatrolPath[8, 0] = 192.000;
+		startBase2PatrolPath[8, 1] = -3520.000;
+		startBase2PatrolPath[9, 0] = 192.000;
+		startBase2PatrolPath[9, 1] = -1728.000;
+		startBase2PatrolPath[10, 0] = -320.000;
+		startBase2PatrolPath[10, 1] = -1728.000;
+		startBase2PatrolPath[11, 0] = -320.000;
+		startBase2PatrolPath[11, 1] = 1216.000;
+		startBase2PatrolPath[12, 0] = -4416.000;
+		startBase2PatrolPath[12, 1] = 1216.000;
+		startBase2PatrolPath[13, 0] = -4416.000;
+		startBase2PatrolPath[13, 1] = 448.000;
+		startBase2PatrolPath[14, 0] = -4928.000;
+		startBase2PatrolPath[14, 1] = 448.000;
+		startBase2PatrolPath[15, 0] = -4928.000;
+		startBase2PatrolPath[15, 1] = 64.000;
+		startBase2PatrolPath[16, 0] = -5440.000;
+		startBase2PatrolPath[16, 1] = 64.000;
+		startBase2PatrolPath[17, 0] = -5440.000;
+		startBase2PatrolPath[17, 1] = -1472.000;
+		startBase2PatrolPath[18, 0] = -5184.000;
+		startBase2PatrolPath[18, 1] = -1472.000;
+		startBase2PatrolPath[19, 0] = -5184.000;
+		startBase2PatrolPath[19, 1] = -2880.000;
+		startBase2PatrolPath[20, 0] = -4544.000;
+		startBase2PatrolPath[20, 1] = -2880.000;
+		startBase2PatrolPath[21, 0] = -4629.333;
+		startBase2PatrolPath[21, 1] = -2965.333;
+		
+
+		//XLs startBase2PatrolPath end
+		
+//**************ORIGINAL******************
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+//**************NEW***********************
+
+		curTime = getTime;
+
+		// Trigger for CvD Movers to Start Base1 Patrol
+		if (CvD_Start_Trigger) then
+			if (NOT timerDelay_Check)then
+				timerDelay = getTime + 20; //Wait 20 secs before Convoy Moves
+				timerDelay_Check = TRUE;
+			else
+				if ((getTime > timerDelay) AND (NOT CvD_Patrol_Triggered)) then
+					CvD_Patrol_Triggered = TRUE;
+					trans Base2Patrol;
+				endif;
+			endif;
+		endif;
+		
+//**************ORIGINAL******************
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			//trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state Base2Patrol;
+
+	code
+
+//		coreRun = True;
+
+
+		update;
+		setDebugString(-1, 3, " Base2Patrol    ");
+		corePatrol(startBase2PatrolState, startBase2PatrolPath, AttackStateHandle);
+		CvD_End_Trigger = TRUE;
+		resetOrders(1);
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+//state attack;
+
+//	var
+
+//		integer		tacticState;
+
+//	code
+
+
+//		update;
+//		setDebugString(-1, 3, " ATTACK    ");
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_RIGHT_FLANK, tacticState);
+//		resetOrders(1);
+//		transBack;
+
+//endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+
+		setDebugString(-1, 3, " WAIT    ");
+		update;
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

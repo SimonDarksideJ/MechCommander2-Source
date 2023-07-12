@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="35FC59778C0EE9CE42870A3910685464" />
+  <Asset Name="..\birch1dead.ini" Type="Physical" Author="franksav" FileSize="315" ModificationTime="2006-03-03T01:28:13.1018616-08:00" CRC="C2827BCE6FEE7013172E077E2EFD399E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="birch1dead.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="birch1deadL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="birch1deadL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="birch1deadX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

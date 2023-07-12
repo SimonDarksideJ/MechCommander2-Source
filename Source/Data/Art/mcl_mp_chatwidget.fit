@@ -1,0 +1,342 @@
+FITini 
+
+// CHAT BOX
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Buttons]
+l Buttoncount = 3
+
+[Button0] // help/chat toggle
+l XLocation = 606
+l YLocation = 543
+l Width = 23
+l Height = 23
+l ID = 300
+b Toggle = 1
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+l UWidth = 23
+l VHeight = 23
+
+l UNormal = 80
+l VNormal = 78
+
+l UPressed = 103
+l VPressed = 78
+
+l UHighlight = 80
+l VHighlight = 78
+
+l UHighlightPressed = 103
+l VHighlightPressed = 78
+
+l UDisabled = 80
+l VDisabled = 78
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 15
+l NormalColor1 = 0xffffffff
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6b6b6b
+f PressedTime1 = 0.2
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xff6b6b6b
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.2
+l HighlightPressedColor1 = 0xff6b6b6b
+f HighlightPressedTime2 = 0.4
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xffffffff
+f DisabledTime1 = 15
+l DisabledColor1 = 0xffffffff
+
+[Button1] // toggle up/down state button
+l XLocation = 630
+l YLocation = 543
+l Width = 23
+l Height = 23
+l ID = 301
+b Toggle = 1
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+l UWidth = 23
+l VHeight = 23
+
+l UNormal = 80
+l VNormal = 55
+
+l UPressed = 103
+l VPressed = 55
+
+l UHighlight = 80
+l VHighlight = 55
+
+l UHighlightPressed = 103
+l VHighlightPressed = 55
+
+l UDisabled = 80
+l VDisabled = 55
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 15
+l NormalColor1 = 0xffffffff
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6b6b6b
+f PressedTime1 = 0.2
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xff6b6b6b
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.2
+l HighlightPressedColor1 = 0xff6b6b6b
+f HighlightPressedTime2 = 0.4
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xffffffff
+f DisabledTime1 = 15
+l DisabledColor1 = 0xffffffff
+
+
+
+
+[Button2] // toggle chat team only/chat all
+l XLocation = 606
+l YLocation = 567
+l Width = 47
+l Height = 25
+l ID = 302
+b Toggle = 1
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+l UWidth = 47
+l VHeight = 25
+
+l UNormal = 80
+l VNormal = 30
+
+l UPressed = 127
+l VPressed = 30
+
+l UHighlight = 80
+l VHighlight = 30
+
+l UHighlightPressed = 127
+l VHighlightPressed = 30
+
+l UDisabled = 127
+l VDisabled = 30
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 15
+l NormalColor1 = 0xffffffff
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6b6b6b
+f PressedTime1 = 0.2
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xff6b6b6b
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.2
+l HighlightPressedColor1 = 0xff6b6b6b
+f HighlightPressedTime2 = 0.4
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xffffffff
+f DisabledTime1 = 15
+l DisabledColor1 = 0xffffffff
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Rects]
+l Rectcount = 6
+
+[Rect0] // background to obscure help area
+l XLocation = 143
+l YLocation = 540
+l Width = 462
+l Height = 54
+l Color = 0x00000000
+b outline = FALSE
+
+[Rect1] // list box for player names, chat text, etc
+// has a blue scroll bar
+// normal text should be 0xffffffff
+// team only text should be 0xff22A300, and should be preceded by [Team Only]
+// there should be a 12p high rectangle behind each player's name, with 1p added to the beginning and the end of the player's name
+
+l XLocation = 145
+l YLocation = 541 
+l Width = 459
+l Height = 39
+l Color = 0x00000000 // 
+b outline = TRUE
+l HelpDesc = 26407
+
+[Rect2] // line between chat text and edit box 
+l XLocation = 147
+l YLocation = 578
+l Width = 455
+l Height = 0
+l Color = 0xff002f55
+b outline = TRUE
+
+
+[Rect3] // chat-help toggle rollover 
+l XLocation = 606
+l YLocation = 543
+l Width = 23
+l Height = 23
+
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26412
+
+[Rect4] // max-min toggle rollover
+l XLocation = 630
+l YLocation = 543
+l Width = 23
+l Height = 23
+
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26413
+
+[Rect5] // team-all toggle rollover
+l XLocation = 606
+l YLocation = 567
+l Width = 47
+l Height = 25
+
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26414
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Edits]
+l EditCount = 1
+
+[Edit0]
+l XLocation = 146
+l YLocation = 579
+l Width = 452
+l Height = 18
+l Color = 0xffffffff// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xff005392
+l SelectedColor = 0xff005392
+l Font = 25999 // arialnarrow8
+
+// should be prefaced with [Team Only] if the team only toggle is on.
+// team only text color is 0xff22A300
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Texts]
+l Textcount = 1
+
+[Text0] // help
+l XLocation = 147
+l YLocation = 541
+l Width = 457
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 25998 // use arial narrow 9
+l TextID = 27700
+l Alignment = 0
+
+
+FITend 

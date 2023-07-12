@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9B7B3773DF2BBAAFF16EF14B3B9BF30A" />
+  <Asset Name="..\yieldsigndam.ase" Type="Physical" Author="ngauvin" FileSize="15493" ModificationTime="2006-02-01T10:55:40.3110412-08:00" CRC="893C7D39CBBF9A6EF08123475BD165A0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\signs.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

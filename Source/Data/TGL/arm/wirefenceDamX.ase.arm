@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0EF8AC476A4EEFB8608002979E25A348" />
+  <Asset Name="..\wirefenceDamX.ase" Type="Physical" Author="ngauvin" FileSize="2859" ModificationTime="2006-02-01T10:55:39.2172842-08:00" CRC="F50CB5F18200676D936B3711DC82184B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

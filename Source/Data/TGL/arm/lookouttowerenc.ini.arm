@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B3029A4A4D4F4AFEC32B841D1B50BD76" />
+  <Asset Name="..\lookouttowerenc.ini" Type="Physical" Author="franksav" FileSize="152" ModificationTime="2006-03-03T01:28:33.9611031-08:00" CRC="5BDEE2AABB40A5659EB687C61E575C39" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="lookouttowerenc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

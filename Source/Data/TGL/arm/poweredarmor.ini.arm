@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F849EC202C514577A0076630084F4DFC" />
+  <Asset Name="..\poweredarmor.ini" Type="Physical" Author="franksav" FileSize="727" ModificationTime="2006-03-03T01:28:39.0235707-08:00" CRC="BDDBEDD46D1B16733ABFAF6E92D45342" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="poweredArmor.ase" />
+        <Relationship Type="Animation" RelatedAsset="poweredarmor.ase" />
+        <Relationship Type="Animation" RelatedAsset="poweredarmorwalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="poweredarmorrun.ase" />
+        <Relationship Type="Animation" RelatedAsset="poweredarmor.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="poweredArmorDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Powered Armor" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

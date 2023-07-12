@@ -1,0 +1,275 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Mech Profile:  107100   'JM6-A'  Type:  10 
+//
+//      Creation Date: 2/17/98      Creator: david abzug
+//
+//      Spec Mech (Don't mess with this one)
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "MechProfile"
+
+
+[General]
+st MechType = "JagerMech A"
+b Clan = False
+ul ID =                                                     107100 
+ul Chassis =                                                50 
+l DescIndex =                                               427 
+st Name =                                                  "JM6-A"
+l NameIndex =                                               10 
+l NameVariant =                                             0 
+f CurTonnage =                                              70 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          7000 
+l ChassisBR =                                               70 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[HeatSinks]
+uc HeatSinkType =                                           2 
+uc ExtraHeatSinks =                                         1 
+uc HeatBuildUp =                                            0 
+
+[Engine]
+f Tonnage =                                                 4 
+ul Rating =                                                 280 
+uc MaxRunSpeed =                                            18 
+uc JumpRange =                                              0 
+
+[Armor]
+uc Type =                                                   0 
+f Tonnage =                                                 12 
+
+[MaxArmorPoints]
+uc Head =                                                   17 
+uc CenterTorso =                                            34 
+uc LeftTorso =                                              30 
+uc RightTorso =                                             30 
+uc LeftArm =                                                25 
+uc RightArm =                                               25 
+uc LeftLeg =                                                27 
+uc RightLeg =                                               27 
+uc RearCenterTorso =                                        13 
+uc RearLeftTorso =                                          10 
+uc RearRightTorso =                                         10 
+
+[CurArmorPoints]
+uc Head =                                                   17 
+uc CenterTorso =                                            34 
+uc LeftTorso =                                              30 
+uc RightTorso =                                             30 
+uc LeftArm =                                                25 
+uc RightArm =                                               25 
+uc LeftLeg =                                                27 
+uc RightLeg =                                               27 
+uc RearCenterTorso =                                        13 
+uc RearLeftTorso =                                          10 
+uc RearRightTorso =                                         10 
+
+[InventoryInfo]
+uc NumOther =                                               13 
+uc NumWeapons =                                             5 
+uc NumAmmo =                                                2 
+
+[Head]
+uc CASE =                                                   0 
+uc CurInternalStructure =                                   3 
+uc HotSpotNumber =                                          7 
+uc[2] Component:0 =                                        5,0
+uc[2] Component:1 =                                        6,0
+uc[2] Component:2 =                                        12,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+
+[CenterTorso]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   22 
+uc HotSpotNumber =                                          5 
+uc[2] Component:0 =                                        0,0
+uc[2] Component:1 =                                        7,0
+uc[2] Component:2 =                                        255,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+uc[2] Component:6 =                                        255,0
+uc[2] Component:7 =                                        255,0
+uc[2] Component:8 =                                        255,0
+uc[2] Component:9 =                                        255,0
+uc[2] Component:10 =                                       255,0
+uc[2] Component:11 =                                       255,0
+
+[LeftTorso]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   15 
+uc HotSpotNumber =                                          6 
+uc[2] Component:0 =                                        17,0
+uc[2] Component:1 =                                        255,0
+uc[2] Component:2 =                                        255,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+uc[2] Component:6 =                                        255,0
+uc[2] Component:7 =                                        255,0
+uc[2] Component:8 =                                        255,0
+uc[2] Component:9 =                                        255,0
+uc[2] Component:10 =                                       255,0
+uc[2] Component:11 =                                       255,0
+
+[RightTorso]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   15 
+uc HotSpotNumber =                                          4 
+uc[2] Component:0 =                                        13,0
+uc[2] Component:1 =                                        14,0
+uc[2] Component:2 =                                        255,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+uc[2] Component:6 =                                        255,0
+uc[2] Component:7 =                                        255,0
+uc[2] Component:8 =                                        255,0
+uc[2] Component:9 =                                        255,0
+uc[2] Component:10 =                                       255,0
+uc[2] Component:11 =                                       255,0
+
+[LeftArm]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   11 
+uc HotSpotNumber =                                          2 
+uc[2] Component:0 =                                        8,0
+uc[2] Component:1 =                                        1,0
+uc[2] Component:2 =                                        1,0
+uc[2] Component:3 =                                        1,0
+uc[2] Component:4 =                                        15,0
+uc[2] Component:5 =                                        18,0
+uc[2] Component:6 =                                        255,0
+uc[2] Component:7 =                                        255,0
+uc[2] Component:8 =                                        255,0
+uc[2] Component:9 =                                        255,0
+uc[2] Component:10 =                                       255,0
+uc[2] Component:11 =                                       255,0
+
+[RightArm]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   11 
+uc HotSpotNumber =                                          0 
+uc[2] Component:0 =                                        9,0
+uc[2] Component:1 =                                        2,0
+uc[2] Component:2 =                                        2,0
+uc[2] Component:3 =                                        2,0
+uc[2] Component:4 =                                        16,0
+uc[2] Component:5 =                                        19,0
+uc[2] Component:6 =                                        255,0
+uc[2] Component:7 =                                        255,0
+uc[2] Component:8 =                                        255,0
+uc[2] Component:9 =                                        255,0
+uc[2] Component:10 =                                       255,0
+uc[2] Component:11 =                                       255,0
+
+[LeftLeg]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   15 
+uc HotSpotNumber =                                          9 
+uc[2] Component:0 =                                        10,0
+uc[2] Component:1 =                                        3,0
+uc[2] Component:2 =                                        3,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+
+[RightLeg]
+uc CASE =                                                   1 
+uc CurInternalStructure =                                   15 
+uc HotSpotNumber =                                          8 
+uc[2] Component:0 =                                        11,0
+uc[2] Component:1 =                                        4,0
+uc[2] Component:2 =                                        4,0
+uc[2] Component:3 =                                        255,0
+uc[2] Component:4 =                                        255,0
+uc[2] Component:5 =                                        255,0
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1  //Fusion Engine
+
+[Item:1]
+uc MasterID =                                               4  //Arm Actuator
+
+[Item:2]
+uc MasterID =                                               4  //Arm Actuator
+
+[Item:3]
+uc MasterID =                                               5  //Leg Actuator
+
+[Item:4]
+uc MasterID =                                               5  //Leg Actuator
+
+[Item:5]
+uc MasterID =                                               6  //Cockpit
+
+[Item:6]
+uc MasterID =                                               13  //Basic IS Mech Sensor
+
+[Item:7]
+uc MasterID =                                               21  //Gyroscope III
+
+[Item:8]
+uc MasterID =                                               33  //Shoulder
+
+[Item:9]
+uc MasterID =                                               33  //Shoulder
+
+[Item:10]
+uc MasterID =                                               34  //Hip
+
+[Item:11]
+uc MasterID =                                               34  //Hip
+
+[Item:12]
+uc MasterID =                                               35  //LifeSupport
+
+// Weapons
+
+
+[Item:13]
+uc MasterID =                                               143  //Medium Laser
+uc FacesForward =                                           1 
+
+[Item:14]
+uc MasterID =                                               143  //Medium Laser
+uc FacesForward =                                           1 
+
+[Item:15]
+uc MasterID =                                               103  //Ultra Autocannon/5
+uc FacesForward =                                           1 
+
+[Item:16]
+uc MasterID =                                               103  //Ultra Autocannon/5
+uc FacesForward =                                           1 
+
+[Item:17]
+uc MasterID =                                               141  //Large ER Laser
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:18]
+uc MasterID =                                               203  //Ultra Autocannon/5 Ammo
+l Amount =                                                 -1 
+
+[Item:19]
+uc MasterID =                                               203  //Ultra Autocannon/5 Ammo
+l Amount =                                                 -1 
+FITEnd

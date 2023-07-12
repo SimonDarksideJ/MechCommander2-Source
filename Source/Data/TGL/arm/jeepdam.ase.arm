@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FBFB45801F05F68EBEFF8BB685C5A3F7" />
+  <Asset Name="..\jeepdam.ase" Type="Physical" Author="ngauvin" FileSize="21741" ModificationTime="2006-02-01T10:55:01.5139179-08:00" CRC="DB64C3344C26C713DDEE7F3CBAAFC633" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

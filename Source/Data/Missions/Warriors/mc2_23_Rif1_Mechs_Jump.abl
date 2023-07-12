@@ -1,0 +1,363 @@
+//****************************************************************************************//
+//
+//		Reinforcements 1 - Mechs
+//				???Mechs
+//
+//      MISSION:  Mc2_23
+//		Unit(s) that WAIT until TRIGGERED, then PATROL to Town, destroy it, then move to starport
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_23_Rif1_Mechs_Jump;
+
+	var
+
+//**************ORIGINAL******************
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState		startTownPatrolState;
+		static PatrolPath		startTownPatrolPath;
+		static PatrolState		startPatrolToStarportState;
+		static PatrolPath		startPatrolToStarportPath;
+		static PatrolState		startStarportPatrolState;
+		static PatrolPath		startStarportPatrolPath;
+		static boolean			Starport_Patrol_Check;
+		static real				StarportTimerDelay;
+		static boolean			StarportTimer_Check;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+//**************ORIGINAL******************
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 400, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+
+//**************NEW***********************
+		Starport_Patrol_Check = FALSE; //LT, used to check Patrol has been triggered
+		StarportTimer_Check = FALSE;
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase1PatrolState Start
+
+		startTownPatrolState[0] = PATROL_TYPE_LINEAR;
+		startTownPatrolState[1] = 5;    //?num points
+		startTownPatrolState[2] = 1;    //?num cycles
+		startTownPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startTownPatrolState[4] = -1;    //reset cur point
+		startTownPatrolState[5] = -1;    //reset cur cycle
+		startTownPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startTownPatrolPath[0, 0] = -3136.000;
+		startTownPatrolPath[0, 1] = 320.000;
+		startTownPatrolPath[1, 0] = -4288.000;
+		startTownPatrolPath[1, 1] = 320.000;
+		startTownPatrolPath[2, 0] = -4672.000;
+		startTownPatrolPath[2, 1] = 448.000;
+		startTownPatrolPath[3, 0] = -3136.000;
+		startTownPatrolPath[3, 1] = 320.000;
+		startTownPatrolPath[4, 0] = -3136.000;
+		startTownPatrolPath[4, 1] = 1088.000;
+		
+		startPatrolToStarportState[0] = PATROL_TYPE_LINEAR;
+		startPatrolToStarportState[1] = 3;    //?num points
+		startPatrolToStarportState[2] = 1;    //?num cycles
+		startPatrolToStarportState[3] = PATROL_DIRECTION_FORWARD;
+		startPatrolToStarportState[4] = -1;    //reset cur point
+		startPatrolToStarportState[5] = -1;    //reset cur cycle
+		startPatrolToStarportState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startPatrolToStarportPath[0, 0] = -7232.000;
+		startPatrolToStarportPath[0, 1] = -832.000;
+		startPatrolToStarportPath[1, 0] = -4288.000;
+		startPatrolToStarportPath[1, 1] = -576.000;
+		startPatrolToStarportPath[2, 0] = 960.000;
+		startPatrolToStarportPath[2, 1] = -2240.000;
+
+		
+		startStarportPatrolState[0] = PATROL_TYPE_LINEAR;
+		startStarportPatrolState[1] = 2;    //?num points
+		startStarportPatrolState[2] = -1;    //?num cycles
+		startStarportPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startStarportPatrolState[4] = -1;    //reset cur point
+		startStarportPatrolState[5] = -1;    //reset cur cycle
+		startStarportPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startStarportPatrolPath[0, 0] = 2496.000;
+		startStarportPatrolPath[0, 1] = -2112.000;
+		startStarportPatrolPath[1, 0] = 2496.000;
+		startStarportPatrolPath[1, 1] = -5312.000;
+
+		//XLs startBase1PatrolPath end
+		
+//**************ORIGINAL******************
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+//**************NEW***********************
+
+/*		// Trigger for Reinforcement1 Movers to Start Town Patrol
+		if (Reinforcements1_Triggered) then
+			if (NOT Reinforcements1_Check) then
+				Reinforcements1_Check = TRUE;
+				trans TownPatrol;
+			endif;
+		endif;
+*/
+		// Trigger for Reinforcement1 Movers to Start Patrol to Starport
+		// Trigger for Reinforcement1 Movers to Start Patrol to Starport
+		// Trigger for Reinforcement1 Movers to Start Patrol to Starport
+		if (Starport_Reinforcements_Trigger) then
+			if (NOT Starport_Patrol_Check) then
+				Starport_Patrol_Check = TRUE;
+				StarportTimerDelay = getTime + 320; //Wait 10 secs before attacking
+			else
+				if ((getTime > StarportTimerDelay) AND (Not StarportTimer_Check)) then
+						StarportTimer_Check = True;
+						trans PatrolToStarport;
+    		endif;
+			endif;
+		endif;
+		
+//**************ORIGINAL******************
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state TownPatrol;
+
+	code
+	
+/*		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 325, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_BUILDING, 0,150, -1);
+		setTargetPriority(3, TARGET_PRIORITY_NONE, 0, 0, 0);
+*/
+		update;
+		setDebugString(-1, 3, "   Patrolling to Town    ");
+          if (random(100) < 70) then
+                corePatrol(startTownPatrolState, startTownPatrolPath, TACORDER_PARAM_JUMP);
+          else
+								corePatrol(startTownPatrolState, startTownPatrolPath, -1);
+          endif;
+//		corePatrol(startTownPatrolState, startTownPatrolPath, -1);
+		resetOrders(1);
+		trans PatrolToStarport;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state PatrolToStarport;
+
+	code
+
+		//coreRun = TRUE;
+		update;
+		setDebugString(-1, 3, "  PatrolToStarport     ");
+		corePatrol(startPatrolToStarportState, startPatrolToStarportPath, AttackStateHandle);
+		trans StarportPatrol;
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state StarportPatrol;
+
+	code
+
+		//coreRun = FALSE;
+		update;
+		setDebugString(-1, 3, "  StarportPatrol     ");
+		corePatrol(startStarportPatrolState, startStarportPatrolPath, AttackStateHandle);
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+
+		integer		tacticState;
+
+	code
+
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+		AttackMusicTrigger2 = TRUE;
+          if (random(100) < 50) then
+                coreAttack(0, TACORDER_PARAM_PURSUE + TACORDER_PARAM_JUMP);
+          else
+                coreAttack(0, TACORDER_PARAM_PURSUE);
+          endif;
+
+//		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+
+		setDebugString(-1, 3, " WAIT    ");
+		update;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

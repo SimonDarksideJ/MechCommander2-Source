@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9D8E3ADBDFA399984801F4C48945853B" />
+  <Asset Name="..\SlayerParkedDamX.ase" Type="Physical" Author="ngauvin" FileSize="72025" ModificationTime="2006-02-01T10:55:30.7172298-08:00" CRC="6AFE68109BBD55D7C5BB42828710E061" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_SlayerDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

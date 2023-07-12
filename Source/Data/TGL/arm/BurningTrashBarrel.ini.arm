@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7D70B6E0D2570672A2AF19C4E56BBFB3" />
+  <Asset Name="..\BurningTrashBarrel.ini" Type="Physical" Author="franksav" FileSize="375" ModificationTime="2006-03-03T01:28:14.3206038-08:00" CRC="1A8C5D58CE02B284C2BF1312A894A624" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="BurningTrashbarrel.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="BurningTrashbarrelL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="BurningTrashbarrelL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="BurningTrashbarrelX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="BurningTrashbarreldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="BurningTrashbarreldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Trash Barrel" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

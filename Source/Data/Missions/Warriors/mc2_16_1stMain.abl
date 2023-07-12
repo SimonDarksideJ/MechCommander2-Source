@@ -1,0 +1,346 @@
+//****************************************************************************************
+
+//
+//	FIGHTER: PATROL AND CALL IN REINFORCEMENTS
+//      MISSION:  Mc2_16
+//		Lead group in Main Reinforcements. (Southern Group)
+//		
+//
+//
+//****************************************************************************************//
+
+fsm mc2_16_FirstMain;
+
+	var
+
+//**************ORIGINAL******************
+		static WorldPosition		startPosition;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState	patrolState1,patrolState2;
+		static PatrolPath		patrolPath1,patrolPath2;
+		
+		static boolean			FirstMain_Patrol_Triggered;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+//**************ORIGINAL******************
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 300, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+
+//**************NEW***********************
+		FirstMain_Patrol_Triggered = FALSE; //LT, used to check Patrol has been triggered
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase1PatrolState Start
+
+
+		patrolState1[0] = PATROL_TYPE_LINEAR;
+		patrolState1[1] = 26;    //?num points
+		patrolState1[2] = 1;    //?num cycles
+		patrolState1[3] = PATROL_DIRECTION_FORWARD;
+		patrolState1[4] = -1;    //reset cur point
+		patrolState1[5] = -1;    //reset cur cycle
+		patrolState1[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		patrolPath1[0, 0] = -1344.000;
+		patrolPath1[0, 1] = -6336.000;
+		patrolPath1[1, 0] = 3264.000;
+		patrolPath1[1, 1] = -6293.000;
+		patrolPath1[2, 0] = 3264.000;
+		patrolPath1[2, 1] = -5098.000;
+		patrolPath1[3, 0] = 3178.667;
+		patrolPath1[3, 1] = -3520.000;
+		patrolPath1[4, 0] = 2538.000;
+		patrolPath1[4, 1] = -3520.000;
+		patrolPath1[5, 0] = 1216.000;
+		patrolPath1[5, 1] = -3520.000;
+		patrolPath1[6, 0] = 1216.000;
+		patrolPath1[6, 1] = -3818.000;
+		patrolPath1[7, 0] = 1216.000;
+		patrolPath1[7, 1] = -4373.000;
+		patrolPath1[8, 0] = -21.000;
+		patrolPath1[8, 1] = -4416.000;
+		patrolPath1[9, 0] = -1301.000;
+		patrolPath1[9, 1] = -4373.000;
+		patrolPath1[10, 0] = -1344.000;
+		patrolPath1[10, 1] = -3818.667;
+		patrolPath1[11, 0] = -1344.000;
+		patrolPath1[11, 1] = -2538.667;
+		patrolPath1[12, 0] = -1344.000;
+		patrolPath1[12, 1] = -2368.000;
+		patrolPath1[13, 0] = -2581.333;
+		patrolPath1[13, 1] = -2368.000;
+		patrolPath1[14, 0] = -3264.000;
+		patrolPath1[14, 1] = -2325.333;
+		patrolPath1[15, 0] = -3264.000;
+		patrolPath1[15, 1] = -1258.667;
+		patrolPath1[16, 0] = -3861.333;
+		patrolPath1[16, 1] = -1088.000;
+		patrolPath1[17, 0] = -5141.333;
+		patrolPath1[17, 1] = -1088.000;
+		patrolPath1[18, 0] = -6080.000;
+		patrolPath1[18, 1] = -1045.333;
+		patrolPath1[19, 0] = -6080.000;
+		patrolPath1[19, 1] = 21.333;
+		patrolPath1[20, 0] = -6080.000;
+		patrolPath1[20, 1] = 1301.333;
+		patrolPath1[21, 0] = -5141.333;
+		patrolPath1[21, 1] = 1344.000;
+		patrolPath1[22, 0] = -3861.333;
+		patrolPath1[22, 1] = 1344.000;
+		patrolPath1[23, 0] = -2880.000;
+		patrolPath1[23, 1] = 1344.000;
+		patrolPath1[24, 0] = -2880.000;
+		patrolPath1[24, 1] = 2581.333;
+		patrolPath1[25, 0] = -2880.000;
+		patrolPath1[25, 1] = 3520.000;
+
+
+		//XLs patrolPath1 end
+
+	
+
+
+		//-------------------------
+		// Setup the Patrol here...
+//Guard Paths After Reaching Base
+		patrolState2[0] = PATROL_TYPE_LINEAR;
+		patrolState2[1] = 2; //?num points
+		patrolState2[2] = -1; //?num cycles
+		patrolState2[3] = PATROL_DIRECTION_FORWARD;
+		patrolState2[4] = -1; //reset cur point
+		patrolState2[5] = -1; //reset cur cycle
+		patrolState2[6] = CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		
+		patrolPath2[0, 0] =	-3093.333	;
+		patrolPath2[0, 1] =	4074.667	;
+		patrolPath2[1, 0] =	-2538.667	;
+		patrolPath2[1, 1] =	4202.667	;
+
+		
+		//XLs patrolPath1 end
+		
+		
+
+//**************ORIGINAL******************
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+//**************NEW***********************
+
+		// Trigger for CvA Movers to Start Base1 Patrol
+		if (FirstMain_Start_Trigger) then
+			if (NOT FirstMain_Patrol_Triggered) then
+				FirstMain_Patrol_Triggered = TRUE;
+				trans Base1Escort;
+			endif;
+		endif;
+		
+
+//**************ORIGINAL******************
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state Base1Escort;
+
+	code
+
+
+		update;
+		setDebugString(-1, 3, " Base1Escort    ");
+		corePatrol(patrolState1, patrolPath1, AttackStateHandle);
+		trans Base1Patrol;
+		resetOrders(1);
+
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state Base1Patrol;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "  BasePatrol     ");
+		corePatrol(patrolState2, patrolPath2, AttackStateHandle);
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+
+		integer		tacticState;
+
+	code
+
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_JOUST, tacticState);
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+
+		setDebugString(-1, 3, " WAIT    ");
+		update;
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A723F62FBC1F0CEA197805AF152ADE6C" />
+  <Asset Name="..\guardtower.ini" Type="Physical" Author="franksav" FileSize="428" ModificationTime="2006-03-03T01:28:25.0549101-08:00" CRC="1768F8FAF3CAB6D5853CCF7E1238382F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="GuardTower.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="GuardTowerdam.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

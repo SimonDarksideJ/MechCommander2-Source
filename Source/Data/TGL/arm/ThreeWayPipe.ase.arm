@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D4ABF404FA802BC07A464532E9E3BB99" />
+  <Asset Name="..\ThreeWayPipe.ase" Type="Physical" Author="ngauvin" FileSize="45961" ModificationTime="2006-02-01T10:55:34.2797526-08:00" CRC="F043BA1E23BB12F7EAB728CBB6ED2DD9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Pipemap.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

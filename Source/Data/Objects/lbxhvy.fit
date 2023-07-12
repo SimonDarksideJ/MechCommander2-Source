@@ -1,0 +1,30 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=24
+
+[ObjectType]
+st Name=""
+l Appearance=0
+l ExplosionObject=0
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BoltProjectileData]
+f ProjectileLength=60.000000
+f BulgeLength=10.000000
+f BulgeWidth=2.500000
+f Velocity=200.000000
+l FiringEffect=0
+l TrailEffect=0
+l HitEffect=0
+l MissEffect=0
+l FiringSoundFX=0
+l LightEffect=0
+ul FrontRGB=32768
+ul MidEdgeRGB=65280
+ul MiddleRGB=16777215
+ul BackRGB=16384
+uc EdgeAlpha=255
+uc BoltAlpha=255
+FITend 

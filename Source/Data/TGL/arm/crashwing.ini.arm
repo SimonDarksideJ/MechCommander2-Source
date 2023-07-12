@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4DC71BF235D3BFEC1317D8C1C77131B8" />
+  <Asset Name="..\crashwing.ini" Type="Physical" Author="franksav" FileSize="621" ModificationTime="2006-03-03T01:28:19.1955726-08:00" CRC="9F0C845D397A91FC6D062F5B6709B23E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="crashwing.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="crashwingL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="crashwingL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="crashwingX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="crashwingdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="crashwingDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Crash Wing" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

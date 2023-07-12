@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A903AE818577904906D5FC2BD120EDA6" />
+  <Asset Name="..\LifeboatCrashed.ini" Type="Physical" Author="franksav" FileSize="267" ModificationTime="2006-03-03T01:28:33.039234-08:00" CRC="10269687DE48544055506BCFA77CEF1E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="lifeboatcrashed.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LifeboatCrashedL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LifeboatCrashedL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LifeboatCrashedX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Crashed Lifeboat" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

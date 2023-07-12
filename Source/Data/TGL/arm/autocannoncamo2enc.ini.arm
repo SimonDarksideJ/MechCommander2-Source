@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EE96044324DF2625103ECB2AC7141F4C" />
+  <Asset Name="..\autocannoncamo2enc.ini" Type="Physical" Author="franksav" FileSize="310" ModificationTime="2006-03-03T01:28:12.5237403-08:00" CRC="3D773CB910B4E84844B284048475DC96" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="AutoCannonCamo2Enc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

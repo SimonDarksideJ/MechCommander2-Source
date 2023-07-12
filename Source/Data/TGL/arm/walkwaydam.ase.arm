@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="565842AD8CB04E7930E80E6708FDAF5F" />
+  <Asset Name="..\walkwaydam.ase" Type="Physical" Author="ngauvin" FileSize="48540" ModificationTime="2006-02-01T10:55:37.4203977-08:00" CRC="B1D2AD4E63425F58D694D42BDF8537C0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_TerminalDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="69B8571699DD3610D7A92F5A70C686AF" />
+  <Asset Name="..\2civlivingDamX.ase" Type="Physical" Author="ngauvin" FileSize="21416" ModificationTime="2006-02-01T10:54:33.2012367-08:00" CRC="39704F9BED4F1A8FB838C0DADD936B78" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_2CivLivingDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

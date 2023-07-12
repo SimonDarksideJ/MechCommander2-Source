@@ -1,0 +1,728 @@
+//**********************************************************
+//
+//  Miscellaneous Functions Library
+//
+//**********************************************************
+
+library miscfunc;
+
+const
+
+#include_ "MISCONST.ABI"
+
+type
+
+            Position = real[3];
+			MPosition = real[2,3];
+			OList = integer[10];					
+
+var
+
+			static MPosition ObjectPosition;
+			static OList	 ObjectList;
+			static integer	 ObjectListSize;
+
+//------------------------------------------------------------------------------------
+
+function NumObjectListDead : integer;
+
+	var
+
+		integer i;
+		integer Num;
+		integer Status;
+
+	code
+
+		Num = 0;
+		for i = 0 to (ObjectListSize - 1) do
+
+			Status = ObjectStatus(ObjectList[i]);
+			if ((Status == OBJECT_STATUS_DESTROYED) OR (Status == OBJECT_STATUS_DISABLED)) then
+				Num = Num + 1;
+			endif;
+
+		endfor;
+
+		return(Num);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumObjectListAlive : integer;
+
+	var
+
+		integer i;
+		integer Num;
+		integer Status;
+
+	code
+
+		Num = 0;
+		for i = 0 to (ObjectListSize - 1) do
+
+			Status = ObjectStatus(ObjectList[i]);
+			if ((Status <> OBJECT_STATUS_DESTROYED) AND (Status <> OBJECT_STATUS_DISABLED)) then
+				Num = Num + 1;
+			endif;
+
+		endfor;
+
+		return(Num);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumObjectListCaptured : integer;
+
+	var
+
+		integer i;
+		integer Num;
+
+	code
+
+		Num = 0;
+		for i = 0 to (ObjectListSize - 1) do
+
+			if (isCaptured(ObjectList[i]) == 1) then
+				Num = Num + 1;
+			endif;
+
+		endfor;
+
+		return(Num);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function isAlive(integer Unit) : boolean;
+
+	var
+
+		integer NAlive;
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_NORMAL] = 0;
+		tallyList[OBJECT_STATUS_STARTING_UP] = 0;
+		tallyList[OBJECT_STATUS_SHUTTING_DOWN] = 0;
+		tallyList[OBJECT_STATUS_SHUTDOWN] = 0;
+		tallyList[OBJECT_STATUS_NONEXIST] = 0;
+		tallyList[OBJECT_STATUS_INACTIVE] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		NAlive = tallyList[OBJECT_STATUS_NORMAL] + tallyList[OBJECT_STATUS_STARTING_UP] + tallyList[OBJECT_STATUS_SHUTTING_DOWN] + tallyList[OBJECT_STATUS_SHUTDOWN];
+		NAlive = NAlive + tallyList[OBJECT_STATUS_NONEXIST] + tallyList[OBJECT_STATUS_INACTIVE];
+		if (NAlive > 0) then
+			return(TRUE);
+		else
+			return(FALSE);
+		endif;
+										  
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function isdead(integer Unit) : boolean;
+
+	var
+
+		integer NAlive;
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_NORMAL] = 0;
+		tallyList[OBJECT_STATUS_STARTING_UP] = 0;
+		tallyList[OBJECT_STATUS_SHUTTING_DOWN] = 0;
+		tallyList[OBJECT_STATUS_SHUTDOWN] = 0;
+		tallyList[OBJECT_STATUS_NONEXIST] = 0;
+		tallyList[OBJECT_STATUS_INACTIVE] = 0;
+		tallyList[OBJECT_STATUS_WITHDRAWN] = 0;
+
+
+		objectStatusCount(Unit, tallyList);
+		NAlive = tallyList[OBJECT_STATUS_NORMAL] + tallyList[OBJECT_STATUS_STARTING_UP] + tallyList[OBJECT_STATUS_SHUTTING_DOWN] + tallyList[OBJECT_STATUS_SHUTDOWN];
+		NAlive = NAlive + tallyList[OBJECT_STATUS_NONEXIST] + tallyList[OBJECT_STATUS_INACTIVE] + tallyList[OBJECT_STATUS_WITHDRAWN];
+		if (NAlive > 0) then
+			return(FALSE);
+		else
+			return(TRUE);
+		endif;
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function isdeadorfled(integer Unit) : boolean;
+
+	var
+
+		integer NAlive;
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_NORMAL] = 0;
+		tallyList[OBJECT_STATUS_STARTING_UP] = 0;
+		tallyList[OBJECT_STATUS_SHUTTING_DOWN] = 0;
+		tallyList[OBJECT_STATUS_SHUTDOWN] = 0;
+		tallyList[OBJECT_STATUS_NONEXIST] = 0;
+		tallyList[OBJECT_STATUS_INACTIVE] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		NAlive = tallyList[OBJECT_STATUS_NORMAL] + tallyList[OBJECT_STATUS_STARTING_UP] + tallyList[OBJECT_STATUS_SHUTTING_DOWN] + tallyList[OBJECT_STATUS_SHUTDOWN];
+		NAlive = NAlive + tallyList[OBJECT_STATUS_NONEXIST] + tallyList[OBJECT_STATUS_INACTIVE];
+		if (NAlive > 0) then
+			return(FALSE);
+		else
+			return(TRUE);
+		endif;
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function Numdeadorfled(integer Unit) : integer;
+
+	var
+
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_DISABLED] = 0;
+		tallyList[OBJECT_STATUS_DESTROYED] = 0;
+		tallyList[OBJECT_STATUS_WITHDRAWN] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		return(tallyList[OBJECT_STATUS_DISABLED] + tallyList[OBJECT_STATUS_DESTROYED] + tallyList[OBJECT_STATUS_WITHDRAWN]);
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumCaptureDeadorFled(integer Unit) : integer;
+
+	var
+	
+		integer x;
+		integer Start;
+		integer Stop;
+		integer NumDeadFled;
+		
+	code
+	
+		
+		if (Unit == PLAYER_FORCE) then
+
+				Start = PLAYER_VEHICLE0_LANCE0;
+				Stop = PLAYER_VEHICLE0_LANCE0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1; // replace with getUnitMates?
+		
+		else
+
+			if (Unit == CLAN_FORCE) then
+
+				Start = CLAN_VEHICLE0_STAR0;
+				Stop = CLAN_VEHICLE0_STAR0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1;
+
+			else
+
+				if (Unit == ALLIED_FORCE) then
+
+					Start = ALLIED_VEHICLE0_LANCE0;
+					Stop = ALLIED_VEHICLE0_LANCE0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1; // 4 lances to be safe
+
+				else
+
+					if ((Unit >= PLAYER_LANCE0) AND (Unit < PLAYER_LANCE0 + MAX_MOVER_GROUPS)) then
+
+						Start = PLAYER_VEHICLE0_LANCE0 + ((Unit - PLAYER_LANCE0) * MAX_MOVER_GROUP_COUNT);
+						Stop = Start + MAX_MOVER_GROUP_COUNT - 1;
+
+					else
+
+						if ((Unit >= CLAN_STAR0) AND (Unit < CLAN_STAR0 + MAX_MOVER_GROUPS)) then
+
+							Start = CLAN_VEHICLE0_STAR0 + ((Unit - CLAN_STAR0) * MAX_MOVER_GROUP_COUNT);
+							Stop = Start + MAX_MOVER_GROUP_COUNT - 1;
+
+						else
+
+							if ((Unit >= ALLIED_LANCE0) AND (Unit < ALLIED_LANCE0 + MAX_MOVER_GROUPS)) then
+
+								Start = ALLIED_VEHICLE0_LANCE0 + ((Unit - ALLIED_LANCE0) * MAX_MOVER_GROUP_COUNT);
+								Stop = Start + MAX_MOVER_GROUP_COUNT - 1;
+
+							else
+
+								Fatal(86,"Bad Unit Passed to NumCaptureDeadorFled");
+
+							endif;
+						endif;
+					endif;
+				endif;
+			endif;
+		endif;
+
+		NumDeadFled = 0;
+
+		for x = Start to Stop do
+			//if ((isCapturable(x)) OR (isCaptured(x) == 1)) then
+			if (wasEverCapturable(x)) then
+				if (isdeadorfled(x)) then
+					NumDeadFled = NumDeadFled + 1;
+				endif;
+			endif;
+		endfor;
+
+		return(NumDeadFled);
+		
+		
+endfunction;
+
+
+//------------------------------------------------------------------------------------
+
+function VehicleID(integer Unit, integer Member, integer StartAt) : integer;
+
+	var
+
+		integer	VehID;
+		boolean	alive;
+
+	code
+
+		if ((Unit >= PLAYER_LANCE0) AND (Unit < PLAYER_LANCE0 + MAX_MOVER_GROUPS)) then // Player
+			VehID = ((Unit - PLAYER_LANCE0) * MAX_MOVER_GROUP_COUNT) + PLAYER_VEHICLE0_LANCE0 + Member;
+		else
+			if ((Unit >= ALLIED_LANCE0) AND (Unit < ALLIED_LANCE0 + MAX_MOVER_GROUPS)) then // Allied
+				VehID = ((Unit - ALLIED_LANCE0) * MAX_MOVER_GROUP_COUNT) + ALLIED_VEHICLE0_LANCE0 + Member;
+			else
+				if ((Unit >= CLAN_STAR0) AND (Unit < CLAN_STAR0 + MAX_MOVER_GROUPS)) then // Clan
+					VehID = ((Unit - CLAN_STAR0) * MAX_MOVER_GROUP_COUNT) + CLAN_VEHICLE0_STAR0 + Member;
+				else
+					dstring = "Bad Unit Num";
+					print(dstring);
+					return(0);
+				endif;
+			endif;
+		endif;
+		
+		if (StartAt <> 0) then
+			VehID = VehID - 1;
+		endif;
+		return(VehID);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function getVehicleID(integer Force, integer Group, integer Member) : integer;
+
+	var
+
+		integer	VehID;
+		integer CommanderID;
+
+	code
+
+		if (Force >= PLAYER_FORCE) then
+			CommanderID = Force - PLAYER_FORCE;
+		else
+			CommanderID = Force;
+		endif;
+		
+		VehID = MIN_MOVER_PART_ID + (CommanderID * MAX_MOVER_GROUPS * MAX_MOVER_GROUP_COUNT) + (Group * MAX_MOVER_GROUP_COUNT) + Member;
+		return(VehID);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+
+function NumDead(integer Unit) : integer;
+
+
+	var
+
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_DISABLED] = 0;
+		tallyList[OBJECT_STATUS_DESTROYED] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		return(tallyList[OBJECT_STATUS_DISABLED] + tallyList[OBJECT_STATUS_DESTROYED]);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumWithdrawn(integer Unit) : integer;
+
+
+	var
+
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_WITHDRAWN] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		return(tallyList[OBJECT_STATUS_WITHDRAWN]);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumAlive(integer Unit) : integer;
+
+	var
+
+		integer NAlive;
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_NORMAL] = 0;
+		tallyList[OBJECT_STATUS_STARTING_UP] = 0;
+		tallyList[OBJECT_STATUS_SHUTTING_DOWN] = 0;
+		tallyList[OBJECT_STATUS_SHUTDOWN] = 0;
+		tallyList[OBJECT_STATUS_NONEXIST] = 0;
+		tallyList[OBJECT_STATUS_INACTIVE] = 0;
+
+		objectStatusCount(Unit, tallyList);
+		NAlive = tallyList[OBJECT_STATUS_NORMAL] + tallyList[OBJECT_STATUS_STARTING_UP] + tallyList[OBJECT_STATUS_SHUTTING_DOWN] + tallyList[OBJECT_STATUS_SHUTDOWN];
+		NAlive = NAlive + tallyList[OBJECT_STATUS_NONEXIST] + tallyList[OBJECT_STATUS_INACTIVE];
+
+		return(NAlive);
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumInActive(integer Unit) : integer;
+
+	var
+
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		tallyList[OBJECT_STATUS_NORMAL] = 0;
+		tallyList[OBJECT_STATUS_STARTING_UP] = 0;
+		tallyList[OBJECT_STATUS_SHUTTING_DOWN] = 0;
+		tallyList[OBJECT_STATUS_SHUTDOWN] = 0;
+		tallyList[OBJECT_STATUS_NONEXIST] = 0;
+		tallyList[OBJECT_STATUS_INACTIVE] = 0;
+
+		objectStatusCount(Unit, tallyList);
+
+		return(tallyList[OBJECT_STATUS_INACTIVE]);
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function ClanStar(integer star) : integer;
+
+	code
+		return(CLAN_STAR0 + star);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+		
+function isWithinArea(integer Unit, position Point, real Radius) : boolean;
+
+	code
+
+		return(inArea(Unit, Point, Radius, -1));
+
+endfunction;
+
+
+//------------------------------------------------------------------------------------
+
+function NumPlayerInArea(real X, real Y, real Radius) : integer;
+
+	var
+
+		integer		Num;
+		integer		i;
+		real		dis;
+		position	Spot;
+
+	code
+
+		Num = 0;
+		Spot[0] = X;
+		Spot[1] = Y;
+		Spot[2] = 0.0;		
+
+		for i = PLAYER_VEHICLE0_LANCE0 to (PLAYER_VEHICLE0_LANCE0 + 11) do
+			dis = distancetoPosition(i,Spot);
+			if ((dis > 0.0) and (dis <= Radius)) then
+				Num = Num + 1;
+			endif;
+		endfor;
+
+		return(Num);
+
+endfunction;
+
+
+//------------------------------------------------------------------------------------
+
+function inHotSpot(integer Unit, real X, real Y, real Radius) : boolean;
+
+	var
+		position	spot;
+
+	code
+
+		Spot[0] = X;
+		Spot[1] = Y;
+		Spot[2] = 0.0;
+
+		return(inArea(Unit, spot, Radius, 1));
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function PlayerLance(integer lance) : integer;
+
+	code
+		return(PLAYER_LANCE0 + lance);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function AlliedLance(integer lance) : integer;
+
+	code
+		return(ALLIED_LANCE0 + lance);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function UnitCount(integer Unit) : integer;
+
+	var
+
+		integer Count;
+		integer X;
+		integer[9] tallyList;
+
+	code
+
+		//----------------------------------------------------------
+		// To speed it up, we'll set the ones we want to zero rather
+		// than loop it...
+		for X = 0 to 8 do
+			tallyList[X] = 0;
+		endfor;
+
+		objectStatusCount(Unit, tallyList);
+		Count = 0;
+		for X = 0 to 8 do
+			Count = Count + tallyList[X];
+		endfor;
+		return(Count);
+		
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function ObjPos(integer ID) : integer;
+
+	var
+
+		Position IDPosition;
+
+	code
+
+		Print("Got Here");
+		getObjectPosition(ID,IDPosition);
+
+		ObjectPosition[0,0] = 0.0;
+		ObjectPosition[0,1] = 0.0;
+		ObjectPosition[0,2] = 0.0;
+
+		ObjectPosition[1,0] = IDPosition[0];
+		ObjectPosition[1,1] = IDPosition[1];
+		ObjectPosition[1,2] = IDPosition[2];
+
+		return(1);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumVehicleType(integer VehicleType, integer Force, @integer Dead) : integer;
+
+	var
+	
+		integer x;
+		integer Start;
+		integer Stop;
+		integer NumType;
+		
+	code
+	
+		switch (Force)
+
+			case PLAYER_FORCE:
+
+				Start = PLAYER_VEHICLE0_LANCE0;
+				Stop = PLAYER_VEHICLE0_LANCE0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1;
+		
+				endcase;
+
+			case CLAN_FORCE:
+
+				Start = CLAN_VEHICLE0_STAR0;
+				Stop = CLAN_VEHICLE0_STAR0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1;
+
+				endcase;
+
+			case ALLIED_FORCE:
+
+				Start = ALLIED_VEHICLE0_LANCE0;
+				Stop = ALLIED_VEHICLE0_LANCE0 + (MAX_MOVER_GROUP_COUNT * MAX_MOVER_GROUPS) - 1;
+
+				endcase;
+
+		endswitch;
+
+		NumType = 0;
+		Dead = 0;
+
+		for x = Start to Stop do
+			if (objectTypeId(x) == VehicleType) then
+				NumType = NumType + 1;
+				if (isdead(x)) then
+					Dead = Dead + 1;
+				endif;
+			endif;
+		endfor;
+
+		return(NumType);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function RemoveMechBay(integer Bay);
+
+	var
+
+		integer x;
+		boolean foundit;
+
+	code
+
+		if (TotalMechBays < 1) then
+			return;
+		endif;
+
+		foundit = FALSE;
+		for x = 0 to (TotalMechBays - 1) do
+
+			if (NOT foundit) then
+				if (MechBays[x] == Bay) then
+					foundit = TRUE;					
+				endif;				
+			else
+				MechBays[x - 1] = MechBays[x];
+			endif;				
+
+		endfor;
+
+		if (foundit) then
+			TotalMechBays = TotalMechBays - 1;
+		endif;
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function RemoveVehicleBay(integer Bay);
+
+	var
+
+		integer x;
+		boolean foundit;
+
+	code
+
+		if (TotalVehicleBays < 1) then
+			return;
+		endif;
+
+		foundit = FALSE;
+		for x = 0 to (TotalVehicleBays - 1) do
+
+			if (NOT foundit) then
+				if (VehicleBays[x] == Bay) then
+					foundit = TRUE;					
+				endif;				
+			else
+				VehicleBays[x - 1] = VehicleBays[x];
+			endif;				
+
+		endfor;
+
+		if (foundit) then
+			TotalVehicleBays = TotalVehicleBays - 1;
+		endif;
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+code
+
+	print("miscfunc");
+
+endlibrary.
+
+
+
+

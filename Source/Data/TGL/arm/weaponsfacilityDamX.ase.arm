@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="319F577147E84561E785B550190B78FE" />
+  <Asset Name="..\weaponsfacilityDamX.ase" Type="Physical" Author="ngauvin" FileSize="56873" ModificationTime="2006-02-01T10:55:37.9672762-08:00" CRC="6972D12E002B81A20ABA1878D8486D2F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_WeaponsFacilityDamL1X.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2F0617D40D309AAB0673893A29653AA8" />
+  <Asset Name="..\truckProp.ase" Type="Physical" Author="ngauvin" FileSize="36569" ModificationTime="2006-02-01T10:55:35.1078829-08:00" CRC="47184143FA4644267368B674DAB45538" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\TrucksProp.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

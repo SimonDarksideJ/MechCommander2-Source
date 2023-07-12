@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C4AFCCD1E5D41292A75FE573B9B55B7B" />
+  <Asset Name="..\rock_jfield3.ini" Type="Physical" Author="franksav" FileSize="218" ModificationTime="2006-03-03T01:28:41.8673025-08:00" CRC="E4AA865226C4F463E827DF2C332209F4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="rock_JField3.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_JField3X.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

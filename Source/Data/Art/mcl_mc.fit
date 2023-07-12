@@ -1,0 +1,2152 @@
+FITini 
+
+// mech lab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[PayloadUnit] // payload unit
+
+l XLocation = 0
+l YLocation = 0
+l Width = 48
+l Height = 32
+l UNormal = 0
+l VNormal = 0
+l UWidth = 48
+l VHeight = 32
+
+st filename = "mcl_mc_4.tga"
+
+
+[Buttons]
+l Buttoncount = 9
+
+
+[Button0] // cancel button
+
+l ID = 51
+l XLocation = 5
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 19
+l YTextLocation = 550
+l TextWidth = 99
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27300
+l Font = 27301 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27302
+
+st FileName = "MCL_MC_3"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 164
+
+l UPressed = 128
+l VPressed = 164
+
+l UHighlight = 0
+l VHighlight = 164
+
+l UDisabled = 128
+l VDisabled = 164
+
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[Button1] // accept button
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 100
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27303
+l Font = 27301 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27304
+
+st FileName = "MCL_MC_3"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 164
+
+
+l UPressed = 128
+l VPressed = 164
+
+l UHighlight = 0
+l VHighlight = 164
+
+l UDisabled = 128
+l VDisabled = 164
+
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[Button2] // add component button
+
+l ID = 52
+l XLocation = 356
+l YLocation = 58
+l Width = 176
+l Height = 42
+
+l XTextLocation = 377
+l YTextLocation = 67
+l TextWidth = 145
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27305
+l Font = 27306 // use AgencyFB14
+
+l HelpCaption = 0
+l HelpDesc = 27307
+
+st FileName = "MCL_MC_3"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 80
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l UPressed = 0
+l VPressed = 122
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 122
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 7.5
+l NormalColor2 = 0xffC66600
+f NormalTime3 = 8.0
+l NormalColor3 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[Button2Bmp0]
+
+// coordinates for add arrow
+l XLocation = 365
+l YLocation = 68
+l Width = 11
+l Height = 22
+l color  = 0xff005392
+
+st FileName = "MCL_MC_3"
+
+b AnimateBmp = 1
+
+l UNormal = 226
+l VNormal = 0
+
+l UWidth = 11
+l VHeight = 22
+
+
+[Button3] // remove component button
+
+l ID = 53
+l XLocation = 356
+l YLocation = 104
+l Width = 176
+l Height = 42
+
+l XTextLocation = 365
+l YTextLocation = 113
+l TextWidth = 145
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27308
+l Font = 27306 // use AgencyFB14
+
+l HelpCaption = 0
+l HelpDesc = 27310
+
+st FileName = "MCL_MC_3"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 80
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l UPressed = 0
+l VPressed = 122
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 122
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 7.5
+l NormalColor2 = 0xffC66600
+f NormalTime3 = 8.0
+l NormalColor3 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[Button3Bmp0] // for remove arrow
+l XLocation = 512
+l YLocation = 114
+l Width = 11
+l Height = 22
+l color  = 0xff005392  
+
+st FileName = "MCL_MC_3"
+
+b AnimateBmp = 1
+
+l UNormal = 237
+l VNormal = 0
+
+l UWidth = 11
+l VHeight = 22
+
+
+[Button4] // main menu button
+
+l ID = 57
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 27336 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27113
+
+st FileName = "MCL_MC_3"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 40
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 40
+
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[Button5] // ballistic tab
+l ID = 8
+
+l XLocation = 548
+l YLocation = 84
+l Width = 50
+l Height = 32
+l UNormal = 0
+l VNormal = 223
+l UWidth = 50
+l VHeight = 32	
+l UPressed = 50
+l VPressed = 223	
+st FileName = "mcl_mc_3.tga"
+l HelpCaption = 0
+l HelpDesc = 27311
+
+
+[Button6] // energy tab
+l ID = 7
+
+l XLocation = 601
+l YLocation = 84
+l Width = 50
+l Height = 32
+l UNormal = 176
+l VNormal = 0
+l UWidth = 50
+l VHeight = 32
+l UPressed = 176
+l VPressed = 32
+st FileName = "mcl_mc_3.tga"
+l HelpCaption = 0
+l HelpDesc = 27312
+
+
+[Button7] // missile tab
+l ID = 9
+l XLocation = 654
+l YLocation = 84
+l Width = 50
+l Height = 32
+l UNormal = 100
+l VNormal = 223
+l UWidth = 50
+l VHeight = 32
+l UPressed = 150
+l VPressed = 223
+st FileName = "mcl_mc_3.tga"
+l HelpCaption = 0
+l HelpDesc = 27313
+
+
+[Button8] // heat and jump jet tab
+l ID = 11
+l XLocation = 707
+l YLocation = 84
+l Width = 50
+l Height = 32
+l UNormal = 176
+l VNormal = 64
+l UWidth = 50
+l VHeight = 32
+l UPressed = 176
+l VPressed = 96
+st FileName = "mcl_mc_3.tga"
+l HelpCaption = 0
+l HelpDesc = 27314
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Rects]
+l Rectcount = 23
+
+[Rect0] // outline for variant drop down menu
+l XLocation = 25
+l YLocation = 89
+l Width = 154
+l Height = 21
+l Color = -12373732
+b outline = TRUE
+l HelpDesc = 29061
+
+[Rect1] // divider between button and text in drop down rect
+l XLocation = 161
+l YLocation = 92
+l Width = 1
+l Height = 17
+l Color = -13031403
+b outline = TRUE
+
+[Rect2] // rect for tabbed component area
+l XLocation = 548
+l YLocation = 115
+l Width = 231
+l Height = 407
+l Color = -3612416
+b outline = TRUE
+
+[Rect3] // horiz. blue line above component model
+l XLocation = 369
+l YLocation = 212
+l Width = 149
+l Height = 0
+l Color = -16765099
+b outline = TRUE
+
+[Rect4] // component model fits in here
+l XLocation = 369
+l YLocation = 214
+l Width = 150
+l Height = 120
+l Color = 0
+b outline = FALSE
+
+[Rect5] // horiz. blue line below component model
+l XLocation = 369
+l YLocation = 335
+l Width = 149
+l Height = 0
+l Color = -16765099
+b outline = TRUE
+
+[Rect6] // rect for jump jet in payload area
+//use to define area jump jet can be placed in
+//also use as highlight rect for rollover and selection
+l XLocation = 134
+l YLocation = 387
+l Width = 96
+l Height = 64
+l Color = Oxffffffff
+b outline = FALSE
+
+[Rect7] // rect for first unit in payload grid, if grid is 6 across
+// this is the bottom left unit.  All other units in the payload grid
+// be added to the top or right
+// also use as highlight rect for rollover and selection
+// static to use is in file mcl_mc_4.tga- starts at 0,0.  48x32p.
+l XLocation = 38
+l YLocation = 342
+l Width = 48
+l Height = 32
+l Color = Oxffffffff
+b outline = FALSE
+
+[Rect8] // 5 across
+l XLocation = 62
+l YLocation = 342
+l Width = 48
+l Height = 32
+b outline = FALSE
+
+[Rect9] //  4 across
+l XLocation = 86
+l YLocation = 342
+l Width = 48
+l Height = 32
+
+b outline = FALSE
+
+[Rect10] //  3 across
+l XLocation = 110
+l YLocation = 342
+l Width = 48
+l Height = 32
+b outline = FALSE
+
+
+[Rect11] //  2 across
+l XLocation = 134
+l YLocation = 342
+l Width = 48
+l Height = 32
+b outline = FALSE
+
+[Rect12] //  whole cost of changes
+l XLocation = 188
+l YLocation = 56
+l Width = 153
+l Height = 44
+b outline = FALSE
+l HelpDesc = 29062
+
+//[Rect13] // rect for tabbed component list area
+//l XLocation = 550
+//l YLocation = 115
+//l Width = 230
+//l Height = 406
+//l Color = 0
+//b outline = FALSE
+//l HelpDesc = 29063
+
+[Rect13] // rect for paper doll area
+l XLocation = 27
+l YLocation = 115
+l Width = 313
+l Height = 345
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29070
+
+[Rect14] // help rect for cbill icon and text readout
+l XLocation = 448
+l YLocation = 7
+l Width = 147
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29003
+
+[Rect15] // help rect for currently selected weapon name and pic
+l XLocation = 362
+l YLocation = 192
+l Width = 164
+l Height = 141
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29064
+
+[Rect16] // help rect for all range parts
+l XLocation = 362
+l YLocation = 341
+l Width = 164
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29067
+
+[Rect17] // help rect for all damage parts
+l XLocation = 362
+l YLocation = 379
+l Width = 164
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29068
+
+[Rect18] // help rect for all rate of fire parts
+l XLocation = 362
+l YLocation = 415
+l Width = 164
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29069
+
+[Rect19] // help rect for all heat parts
+l XLocation = 362
+l YLocation = 452
+l Width = 164
+l Height = 29
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29071
+
+[Rect20] // help rect for all ammo parts
+l XLocation = 362
+l YLocation = 488
+l Width = 164
+l Height = 31
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29074
+
+[Rect21]  heat limit attribute meter icon
+l XLocation = 25
+l YLocation = 497
+l Width = 135
+l Height = 24
+
+[Rect22] // heat Icon for weapon
+l XLocation = 360
+l YLocation = 451
+l Width = 50
+l Height = 34
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Statics]
+l Staticcount = 56
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mc_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mc_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mc_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 64
+l VNormal = 211
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mc_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 98
+l VNormal = 212
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 20
+l Height = 32
+l UNormal = 58
+l VNormal = 212
+l UWidth = 20
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static6]
+l XLocation = 594
+l YLocation = 8
+l Width = 20
+l Height = 32
+l UNormal = 78
+l VNormal = 212
+l UWidth = 20
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static7]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 116
+l VNormal = 190
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mc_2.tga"
+
+[Static8] // cbills icon
+l XLocation = 447
+l YLocation = 9
+l Width = 30
+l Height = 30
+l UNormal = 121
+l VNormal = 160
+l UWidth = 30
+l VHeight = 30
+st FileName = "mcl_mc_2.tga"
+
+[Static9]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_mc_1.tga"
+
+[Static10]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 42
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_mc_1.tga"
+
+[Static11]
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 8
+l UNormal = 0
+l VNormal = 203
+l UWidth = 102
+l VHeight = 8
+st FileName = "mcl_mc_1.tga"
+
+[Static12]
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 60
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mc_1.tga"
+
+[Static13]
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+l UNormal = 32
+l VNormal = 211
+l UWidth = 32
+l VHeight = 10
+st FileName = "mcl_mc_1.tga"
+
+[Static14]
+l XLocation = 0
+l YLocation = 58
+l Width = 20
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 20
+l VHeight = 256
+st FileName = "mcl_mc_2.tga"
+
+[Static15]
+l XLocation = 184
+l YLocation = 58
+l Width = 11
+l Height = 43
+l UNormal = 116
+l VNormal = 0
+l UWidth = 11
+l VHeight = 43
+st FileName = "mcl_mc_2.tga"
+
+[Static16]
+l XLocation = 345
+l YLocation = 58
+l Width = 11
+l Height = 256
+l UNormal = 36
+l VNormal = 0
+l UWidth = 11
+l VHeight = 256
+st FileName = "mcl_mc_2.tga"
+
+[Static17]
+l XLocation = 532
+l YLocation = 58
+l Width = 11
+l Height = 256
+l UNormal = 47
+l VNormal = 0
+l UWidth = 11
+l VHeight = 256
+st FileName = "mcl_mc_2.tga"
+
+[Static18]
+l XLocation = 784
+l YLocation = 58
+l Width = 16
+l Height = 256
+l UNormal = 20
+l VNormal = 0
+l UWidth = 16
+l VHeight = 256
+st FileName = "mcl_mc_2.tga"
+
+[Static19]
+l XLocation = 356
+l YLocation = 100
+l Width = 176
+l Height = 4
+l UNormal = 0
+l VNormal = 155
+l UWidth = 176
+l VHeight = 4
+st FileName = "mcl_mc_1.tga"
+
+[Static20]
+l XLocation = 184
+l YLocation = 101
+l Width = 161
+l Height = 10
+l UNormal = 0
+l VNormal = 145
+l UWidth = 161
+l VHeight = 10
+st FileName = "mcl_mc_1.tga"
+
+
+[Static21]  armor limit attribute meter icon
+l XLocation = 25
+l YLocation = 468
+l Width = 135
+l Height = 24
+l UNormal = 0
+l VNormal = 221
+l UWidth = 135
+l VHeight = 24
+st FileName = "mcl_mc_1.tga"
+l HelpDesc = 29066
+
+[Static22]
+l XLocation = 356
+l YLocation = 146
+l Width = 176
+l Height = 44
+l UNormal = 0
+l VNormal = 159
+l UWidth = 176
+l VHeight = 44
+st FileName = "mcl_mc_1.tga"
+
+[Static23]
+l XLocation = 361
+l YLocation = 212
+l Width = 7
+l Height = 124
+l UNormal = 181
+l VNormal = 0
+l UWidth = 7
+l VHeight = 124
+st FileName = "mcl_mc_2.tga"
+
+[Static24]
+l XLocation = 520
+l YLocation = 212
+l Width = 7
+l Height = 124
+l UNormal = 188
+l VNormal = 0
+l UWidth = 7
+l VHeight = 124
+st FileName = "mcl_mc_2.tga"
+
+[Static25]
+l XLocation = 0
+l YLocation = 314
+l Width = 20
+l Height = 212
+l UNormal = 96
+l VNormal = 0
+l UWidth = 20
+l VHeight = 212
+st FileName = "mcl_mc_2.tga"
+
+[Static26]
+l XLocation = 345
+l YLocation = 314
+l Width = 11
+l Height = 212
+l UNormal = 74
+l VNormal = 0
+l UWidth = 11
+l VHeight = 212
+st FileName = "mcl_mc_2.tga"
+
+[Static27]
+l XLocation = 532
+l YLocation = 314
+l Width = 11
+l Height = 212
+l UNormal = 85
+l VNormal = 0
+l UWidth = 11
+l VHeight = 212
+st FileName = "mcl_mc_2.tga"
+
+[Static28]
+l XLocation = 784
+l YLocation = 314
+l Width = 16
+l Height = 212
+l UNormal = 58
+l VNormal = 0
+l UWidth = 16
+l VHeight = 212
+st FileName = "mcl_mc_2.tga"
+
+[Static29] // icon for weapon range
+l XLocation = 361
+l YLocation = 341
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 0
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static30] // icon for damage
+l XLocation = 361
+l YLocation = 378
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 32
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static31] // icon for recycle rate
+l XLocation = 361
+l YLocation = 415
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 64
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static32] // icon for heat
+l XLocation = 361
+l YLocation = 452
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 96
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+[Static33]  heat limit attribute meter icon
+l XLocation = 25
+l YLocation = 497
+l Width = 135
+l Height = 24
+l UNormal = 108
+l VNormal = 230
+l UWidth = 135
+l VHeight = 24
+st FileName = "mcl_mc_2.tga"
+l HelpDesc = 29065
+
+[Static34] // icon for ammo- this one won't show up if infinite ammo is ON in options
+l XLocation = 361
+l YLocation = 489
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 128
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+
+[Static35]
+l XLocation = 0
+l YLocation = 526
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 70
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_mc_1.tga"
+
+[Static36]
+l XLocation = 256
+l YLocation = 526
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 90
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_mc_1.tga"
+
+[Static37]
+l XLocation = 512
+l YLocation = 526
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 110
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_mc_1.tga"
+
+[Static38]
+l XLocation = 768
+l YLocation = 526
+l Width = 32
+l Height = 10
+l UNormal = 0
+l VNormal = 211
+l UWidth = 32
+l VHeight = 10
+st FileName = "mcl_mc_1.tga"
+
+[Static39]
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+l UNormal = 127
+l VNormal = 0
+l UWidth = 6
+l VHeight = 59
+st FileName = "mcl_mc_2.tga"
+
+[Static40]
+l XLocation = 0
+l YLocation = 546
+l Width = 5
+l Height = 49
+l UNormal = 116
+l VNormal = 141
+l UWidth = 5
+l VHeight = 49
+st FileName = "mcl_mc_2.tga"
+
+[Static41]
+l XLocation = 133
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 116
+l VNormal = 43
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mc_2.tga"
+
+[Static42]
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 116
+l VNormal = 92
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mc_2.tga"
+
+[Static43]
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 130
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mc_1.tga"
+
+[Static44]
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 135
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mc_1.tga"
+
+[Static45]
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 140
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mc_1.tga"
+
+[Static46]
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+l UNormal = 102
+l VNormal = 203
+l UWidth = 32
+l VHeight = 5
+st FileName = "mcl_mc_1.tga"
+
+
+[Static47] // icon for jump range- use only when jump jets are selected
+// when jump jets are selected, get rid of all other component info icons 
+// except heat icon below
+l XLocation = 361
+l YLocation = 341
+l Width = 48
+l Height = 32
+l UNormal = 195
+l VNormal = 0
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+
+[Static48] // icon for jump jet heat- use only when jump jets are selected
+l XLocation = 361
+l YLocation = 378
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 96
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+
+[Static49] // icon for armor- use only when armor is selected.
+// make all other component info icons, meters, and text disappear
+l XLocation = 361
+l YLocation = 341
+l Width = 48
+l Height = 32
+l UNormal = 195
+l VNormal = 32
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+
+[Static50] // mech payload static 1
+// will be found in file named MCL_MC_(mechname)_A.tga
+l XLocation = 25
+l YLocation = 116
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+
+[Static51] // mech payload static 2
+// will be found in file named MCL_MC_(mechname)_B.tga
+l XLocation = 281
+l YLocation = 116
+l Width = 59
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 59
+l VHeight = 256
+
+[Static52] // mech payload static 3
+// will be found in file named MCL_MC_(mechname)_B.tga
+l XLocation = 25
+l YLocation = 372
+l Width = 128
+l Height = 91
+l UNormal = 59
+l VNormal = 0
+l UWidth = 128
+l VHeight = 91
+
+
+[Static53] // mech payload static 4
+// will be found in file named MCL_MC_(mechname)_B.tga
+l XLocation = 153
+l YLocation = 372
+l Width = 187
+l Height = 91
+l UNormal = 59
+l VNormal = 91
+l UWidth = 187
+l VHeight = 91
+
+
+[Static54] // static for jump jets outline in payload area
+l XLocation = 134
+l YLocation = 387
+l Width = 96
+l Height = 64
+l UNormal = 0
+l VNormal = 0
+l UWidth = 96
+l VHeight = 64
+st FileName = "mcl_mc_5.tga"
+
+[Static55] // icon for heat sink heat- use only when heat sink is selected
+l XLocation = 361
+l YLocation = 341
+l Width = 48
+l Height = 32
+l UNormal = 133
+l VNormal = 96
+l UWidth = 48
+l VHeight = 32
+st FileName = "mcl_mc_2.tga"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Texts]
+l Textcount = 17
+
+[Text0] // mech lab header
+l XLocation = 18
+l YLocation = 12
+l Width = 402
+l Height = 26
+l Color = -30195
+b outline = FALSE
+l Font = 27316 // use agencyfb17
+l TextID = 27315 
+l Alignment = 0
+l HelpDesc = 29060
+
+[Text1] // cbills text
+l XLocation = 482
+l YLocation = 12
+l Width = 106
+l Height = 26
+l Color = -16755822
+b outline = FALSE
+l Font = 27317 // use agencyfb17
+l TextID = 0
+l Alignment = 1
+
+[Text2] // available components header
+l XLocation = 548
+l YLocation = 61
+l Width = 231
+l Height = 22
+l Color = -9536512
+b outline = FALSE
+l Font = 27319  // use agencyfb14
+l TextID = 27318
+l Alignment = 0
+
+[Text3] // mech name
+l XLocation = 25
+l YLocation = 62
+l Width = 154
+l Height = 26
+l Color = -30195
+b outline = FALSE
+l Font = 27320 // use agencyfb17
+l TextID = 0
+l Alignment = 0
+
+[Text4] // cost of changes header
+l XLocation = 201
+l YLocation = 64
+l Width = 139
+l Height = 12
+l Color = -8100285
+b outline = FALSE
+l Font = 27322 // use arialnarrow8
+l TextID = 27321
+l Alignment = 0
+
+[Text5] // cost of changes readout
+l XLocation = 201
+l YLocation = 78
+l Width = 139
+l Height = 23
+l Color = -30195
+b outline = FALSE
+l Font = 27323 // use agencyfb14
+l TextID = 0
+l Alignment = 0
+
+[Text6] // weapon info header
+l XLocation = 361
+l YLocation = 194
+l Width = 166
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 27325 // use agencyfb11
+l TextID = 27324
+l Alignment = 0
+
+[Text7] // weapon info range  readout
+// doubles as jump jet range readout
+// and armor rating readout
+l XLocation = 414
+l YLocation = 360
+l Width = 113
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 27326 // use agencyfb11
+l TextID = 0
+l Alignment = 0
+
+[Text8] // weapon info damage readout
+l XLocation = 414
+l YLocation = 397
+l Width = 113
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 27327
+l TextID = 0
+l Alignment = 0
+
+[Text9] // weapon info recycle readout
+l XLocation = 414
+l YLocation = 434
+l Width = 113
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 27327// use agencyfb11
+l TextID = 0
+l Alignment = 0
+
+[Text10] // weapon info heat readout
+l XLocation = 414
+l YLocation = 471
+l Width = 113
+l Height = 17
+l Color = 0xff881200
+b outline = FALSE
+l Font = 27327 // use agencyfb11
+l TextID = 0
+l Alignment = 0
+
+[Text11] // armor limit readout
+l XLocation = 48
+l YLocation = 466
+l Width = 108
+l Height = 23
+l Color = 0xff005392
+b outline = FALSE
+l Font = 27319  // use agencyfb14
+l TextID = 27328
+l Alignment = 0
+l HelpDesc = 29066
+
+[Text12] // heat limit readout
+l XLocation = 48
+l YLocation = 495
+l Width = 108
+l Height = 23
+l Color = -65536
+b outline = FALSE
+l Font = 27319 // use agencyfb14
+l TextID = 27330
+l Alignment = 0
+l HelpDesc = 29065
+
+[Text13]  // weapon info ammo text readout
+//  shows up as unlimited or similar word if unlimited ammo is ON in logistics
+l XLocation = 414
+l YLocation = 508
+l Width = 113
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 27331 // use agencyfb11
+l TextID = 0
+l Alignment = 0
+
+[Text14] // help text
+l XLocation = 147
+l YLocation = 541
+l Width = 457
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 27322 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+[Text15] // jump jet heat readout
+l XLocation = 414
+l YLocation = 397
+l Width = 113
+l Height = 17
+l Color = 0xff881200
+b outline = FALSE
+l Font = 27327
+l TextID = 0
+l Alignment = 0
+
+[Text16] // heat sink heat readout
+l XLocation = 414
+l YLocation = 360
+l Width = 113
+l Height = 17
+l Color = 0xff881200
+b outline = FALSE
+l Font = 27326 // use agencyfb11
+l TextID = 0
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[AttributeMeters] // meters for the component info area of mech lab, 
+// as well as the heat limit meter 
+
+l AttributeMeterCount = 9
+
+[AttributeMeter0] // weapon info damage
+// this meter doubles as the jump jet heat meter,
+// but only when jump jets are selected
+l XLocation = 414
+l YLocation = 378
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[AttributeMeter1] // weapon info recycle rate
+
+l XLocation = 414
+l YLocation = 415
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+[AttributeMeter2] // weapon info heat
+
+l XLocation = 414
+l YLocation = 452
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xffff160c
+l ColorMax = 0xffffb801
+l Color  = 0xff881200
+
+
+[AttributeMeter3] // weapon info ammo
+// this one won't show up if unlimited ammo is ON in options
+
+l XLocation = 414
+l YLocation = 489
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+[AttributeMeter4] // jump jet info range
+// this only shows up when jump jets are selected
+
+l XLocation = 414
+l YLocation = 341
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[AttributeMeter5] // mech payload heat limit meter
+
+l XLocation = 161
+l YLocation = 497
+l Width = 176
+l Height = 18
+l unitHeight = 14
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 29
+l ColorMin = 0xffff160c
+l ColorMax = 0xffffb801
+l Color  = 0xff881200
+l HelpDesc = 29065
+
+[AttributeMeter6] // mech payload armor limit meter
+
+l XLocation = 161
+l YLocation = 468
+l Width = 176
+l Height = 18
+l unitHeight = 14
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 29
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002f55
+l HelpDesc = 29066
+
+
+[AttributeMeter7] // jump jet heat meter
+
+l XLocation = 414
+l YLocation = 378
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xffff160c
+l ColorMax = 0xffffb801
+l Color  = 0xff881200
+l HelpDesc = 29066
+
+
+[AttributeMeter8] // heat sink heat meter
+// this only shows up when heat sinks are selected
+
+l XLocation = 414
+l YLocation = 341
+l Width = 112
+l Height = 17
+l unitHeight = 13
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 22
+l ColorMin = 0xffff160c
+l ColorMax = 0xffffb801
+l Color  = 0xff881200
+l HelpDesc = 29066
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 1
+
+[ComboBox0] // variant name drop down menu
+l XLocation = 25
+l YLocation = 89
+st FileName = "mcl_mc_combobox0"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[AvailableComponentsBox]
+
+l Yskip = 5 // between the bottom of one 
+// componententrybox and the top of the next
+
+
+[ComponentEntryBox] 
+// use Animation0
+// describes the available mech box
+// coordinates are from ulhc of mc screen
+// this is for a one-unit icon of size 48 wide by 32 tall
+// add 32 to the height for each icon 2 or more units tall
+l XLocation = 2
+l YLocation = 2
+l Width = 210
+l Height = 60
+l color  = 0xff313700
+b outline = 1
+st Animation = "Animation0"
+
+
+[ComponentIconOutlineRect] 
+// use Animation0
+// goes around the component icon 
+// this is for a one-unit icon of size 48 wide by 32 tall
+// add 32 to the height for each icon 2 or more units tall
+// add 48 to the width for each icon 2 units wide
+l XLocation = 4
+l YLocation = 20
+l Width = 52
+l Height = 36
+l color  = 0xff313700
+b outline = 1
+st Animation = "Animation0"
+
+
+[ComponentNameText]
+
+l XLocation = 4
+l YLocation = 3
+l Width = 205
+l Height = 20
+l Color = 0xff6E7C00
+b outline = FALSE
+l Font = 27325  // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation2"
+
+
+[ComponentCostText]
+// use Animation1
+l XLocation = 151
+l YLocation = 20
+l Width = 37
+l Height = 15
+l Color = 0xff676A50
+b outline = FALSE
+l Font = 27325 // use agencyfb11
+l TextID = 27000
+l Alignment = 1
+st Animation = "Animation1"
+
+[ComponentHeatText]
+// use Animation1
+l XLocation = 151
+l YLocation = 37
+l Width = 37
+l Height = 15
+l Color = 0xff881200
+b outline = FALSE
+l Font = 27325  // use agencyfb11
+l TextID = 27000
+l Alignment = 1
+st Animation = "Animation4"
+
+[ComponentDisabledText] 
+// heat exceeded
+l XLocation = 2
+l YLocation = 2
+l Width = 210
+l Height = 60
+l Color = 0x81FF0000
+b outline = FALSE
+l Font = 27316 // use agencyfb17
+l TextID = 27000
+l Alignment = 3
+
+
+
+
+[ComponentIcon] 
+
+// icons will be named MCL_MC_(componentname).tga
+l XLocation = 6
+l YLocation = 22
+l Width = 48 // size of one one-unit icon.  can be up to two units wide
+l Height = 32 // height of one-unit icon.  can be up to six units tall
+st Animation = "Animation3"
+
+
+[ComponentCostIcon]
+// use Animation3		
+l XLocation = 191
+l YLocation = 20
+l Width = 15
+l Height = 15
+l UNormal = 0
+l VNormal = 15
+l UWidth  = 15
+l VHeight = 15
+st FileName = "MCL_GN_SmallIcons"
+st Animation = "Animation2"
+
+[ComponentHeatIcon]
+// use Animation3		
+l XLocation = 191
+l YLocation = 37
+l Width = 15
+l Height = 15
+l UNormal = 15
+l VNormal = 0
+l UWidth  = 15
+l VHeight = 15
+st FileName = "MCL_GN_SmallIcons"
+st Animation = "Animation4"
+
+
+[Animation0] // for main rect and component outline rect- DARK GREEN
+
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff313700
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff313700
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff313700
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff313700
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff313700
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+f DisabledTime0  = 0.0
+l DisabledColor0 =  0xff6b6b6b
+f DisabledTime1 = 1.0
+l DisabledColor1 =  0xff6b6b6b
+
+
+[Animation1] // for small icon text - darker GREEN
+
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff545f00
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff545f00
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff545f00
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff545f00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff545f00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+f DisabledTime0  = 0.0
+l DisabledColor0 =  0xff6b6b6b
+f DisabledTime1  = 1.0
+l DisabledColor1 =  0xff6b6b6b
+
+
+[Animation2] // for component name and heat and weight icons -MED GREEN
+
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff6E7C00
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6E7C00
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff6E7C00
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff6E7C00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff6E7C00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0  = 0.0
+l DisabledColor0 =  0xff6b6b6b
+f DisabledTime1  = 1.0
+l DisabledColor1 =  0xff6b6b6b
+
+
+[Animation3] // for component icon- FULL COLOR
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffffffff
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0  = 0.0
+l DisabledColor0 =  0xff6b6b6b
+f DisabledTime1  = 1.0
+l DisabledColor1 =  0xff6b6b6b
+
+[Animation4] // for heat icon- red
+
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff881200
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff881200
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff881200
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff881200
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff881200
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0  = 0.0
+l DisabledColor0 =  0xff6b6b6b
+f DisabledTime1  = 1.0
+l DisabledColor1 =  0xff6b6b6b
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[MCStartAnim]  //Screen slides up into view
+// coordinates from ulhc of  normal screen
+// links in with Mech Bay to Mech Lab animation
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 600
+l Pos0Y = 0
+f Time1 = .7
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+
+
+[MCDoneAnim]  //Screen slides down out of view
+// coordinates from ulhc of  normal screen
+// links in with reverse of Mech Bay to Mech Lab animation
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = .7
+l Pos1X = 0
+l Pos1Y = 600
+
+
+
+
+
+
+
+
+FITend 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5460BD42F130450069167DB45EB6F332" />
+  <Asset Name="..\pipetankdam.ase" Type="Physical" Author="ngauvin" FileSize="73506" ModificationTime="2006-02-01T10:55:15.3577565-08:00" CRC="9CC8D8401B59D8F2B0F97298EB417555" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PipemapDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

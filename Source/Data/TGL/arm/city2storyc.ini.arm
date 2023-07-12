@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="50A5AEC4CA015B77C95603B00FFB8214" />
+  <Asset Name="..\city2storyc.ini" Type="Physical" Author="franksav" FileSize="498" ModificationTime="2006-03-03T01:28:16.5237147-08:00" CRC="A3B61FB759D6D3D7ACEBE170C76C310A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="City2StoryC.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="City2StoryX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="City2StoryCdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="City2StoryCDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Low Urban Abandoned" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

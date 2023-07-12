@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9245C504A46131BAC2BA35A7BD1457E9" />
+  <Asset Name="..\crashwing.ase" Type="Physical" Author="ngauvin" FileSize="159550" ModificationTime="2006-02-01T10:54:44.6700601-08:00" CRC="05AE0C41D055A21B481C6F9BCEF44755" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PanelsDamEdge.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Plates.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\PanelsWing.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_CrashDetails.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\PlatesDecals.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

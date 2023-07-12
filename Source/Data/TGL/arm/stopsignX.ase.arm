@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8158ED2ED09FCBD8E1FE1A77081A604D" />
+  <Asset Name="..\stopsignX.ase" Type="Physical" Author="ngauvin" FileSize="13610" ModificationTime="2006-02-01T10:55:32.4984912-08:00" CRC="73193D134DC9606751AC5FEDFDB17BDA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

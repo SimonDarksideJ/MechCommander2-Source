@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FE40F0D1F34AB0609E413006C641F62B" />
+  <Asset Name="..\WerewolfLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="11829" ModificationTime="2006-02-01T10:55:38.6704057-08:00" CRC="3C91B73F5AF5254E4F43D3B3CBBE3450" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\WerewolfRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

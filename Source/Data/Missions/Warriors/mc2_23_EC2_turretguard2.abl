@@ -1,0 +1,243 @@
+//****************************************************************************************//
+//
+//	
+//			EC2 - Zeus
+//
+//      MISSION:  mc2_23
+//			Units Guard Turret at 2nd EC, the Steiner base
+//
+//
+//****************************************************************************************//
+
+fsm mc2_23_EC2_turretguard2;
+
+	var
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static WorldPosition	startPosition;
+		static boolean				willRequestHelp;
+		static real						lastHelpRequestTime;
+		static real						helpRequestFrequency;
+		static real						attackerHelpRadius;
+		static real						defenderHelpRadius;
+		static integer				AttackStateHandle;
+		static integer				BerzerkStateHandle;
+		static integer				buildingID;
+		static WorldPosition		buildingPos;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+		static integer		mypartID;
+		
+		static integer 	numhits;
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 125, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 300, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+		BerzerkStateHandle = getStateHandle("Berzerk");
+		
+		//**************ADD*************************
+		//mypartID =		713;
+		buildingID = 82805;
+		getObjectPosition(buildingID, buildingPos);
+		
+
+		startPatrolState[0] = PATROL_TYPE_LOOPING;
+		startPatrolState[1] = 3;    //?num points
+		startPatrolState[2] = -1;    //?num cycles
+		startPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startPatrolState[4] = -1;    //reset cur point
+		startPatrolState[5] = -1;    //reset cur cycle
+		startPatrolState[6] = CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+		startPatrolPath[0, 0] = 2240.000;
+		startPatrolPath[0, 1] = 3008.000;
+		startPatrolPath[1, 0] = 2624.000;
+		startPatrolPath[1, 1] = 3008.000;
+		startPatrolPath[2, 0] = 2752.000;
+		startPatrolPath[2, 1] = 3520.000;
+
+
+		willRequestHelp = false; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+		integer		curTarget;
+		real		curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real		distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+		curStateHandle = getCurrentStateHandle;
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if ((curStateHandle <> AttackStateHandle) AND (curStateHandle <> BerzerkStateHandle)) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+						//addedevent!	 *germ for trans berzerk.
+					case PILOT_EVENT_HIT:
+					numhits = numhits + 1 ;
+									endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if ((curStateHandle <> AttackStateHandle) AND (curStateHandle <> BerzerkStateHandle)) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+		var
+								
+					integer		tacticState;
+					char [50] s; 			
+			
+	code
+
+		update;
+		setDebugString(-1, 3, "   Move to Building    ");
+		coreMoveToObject(BuildingID,	-1);
+		coreAttack(0, TACORDER_PARAM_TURRET);
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_FIRE_FROM_HERE, tacticState);
+		s =  "TACTIC_FIRE_FROM_HERE ";
+		concat(s, numhits);
+		
+		setDebugString(-1, 3, s);
+		if (numhits > 2) then
+	    // If I have taken 3 or more hits attack enemy.
+			trans Berzerk;
+		endif;
+		
+		setDebugString(-1, 3, "   TACTIC_FIRE_FROM_HERE    ");
+		//coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_FIRE_FROM_HERE, tacticState);
+		resetOrders(1);
+			
+		
+		//transBack;
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state Berzerk;
+
+	code
+
+		update;
+		setDebugString(-1, 3, " Berzerk! After guard    ");
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		trans start;
+
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+		
+
+		update;
+		setDebugString(-1, 3, "  StartPatrol1     ");
+		corePatrol(startPatrolState, startPatrolPath, AttackStateHandle);
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

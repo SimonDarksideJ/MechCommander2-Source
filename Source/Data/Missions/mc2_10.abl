@@ -1,0 +1,739 @@
+//*********************************************************************************
+
+module mc2_10 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+		static boolean			forceMovieToEnd;
+		static boolean			fadeDown;
+
+
+
+			eternal boolean		ec1_Group_Run, ec1_Group_Trigger, ec1_Group_Attack; //New
+			eternal boolean		ec2_attack_Gulag;
+			static boolean		ec1_timer_Trigger;
+			static real			ec1_Timer, TimerDelay, startTimer;
+
+			eternal boolean		Convoy_Go_1, Convoy_Go_2;
+			eternal boolean		Reinforce_Go;
+			eternal integer		frontOfGulagTriggerArea;
+			eternal boolean		gotTOGulag;
+
+
+			static boolean		ec2_endCheck;
+			static boolean		ec4_endCheck;
+			static boolean		ec5_endCheck;
+
+			static boolean		ec1_VO, ec2_VO, ec3_VO, ec4_VO, ec2a_VO;
+		
+			eternal boolean		GoCam1, GoCam2;
+			static Integer		MoviePhase;
+			eternal real[3]			camRotation;
+			eternal real[3]			camPosition;
+			eternal real[3]			startCameraRotation;
+			eternal real[3]			startCameraPosition;
+			eternal real			camTime;					//Used to store Time
+			eternal real			startTime;
+			static boolean			NoCancel4U;		
+	
+			
+			static boolean					removeCamDummies;
+			static integer					camUnits, camI;
+			static integer[12]				camDummyList;
+		
+
+	//---------------New Video Stuff--------------------
+			static boolean			Vid10B;
+			static boolean			Vid10D;
+			static boolean			Vid10E;
+			static boolean			Vid10F;
+			static boolean			Vid10I;
+
+			static boolean			Vid10B_Check;
+			static boolean			Vid10D_Check;
+			static boolean			Vid10E_Check;
+			static boolean			Vid10F_Check;
+			static boolean			Vid10I_Check;
+
+			static real					Vid10BTimerDelay;
+			static real					Vid10DTimerDelay;
+			static real					Vid10ETimerDelay;
+			static real					Vid10FTimerDelay;
+			static real					Vid10ITimerDelay;
+
+			static boolean			Vid1;
+			static boolean			Vid2;
+			static boolean			Vid3;
+			static boolean			Vid4;
+			static boolean			Vid5;
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+		fadeDown = TRUE;
+		forceMovieToEnd = FALSE;
+		NoCancel4U = False; //Trigger to make Cancel, Not Cancel for Camera
+
+//************************************
+
+			ec1_Group_Run = False; //GT, for EC1 Movers to Run
+			ec1_Group_Trigger = False; //GT, from EC1 Movers to start Timer
+			ec1_timer_Trigger = True; //LT, used get ec1_group_Trigger Time
+			ec1_Group_Attack = False; //GT, used to get EC1 mover to attack
+
+			Convoy_Go_1 = False; //GT, this tells the Convoy to Start Heading towards the Gulag.
+			Convoy_Go_2 = False; //GT, this tells the Convoy to Start Heading towards the AirField.
+
+
+			Reinforce_Go = False; //GT, this tells the Reinforce to Start Timers to attack Gulag.
+			gotTOGulag = False; //GT, trigger when Convey get to Gulag
+			ec2_attack_Gulag = False; //GT, this tell ec2 units to attack the Gulag.
+			ec2_endCheck = False; //LT, Check to see if Ecounter 2 Vo should play
+			ec4_endCheck = False; //LT, Check to see if Ecounter 4 Vo should play
+			ec5_endCheck = False; //LT, Check to see if Player should Extract
+
+			startTimer = getTime + 2; //Setup Delay for the 1st VO.
+			ec1_Timer = gettime + 120;
+
+			ec1_VO = False; //LT, this triggers Vo #1 _ VO#1 //Starting VO of Steiner revieling plan.
+			ec2_VO = False; //LT, this triggers VO #2 _ VO#2,3,4//Stiener Strikes Back //Tac is worried //Convoy to Gulag
+			ec2a_VO = False; //LT, this triggers Vo #2a
+			ec3_VO = False; //LT, this triggers Vo #3
+			ec4_VO = False; //LT, this Triggers VO #4
+
+			GoCam1 = False;	//GT, to Tell Gulag Ppl to start Attacking
+			GoCam2 = False;	//GT, to Tell the Rest of the Gulag PPl to start Attacking.
+			
+			MoviePhase = 0;
+			
+			worldLoc[0] = -1728.000;
+			worldLoc[1] = 2112.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			frontOfGulagTriggerArea = addTriggerArea(cellLoc[0] - 16, cellLoc[1] - 16, cellLoc[0] + 16, cellLoc[1] + 16, 1, 1);
+			
+			getCameraPosition(startCameraPosition);
+			getCameraRotation(startCameraRotation);
+			startCameraRotation[2] = 1500;
+			
+			camUnits = getUnitMates(101, camDummyList);
+			camI = 0;
+	
+
+	//---------------New Video Stuff--------------------
+			Vid10B = FALSE;
+			Vid10D = FALSE;
+			Vid10E = FALSE;
+			Vid10F = FALSE;
+			Vid10I = FALSE;
+			
+			Vid10B_Check = FALSE;
+			Vid10D_Check = FALSE;
+			Vid10E_Check = FALSE;
+			Vid10F_Check = FALSE;
+			Vid10I_Check = FALSE;
+
+			Vid1 = FALSE;
+			Vid2 = FALSE;
+			Vid3 = FALSE;
+			Vid4 = FALSE;
+			Vid5 = FALSE;
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+
+
+ 			if (Not ForceMovieToEnd) then
+
+      				if (MoviePhase == 0) then
+						camPosition[0] = -1788.65;
+						camPosition[1] = 791.103;
+						camPosition[2] = -225.083;
+						CamRotation[0] = 24.5;
+						CamRotation[1] = 178.7500;
+						camRotation[2] = 1200.8578;
+	mcPrint("CamS");					
+						setCameraPosition(camPosition);
+						setCameraRotation(CamRotation);
+						SetMovieMode;
+						MoviePhase = MoviePhase + 1;
+						
+					endif;
+					
+ 					if (MoviePhase == 1) and (getTime > 5) then
+						moviePhase = moviePhase + 1;
+					endif;					
+					
+					if (MoviePhase == 2) then
+						camPosition[0] = -1728.000;
+						camPosition[1] = 2794.00;
+						camPosition[2] = 254.82;
+						CamRotation[0] = 10.25;
+						CamRotation[1] = 179;
+						camRotation[2] = 1100;
+	mcprint("Cam2");				
+						playVideo("MC2_10A.bik");	
+						setCameraGoalPosition(camPosition, 4.5);
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 3) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 4400) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;			
+					
+					if (MoviePhase == 4) then
+						camPosition[0] = -2112.46;
+						camPosition[1] = 2837.00;
+						camPosition[2] = 354.82;
+						CamRotation[0] = 10.25;
+						CamRotation[1] = 0;
+						camRotation[2] = 1500;
+	mcprint("Cam3");					
+						setCameraGoalPosition(camPosition, 4.5);
+						setCameraGoalRotation(camRotation, 4.5);
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 5) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 4400) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;	
+					
+					if (MoviePhase == 6) then
+						camPosition[0] = -1978.26;
+						camPosition[1] = 2629.07;
+						camPosition[2] = 188.734;
+						CamRotation[0] = 10.25;
+						CamRotation[1] = -75;
+						camRotation[2] = 1100;
+	mcprint("Cam4");					
+						setCameraGoalPosition(camPosition, 2.5);
+						setCameraGoalRotation(camRotation, 2.5);
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;	
+					
+					if (MoviePhase == 7) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 1500) then
+							startTime = GetLogisticsTime;
+							GoCam1 = True;
+							Vid10B = TRUE;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+						
+					if (MoviePhase == 8) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3000) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;	
+					
+					if (MoviePhase == 9) then
+						camPosition[0] = -1947.81;
+						camPosition[1] = 2875.53;
+						camPosition[2] = 215.38;
+						CamRotation[0] = 12.5;
+						CamRotation[1] = -149.75;
+						camRotation[2] = 1100;
+mcprint("Cam5");					
+						setCameraGoalPosition(camPosition, 3.5);
+						setCameraGoalRotation(camRotation, 5.5);
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;	
+					
+					if (MoviePhase == 10) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 6500) then
+							startTime = GetLogisticsTime;
+							playVideo("MC2_10B.bik");
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;	
+									
+					if (MoviePhase == 11) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 8000) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;	
+					
+					if (MoviePhase == 12) then
+	mcprint("Cam6");					
+						setCameraPosition(startCameraPosition);
+						setCameraRotation(startCameraRotation);
+						NoCancel4U = True;
+						EndMovieMode;
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 13) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 1000) then
+							startTime = GetLogisticsTime;
+							removeCamDummies = True;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;		
+			endif;		
+			
+			if (ForceMovieToEnd) and (moviePhase > -1) and (Not NoCancel4U)then
+				moviePhase = -1;
+				setCameraGoalPosition(startCameraPosition, 0.5);
+				setCameraGoalRotation(startCameraRotation, 0.5);
+				setCameraPosition(startCameraPosition);
+				setCameraRotation(startCameraRotation);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase - 1;
+				NoCancel4U = True;
+			endif;
+				
+			if (MoviePhase == -2) then
+				camTime = GetLogisticsTime - startTime;
+				if (camTime > 500) then
+					setCameraPosition(startCameraPosition);
+					setCameraRotation(startCameraRotation);
+					startTime = GetLogisticsTime;
+					removeCamDummies = True;
+					EndMovieMode;
+					GoCam1 = True;
+					moviePhase = moviePhase - 1;
+				endif;
+			endif;
+							
+
+
+    			//*******************************************************
+				//Make Camera Dummies go away
+				if (removeCamDummies) then
+					objectRemove(camDummyList[camI]);
+					if (camI  == camUnits - 1) then
+						camI  = 0;
+					else
+						camI  = camI  + 1;
+					endif;
+				endif;
+				
+//********CAUTION**********
+//ARGG!! BAD BAD BAD scripting BELOW.. BAD.. 
+//----Proceed with caution----  -dcf
+//********CAUTION**********
+
+
+			//-----------------------------------------------------------------
+			//This Tells EC1 units to run to Gulag
+			if (ec1_timer_Trigger) then
+				if (getTime > ec1_Timer) then
+					ec2_attack_Gulag = True;
+				endif;
+			endif;
+			
+			//------------------------------------------------------------------
+			//This tells the Convoy to Start Heading Towards the Gulag	
+			if (checkObjectiveStatus(0) == 1) then
+				if (Not ec2_endCheck) then
+					TimerDelay = getTime + 10; //Wait 10 secs before playing VO
+					ec2_endCheck = True;
+				else
+					if (getTime > TimerDelay) then
+						if (not ec2_VO) then
+							ec2_VO = True;
+							playVideo("MC2_10C.bik");
+							Vid10D = TRUE;
+							timerDelay = getTime + 50;
+						else
+							if (getTime > TimerDelay) then
+								if (not ec2a_Vo) then
+									ec2a_VO = True;
+									Vid10F = TRUE;
+									Convoy_Go_1 = True;
+									Reinforce_Go = True;
+								endif;
+							endif;
+						endif;
+					endif;
+				endif;
+			endif;
+
+			
+
+			//------------------------------------------------------------------
+			//This tells the Convey to Start Heading Towards the AirField
+			if (checkObjectiveStatus(1) == 1) and (gotTOGulag) then
+				if (Not ec4_endCheck) then
+					TimerDelay = getTime + 15; //Wait 5 secs before playing VO
+					ec4_endCheck = True;
+				else
+					if (getTime > TimerDelay) then
+						if ((Not ec3_Vo) and isTriggerAreaHit(frontOfGulagTriggerArea)) then
+							ec3_VO = True;
+							Convoy_Go_2 = True;
+							if (Not (checkObjectiveStatus(2) == 1)) then
+								playVideo("MC2_10G.bik");
+							endif;
+						endif;
+					endif;
+				endif;
+			endif;	
+
+			//------------------------------------------------------------------
+			//Tells the player to head towards the Extraction Point
+			if (checkObjectiveStatus(2) == 1)then
+				if (Not ec5_endCheck) then
+					TimerDelay = getTime + 5; //Wait 5 secs before playing VO
+					ec5_endCheck = True;
+				else
+					if (getTime > TimerDelay) then
+						if ((Not ec4_Vo) and isTriggerAreaHit(frontOfGulagTriggerArea)) then
+							ec4_VO = True;
+							playVideo("MC2_10H.bik");
+							Vid10I = TRUE;	
+						endif;
+					endif;
+				endif;
+			endif;		
+	
+
+			//--------------------------------------------------------------
+			//Used to play the continuing saga of the unconnected Videos
+			if (Vid10B) then
+				if (NOT Vid10B_Check) then
+					Vid10BTimerDelay = getTime + 13; //Wait 13 secs before playing VO
+					Vid10B_Check = TRUE;
+				else
+					if (getTime > Vid10BTimerDelay) AND (NOT Vid1) then
+						Vid1 = TRUE;
+					endif;
+				endif;
+			endif;
+
+			if (Vid10D) then
+				if (NOT Vid10D_Check) then
+					Vid10DTimerDelay = getTime + 19; //Wait 19 secs before playing VO
+					Vid10D_Check = TRUE;
+				else
+					if (getTime > Vid10DTimerDelay) AND (NOT Vid2) then
+						playVideo("MC2_10E.bik");
+						Vid2 = TRUE;
+						Vid10E = TRUE;
+					endif;
+				endif;
+			endif;
+
+
+			if (Vid10E) then
+				if (NOT Vid10E_Check) then
+					Vid10ETimerDelay = getTime + 27; //Wait 7 secs before playing VO
+					Vid10E_Check = TRUE;
+				else
+					if (getTime > Vid10ETimerDelay) AND (NOT Vid3) then
+						playVideo("MC2_10F.bik");
+						Vid3 = TRUE;
+					endif;
+				endif;
+			endif;
+
+
+			if (Vid10I) then
+				if (NOT Vid10I_Check) then
+					Vid10ITimerDelay = getTime + 10; //Wait 7 secs before playing VO
+					Vid10I_Check = TRUE;
+				else
+					if (getTime > Vid10ITimerDelay) AND (NOT Vid5) then
+						playVideo("MC2_10I.bik");
+						Vid5 = TRUE;
+					endif;
+				endif;
+			endif;
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (0) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 0;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune4);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune3);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune3);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(2) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune0);
+			StartMusicTimer = getTime + 34; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+ 				//Test Movie Modes
+				// FIRST, Check if player pressed Esc through this movie!!	
+				forceMovieToEnd = (forceMovieEnd == 1);
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

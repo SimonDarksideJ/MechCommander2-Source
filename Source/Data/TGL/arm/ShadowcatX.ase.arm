@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FA2DE719BD3E756FDCE5667954014A61" />
+  <Asset Name="..\ShadowcatX.ase" Type="Physical" Author="ngauvin" FileSize="117928" ModificationTime="2006-02-01T10:55:28.6547166-08:00" CRC="DB26020324B2E59FED394CB09C74F0A1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

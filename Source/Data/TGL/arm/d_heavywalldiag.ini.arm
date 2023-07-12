@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A6DB133C23E806D60BECD4320DE0AA84" />
+  <Asset Name="..\d_heavywalldiag.ini" Type="Physical" Author="franksav" FileSize="199" ModificationTime="2006-03-03T01:28:20.4611895-08:00" CRC="CAB3393EE4EDDC1ABE1C0F91FD62894D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="d_heavywallDiag.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="d_heavyWallDiagDam.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

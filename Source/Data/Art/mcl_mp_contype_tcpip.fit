@@ -1,0 +1,260 @@
+	FITini 
+
+// tcp/ip sub-area for connection type multiplayer screen
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Buttons]
+l Buttoncount = 2
+
+[Button0] // "JOIN GAME" button
+
+l XLocation = 470
+l YLocation = 379
+l Width = 256
+l Height = 37
+
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+l XTextLocation = 484
+l YTextLocation = 385
+l TextWidth = 228
+l TextHeight = 25
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID = 26013
+l Font = 26030 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26014
+
+l UWidth = 256
+l VHeight = 37
+
+l UNormal = 0
+l VNormal = 135
+
+l UPressed = 0
+l VPressed = 172
+
+l UHighlight = 0
+l VHighlight = 209
+
+l UDisabled = 0
+l VDisabled = 135
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xff5c96c2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5c96c2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button1] // "HOST GAME" button
+
+l XLocation = 470
+l YLocation = 428
+l Width = 256
+l Height = 37
+
+st FileName = "mcl_mp_connectiontype_3.tga"
+
+l XTextLocation = 484
+l YTextLocation = 434
+l TextWidth = 228
+l TextHeight = 25
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID = 26015
+l Font = 26028 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26016
+
+l UWidth = 256
+l VHeight = 37
+
+l UNormal = 0
+l VNormal = 135
+
+l UPressed = 0
+l VPressed = 172
+
+l UHighlight = 0
+l VHighlight = 209
+
+l UDisabled = 0
+l VDisabled = 135
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xff5c96c2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5c96c2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // help text area
+l XLocation = 475
+l YLocation = 117
+l Width = 247
+l Height = 113
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26029 // use agencyfb11
+l TextID = 26017
+l Alignment = 0
+
+
+[Text1] // "IP ADDRESS"
+l XLocation = 470
+l YLocation = 300
+l Width = 255
+l Height = 25
+l Color = 0xff005392
+b outline = FALSE
+l Font = 26034 // use agencyfb14
+l TextID = 26018
+l Alignment = 0
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 1
+
+[ComboBox0] // ip address number drop down
+
+l XLocation = 470
+l YLocation = 333
+
+st FileName = "mcl_mp_tcpip_combobox1.fit"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Rects]
+
+l Rect = 1
+
+[Rect0]// ip address box
+l XLocation = 470
+l YLocation = 333
+l Width = 255
+l Height = 33
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26090
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+FITend 

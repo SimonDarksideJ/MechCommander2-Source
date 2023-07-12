@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D47E66E7F2089B2E55420C49F5B0D111" />
+  <Asset Name="..\RelayStationDam.ase" Type="Physical" Author="ngauvin" FileSize="19791" ModificationTime="2006-02-01T10:55:17.5140203-08:00" CRC="3290620D23DEF9E2B4B0437FB58BE7DD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_RelayStationDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

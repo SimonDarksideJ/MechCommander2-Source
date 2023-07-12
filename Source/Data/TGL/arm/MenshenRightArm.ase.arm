@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B0FCED3EE83B39649637DB6018D08E82" />
+  <Asset Name="..\MenshenRightArm.ase" Type="Physical" Author="ngauvin" FileSize="16838" ModificationTime="2006-02-01T10:55:13.0139915-08:00" CRC="EE09ED42C822A70F5629EDBDDBCE3F85" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\MenShenRGB.TGA" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

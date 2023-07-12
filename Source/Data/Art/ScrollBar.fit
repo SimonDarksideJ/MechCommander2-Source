@@ -1,0 +1,318 @@
+FITini
+
+
+
+
+
+[ScrollButton0] // This is the scroll up button for the salvageable mech entry box area   
+l ID = xxx
+l XLocation = 2
+l YLocation = 3
+l Width = 12
+l Height = 6
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_Scroll"
+
+l UWidth = 12
+l VHeight = 6
+
+l UNormal = 0
+l VNormal = 12
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+f NormalTime2 = 15.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 16.0
+l NormalColor3 = 0xff005392
+
+l UPressed = 0
+l VPressed = 12
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff005392
+
+l UHighlight = 0
+l VHighlight = 12
+
+
+l UDisabled = 0
+l VDisabled = 12
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+
+
+
+
+
+[ScrollButton1] // This is the scroll down button for the salvageable mech entry box area   
+l ID = xxx
+l XLocation = 2
+l YLocation = -1
+l Width = 12
+l Height = 6
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_Scroll"
+
+l UWidth = 12
+l VHeight = 6
+
+
+l UNormal = 0
+l VNormal = 18
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+f NormalTime2 = 15.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 16.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 18
+
+
+l UHighlight = 0
+l VHighlight = 18
+
+l UPressed = 0
+l VPressed = 12
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff005392
+
+l UDisabled = 0
+l VDisabled = 18
+
+l UDisabled = 0
+l VDisabled = 12
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+
+
+[ScrollButton2] // This is the scroll slider for the salvageable mech entry box area  
+
+l Min = 106
+l Max = 468
+ 
+l ID = xxx
+l XLocation = 2
+l YLocation = 1
+l Width = 12
+l Height = 12
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_Scroll"
+
+l UWidth = 12
+l VHeight = 12
+
+
+l UNormal = 0
+l VNormal = 0
+
+
+l UPressed = 0
+l VPressed = 0
+
+
+l UHighlight = 0
+l VHighlight = 0
+
+
+l UDisabled = 0
+l VDisabled = 0
+
+
+
+
+
+
+
+
+
+
+l ScrollRectColor = 0xff002F55
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+f NormalTime2 = 15.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 16.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 244
+l VPressed = 0
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UDisabled = 0
+l VDisabled = 12
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+
+
+
+[Green]
+
+
+l ScrollRectColor = 0xff313700
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff6E7C00
+f NormalTime1 = 15
+l NormalColor1 = 0xff6E7C00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xffC8E100
+f NormalTime3 = 16.0
+l NormalColor3 = 0xff6E7C00
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC8E100
+
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC8E100
+
+
+
+l UDisabled = 0
+l VDisabled = 12
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+
+[Orange]
+
+
+l ScrollRectColor = 0xff43311C
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 15.5
+l NormalColor2 = 0xffFFAE4D
+f NormalTime3 = 16.0
+l NormalColor3 = 0xffC66600
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+
+l UDisabled = 0
+l VDisabled = 12
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x00373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x00373737
+
+
+

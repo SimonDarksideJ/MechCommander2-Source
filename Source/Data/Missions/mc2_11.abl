@@ -1,0 +1,434 @@
+//*********************************************************************************
+
+module mc2_11 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+	//************************germ added
+	eternal boolean     SensorVOTrigger;
+	static 	boolean			Sensor_Event_Trigger_Check;
+	static 	boolean			Sensor_Event_Trigger_Check_2;
+	static 	boolean			Area_Event_Trigger_Check;
+	static	boolean			Sensor_VO;
+	static	boolean			Sensor_VO_2;
+	static	boolean			Area_VO;
+	static	real				timerDelay;
+	
+	eternal integer		NorthBridgeTrigger;
+	eternal integer		CenterBridgeTrigger;
+	eternal integer		SouthBridgeTrigger;
+	//******************************germ add end
+	
+	static integer      ScenarioResult;
+	eternal boolean     ExitTimerSet;
+	static integer      VictoryLevel;
+	char[40]            dstring;
+	eternal real        gametime;
+	static real         nextsecond;
+  integer             x;
+  integer             y;
+  Position            aPoint;
+	static Position			startP;
+  eternal boolean     GeneralAlarm;
+  static 	boolean     PlayPASound;
+  static 	boolean     PlayGASound;
+  eternal integer     GeneralAlarmCounter;
+  boolean             PerimeterBreach;
+					 	
+	static boolean			startCam;
+	static boolean			endCam;
+	static real					velTime;
+	static real					zoomFOV;
+	static real					startFOV;
+	static integer			camObject;
+
+			
+		static boolean			Cash_Check1;
+		static boolean			CashVO_Check2;
+		static real					CashTimerDelay1;
+		static real					CashVOTimerDelay2;
+		static boolean			Cash_VO_1;
+		static boolean			CashWF_VO_2;
+		
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		
+		integer		moverID;
+		WorldPosition	moverPos;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+		
+		//**************germ set	
+		SensorVOTrigger = FALSE;
+		Sensor_Event_Trigger_Check = FALSE;
+		Sensor_Event_Trigger_Check_2 = FALSE;
+		Sensor_VO = FALSE;
+		Sensor_VO_2 = FALSE;
+		Area_Event_Trigger_Check = FALSE;
+		Area_VO = FALSE;
+		//************ germ end set
+		
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//************************************ Trigger Areas for bridges
+
+			//North most Land Bridge
+			worldLoc[0] = 1130.667;
+			worldLoc[1] = 4800.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			NorthBridgeTrigger = addTriggerArea(cellLoc[0] - 3, cellLoc[1] - 12, cellLoc[0] + 3, cellLoc[1] + 2, 1, 0);
+
+			//Center Land Bridge
+			worldLoc[0] = 362.667;
+			worldLoc[1] = 1856.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			CenterBridgeTrigger = addTriggerArea(cellLoc[0] - 3, cellLoc[1] - 12, cellLoc[0] + 3, cellLoc[1] + 2, 1, 0);
+
+			//East most Land Bridge
+			worldLoc[0] = -704.000;
+			worldLoc[1] = -2496.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			SouthBridgeTrigger = addTriggerArea(cellLoc[0] - 3, cellLoc[1] - 12, cellLoc[0] + 3, cellLoc[1] + 2, 1, 0);
+
+
+			Cash_Check1 = FALSE;
+			CashVO_Check2 = FALSE;
+			Cash_VO_1 = FALSE;
+			CashWF_VO_2 = FALSE;
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+//--------------------------------------------------- Mission 11  Stuff
+
+
+			//************************************************
+			//If both Sensor Towers are NOT destroyed or the Sensor control has NOT been captured AND the Sensor net is tripped then warn Player (VO)
+			if ((checkObjectiveStatus (6) == 0) OR (checkObjectiveStatus (7) == 0)) AND (SensorVOTrigger) then 	
+				if (Not Sensor_Event_Trigger_Check) then		//declare as FLASE
+				
+					timerDelay = getTime + 4; //Wait 4 secs before playing VO
+					Sensor_Event_Trigger_Check = True;
+					
+				else
+				
+					if ((getTime > timerDelay) AND (Not Sensor_VO)) then
+					
+						Sensor_VO = True;	
+						playWave("data\sound\mc2_11_1", -1); //Play Sensor Net Trip VO
+						
+					endif;
+				endif;
+			endif;
+			
+			//************************************************
+			// If BOTH Sensor towers are destroyed or the Sensor Control is "captured or destroyed" then congratulate the player	(VO)
+			if ((checkObjectiveStatus (6) == 1) OR (checkObjectiveStatus (7) == 1)) AND (not Sensor_VO) then	
+				if (Not Sensor_Event_Trigger_Check_2) then		//declare as FLASE
+				
+					timerDelay = getTime + 4; // Wait 4 secs before playing VO
+					Sensor_Event_Trigger_Check_2 = True;
+					
+				else
+				
+					if ((getTime > timerDelay) AND (Not Sensor_VO_2)) then
+					
+						Sensor_VO_2 = True;	
+						playWave("data\sound\mc2_11_5", -1); //Play Sensor destroy VO
+						
+					endif;
+				endif;
+			endif;
+
+				
+			//Check if the player has crossed the bridge, THEN Play VO if they have not completed the objectives.
+			if ((isTriggerAreaHit(NorthBridgeTrigger)) OR
+							(isTriggerAreaHit(CenterBridgeTrigger)) OR
+										(isTriggerAreaHit(SouthBridgeTrigger))) AND
+													(checkObjectiveStatus (1) == 0) then
+								
+				 if (Not Area_VO) and (NOT isPlayingVoiceOver) then
+				
+						Area_VO = True;
+						mcprint("Bridge Trigger");
+						playWave("data\sound\mc2_11_3", -1); //Play Bridge Warn VO
+						
+				 endif;
+			endif;	
+
+			
+			//************************************************
+			// Cash Video 1	Davion Base
+			if (checkObjectiveStatus (2) == 1) then
+				if (Not Cash_Check1) then	
+					CashTimerDelay1 = getTime + 7; // Wait 4 secs before playing VO
+					Cash_Check1 = True;
+				else
+					if ((getTime > CashTimerDelay1) AND (Not Cash_VO_1)) then
+						Cash_VO_1 = True;	
+						playVideo("W03.bik");
+					endif;
+				endif;
+			endif;
+
+			
+			//************************************************
+			// Cash Video 1	Steiner Base
+			if (checkObjectiveStatus (3) == 1) then
+				if (Not CashVO_Check2) then	
+					CashVOTimerDelay2 = getTime + 7; // Wait 4 secs before playing VO
+					CashVO_Check2 = True;
+				else
+					if ((getTime > CashVOTimerDelay2) AND (Not CashWF_VO_2)) then
+						CashWF_VO_2 = True;	
+						playVideo("W08.bik");
+					endif;
+				endif;
+			endif;
+
+
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+/*	
+	if (getObjectiveSuccess and NOT playingMissionResultTune and NOT playingObjectiveTune) then
+		playDigitalMusic(ObjectiveSuccessTune);
+		playingObjectiveTune = true;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingDeathTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getObjectiveFailed and NOT playingMissionResultTune and NOT playingObjectiveTune) then
+		playDigitalMusic(ObjectiveFailedTune);
+		playingObjectiveTune = true;
+		playingCombatTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingDeathTune = false;
+	endif;
+	
+	if (getEnemyDestroyed and NOT playingMissionResultTune and NOT playingObjectiveTune and NOT playingDeathTune) then
+		playDigitalMusic(EnemyDiedTune);
+		playingDeathTune = true;
+		playingAmbientTune = false;
+		playingNONCombatTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+
+	if (getFriendlyDestroyed and NOT playingMissionResultTune and NOT playingObjectiveTune and NOT playingDeathTune) then
+		playDigitalMusic(FriendlyDiedTune);
+		playingAmbientTune = false;
+		playingDeathTune = true;
+		playingSensorTune = false;
+		playingNONCombatTune = false;
+		playingCombatTune = false;
+	endif;
+*/
+	
+	
+	if (checkObjectiveStatus (1) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune0);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune2);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune2);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(4) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune2);
+			StartMusicTimer = getTime + 30; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+						
+endmodule.		
+
+//******************************************************************

@@ -1,0 +1,23 @@
+//************************
+//Clan Init Include File 3/19
+//------------------------
+
+//-------------------------------------------------------------------------
+// Initialize variables that may not be Init'd by old brain INIT functions
+	HunterKiller = FALSE;
+	MoveSpeed = FALSE; // WALK
+	IdentifyContacts = FALSE;	// TRUE will make use of COMBAT_MODE_IDENTIFY
+	MovingToIdentify = FALSE;
+	NullPoint[0] = 0.0;
+	NullPoint[1] = 0.0;
+	NullPoint[2] = 0.0;
+	AttackOrders = FALSE;
+	NumHitLists = NUM_HIT_LISTS;
+	IgnoreNonHitListTargets = FALSE;
+	IgnoreNonInOrderTargets = FALSE;
+	ChallengeSetting = CHALLENGE_ON;
+	AttackInActive = FALSE;
+	VisualRangeMod = 0;
+
+
+

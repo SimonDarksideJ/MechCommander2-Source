@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4C667EF812499B3F41ECB98412290D18" />
+  <Asset Name="..\mc2_m08.fit" Type="Physical" Author="franksav" FileSize="28009" ModificationTime="2006-03-06T13:38:00.0109637-08:00" CRC="D9B4D8591C88D89CFFEC805E64B8ECA7" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="CapBase Classic" MissionAuthor="Mike Turner and mantis" IsSinglePlayer="No" MissionType="CaptureBase" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="mc2_m08.pak" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior09" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior10" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior11" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior12" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior13" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior14" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior15" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior16" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior17" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior18" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior19" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior20" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior21" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior22" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior23" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m08_warrior24" />
+        <Relationship Type="ScenarioScript" RelatedAsset="multiplayer.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_MediumWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_MediumGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\D_MediumWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\D_MediumGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\D_GateControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_GateControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RPBuilding.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RepairBay.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LRMTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\D_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MediumAutoCannonTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_4.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_3.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Generic_HQ.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LookoutTower.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SensorTower.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_SensorControl.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

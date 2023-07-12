@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CCD1E9D0B2FB3920F33CB3B52248EE23" />
+  <Asset Name="..\extractionmarker.ase" Type="Physical" Author="ngauvin" FileSize="3431" ModificationTime="2006-02-01T10:54:51.529479-08:00" CRC="B1C30033C559CEAA50DB2788239A82DD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Extraction.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

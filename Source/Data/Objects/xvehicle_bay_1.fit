@@ -1,0 +1,27 @@
+FITini
+
+// This is the TEMPLATE data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xvehicle_bay_1"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x0200036E
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 1			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 576
+b BlocksLineOfFire 	= FALSE
+ul DmgLevel			= 61
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00000838
+b CanRefit			= TRUE
+b MechBay			= FALSE
+			
+FITend

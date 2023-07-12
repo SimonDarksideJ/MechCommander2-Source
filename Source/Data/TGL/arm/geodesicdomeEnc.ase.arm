@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D07BC0052351BF5D13E753D551F5E33A" />
+  <Asset Name="..\geodesicdomeEnc.ase" Type="Physical" Author="ngauvin" FileSize="79856" ModificationTime="2006-02-01T10:54:54.5919986-08:00" CRC="A8E8FC46472B1407ECC95C2145831589" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_GeodesicDome.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

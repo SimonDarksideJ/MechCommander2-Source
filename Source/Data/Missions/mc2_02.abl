@@ -1,0 +1,435 @@
+//*********************************************************************************
+
+module mc2_02: integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean		Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+		
+		static boolean			StopPlayingVO;
+
+//*******************************************NEW
+			eternal boolean			CallReinForce;		//Trigger that calls in Bandit Lake Reinforcements
+			static real				startVo;		//Timer Used to play RP building VO	
+			static real				playVO_2;		//Timer Used to play Enemy Near Building VO
+			static integer			playControlVO;	//Timer Used to play Turret Control VO
+			static real				southDefendVO;	//Timer used to play You have Killed ALL south Defender VO
+			static real				SensorControlVO;	//Timer used to play the Sensor Control VO
+			static boolean			playDefendVO;	//Trigger to check if we played the South Defender VO
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+/* Commented out Due to Changes in TUT mission 2
+//---------------------------------------
+// TUTORIAL STUFF
+        eternal integer         missionTutorialStage;
+        eternal real            startTime;
+        eternal real            currentTime;
+        eternal real[3]         oldCameraPosition;
+        eternal real[3]         oldCameraRotation;
+        eternal real            oldCameraZoom;
+        eternal real[3]         newCameraPosition;
+        eternal real[3]         newCameraRotation;
+        eternal real            newCameraZoom;
+*/
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		
+		integer		moverID;
+		WorldPosition	moverPos;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+		
+		StopPlayingVO = False;
+
+	//************************************
+
+			CallReinForce = False;
+			startVo = 5; 		//WAIT 5 sec after mission start to play 1st VO
+			playVO_2 = 10 + 3;	//WAIT (VO Time) + (Delay TIME) to play 2nd VO
+			playControlVO = -1;	//Timer Used to play Control BUilding VO		
+			southDefendVO = -1;  	//Timer used to play When the player Kills all of the south Base defenders
+			SensorControlVO = -1; 	//Timer used to play the Sensor Control VO
+			playDefendVO = False;	//If we played South Defend VO yet
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+			PlayCountCheck =  FALSE;
+	 SensorPlayCount = 4;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+/* Comment out Due to Changes in Tutorial Mission 2
+//---------------------------------------
+// TUTORIAL STUFF
+        missionTutorialStage = 0;
+        startTime = 0.0;
+        currentTime = 0.0;
+        oldCameraPosition[0] = 0.0;
+        oldCameraPosition[1] = 0.0;
+        oldCameraPosition[2] = 0.0;
+*/
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+
+		
+//--------------------------------------------------- Mission 02 Stuff
+				
+				//*************************************
+				//Check if the player Has Entered the base. If yes then call in the Reinforcement Troops
+				if ((checkObjectiveStatus(6) == 1)) then			
+					CallReinForce = True;
+				endif;
+
+				//*************************************
+				//Play 1st VO
+				if (getTime > startVO) and (startVO > 0) then
+mcprint("RPBUILDING");
+					startVO = 0;
+					playWave("data\sound\tut_3eii.wav", -1); 	//Play RP BUILDING VO
+					playVO_2 = getTime + playVO_2;		//Set Time for the Next VO
+				endif;
+
+
+				//*************************************
+				//Play 2nd VO
+				if (getTime > playVO_2) and ((playVO_2 > 0) and (startVO == 0))then
+					playVO_2 = 0;
+mcprint("MechNear");
+	  						playVideo("V3G.bik");
+//					playWave("data\sound\tut_3g.wav", -1); //Play Enemy Mech Near Capture VO
+				endif;
+
+				//*************************************
+				//Check if the Player has gone Into the Turret Area
+				if ((checkObjectiveStatus(7) == 1)) and (playControlVO == -1) then
+mcprint("CapControl");			
+					playWave("data\sound\tut_3hi.wav", -1); //Play Capture Control Building VO
+					playControlVO = 0;
+				endif;
+
+				//*************************************
+				//Vo that Plays when South Base Defenders are Destroyed
+				if ((checkObjectiveStatus(1) == 1)) and (southDefendVO == -1) then			
+					southDefendVO = getTime + 3; //Setting Timer
+				endif;	
+				if (Not playDefendVO) and (getTime > southDefendVO) and (southDefendVO <> -1) then
+					playDefendVO = True;
+					southDefendVO = getTime + 10;
+mcprint("KillDudes");
+					playWave("data\sound\tut_3kii.wav", -1); //Play Kill all Bad Dudes at South Base
+				endif;
+
+				//*************************************
+				//VO that plays when the play Capture the Sensor Control
+				if ((checkObjectiveStatus(2) == 1)) and ( SensorControlVO == -1) and (playDefendVO) then			
+					SensorControlVO  = getTime + 2; //Setting Timer
+				endif;	
+				if (SensorControlVO > 0) and ((getTime > SensorControlVO) and (getTime > southDefendVO)) and (Not (checkObjectiveStatus(3) == 1)) then
+					SensorControlVO = 0;
+mcprint("Sensor");
+					playWave("data\sound\tut_3kij.wav", -1); //PLay Cap the Sensor Tower
+				endif;
+
+
+
+	
+
+//---------------------------------------------------- Mission 02 Stuff End
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+/*	
+	if (checkObjectiveStatus (7) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+*/	
+	if (not playMissionStartTune) then
+/*		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		  if (random(100) < 100) then
+  		 if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+				if ((NOT playingSensorTune) AND (NOT checkObjectiveStatus (5) == 1)) then
+					playDigitalMusic(AmbientTune3);
+					mcprint ("Playing Ambient Tune Sensorstyle");
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = true;
+					playingCombatTune = false;
+					playingAmbientTune = true;
+					playingSensorTune = false;
+			  endif;
+			endif;
+		endif;
+	endif;
+*/		
+		if ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat)) then
+//		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune3);
+				  mcprint ("Playing Ambient Tune3");
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+   if (NOT (checkObjectiveStatus(1) == 1)) then
+	  if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+	  	if (AttackMusicTrigger1) then
+				if (random(100) < 100) then
+				  mcprint ("Playing Combat Tune4");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune3);
+				mcprint ("Playing Ambient Tune Combatstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = false;
+				playingCombatTune = true;
+				playingAmbientTune = false;
+				playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(3) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune4");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune6);
+			StartMusicTimer = getTime + 34; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+	
+	
+	
+		//***************************************************
+		// Used to check if VO is playing.. Stop it if it is.
+		if (getMissionStatus <> 0) and (Not StopPlayingVO) then
+			stopVoiceOver;
+			playVO_2 = 0; //Stop Video From Playing
+			StopPlayingVO = True;
+		endif;
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+
+           return (ScenarioResult);
+
+endmodule.
+//******************************************************************

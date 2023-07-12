@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="24CE8C7E867817E73744DA5952D181D7" />
+  <Asset Name="..\FleaLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="10191" ModificationTime="2006-02-01T10:54:52.3419842-08:00" CRC="45856C5AF105A065D04CF9815206A781" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\FireAntRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

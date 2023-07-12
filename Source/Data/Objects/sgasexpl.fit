@@ -1,0 +1,22 @@
+FITini
+
+// This is the Mech Explosion Data File
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 				= "sgasexpl"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type					= 41				// ID number for this object type
+l Appearance				= 0x0200029A
+l Duration				= -1				// Lasts forever = -1
+l MaxDamage				= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+
+[ExplosionData]
+ul DmgLevel				= 0
+ul SoundEffectId			= 35
+ul LightObjectId			= 698	
+FITend

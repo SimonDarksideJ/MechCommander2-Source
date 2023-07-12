@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6B53A575DC9A493DD058FC084913120D" />
+  <Asset Name="..\walkway.ini" Type="Physical" Author="franksav" FileSize="481" ModificationTime="2006-03-03T01:28:56.2734603-08:00" CRC="978092F8C6279F7154456DDEBFEAD718" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="walkway.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="WalkwayX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="walkwaydam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="WalkwayDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Walkway" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

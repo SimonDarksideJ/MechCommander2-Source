@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AA63D750828414509C14CA232FF523D8" />
+  <Asset Name="..\s_adminquarter.ini" Type="Physical" Author="franksav" FileSize="585" ModificationTime="2006-03-03T01:28:43.7266656-08:00" CRC="99CF158BA23D83A3B806F938B30ED47B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_adminquarter.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_adminquarterL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_adminquarterL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_adminquarterX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_adminquarterdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_adminquarterdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Administration" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

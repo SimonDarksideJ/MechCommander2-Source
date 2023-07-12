@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9AA9C56F20637229E3DFFB1BB48AC146" />
+  <Asset Name="..\Madcat.ase" Type="Physical" Author="ngauvin" FileSize="171520" ModificationTime="2006-02-01T10:55:09.7170954-08:00" CRC="18FA05071146B8D7DB147BFABF4112D9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\MadcatRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

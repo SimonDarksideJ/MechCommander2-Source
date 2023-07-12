@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A1BD6636668AA13AC26CA177F25D0D39" />
+  <Asset Name="..\tinshackEnc.ase" Type="Physical" Author="ngauvin" FileSize="46902" ModificationTime="2006-02-01T10:55:34.498504-08:00" CRC="F043935FAD0ABA065EFC914CE36AABD0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Tinshack.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,3420 @@
+FITini
+
+// IN-GAME UI
+
+
+[Fonts]
+
+l HelpFont = 40015
+l ObjectiveFont = 40016 
+l PauseFont = 40017
+l IconFont = 40022
+l MissionResultsFont = 40023 
+l InfoWndFont = 40020
+l ComponentFont = 40043
+l VehicleFont = 40034
+
+
+
+
+[TabRects] // blink these when calling attention to tab- instead of blinking tab itself
+
+l TabRectCount = 3
+
+[TabRect0] // rect over tac map tab
+l XLocation = 4
+l YLocation = 317
+l Width = 23
+l Height = 20
+l Color = 0xff000000
+b outline = FALSE
+
+[TabRect1] // rect over support tab
+l XLocation = 51
+l YLocation = 317
+l Width = 23
+l Height = 20
+l Color = 0xff000000
+b outline = FALSE
+
+[TabRect2] // rect over info tab
+l XLocation = 98
+l YLocation = 317
+l Width = 23
+l Height = 20
+l Color = 0xff000000
+b outline = FALSE
+
+
+
+
+
+
+[HelpText]
+
+l HelpTextLeft = 156
+l HelpTextBottom = 377
+
+
+[ResourcePoints]
+l RPTextLeft = 5
+l RPTextTop = 465
+
+
+[JumpJetIcon]
+l XLocation = 20// from lower left hand corner of mech selection white rect
+l YLocation = -15
+l Width = 10
+l Height = 14
+l UNormal = 0
+l VNormal = 33
+l UWidth = 10
+l VHeight = 13
+st FileName = "MCUI_JumpJets"
+
+
+
+[ControlButtons]
+
+l ButtonCount = 20
+
+ 
+
+
+[Button0] // default attack DEFUNCT
+l ID = 0
+l XLocation = 554
+l YLocation = 373
+l Width = 39
+l Height = 25
+
+l HelpCaption = 30063
+l HelpDesc = 30064
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 156
+
+l UPressed = 39
+l VPressed = 156
+
+l UDisabled = 78
+l VDisabled = 156
+
+l UAmbiguous = 117
+l VAmbiguous = 156
+
+l UWidth = 39
+l VHeight = 25
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Button1] // short range attack DEFUNCT
+
+l ID = 1
+l XLocation = 595
+l YLocation = 373
+l Width = 39
+l Height = 25
+
+l HelpCaption = 30029
+l HelpDesc = 30030
+
+st FileName = "MCUI_Low1"
+
+
+l UNormal = 0
+l VNormal = 181
+
+l UPressed = 39
+l VPressed = 181
+
+l UDisabled = 78
+l VDisabled = 181
+
+l UAmbiguous = 117 
+l VAmbiguous = 181
+
+l UWidth = 39
+l VHeight = 25
+
+b texturesRotated = 0
+
+
+
+
+
+[Button2] // medium attack DEFUNCT
+
+l ID = 2
+l XLocation = 554
+l YLocation = 400
+l Width = 39
+l Height = 25
+
+l HelpCaption = 30033
+l HelpDesc = 30034
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 206
+
+l UPressed = 39
+l VPressed = 206
+
+l UDisabled = 78
+l VDisabled = 206
+
+l UAmbiguous = 117
+l VAmbiguous = 206
+
+l UWidth = 39
+l VHeight = 25
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Button3] // l attack DEFUNCT
+
+l ID = 3
+l XLocation = 595
+l YLocation = 400
+l Width = 39
+l Height = 25
+
+l HelpCaption = 30031
+l HelpDesc = 30032
+
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 231
+
+l UPressed = 39
+l VPressed = 231
+
+l UDisabled = 78
+l VDisabled = 231
+
+l UAmbiguous = 117
+l VAmbiguous = 231
+
+l UWidth = 39
+l VHeight = 25
+
+b texturesRotated = 0
+
+
+
+
+
+[Button4] // jump
+
+l ID = 4
+
+l XLocation = 595
+l YLocation = 377
+l Width = 39
+l Height = 37
+
+l HelpCaption = 30035
+l HelpDesc = 30036
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 193
+
+l UPressed = 39
+l VPressed = 193
+
+l UDisabled = 78
+l VDisabled = 193
+
+l UWidth  = 39
+l VHeight = 37
+
+b texturesRotated = 0
+
+
+
+
+
+[Button5] // run
+
+l ID = 5
+
+l XLocation = 554
+l YLocation = 377
+l Width = 39
+l Height = 37
+
+l HelpCaption = 30037
+l HelpDesc = 30038
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 156
+
+l UPressed = 39
+l VPressed = 156
+
+l UDisabled = 78
+l VDisabled = 156
+
+l UWidth  = 39
+l VHeight = 37
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Button6] // guard
+
+l ID = 6
+
+l XLocation = 554
+l YLocation = 415
+l Width = 39
+l Height = 37
+
+l HelpCaption = 30039
+l HelpDesc = 30040
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 117
+l VNormal = 156
+
+l UPressed = 156
+l VPressed = 156
+
+l UDisabled = 195
+l VDisabled = 156
+
+l UWidth  = 39
+l VHeight = 37
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Button7] // fire from current pos
+
+l ID = 7
+
+l XLocation = 554
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30041
+l HelpDesc = 30042
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 66
+
+l UPressed = 186
+l VPressed = 66
+
+l UDisabled = 212
+l VDisabled = 66
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+[Button8] // stop
+
+l ID = 8
+
+l XLocation = 595
+l YLocation = 415
+l Width = 39
+l Height = 37
+
+l HelpCaption = 30043
+l HelpDesc = 30044
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 117
+l VNormal = 193
+
+l UPressed = 156
+l VPressed = 193
+
+l UDisabled = 195
+l VDisabled = 193
+
+l UWidth  = 39
+l VHeight = 37
+
+b texturesRotated = 0
+
+
+
+
+[Button9] // info
+
+l ID = 9
+
+l XLocation = 581
+l YLocation = 353
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30045
+l HelpDesc = 30046
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 0
+
+l UPressed = 186
+l VPressed = 0
+
+l UDisabled = 212
+l VDisabled = 0
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+
+
+
+[Button10] // objectives		
+
+l ID =10
+
+l XLocation = 554
+l YLocation = 353
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30047
+l HelpDesc = 30048
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 22
+
+l UPressed = 186
+l VPressed = 22
+
+l UDisabled = 212
+l VDisabled = 22
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Button11] // PAUSE MENU
+
+l ID =11
+
+l XLocation = 608
+l YLocation = 353
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30049
+l HelpDesc = 30050
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 44
+
+l UPressed = 186
+l VPressed = 44
+l UDisabled = 212
+l VDisabled = 44
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+[Button12] // tac map		
+
+l ID =12
+
+l XLocation = 0
+l YLocation = 314
+l Width = 45
+l Height = 30
+
+l HelpCaption = 30051
+l HelpDesc = 30052
+
+st FileName = "MCUI_Low2"
+ 
+l UNormal = 45 // these are switched
+l VNormal = 84
+
+l UPressed = 0 // these are switched
+l VPressed = 84
+
+l UWidth  = 45
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+[Button13] // info tab
+
+l ID =13
+
+l XLocation = 94
+l YLocation = 314
+l Width = 45
+l Height = 30
+
+l HelpCaption = 30055
+l HelpDesc = 30056
+
+st FileName = "MCUI_Low2"
+ 
+l UNormal = 45 // these are switched
+l VNormal = 144
+
+l UPressed = 0// these are switched
+l VPressed = 144
+
+l UWidth  = 45
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+
+[Button14] // vehicle tab
+
+l ID =14
+
+l XLocation = 47
+l YLocation = 314
+l Width = 45
+l Height = 30
+
+l HelpCaption = 30053
+l HelpDesc = 30054
+
+st FileName = "MCUI_Low2"
+ 
+l UNormal = 45 // these are switched
+l VNormal = 114
+
+l UPressed = 0// these are switched
+l VPressed = 114
+
+l UWidth  = 45
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+[Button15] // minelayer
+
+l ID =15
+
+l XLocation = 608
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30057
+l HelpDesc = 30058
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 132
+
+l UPressed = 186
+l VPressed = 132
+
+l UDisabled = 212
+l VDisabled = 132
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+[Button16] // repair
+
+l ID =16
+
+l XLocation = 608
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30059
+l HelpDesc = 30060
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 110
+
+l UPressed = 186
+l VPressed = 110
+
+l UDisabled = 212
+l VDisabled = 110
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+
+[Button17] // salvage
+
+l ID =17
+
+l XLocation = 608
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 30061
+l HelpDesc = 30062
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 160
+l VNormal = 88
+
+l UPressed = 186
+l VPressed = 88
+
+l UDisabled = 212
+l VDisabled = 88
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+[Button18] // artillery piece suppression fire
+
+l ID =18
+
+l XLocation = 608
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 43240
+l HelpDesc = 43241
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 0
+l VNormal = 174
+
+l UPressed = 26
+l VPressed = 174
+
+l UDisabled = 52
+l VDisabled = 174
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+
+[Button19] // hold position
+
+l ID =19
+
+l XLocation = 581
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+l HelpCaption = 43238
+l HelpDesc = 43239
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 0
+l VNormal = 196
+
+l UPressed = 26
+l VPressed = 196
+
+l UDisabled = 52
+l VDisabled = 196
+
+l UAmbiguous = 78
+l VAmbiguous = 196
+
+l UWidth  = 26
+l VHeight = 22
+
+b texturesRotated = 0
+
+
+
+
+
+
+
+
+
+
+
+
+[VehicleButtons]
+
+
+l ButtonCount = 8
+
+
+
+
+[Vehicle0] // Large AirStrike
+
+l ID = 100
+l XLocation = 5
+l YLocation = 350
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30065
+l HelpDesc = 30066
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 130
+l VNormal = 56
+
+l UPressed = 130
+l VPressed = 56
+
+l UDisabled = 155
+l VDisabled = 56
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+[Vehicle1] // Guard Tower
+
+l ID = 101
+l XLocation = 38
+l YLocation = 350
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30069
+l HelpDesc = 30070
+
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 180
+l VNormal = 56
+
+l UPressed = 180
+l VPressed = 56
+
+l UDisabled = 205
+l VDisabled = 56
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+[Vehicle2] // sensor probe
+
+l ID = 102
+l XLocation = 71
+l YLocation = 350
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30067
+l HelpDesc = 30068
+
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 130
+l VNormal = 146
+
+l UPressed = 130
+l VPressed = 146
+
+l UDisabled = 155
+l VDisabled = 146
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+[Vehicle3] // Repair Vehicle
+
+l ID = 103
+l XLocation = 104
+l YLocation = 350
+l Width = 25 
+l Height = 30
+
+l HelpCaption = 30071
+l HelpDesc = 30072			
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 180
+l VNormal = 86
+
+l UPressed = 180
+l VPressed = 86
+
+l UDisabled = 205
+l VDisabled = 86
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+
+
+[Vehicle4] // scout
+
+l ID = 104
+l XLocation = 5
+l YLocation = 405
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30073
+l HelpDesc = 30074
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 130
+l VNormal = 86
+
+l UPressed = 130
+l VPressed = 86
+
+l UDisabled = 155
+l VDisabled = 86
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+[Vehicle5] // MineLayer
+
+l ID = 105
+l XLocation = 38
+l YLocation = 405
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30075
+l HelpDesc = 30076
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 180
+l VNormal = 116
+
+l UPressed = 180
+l VPressed = 116
+
+l UDisabled = 205
+l VDisabled = 116
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+
+[Vehicle6] // recovery team
+
+l ID = 106
+l XLocation = 71
+l YLocation = 405
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30077
+l HelpDesc = 30078
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 130
+l VNormal = 116
+
+l UPressed = 130
+l VPressed = 116
+
+l UDisabled = 155
+l VDisabled = 116
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+[Vehicle7] // cancel
+
+l ID = 107
+l XLocation = 104
+l YLocation = 405
+l Width = 25
+l Height = 30
+
+l HelpCaption = 30079
+l HelpDesc = 30080
+
+st FileName = "MCUI_Low2"
+
+l UNormal = 180
+l VNormal = 146
+
+l UPressed = 180
+l VPressed = 146
+
+l UDisabled = 205
+l VDisabled = 146
+
+l UWidth  = 25
+l VHeight = 30
+
+b texturesRotated = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Statics]
+
+l staticCount = 27
+
+
+[Static0]  // left hand top border
+
+l XLocation = 207
+l YLocation = 377
+l Width = 160
+l Height = 10
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 160
+l VHeight = 10
+
+
+
+
+[Static1] // compalette left
+
+l XLocation = 542
+l YLocation = 351
+l Width = 10
+l Height = 127
+
+st FileName = "MCUI_Low1"
+
+
+l UNormal = 0
+l VNormal = 10
+
+l UWidth  = 10
+l VHeight = 127
+
+
+
+
+[Static2] // compalette right
+
+l XLocation = 636
+l YLocation = 351
+l Width = 4
+l Height = 127
+
+st FileName = "MCUI_Low1"
+
+
+l UNormal = 10
+l VNormal = 10
+
+l UWidth  = 4
+l VHeight = 127
+
+
+
+[Static3] // right top border
+
+l XLocation = 367
+l YLocation = 377
+l Width = 109
+l Height = 10
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 10
+
+l UWidth  = 109
+l VHeight = 10
+
+
+
+
+[Static4] // left mini bevel
+l XLocation = 142
+l YLocation = 348
+l Width = 11
+l Height = 15
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 123
+l VNormal = 10
+
+l UWidth  = 11
+l VHeight = 15
+
+
+
+[Static5] // right mini bevel
+
+l XLocation = 530
+l YLocation = 351
+l Width = 12
+l Height = 12
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 134
+l VNormal = 10
+
+l UWidth  = 12
+l VHeight = 12
+
+
+
+[Static6] // mapframe right
+
+l XLocation = 132
+l YLocation = 348
+l Width = 10
+l Height = 130
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 146
+l VNormal = 10
+
+l UWidth  = 10
+l VHeight = 130
+
+
+
+
+[Static7] // mapframe left
+
+l XLocation = 0
+l YLocation = 348
+l Width = 2
+l Height = 130
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 156
+l VNormal = 10
+
+l UWidth  = 2
+l VHeight = 130
+
+
+
+
+[Static8] // compalette top
+
+l XLocation = 534
+l YLocation = 341
+l Width = 106
+l Height = 10
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 20
+
+l UWidth  = 106
+l VHeight = 10
+
+
+
+
+[Static9] // compalette bottom
+
+l XLocation = 542
+l YLocation = 478
+l Width = 98
+l Height = 2
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 158
+l VNormal = 243
+
+l UWidth  = 98
+l VHeight = 2
+
+
+
+
+[Static10] // dropteam palette one
+
+l XLocation = 142
+l YLocation = 387
+l Width = 100
+l Height = 93
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 30
+
+l UWidth  = 100
+l VHeight = 93
+
+
+
+
+[Static11] // dropteam palette two
+
+l XLocation = 242
+l YLocation = 387
+l Width = 100
+l Height = 93
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 30
+
+l UWidth  = 100
+l VHeight = 93
+
+
+
+
+
+[Static12] // dropteam palette three
+
+l XLocation = 342
+l YLocation = 387
+l Width = 100
+l Height = 93
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 30
+
+l UWidth  = 100
+l VHeight = 93
+
+
+
+
+
+[Static13] / dropteam palette four
+
+l XLocation = 442
+l YLocation = 387
+l Width = 100
+l Height = 93
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 30
+
+l UWidth  = 100
+l VHeight = 93
+
+
+
+
+
+
+
+[Static14] // left big bevel
+
+l XLocation = 142
+l YLocation = 363
+l Width = 65
+l Height = 24
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 14
+l VNormal = 123
+
+l UWidth  = 65
+l VHeight = 24
+
+
+
+[Static15] // right big bevel
+
+l XLocation = 476
+l YLocation = 363
+l Width = 66
+l Height = 24
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 79
+l VNormal = 123
+
+l UWidth  = 66
+l VHeight = 24
+
+
+
+[Static16] // map area bottom
+
+l XLocation = 0
+l YLocation = 478
+l Width = 142
+l Height = 2
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 147
+
+l UWidth  = 142
+l VHeight = 2
+
+
+
+[Static17] // map area top
+
+l XLocation = 0
+l YLocation = 341
+l Width = 146
+l Height = 7 
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 149	
+
+l UWidth  = 146
+l VHeight = 7
+
+
+
+[Static18]  // COMPASS, second state - should rotate about center point: 64, 64
+
+l XLocation = 525
+l YLocation = 210
+l Width = 0
+l Height = 0 //128 width and height
+
+st FileName = "a_compass_small.tga"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 0
+l VHeight = 0
+
+
+[Static19] // COVER
+
+l XLocation = 608
+l YLocation = 454
+l Width = 26
+l Height = 22
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 0
+l VNormal = 230
+
+l UWidth  = 26
+l VHeight = 22
+
+
+
+[Static20] // force group cover
+
+l XLocation = 144
+l YLocation = 390
+l Width = 47
+l Height = 42
+
+st FileName = "MCUI_Low6"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 47
+l VHeight = 42
+
+
+
+
+[Static21] // thin line over grid block 1
+
+l XLocation = 242
+l YLocation = 387
+l Width = 100
+l Height = 2
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 218
+
+l UWidth  = 100
+l VHeight = 2
+
+
+
+[Static22] // thin line over grid block 2
+l XLocation = 342
+l YLocation = 387
+l Width = 100
+l Height = 2
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 220
+
+l UWidth  = 100
+l VHeight = 2
+ 
+
+
+
+[Static23] // thin line over grid block 3
+
+l XLocation = 442
+l YLocation = 387
+l Width = 100
+l Height = 2
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 222
+
+l UWidth  = 100
+l VHeight = 2
+
+
+
+[Static24] // thin line over grid block 4
+
+l XLocation = 242
+l YLocation = 477
+l Width = 100
+l Height = 3
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 224
+
+l UWidth  = 100
+l VHeight = 3
+
+
+
+
+
+[Static25] // thin line over grid block 5
+
+l XLocation = 342
+l YLocation = 477
+l Width = 100
+l Height = 3
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 227
+
+l UWidth  = 100
+l VHeight = 3
+
+
+
+
+[Static26] // thin line over grid block 6
+
+l XLocation = 442
+l YLocation = 477
+l Width = 100
+l Height = 3
+
+st FileName = "MCUI_low2"
+
+l UNormal = 0
+l VNormal = 230
+l UWidth  = 100
+l VHeight = 3
+
+
+
+
+
+
+
+
+
+
+
+[MechIcons]	
+
+
+
+[MechIcon0]
+
+l TextAreaLeft = 144
+l TextAreaRight = 190
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 144
+l MechIconAreaRight = 168
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 170
+l PilotAreaRight = 189
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 144
+l HealthBarRight = 168
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 169
+l PilotRectRight = 190
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 143
+l SelectionRectRight = 191
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon1]
+
+l TextAreaLeft = 194
+l TextAreaRight = 240
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 194
+l MechIconAreaRight = 218
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 220
+l PilotAreaRight = 239
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 194
+l HealthBarRight = 218
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 219
+l PilotRectRight = 240
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 193
+l SelectionRectRight = 241
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon2]
+
+l TextAreaLeft = 244
+l TextAreaRight = 290
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 244
+l MechIconAreaRight = 268
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 270
+l PilotAreaRight = 289
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 244
+l HealthBarRight = 268
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 269
+l PilotRectRight = 290
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 243
+l SelectionRectRight = 291
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon3]
+
+l TextAreaLeft = 294
+l TextAreaRight = 340
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 294
+l MechIconAreaRight = 318
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 320
+l PilotAreaRight = 339
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 294
+l HealthBarRight = 318
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 319
+l PilotRectRight = 340
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 293
+l SelectionRectRight = 341
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon4]
+
+l TextAreaLeft = 344
+l TextAreaRight = 390
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 344
+l MechIconAreaRight = 368
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 370
+l PilotAreaRight = 389
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 344
+l HealthBarRight = 368
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 369
+l PilotRectRight = 390
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 343
+l SelectionRectRight = 391
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon5]
+
+l TextAreaLeft = 394
+l TextAreaRight = 440
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 394
+l MechIconAreaRight = 418
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 420
+l PilotAreaRight = 439
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 394
+l HealthBarRight = 418
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 419
+l PilotRectRight = 440
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 393
+l SelectionRectRight = 441
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+
+
+[MechIcon6]
+
+l TextAreaLeft = 444
+l TextAreaRight = 490
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 444
+l MechIconAreaRight = 468
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 470
+l PilotAreaRight = 489
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 444
+l HealthBarRight = 468
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+l PilotRectLeft = 469
+l PilotRectRight = 490
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 443
+l SelectionRectRight = 491
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon7]
+
+l TextAreaLeft = 494
+l TextAreaRight = 540
+l TextAreaTop = 390
+l TextAreaBottom = 398
+
+l PilotTextTop = 389
+
+l MechIconAreaLeft = 494
+l MechIconAreaRight = 518
+l MechIconAreaTop = 402
+l MechIconAreaBottom = 431
+
+l PilotAreaLeft = 520
+l PilotAreaRight = 539
+l PilotAreaTop = 403
+l PilotAreaBottom = 430
+
+l HealthBarLeft = 494
+l HealthBarRight = 518
+l HealthBarTop = 399
+l HealthBarBottom = 401
+
+
+l PilotRectLeft = 519
+l PilotRectRight = 540
+l PilotRectTop = 402
+l PilotRectBottom = 431
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 493
+l SelectionRectRight = 541
+l SelectionRectTop = 389
+l SelectionRectBottom = 432
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon8]
+
+l TextAreaLeft = 144
+l TextAreaRight = 190
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 144
+l MechIconAreaRight = 168
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 170
+l PilotAreaRight = 189
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 144
+l HealthBarRight = 168
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 169
+l PilotRectRight = 190
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 143
+l SelectionRectRight = 191
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+[MechIcon9]
+
+l TextAreaLeft = 194
+l TextAreaRight = 240
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 194
+l MechIconAreaRight = 218
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 220
+l PilotAreaRight = 239
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 194
+l HealthBarRight = 218
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 219
+l PilotRectRight = 240
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 193
+l SelectionRectRight = 241
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon10]
+
+l TextAreaLeft = 244
+l TextAreaRight = 290
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 244
+l MechIconAreaRight = 268
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 270
+l PilotAreaRight = 289
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 244
+l HealthBarRight = 268
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 269
+l PilotRectRight = 290
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 243
+l SelectionRectRight = 291
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon11]
+
+l TextAreaLeft = 294
+l TextAreaRight = 340
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 294
+l MechIconAreaRight = 318
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 320
+l PilotAreaRight = 339
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 294
+l HealthBarRight = 318
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 319
+l PilotRectRight = 340
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 293
+l SelectionRectRight = 341
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon12]
+
+l TextAreaLeft = 344
+l TextAreaRight = 390
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 344
+l MechIconAreaRight = 368
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 370
+l PilotAreaRight = 389
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 344
+l HealthBarRight = 368
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 369
+l PilotRectRight = 390
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 343
+l SelectionRectRight = 391
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+
+
+[MechIcon13]
+
+l TextAreaLeft = 394
+l TextAreaRight = 440
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 394
+l MechIconAreaRight = 418
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 420
+l PilotAreaRight = 439
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 394
+l HealthBarRight = 418
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 419
+l PilotRectRight = 440
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 393
+l SelectionRectRight = 441
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+
+[MechIcon14]
+
+l TextAreaLeft = 444
+l TextAreaRight = 490
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 444
+l MechIconAreaRight = 468
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 470
+l PilotAreaRight = 489
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 444
+l HealthBarRight = 468
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 469
+l PilotRectRight = 490
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 443
+l SelectionRectRight = 491
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+[MechIcon15]
+
+l TextAreaLeft = 494
+l TextAreaRight = 540
+l TextAreaTop = 434
+l TextAreaBottom = 442
+
+l PilotTextTop = 433
+
+l MechIconAreaLeft = 494
+l MechIconAreaRight = 518
+l MechIconAreaTop = 446
+l MechIconAreaBottom = 475
+
+l PilotAreaLeft = 520
+l PilotAreaRight = 539
+l PilotAreaTop = 447
+l PilotAreaBottom = 474
+
+l HealthBarLeft = 494
+l HealthBarRight = 518
+l HealthBarTop = 443
+l HealthBarBottom = 445
+
+l PilotRectLeft = 519
+l PilotRectRight = 540
+l PilotRectTop = 446
+l PilotRectBottom = 475
+l PilotRectColor = 0xff005392
+
+l SelectionRectLeft = 493
+l SelectionRectRight = 541
+l SelectionRectTop = 433
+l SelectionRectBottom = 476
+l SelectionRectColor = 0xffffffff
+
+
+
+
+
+
+
+
+
+[InfoWindow]
+
+
+
+l XLocation = 2
+l YLocation = 348
+l Width = 130
+l Height = 130
+
+l SkipBetweenSections = 3
+
+// box that name and health bar go into
+l InfoHeaderBoxLeft = 5
+l InfoHeaderBoxRight = 128
+l InfoHeaderBoxTop = 351
+l InfoHeaderBoxBottom = 381
+l SInfoHeaderBoxColor= 0xff002f55
+
+// box that scrolling stuff goes into
+l ScrollContentBoxLeft = 5
+l ScrollContentBoxRight = 128
+l ScrollContentBoxBarTop = 385
+l ScrollContentBoxBarBottom = 474
+l ScrollContentBoxBarColor= 0xff002f55
+
+// scroll bar rectangle
+l ScrollBarLeft = 114
+l ScrollBarRight = 126
+l ScrollBarTop = 387 
+l ScrollBarBottom = 472
+l ScrollBarColor= 0xff002f55
+
+// name is centered in this rect
+l NameLocationLeft = 6
+l NameLocationRight = 127
+l NameLocationTop = 352
+l NameLocationBottom = 378
+
+// healthbar
+l HealthBarLeft = 11
+l HealthBarRight = 122
+l HealthBarTop = 373
+l HealthBarBottom = 376
+
+// divider lines
+l DividerLeft = 7
+l DividerRight = 112
+l DividerColor= 0xff002f55
+
+// pilotPicture
+l PilotLeft = 10
+l PilotRight = 29
+l PilotHeight = 28
+
+// pilot name text distance from left top side of pilot picture
+l PilotNameLeft = 35
+
+
+// mechIcon
+l MechIconLeft = 9
+l MechIconRight = 33
+l MechIconHeight = 30
+
+l MechIconBackLeft = 37
+l MechIconBackRight = 61
+l MechIconBackHeight = 30
+
+
+
+
+
+// skill info
+
+[SkillMeter]
+l Left = 53
+l Right = 95
+l Height = 14
+l UnitWidth = 3
+l Skip = 1
+l NumberUnits = 10
+
+
+
+[Skill0] // green
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 84
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+[Skill1] // regular
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 96
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"	
+
+
+
+
+
+[Skill2] // veteran
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 108
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+
+[Skill3] // elite
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 120
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+[Skill4] //ace
+
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 132
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+
+
+[Skill5] //gunnery
+
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 144
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+
+
+[Skill6] // piloting
+
+
+l XLocation = 10
+l Width = 40
+l Height= 12
+
+l UNormal= 90
+l VNormal= 156
+
+l UWidth = 40
+l VHeight = 12
+
+st FileName = "MCUI_Low2"
+
+
+
+
+
+
+[ScrollButton]
+
+l Min = 395
+l Max = 456
+
+l XLocation = 116
+l YLocation = 395
+l Width = 9
+l Height = 9
+
+st FileName = "MCUI_Low1"
+	
+l UNormal = 114
+l VNormal = 38
+
+l UWidth = 9
+l VHeight = 9
+
+
+[InfoButton0] // scroll up
+
+l ID = 1
+l XLocation = 116
+l YLocation = 389
+l Width = 9
+l Height = 5
+
+l HelpCaption = 30063
+l HelpDesc = 30064
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 114
+l VNormal = 33
+
+l UPressed = 114
+l VPressed = 33
+
+l UDisabled = 114
+l VDisabled = 33
+
+l UAmbiguous = 114
+l VAmbiguous = 33
+
+l UWidth  = 9
+l VHeight = 5
+
+b texturesRotated = 0
+
+
+
+
+[InfoButton1] // scroll down
+
+l ID = 2
+l XLocation = 116
+l YLocation = 466
+l Width = 9
+l Height = 5
+
+l HelpCaption = 30063
+l HelpDesc = 30064
+
+st FileName = "MCUI_Low1"
+
+l UNormal = 114
+l VNormal = 47
+
+l UPressed = 114
+l VPressed = 47
+
+l UDisabled = 114
+l VDisabled = 47
+
+l UAmbiguous = 114
+l VAmbiguous = 47
+
+l UWidth  = 9
+l VHeight = 5	
+
+b texturesRotated = 0
+
+
+
+
+
+
+
+
+[Rects]
+
+l rectCount = 3
+
+[Rect0] // this is the size of the tac map
+
+l left = 3
+l right = 132
+l top = 347
+l bottom = 477
+
+
+[Rect1] // goes in command palette window
+
+l left = 552
+l right = 636
+l top = 351
+l bottom = 478
+l color  = 0xff000000
+
+
+
+[Rect2] // this is the black rect behind tac map
+
+l left = 2
+l right = 132
+l top = 348
+l bottom = 478
+l color  = 0xff000000
+
+
+
+
+
+
+
+
+
+[PauseWindow]
+
+l StaticCount = 10
+
+l ButtonCount = 7
+
+
+[PauseButton0] // obj
+l ID = 0
+l XLocation = 504
+l YLocation = 116
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43007
+l HelpDesc = 43014
+
+l TextID= 43000
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+b texturesRotated = 0
+
+st FileName = "MCUI_Universal1"
+
+
+
+
+[PauseButton1] // inmissionsave
+l ID = 1
+l XLocation = 504
+l YLocation = 143
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43008
+l HelpDesc = 43015
+
+l TextID= 43001
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+
+b texturesRotated = 0
+
+st FileName = "MCUI_Universal1"
+
+
+
+[PauseButton2] // inmissionload
+l ID = 2
+l XLocation = 504
+l YLocation = 170
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43009
+l HelpDesc = 43016
+
+l TextID= 43002
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+b texturesRotated = 0
+
+
+st FileName = "MCUI_Universal1"
+
+
+
+[PauseButton3] // options
+l ID = 3
+l XLocation = 504
+l YLocation = 197
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43010
+l HelpDesc = 43017
+
+l TextID= 43003
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+
+b texturesRotated = 0
+
+st FileName = "MCUI_Universal1"
+
+
+
+
+[PauseButton4] // restart mission
+l ID = 4
+l XLocation = 504
+l YLocation = 224
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43011
+l HelpDesc = 43018
+
+l TextID= 43004
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+
+b texturesRotated = 0
+
+
+st FileName = "MCUI_Universal1"
+
+
+
+[PauseButton5] // exit
+l ID = 5
+l XLocation = 504
+l YLocation = 251
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43012
+l HelpDesc = 43019
+
+l TextID= 43005
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+b texturesRotated = 0
+
+
+st FileName = "MCUI_Universal1"
+
+
+
+[PauseButton6] // return to game
+l ID = 6
+l XLocation = 504
+l YLocation = 278
+l Width = 128
+l Height = 22
+
+l HelpCaption = 43013
+l HelpDesc = 43020
+
+l TextID= 43006
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 22
+
+
+l UHighlight = 0
+l VHighlight = 97
+
+l UDisabled = 0
+l VDisabled = 44
+
+l UWidth = 128
+l VHeight = 22
+
+l TextNormal = 0xff005392
+
+l TextPressed = 0xffffffff
+
+l TextDisabled = 0xff7B7B7B
+
+l TextHighlight = 0xff5C96C2
+
+
+b texturesRotated = 0
+
+st FileName = "MCUI_Universal1"
+
+
+
+
+
+
+
+
+
+
+
+
+[PauseStatic0] // upper left hand corner piece
+
+l XLocation = 478
+l YLocation = 86
+l Width = 34
+l Height = 5
+
+st FileName = "MCUI_Universal1"
+
+l UNormal = 0
+l VNormal = 92
+
+l UWidth  = 34
+l VHeight = 5
+
+b texturesRotated = 0
+
+
+
+[PauseStatic1] // uppermost thin horizontal bar
+
+l XLocation = 512
+l YLocation = 86
+l Width = 128
+l Height = 5
+
+st FileName = "MCUI_Universal1"
+
+l UNormal = 0
+l VNormal = 66
+
+l UWidth  = 128
+l VHeight = 5
+
+b texturesRotated = 0
+
+
+
+[PauseStatic2] // lefthand topmost vertical bar
+
+l XLocation = 478
+l YLocation = 91
+l Width = 23
+l Height = 118
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 79
+l VNormal = 10
+
+l UWidth  = 23
+l VHeight = 118
+
+b texturesRotated = 0
+
+
+[PauseStatic3] // top right vert frame
+
+l XLocation = 635
+l YLocation = 91
+l Width = 5
+l Height = 118
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 107
+l VNormal = 10
+
+l UWidth  = 5
+l VHeight = 118
+
+b texturesRotated = 0
+
+
+[PauseStatic4] // left middle vertical frame
+
+l XLocation = 478
+l YLocation = 209
+l Width = 23
+l Height = 116
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 56
+l VNormal = 10
+
+l UWidth  = 23
+l VHeight = 116
+
+b texturesRotated = 0
+
+
+[PauseStatic5] // bottom right vertical frame
+
+l XLocation = 635
+l YLocation = 209
+l Width = 5
+l Height = 95
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 102
+l VNormal = 10
+
+l UWidth  = 5
+l VHeight = 95
+
+b texturesRotated = 0
+
+
+
+[PauseStatic6] // bottom left small piece
+
+l XLocation = 501
+l YLocation = 304
+l Width = 11
+l Height = 21
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 112
+l VNormal = 10
+
+l UWidth  = 11
+l VHeight = 21
+
+b texturesRotated = 0
+ 
+
+
+[PauseStatic7] // bottommost horizontal thick frame
+
+l XLocation = 512
+l YLocation = 304
+l Width = 128
+l Height = 21
+
+st FileName = "MCUI_Universal1"
+
+l UNormal = 0
+l VNormal = 71
+
+l UWidth  = 128
+l VHeight = 21
+
+b texturesRotated = 0
+
+
+[PauseStatic8] // bottommost horizontal thick frame
+
+l XLocation = 512
+l YLocation = 304
+l Width = 128
+l Height = 21
+
+st FileName = "MCUI_Universal1"
+
+l UNormal = 0
+l VNormal = 71
+
+l UWidth  = 128
+l VHeight = 21
+
+b texturesRotated = 0
+
+
+[PauseStatic9] // bottommost horizontal thick frame
+
+l XLocation = 512
+l YLocation = 304
+l Width = 128
+l Height = 21
+
+st FileName = "MCUI_Universal1"
+
+l UNormal = 0
+l VNormal = 71
+
+l UWidth  = 128
+l VHeight = 21
+
+b texturesRotated = 0
+
+
+
+
+
+
+
+[PauseBackRect] // pause menu black background
+
+
+l left = 501
+l top = 91
+l right = 635
+l bottom = 304
+
+l PauseBackRectColor = 0xff000000
+
+//l XLocation = 501
+//l YLocation = 91
+//l Width = 133
+//l Height = 212
+
+
+
+
+
+[PauseText] // pause menu text header goes here
+l left = 501
+l top = 93
+l right = 632
+l bottom = 115
+
+l PauseTextColor = 0xff000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Objectives]
+
+l Objectiveleft = 45
+
+l Objectiveskip = 15  // skip for all obj, including headers to next obj
+
+l SecondObjskip = 25  // skip from top of last primary obj to top of secondary header
+
+l totalright = 475 // rightjustify for each obj's total during mission resul
+
+
+
+l ObjStaticCount = 2
+
+
+
+
+[ObjStatic0] // top objective bar
+
+l XLocation = 0
+l YLocation = 71
+l Width = 14
+l Height = 118
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 0
+l VNormal = 10
+
+l UWidth  = 14
+l VHeight = 118
+
+
+[ObjStatic1] // bottom objective bar
+
+l XLocation = 0
+l YLocation = 189m
+l Width = 14
+l Height = 118
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 14
+l VNormal = 10
+
+l UWidth  = 14
+l VHeight = 118
+
+
+
+
+
+[PrimaryObjHeader] //PRIMARY OBJECTIVES	
+
+l Headerleft = 30
+l Headertop = 87
+
+
+
+[PrimaryObjBox]// Check and Cross go in here, 3 pixel skip
+
+l XLocation = 33
+
+l objBoxSkip = -2 //skip from top of obj to top of box
+
+l Width = 12
+l Height = 12
+
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 95
+
+l UWidth  = 12
+l VHeight = 12
+
+
+[PrimaryObjCheck]// For Objective completion
+
+l XLocation = 34
+
+l objBoxSkip = -1 // skip from top of obj to top of check
+
+l Width = 10
+l Height = 10
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 25
+l VNormal = 96
+
+l UWidth  = 10
+l VHeight = 10
+
+
+[PrimaryObjX] // for objective failed
+
+l XLocation = 34
+
+l objBoxSkip = -1 // skip from top of obj to top of cross
+
+l Width = 10
+l Height = 10
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 13
+l VNormal = 96
+
+l UWidth  = 10
+l VHeight = 10
+
+
+
+
+
+
+
+
+[VideoWindow]
+
+l VideoStaticCount = 4
+
+l left = 507
+l right = 635
+l top = 5
+l bottom = 77
+
+
+
+[VideoStatic0] // frame top
+l XLocation = 507
+l YLocation = 0
+l Width = 128
+l Height = 5
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 128
+l VHeight = 5
+
+
+
+
+[VideoStatic1] // frame bottom
+
+l XLocation = 507
+l YLocation = 77
+l Width = 128
+l Height = 5
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 0
+l VNormal = 5
+
+l UWidth  = 128
+l VHeight = 5
+
+
+
+[VideoStatic2] // frame left
+
+l XLocation = 484
+l YLocation = 0
+l Width = 23
+l Height = 82
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 28
+l VNormal = 10
+
+l UWidth  = 23
+l VHeight = 82
+
+
+[VideoStatic3] // frame right
+
+l XLocation = 635
+l YLocation = 0
+l Width = 5
+l Height = 82
+
+st FileName = "MCUI_Universal3"
+
+l UNormal = 52
+l VNormal = 10 
+
+l UWidth  = 5
+l VHeight = 82
+
+
+[VideoTextBox] // Text gets centered in this box- arialnarrow8 all caps
+
+l left = 507
+l right = 634
+l top = 63
+l bottom = 76
+
+
+
+
+
+
+
+
+
+
+
+
+[MissionTimer] // arialnarrow8
+
+l left = 618   
+l top = 324
+l color = 0xffffffff
+
+
+l TimerStaticCount = 1
+
+[TimerStatic0] // timer graphic
+l XLocation = 624
+l YLocation = 325
+l Width = 16
+l Height = 16
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 107
+
+l UWidth  = 16
+l VHeight = 16
+
+
+
+
+
+
+
+
+
+
+[MissionResults]
+
+
+
+l ResultsStaticCount = 8
+
+
+
+[ResultsStatic0] // top left frame
+l XLocation = 147
+l YLocation = 0
+l Width = 128
+l Height = 8
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 128
+l VHeight = 8
+
+
+
+[ResultsStatic1] // top mid frame 
+l XLocation = 275
+l YLocation = 0
+l Width = 128
+l Height = 8
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 8
+
+l UWidth  = 128
+l VHeight = 8
+
+
+
+[ResultsStatic2] // top right frame
+l XLocation = 403
+l YLocation = 0
+l Width = 86
+l Height = 8
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 16
+
+l UWidth  = 86
+l VHeight = 8
+
+
+
+
+[ResultsStatic3] // left frame
+l XLocation = 147
+l YLocation = 8
+l Width = 11
+l Height = 31
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 86
+l VNormal = 16
+
+l UWidth  = 11
+l VHeight = 31
+
+
+
+[ResultsStatic4] // right frame
+l XLocation = 478
+l YLocation = 8
+l Width = 11
+l Height = 31
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 97
+l VNormal = 16
+
+l UWidth  = 11
+l VHeight = 31
+
+
+
+[ResultsStatic5] // bottom right frame
+l XLocation = 403
+l YLocation = 39
+l Width = 86
+l Height = 23
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 24
+
+l UWidth  = 86
+l VHeight = 23
+
+
+
+
+[ResultsStatic6] // bottom mid frame
+l XLocation = 275
+l YLocation = 39
+l Width = 128
+l Height = 23
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 47
+
+l UWidth  = 128
+l VHeight = 23
+
+
+
+[ResultsStatic7] // bottom left frame
+l XLocation = 147
+l YLocation = 39
+l Width = 128
+l Height = 23
+
+st FileName = "MCUI_Universal2"
+
+l UNormal = 0
+l VNormal = 72
+
+l UWidth  = 128
+l VHeight = 23
+
+
+[ResultsTextBox] // Text gets centered in this box- agencyfb17 all caps
+
+l left = 158
+l right = 478
+l top = 8 
+l bottom = 41
+
+l ResultsTextColor = 0xff5C96C2 // bright blue
+
+
+
+
+
+
+[ChatPlayerNameRect]  
+
+l xlocation = 1
+l ylocation = 1
+l width = 99
+l height = 11
+l color  = // this should be the player's individual color	
+b outline = 0
+
+
+[ChatTextRect]  
+
+l xlocation = 102
+l ylocation = 1
+l width = 374
+l height = 11
+l color  = 0x33000000	
+b outline = 0
+
+// text should be arialnarrow8, white, with a black drop shadow- like objective text
+
+
+
+FitEnd

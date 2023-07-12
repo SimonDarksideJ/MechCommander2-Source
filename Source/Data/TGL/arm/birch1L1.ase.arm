@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="56B9BC805284F63904E86B8ADD6048D0" />
+  <Asset Name="..\birch1L1.ase" Type="Physical" Author="ngauvin" FileSize="6541" ModificationTime="2006-02-01T10:54:36.9043854-08:00" CRC="A6EB9A3D386274B7662952C07F98F25E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Pine&amp;Palm&amp;Birch.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

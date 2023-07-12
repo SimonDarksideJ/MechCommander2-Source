@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="19BC9FAEDEB69EBA00B53CAC78422B42" />
+  <Asset Name="..\jaegermechFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="95772" ModificationTime="2006-02-01T10:55:00.8420386-08:00" CRC="F7D4A8C9BF53D70A7C2C5BAA83ABF783" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

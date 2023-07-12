@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="06FD56C50D5A293DE6E9353F36B334D0" />
+  <Asset Name="..\d_mediumgateL1.ase" Type="Physical" Author="ngauvin" FileSize="380435" ModificationTime="2006-02-01T10:54:47.8107052-08:00" CRC="DF464083AE7294B10D83E5FBD090489D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\D_MediumGate.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\D_LightWallL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

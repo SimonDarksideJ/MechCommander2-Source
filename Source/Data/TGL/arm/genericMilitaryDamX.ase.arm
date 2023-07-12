@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BA75D80428EF749BD29E9855CA181206" />
+  <Asset Name="..\genericMilitaryDamX.ase" Type="Physical" Author="ngauvin" FileSize="22998" ModificationTime="2006-02-01T10:54:54.4513727-08:00" CRC="9BEB48CF142DEE5FB10BAE597CDFD5D2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_GenericMilitaryDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

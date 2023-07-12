@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="048B53E3361AC7D77D419A0A716F98DA" />
+  <Asset Name="..\City6StoryCEnc.ase" Type="Physical" Author="ngauvin" FileSize="15902" ModificationTime="2006-02-01T10:54:42.0294182-08:00" CRC="791EB6BA5FA8315D85FC77AC768CF88C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CityBlock8StoryC.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

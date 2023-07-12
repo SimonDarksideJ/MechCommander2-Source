@@ -1,0 +1,84 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      MechWarrior:  80   Name: Vixen  Callsign: CHOPPER
+//
+//      Creation Date: 5/14/98   By: david abzug
+//
+// -------------------------------------------------------------------------
+
+
+
+[General]
+st Brain = "pbrain"
+st Name =                                                  "Chopper"
+l Rank =                                                    3 
+st Callsign =                                              "CHOPPER"
+ul ID =                                                     80 
+l NameIndex =                                               29 
+l DescIndex =						    42002						42003 
+ul HeadIcon =                                               0 
+l paintScheme =                                             31 
+st pilotAudio =                                            "pilotb"
+st pilotVideo =                                            "PILOT29"
+l PictureIndex = 1
+
+[PersonalityTraits]
+c Professionalism =                                         50 
+c Decorum =                                                 50 
+c Aggressiveness =                                          50 
+c Courage =                                                 50 
+
+[Skills]
+c Piloting =                                               59 
+c Sensors =                                                41 
+c Gunnery =                                                44 
+
+[SpecialtySkills]
+c LightMechSpecialist= 0
+c MediumMechSpecialist= 0
+c LaserSpecialist= 0
+c LightACSpecialist= 0
+c MediumACSpecialist= 0
+c SRMSpecialist= 0
+c SmallArmsSpecialist= 0
+c ReconSpecialist= 0
+c ToughnessSpecialist= 0
+c HevayMechSpecialist= 1
+c PulseLaserSpecialist= 0
+c ERLaserSpecialist= 0
+c LRMSpecialist= 0
+c PPCSpecialist= 0
+c Scout= 0
+c LongJump = 1 
+c AssaultMechSpecialist= 0
+c GaussSpecialist= 0
+c HeavyACSpecialist= 0
+c ShortRangeSpecialist= 0
+c MediumRangeSpecialist= 0
+c LongRangeSpecialist= 0
+c Deadeye= 0
+c SharpShooter = 0
+
+[Awards]
+c CampaignRibbon1 = 0
+c CampaignRibbon1WithHonors = 0
+c CampaignRibbon2 = 0
+c CampaignRibbon2WithHonors = 0
+c CampaignRibbon3 = 0
+c CampaignRibbon3WithHonors = 0
+c PurpleHeart = 0
+c Valor = 0
+c UncommonValor = 0
+
+[Affinities]
+c MechClass =                                               0 
+c MechType =                                                0 
+c WeaponClass =                                             0 
+uc[2] WeaponTypes =                                        0,0
+
+[Status]
+c Wounds =                                                  0 
+
+FITEnd

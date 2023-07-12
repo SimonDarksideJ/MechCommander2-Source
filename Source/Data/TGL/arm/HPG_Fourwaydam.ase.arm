@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4C8A3A02621A156045267C30CBF86AF1" />
+  <Asset Name="..\HPG_Fourwaydam.ase" Type="Physical" Author="ngauvin" FileSize="59439" ModificationTime="2006-02-01T10:54:57.8420194-08:00" CRC="0F4E9BB41B71A68B63C3026745636D69" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_HPG_Office2Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\SpRubble.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1D11F2C64AE95BABB5B122B418A200D3" />
+  <Asset Name="..\Karnov.ase" Type="Physical" Author="ngauvin" FileSize="118804" ModificationTime="2006-02-01T10:55:02.5295494-08:00" CRC="A6A651CC359313FA9E76978497F645EF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Karnov.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Karnov.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\KarnovArm.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

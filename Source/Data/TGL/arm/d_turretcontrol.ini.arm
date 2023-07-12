@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="343D31A26D7C5AF15825668C43BD9059" />
+  <Asset Name="..\d_turretcontrol.ini" Type="Physical" Author="franksav" FileSize="789" ModificationTime="2006-03-03T01:28:21.5236827-08:00" CRC="51B8D4BA7B38344CCBA0DBE13FB3E051" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="D_TurretControl.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="D_TurretControlL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="D_TurretControlL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="D_TurretControlX.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_turretcontrol.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="D_TurretControldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="D_TurretControldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Turret Control" ObjectType="Building" BuildingType="Turret Control" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

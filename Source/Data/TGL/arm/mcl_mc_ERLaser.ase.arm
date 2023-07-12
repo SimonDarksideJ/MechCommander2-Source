@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6C1074F3F4CEE769444721C0098B7026" />
+  <Asset Name="..\mcl_mc_ERLaser.ase" Type="Physical" Author="ngauvin" FileSize="210067" ModificationTime="2006-02-01T10:55:10.9202281-08:00" CRC="3FE4CB7941D8B818B6751B3D48C872F8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ERlaser_128.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

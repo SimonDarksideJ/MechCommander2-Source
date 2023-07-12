@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C64FCCB86C7DB7998DDCC2E7FDD7CD66" />
+  <Asset Name="..\PowerGenerator.ini" Type="Physical" Author="franksav" FileSize="606" ModificationTime="2006-03-03T01:28:39.0704454-08:00" CRC="582B8473638B844DB2157FFF1DA8D358" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="PowerGenerator.ase" />
+        <Relationship Type="Animation" RelatedAsset="powergeneratoranim.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PowerGeneratorDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Power Generator" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

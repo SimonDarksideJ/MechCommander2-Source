@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7D3E25AACAFF0C9F6059F5850F9D7E35" />
+  <Asset Name="..\shootistleftarm.ini" Type="Physical" Author="franksav" FileSize="152" ModificationTime="2006-03-03T01:28:49.7422521-08:00" CRC="9A9BD1E9110091EEE29EE31C3AB604B1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="ShootistLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

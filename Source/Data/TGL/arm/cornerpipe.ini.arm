@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="57CB5AE4D1DA1769D5EDE889C7D3E93A" />
+  <Asset Name="..\cornerpipe.ini" Type="Physical" Author="franksav" FileSize="189" ModificationTime="2006-03-03T01:28:17.9299557-08:00" CRC="64B97C9C12CB816E12A4D29EC2333640" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="cornerPipe.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="cornerpipedam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Corner Pipe" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

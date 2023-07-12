@@ -1,0 +1,125 @@
+//***************************************************************************
+
+module CGuardStartBraine303a : integer;
+// Brain for Guard Force
+
+	const
+
+		#include_ "cconst.abi"
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;		// Meters... Set this to distance Clanner will give up.
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		integer				PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// 
+		setIntegerMemory(MI_MODE, COMBAT_MODE_GUARD);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 450.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 600.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 10.0);  // Set this to 100.0 to limit contacts to limit
+		setIntegerMemory(MC_MODE, COMBAT_MODE_GUARD); // contacts to those in enage radius
+													  // or big threats
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+
+		ChallengeSetting = CHALLENGE_OFF;
+		IdentifyContacts = TRUE;
+		VisualRangeMod = 150;
+
+		getFireRanges(FireRange);
+
+		//******************************
+		// Don't change this stuff.
+		//--------------------------
+		setIntegerMemory(MI_OBJECT, 0);
+
+		moveToPosition[0] = StartPoint[0];
+		moveToPosition[1] = StartPoint[1];
+		moveToPosition[2] = StartPoint[2];
+
+endfunction;
+
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

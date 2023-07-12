@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D2B993FA549988E9124A45C2446115A7" />
+  <Asset Name="..\RazorWireFence.ini" Type="Physical" Author="franksav" FileSize="351" ModificationTime="2006-03-03T01:28:40.4141868-08:00" CRC="633595EC9325E6EF8B982D7233614A1C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Razorwirefence.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="RazorwirefenceL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="RazorwirefenceL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="RazorwirefenceX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="RazorWirefencedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="RazorWirefenceDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Razor Wire" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

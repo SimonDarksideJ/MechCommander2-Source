@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9199939D704AFA7297056F1A0DBD6DD2" />
+  <Asset Name="..\mc2_m01.fit" Type="Physical" Author="franksav" FileSize="92148" ModificationTime="2006-03-06T13:17:12.0498518-08:00" CRC="62B6D12781848BF26C7D459D5E0F1789" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="WetWork" MissionAuthor="Mike Turner and mantis" IsSinglePlayer="No" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="mc2_m01.pak" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior09" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior10" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior11" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior12" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior13" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior14" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior15" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior16" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior17" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior18" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior19" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior20" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior21" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior22" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior23" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior24" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior25" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior26" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior27" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior28" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior29" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior30" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior31" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior32" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior33" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior34" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior35" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior36" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior37" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior38" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior39" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior40" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior41" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior42" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior43" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior44" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior45" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior46" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior47" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior48" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior49" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior50" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior51" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior52" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior53" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior54" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior55" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior56" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior57" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior58" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior59" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior60" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior61" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior62" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior63" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior64" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior65" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior66" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior67" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior68" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior69" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior70" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior71" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior72" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior73" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior74" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior75" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior76" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior77" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior78" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior79" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior80" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior81" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior82" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior83" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior84" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior85" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior86" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior87" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior88" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior89" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior90" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior91" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior92" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior93" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior94" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior95" />
+        <Relationship Type="warrior" RelatedAsset="mc2_m01_warrior96" />
+        <Relationship Type="ScenarioScript" RelatedAsset="multiplayer.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_TurretGenerator.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LRMTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RPBuilding.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

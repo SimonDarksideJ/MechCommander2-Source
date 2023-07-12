@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D3A1308DF0C19531367DE87468251D3F" />
+  <Asset Name="..\s_face.ini" Type="Physical" Author="franksav" FileSize="311" ModificationTime="2006-03-03T01:28:44.0079138-08:00" CRC="34203FD15484B2C3B0AED41E681568EE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_face.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_faceL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_faceL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_faceX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_facedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_facedamX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

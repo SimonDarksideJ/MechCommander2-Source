@@ -1,0 +1,47 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      MechWarrior:  31   Name: Clan Green  Callsign: CLAN GREEN
+//
+//      Creation Date: 4/7/98   By: Tim Ryan
+//
+// -------------------------------------------------------------------------
+
+
+
+[General]
+st Name =                                                  "Clan Green"
+l Rank =                                                    0 
+st Callsign =                                              "CLAN GREEN"
+ul ID =                                                     31 
+l NameIndex =                                               0 
+l DescIndex =                                              45030
+ul HeadIcon =                                               0 
+l paintScheme =                                             29 
+st pilotAudio =                                            "pilot1b"
+st pilotVideo =                                            "plt1n001"
+st Picture =                                               "pilot00.TGA"
+
+[PersonalityTraits]
+c Professionalism =                                         50 
+c Decorum =                                                 50 
+c Aggressiveness =                                          50 
+c Courage =                                                 50 
+
+[Skills]
+c Piloting =                                                50 
+c Jumping =                                                 50 
+c Sensors =                                                 50 
+c Gunnery =                                                 35 
+
+[Affinities]
+c MechClass =                                               0 
+c MechType =                                                0 
+c WeaponClass =                                             0 
+uc[2] WeaponTypes =                                        0,0
+
+[Status]
+c Wounds =                                                  0 
+
+FITEnd

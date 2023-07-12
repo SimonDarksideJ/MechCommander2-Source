@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0A770C1593CB77C590D8CD72059CD8BC" />
+  <Asset Name="..\shackenc.ini" Type="Physical" Author="franksav" FileSize="386" ModificationTime="2006-03-03T01:28:48.1797621-08:00" CRC="E7D37994AA9DA2EBD92237AE34EF6065" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="ShackEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

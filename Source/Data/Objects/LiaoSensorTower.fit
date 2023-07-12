@@ -1,0 +1,44 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=1
+
+[ObjectType]
+st Name="LiaoSensorTower.fit"
+st AppearanceName="SensorTower"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=35.000000
+l EncyclopediaID = 45416
+
+[BuildingData]
+ul DmgLevel=11
+f ExtentRadius=35.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30217
+l BuildingDescription = 45010
+
+l SetImpassable=1
+l XImpasse=0
+l YImpasse=0
+ul NormalEffectId=0
+ul BlownEffectId=0
+ul DamageEffectId=0
+b CanRefit=FALSE
+b MechBay=FALSE
+f TimeToBurnDamage=5.000000
+f BurnDamagePerTime=1.000000
+f DamageLvlForBurn=15.000000
+f SensorRange=550.000000
+l TeamID=0
+l Tonnage=20
+l BattleRating=20
+l NumMarines=0
+b blockLineOfFire=FALSE
+l LowTemplate=504233984
+l HighTemplate=28
+l PotentialContact=0
+l BasePixelOffsetX=-24
+l BasePixelOffsetY=100
+FITend 

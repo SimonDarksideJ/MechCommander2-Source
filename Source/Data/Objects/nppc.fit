@@ -1,0 +1,37 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=24
+
+[ObjectType]
+st Name=""
+st AppearanceName=""
+l ExplosionObject=0
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BoltProjectileData]
+f ProjectileLength=40.000000
+f BulgeLength=10.000000
+f BulgeWidth=2.000000
+f Velocity=500.000000
+st FiringEffect=""
+st TrailEffectName=""
+l HitEffect=0
+l MissEffect=0
+l FiringSoundFX=10
+b PointLight=TRUE
+f MaxRadius=50.000000
+f OutRadius=250.000000
+ul LightRGB=16776960
+f Intensity=0.0500000
+ul FrontRGB=16739583
+ul MidEdgeRGB=15335658
+ul MiddleRGB=16776960
+ul BackRGB=10460928
+uc EdgeAlpha=200
+uc BoltAlpha=255
+st GosEffectId="ppc_trail"
+f AfterHitTime = .35
+
+FITend 

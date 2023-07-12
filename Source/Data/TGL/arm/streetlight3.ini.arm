@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6156BDB743B45D58AA5410DFD54C04D6" />
+  <Asset Name="..\streetlight3.ini" Type="Physical" Author="franksav" FileSize="194" ModificationTime="2006-03-03T01:28:52.41411-08:00" CRC="686F0373851ABD9E9CF0AA703F25ABB3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="streetlight3.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="streetlightdamaged.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

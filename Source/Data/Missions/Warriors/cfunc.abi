@@ -1,0 +1,1156 @@
+//---------------------------------------------------------------------------
+// MISC functions  3/24
+//---------------------------------------------------------------------------
+
+function challenge (integer targetId);
+
+	code
+
+		if (ChallengeSetting == CHALLENGE_ON) then
+			setChallenger(targetId, CUR_OBJECT_ID);
+		endif;
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function breakChallenge (integer targetId);
+
+	code
+
+		setChallenger(targetId, 0);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+function OrderByDistance(@IntList IDList, integer NumIDs, integer FromID, position FromHere, real ReturnRange) : integer;
+
+	var
+		
+		integer				x;
+		integer				lastclosestX;
+		integer				currentclosestX;
+		real				lastdistance;
+		real				currentdistance;
+		integer				y;
+		IntList				IDorder;
+		RealList			IDdistance;
+		integer				NumInRange;
+
+	code
+
+		for x = 0 to (NumIDs - 1) do
+			if (FromID == 0) then
+				IDdistance[x] = distancetoPosition(IDList[x], FromHere);
+			else
+				IDdistance[x] = distancetoObject(IDList[x], FromID);
+			endif;
+		endfor;
+
+		NumInRange = 0;
+		lastdistance = 0.0;
+		lastclosestX = -1;
+		for y = 0 to (NumIDs - 1) do
+			currentdistance = -1;
+			for x = 0 to (NumIDs - 1) do
+				if ((IDdistance[x] >= lastdistance) AND (x <> lastclosestX)) then
+					if (currentdistance == -1) then
+						currentclosestX = x;
+						currentdistance = IDdistance[x];
+					else
+						if (IDdistance[x] <= currentdistance) then
+							currentclosestX = x;
+							currentdistance = IDdistance[x];
+						endif;
+					endif;
+				endif;
+			endfor;
+			lastclosestX = currentclosestX;
+			lastdistance = currentdistance;
+			IDorder[y] = IDList[lastclosestX];
+			dstring = "IDOrder ";
+			concat(dstring,y);
+			concat(dstring," is ");
+			concat(dstring,IDorder[y]);
+			print(dstring);
+			if (IDdistance[lastclosestX] <= ReturnRange) then
+				NumInRange = Y + 1;
+			endif;
+		endfor;
+
+		for x = 0 to (NumIDs - 1) do
+			IDList[x] = IDorder[x];
+//			print(IDList[x]);
+		endfor;
+
+	return(NumInRange);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function ContactsToIDs(IntList CList, integer numInList, @IntList IDList, integer Process);
+
+	var
+
+		integer		x;
+		integer		y;
+
+	code
+
+		for x = 0 to (numInList - 1) do
+			SelectContact(1, CList[x]);
+			if (Process == PROCESS_OVERWRITE) then // -1
+				IDList[x] = getcontactID;
+			else  // PROCESS_APPEND + OFFSET .. 0 + #
+				y = x + Process;
+				IDList[y] = getcontactID;
+			endif;
+		endfor;	
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function BuildActiveUnitList(@IntList IDList, integer Group) : integer;
+
+	var
+
+		integer		x;
+		integer		y;
+		integer		start;
+		integer		stop;
+
+	code
+
+		if ((Group > 499) AND (Group < 503)) then
+			Switch (Group)
+				case PLAYER_FORCE :
+					start = 512;
+					stop = 543; // Assuming player force is no larger than 32
+					endcase;
+				case ALLIED_FORCE :
+					start = 1168;
+					stop = 1823;
+					endcase;
+				case CLAN_FORCE :
+					start = 1824;
+					stop = 2643;
+					endcase;
+			endSwitch;
+		else
+			if ((Group > 0) AND (Group < 165)) then // Player
+				start = ((Group - 1) * 4) + 512;
+				stop = start + 3;
+			else
+				if ((Group > 164) AND (Group < 329)) then // Allied
+					start = ((Group - 165) * 4) + 1168;
+					stop = start + 3;				
+				else
+					if ((Group > 328) AND (Group < 493)) then // Clan
+						start = ((Group - 329) * 5) + 1824;
+						stop = start + 4;
+					else
+						dstring = "Bad Group Num";
+						print(dstring);
+						return(0);
+					endif;
+				endif;
+			endif;
+		endif;
+
+		y = -1;
+		for x = start to stop do
+			objstatus = ObjectStatus(x);
+			if ((objstatus <> 1) AND (objstatus <> 2) AND (objstatus <> -1)) then
+				y = y + 1;
+				IDList[y] = x;
+			endif;
+		endfor;
+
+		if (y == -1) then
+			return(0);
+		endif;
+
+		return(y + 1);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function ConcatIntList(@IntList DestList, Integer DestStart, IntList SourceList, integer SourceSize) : integer;
+
+	var
+
+		integer		x;
+		integer		y;
+
+	code
+
+		for x = 0 to (SourceSize - 1) do
+			y = DestStart + x;
+			DestList[y] = SourceList[x];
+		endfor;
+
+		return(DestStart + SourceSize);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function UpdateAttackList : integer;	// returns number on attack list
+
+	var
+
+		integer	x;
+		integer newx;
+		integer	y;
+		integer ObjClass;
+		integer NumOnList;
+		AttList	NewList;
+
+	code
+
+		NumOnList = 0;
+		for y = 0 to (NumHitLists - 1) do
+			x = 0;
+			newx = 0;
+			while (AttackList[y,x] <> 0) do
+				ObjClass = ObjectClass(AttackList[y,x]);
+				if (ObjClass == BUILDING_CLASS) then
+					if (getObjectDamage(AttackList[y,x]) < 100) then  // IF BUILDING ALIVE
+						NewList[y,newx] = AttackList[y,x];
+						newX = newX + 1;
+					endif;
+				else
+					if ((ObjClass == MECH_CLASS) OR (ObjClass == VEHICLE_CLASS) OR (ObjClass == ELEMENTAL_CLASS)) then
+						ObjStatus = ObjectStatus(AttackList[y,x]);
+						if ((objstatus <> 1) AND (objstatus <> 2) AND (objstatus <> -1)) then	// IF UNIT ALIVE/VALID
+							NewList[y,newx] = AttackList[y,x];
+							newX = newX + 1;
+						endif;
+					endif;
+				endif;
+				x = x + 1;
+			endwhile;
+			NewList[y,newx] = 0; // end of array marker
+		endfor;
+
+		for y = 0 to (NumHitLists - 1) do
+			x = 0;
+			while (NewList[y,x] <> 0) do
+				AttackList[y,x] = NewList[y,x];
+				x = x + 1;
+				NumOnList = NumOnList + 1;
+			endwhile;
+			AttackList[y,x] = 0;
+		endfor;
+
+		if (NumOnList > 0) then
+			x = 0;
+			y = InOrderIndex;
+			while (x == 0) do
+				if (AttackList[y,0] <> 0) then
+					InOrderIndex = y;
+					x = 1;
+				endif;
+				y = y + 1;
+				if (y > (NumHitLists - 1)) then
+					x = 1;
+				endif;
+			endwhile;
+		endif;
+
+		return(NumOnList);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+			
+function GetHitListNum(integer ObjID) : integer;
+
+	var
+
+		integer	x;
+		integer	y;
+
+	code
+
+		for y = 0 to (NumHitLists - 1) do
+			x = 0;
+			while (AttackList[y,x] <> 0) do
+				if (AttackList[y,x] == ObjID) then
+					return(y);
+				endif;
+				x = x + 1;
+			endwhile;
+		endfor;
+
+		return(-1);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+			
+function GetAttackListRating(integer ObjID) : real;
+
+	var
+
+		real	ObjRating;
+		integer	HitListNum;
+
+	code
+
+		ObjRating = 0.0;
+		Switch (AttackOrder)
+			case PREFERENCE_ORDER :
+				HitListNum = GetHitListNum(ObjID); // returns -1 if not on any HitList
+				if (HitListNum <> -1) then
+					ObjRating = PreferenceRatings[HitListNum];
+				endif;
+				endcase;
+			case ANY_ORDER :
+				if (GetHitListNum(ObjID) <> -1) then
+					ObjRating = PreferenceRatings[0]; // Base Preference Rating
+				endif;
+				endcase;
+			case IN_ORDER :
+				HitListNum = GetHitListNum(ObjID); // returns -1 if not on any HitList
+				if (HitListNum <> -1) then
+					if (InOrderIndex == HitListNum) then
+						ObjRating = PreferenceRatings[HitListNum];
+					endif;
+				endif;
+				endcase;
+		endSwitch;
+
+		return(ObjRating);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+// COMBAT EVENTS
+//---------------------------------------------------------------------------
+
+function handleTargetOfWeaponFire;
+
+	var
+
+		integer			curTarget;
+		integer			numTriggers;
+		IntList			triggers;
+		integer			curAttacker;
+		integer			attackerId;
+		integer			attackerStatus;
+		integer			targetContactHandle;
+		boolean			validTarget;
+		boolean			looking;
+		integer			i, j;
+				
+	code
+
+		numTriggers = getAlarmTriggers(triggers);
+		for i = 0 to (numTriggers - 1) do
+			curAttacker = triggers[i];
+			//---------------------------------
+			// Has this guy attacked me before?
+			j = 0;
+			looking = TRUE;
+			while ((j < numAttackers) and looking) do
+				looking = (attackerList[j] <> curAttacker);
+				j = j + 1;
+			endwhile;
+			//---------------------------------------------------
+			// Record current time as last time he attacked me...
+			if (looking) then
+				//-------------
+				// New attacker
+				if (numAttackers < 30) then
+					attackerList[numAttackers] = curAttacker;
+					attackerTimeList[numAttackers] = getTime;
+					NumAttackers = NumAttackers + 1;
+				endif;
+			else
+				attackerTimeList[j - 1] = getTime;
+			endif;
+		endfor;
+		
+endfunction;
+
+//---------------------------------------------------------------------------
+/*  Commented out until needed again.
+function handleCollision;
+
+	var
+
+		integer			curTarget;
+		integer			numTriggers;
+		IntList			triggers;
+		integer			curCollider;
+		integer			colliderId;
+		integer			colliderStatus;
+		integer			targetContactHandle;
+		boolean			validTarget;
+				
+	code
+
+		curTarget = getTarget(CUR_OBJECT_ID);
+		if (curTarget == 0) then
+			//--------------------------------------------------
+			// Have no target, so should we attack the attacker?
+			numTriggers = getAlarmTriggers(triggers);
+			curCollider = 0;
+			validTarget = FALSE;
+			repeat
+				colliderId = triggers[curCollider];
+				if (objectClass(colliderId) <> BUILDING_CLASS) then
+					colliderStatus = objectStatus(colliderId);
+					if ((colliderStatus <> OBJECT_STATUS_DISABLED) and (colliderStatus <> OBJECT_STATUS_DESTROYED)) then
+						targetContactHandle = isContact(colliderId, CT_ENEMY + ChallengeSetting, TRUE);
+						if (targetContactHandle > 0) then
+							validTarget = TRUE;
+						endif;
+					endif;
+				endif;
+				curCollider = curCollider + 1;
+			until (validTarget or (curCollider == numTriggers));
+			if (validTarget) then
+				//-----------------------------------------
+				// Have a valid target, so let's take it...
+				challenge(getContactId);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+				MovingToObjective = FALSE;
+				MovingToIdentify = FALSE;
+			endif;
+		endif;
+
+endfunction;
+*/
+//---------------------------------------------------------------------------
+// CLAN DOCTRINE
+//---------------------------------------------------------------------------
+
+function getRangeModifier (integer sensorType, real range) : real;
+
+	code
+		if (sensorType == SENSOR_TAG) then
+			if (range <= FireRange[FIRERANGE_SHORT]) then
+				return(150.0); // 80
+			else
+				if (range <= FireRange[FIRERANGE_MEDIUM]) then
+					return(75.0); // 40
+				else
+					if (range <= FireRange[FIRERANGE_LONG]) then
+						return(25.0); // 20
+					else
+						if (range <= FireRange[FIRERANGE_EXTREME]) then
+							return(0.0); //
+						else
+							return(-25.0);
+						endif;
+					endif;
+				endif;
+			endif;
+		else
+			if (range <= FireRange[FIRERANGE_EXTREME]) then
+				return(10.0);
+			else
+				if (range < (FireRange[FIRERANGE_EXTREME] + FireRange[FIRERANGE_SHORT])) then
+					return(5.0);
+				else
+					return(0.0);
+				endif;
+			endif;
+		endif;
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function getArcModifier (integer sensorType, real angle) : real;
+
+	code
+
+		if (sensorType == SENSOR_TAG) then
+			if ((angle >= -45.0) and (angle <= 45.0)) then
+				//-------------
+				// Front Arc...
+				return(80.0);
+			else
+				if ((angle > -135.0) and (angle < -45.0)) then
+					//------------
+					// Left Arc...
+					return(40.0);
+				else
+					if ((angle > 45.0) and (angle < 135.0)) then
+						//-------------
+						// Right Arc...
+						return(40.0);
+					else
+						//------------
+						// Rear Arc...
+						return(50.0);
+					endif;
+				endif;
+			endif;
+		else
+			if ((angle >= -45.0) and (angle <= 45.0)) then
+				//-------------
+				// Front Arc...
+				return(20.0);
+			else
+				if ((angle > -135.0) and (angle < -45.0)) then
+					//------------
+					// Left Arc...
+					return(10.0);
+				else
+					if ((angle > 45.0) and (angle < 135.0)) then
+						//-------------
+						// Right Arc...
+						return(10.0);
+					else
+						//------------
+						// Rear Arc...
+						return(15.0);
+					endif;
+				endif;
+			endif;
+		endif;
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function attackedMe (integer attackerId, real secs) : boolean;
+
+	var
+
+		integer			i;
+		boolean			looking;
+
+	code
+
+		i = 0;
+//		looking = TRUE;
+		while (i < NumAttackers) do
+			if (attackerList[i] == attackerId) then
+				return(attackerTimeList[i] >= (getTime - secs));
+			endif;
+			i = i + 1;
+		endwhile;
+		return(FALSE);
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function contactActionRating (integer contactHandle) : real;
+
+	var
+
+		integer			contactId;
+		real			actionRating;
+		real			BR;
+		real			myBR;
+		real			ratio;
+		real			range;
+		real			guardDistanceToContact;
+		real			angle;
+		boolean			targeting;
+		boolean			firing;
+		integer			contactStatus;
+		integer			contactTag;
+		real			guardObjectRating;
+		integer			ObjStatus;
+
+	code
+
+		selectContact(1, contactHandle);
+
+		contactId = getContactId;
+		actionRating = 0.0;
+
+		ObjStatus = objectStatus(contactId);
+		if ((ObjStatus == OBJECT_STATUS_DISABLED) OR (ObjStatus == OBJECT_STATUS_DESTROYED) OR (ObjStatus == -1)) then
+			return (actionRating);
+		endif;
+
+		if ((getVisualRange(-1) + VisualRangeMod) < distanceToObject(-1,contactId) ) then	// Not in MY LOS radius
+			return (actionRating);
+		endif;
+		if (distanceToObject(contactId, Me) >= BREAK_CHALLENGE_DISTANCE) then
+			return (actionRating);
+		endif;
+//		dstring = "Getobjectactive returns ";
+//		concat(dstring,getobjectactive(contactID));
+//		print (dstring);
+		if ((NOT AttackInActive) AND (getObjectActive(contactID) == 0)) then
+			return (actionRating);
+		endif;
+			
+		//-------------------------------------------------
+		// Get BattleRatings for myself and this contact...
+		BR = getCurrentBRValue(contactId);
+		myBR = getCurrentBRValue(CUR_OBJECT_ID);
+		
+		if ((PrimaryTarget > 0) and (contactId == PrimaryTarget)) then
+			actionRating = 200.0; // 800.0;
+		else
+			if (contactId == CurrentTarget) then
+				if ((GuardObjective > GUARD_OBJECTIVE_NONE) and (GuardDistance > GuardDisengageRadius)) then
+					actionRating = 5.0; // 10.0;
+				else
+					actionRating = 100.0; // 600.0;
+				endif;
+			endif;
+		endif;
+
+		if (AttackOrders) then
+			if (IgnoreNonHitListTargets) then
+				if (GetHitListNum(contactID) == -1) then
+					actionRating = 0.0;
+					return(actionRating);
+				endif;
+			endif;
+			if ((AttackOrder == IN_ORDER) AND (IgnoreNonInOrderTargets)) then
+				if (GetHitListNum(contactID) <> InOrderIndex) then
+					actionRating = 0.0;
+					return(actionRating);
+				endif;
+			endif;						
+			actionRating = actionRating + (GetAttackListRating(contactID));
+		endif;
+
+		if (getChallenger(contactId) == 0) then
+			if (GuardObjective > GUARD_OBJECTIVE_NONE) then
+				if (GuardObjective == GUARD_OBJECTIVE_POINT) then
+					guardDistanceToContact = distanceToPosition(contactId, GuardPoint);
+				else
+					guardDistanceToContact = distanceToObject(contactId, GuardObjective);
+				endif;
+			
+				if (guardDistanceToContact < GuardEngageRadius) then
+					actionRating = actionRating + 100.0;
+				endif;
+			endif;
+		endif;
+
+		contactStatus = getContactStatus(contactTag);
+		// Sensor Trace
+		if ((contactStatus == CONTACT_STATUS_SENSORS) and (contactTag == 0)) then
+			//------------------------------------------
+			// Now, where is the contact relative to me?
+			getContactRelativePosition(range, angle);
+			actionRating = actionRating + getRangeModifier(SENSOR_TRACE, range) + getArcModifier(SENSOR_TRACE, angle);
+		else
+			// Sensor Tag (Modifies BR)
+			if ((contactStatus <> CONTACT_STATUS_LOS) AND (contactTag <> 0)) then
+				BR = BR / 2;
+			endif;
+			//-------------------------------------------
+			// Look at BR ratio between contact and me...
+			if (myBR <> 0.0) then
+				ratio = BR / myBR;
+			else
+				ratio = BR / 0.00001;
+			endif;
+// Tbis stuff is wrong and silly.  It caps out to a point where all 'Mechs beyond a certain BR seem as tough.
+// The logic also assigns values incorrectly.
+// 			if (ratio < 0.5) then                                            
+// 				actionRating = actionRating + 150.0;                         
+// 			else                                                             
+// 				if (ratio < 0.75) then                                       
+// 					actionRating = actionRating + 175.0;                     
+// 				else                                                         
+// 					if (ratio < 1.0) then                                    
+// 						actionRating = actionRating + 200.0;                 
+// 					else                                                     
+// 						if (ratio >= 1.75) then                              
+// 							actionRating = actionRating + 175.0;             
+// 						else                                                 
+// 							if (ratio >= 1.5) then                           
+// 								actionRating = actionRating + 250.0;         
+// 							else                                             
+// 								if (ratio >= 1.25) then                      
+// 									actionRating = actionRating + 300.0;     
+// 								else                                         
+// 									if (ratio >= 1.0) then                   
+// 										actionRating = actionRating + 250.0; 
+// 									endif;                                   
+// 								endif;                                       
+// 							endif;                                           
+// 						endif;                                               
+// 					endif;                                                   
+// 				endif;                                                       
+// 			endif;                                                           
+// This is my substitution.  It works.  It comes up with the same numbers but without the cap.
+			actionRating = actionRating + (ratio * 100) + 100;
+			
+			//------------------------------------------
+			// Now, where is the contact relative to me?
+			getContactRelativePosition(range, angle);
+			actionRating = actionRating + getRangeModifier(SENSOR_TAG, range) + getArcModifier(SENSOR_TAG, angle);
+
+			//--------------------
+			// Is it firing at me?
+			firing = attackedMe(contactId, 5.0);
+			if (firing) then
+				actionRating = actionRating + (ratio * 200);
+			else
+				//--------------------
+				// Is it targeting me?
+				targeting = (getTarget(contactId) == Me);
+				if (targeting) then
+//					actionRating = actionRating * (ratio + 0.25);  // This will actually lower it with small attackers
+					actionRating = actionRating + (ratio * 100);
+				else
+					if (GuardObjective > GUARD_OBJECTIVE_POINT) then
+						//------------------------------------
+						// Is it firing at my guard objective?
+						firing = (getTarget(contactId) == GuardObjective);
+						if (firing) then
+							guardObjectRating = BR / (GuardObjectCF * 10.0);
+							if (guardObjectRating < (1.1 - GuardPriority / 10.0)) then
+								actionRating = actionRating;
+							else
+								actionRating = actionRating * (guardObjectRating + GuardPriority / 3.0);
+							endif;
+						else
+							//------------------------------------
+							// Is it targeting my guard objective?
+							targeting = FALSE; //targetingGuardObject
+							if (targeting) then
+								guardObjectRating = BR / (GuardObjectCF * 10.0);
+								if (guardObjectRating < (1.1 - GuardPriority / 10.0)) then
+									actionRating = actionRating;
+								else
+									actionRating = actionRating * (guardObjectRating + GuardPriority / 3.0 * 0.8);
+								endif;
+							else
+								actionRating = actionRating - 50;	// Tim added this. He's not firing at me.
+							endif;
+						endif;
+					else
+						actionRating = actionRating - 50;	// Tim added this. He's not firing at me.
+					endif;
+				endif;
+			endif;
+		endif;
+		return(actionRating);
+								
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function selectAction (IntList enemyList, integer numEnemies) : integer;
+
+	var
+
+		integer		i;
+		integer		bestContact;
+		real		bestRating;
+		integer		bestId;
+		real		curRating;
+		IntList		weightList;
+
+	code
+
+		bestContact = -1;
+		bestRating = 0.0;
+		for i = 0 to (numEnemies - 1) do
+			curRating = contactActionRating(enemyList[i]);
+// 			dstring = "This Mech ";          
+// 			concat(dstring,getcontactId);    
+// 			concat(dstring," is rated at "); 
+// 			concat(dstring, curRating);      
+ 			print(curRating);                  
+			if (curRating > bestRating) then
+				bestContact = i;
+				bestRating = curRating;
+				bestId = getcontactid;
+			endif;
+		endfor;
+
+		if ((bestRating < getRealMemory(MI_MIN_ACTION)) OR (bestRating == 0.0)) then
+//			print(bestRating);
+			return(0);
+		else
+//			print(bestContact);
+ 			dstring = "BEST Mech is ";            
+ 			concat(dstring,bestId);               
+// 			concat(dstring," with a rating of "); 
+// 			concat(dstring, bestRating);          
+ 			print(dstring);                       
+			return(enemyList[bestContact]);
+		endif;
+		
+endfunction;
+
+
+//---------------------------------------------------------------------------
+
+function combatModeIdentify;
+
+	var
+
+		IntList		enemyList;
+		IntList		TargetList;
+		integer		NumInRange;
+		integer		numTargets;
+		integer		bestTarget;
+
+	code
+
+		numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS + ChallengeSetting, CS_CV);
+		if (numTargets > 0) then
+			dSTring = "NumTargets = ";
+			concat(dString,numTargets);
+			print(dString);
+			//------------------------------------------
+			// For now, assume it's a worthy opponent :)
+			// Note that the first in the list should be
+			// the most threatening since we had the
+			// contact list sorted by CV...
+			bestTarget = selectAction(enemyList, numTargets);
+			if (bestTarget > 0) then
+				selectContact(1, bestTarget);
+				challenge(getContactId);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+				MovingToIdentify = FALSE;
+			else
+				MovingToIdentify = FALSE;
+				setIntegerMemory(MC_MODE, IssuedCombatMode);  // so return to what we're doing
+			endif;
+		else // Can't see anyone in LOS
+			numTargets = getContacts(enemyList, CT_ENEMY + ChallengeSetting, CS_CV);
+			if (numTargets > 0) then
+				ContactsToIDs(enemyList,numTargets,TargetList,PROCESS_OVERWRITE);
+				NumInRange = OrderByDistance(TargetList, numTargets, Me, NullPoint, IdentifyRadius);
+				if (NumInRange > 0) then
+					if (MovingToIdentify) then
+						if (IdentifyTarget <> TargetList[0]) then
+						  MovingToIdentify = FALSE;
+						endif;	
+					endif;
+					if (NOT MovingToIdentify) then
+						orderMoveToObject(TargetList[0],MoveSpeed);
+						MovingToIdentify = TRUE;
+						IdentifyTarget = TargetList[0];
+					endif;
+				else // Nobody to identify
+					dstring = "Lost sensor contacts.";
+					print(dstring);
+					orderwait(0.0,TRUE);
+					setIntegerMemory(MC_MODE, IssuedCombatMode);  // so return to what we're doing
+					MovingToIdentify = FALSE;
+				endif;
+			else // Nobody to identify
+				dstring = "Lost sensor contacts.";
+				print(dstring);
+				orderwait(0.0,TRUE);
+				setIntegerMemory(MC_MODE, IssuedCombatMode);  // so return to what we're doing
+				MovingToIdentify = FALSE;
+			endif;
+		endif;
+
+
+
+endfunction;
+
+
+//---------------------------------------------------------------------------
+
+function combatModeWait;
+
+	var
+
+		IntList		enemyList;
+		IntList		TargetList;
+		integer		NumInRange;
+		integer		numTargets;
+		integer		bestTarget;
+
+	code
+
+		numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS + ChallengeSetting, CS_CV);
+		if (numTargets > 0) then
+// 			dSTring = "NumTargets = ";  
+// 			concat(dString,numTargets); 
+// 			print(dString);             
+			//------------------------------------------
+			// For now, assume it's a worthy opponent :)
+			// Note that the first in the list should be
+			// the most threatening since we had the
+			// contact list sorted by CV...
+			bestTarget = selectAction(enemyList, numTargets);
+			if (bestTarget > 0) then
+				selectContact(1, bestTarget);
+				challenge(getContactId);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+				MovingToObjective = FALSE;
+			endif;
+		else // Can't see anyone in LOS
+			if (IdentifyContacts) then  // Should I move to any I see only as sensor contacts?
+				numTargets = getContacts(enemyList, CT_ENEMY + ChallengeSetting, CS_CV);
+				if (numTargets > 0) then
+					ContactsToIDs(enemyList,numTargets,TargetList,PROCESS_OVERWRITE);
+					NumInRange = OrderByDistance(TargetList, NumTargets, Me, NullPoint, IdentifyRadius);
+					if (NumInRange > 0) then
+						dstring = "Moving to Identify";
+						print(dstring);
+						orderMoveToObject(TargetList[0], MoveSpeed);
+						setIntegerMemory(MC_MODE, COMBAT_MODE_IDENTIFY);
+						MovingToObjective = FALSE;
+						MovingToIdentify = TRUE;
+						IdentifyTarget = TargetList[0];
+					endif;
+				endif;
+			endif;
+		endif;
+
+
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function combatModeDestroy;
+
+	var
+
+		integer		curTarget;
+		integer		newTarget;
+		integer		issuedTarget;
+		boolean		goodTarget;
+		integer		targetContactHandle;
+		integer		ObjClass;
+		IntList		enemyList;
+		integer		numTargets;
+		integer		bestTarget;
+
+	code
+
+		curTarget = getTarget(CUR_OBJECT_ID);
+		if (curTarget == 0) then
+			if (IssuedCombatMode <> COMBAT_MODE_DESTROY) then
+				//-----------------------------------------------
+				// Target no longer valid, so go back into issued
+				// combat mode...
+				setIntegerMemory(MC_MODE, IssuedCombatMode);
+				orderTest(5);
+				return;
+			endif;
+			
+			//-------------------------------------------------------
+			// We must have a destroy order for our main combat mode,
+			// so make sure the issued target is still legit...			
+			issuedTarget = getIntegerMemory(MI_OBJECT);
+			goodTarget = TRUE;
+
+			if (issuedTarget == 0) then
+				goodTarget = FALSE;
+			endif;
+			
+			if (goodTarget) then
+				switch (objectStatus(issuedTarget))
+					case OBJECT_STATUS_DISABLED:
+						//-------------------------------------------------
+						// Issued Target is disabled, so issued combat mode
+						// is no longer legit.
+						goodTarget = FALSE;
+						endcase;
+					case OBJECT_STATUS_DESTROYED:
+						//--------------------------------------------------
+						// Issued Target is destroyed, so issued combat mode
+						// is no longer legit.
+						goodTarget = FALSE;
+						endcase;
+				endswitch;
+			endif;
+
+			if (not goodTarget) then
+				//---------------------------------------------------
+				// Bad target, so go into idle combat mode for now...
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				return;
+			endif;
+
+			//----------------------------------------------------------
+			// Now we know we have a good target, so let's see if we can
+			// see it. Notice that we'll attack it without checking whether
+			// another pilot has already challenged it...
+			targetContactHandle = isContact(curTarget, CT_ENEMY + CT_LOS/* + ChallengeSetting*/, TRUE);
+			if (targetContactHandle > 0) then
+				challenge(getContactId);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+			endif;
+		else
+			//-------------------------------------------------------
+			// We have a target and it's still alive. Is it disabled?
+			goodTarget = TRUE;
+			ObjClass = ObjectClass(curTarget);
+			if (ObjClass == BUILDING_CLASS) then
+				if (getObjectDamage(curTarget) > 99) then
+					goodTarget = FALSE;
+//					setPotentialContact(curTarget,0);
+					objectChangeSides(curTarget,0);
+				endif;
+			else
+				switch (objectStatus(curTarget))
+					case OBJECT_STATUS_DISABLED:
+						//---------------------------------------------------
+						// Current Target is disabled, so current combat mode
+						// is no longer legit.
+						goodTarget = FALSE;
+						endcase;
+					case OBJECT_STATUS_DESTROYED:
+						//----------------------------------------------------
+						// Current Target is destroyed, so current combat mode
+						// is no longer legit.
+						goodTarget = FALSE;
+						endcase;
+				endswitch;
+			endif;
+			//-----------------------------------------------------------
+			//Target is not good if he's beyond BREAK_CHALLENGE_DISTANCE
+			if ((distanceToObject(curTarget, Me) >= BREAK_CHALLENGE_DISTANCE) AND (NOT HunterKiller)) then
+				dstring = "Breaking Off.";
+				print(dstring);
+				goodTarget = FALSE;
+			endif;
+
+			if (not goodTarget) then
+				//---------------------------------------------------
+				// Bad target, so go into idle combat mode for now...
+				breakChallenge(curTarget);
+				setIntegerMemory(MC_MODE, IssuedCombatMode);
+				if (IssuedCombatMode == COMBAT_MODE_GUARD) then
+					//---------------------------
+					// Return to guard station...
+					if (GuardObjective == GUARD_OBJECTIVE_POINT) then
+						orderMoveTo(StartPoint,MoveSpeed);
+					else
+						orderMoveToObject(GuardObjective,MoveSpeed);						
+					endif;
+					MovingToObjective = TRUE;
+				endif;
+				if (IssuedCombatMode == COMBAT_MODE_WAIT) then
+					//-----------------------
+					// Clear out old order
+					orderWait(0.0,TRUE);
+				endif;
+				return;
+			endif;
+
+			//----------------------------------------------------------------
+			// Assess best target at this point. Perhaps we want to disengage?
+			if (IssuedCombatMode == COMBAT_MODE_GUARD) then
+				if (GuardDistance > GuardDisengageRadius) then
+					//---------------------------
+					// Return to guard station...
+					breakChallenge(getTarget(CUR_OBJECT_ID));
+					setIntegerMemory(MC_MODE, COMBAT_MODE_GUARD);
+					if (GuardObjective == GUARD_OBJECTIVE_POINT) then
+						orderMoveTo(GuardPoint,MoveSpeed);
+					else
+						orderMoveToObject(GuardObjective,MoveSpeed);						
+					endif;
+					MovingToObjective = TRUE;
+					return;
+				endif;
+			endif;
+
+
+			//-------------------------------------------------------------------------
+			// ReEvaluate my target at this point.  Should I be attacking someone else?
+			numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS /*+ ChallengeSetting */ , CS_CV);
+			if (numTargets > 0) then
+				bestTarget = selectAction(enemyList, numTargets);
+				if (bestTarget > 0) then
+					selectContact(1, bestTarget);
+					newTarget = getContactId;
+					if (newTarget <> curTarget) then
+//					if (NOT getContactId == curTarget) then
+						breakChallenge(curTarget);
+						orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+						challenge(getContactId);
+					endif;
+				endif;
+			endif;
+
+		endif;
+
+endfunction;
+
+//---------------------------------------------------------------------------
+
+function combatModeGuard;
+
+	var
+
+		IntList				enemyList;
+		IntList				TargetList;
+		integer				NumInRange;
+		integer				numTargets;
+		integer				bestTarget;
+
+	code
+
+		numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS /*+ CT_GUARD_BREACH*/ + ChallengeSetting, CS_CV);
+		if (numTargets > 0) then
+			//------------------------------------------
+			// For now, assume it's a worthy opponent :)
+			// Note that the first in the list should be
+			// the most threatening since we had the
+			// contact list sorted by CV...
+			bestTarget = selectAction(enemyList, numTargets);
+			if (bestTarget > 0) then
+				orderTest(1);
+				selectContact(1, bestTarget);
+				challenge(getContactId);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+				MovingToObjective = FALSE;
+				return;
+			endif;
+		else // Can't see anyone in LOS
+			if (IdentifyContacts) then  // Should I move to any I see only as sensor contacts?
+				numTargets = getContacts(enemyList, CT_ENEMY + ChallengeSetting, CS_CV);
+				if (numTargets > 0) then
+					ContactsToIDs(enemyList,numTargets,TargetList,PROCESS_OVERWRITE);
+					NumInRange = OrderByDistance(TargetList, NumTargets, Me, NullPoint, IdentifyRadius);
+					if (NumInRange > 0) then
+						dstring = "Moving to Identify";
+						print(dstring);
+						orderMoveToObject(TargetList[0], MoveSpeed);
+						setIntegerMemory(MC_MODE, COMBAT_MODE_IDENTIFY);
+						MovingToObjective = FALSE;
+						MovingToIdentify = TRUE;
+						IdentifyTarget = TargetList[0];
+						return;
+					endif;
+				endif;
+			endif;
+		endif;
+
+		if (NOT MovingToObjective) then
+			//---------------------------
+			// Return to guard station...
+			if (getTarget(CUR_OBJECT_ID) <> 0) then
+				breakChallenge(getTarget(CUR_OBJECT_ID));
+			endif;
+			if (GuardObjective == GUARD_OBJECTIVE_POINT) then
+				if (distanceToPosition(CUR_OBJECT_ID,GuardPoint) > MIN_DISTANCE) then
+					orderMoveTo(GuardPoint,MoveSpeed);
+				endif;
+			else
+				orderMoveToObject(GuardObjective,MoveSpeed);
+			endif;
+			MovingToObjective = TRUE;
+		endif;
+
+endfunction;
+

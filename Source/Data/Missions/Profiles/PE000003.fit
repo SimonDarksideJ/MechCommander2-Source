@@ -1,0 +1,53 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Elemental Profile:  100   'Elemental 3'  Type:  3 
+//
+//      Creation Date: 10/31/97      Creator: Tim Ryan
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "ElementalProfile"
+
+[General]
+ul ID =                                                     100 
+st Name =                                                  "Elemental 3"
+ul ElementalTypeID =                                        1 
+uc Variation =                                              0 
+f CurTonnage =                                              5 //25 
+l CurHealth =						    2 //6 //11
+st icon =                                                  "na.gif"
+
+[Engine]
+uc MaxMoveSpeed =                                           3
+f JumpRange =                                             	40.0  // 30.0
+
+[InventoryInfo]
+uc NumOther =                                               0
+uc NumWeapons =                                             2 
+uc NumAmmo =                                                1 
+
+// Inventory
+
+// Other
+
+// Weapons
+
+[Item:0]
+uc MasterID =                                               156		// Elemental Laser 
+uc FacesForward =                                           1 
+
+[Item:1]
+uc MasterID =                                               135		// Clan Streak SRM/2 
+uc FacesForward =                                           1 
+
+// Ammo
+[Item:2]
+uc MasterID =                                               235		// Clan Streak SRM/2 Pack
+uc Amount =													1
+
+FITEnd
+

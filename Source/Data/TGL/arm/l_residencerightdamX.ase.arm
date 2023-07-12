@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="52532B4237196F0FD0F7572455E189C2" />
+  <Asset Name="..\l_residencerightdamX.ase" Type="Physical" Author="ngauvin" FileSize="17870" ModificationTime="2006-02-01T10:55:06.8733272-08:00" CRC="DA03B91BC3C6487D8C56160887B16A49" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,534 @@
+FITini
+
+// ENTRY BOX FOR MECHS IN LOGISTICS
+
+
+l Yskip = 5 // between the bottom of one 
+// mechboxoutlinerect and the top of the next
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 2
+
+[Rect0] // rect for mech entry
+l Xlocation = 2 
+l Ylocation = 2
+l Width = 205
+l Height = 35
+l Color = -12440041
+b outline = TRUE
+st Animation = "Animation2"
+
+[Rect1] // single pixel divider between icon and names
+l XLocation = 40
+l YLocation = 3
+l Width = 0
+l Height = 33
+l Color = Oxffffffff
+b outline = TRUE
+st Animation = "Animation2"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 3
+
+[Static0] //  weight icon
+l XLocation = 191
+l YLocation = 4
+l Width = 15
+l Height = 15
+l UNormal = 0
+l VNormal = 0
+l UWidth = 15
+l VHeight = 15
+st FileName = "MCL_GN_SmallIcons"
+st Animation = "Animation0"
+
+[Static1] // mech icon- take from MCUI_GN_MechIcons.tga
+l XLocation = 4
+l YLocation = 5
+l Width = 25
+l Height = 30
+st FileName = "MCUI_GN_MechIcons.tga"
+st Animation = "Animation0"
+
+[Static2] // cbills icon
+l XLocation = 191
+l YLocation = 21
+l Width = 15
+l Height = 15
+l UNormal = 0
+l VNormal = 15
+l UWidth = 15
+l VHeight = 15
+st FileName = "MCL_GN_SmallIcons"
+st Animation = "Animation0"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Texts]
+l Textcount = 5
+
+[Text0] // mech name
+l XLocation = 45
+l YLocation = 5
+l Width = 105
+l Height = 18
+l Color = -3774976
+b outline = FALSE
+l Font = 27850  // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation1"
+
+[Text1] // weight  of mech text
+l XLocation = 155
+l YLocation = 8
+l Width = 34
+l Height = 12
+l Color = -3774976
+b outline = FALSE
+l Font = 27851 // ArialNarrow8
+l TextID = 27000
+l Alignment = 1
+st Animation = "Animation1"
+
+[Text2] // Number of mechs available
+// This one won't show up in Mech Purchasing's 
+// Available mechs (right scroll box)
+l XLocation = 28
+l YLocation = 24
+l Width = 12
+l Height = 12
+l Color = -1
+b outline = FALSE
+l Font = 27852 // ArialNarrow8
+l TextID = 27000
+l Alignment = 1
+st Animation = "Animation0"
+
+[Text3] // variant name 
+l XLocation = 45
+l YLocation = 24
+l Width = 105
+l Height = 12
+l Color = -8100285
+b outline = FALSE
+l Font = 27853  // ArialNarrow8
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation3"
+
+[Text4] // cost of mech  
+// this one won't show up in Mech Bay
+l XLocation = 155
+l YLocation = 24
+l Width = 34
+l Height = 12
+l Color = -8100285
+b outline = FALSE
+l Font = 27854  // ArialNarrow8
+l TextID = 27000
+l Alignment = 1
+st Animation = "Animation3"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+these are animations for green
+
+[Animation0] // bright green
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC8E100
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffC8E100
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffC8E100
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC8E100
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffC8E100
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[Animation1] // medium green
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff6E7C00
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6E7C00
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff6E7C00
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff6E7C00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff6E7C00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[Animation2] // dark green
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff313700
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff313700
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff313700
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff313700
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff313700
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[Animation3] // desaturated green
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff676A50
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff676A50
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff676A50
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff676A50
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff676A50
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+these are animations for ORANGE
+
+[OrangeAnimation0] // bright orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8A00
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffFF8A00
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffFF8A00
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[OrangeAnimation1] // medium orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffC66600
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffC66600
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffC66600
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[OrangeAnimation2] // dark orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff43311C
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff43311C
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff43311C
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff43311C
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[OrangeAnimation3] // desaturated orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff846643
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff846643
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff846643
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff846643
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff846643
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+FitEnd

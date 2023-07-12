@@ -1,0 +1,292 @@
+//***************************************************************************
+
+module CPatrolBrain0203a : integer;
+
+	const
+
+		#include_ "cconst.abi"	
+
+		NUM_PATROL_STEPS = 5;	// SET THIS CONSTANT TO DEFINE # STEPS (WAY POINTS).
+
+		NUM_PATROL_CYCLES = 1;	// SET this if PatrolType is cycleing. MAX IS 2,147,483,647.
+		
+		//  Use these to set VAR PatrolType. DON'T CHANGE THEIR VALUES, OK?!!!
+		PATROL_AND_STOP = 0;		// NON-cycling
+		PATROL_CIRCLE = 1;			// cycling
+		PATROL_BACK_N_FORTH = 2;	// cycling
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 0;		// Meters... Set this to distance Clanner will give up.
+
+		CAPTUREDCONVOYA = 10;	// GLOBAL VALUES 10 TO 20 ARE RESERVED FOR CAPTURED VEHICLES
+
+		YES = 1;
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		integer				PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+		static integer		pathStep;
+		static integer		pathCycles;
+
+		static integer						PatrolType;
+		static real[NUM_PATROL_STEPS,2]		PatrolPath;
+		static boolean						PatrolForward;
+		static boolean						InitialForward;
+		boolean								MakeTurn;
+		static boolean 						Stopped;
+		static boolean						InWithdrawMode;
+		static boolean						Captured;
+		static boolean						Rerouted;
+		static position						CenterOfBridge;
+		integer								NumPlayer;
+		IntList								PlayerList;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// This guy is just guarding his area but is under no compunction to return there.
+		setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 200.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 1000.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 0.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+		setIntegerMemory(MI_OBJECT, 0);
+
+		IdentifyContacts = FALSE;		// Set this to TRUE to make them move to identify sensor contacts
+
+		PatrolType = PATROL_AND_STOP;		// use patrol constants to set patrol type
+										// PATROL_AND_STOP	PATROL_CIRCLE	 PATROL_BACK_N_FORTH
+
+		PatrolForward = TRUE;			// Set to False if you want to do it all in reverse
+
+		MoveSpeed = WALK;			// Set to WALK or RUN constant
+
+		PatrolPath[0,0] = 1405; // 2200;		//Have a pair of these lines for every step X,Y
+		PatrolPath[0,1] = 2419; // 2400;	//and increment the first number once for each pair.
+
+		PatrolPath[1,0] = -866;
+		PatrolPath[1,1] = 4035;
+
+		PatrolPath[2,0] = -1744;
+		PatrolPath[2,1] = 4138;
+
+		PatrolPath[3,0] = -4902;
+		PatrolPath[3,1] = 813;
+
+		PatrolPath[4,0] = -6254;
+		PatrolPath[4,1] = -152;
+
+		CenterOfBridge[0] = -1477;
+		CenterOfBridge[1] = 4166;
+		CenterOfBridge[2] = 0.0;
+
+
+		//*********************
+		// Don't change this
+		//--------------------
+		pathCycles = 0;
+		Stopped = FALSE;
+		MovingToObjective = FALSE;
+		InitialForward = PatrolForward;
+
+		if (PatrolForward) then
+			pathStep = 0;
+		else
+			pathStep = NUM_PATROL_STEPS - 1;
+		endif;
+		moveToPosition[0] = PatrolPath[pathStep,0];
+		moveToPosition[1] = PatrolPath[pathStep,1];
+		moveToPosition[2] = 0.0;
+
+		InWithdrawMode = FALSE;
+		Captured = FALSE;
+		Rerouted = FALSE;
+
+endfunction;
+
+//#include_ "miscfunc.abi"
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+
+		//**************************************************************************
+		// Patrol Code - Don't mess with this, but you may append to it.
+		//--------------------------------------------------------------------------
+		// They will remain in Combat_Mode_Wait until they see a contact.
+
+		if (CurrentTarget > 0) then
+			MovingToObjective = FALSE;
+		endif;
+
+		MakeTurn = FALSE;
+		aReal = distanceToPosition(CUR_OBJECT_ID, moveToPosition);
+		if ((NOT Stopped) AND (aReal < MIN_DISTANCE) AND (aReal <> -1)) then
+			MovingtoObjective = FALSE;
+			pathStep = pathStep + 1;
+			MakeTurn = TRUE;
+			if (pathStep > NUM_PATROL_STEPS - 1) then
+				Stopped = TRUE;
+				dString = "Stopped.";
+				print(dString);
+			endif;
+		endif;
+
+
+		if ((PathStep == 2) AND (NOT Captured)) then
+			NumPlayer = BuildActiveUnitList(PlayerList, PLAYER_FORCE);
+			NumPlayer = OrderByDistance(PlayerList, NumPlayer, 0, CenterOfBridge, 30.0);
+//			if ((distanceToPosition(PLAYER_FORCE,CenterOfBridge) < 30) AND	(distanceToPosition(PLAYER_FORCE,moveToPosition) < distanceToPosition(CUR_OBJECT_ID,moveToPosition))) then
+			if ((NumPlayer > 0) AND	(distanceToPosition(PlayerList[0],moveToPosition) < distanceToPosition(CUR_OBJECT_ID,moveToPosition))) then
+			    Stopped = TRUE;
+		    	MovingToObjective = FALSE;
+			    orderwait(0.0,TRUE);
+				StopAtBridgeA = TRUE;
+			else
+				if (Stopped) then
+					Stopped = FALSE;
+					StopAtBridgeA = FALSE;
+	 			endif;
+	   		endif;
+		endif;
+
+		if (StopAtBridgeA) then
+		    Stopped = TRUE;
+	    	MovingToObjective = FALSE;
+		    orderwait(0.0,TRUE);
+		else
+			if ((PathStep < 4) AND (NOT Captured)) then
+				Stopped = FALSE;
+			endif;
+		endif;			
+      	
+/*		if ((NOT Rerouted) AND (PathStep < 2)) then // change this # for other convoy groups
+			if (BridgeOneDestroyed) then
+				PatrolPath[2,0] = 1681;		// if I don't set PatrolPath[1] then they'll go to bridgeone shoreline first
+				PatrolPath[2,1] = -2400;
+
+				PatrolPath[3,0] = 606;
+				PatrolPath[3,1] = -4237;
+
+				PatrolPath[4,0] = -358;
+				PatrolPath[4,1] = -6517;
+
+				dstring = "Vehicle A Rerouted";
+				print(dstring);				
+				Rerouted = TRUE;
+				MakeTurn = TRUE;
+			endif;
+		endif;
+*/
+
+		if ((MakeTurn) AND (NOT Stopped)) then
+			moveToPosition[0] = PatrolPath[pathStep,0];
+			moveToPosition[1] = PatrolPath[pathStep,1];
+			moveToPosition[2] = 0.0;
+		endif;
+
+
+		if ((NOT Captured) AND (NOT Stopped) AND (CurrentTarget == 0) AND (NOT MovingToObjective) AND (NOT MovingToIdentify)) then
+			orderMoveTo(moveToPosition,MoveSpeed);
+			MovingToObjective = TRUE;
+		endif;
+
+		if (NOT Captured) then
+			if ((CLAN_STAR3_dead) OR (distancetoobject(CLAN_STAR3,Me) > 500)) then
+				if (distanceToObject(PLAYER_FORCE,Me) < 100) then
+					Captured = TRUE;
+				    print("Captured");				
+//					setGlobalValue(CAPTUREDCONVOYA + getMemberNumber(Me,0), YES);
+//					TruckCaptured[(getMemberNumber(Me,0))] = TRUE;
+					setGlobalValue(CAPTUREDCONVOYA + (Me - CLAN_VEHICLE0_STAR0), YES);
+					TruckCaptured[(Me - CLAN_VEHICLE0_STAR0)] = TRUE;
+					Stopped = TRUE;
+					MovingToObjective = FALSE;
+					orderWait(0.0,TRUE);
+				endif;
+			endif;
+		endif;
+
+		if ((Stopped) and (NOT InWithdrawMode) and (NOT Captured) and (PathStep > 3)) then
+			orderWithdraw;
+			InWithdrawMode = TRUE;
+		endif;
+			
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

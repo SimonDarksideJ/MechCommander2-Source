@@ -1,0 +1,537 @@
+//*********************************************************************************
+
+module mc2_16 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+			eternal boolean		FirstEast_Start_Trigger;
+			static boolean		FirstEast_Start_Trigger_Check;
+			static real				FirstEastTimerDelay;
+			static boolean		FirstEastTimerCheck;
+
+			eternal boolean		FirstEast2_Start_Trigger;
+			static boolean		FirstEast2_Start_Trigger_Check;
+			static real				FirstEast2TimerDelay;
+      static boolean		FirstEast2TimerCheck;
+			
+			eternal boolean		FirstMain_Start_Trigger;
+			static boolean		FirstMain_Start_Trigger_Check;
+			static real				FirstMainTimerDelay;
+      static boolean		FirstMainTimerCheck;
+			
+			eternal boolean		SecondEast_Start_Trigger;
+			static boolean		SecondEast_Start_Trigger_Check;
+			static real				SecondEastTimerDelay;
+			static boolean		SecondEastTimerCheck;
+
+			eternal boolean		SecondEast2_Start_Trigger;
+			static boolean		SecondEast2_Start_Trigger_Check;
+			static real				SecondEast2TimerDelay;
+			static boolean		SecondEast2TimerCheck;
+
+			eternal boolean		SecondMain_Start_Trigger;
+			static boolean		SecondMain_Start_Trigger_Check;
+			static real				SecondMainTimerDelay;
+      static boolean		SecondMainTimerCheck;
+			
+			eternal boolean		SecondMain2_Start_Trigger;
+			static boolean		SecondMain2_Start_Trigger_Check;
+			static real				SecondMain2TimerDelay;
+      static boolean		SecondMain2TimerCheck;
+			
+			eternal boolean		ThirdEast_Start_Trigger;
+			static boolean		ThirdEast_Start_Trigger_Check;
+			static real				ThirdEastTimerDelay;
+			static boolean		ThirdEastTimerCheck;
+
+			eternal boolean		ThirdEast2_Start_Trigger;
+			static boolean		ThirdEast2_Start_Trigger_Check;
+			static real				ThirdEast2TimerDelay;
+			static boolean		ThirdEast2TimerCheck;
+
+			eternal boolean		ThirdMain_Start_Trigger;
+			static boolean		ThirdMain_Start_Trigger_Check;
+			static real				ThirdMainTimerDelay;
+      static boolean		ThirdMainTimerCheck;
+			
+			eternal boolean		FourthMain_Start_Trigger;
+			static boolean		FourthMain_Start_Trigger_Check;
+			static real				FourthMainTimerDelay;
+      static boolean		FourthMainTimerCheck;
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+
+			
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		FirstEast_Start_Trigger = FALSE; //GT, used to start First East convoy moving
+		FirstEast_Start_Trigger_Check = FALSE; //LT, used to check First East Start Trigger
+		FirstEastTimerCheck = FALSE; //LT, used to check First East Timer
+
+		FirstEast2_Start_Trigger = FALSE; //GT, used to start First East convoy moving
+		FirstEast2_Start_Trigger_Check = FALSE; //LT, used to check First East Start Trigger
+		FirstEast2TimerCheck = FALSE; //LT, used to check First East Timer
+
+		FirstMain_Start_Trigger = FALSE; //GT, used to start First Main convoy moving
+		FirstMain_Start_Trigger_Check = FALSE; //LT, used to check First Main Start Trigger
+		FirstMainTimerCheck = FALSE; //LT, used to check First Main Timer
+		
+		SecondEast_Start_Trigger = FALSE; //GT, used to start Second East convoy moving
+		SecondEast_Start_Trigger_Check = FALSE; //LT, used to check Second East Start Trigger
+		SecondEastTimerCheck = FALSE; //LT, used to check Second East Timer
+
+		SecondEast2_Start_Trigger = FALSE; //GT, used to start Second East convoy moving
+		SecondEast2_Start_Trigger_Check = FALSE; //LT, used to check Second East Start Trigger
+		SecondEast2TimerCheck = FALSE; //LT, used to check Second East Timer
+
+		SecondMain_Start_Trigger = FALSE; //GT, used to start Second Main convoy moving
+		SecondMain_Start_Trigger_Check = FALSE; //LT, used to check Second Main Start Trigger
+		SecondMainTimerCheck = FALSE; //LT, used to check Second Main Timer
+		
+		SecondMain2_Start_Trigger = FALSE; //GT, used to start Second Main convoy moving
+		SecondMain2_Start_Trigger_Check = FALSE; //LT, used to check Second Main Start Trigger
+		SecondMain2TimerCheck = FALSE; //LT, used to check Second Main Timer
+		
+		ThirdEast_Start_Trigger = FALSE; //GT, used to start Third East convoy moving
+		ThirdEast_Start_Trigger_Check = FALSE; //LT, used to check Third East Start Trigger
+		ThirdEastTimerCheck = FALSE; //LT, used to check Third East Timer
+
+		ThirdEast2_Start_Trigger = FALSE; //GT, used to start Third East convoy moving
+		ThirdEast2_Start_Trigger_Check = FALSE; //LT, used to check Third East Start Trigger
+		ThirdEast2TimerCheck = FALSE; //LT, used to check Third East Timer
+
+		ThirdMain_Start_Trigger = FALSE; //GT, used to start Second Main convoy moving
+		ThirdMain_Start_Trigger_Check = FALSE; //LT, used to check Second Main Start Trigger
+		ThirdMainTimerCheck = FALSE; //LT, used to check Second Main Timer
+		
+		FourthMain_Start_Trigger = FALSE; //GT, used to start Second Main convoy moving
+		FourthMain_Start_Trigger_Check = FALSE; //LT, used to check Second Main Start Trigger
+		FourthMainTimerCheck = FALSE; //LT, used to check Second Main Timer
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+// ***********************Mission 16 Stuff*****************************************
+
+			//*******************************************************
+			//*************SOUTHERN CONVOY*******************
+			if (Not FirstMainTimerCheck) then
+//				FirstMainTimerDelay = getTime + 3; //Wait 30 seconds before Convoy Moves
+//				FirstMainTimerDelay = getTime + 30; //Wait 30 seconds before Convoy Moves
+				FirstMainTimerDelay = getTime + 30; //Wait 30 seconds before Convoy Moves
+				FirstMainTimerCheck = True;
+			else
+				if ((getTime > FirstMainTimerDelay) AND (Not FirstMain_Start_Trigger_Check)) then
+					FirstMain_Start_Trigger_Check = True;
+					FirstMain_Start_Trigger = True;
+				endif;
+			endif;
+			
+			//*******************************************************
+			if (Not SecondMainTimerCheck) then
+//				SecondMainTimerDelay = getTime + 55; //Wait 2.6 mins before Convoy Moves
+//				SecondMainTimerDelay = getTime + ; //Wait 2.6 mins before Convoy Moves
+				SecondMainTimerDelay = getTime + 43; //Wait 1 mins before Convoy Moves
+				SecondMainTimerCheck = True;
+			else
+				if ((getTime > SecondMainTimerDelay) AND (Not SecondMain_Start_Trigger_Check)) then
+					SecondMain_Start_Trigger_Check = True;
+					SecondMain_Start_Trigger = True;
+				endif;
+			endif;
+			
+			//*******************************************************
+			if (Not SecondMain2TimerCheck) then
+//				SecondMain2TimerDelay = getTime + 45; //Wait 2.6 mins before Convoy Moves
+//				SecondMain2TimerDelay = getTime + 145; //Wait 2.6 mins before Convoy Moves
+				SecondMain2TimerDelay = getTime + 74; //Wait 2.6 mins before Convoy Moves
+				SecondMain2TimerCheck = True;
+			else
+				if ((getTime > SecondMain2TimerDelay) AND (Not SecondMain2_Start_Trigger_Check)) then
+					SecondMain2_Start_Trigger_Check = True;
+					SecondMain2_Start_Trigger = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not ThirdMainTimerCheck) then
+//				ThirdMainTimerDelay = getTime + 20; //Wait 3.8 mins before Convoy Moves
+//				ThirdMainTimerDelay = getTime + 220; //Wait 3.8 mins before Convoy Moves
+				ThirdMainTimerDelay = getTime + 85; //Wait 3.8 mins before Convoy Moves
+				ThirdMainTimerCheck = True;
+			else
+				if ((getTime > ThirdMainTimerDelay) AND (Not ThirdMain_Start_Trigger_Check)) then
+					ThirdMain_Start_Trigger_Check = True;
+					ThirdMain_Start_Trigger = True;
+				endif;
+			endif;
+			
+			//*******************************************************
+			if (Not FourthMainTimerCheck) then
+//				FourthMainTimerDelay = getTime + 30; //Wait 5.8 mins before Convoy Moves
+//				FourthMainTimerDelay = getTime + 350; //Wait 5.8 mins before Convoy Moves
+				FourthMainTimerDelay = getTime + 110; //Wait 5.8 mins before Convoy Moves
+				FourthMainTimerCheck = True;
+			else
+				if ((getTime > FourthMainTimerDelay) AND (Not FourthMain_Start_Trigger_Check)) then
+					FourthMain_Start_Trigger_Check = True;
+					FourthMain_Start_Trigger = True;
+				endif;
+			endif;
+			
+//*******************************************************
+//*******************EASTERN CONVOY***************************
+			if (Not FirstEastTimerCheck) then
+//				FirstEastTimerDelay = getTime + 70; //Wait 11.8 mins before Convoy Moves
+//				FirstEastTimerDelay = getTime + 710; //Wait 11.8 mins before Convoy Moves
+				FirstEastTimerDelay = getTime + 310; //Wait 11.8 mins before Convoy Moves
+				FirstEastTimerCheck = True;
+			else
+				if ((getTime > FirstEastTimerDelay) AND (Not FirstEast_Start_Trigger_Check)) then
+					FirstEast_Start_Trigger_Check = True;
+					FirstEast_Start_Trigger = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not FirstEast2TimerCheck) then
+//				FirstEast2TimerDelay = getTime + 70; //Wait 11.8 mins before Convoy Moves
+//				FirstEast2TimerDelay = getTime + 710; //Wait 11.8 mins before Convoy Moves
+				FirstEast2TimerDelay = getTime + 320; //Wait 11.8 mins before Convoy Moves
+				FirstEast2TimerCheck = True;
+			else
+				if ((getTime > FirstEast2TimerDelay) AND (Not FirstEast2_Start_Trigger_Check)) then
+					FirstEast2_Start_Trigger_Check = True;
+					FirstEast2_Start_Trigger = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not SecondEastTimerCheck) then
+//				SecondEastTimerDelay = getTime + 80; //Wait 13.8 mins before Convoy Moves
+//				SecondEastTimerDelay = getTime + 830; //Wait 13.8 mins before Convoy Moves
+				SecondEastTimerDelay = getTime + 350; //Wait 13.8 mins before Convoy Moves
+				SecondEastTimerCheck = True;
+			else
+				if ((getTime > SecondEastTimerDelay) AND (Not SecondEast_Start_Trigger_Check)) then
+					SecondEast_Start_Trigger_Check = True;
+					SecondEast_Start_Trigger = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not SecondEast2TimerCheck) then
+//				SecondEast2TimerDelay = getTime + 80; //Wait 13.8 mins before Convoy Moves
+//				SecondEast2TimerDelay = getTime + 830; //Wait 13.8 mins before Convoy Moves
+				SecondEast2TimerDelay = getTime + 360; //Wait 13.8 mins before Convoy Moves
+				SecondEast2TimerCheck = True;
+			else
+				if ((getTime > SecondEast2TimerDelay) AND (Not SecondEast2_Start_Trigger_Check)) then
+					SecondEast2_Start_Trigger_Check = True;
+					SecondEast2_Start_Trigger = True;
+				endif;
+			endif;
+			//*******************************************************
+			if (Not ThirdEastTimerCheck) then
+//				ThirdEastTimerDelay = getTime + 90; //Wait 16 mins before Convoy Moves
+//				ThirdEastTimerDelay = getTime + 960; //Wait 16 mins before Convoy Moves
+				ThirdEastTimerDelay = getTime + 390; //Wait 16 mins before Convoy Moves
+				ThirdEastTimerCheck = True;
+			else
+				if ((getTime > ThirdEastTimerDelay) AND (Not ThirdEast_Start_Trigger_Check)) then
+					ThirdEast_Start_Trigger_Check = True;
+					ThirdEast_Start_Trigger = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not ThirdEast2TimerCheck) then
+//				ThirdEast2TimerDelay = getTime + 90; //Wait 16 mins before Convoy Moves
+//				ThirdEast2TimerDelay = getTime + 960; //Wait 16 mins before Convoy Moves
+				ThirdEast2TimerDelay = getTime + 410; //Wait 16 mins before Convoy Moves
+				ThirdEast2TimerCheck = True;
+			else
+				if ((getTime > ThirdEast2TimerDelay) AND (Not ThirdEast2_Start_Trigger_Check)) then
+					ThirdEast2_Start_Trigger_Check = True;
+					ThirdEast2_Start_Trigger = True;
+				endif;
+			endif;
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (2) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune2);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune2);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+	
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	if (NOT (checkObjectiveStatus(2) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune2);
+			StartMusicTimer = getTime + 31; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F3800E03F2ECAAF15F3A5F19805F6027" />
+  <Asset Name="..\starslayerFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="101987" ModificationTime="2006-02-01T10:55:31.8891123-08:00" CRC="60A28545959A8451EC833D3B1F4C5A91" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

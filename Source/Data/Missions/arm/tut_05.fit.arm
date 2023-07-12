@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3544B9709C1792CCA91B79BD96D52D53" />
+  <Asset Name="..\tut_05.fit" Type="Physical" Author="franksav" FileSize="19537" ModificationTime="2006-03-06T13:45:08.7637077-08:00" CRC="580217E9D9FF925421DC8B2704E74596" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Tutorial Mission 5: Advanced Support" MissionAuthor="Team Dirty" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="tut_05.pak" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="tut_05_warrior08" />
+        <Relationship Type="ScenarioScript" RelatedAsset="tut_05.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Nav1.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

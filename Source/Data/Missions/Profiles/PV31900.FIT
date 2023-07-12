@@ -1,0 +1,92 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  31900   'Savannah Master'  Type:  446 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     31900 
+st Crew =                                                  "PCREWB"
+ul Chassis =                                                446 
+st Name =                                                  "Savannah Master"
+ul VehicleTypeID =                                          446 
+l NameIndex =                                               16 
+l DescIndex =                                               513 
+f CurTonnage =                                              5 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          0 
+l BattleRating =                                            20 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           21 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 1.5 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         3 
+uc CurArmorPoints =                                         3 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         3 
+uc CurArmorPoints =                                         3 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         2 
+uc CurArmorPoints =                                         2 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         3 
+uc CurArmorPoints =                                         3 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               156 
+uc FacesForward =                                           1 
+
+FITEnd

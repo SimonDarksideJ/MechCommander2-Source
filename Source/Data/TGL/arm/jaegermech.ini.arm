@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5B19125D71D1B2F95B260DB3F04D12D0" />
+  <Asset Name="..\jaegermech.ini" Type="Physical" Author="franksav" FileSize="4138" ModificationTime="2006-03-03T01:28:28.7580114-08:00" CRC="1DAA6833C6B9743FC34E50F716460CB3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Jagermech.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="JagermechL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="JagermechL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="JaegermechX.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermech.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="jaegermechFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="jaegermechFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="jaegermechFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="JagerMech" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

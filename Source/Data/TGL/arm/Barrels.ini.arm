@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CD364136D48BD05093D834BA1FCD2E0A" />
+  <Asset Name="..\Barrels.ini" Type="Physical" Author="franksav" FileSize="321" ModificationTime="2006-03-03T01:28:12.9924873-08:00" CRC="0E1CBC63D222E832571EE9304F358058" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Barrels.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="BarrelsL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="BarrelsL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="BarrelsX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="Barrelsdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="BarrelsDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Barrels" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

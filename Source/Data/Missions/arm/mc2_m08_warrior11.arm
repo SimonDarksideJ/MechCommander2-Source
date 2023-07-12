@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2BB0875D77DD87B7E1E1B5AC68B82CF9" />
+  <Asset Name="..\mc2_m08_warrior11" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM207300.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Jaegermech.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Jaegermech.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\pmp_shadow.fit" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

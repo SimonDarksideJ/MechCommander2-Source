@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5E75A48470405A6B0D1A6D4B0DE583A8" />
+  <Asset Name="..\BurningTrashbarrelL1.ase" Type="Physical" Author="ngauvin" FileSize="6520" ModificationTime="2006-02-01T10:54:38.2325189-08:00" CRC="99A064FAEFEC2ABA1CCE776E47C6756D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

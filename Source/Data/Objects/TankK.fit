@@ -1,0 +1,124 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name					="legion"
+st AppearanceName				="legion"
+l ExplosionObject				=700
+l DestroyedObject				=0
+f ExtentRadius				=20.000000
+
+[General]
+//Read by Type
+uc Chassis					=0
+b MineLayer					=FALSE
+b MineSweeper				=FALSE
+l RefitPoints				=0
+f ExplosionRadius				=0.0
+f ExplosionDamage				=0.0
+
+//Read by instance
+l DescIndex					=30301
+f CurTonnage				=100 
+c Status					=0 
+l BattleRating				=500 
+l EncyclopediaID 				=45207
+l IconIndex					=5
+
+[InternalStructure]
+uc Front					=1
+uc Rear					=1
+uc Left					=1
+uc Right					=1
+uc Turret					=1
+
+[VehicleDynamics]
+f MaxAccel						=0.500000
+f MaxVelocity					=12.000000
+l MaxTurretYawRate				=90
+l MaxTurretYaw					=180
+l MaxVehicleYawRate				=720
+
+[Front]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=66 
+uc CurArmorPoints 				=66 
+
+[Left]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=36  
+uc CurArmorPoints 				=36  
+
+[Right]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=36  
+uc CurArmorPoints 				=36  
+
+[Rear]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=21 
+uc CurArmorPoints 				=21 
+
+[Turret]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=36  
+uc CurArmorPoints 				=36  
+
+[InventoryInfo]
+uc NumOther 					=4
+uc NumWeapons 					=6 
+uc NumAmmo 						=4
+
+// Inventory Items -- Other
+
+[Item:0]
+uc MasterID 					=1		//Engine         
+										
+[Item:1]    					                                
+uc MasterID 					=6		//Cockpit       
+										
+[Item:2]    					                                
+uc MasterID 					=35		//LifeSupport   
+										
+[Item:3]
+uc MasterID						=36		//Vehicle Sensor
+
+// Inventory Items -- Weapons                                                   
+										
+[Item:4]                                                                        
+uc MasterID 					=104		//Gauss Rifle
+
+[Item:5]                                                                        
+uc MasterID 					=104		//Gauss Rifle
+										
+[Item:6]                                                                        
+uc MasterID 					=125		//SRM
+										
+[Item:7]    					                                
+uc MasterID 					=125		//SRM
+
+[Item:8]                                                                        
+uc MasterID 					=156		//Laser
+										
+[Item:9]                                                                        
+uc MasterID 					=156		//Laser
+										
+										
+// Inventory Items -- Ammo                                                      
+										
+[Item:10]                                                                        
+uc MasterID 					=204 		//Gauss Ammo
+										
+[Item:11]    					                                
+uc MasterID 					=225		//SRM Ammo
+										
+[Item:12]    					                                
+uc MasterID 					=225		//SRM Ammo
+
+[Item:13]    					                                
+uc MasterID 					=204		//Gauss Ammo
+
+
+FITend 

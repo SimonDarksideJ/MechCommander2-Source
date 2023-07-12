@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A7C63CB43F910C688B841735512D7FCD" />
+  <Asset Name="..\l_palacewing.ini" Type="Physical" Author="franksav" FileSize="636" ModificationTime="2006-03-03T01:28:31.6486179-08:00" CRC="DF0847F6779E084B13494228E9D32A27" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="l_palacewing.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="l_palacewingL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="l_palacewingL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="l_palacewingX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_palaceWingdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="l_palacewingdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Palace Wing" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

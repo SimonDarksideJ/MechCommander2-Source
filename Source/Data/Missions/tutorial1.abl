@@ -1,0 +1,356 @@
+//*********************************************************************************
+
+module tutorial1 : integer;
+
+	const
+        pMissionSelectionScreen     = 1;
+        pBriefingScreen             = 11;
+        pMechBayScreen              = 21;
+        pPilotSelectionScreen       = 31;
+        pPurchaseMechScreen         = 20;
+        pMechLabScreen              = 22;
+        pLoadScreen                 = 41;
+
+	type
+
+	var
+        eternal boolean firstTimeMechBay;
+        eternal boolean firstTimeMissionSelect;
+        eternal boolean firstTimeBriefing;
+        eternal boolean firstTimePilotSelect;
+        eternal boolean firstTimePurchase;
+        eternal boolean firstTimeMechLab;
+        eternal boolean firstTimeLoadScreen;
+
+        eternal integer mechBayStage;
+        eternal integer pilotSelectStage;
+        eternal integer briefingStage;
+  	eternal integer purchaseStage;
+        eternal integer mechLabStage;
+
+        eternal real    startTime;
+        eternal real    currentTime;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+	code
+        firstTimeMechBay = true;
+        firstTimeMissionSelect = true;
+        firstTimeBriefing = true;
+        firstTimePilotSelect = true;
+        firstTimePurchase = true;
+        firstTimeMechLab = true;
+        firstTimeLoadScreen = true;
+
+        mechBayStage = 0;
+        pilotSelectStage = 0;
+        briefingStage = 0;
+        purchaseStage = 0;
+        mechLabStage = 0;
+
+        startTime = 0.0;
+        currentTime = 0.0;
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+    code
+
+        if (logisticsScreenId == pPurchaseMechScreen) then
+            if (firstTimePurchase) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimePurchase = false;
+            endif;
+
+            //WAIT 3 seconds to allow Betty to finish her shtick.
+            if (purchaseStage == 0) then
+                startTime = GetLogisticsTime;
+                purchaseStage = purchaseStage + 1;
+            endif;
+
+            if (purchaseStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    purchaseStage = purchaseStage + 1;
+                endif;
+            endif;
+
+            if (purchaseStage == 2) then
+                playWave("tut_5a",-1);
+                purchaseStage = purchaseStage + 1;
+            endif;
+
+        endif;
+
+        if (logisticsScreenId == pMechLabScreen) then
+            if (firstTimeMechLab) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimeMechLab = false;
+            endif;
+
+            //WAIT 3 seconds to allow Betty to finish her shtick.
+            if (mechLabStage == 0) then
+                startTime = GetLogisticsTime;
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (mechLabStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    mechLabStage = mechLabStage + 1;
+                endif;
+            endif;
+
+            if (mechLabStage == 2) then
+                playWave("tut_5b",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechLabStage == 3)) then
+            //    logisticsAnimationCallout(22,false,1.0,5);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechLabStage == 4)) then
+                playWave("tut_5c",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechLabStage == 5)) then
+            //    logisticsAnimationCallout(21,false,1.0,5);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechLabStage == 6)) then
+                playWave("tut_5d",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+        endif;
+
+        if (logisticsScreenId == pMechBayScreen) then
+            //--------------------------------------------------
+            //VoiceOver Reset Code for PilotScreen
+            // If we left the Pilot Select Screen before tutorial was done
+            // REWIND to last voiceover we did not FINISH hearing.
+
+            //Check for Voiceover tut_2fb
+            if (pilotSelectStage == 3) then
+                pilotSelectStage = pilotSelectStage - 1;
+            endif;
+
+            //Check for Voiceover tut_2fa
+            if (pilotSelectStage == 7) then
+                pilotSelectStage = pilotSelectStage - 1;
+            endif;
+            //--------------------------------------------------
+
+            if (firstTimeMechBay) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+
+                playWave("tut_2b",-1);
+                firstTimeMechBay = false;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechBayStage == 0)) then
+            //    logisticsAnimationCallout(5,false,1.0,5);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechBayStage == 1)) then
+                playWave("tut_2c",-1);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechBayStage == 2)) then
+            //    logisticsAnimationCallout(23,false,1.0,5);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechBayStage == 3)) then
+            //    logisticsAnimationCallout(17,false,1.0,5);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (not logisticsInCallout AND (mechBayStage == 4)) then
+                startTime = GetLogisticsTime;
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (mechBayStage == 5) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 5000) then        //5 Seconds
+                    mechBayStage = mechBayStage + 1;
+                endif;
+            endif;
+
+            if (mechBayStage == 6) then
+            //    playWave("tut_2d",-1);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechBayStage == 7)) then
+            //    logisticsAnimationCallout(51,true,1.0,5);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechBayStage == 8)) then
+            //    playWave("tut_2e",-1);
+                mechBayStage = mechBayStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechBayStage == 9)) then
+            //    logisticsAnimationCallout(18,false,1.0,5);
+                mechBayStage = mechBayStage + 1;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pMissionSelectionScreen) then
+            //--------------------------------------------------
+            //VoiceoVer Reset Code for MechBay
+            // If we left the MechBay before tutorial was done
+            // REWIND to last voiceover we did not FINISH hearing.
+
+            //Check for Voiceover tut_2b
+            if (NOT firstTimeMechBay AND (mechBayStage == 0)) then
+                firstTimeMechBay = true;
+            endif;
+
+            //Check for Voiceover tut_2c
+            if (mechBayStage == 2) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+
+            //Check for Voiceover tut_2d
+            if (mechBayStage == 7) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+
+            //Check for Voiceover tut_2e
+            if (mechBayStage == 9) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+            //--------------------------------------------------
+
+            if (firstTimeMissionSelect) then
+                firstTimeMissionSelect = false;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pBriefingScreen) then
+            if (firstTimeBriefing) then
+                playWave("tut_2a",-1);
+                firstTimeBriefing = false;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pPilotSelectionScreen) then
+            //--------------------------------------------------
+            //VoiceoVer Reset Code for MechBay
+            // If we left the MechBay before tutorial was done
+            // REWIND to last voiceover we did not FINISH hearing.
+
+            //Check for Voiceover tut_2b
+            if (NOT firstTimeMechBay AND (mechBayStage == 0)) then
+                firstTimeMechBay = true;
+            endif;
+
+            //Check for Voiceover tut_2c
+            if (mechBayStage == 2) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+
+            //Check for Voiceover tut_2d
+            if (mechBayStage == 7) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+
+            //Check for Voiceover tut_2e
+            if (mechBayStage == 9) then
+                mechBayStage = mechBayStage - 1;
+            endif;
+            //--------------------------------------------------
+
+            if (firstTimePilotSelect) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimePilotSelect = false;
+            endif;
+
+            //WAIT 2 seconds to allow Betty to finish her shtick.
+            if (pilotSelectStage == 0) then
+                startTime = GetLogisticsTime;
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+
+            if (pilotSelectStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    pilotSelectStage = pilotSelectStage + 1;
+                endif;
+            endif;
+
+            if (pilotSelectStage == 2) then
+                playWave("tut_2f",-1);
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (pilotSelectStage == 3)) then
+            //    logisticsAnimationCallout(0,false,1.0,5);
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (pilotSelectStage == 4)) then
+                startTime = GetLogisticsTime;
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+
+            if (pilotSelectStage == 5) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 2000) then                    //2 Seconds
+                    pilotSelectStage = pilotSelectStage + 1;
+                endif;
+            endif;
+
+            if (pilotSelectStage == 6) then
+                //playWave("tut_2fa",-1);
+            //    logisticsAnimationCallout(15,false,1.0,5);
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pPurchaseMechScreen) then
+            if (firstTimePurchase) then
+                firstTimePurchase = false;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pMechLabScreen) then
+            if (firstTimeMechLab) then
+                firstTimeMechLab = false;
+            endif;
+        endif;
+
+        if (logisticsScreenId == pLoadScreen) then
+            if (firstTimeLoadScreen) then
+                firstTimeLoadScreen = false;
+            endif;
+        endif;
+
+        return (0);
+endmodule.
+//******************************************************************
+
+

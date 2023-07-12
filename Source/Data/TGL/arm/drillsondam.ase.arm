@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="22BE71A212D8CC597CF602730BA6E12F" />
+  <Asset Name="..\drillsondam.ase" Type="Physical" Author="ngauvin" FileSize="28212" ModificationTime="2006-02-01T10:54:48.7013359-08:00" CRC="8DEF3AF95287584BCD8A29D4E77452E7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

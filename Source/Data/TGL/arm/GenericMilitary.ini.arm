@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A88F856B2AA6521A972B52217D203536" />
+  <Asset Name="..\GenericMilitary.ini" Type="Physical" Author="franksav" FileSize="591" ModificationTime="2006-03-03T01:28:24.6642876-08:00" CRC="7B11E956B46FBD157E1EC3E1418CCB08" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="genericMilitary.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="genericMilitaryL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="genericMilitaryL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="genericMilitaryX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="genericmilitarydam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="genericMilitaryDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Military" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

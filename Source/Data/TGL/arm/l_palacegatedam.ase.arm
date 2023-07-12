@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DF1E4A93F5A92FDBBC02F4A8C3921340" />
+  <Asset Name="..\l_palacegatedam.ase" Type="Physical" Author="ngauvin" FileSize="26257" ModificationTime="2006-02-01T10:55:05.9201961-08:00" CRC="008F465EB9D350E6E8E62A9546FCEB34" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\L_stone.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

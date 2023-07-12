@@ -1,0 +1,29 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=22
+
+[ObjectType]
+st Name="DavionHeavyGate.fit"
+st AppearanceName="d_Heavygate"
+l ExplosionObject=727
+l DestroyedObject=0
+f ExtentRadius=35.000000
+
+[GateData]
+ul DmgLevel=75
+f LittleExtent=35.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30318
+l BuildingDescription = 45012
+
+ul NormalEffectId=0
+ul BlownEffectId=0
+ul DamageEffectId=0
+l TeamID=-1
+l Tonnage=20
+l BattleRating=20
+b blockLineOfFire=FALSE
+f OpenRadius=300.0f
+FITend 

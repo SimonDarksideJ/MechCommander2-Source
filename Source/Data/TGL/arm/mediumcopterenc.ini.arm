@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="ECC5A91C36211B011E9DA568FE4248AB" />
+  <Asset Name="..\mediumcopterenc.ini" Type="Physical" Author="franksav" FileSize="152" ModificationTime="2006-03-03T01:28:36.320463-08:00" CRC="D95CBF2056CE6336859F2AEAAF38A1AD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mediumcopterenc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

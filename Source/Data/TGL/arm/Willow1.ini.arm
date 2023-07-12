@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="461D35E009923E5A5AFF86F6EEE5E85F" />
+  <Asset Name="..\Willow1.ini" Type="Physical" Author="franksav" FileSize="302" ModificationTime="2006-03-03T01:28:57.1953294-08:00" CRC="1690E8A1E82A61EB77D78B9D7B3E7CB9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="willow1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="willow1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="willow1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="willow1X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Willow" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

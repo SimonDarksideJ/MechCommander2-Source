@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="113662CD9EA070C06C99FBEDD97C8244" />
+  <Asset Name="..\jungletree1X.ase" Type="Physical" Author="ngauvin" FileSize="15659" ModificationTime="2006-02-01T10:55:01.9514207-08:00" CRC="8C3E9DBE92DEE3F19C8D344B0BF05F6C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Jungle&amp;WillowX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

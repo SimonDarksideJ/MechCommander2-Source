@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="721B73FE2D9C287D3C407431D1E3BB27" />
+  <Asset Name="..\circularcontact.ini" Type="Physical" Author="franksav" FileSize="169" ModificationTime="2006-03-03T01:28:16.3830906-08:00" CRC="F56976948BF6F675F14C68690B8F9573" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="CircularContact.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

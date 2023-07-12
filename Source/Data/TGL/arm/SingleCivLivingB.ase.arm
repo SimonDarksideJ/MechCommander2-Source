@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CD2040E387DBCB4A1DF6324F77292C75" />
+  <Asset Name="..\SingleCivLivingB.ase" Type="Physical" Author="ngauvin" FileSize="71803" ModificationTime="2006-02-01T10:55:30.2328517-08:00" CRC="56EA0C8A7D62CE63C0F5C578B9BEBC90" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_SingleCivLivingAB.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_SingleCivLivingAB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

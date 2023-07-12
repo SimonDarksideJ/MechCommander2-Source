@@ -1,0 +1,34 @@
+FITini
+
+[Cameras]
+f ProjectionAngle 	= 35.0
+f PositionX			= 0.0
+f PositionY			= 0.0
+f PositionZ			= 0.0
+b Ready				= True
+uc LightRed			= 0xff
+uc LightGreen		= 0xff
+uc LightBlue		= 0xff
+uc AmbientBlue		= 0x1f
+uc AmbientRed		= 0x1f
+uc AmbientGreen		= 0x1f
+uc SeenBlue			= 0xff
+uc SeenRed			= 0x00
+uc SeenGreen		= 0x00
+uc BaseBlue			= 0x2f
+uc BaseRed			= 0x2f
+uc BaseGreen		= 0x2f
+f LightDirPitch		= 22.5
+f LightDirYaw		= -61.25
+f NewScale			= 0.8
+f StartRotation		= 180.0
+f[3] LODScales		= 1.0,0.5,0.3
+f ElevationAdjustFactor = 150.0
+f ZoomMax			= 1.0
+f ZoomMin			= 0.1
+f FogStart			= 800.0
+f FogFull			= 250.0
+ul FogColor			= 0xffa0a0a500
+FITend
+
+

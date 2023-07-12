@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="571FF84DFE90C88A2685706570FE326C" />
+  <Asset Name="..\fourwaypipe.ini" Type="Physical" Author="franksav" FileSize="258" ModificationTime="2006-03-03T01:28:24.0549165-08:00" CRC="CD9AD53290860034DB3B474433775D1E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="fourwaypipe.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="FourwayPipeX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="fourwaypipedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="FourwayPipeDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Four-Way Pipe" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5F66EEE39350DF2E64554839DDEC7499" />
+  <Asset Name="..\LRMC.ini" Type="Physical" Author="franksav" FileSize="323" ModificationTime="2006-03-03T01:28:33.9611031-08:00" CRC="CA300DBF8FF52D9074AAB4BFEF5D37FD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="LRMC.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LrmcL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LrmcL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LrmcX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="LRMCdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="LRM Carrier" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

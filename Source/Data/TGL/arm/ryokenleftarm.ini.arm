@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="261058E03BECA797FD834159B1356290" />
+  <Asset Name="..\ryokenleftarm.ini" Type="Physical" Author="franksav" FileSize="150" ModificationTime="2006-03-03T01:28:43.195419-08:00" CRC="B7EBCDD98344A40BC6DA256CB7FAB702" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="RyokenLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

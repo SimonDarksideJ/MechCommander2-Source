@@ -1,0 +1,147 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  21000   'LRM Carrier'  Type:  416 
+//
+//      Creation Date: 5/18/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     21000 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                416 
+st Name =                                                  "LRM Carrier"
+ul VehicleTypeID =                                          416 
+l NameIndex =                                               7 
+l DescIndex =                                               506 
+f CurTonnage =                                              60 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          100 
+l BattleRating =                                            80 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           15 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 3.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         12 
+uc CurArmorPoints =                                         12 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             7 
+uc NumAmmo =                                                7 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:5]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:6]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:7]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:8]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+[Item:9]
+uc MasterID =                                               120 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:10]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:11]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:12]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:13]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:14]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:15]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+[Item:16]
+uc MasterID =                                               220 
+l Amount =                                                 -1 
+
+FITEnd

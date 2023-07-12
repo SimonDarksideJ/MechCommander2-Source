@@ -1,0 +1,28 @@
+FITini
+
+// This is a sample Bullet Data File
+
+[ObjectClass]
+l ObjectTypeNum = 8
+
+[ObjectType]
+st Name 					= "bullet"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 24				// ID number for this object type
+l Appearance				= 0x06000018
+l Duration					= 2					// Lasts forever = -1 (s)  2 second burst
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+
+[BulletData]
+f Velocity					= 75.0				// m/s
+f BulletsPerSecond			= 5					// number of spheres per second.
+ul maxBullets				= 20				// max number of spheres around.
+ul DmgLevel					= 20				// Damage per Round??
+ul SoundEffectId			= 6					// Id of soundEffect to play on Fire.
+f BulletLength				= 3.0				// Length of Bullet Effect
+f CloseDistance				= 3.0				// Distance from target when bullet goes away.
+ul SmokeObjectId			= -1				// No smoke on a bullet?
+ul BulletHitEffect			= 39
+FITend

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B30481C7975D84C1EB586A946A2043C6" />
+  <Asset Name="..\Junk1.ini" Type="Physical" Author="franksav" FileSize="236" ModificationTime="2006-03-03T01:28:29.5548813-08:00" CRC="1A77B16E3611695D49EEBA17F8FE2EFD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="junk1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="Junk1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="Junk1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="Junk1X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Large Junk" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

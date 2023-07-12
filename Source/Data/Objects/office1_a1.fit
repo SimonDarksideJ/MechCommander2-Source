@@ -1,0 +1,25 @@
+FITini
+
+// This is the Office 1 A1 data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "Ofc1A1"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x02000272
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 35			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 514
+b BlocksLineOfFire 	= TRUE
+ul DmgLevel			= 22
+l LowTemplate		= 0x3c1c0000
+l HighTemplate		= 0x00607078
+			
+FITend

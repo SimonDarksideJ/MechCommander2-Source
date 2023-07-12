@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="554B966A877A82F2BDA3AC26BD53E355" />
+  <Asset Name="..\crashshanty1.ini" Type="Physical" Author="franksav" FileSize="502" ModificationTime="2006-03-03T01:28:18.9143244-08:00" CRC="37E044DEDF3FDD2E9F22B5224B5AF59B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="crashShanty1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="crashShanty1X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="crashShanty1dam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="crashShanty1DamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shanty" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

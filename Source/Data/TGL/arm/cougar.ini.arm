@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="12F4DB603557481905CE4B48A5F89EEA" />
+  <Asset Name="..\cougar.ini" Type="Physical" Author="franksav" FileSize="4126" ModificationTime="2006-03-03T01:28:18.1643292-08:00" CRC="FAE20DF56A5614036500866E28FAE8AA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Cougar.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="CougarL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="CougarL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="CougarX.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougar.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="cougarFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="cougarFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="cougarFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C87DD9F2C1EC833357EBA6D29F0929F1" />
+  <Asset Name="..\d_heavygateX.ase" Type="Physical" Author="ngauvin" FileSize="458166" ModificationTime="2006-02-01T10:54:46.4513215-08:00" CRC="EE54DD0BACC7ACB8B4AEF32F3190CF00" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

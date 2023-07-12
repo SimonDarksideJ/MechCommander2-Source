@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="55938A2E0C13C69D43A8E0E3FBCA5A1E" />
+  <Asset Name="..\l_palacegatedamX.ase" Type="Physical" Author="ngauvin" FileSize="23357" ModificationTime="2006-02-01T10:55:05.8889459-08:00" CRC="A8A7749A6A5E28F4923E831AC9565E35" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

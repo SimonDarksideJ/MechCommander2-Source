@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="48C952D61C2844007C49A5589599C395" />
+  <Asset Name="..\mechpiece_leg1X.ase" Type="Physical" Author="ngauvin" FileSize="19821" ModificationTime="2006-02-01T10:55:11.8889843-08:00" CRC="979EF0C07047840ABF6947F045CE344B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

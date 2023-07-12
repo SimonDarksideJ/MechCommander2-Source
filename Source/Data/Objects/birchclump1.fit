@@ -1,0 +1,19 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=0
+
+[ObjectType]
+st Name="BirchClump1"
+st AppearanceName="treeClump1"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TreeData]
+ul DmgLevel=36
+f ExtentRadius=0.000000
+
+FITend 
+
+

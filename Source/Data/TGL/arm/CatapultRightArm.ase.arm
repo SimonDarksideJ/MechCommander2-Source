@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="937F8FE295E9D00EE84BB03380ED37A5" />
+  <Asset Name="..\CatapultRightArm.ase" Type="Physical" Author="ngauvin" FileSize="17776" ModificationTime="2006-02-01T10:54:40.0919058-08:00" CRC="72D97A33382665B58C1DCCF0C0F3FB45" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\CatapultRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

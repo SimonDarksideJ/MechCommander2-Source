@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0F446AC0F2080D58262E9A0799954F81" />
+  <Asset Name="..\l_mediumPostdam.ase" Type="Physical" Author="ngauvin" FileSize="17526" ModificationTime="2006-02-01T10:55:05.0920658-08:00" CRC="B7E6CE0EB3D78233FCEB1C2BBD70D369" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_L_HeavyWallDAM.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

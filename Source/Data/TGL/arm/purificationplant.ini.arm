@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CE3D20F5F5195BC53BE19B659844A8D3" />
+  <Asset Name="..\purificationplant.ini" Type="Physical" Author="franksav" FileSize="601" ModificationTime="2006-03-03T01:28:39.5391924-08:00" CRC="246C020E4FFC345EE3D4D3340BBA6ACF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="purificationPlant.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="PurificationPlantL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="PurificationPlantL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="PurificationPlantX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="purificationPlantdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PurificationPlantDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Purification Plant" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

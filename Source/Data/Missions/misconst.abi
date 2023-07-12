@@ -1,0 +1,301 @@
+//************************
+//Mission Const Include File 4/8
+//------------------------
+
+		//----------------
+		// Alignments
+		//----------------
+		CLAN	 			= 1;
+		NEUTRAL	 			= -1;
+		INNER_SPHERE 			= 0;
+
+        //------------------
+        // Music
+        //------------------
+        VICTORY_MUSIC                = 8;
+        DEFEAT_MUSIC                 = 9;
+        OBJECTIVE_SUCCESS_MUSIC      = 10;
+        OBJECTIVE_FAIL_MUSIC         = 11;
+
+        //------------------
+        // Sounds
+        //------------------
+		PERIMETER_ALARM_SOUND = 20;
+		GENERAL_ALARM_SOUND = 18;
+		HPG_SOUND = 44;
+
+        //------------------
+        // Betty Messages
+        //------------------
+		BETTY_CANNOT_COMP_OBJ = 3;
+		BETTY_OBJECTIVE_COMPLETE = 4;
+		BETTY_SECONDARY_FAILED = 37;
+		BETTY_THIRTY_LEFT = 7;
+		BETTY_TWO_MIN_LEFT = 8;
+		BETTY_ARTILLERY_AVAILABLE = 22;
+		BETTY_SENSOR_PROBE_AVAILABLE = 23;
+
+		//-------------------
+		// Balance Data
+		//-------------------
+		CRATE_RECYCLE_TIME = 120;  //90 //60
+		MAX_STRIKES = 5;
+		STRIKE_TYPE_LIMIT = 3;  // exclusive
+
+        //------------------
+        // Text String Index
+        //------------------
+		NATURAL_GAS_PUMP = 628;
+		GARRISON_BUILDING = 629;
+		PRISON_BARN = 630;
+		PRIMARY_TURRET_POWER = 631;
+		SECONDARY_TURRET_POWER = 632;
+		BASE_HQ = 633;
+		CAMP_HQ = 634;
+		BASE_MAIN_POWER = 635;
+		ORBITAL_GUN_CONTROL = 636;
+		SOUTHERN_TURRET_GENERATOR = 637;
+		NORTHERN_TURRET_GENERATOR = 638;
+		COMMAND_BUILDING = 648;
+		LOCAL_TURRET_POWER = 857;
+		SENSOR_POWER = 858;
+		EASTERN_TURRET_POWER = 859;
+		WESTERN_TURRET_POWER = 860;
+		PERIMETER_TURRET_POWER = 872;
+		WEST_TURRET_CONTROL = 874;
+		EAST_TURRET_CONTROL = 875;
+		GATE_TURRET_CONTROL = 876;
+
+		//----------------
+		// Objective Type
+		//----------------
+		INVISIBLEGOAL			= -1;
+		PRIMARYGOAL				= 0;
+		SECONDARYGOAL			= 1;
+		OTHERGOAL				= 2;
+		INVALIDGOAL				= 9999;
+
+		//------------------
+		// Objective Status
+		//------------------
+		INCOMPLETE				= 0;
+ 		SUCCESS					= 1;
+		FAILED					= 2;
+		INVALIDSTATUS			= 9999;
+
+		//------------------
+		// Scenario Results
+		//------------------
+		PLAYING					= 0;
+		PLAYER_LOST_BIG			= 1;
+		PLAYER_LOST_SMALL		= 2;
+		PLAYER_DRAW				= 3;
+		PLAYER_WIN_SMALL		= 4;
+		PLAYER_WIN_BIG			= 5;
+
+
+		OBJECT_STATUS_NORMAL = 0;
+		OBJECT_STATUS_DISABLED = 1;
+		OBJECT_STATUS_DESTROYED = 2;
+		OBJECT_STATUS_STARTING_UP = 3;
+		OBJECT_STATUS_SHUTTING_DOWN = 4;
+		OBJECT_STATUS_SHUTDOWN = 5;
+		OBJECT_STATUS_WITHDRAWN = 6;
+		OBJECT_STATUS_INACTIVE = 7;
+		OBJECT_STATUS_NONEXIST = 8;
+
+		SENSOR_TAG = 0;
+		SENSOR_TRACE = 1;
+
+		BUILDING_CLASS = 15;
+		MECH_CLASS = 2;
+		VEHICLE_CLASS = 3;
+		ELEMENTAL_CLASS = 4;
+
+		BAY_FREE = 0;
+		BAY_START_REPAIRS = 1;
+		BAY_REPAIRING = 2;
+		BAY_REPAIR_COMPLETE = 3;
+		BAY_DESTROYED = -1;
+
+        //------------------
+        // Scenario Timers
+        //------------------
+        SCENARIO_TIMER_1             = 7;
+        SCENARIO_TIMER_2             = 8;
+        SCENARIO_TIMER_3             = 9;
+        SCENARIO_TIMER_4             = 10;
+        SCENARIO_TIMER_5             = 11;
+        SCENARIO_TIMER_6             = 12;
+        SCENARIO_TIMER_7             = 13;
+        EXIT_TIMER                   = 14;
+		PERIMETER_ALARM_TIMER		 = 13;
+
+
+        //------------------
+        // GROUP PARTS
+        //------------------
+        PLAYER_LANCE0                = 1;
+        PLAYER_LANCE1                = 2;
+        PLAYER_LANCE2                = 3;
+        PLAYER_LANCE3                = 4;
+        PLAYER_LANCE4                = 5;
+        PLAYER_LANCE5                = 6;
+        PLAYER_LANCE6                = 7;
+        PLAYER_LANCE7                = 8;
+        MAX_PLAYER_LANCES		     = 32;
+
+        ALLIED_LANCE0                = 329;
+        ALLIED_LANCE1                = 330;
+        ALLIED_LANCE2                = 331;
+        ALLIED_LANCE3                = 332;
+        ALLIED_LANCE4                = 333;
+        ALLIED_LANCE5                = 334;
+        ALLIED_LANCE6                = 335;
+        ALLIED_LANCE7                = 336;
+        MAX_ALLIED_LANCES		     = 32;
+
+        CLAN_STAR0                   = 165;
+        CLAN_STAR1                   = 166;
+        CLAN_STAR2                   = 167;
+        CLAN_STAR3                   = 168;
+        CLAN_STAR4                   = 169;
+        CLAN_STAR5                   = 170;
+        CLAN_STAR6                   = 171;
+        CLAN_STAR7                   = 172;
+        MAX_CLAN_STARS			     = 32; 
+
+        PLAYER_FORCE                 = 500;
+        ALLIED_FORCE                 = 502;
+        CLAN_FORCE                   = 501;
+
+		MIN_MOVER_PART_ID			= 512;
+		MAX_MOVER_PART_ID			= 4095;
+		MAX_MOVER_GROUPS			= 32;
+		MAX_MOVER_GROUP_COUNT		= 12;
+
+		APC_TYPE					= 402;
+		SALVAGE_RIG_TYPE			= 477;
+		SALVAGE_TRUCK_TYPE			= 476;
+		MINESWEEPER_TYPE			= 505;
+		MINELAYER_TYPE				= 609;
+		ORDNANCE_TRUCK_TYPE			= 475;
+		MOBILE_HQ_TYPE				= 414;
+		MOBILE_ARTILLERY_TYPE		= 403;
+		LIGHT_TRANSPORT_TYPE		= 415;
+		RAVEN_TYPE					= 48;
+		ATLAS_TYPE					= 51;
+
+        //------------------
+        // GENERIC PARTS
+        //------------------
+        PLAYER_VEHICLE0_LANCE0       = 512;
+        PLAYER_VEHICLE1_LANCE0       = 513;
+        PLAYER_VEHICLE2_LANCE0       = 514;
+        PLAYER_VEHICLE3_LANCE0       = 515;
+        PLAYER_VEHICLE0_LANCE1       = 524;
+        PLAYER_VEHICLE1_LANCE1       = 525;
+        PLAYER_VEHICLE2_LANCE1       = 526;
+        PLAYER_VEHICLE3_LANCE1       = 527;
+        PLAYER_VEHICLE0_LANCE2       = 536;
+        PLAYER_VEHICLE1_LANCE2       = 537;
+        PLAYER_VEHICLE2_LANCE2       = 538;
+        PLAYER_VEHICLE3_LANCE2       = 539;
+        PLAYER_VEHICLE0_LANCE3       = 548;
+        PLAYER_VEHICLE1_LANCE3       = 549;
+        PLAYER_VEHICLE2_LANCE3       = 550;
+        PLAYER_VEHICLE3_LANCE3       = 551;
+        PLAYER_VEHICLE0_LANCE4       = 560;
+        PLAYER_VEHICLE1_LANCE4       = 561;
+        PLAYER_VEHICLE2_LANCE4       = 562;
+        PLAYER_VEHICLE3_LANCE4       = 563;
+        PLAYER_VEHICLE0_LANCE5       = 572;
+        PLAYER_VEHICLE1_LANCE5       = 573;
+        PLAYER_VEHICLE2_LANCE5       = 574;
+        PLAYER_VEHICLE3_LANCE5       = 575;
+        PLAYER_VEHICLE0_LANCE6       = 584;
+        PLAYER_VEHICLE1_LANCE6       = 585;
+        PLAYER_VEHICLE2_LANCE6       = 586;
+        PLAYER_VEHICLE3_LANCE6       = 587;
+        PLAYER_VEHICLE0_LANCE7       = 596;
+        PLAYER_VEHICLE1_LANCE7       = 597;
+        PLAYER_VEHICLE2_LANCE7       = 598;
+        PLAYER_VEHICLE3_LANCE7       = 599;
+
+        ALLIED_VEHICLE0_LANCE0       = 1280;
+        ALLIED_VEHICLE1_LANCE0       = 1281;
+        ALLIED_VEHICLE2_LANCE0       = 1282;
+        ALLIED_VEHICLE3_LANCE0       = 1283;
+        ALLIED_VEHICLE0_LANCE1       = 1292;
+        ALLIED_VEHICLE1_LANCE1       = 1293;
+        ALLIED_VEHICLE2_LANCE1       = 1294;
+        ALLIED_VEHICLE3_LANCE1       = 1295;
+        ALLIED_VEHICLE0_LANCE2       = 1304;
+        ALLIED_VEHICLE1_LANCE2       = 1305;
+        ALLIED_VEHICLE2_LANCE2       = 1306;
+        ALLIED_VEHICLE3_LANCE2       = 1307;
+        ALLIED_VEHICLE0_LANCE3       = 1316;
+        ALLIED_VEHICLE1_LANCE3       = 1317;
+        ALLIED_VEHICLE2_LANCE3       = 1318;
+        ALLIED_VEHICLE3_LANCE3       = 1319;
+        ALLIED_VEHICLE0_LANCE4       = 1328;
+        ALLIED_VEHICLE1_LANCE4       = 1329;
+        ALLIED_VEHICLE2_LANCE4       = 1330;
+        ALLIED_VEHICLE3_LANCE4       = 1331;
+        ALLIED_VEHICLE0_LANCE5       = 1340;
+        ALLIED_VEHICLE1_LANCE5       = 1341;  
+        ALLIED_VEHICLE2_LANCE5       = 1342;
+        ALLIED_VEHICLE3_LANCE5       = 1343;
+        ALLIED_VEHICLE0_LANCE6       = 1352;
+        ALLIED_VEHICLE1_LANCE6       = 1353;
+        ALLIED_VEHICLE2_LANCE6       = 1354;
+        ALLIED_VEHICLE3_LANCE6       = 1355;
+        ALLIED_VEHICLE0_LANCE7       = 1364;
+        ALLIED_VEHICLE1_LANCE7       = 1365;
+        ALLIED_VEHICLE2_LANCE7       = 1366;
+        ALLIED_VEHICLE3_LANCE7       = 1367;
+
+
+        CLAN_VEHICLE0_STAR0          = 896;
+        CLAN_VEHICLE1_STAR0          = 897;
+        CLAN_VEHICLE2_STAR0          = 898;
+        CLAN_VEHICLE3_STAR0          = 899;
+        CLAN_VEHICLE4_STAR0          = 900;
+        CLAN_VEHICLE0_STAR1          = 908;
+        CLAN_VEHICLE1_STAR1          = 909;
+        CLAN_VEHICLE2_STAR1          = 910;
+        CLAN_VEHICLE3_STAR1          = 911;
+        CLAN_VEHICLE4_STAR1          = 912;
+        CLAN_VEHICLE0_STAR2          = 920;
+        CLAN_VEHICLE1_STAR2          = 921;
+        CLAN_VEHICLE2_STAR2          = 922;
+        CLAN_VEHICLE3_STAR2          = 923;
+        CLAN_VEHICLE4_STAR2          = 924;
+        CLAN_VEHICLE0_STAR3          = 932;
+        CLAN_VEHICLE1_STAR3          = 933;
+        CLAN_VEHICLE2_STAR3          = 934;
+        CLAN_VEHICLE3_STAR3          = 935;
+        CLAN_VEHICLE4_STAR3          = 936;
+        CLAN_VEHICLE0_STAR4          = 944;
+        CLAN_VEHICLE1_STAR4          = 945;
+        CLAN_VEHICLE2_STAR4          = 946;
+        CLAN_VEHICLE3_STAR4          = 947;
+        CLAN_VEHICLE4_STAR4          = 948;
+        CLAN_VEHICLE0_STAR5          = 956;
+        CLAN_VEHICLE1_STAR5          = 957;
+        CLAN_VEHICLE2_STAR5          = 958;
+        CLAN_VEHICLE3_STAR5          = 959;
+        CLAN_VEHICLE4_STAR5          = 960;
+        CLAN_VEHICLE0_STAR6          = 968;
+        CLAN_VEHICLE1_STAR6          = 969;
+        CLAN_VEHICLE2_STAR6          = 970;
+        CLAN_VEHICLE3_STAR6          = 971;
+        CLAN_VEHICLE4_STAR6          = 972;
+        CLAN_VEHICLE0_STAR7          = 990;
+        CLAN_VEHICLE1_STAR7          = 991;
+        CLAN_VEHICLE2_STAR7          = 992;
+        CLAN_VEHICLE3_STAR7          = 993;
+        CLAN_VEHICLE4_STAR7          = 994;
+
+
+

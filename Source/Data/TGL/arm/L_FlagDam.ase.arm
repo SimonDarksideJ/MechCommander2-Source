@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="69FF96C98D0B994174AEC40C3DC25A6B" />
+  <Asset Name="..\L_FlagDam.ase" Type="Physical" Author="ngauvin" FileSize="8283" ModificationTime="2006-02-01T10:55:03.092053-08:00" CRC="3DBE483235D8E59D27AFA70800F7964B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

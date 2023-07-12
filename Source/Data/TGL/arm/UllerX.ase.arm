@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CDDB56795CBC7DB44F29025CB8A7F163" />
+  <Asset Name="..\UllerX.ase" Type="Physical" Author="ngauvin" FileSize="118023" ModificationTime="2006-02-01T10:55:36.0297638-08:00" CRC="9919049530EE49EC7F416A94F320F0C1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

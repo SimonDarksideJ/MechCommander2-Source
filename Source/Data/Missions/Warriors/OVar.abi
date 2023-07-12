@@ -1,0 +1,47 @@
+
+	static integer	Me;
+	static integer	MyTeam;
+	static boolean	MoveSpeed;
+	static integer	ChallengeSetting;
+	static boolean	PermitFighting;
+	static boolean	StickToTarget;
+	static integer	CurrentTarget;
+	static real		EngageRadius;
+	static real		DisengageRadius;
+	static position	MyPoint;
+	static boolean	FixEngageZone;
+	static real		MinAction;
+	static boolean	IdentifyContacts;
+	static boolean	MoveToEngage;
+	static integer	MoveStatus;
+	static boolean	IgnoreNonTargets;
+	static boolean	AttackInActive;
+	static real		myBR;
+	static real		CurrentTargetMod;
+	static real		GuardMod;
+	static integer	GuardObject;
+	static real		ConcentrateFireMod;
+	static position	CurrentPosition;
+	static position	MyPosition;
+	static real		AttackRange;	
+
+	static position	aPoint;
+	static char[40]	dstring;
+
+	static TargList	TargetList;
+	static TargListRatings	TargetListRatings;
+	static integer	TargetsOnList;
+
+	static real[4]	FireRange;
+	static real[3]	myWeaponRanges;
+
+	static boolean	SelectBiggestThreat;
+
+	static real		NotTargetingMod;
+
+	eternal BayList	MechBays;
+	eternal BayList	VehicleBays;
+
+	eternal integer	TotalMechBays;
+	eternal integer	TotalVehicleBays;
+

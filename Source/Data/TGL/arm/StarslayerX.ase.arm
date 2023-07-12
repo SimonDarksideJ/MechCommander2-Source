@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BEC3DABBEDCEDD8373F0A3AFC1C2E524" />
+  <Asset Name="..\StarslayerX.ase" Type="Physical" Author="ngauvin" FileSize="116923" ModificationTime="2006-02-01T10:55:32.3578653-08:00" CRC="3ED7F13CC67A00FE8EA1F51465F1D439" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

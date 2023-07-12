@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C4A0C28FEB5E593393D42B05FF100066" />
+  <Asset Name="..\hollanderFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="104017" ModificationTime="2006-02-01T10:54:57.0295142-08:00" CRC="CA0B76E42ECF71059D25A41407794A02" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="62A963BF17DB270CF06C8F9C1CC58290" />
+  <Asset Name="..\crane.ase" Type="Physical" Author="ngauvin" FileSize="44964" ModificationTime="2006-02-01T10:54:43.5919282-08:00" CRC="1F87042786989BAFAE464ED79698841E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_WeaponsFacility.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

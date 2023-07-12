@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F0DE80C08D84867CC0368F1DE0BAD1B2" />
+  <Asset Name="..\cactus3L1.ase" Type="Physical" Author="ngauvin" FileSize="4379" ModificationTime="2006-02-01T10:54:39.3887763-08:00" CRC="C7804EB159D993C5ED76E7220A4A87B5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Cactus&amp;JoshuaL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

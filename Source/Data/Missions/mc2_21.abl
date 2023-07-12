@@ -1,0 +1,296 @@
+//*********************************************************************************
+
+module mc2_11 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+  //************************germ added
+	eternal boolean			alphaPG_BeenAreaTriggered;
+	eternal boolean			betaPG_BeenAreaTriggered;
+	eternal boolean			wallhit;
+	static integer[30]	WallId;
+	static real					wallchecktime;
+ //******************************germ add end
+	
+	static integer      ScenarioResult;
+	eternal boolean     ExitTimerSet;
+	static integer      VictoryLevel;
+	char[40]            dstring;
+	eternal real        gametime;
+	static real         nextsecond;
+	integer             x;
+	integer             y;
+	Position            aPoint;
+	static Position			startP;
+	eternal boolean     GeneralAlarm;
+	static 	boolean     PlayPASound;
+	static 	boolean     PlayGASound;
+	eternal integer     GeneralAlarmCounter;
+	boolean             PerimeterBreach;
+						 	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real					velTime;
+		static real					zoomFOV;
+		static real					startFOV;
+		static integer			camObject;
+		static integer			i;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			static real				playWFVO;
+			
+	
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		integer		moverID;
+		WorldPosition	moverPos;
+
+		integer	wallpiece;
+
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+		
+
+		//**************germ set	
+	alphaPG_BeenAreaTriggered = false;
+	betaPG_BeenAreaTriggered = false;
+	wallhit = false;
+	wallpiece = WallId[0];
+	wallchecktime = 0;
+	playWFVO = -1;
+	//************************************
+
+	WallId[0] =	 168347;
+	WallId[1] =	 170507;
+	WallId[2] =	 172667;
+	WallId[3] =	 174827;
+	WallId[4] =	 176987;
+	WallId[5] =	 179147;
+	WallId[6] =	 181307;
+	WallId[7] =	 183467;
+	WallId[8] =	 185627;
+	WallId[9] =	 187787;
+	WallId[10] = 188505;
+	WallId[11] = 188502;
+	WallId[12] = 188499;
+	WallId[13] = 188496;
+	WallId[14] = 188493;
+	WallId[15] = 188490;
+	WallId[16] = 188487;
+	WallId[17] = 188484;
+	WallId[18] = 188481;
+	WallId[19] = 188478;
+	WallId[20] = 188475;
+	WallId[21] = 188472;
+	WallId[22] = 188469;
+	WallId[23] = 188466;
+	WallId[24] = 188463;
+	WallId[25] = 188460;
+	WallId[26] = 188457;
+	WallId[27] = 188454;
+	WallId[28] = 181276; //BETA PG
+	WallId[29] = 176254; // MW barracks
+
+			PlayCountCheck =  FALSE;
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+//--------------------------------------------------- Mission 21  Stuff
+			if (gettime > wallchecktime) then
+					wallchecktime = gettime + 4;
+					
+					for i = 0 to 29  do
+							if (getobjectdamage(WallId[i]) > 0 ) then
+									wallhit = true;
+							endif;
+					endfor;
+			endif;
+	 //******************************************************************
+		//If the ALPHA -or- BETA Power Generator area trigger has been tripped then power up the defenders and attack.
+					if (CheckObjectiveStatus (6) == 1) then
+						alphaPG_BeenAreaTriggered = true;
+					endif;
+					
+					if (CheckObjectiveStatus (7) == 1) then
+						betaPG_BeenAreaTriggered = true;
+					endif;
+					
+			//------------------------------------------------
+			//Play ThunderBolt VO.
+			if (playWFVO == -1.0 ) and (checkOBjectiveStatus(5) == 1) then
+				playWFVO = getTime + 3;
+			endif;
+			if (playWFVO > 0) and (getTime > playWFVO) and (NOT isPlayingVoiceOver) then
+				playVideo("W10.bik");
+				playWFVO = 0;
+			endif;
+						
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (5) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+		//		mcprint (SensorPlayCount);
+				playDigitalMusic(AmbientTune2);
+	 // 		playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune2);
+	 // 		mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune2);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+	
+	//ALWAYS switch to Combat if you can.
+	if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+		 if (random(100) < 30) then
+		//		playDigitalMusic(CombatTune4);
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = false;
+				playingCombatTune = true;
+				playingAmbientTune = false;
+				playingSensorTune = false;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune2);
+	 // 		mcprint ("Playing Ambient Tune Combatstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = false;
+				playingCombatTune = true;
+				playingAmbientTune = false;
+				playingSensorTune = false;
+			endif;
+	endif;
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		playDigitalMusic(MissionStartTune10);
+		playMissionStartTune = false;
+	endif;
+						
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+						
+endmodule.		
+
+//******************************************************************

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D5CC5466713A0C36BDF9F606E12903E3" />
+  <Asset Name="..\rock_tformation2.ini" Type="Physical" Author="franksav" FileSize="310" ModificationTime="2006-03-03T01:28:42.3204246-08:00" CRC="25BC88A878EF00E189A89066E9AA3781" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="rock_TFormation2.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="rock_TFormation2L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="rock_TFormation2L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_TFormation2X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Tundra Rock Formation 2" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

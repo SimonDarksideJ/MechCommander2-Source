@@ -1,0 +1,32 @@
+FITini
+
+// This is the INDESTRUCTABLE comm_a1 Building Data File
+
+[ObjectClass]
+l ObjectTypeNum = 1
+
+[ObjectType]
+st Name             = "indcomm_a5"            // Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 19
+l Appearance        = 0x070000E6
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for this building
+l DestroyedObject	= 0			// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 35			// Extent Radius in Meters
+
+[BuildingData]
+l BuildingName 		= 231
+ul DmgLevel			= 950000
+b BlocksLineOfFire 	= FALSE
+ul BlownEffectId	= -1			//Sound Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is normal.
+ul DamageEffectId	= -1			//Sound Effect Played when building is dmg/destroyed.
+l BasePixelOffsetX  = 3                   //Where on tile to draw this building.
+l BasePixelOffsetY  = 52                    //
+l CollisionOffsetX	= 13				//Some buildings were not rendered to spec.  This fixes the problem.
+l CollisionOffsetY	= 32
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00003838
+
+FITend

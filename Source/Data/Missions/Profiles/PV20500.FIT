@@ -1,0 +1,123 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20500   'Harasser'  Type:  412 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20500 
+st Crew =                                                  "PCREWA"
+ul Chassis =                                                412 
+st Name =                                                  "Harasser"
+ul VehicleTypeID =                                          412 
+l NameIndex =                                               4 
+l DescIndex =                                               504 
+f CurTonnage =                                              25 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          400 
+l BattleRating =                                            25 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 4.75 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         12 
+uc CurArmorPoints =                                         12 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             4 
+uc NumAmmo =                                                4 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               130 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               130 
+uc FacesForward =                                           1 
+
+[Item:5]
+uc MasterID =                                               130 
+uc FacesForward =                                           1 
+
+[Item:6]
+uc MasterID =                                               130 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:7]
+uc MasterID =                                               230 
+l Amount =                                                 -1 
+
+[Item:8]
+uc MasterID =                                               230 
+l Amount =                                                 -1 
+
+[Item:9]
+uc MasterID =                                               230 
+l Amount =                                                 -1 
+
+[Item:10]
+uc MasterID =                                               230 
+l Amount =                                                 -1 
+
+FITEnd

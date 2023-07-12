@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="58D9E8C9968DEAB68BFCCAF330BC64F3" />
+  <Asset Name="..\hpgstationenc.ini" Type="Physical" Author="franksav" FileSize="391" ModificationTime="2006-03-03T01:28:27.7736427-08:00" CRC="FF88CB53D819EF1BA3F1964473DB080C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="hpgStationEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

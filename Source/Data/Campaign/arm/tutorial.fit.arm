@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="61DE924F88E791D735123183F74568D6" />
+  <Asset Name="..\tutorial.fit" Type="Physical" Author="franksav" FileSize="1253" ModificationTime="2006-03-03T01:25:50.3215254-08:00" CRC="455D3E4A0BEBC9F6674786867E8E6105" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Campaign" />
+      <Relationships>
+        <Relationship Type="Group" RelatedAsset="tutorial_group01" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

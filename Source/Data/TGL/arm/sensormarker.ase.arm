@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6C5C76C10C90FF0858C490D275BC8AF6" />
+  <Asset Name="..\sensormarker.ase" Type="Physical" Author="ngauvin" FileSize="14277" ModificationTime="2006-02-01T10:55:27.935962-08:00" CRC="229BACCF9CCE4C0AC0CFD3B7BB1EB6AD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_SensorMarker.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

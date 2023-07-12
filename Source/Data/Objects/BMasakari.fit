@@ -1,0 +1,20 @@
+FITini
+
+[ObjectClass]
+l ObjectTypeNum = 2
+
+[ObjectType]
+st Name							= "anubis"		// Text string giving a descriptive name  (only 8 chars long!!)
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 20			// Extent Radius in Meters
+st AppearanceName					= "anubis"
+
+[MechProfile]
+st ProfileName						= "anubis"
+f destructdamage					= 35
+f explosiondamage					= 15
+f explosionradius					= 80
+
+
+FITEnd

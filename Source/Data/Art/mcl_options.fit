@@ -1,0 +1,965 @@
+FITini 
+
+
+// options frames and tabs, etc
+// file uses mcl_optionsaudio.fit
+// mcl_optionshotkey.fit
+// mcl_optionsgameplay.fit
+// mcl_optionsgraphics.fit
+
+
+// this file is used for all 5 resolutions of the in-game options.
+// 640: offset x = -80, y = -90
+// 800: offset none
+// 1024: offset x = 113, y = 54
+// 1280: offset x = 240, y = 182
+// 1600: offset x = 400, y = 270
+
+
+
+[Buttons]
+l Buttoncount = 6
+
+[Button0] // graphics tab
+l XLocation = 95
+l YLocation = 132
+l Width = 138
+l Height = 25
+l ID = 200
+
+l XTextLocation = 101
+l YTextLocation = 136
+l TextWidth = 123
+l TextHeight = 16
+l color  = 0xffffffff
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26502
+l Font = 26503 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 138
+l VHeight = 25
+
+l UNormal = 64
+l VNormal = 175
+
+l UPressed = 64
+l VPressed = 150
+
+l UDisabled = 64
+l VDisabled = 200
+
+st FileName = "mcl_options_4.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26593
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button1] // audio tab
+l XLocation = 247
+l YLocation = 132
+l Width = 138
+l Height = 25
+l ID = 201
+
+l XTextLocation = 253
+l YTextLocation = 136
+l TextWidth = 123
+l TextHeight = 16
+l color  = 0xffffffff
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26504
+l Font = 26505 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l UWidth = 138
+l VHeight = 25
+
+l UNormal = 64
+l VNormal = 175
+
+l UPressed = 64
+l VPressed = 150
+
+l UDisabled = 64
+l VDisabled = 200
+
+st FileName = "mcl_options_4.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26594
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button2] // gameplay tab
+l XLocation = 399
+l YLocation = 132
+l Width = 138
+l Height = 25
+l ID = 202
+
+l XTextLocation = 405
+l YTextLocation = 136
+l TextWidth = 123
+l TextHeight = 16
+l color  = 0xffffffff
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26506
+l Font = 26507 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l UWidth = 138
+l VHeight = 25
+
+l UNormal = 64
+l VNormal = 175
+
+l UPressed = 64
+l VPressed = 150
+
+l UDisabled = 64
+l VDisabled = 200
+
+st FileName = "mcl_options_4.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26595
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button3] // hotkey tab
+l XLocation = 550
+l YLocation = 132
+l Width = 138
+l Height = 25
+l ID = 203
+
+l XTextLocation = 555
+l YTextLocation = 136
+l TextWidth = 123
+l TextHeight = 16
+l color  = 0xffffffff
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26508
+l Font = 26509 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l UWidth = 138
+l VHeight = 25
+
+l UNormal = 64
+l VNormal = 175
+
+l UPressed = 64
+l VPressed = 150
+
+l UDisabled = 64
+l VDisabled = 200
+
+st FileName = "mcl_options_4.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26596
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button4] // cancel button
+l XLocation = 144
+l YLocation = 525
+l Width = 176
+l Height = 40
+l ID = 8
+
+l XTextLocation = 153
+l YTextLocation = 534
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID = 27206
+l Font = 26501 // use AgencyFB14
+
+l HelpCaption = 27104
+l HelpDesc = 26621
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 80
+l VNormal = 0
+
+l UPressed = 80
+l VPressed = 40
+
+l UHighlight = 80
+l VHighlight = 0
+
+l UDisabled = 80
+l VDisabled = 40
+
+b AnimateBmp = 1 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff0079D4
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff0079D4
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+[Button5] // accept button
+l XLocation = 481
+l YLocation = 525
+l Width = 176
+l Height = 40
+l ID = 7
+
+l XTextLocation = 490
+l YTextLocation = 534
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID =  27209
+l Font = 26501 // use AgencyFB14
+
+l HelpCaption = 27104
+l HelpDesc = 26622
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 80
+l VNormal = 0
+
+l UPressed = 80
+l VPressed = 40
+
+l UHighlight = 80
+l VHighlight = 0
+
+l UDisabled = 80
+l VDisabled = 40
+
+b AnimateBmp = 1 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff0079D4
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff0079D4
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 9
+
+[Rect0] // background for header
+l XLocation = 90
+l YLocation = 97
+l Width = 620
+l Height = 23
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect1] // background for tabbed area
+l XLocation = 95
+l YLocation = 155
+l Width = 610
+l Height = 298
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect2] // outline for tabbed area- inner tab areas are placed within this
+l XLocation = 95
+l YLocation = 156
+l Width = 610
+l Height = 297
+l Color = -30208
+b outline = TRUE
+
+[Rect3] // background for help area
+l XLocation = 144
+l YLocation = 464
+l Width = 513
+l Height = 55
+l Color = 0x00000000
+b outline = FALSE
+
+[Rect4] // rect to obscure background- top
+l XLocation = 90
+l YLocation = 127
+l Width = 619
+l Height = 28
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect5] // rect to obscure background- left
+l XLocation = 90
+l YLocation = 156
+l Width = 5
+l Height = 301
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect6] // rect to obscure background- right
+l XLocation = 705
+l YLocation = 156
+l Width = 4
+l Height = 301
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect7] // rect to obscure background- bottom
+l XLocation = 95
+l YLocation = 454
+l Width = 609
+l Height = 4
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect8] // HELP OUTLINE
+l XLocation = 143
+l YLocation = 459
+l Width = 514
+l Height = 59
+l Color = 0xffC66600
+b outline = TRUE
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 38
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 90
+l UNormal = 0
+l VNormal = 14
+l UWidth = 256
+l VHeight = 90
+st FileName = "mcl_options_3.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 90
+l UNormal = 0
+l VNormal = 104
+l UWidth = 256
+l VHeight = 90
+st FileName = "mcl_options_3.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 90
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 90
+st FileName = "mcl_options_4.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 90
+l UNormal = 0
+l VNormal = 150
+l UWidth = 32
+l VHeight = 90
+st FileName = "mcl_options_4.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 90
+l Width = 80
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 80
+l VHeight = 256
+st FileName = "mcl_options_5.tga"
+
+[Static5]
+l XLocation = 80
+l YLocation = 90
+l Width = 256
+l Height = 7
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static6]
+l XLocation = 336
+l YLocation = 90
+l Width = 256
+l Height = 7
+l UNormal = 0
+l VNormal = 7
+l UWidth = 256
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static7]
+l XLocation = 592
+l YLocation = 90
+l Width = 128
+l Height = 7
+l UNormal = 0
+l VNormal = 14
+l UWidth = 128
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static8]
+l XLocation = 720
+l YLocation = 90
+l Width = 80
+l Height = 256
+l UNormal = 80
+l VNormal = 0
+l UWidth = 80
+l VHeight = 256
+st FileName = "mcl_options_5.tga"
+
+[Static9]
+l XLocation = 80
+l YLocation = 97
+l Width = 10
+l Height = 148
+l UNormal = 246
+l VNormal = 75
+l UWidth = 10
+l VHeight = 148
+st FileName = "mcl_options_1.tga"
+
+[Static10]
+l XLocation = 710
+l YLocation = 97
+l Width = 10
+l Height = 148
+l UNormal = 236
+l VNormal = 75
+l UWidth = 10
+l VHeight = 148
+st FileName = "mcl_options_1.tga"
+
+[Static11]
+l XLocation = 90
+l YLocation = 120
+l Width = 246
+l Height = 7
+l UNormal = 0
+l VNormal = 21
+l UWidth = 246
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static12]
+l XLocation = 336
+l YLocation = 120
+l Width = 256
+l Height = 7
+l UNormal = 0
+l VNormal = 28
+l UWidth = 256
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static13]
+l XLocation = 592
+l YLocation = 120
+l Width = 118
+l Height = 7
+l UNormal = 128
+l VNormal = 14
+l UWidth = 118
+l VHeight = 7
+st FileName = "mcl_options_1.tga"
+
+[Static14]
+l XLocation = 80
+l YLocation = 245
+l Width = 10
+l Height = 108
+l UNormal = 196
+l VNormal = 75
+l UWidth = 10
+l VHeight = 108
+st FileName = "mcl_options_1.tga"
+
+[Static15]
+l XLocation = 710
+l YLocation = 245
+l Width = 10
+l Height = 108
+l UNormal = 206
+l VNormal = 75
+l UWidth = 10
+l VHeight = 108
+st FileName = "mcl_options_1.tga"
+
+[Static16]
+l XLocation = 0
+l YLocation = 346
+l Width = 80
+l Height = 224
+l UNormal = 160
+l VNormal = 0
+l UWidth = 80
+l VHeight = 224
+st FileName = "mcl_options_5.tga"
+
+[Static17]
+l XLocation = 720
+l YLocation = 346
+l Width = 80
+l Height = 224
+l UNormal = 0
+l VNormal = 0
+l UWidth = 80
+l VHeight = 224
+st FileName = "mcl_options_6.tga"
+
+[Static18]
+l XLocation = 80
+l YLocation = 353
+l Width = 10
+l Height = 105
+l UNormal = 216
+l VNormal = 75
+l UWidth = 10
+l VHeight = 105
+st FileName = "mcl_options_1.tga"
+
+[Static19]
+l XLocation = 710
+l YLocation = 353
+l Width = 10
+l Height = 105
+l UNormal = 226
+l VNormal = 75
+l UWidth = 10
+l VHeight = 105
+st FileName = "mcl_options_1.tga"
+
+[Static20]
+l XLocation = 80
+l YLocation = 458
+l Width = 256
+l Height = 6
+l UNormal = 0
+l VNormal = 35
+l UWidth = 256
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+
+[Static21]
+l XLocation = 336
+l YLocation = 458
+l Width = 256
+l Height = 6
+l UNormal = 0
+l VNormal = 41
+l UWidth = 256
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+
+[Static22]
+l XLocation = 592
+l YLocation = 458
+l Width = 128
+l Height = 6
+l UNormal = 0
+l VNormal = 47
+l UWidth = 128
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+
+[Static23]
+l XLocation = 80
+l YLocation = 464
+l Width = 64
+l Height = 106
+l UNormal = 0
+l VNormal = 81
+l UWidth = 64
+l VHeight = 106
+st FileName = "mcl_options_1.tga"
+
+[Static24]
+l XLocation = 657
+l YLocation = 464
+l Width = 63
+l Height = 106
+l UNormal = 64
+l VNormal = 81
+l UWidth = 63
+l VHeight = 106
+st FileName = "mcl_options_1.tga"
+
+[Static25]
+l XLocation = 144
+l YLocation = 519
+l Width = 192
+l Height = 6
+l UNormal = 0
+l VNormal = 53
+l UWidth = 192
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+
+[Static26]
+l XLocation = 336
+l YLocation = 519
+l Width = 256
+l Height = 6
+l UNormal = 0
+l VNormal = 59
+l UWidth = 256
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 14
+st FileName = "mcl_options_3.tga"
+
+[Static27]
+l XLocation = 592
+l YLocation = 519
+l Width = 65
+l Height = 6
+l UNormal = 0
+l VNormal = 75
+l UWidth = 65
+l VHeight = 6
+st FileName = "mcl_options_1.tga"
+
+[Static28]
+l XLocation = 320
+l YLocation = 525
+l Width = 161
+l Height = 40
+l UNormal = 0
+l VNormal = 187
+l UWidth = 161
+l VHeight = 40
+st FileName = "mcl_options_1.tga"
+
+[Static29]
+l XLocation = 144
+l YLocation = 565
+l Width = 192
+l Height = 5
+l UNormal = 0
+l VNormal = 65
+l UWidth = 192
+l VHeight = 5
+st FileName = "mcl_options_1.tga"
+
+[Static30]
+l XLocation = 336
+l YLocation = 565
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 70
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_options_1.tga"
+
+[Static31]
+l XLocation = 592
+l YLocation = 565
+l Width = 65
+l Height = 5
+l UNormal = 128
+l VNormal = 47
+l UWidth = 65
+l VHeight = 5
+st FileName = "mcl_options_1.tga"
+
+[Static32]
+l XLocation = 0
+l YLocation = 570
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 194
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_options_3.tga"
+
+[Static33]
+l XLocation = 256
+l YLocation = 570
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 90
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_options_4.tga"
+
+[Static34]
+l XLocation = 512
+l YLocation = 570
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 120
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_options_4.tga"
+
+[Static35]
+l XLocation = 768
+l YLocation = 570
+l Width = 32
+l Height = 30
+l UNormal = 32
+l VNormal = 150
+l UWidth = 32
+l VHeight = 30
+st FileName = "mcl_options_4.tga"
+
+
+[Static36]
+l XLocation = 272
+l YLocation = -14
+l Width = 256
+l Height = 14
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 14
+st FileName = "mcl_options_3.tga"
+
+
+[Static37]
+l XLocation = 272
+l YLocation = -270
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_options_2.tga"
+
+
+
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // "OPTIONS" header
+l XLocation = 94
+l YLocation = 97
+l Width = 613
+l Height = 20
+l Color = -30208
+b outline = FALSE
+l Font = 26501 // use agency fb 14
+l TextID = 26500
+l Alignment = 0
+
+
+[Text1] // help text
+l XLocation = 148
+l YLocation = 462
+l Width = 505
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26562 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+
+
+
+
+FITend 

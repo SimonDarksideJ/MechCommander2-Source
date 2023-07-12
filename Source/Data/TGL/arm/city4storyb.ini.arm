@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="101C1B18E0D68E7C436046DF7C51BEE5" />
+  <Asset Name="..\city4storyb.ini" Type="Physical" Author="franksav" FileSize="500" ModificationTime="2006-03-03T01:28:16.6487139-08:00" CRC="E70D101453CAA8ACB02C4129C4D325A3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="City4StoryB.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="City4StoryX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="City4StoryBdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="City4StoryBdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Urban Abandoned" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

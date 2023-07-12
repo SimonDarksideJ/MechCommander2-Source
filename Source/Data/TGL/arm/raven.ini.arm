@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BEAAE327D046B202964B5EBD91364F35" />
+  <Asset Name="..\raven.ini" Type="Physical" Author="franksav" FileSize="4089" ModificationTime="2006-03-03T01:28:39.8048157-08:00" CRC="2189C57A6CFF8695B2D2314CBBE1616F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Raven.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="RavenL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="RavenL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="RavenX.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="raven.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ravenFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ravenFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ravenFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Raven" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

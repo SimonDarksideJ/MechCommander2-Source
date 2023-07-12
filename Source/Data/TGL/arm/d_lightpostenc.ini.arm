@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="34ECE0A4E11A2809AC9585441435F00E" />
+  <Asset Name="..\d_lightpostenc.ini" Type="Physical" Author="franksav" FileSize="149" ModificationTime="2006-03-03T01:28:20.8361871-08:00" CRC="BC4BA757C16CF6F3AAF846216C415F9E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="d_lightpostEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

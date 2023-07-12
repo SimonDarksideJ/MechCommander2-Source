@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C3B6E0F9340D7469995BD85B2AFCB958" />
+  <Asset Name="..\palmsDam.ase" Type="Physical" Author="ngauvin" FileSize="15377" ModificationTime="2006-02-01T10:55:14.7952529-08:00" CRC="DE16FA42AADA3D7B10EC44B5ECD7C2F6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PalmsDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

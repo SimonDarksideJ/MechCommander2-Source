@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="206932A56423BBA9CE2467A704317290" />
+  <Asset Name="..\maple3deadX.ase" Type="Physical" Author="ngauvin" FileSize="7777" ModificationTime="2006-02-01T10:55:10.4514751-08:00" CRC="80316A32BDCA6024EEED4441096AAB7E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_DeadTreesX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

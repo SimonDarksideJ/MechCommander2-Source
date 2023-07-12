@@ -1,0 +1,61 @@
+//************************
+//Music Const Include File
+//------------------------
+
+        //------------------
+        // Music
+        //------------------
+	MissionStartTune0	= 0;	//LiaoMStart2				(intro - Liao tradition)
+	MissionStartTune1	= 1;	//SteinerMStart1v2 	(intro - majestic, military)
+	MissionStartTune2	= 2;	//LiaoMStart1 			(intro - Liao cold & calculating)
+	MissionStartTune3	= 3;	//DavionMStart1  		(intro - determined, heroic)
+	MissionStartTune4	= 4;	//DavionMStart2 		(intro - serious odds)
+	MissionStartTune5	= 5;	//DaylightRaid2			(intro - brash, defient)
+	MissionStartTune6	= 6;	//Impending1v2			(intro/ominous cue)
+	MissionStartTune7	= 10;	//Pound							(intro - big and tense)
+	MissionStartTune8	= 12;	//Zambeezi					(intro - tense crescendo)
+	MissionStartTune9	= 27;	//Bandits						(intro - intrigue)
+	MissionStartTune10	= 30;	//Velocity 2				(intro - action)
+	
+	MissionStartTune11	= 32;	//Reflections				(vista cue - pivital story line change)
+
+	MissionWonTune0		= 9;  //Davion Win				(win any mission)
+  MissionLostTune0	= 8;  //Davion Lose				(lose any mission)
+	
+	CombatTune0		= 14;			//War(loop)
+	CombatTune1		= 15;			//Battle2(loop)
+	CombatTune2		= 16;			//Divergence(loop)
+	CombatTune3		= 17;			//Lost(loop)
+	CombatTune4		= 18;			//Trenches(loop)
+	CombatTune5		= 19;			//Attack(loop)
+	
+	SensorTune0		= 7;		  //Kong							(ominous cue - foreboding,heroic)
+	SensorTune1		= 11;		  //Predator					(ominous cue - mysterious)
+	SensorTune2		= 13;		  //BadDream					(ominous cue - short)
+	SensorTune3		= 24;		  //Splash(loop)			(in-mission ominous cue loop)
+	SensorTune4		= 29;		  //SinkingFeeling		(ominous cue - dark choir)
+	
+	LogisticsTune0		= 20; //LiaoLogistics
+	LogisticsTune1		= 22;	//SteinerLogistics
+	LogisticsTune2		= 23;	//Davion Logistics
+	LogisticsTune3		= 28;	//DCorps(loop) mission review screen (after winning)
+	
+	AmbientTune0		= 21;		//DesertAtmosphere(loop) (BG for desert)
+	AmbientTune1		= 25;		//GrassAtmosphere(loop)  (BG for Grasslands/Jungle (wild animals))
+	AmbientTune2		= 26;		//CarverVAtmosphere			 (BG for Badlands terrain only)
+	AmbientTune3		= 31;		//TundraAtmosphere(loop) (BG for Tundra (ice, snow, mountains, grey)
+
+	NumCombatTunes		= 6;
+	NumSensorTunes		= 5;
+	
+	
+	
+	//************The following 5 are no longer used*************
+	ObjectiveSuccessTune	= 10;
+  ObjectiveFailedTune	= 11;
+	EnemyDiedTune		= 12;
+	FriendlyDiedTune	= 13;
+	
+	MissionWonTune1		= 23;
+	//***************************
+	

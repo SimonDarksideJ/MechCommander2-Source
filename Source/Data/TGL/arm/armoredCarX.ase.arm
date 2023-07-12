@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="30E680EC7A60879068E69F06F07D1BB8" />
+  <Asset Name="..\armoredCarX.ase" Type="Physical" Author="ngauvin" FileSize="8975" ModificationTime="2006-02-01T10:54:35.0449985-08:00" CRC="195D679AEF6943EEA886462B275B84FC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_GenericX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

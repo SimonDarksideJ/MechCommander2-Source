@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7ACE61BCB06EC6627D8D59BB8B607625" />
+  <Asset Name="..\singlecivlivingdenc.ini" Type="Physical" Author="franksav" FileSize="395" ModificationTime="2006-03-03T01:28:50.382873-08:00" CRC="3101D5FFAA779C089B2C68191CBC80F2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="SingleCivLivingDEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

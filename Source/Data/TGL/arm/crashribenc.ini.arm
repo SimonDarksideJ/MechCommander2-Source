@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0205A7F8C587A842EE3EF1AFD493F190" />
+  <Asset Name="..\crashribenc.ini" Type="Physical" Author="franksav" FileSize="392" ModificationTime="2006-03-03T01:28:18.8986995-08:00" CRC="78BCDDF94D3905B30F6E936B4B61450E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="crashribEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

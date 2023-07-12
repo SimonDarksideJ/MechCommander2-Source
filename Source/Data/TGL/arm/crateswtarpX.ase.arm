@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DC3A83DF9EB5DF3DF6E989BC42BB1E2B" />
+  <Asset Name="..\crateswtarpX.ase" Type="Physical" Author="ngauvin" FileSize="7262" ModificationTime="2006-02-01T10:54:45.2013135-08:00" CRC="27C4120B03CF844F61439C9396C9DEA9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

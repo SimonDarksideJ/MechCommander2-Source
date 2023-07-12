@@ -1,0 +1,87 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name						="shilone"
+st AppearanceName				="shilone"
+l ExplosionObject				=700
+l DestroyedObject				=0
+f ExtentRadius					=35.000000
+
+[General]
+//Read by Type
+uc Chassis					=0
+b MineLayer					=FALSE
+b MineSweeper					=FALSE
+l RefitPoints					=0
+f ExplosionRadius				=0.0
+f ExplosionDamage				=0.0
+
+//Read by instance
+l DescIndex					=30373
+f CurTonnage					=25
+c Status					=0 
+l BattleRating					=25 
+
+[InternalStructure]
+uc Front					=1
+uc Rear						=1
+uc Left						=1
+uc Right					=1
+uc Turret					=1
+
+[VehicleDynamics]
+f MaxAccel					=18.000000
+f MaxVelocity					=18.000000
+l MaxTurretYawRate				=150
+l MaxTurretYaw					=360
+l MaxVehicleYawRate				=720
+
+[Front]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints				=12 
+uc CurArmorPoints 				=12 
+
+[Left]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints				=10 
+uc CurArmorPoints 				=10 
+
+[Right]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=10 
+uc CurArmorPoints 				=10 
+
+[Rear]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=8 
+uc CurArmorPoints 				=8 
+
+[Turret]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=10 
+uc CurArmorPoints 				=10 
+
+[InventoryInfo]
+uc NumOther 					=3 
+uc NumWeapons 					=0
+uc NumAmmo 					=0 
+
+// Inventory Items -- Other
+
+[Item:0]
+uc MasterID 					=1 		//Engine
+		    
+[Item:1]    					
+uc MasterID 					=6 		//Cockpit
+		    
+[Item:2]    					
+uc MasterID 					=35 		//LifeSupport
+
+// Inventory Items -- Weapons
+
+// Inventory Items -- Ammo
+
+FITend 

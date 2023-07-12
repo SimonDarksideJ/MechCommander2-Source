@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AE6805CA2C818C02235702EFAC1E8E35" />
+  <Asset Name="..\crashShanty3.ase" Type="Physical" Author="ngauvin" FileSize="7957" ModificationTime="2006-02-01T10:54:44.498184-08:00" CRC="A72A463E5523922606808E5957A519BE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CrashShanty.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

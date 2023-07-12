@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BD8243C2E3EA4525D79EF427FACC8E25" />
+  <Asset Name="..\rock_TClump3.ase" Type="Physical" Author="ngauvin" FileSize="26564" ModificationTime="2006-02-01T10:55:19.9046606-08:00" CRC="2D3822F76207BCF7D01142F997937D31" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Tundra_Cliffs_1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

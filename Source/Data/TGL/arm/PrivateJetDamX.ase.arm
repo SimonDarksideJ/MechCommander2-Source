@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6B77996A27A9E6AD059DB987BC042AA8" />
+  <Asset Name="..\PrivateJetDamX.ase" Type="Physical" Author="ngauvin" FileSize="71430" ModificationTime="2006-02-01T10:55:15.9827605-08:00" CRC="8321BF1CDD0B5A87E8C12456F81AD4A8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PrivateJetDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1D68FECA22CA30BB530DB8CD9607EF3C" />
+  <Asset Name="..\grainstorageenc.ini" Type="Physical" Author="franksav" FileSize="395" ModificationTime="2006-03-03T01:28:24.8674113-08:00" CRC="2BDD339FBEEB9F5B21764C7A90811EE5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="grainstorageEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

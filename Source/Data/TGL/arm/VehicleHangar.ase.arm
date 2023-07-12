@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6DEBB8F7C57B351E7AE723A5E37F2DA5" />
+  <Asset Name="..\VehicleHangar.ase" Type="Physical" Author="ngauvin" FileSize="58934" ModificationTime="2006-02-01T10:55:36.6547678-08:00" CRC="5F0D362D8DE7350169C2B5648941479D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleHang.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

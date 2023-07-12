@@ -1,0 +1,711 @@
+﻿<!--Version 1.01-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <!-- Register the XNA Build tasks that we want to use in this project -->
+    <UsingTask TaskName="WriteRelativeLinesToFile" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\Xna\Microsoft.Xna.Build.Tasks.dll"/>
+    <UsingTask TaskName="XnaExec" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\Xna\Microsoft.Xna.Build.Tasks.dll"/>
+    <UsingTask TaskName="DependencyAnalysis" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\Xna\Microsoft.Xna.Build.Tasks.dll"/>
+
+    <!-- Properties allow you to define variables that can be referenced in the project file. 
+         Properties can reference environment environment variables like $(MC2ROOT) below -->
+    <PropertyGroup>
+        <DependencyLogDir>$(MC2Root)\Source\DependencyLogs</DependencyLogDir>
+    </PropertyGroup>
+    
+    <!-- ItemGroups describe collections of files. In this section we define logical lists of files that need to be built.-->
+    <ItemGroup>
+
+        <!--General Art-->
+        <Art Include = "$(MC2Root)\Source\Data\Art\*.*" />
+
+        <!--Textures-->
+        <Texture Include = "$(MC2Root)\Source\Data\Textures\*.*;
+                            $(MC2Root)\Source\Data\Textures\64\*.*;
+                            $(MC2Root)\Source\Data\Textures\64Mask\*.*;
+                            $(MC2Root)\Source\Data\Textures\64Overlays\*.*;
+                            $(MC2Root)\Source\Data\Textures\Defaults\*.*;
+                            $(MC2Root)\Source\Data\Textures\Random_Maps\*.*" />
+
+        <!--Mission Data-->
+        <Mission Include = "$(MC2Root)\Source\Data\Missions\*.*;
+                            $(MC2Root)\Source\Data\Missions\Warriors\*.*;
+                            $(MC2Root)\Source\Data\Missions\Profiles\*.*;
+                            $(MC2Root)\Source\Data\Campaign\*.*" />
+
+        <!--Effects-->
+        <Effect Include = "$(MC2Root)\Source\Data\Effects\*.*" />
+
+        <!--Cameras-->
+        <Camera Include = "$(MC2Root)\Source\Data\Cameras\*.*" />
+
+        <!--Miscellaneous Files-->
+        <Misc Include = "$(MC2Root)\Source\Data\Objects\*.csv;
+                         $(MC2Root)\Source\Data\Sound\Sound.snd;
+                         $(MC2Root)\Source\Data\Sound\Radio.csv" />
+        
+        <!--Insignias-->
+        <Insignia Include = "$(MC2Root)\Source\Data\Multiplayer\Insignia\*.*" />
+
+        <!--Models-->
+        <Model Include = "$(MC2Root)\Source\Data\TGL\*.ini" 
+               Exclude = "$(MC2Root)\Source\Data\TGL\LargeArtillery.ini;
+                          $(MC2Root)\Source\Data\TGL\Quonset2Enc.ini;
+                          $(MC2Root)\Source\Data\TGL\SmallArtillery.ini;
+                          $(MC2Root)\Source\Data\TGL\streetlight3.ini;" />
+        
+        <ModelOther Include = "$(MC2Root)\Source\Data\TGL\LargeArtillery.ini;
+                               $(MC2Root)\Source\Data\TGL\Quonset2Enc.ini;
+                               $(MC2Root)\Source\Data\TGL\SmallArtillery.ini;
+                               $(MC2Root)\Source\Data\TGL\streetlight3.ini" />
+                    
+        <ModelTexture Include = " $(MC2Root)\Source\Data\TGL\128\*.* " />
+
+        <!--Project Files-->
+        <Code Include = "$(MC2Root)\Source\mc2res.vcproj;
+                         $(MC2Root)\Source\mclib\gosfx\gosfx.vcproj;
+                         $(MC2Root)\Source\gui\gui.vcproj;
+                         $(MC2Root)\Source\mclib\stuff\stuff.vcproj;
+                         $(MC2Root)\Source\mclib\mlr\mlr.vcproj;
+                         $(MC2Root)\Source\mclib\mclib.vcproj;
+                         $(MC2Root)\Source\Tools\aseconv\aseconv.vcproj;
+                         $(MC2Root)\Source\mechcmd2.vcproj;
+                         $(MC2Root)\Source\viewer\viewer.vcproj" />
+
+        <!--Objects-->
+        <ObjectRSP Include = "$(MC2Root)\Source\Data\Objects\Object2.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Objects\Object2.pak</PAKFileName>
+        </ObjectRSP>
+
+        <!-- The SoundRSP ItemGroup has items that have additional information about each item. This extra data is refered as metadata 
+             about the individual item. In the sound example below we use metadata to describe the output file associated with each 
+             pilot in the game. -->
+        <!--Sounds-->
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot1.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilota.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot2.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotb.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot3.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotc.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot4.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotd.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot5.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilote.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot6.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotf.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot7.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotg.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot8.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\piloth.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot9.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\piloti.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot10.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotj.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot11.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotk.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot12.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotl.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot13.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotm.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot14.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotn.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot15.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\piloto.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot16.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotp.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot17.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotq.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot18.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotr.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot19.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilots.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot20.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilott.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot21.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotu.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot22.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotv.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot23.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotw.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot24.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotx.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot25.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\piloty.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilot26.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilotz.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilotA.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilot1a.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilotB.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilot1b.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilotC.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilot1c.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\pilotD.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\pilot1d.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\betty.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\betty.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\sound.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\sound.pak</PAKFileName>
+        </SoundRSP>
+
+        <SoundRSP Include = "$(MC2Root)\Source\Data\Sound\support.rsp">
+            <PAKFileName>$(MC2Root)\Source\Data\Sound\support.pak</PAKFileName>
+        </SoundRSP>
+
+    </ItemGroup>
+
+    <Target Name = "Build" DependsOnTargets="BuildCode;
+                                             PackageArt;
+                                             PackageCamera;
+                                             PackageEffect;
+                                             PackageInsignia;
+                                             PackageMisc;
+                                             PackageMission;
+                                             PackageModel;
+                                             PackageTexture;
+                                             MakeObjectPAK;
+                                             MakeSoundPAK;
+                                             CopyFiles">
+
+        <!-- Build target is a container for the main targets -->
+    </Target>
+
+    <!--Art Targets-->
+    <Target Name = "PackageArt">
+        <!--Check to see if anything was modified-->
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeArtFastFile"
+            Sources = "@(Art)">
+
+
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedArt"                               
+          />
+        </DependencyAnalysis>
+
+      <!--If nothing was modified, skip task otherwise write all the files to an RSP-->
+      <WriteRelativeLinesToFile
+            Condition = "'@(ModifiedArt)' != ''" 
+            
+            File = "$(MC2Root)\art.rsp"
+            Lines = "@(Art)"
+            RootDirectory = "$(MC2Root)\Source"
+            Overwrite = "true"
+      />
+
+      <!--If nothing was modified, skip task otherwise package the data and track reads-->
+      <XnaExec
+            Condition = "'@(ModifiedArt)' != ''" 
+            
+            TrackFileAccess = "true"
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeArtFastFile"
+            IgnoreInReadLog = "art.rsp"
+            Sources = "@(Art)"
+            
+            ExeName = "$(MC2Root)\xpfile.exe"
+            CommandLineCommands = "-r &quot;$(MC2Root)\art.rsp&quot; &quot;$(MC2Root)\art.fst&quot; -z 20480000"
+            WorkingDirectory = "$(MC2Root)\Source"                                    
+      />      
+    </Target>
+
+
+    <!--Texture Targets-->
+    <Target Name = "PackageTexture">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"            
+            LogFileName = "MakeTexureFastFile"
+            Sources = "@(Texture)">
+            
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedTexture"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile
+          Condition = "'@(ModifiedTexture)' != ''"
+          
+          File = "$(MC2Root)\textures.rsp"
+          Lines = "@(Texture)"
+          RootDirectory = "$(MC2Root)\Source"
+          Overwrite = "true"
+      />
+
+      <XnaExec
+          Condition = "'@(ModifiedTexture)' != ''" 
+          
+          TrackFileAccess = "true"  
+          LogFileDirectory = "$(DependencyLogDir)"
+          LogFileName = "MakeTexureFastFile"
+          IgnoreInReadLog = "textures.rsp"
+          Sources = "@(Texture)"
+                                     
+          ExeName = "$(MC2Root)\xpfile.exe"
+          CommandLineCommands = "-r &quot;$(MC2Root)\textures.rsp&quot; &quot;$(MC2Root)\textures.fst&quot; -z 32768000"
+          WorkingDirectory = "$(MC2Root)\Source"
+      />
+    </Target>
+
+
+    <!--Mission Targets-->
+    <Target Name = "PackageMission">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeMissionFastFile"
+            Sources = "@(Mission)">
+            
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedMission"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile
+          Condition = "'@(ModifiedMission)' != ''" 
+          
+          File = "$(MC2Root)\mission.rsp"
+          Lines = "@(Mission)"
+          RootDirectory = "$(MC2Root)\Source"
+          Overwrite = "true"
+      />
+
+      <XnaExec
+          Condition = "'@(ModifiedMission)' != ''" 
+          
+          TrackFileAccess = "true"
+          LogFileDirectory = "$(DependencyLogDir)"
+          LogFileName = "MakeMissionFastFile"
+          IgnoreInReadLog = "mission.rsp"
+          Sources = "@(Mission)"
+
+          ExeName = "$(MC2Root)\xpfile.exe"
+          CommandLineCommands = "-r &quot;$(MC2Root)\mission.rsp&quot; &quot;$(MC2Root)\mission.fst&quot; -z 20480000"
+          WorkingDirectory = "$(MC2Root)\Source"
+      />
+    </Target>
+
+    <!--Camera Targets-->
+    <Target Name = "PackageCamera">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeCameraFastFile"
+            Sources = "@(Camera)">
+            
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedCamera"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile   
+            Condition = "'@(ModifiedCamera)' != ''" 
+            
+            File = "$(MC2Root)\camera.rsp"
+            Lines = "@(Camera)"
+            RootDirectory = "$(MC2Root)\Source"
+            Overwrite = "true"
+      />
+
+      <XnaExec
+            Condition = "'@(ModifiedCamera)' != ''"     
+        
+            TrackFileAccess = "true"
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeCameraFastFile"
+            IgnoreInReadLog = "camera.rsp"
+            Sources = "@(Camera)"
+            
+            ExeName = "$(MC2Root)\xpfile.exe"
+            CommandLineCommands = "-r &quot;$(MC2Root)\camera.rsp&quot; &quot;$(MC2Root)\camera.fst&quot; -z 20480000"
+            WorkingDirectory = "$(MC2Root)\Source"
+      />      
+    </Target>
+
+    <!--Effect Targets-->
+    <Target Name = "PackageEffect">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"          
+            LogFileName = "MakeEffectFastFile"
+            Sources = "@(Effect)">
+            
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedEffect"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile
+          Condition = "'@(ModifiedEffect)' != ''"
+          
+          File = "$(MC2Root)\effect.rsp"
+          Lines = "@(Effect)"
+          RootDirectory = "$(MC2Root)\Source"
+          Overwrite = "true"
+      />
+
+      <XnaExec
+           Condition = "'@(ModifiedEffect)' != ''" 
+           
+           TrackFileAccess = "true"
+           LogFileDirectory = "$(DependencyLogDir)"
+           LogFileName = "MakeEffectFastFile"                     
+           IgnoreInReadLog = "effect.rsp"
+           Sources = "@(Effect)"
+           
+           ExeName = "$(MC2Root)\xpfile.exe"
+           CommandLineCommands = "-r &quot;$(MC2Root)\effect.rsp&quot; &quot;$(MC2Root)\effect.fst&quot; -z 20480000"
+           WorkingDirectory = "$(MC2Root)\Source"
+      /> 
+    </Target>
+
+    <!--Misc Targets-->
+    <Target Name = "PackageMisc">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"            
+            LogFileName = "MakeMiscFastFile"
+            Sources = "@(Misc)">
+            
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedMisc"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile
+            Condition = "'@(ModifiedMisc)' != ''" 
+            
+            File = "$(MC2Root)\misc.rsp"
+            Lines = "@(Misc)"
+            RootDirectory = "$(MC2Root)\Source"
+            Overwrite = "true"
+      />
+
+      <XnaExec
+            Condition = "'@(ModifiedMisc)' != ''" 
+            
+            TrackFileAccess = "true"
+            LogFileDirectory = "$(DependencyLogDir)"
+            LogFileName = "MakeMiscFastFile"
+            IgnoreInReadLog = "misc.rsp"
+            Sources = "@(Misc)"
+            
+            ExeName = "$(MC2Root)\xpfile.exe"
+            CommandLineCommands = "-r &quot;$(MC2Root)\misc.rsp&quot; &quot;$(MC2Root)\misc.fst&quot; -z 20480000"
+            WorkingDirectory = "$(MC2Root)\Source"
+      />
+    </Target>
+
+    <!--Insignia Targets-->
+    <Target Name = "PackageInsignia">
+        <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"            
+            LogFileName = "MakeInsigniaFastFile"
+            Sources = "@(Insignia)">
+          
+            <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedInsignia"                               
+          />
+        </DependencyAnalysis>
+
+      <WriteRelativeLinesToFile
+          Condition = "'@(ModifiedInsignia)' != ''"
+          
+          File = "$(MC2Root)\insignia.rsp"
+          Lines = "@(Insignia)"
+          RootDirectory = "$(MC2Root)\Source"
+          Overwrite = "true"
+      />
+
+      <XnaExec
+          Condition = "'@(ModifiedInsignia)' != ''"
+          
+          TrackFileAccess = "true"
+          LogFileDirectory = "$(DependencyLogDir)"
+          LogFileName = "MakeInsigniaFastFile"          
+          IgnoreInReadLog = "insignia.rsp"
+          Sources = "@(Insignia)"
+          
+          ExeName = "$(MC2Root)\xpfile.exe"
+          CommandLineCommands = "-r &quot;$(MC2Root)\insignia.rsp&quot; &quot;$(MC2Root)\insignia.fst&quot; -z 20480000"
+          WorkingDirectory = "$(MC2Root)\Source"
+      />
+    </Target>
+
+    <!--TGL Targets-->
+    <Target Name = "PackageModel">
+      <!--Check to see if anything was modified-->
+      <DependencyAnalysis
+            LogFileDirectory = "$(DependencyLogDir)"            
+          LogFileName = "ModelFile"
+          Sources = "@(Model)">
+        
+          <Output
+              TaskParameter = "ModifiedSources"
+              ItemName = "ModifiedModel"                               
+          />
+      </DependencyAnalysis>
+
+      <!--Write out the file that is used for processing by AseConv-->
+      <WriteRelativeLinesToFile
+          Condition = "'@(ModifiedModel)' != ''"
+          
+          File = "$(MC2Root)\source\ase.lst"
+          Lines = "@(ModifiedModel);@(ModelOther)"
+          RootDirectory = "$(MC2Root)\Source\Data\TGL"
+          Overwrite = "true"
+      />
+
+      <!--Run conversion on just the models that have been changed, if any-->  
+      <XnaExec
+          Condition = "'@(ModifiedModel)' != ''" 
+          
+          TrackFileAccess = "true"
+          LogFileDirectory = "$(DependencyLogDir)"
+          LogFileName = "ModelFile"
+          IgnoreInReadLog = "ase.lst;aseconv.exe;Windows\;LargeArtillery.ini;Quonset2Enc.ini;SmallArtillery.ini;streetlight3.ini"
+          Sources = "@(ModifiedModel)"
+          
+          ExeName = "$(MC2Root)\Source\Tools\aseconv\debug\aseconv.exe"
+          CommandLineCommands = "-list &quot;$(MC2Root)\source\ase.lst&quot;"
+          WorkingDirectory = "$(MC2Root)\Source"
+      />
+
+      <!--Create a new ItemList to include the models that were just generated-->
+      <CreateItem 
+            Include="$(MC2Root)\Source\Data\TGL\*.tgl;
+                     $(MC2Root)\Source\Data\TGL\*.agl;
+                     $(MC2Root)\Source\Data\TGL\*.ini;
+                     @(ModelTexture);">
+        <Output
+            TaskParameter = "Include"
+            ItemName = "TGL"
+        />
+      </CreateItem>
+      
+      <!--If nothing was modified, skip task otherwise write the new ItemList to an RSP-->
+      <WriteRelativeLinesToFile
+            Condition = "'@(ModifiedModel)' != ''"
+            
+            File = "$(MC2Root)\tgl.rsp"
+            Lines = "@(TGL)"
+            RootDirectory = "$(MC2Root)\Source"
+            Overwrite = "true"
+      />
+      
+      <!--If nothing was modified, skip task otherwise package the data and track reads-->
+      <XnaExec
+          Condition = "'@(ModifiedModel)' != ''"
+          
+          TrackFileAccess = "false"
+          LogFileDirectory = "$(DependencyLogDir)"
+          LogFileName = "MakeTGLFastFile"
+          IgnoreInReadLog = "tgl.rsp"
+          Sources = "@(TGL)"
+          
+          ExeName = "$(MC2Root)\xpfile.exe"
+          CommandLineCommands = "-r &quot;$(MC2Root)\tgl.rsp&quot; &quot;$(MC2Root)\tgl.fst&quot; -l 20480000"
+          WorkingDirectory = "$(MC2Root)\Source"
+      />      
+    </Target>
+
+    <!--Code Targets-->
+    <Target Name = "BuildCode">
+      <Exec 
+        WorkingDirectory = "$(MC2Root)\" 
+        Command = "dodate.exe &quot;$(MC2Root)\Source\code\version.h&quot;" 
+      />
+
+      <VCBuild 
+        Projects = "@(Code)" 
+        Configuration = "Debug|Win32" 
+      />
+      
+      <VCBuild 
+          Projects = "@(Code)" 
+          Configuration = "Profile|Win32" 
+      />
+
+      <VCBuild 
+          Projects = "@(Code)" 
+          Configuration = "Release|Win32" 
+      />
+    </Target>
+
+    <!--Object Targets-->
+    <Target Name = "MakeObjectPAK">
+      <!--Batch through and package all the object data.-->
+      <Exec
+          WorkingDirectory = "$(MC2Root)\Source\Data\Objects" 
+          Command = "&quot;$(MC2Root)\XPList.exe&quot; -r &quot;@(ObjectRSP)&quot; &quot;%(ObjectRSP.PAKFileName)&quot; -r"
+      />
+    </Target>
+
+    <!--Sound Targets-->
+    <Target Name = "MakeSoundPAK">
+      <!--Batch through and package all the sound data.-->
+      <Exec
+          WorkingDirectory = "$(MC2Root)\Source\Data\Sound" 
+          Command = "&quot;$(MC2Root)\XPList.exe&quot; -r &quot;@(SoundRSP)&quot; &quot;%(SoundRSP.PAKFileName)&quot; -r"
+      />
+    </Target>
+
+    <!--Copy Targets-->
+    <Target Name = "CopyFiles">
+      <!--Create item lists for the FST's and programs, object PAK files, and sound data.-->
+      <CreateItem
+        Include = "$(MC2Root)\Source\debug\mc2dbg.exe;
+                   $(MC2Root)\Source\profile\mc2pro.exe;
+                   $(MC2Root)\Source\release\mc2rel.exe;
+                   $(MC2Root)\Source\viewer\debug\viewdbg.exe;
+                   $(MC2Root)\Source\viewer\profile\viewpro.exe;
+                   $(MC2Root)\Source\viewer\release\viewrel.exe;
+                   $(MC2Root)\Source\release\mc2res.dll;
+                   $(MC2Root)\*.fst">
+
+        <Output
+            TaskParameter = "Include"
+            ItemName = "ProgramCopyFiles" 
+        />
+      </CreateItem>
+
+      <CreateItem
+        Include="$(MC2Root)\Source\Data\Objects\*.pak">
+
+        <Output
+            TaskParameter = "Include"
+            ItemName = "ObjectCopyFiles" 
+        />
+      </CreateItem>
+
+      <CreateItem
+        Include = "$(MC2Root)\Source\Data\Sound\*.pak;
+                   $(MC2Root)\Source\Data\Sound\mc2_*.wav;
+                   $(MC2Root)\Source\Data\Sound\msuic*.wav;
+                   $(MC2Root)\Source\Data\Sound\tut_*.wav;
+                   $(MC2Root)\Source\Data\Sound\V*.wav;
+                   $(MC2Root)\Source\Data\Sound\W*.wav">
+
+        <Output
+            TaskParameter = "Include"
+            ItemName = "SoundCopyFiles" 
+        />
+      </CreateItem>
+      
+      <!--Copy the groups into the right place in the FinalBuild directory-->
+      <Copy 
+        SourceFiles = "@(ProgramCopyFiles)"
+        DestinationFolder = "$(MC2Root)\FinalBuild"
+        SkipUnchangedFiles = "true"        
+      />
+
+      <Copy 
+        SourceFiles = "@(ObjectCopyFiles)"
+        DestinationFolder = "$(MC2Root)\FinalBuild\Data\Objects"
+        SkipUnchangedFiles = "true"
+      />
+
+      <Copy 
+        SourceFiles = "@(SoundCopyFiles)"
+        DestinationFolder = "$(MC2Root)\FinalBuild\Data\Sound"
+        SkipUnchangedFiles = "true"
+      />      
+    </Target>
+
+    <Target Name = "Clean">
+        <!-- Clean intermediates and outputs so that the next build is "clean" -->
+
+        <!--Remove the dependency logs to force a clean build-->
+        <!--Remove only files we are sure we have built!-->
+        <CreateItem Include="$(DependencyLogDir)\*.*;
+                             $(MC2Root)\Source\debug\mc2dbg.exe;
+                             $(MC2Root)\Source\profile\mc2pro.exe;
+                             $(MC2Root)\Source\release\mc2rel.exe;
+                             $(MC2Root)\Source\viewer\debug\viewdbg.exe;
+                             $(MC2Root)\Source\viewer\profile\viewpro.exe;
+                             $(MC2Root)\Source\viewer\release\viewrel.exe;
+                             $(MC2Root)\Source\release\mc2res.dll;
+                             $(MC2Root)\*.rsp;
+                             $(MC2Root)\*.fst;
+                             $(MC2Root)\Source\Data\Sound\pilot*.pak;
+                             $(MC2Root)\Source\Data\Sound\betty.pak;
+                             $(MC2Root)\Source\Data\Sound\sound.pak;
+                             $(MC2Root)\Source\Data\Sound\support.pak;
+                             $(MC2Root)\Source\Data\Objects\Object2.pak">
+            <Output
+                TaskParameter = "Include"
+                ItemName = "CleanData"
+            />
+        </CreateItem>
+        
+        <Delete Files="@(CleanData)" />
+    </Target>
+
+    <Target Name = "Rebuild" DependsOnTargets = "Clean;Build">
+        <!-- Clean and then build -->
+    </Target>
+    
+</Project>

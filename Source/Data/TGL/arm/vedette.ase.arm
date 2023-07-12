@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="509837D4717C8948DFC359CFE9A5C8A6" />
+  <Asset Name="..\vedette.ase" Type="Physical" Author="ngauvin" FileSize="67293" ModificationTime="2006-02-01T10:55:36.6078925-08:00" CRC="5E89B62EDD191AC7AD3086DB6B76E941" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Vedette.TGA" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

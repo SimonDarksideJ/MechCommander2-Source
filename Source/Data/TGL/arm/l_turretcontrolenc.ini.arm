@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F5B3DC1B1F2F6573A8A305AE1C3B5542" />
+  <Asset Name="..\l_turretcontrolenc.ini" Type="Physical" Author="franksav" FileSize="155" ModificationTime="2006-03-03T01:28:32.3048637-08:00" CRC="F1A0DB9A8602FE14C3E8E19C0E939905" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_turretcontrolenc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

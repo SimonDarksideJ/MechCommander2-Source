@@ -1,0 +1,292 @@
+//****************************************************************************************//
+// 
+//		GROUP 4
+//
+//      MISSION:  GENCON
+//
+//****************************************************************************************//
+
+fsm mc2_gencon_group4b;
+
+	var
+
+		static WorldPosition	startPosition;
+		static PatrolState		basePatrolState;
+		static PatrolPath		basePatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static integer			GoToBaseStateHandle;
+		static integer			Group4RunStateHandle;
+
+		static boolean			GoToBaseSet;
+		static boolean			Group4RunSet;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		if (getID == 751) then
+			setDebugWindow(-1, -1);
+		endif;
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 220, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 170, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+		GoToBaseStateHandle = getStateHandle("goToBase");
+		Group4RunStateHandle = getStateHandle("group4Run");
+
+		GoToBaseSet = false;
+		Group4RunSet = false;
+
+
+		basePatrolState[0] = PATROL_TYPE_LINEAR;    
+		basePatrolState[1] = 6;    //?num points
+		basePatrolState[2] = 1;    //?num cycles
+		basePatrolState[3] = PATROL_DIRECTION_FORWARD;    
+		basePatrolState[4] = -1;    //reset cur point
+		basePatrolState[5] = -1;    //reset cur cycle
+		basePatrolState[6] = CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;    
+		basePatrolPath[0, 0] = 64.0 + 43.0;
+		basePatrolPath[0, 1] = 2752.0 + 43.0;
+		basePatrolPath[1, 0] = -1130.667 + 43.0;
+		basePatrolPath[1, 1] = 2752.0 + 43.0;
+		basePatrolPath[2, 0] = -2496.0 + 43.0;
+		basePatrolPath[2, 1] = 2752.0 + 43.0;
+		basePatrolPath[3, 0] = -2538.667 + 43.0;
+		basePatrolPath[3, 1] = 1856.0 + 43.0;
+		basePatrolPath[4, 0] = -5056.0 + 43.0;
+		basePatrolPath[4, 1] = 2240.0 + 43.0;
+		basePatrolPath[5, 0] = -5568.000;
+		basePatrolPath[5, 1] = 1941.333;
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+		integer		curTarget;
+		real		curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real		distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+		//-----------------------------------
+		// Is it time to move to a new state?
+		curStateHandle = getCurrentStateHandle;
+		if (GoToBaseFlag) then
+			if (not GoToBaseSet) then
+				GoToBaseSet = true;
+				if (curStateHandle <> GoToBaseStateHandle) then
+					mcprint("trans GoToBase");
+					trans GoToBase;
+				endif;
+			endif;
+		endif;
+
+/*		//-----------------------------------
+		// Everyone in Group4 Run Away??
+		if (Group4RunAwayFlag) then
+			if (not Group4RunSet) then
+				Group4RunSet = true;
+				if (curStateHandle <> Group4RunStateHandle) then
+					mcprint("trans RunAWAY");
+					trans GoToBase;
+				endif;
+			endif;
+		endif;
+*/
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		//if (numFunctionalWeapons == 0) then
+		//	trans noWeapons;
+		//endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	code
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state goToBase;
+
+	var
+
+		WorldPosition	baseLoc;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "   gotToBase    ");
+//		mcprint("GOTOBASE!!!!!!!!!!!!!!");
+
+		baseLoc[0] = -5568.000;
+		baseLoc[1] = 1941.333;
+		baseLoc[2] = 0.0;
+		if (numFunctionalWeapons > 0) then
+			corePatrol(basePatrolState, basePatrolPath, AttackStateHandle);
+			coreGuard(baseLoc, -1, AttackStateHandle);
+		else
+			setDebugString(-1, 3, " gotToBase(NO WP) ");
+			setMoveArea(startPosition, -1.0);
+			corePatrol(basePatrolState, basePatrolPath, -1);
+			trans noWeapons;
+		endif;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state group4Run;
+
+	var
+
+		WorldPosition	baseLoc;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "group4Run");
+//		mcprint("GROUP4RUN!!!!!!!!!!!!!!");
+		if (group4RunVO) then
+			group4RunVO = false;
+			playWave("data\sound\mc2_gencon_vo2.wav", -1);
+		endif;
+		Group4RunAwayFlag = True;
+		corePatrol(basePatrolState, basePatrolPath, -1);
+		baseLoc[0] = -5568.000;
+		baseLoc[1] = 1941.333;
+		baseLoc[2] = 0.0;
+		if (numFunctionalWeapons > 0) then
+			coreGuard(baseLoc, -1, AttackStateHandle);
+		endif;
+
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "   GUARD    ");
+		coreGuard(startPosition, CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED, 0);
+		trans group4Run;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

@@ -1,0 +1,982 @@
+FITini 
+
+// insert for options graphics tab
+
+
+b ChildCoordinatesAreRelative = 1
+
+
+[Buttons]
+l Buttoncount = 9
+
+[Button0] // check box- pilot videos
+l XLocation = 26
+l YLocation = 16
+l Width = 12
+l Height = 12
+l ID = 302
+
+b Toggle = 1
+l ID = 206
+
+l XTextLocation = 46 // text should be part of button too
+l YTextLocation = 14
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26512
+l Font = 26511  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button1] // check box- terrain detail
+l XLocation = 304
+l YLocation = 16
+l Width = 12
+l Height = 12
+l ID = 301
+
+
+b Toggle = 1
+
+l XTextLocation = 327 // text should be part of button too
+l YTextLocation = 14
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26520
+l Font = 26521  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button2] // check box- shadows
+l XLocation = 26
+l YLocation = 46
+l Width = 12
+l Height = 12
+l ID = 304
+
+b Toggle = 1
+
+l XTextLocation = 46 // text should be part of button too
+l YTextLocation = 44
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26514
+l Font = 26513  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button3] // check box- high object detail
+l XLocation = 304
+l YLocation = 46
+l Width = 12
+l Height = 12
+l ID = 303
+
+b Toggle = 1
+
+l XTextLocation = 327 // text should be part of button too
+l YTextLocation = 44
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26522
+l Font = 26523  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button4] // check box-  local shadows
+l XLocation = 26
+l YLocation = 76
+l Width = 12
+l Height = 12
+l ID = 306
+
+b Toggle = 1
+
+l XTextLocation = 46 // text should be part of button too
+l YTextLocation = 74
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26516
+l Font = 26515  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button5] // check box- non weapon fx
+l XLocation = 304
+l YLocation = 76
+l Width = 12
+l Height = 12
+l ID = 305
+
+b Toggle = 1
+
+l XTextLocation = 327 // text should be part of button too
+l YTextLocation = 74
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26524
+l Font = 26525  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button6] // check box-hardware rasterizer
+l XLocation = 26
+l YLocation = 106
+l Width = 12
+l Height = 12
+l ID = 308
+
+
+b Toggle = 1
+
+l XTextLocation = 46 // text should be part of button too
+l YTextLocation = 104
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26518
+l Font = 26517  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button7] // check box-use async mouse
+l XLocation = 304
+l YLocation = 106
+l Width = 12
+l Height = 12
+l ID = 307
+
+b Toggle = 1
+
+l XTextLocation = 327 // text should be part of button too
+l YTextLocation = 104
+l TextWidth = 246
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26526
+l Font = 26527  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+[Button8] // reset button
+l XLocation = 449
+l YLocation = 254
+l Width = 150
+l Height = 32
+
+l XTextLocation = 460
+l YTextLocation = 260
+l TextWidth = 127
+l TextHeight = 19
+l color  = 0xffff0000
+b TextOutline = FALSE
+
+l ID = 309
+l TextID = 26536
+l Font = 26537 // use AgencyFB14
+
+l HelpCaption = 27103
+l HelpDesc = 26609
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 150
+l VHeight = 32
+
+l UNormal = 80
+l VNormal = 210
+
+l UPressed = 80
+l VPressed = 210
+
+l UHighlight = 80
+l VHighlight = 210
+
+l UDisabled = 80
+l VDisabled = 210
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffAF0000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffAF0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffAF0000
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffAF0000
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // "RESOLUTION" header 
+l XLocation = 26
+l YLocation = 176
+l Width = 282
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26529 // use agency fb 11
+l TextID = 26528
+l Alignment = 0	
+
+
+[Text1] // help text
+l XLocation = 51
+l YLocation = 306
+l Width = 505
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26562 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+[Text2] // "VIDEO CARD" header 
+l XLocation = 304
+l YLocation = 176
+l Width = 282
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26624 // use agency fb 11
+l TextID = 26623
+l Alignment = 0	
+
+
+
+
+
+[Rects]
+l Rectcount = 10
+
+[Rect0] // pilot videos
+l XLocation = 24
+l YLocation = 14
+l Width = 94
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26608
+
+[Rect1] // shadows
+l XLocation = 24
+l YLocation = 44
+l Width = 77
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26598
+
+[Rect2] // local shadows
+l XLocation = 24
+l YLocation = 73
+l Width = 114
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26607
+
+[Rect3] // hardware rasterizer
+l XLocation = 24
+l YLocation = 104
+l Width = 157
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26601
+
+[Rect4] // detail textures
+l XLocation = 302
+l YLocation = 14
+l Width = 122
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26599
+
+[Rect5] // high object detail
+l XLocation = 302
+l YLocation = 43
+l Width = 133
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26600
+
+
+[Rect6] // nonweapon effects
+l XLocation = 302
+l YLocation = 73
+l Width = 146
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26606
+
+[Rect7] // hardware mouse update
+l XLocation = 302
+l YLocation = 104
+l Width = 173
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26604
+
+[Rect8] // resolution
+l XLocation = 24
+l YLocation = 175
+l Width = 265
+l Height = 44
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26602
+
+[Rect9] // video card
+l XLocation = 302
+l YLocation = 175
+l Width = 265
+l Height = 44
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26625
+
+
+
+
+
+
+
+
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 2
+
+
+
+[ComboBox0] // resolution drop down
+l XLocation = 26
+l YLocation = 195
+st FileName = "mcl_options_combobox0.fit"
+
+
+[ComboBox1] // video card selection drop down
+l XLocation = 304
+l YLocation = 195
+st FileName = "mcl_options_combobox2.fit"
+
+
+
+
+
+FITend 

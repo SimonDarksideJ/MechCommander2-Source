@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BD21F31B9FCDE0B0F2F52E14CD8CA817" />
+  <Asset Name="..\Oak2dead.ini" Type="Physical" Author="franksav" FileSize="315" ModificationTime="2006-03-03T01:28:37.9767024-08:00" CRC="79ADBCF1F732A5867F68A2B198C6D973" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="oak2dead.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="oak2deadL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="oak2deadL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="oak2deadX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stumproots.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumprootsX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Dead Oak" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

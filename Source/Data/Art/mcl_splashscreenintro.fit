@@ -1,0 +1,155 @@
+FITini 
+
+// 	THIS GOES AFTER MS LOGO ANIMATIONS, ETC, AND BEFORE THE SPLASH SCREEN
+//      SPLASH SCREEN SHOULD BE LOADED UP UNDERNEATH THIS SO FADE-OUT REVEALS SPLASH SCREEN
+//      WHEN ANIMATIONS FINISH, BRING UP MAIN MENU GADGET
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[AnimObjects]
+l Count = 3  // ONE  statics, two rect
+
+
+
+
+
+
+[AnimObject0]
+l XLocation = 0
+l XLocation = 0
+l Width = 801
+l Height = 601
+l Color = 0xff000000 
+st Animation = "rectfade"
+
+[rectfade]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 6
+
+f Time0 = 0
+l Pos0X = -1
+l Pos0Y = -1
+l Color0 = 0xff000000
+  
+f Time1 = 3.5
+l Pos1X = -1
+l Pos1Y = -1
+l Color1 = 0xff000000
+
+f Time2 = 5.5
+l Pos2X = -1
+l Pos2Y = -1
+l Color2 = 0xff000000
+
+f Time3 = 8
+l Pos3X = -1
+l Pos3Y = -1
+l Color3 = 0xff000000
+
+f Time4 = 11
+l Pos4X = -1
+l Pos4Y = -1
+l Color4 = 0x00000000
+
+f Time5 = 12
+l Pos5X = -1
+l Pos5Y = -1
+l Color5 = 0x00000000
+
+
+
+
+
+
+[AnimObject1] //  logo
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_splashscreenintro_1.tga"
+st Animation = "logofade0"
+
+
+[logofade0]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 5
+
+f Time0 = 0
+l Pos0X = 272
+l Pos0Y = 172
+l Color0 = 0x00ffffff 
+  
+f Time1 = 3.5
+l Pos1X = 272
+l Pos1Y = 172
+l Color1 = 0x00ffffff
+
+f Time2 = 5.5
+l Pos2X = 272
+l Pos2Y = 172
+l Color2 = 0xffffffff
+
+f Time3 = 8.0
+l Pos3X = 272
+l Pos3Y = 172
+l Color3 = 0xffffffff
+
+f Time4 = 11.0
+l Pos4X = 272
+l Pos4Y = 172
+l Color4 = 0x00ffffff
+
+f Time5 = 12.0
+l Pos5X = 272
+l Pos5Y = 172
+l Color5 = 0x00ffffff
+
+
+
+
+
+
+
+[AnimObject2]
+l XLocation = 0
+l XLocation = 0
+l Width = 801
+l Height = 601
+l Color = 0xff000000 
+st Animation = "rect2fade"
+
+[rect2fade]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 2
+
+f Time0 = 0
+l Pos0X = -1
+l Pos0Y = -1
+l Color0 = 0xffffffff
+  
+f Time1 = 3.0
+l Pos1X = -1
+l Pos1Y = -1
+l Color1 = 0x00ffffff
+
+
+
+
+
+
+
+
+
+
+
+FITend 
+

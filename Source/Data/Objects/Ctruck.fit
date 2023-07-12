@@ -1,0 +1,61 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				VEHICLE:	  Salvage Truck
+//				BASE ID:		500
+//
+//---------------------------------------------------------------------------
+
+// This is a sample MechBase Data File.
+[ObjectClass]
+l ObjectTypeNum = 3
+
+[Header]
+st FileType							= "GroundVehicleType"
+
+[General]
+ul ID								= 500				// ID number for this mech type
+uc Alignment						= 0					// 0 = Inner Sphere, 1 = Clan
+st Name								= "Salvage"		// vehicle type description
+uc Chassis							= 0					// Standard Chassis		
+f TonnageClass						= 40.0				// 80 tons
+
+[InternalStructure]
+//------------------------------------------------------------------------
+// In theory, the following should be dictated by the MaxTonnage, correct?
+uc Front							= 17
+uc Left								= 17
+uc Right							= 17
+uc Rear								= 17
+uc Turret							= 17
+
+[ObjectType]
+st Name 							= "Salvage Truck"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 43			// ID number for this mech type
+l Appearance						= 0x050001B6
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 200			// Number of damage points before BOOM!
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 25			// Extent Radius in Meters
+l IconNumber						= 0
+[Control]
+ul Type								= 2				//player = 1, ai = 2, net = 3
+ul DataType							= 1				//mech control data = 1
+
+[Dynamics]
+ul Type								= 2				//Mech dynamics = 1
+
+[VehicleDynamics]
+l maxTurretYawRate					= 0
+l maxTurretYaw						= 0
+l maxVehicleYawRate					= 360
+f maxAccel							= 15.0
+f maxVelocity						= 15.0
+
+[AudioVisual]
+st Anim =							"animString"
+uc[3] MoveAnimSpeed =				0,2,1
+
+FITEnd

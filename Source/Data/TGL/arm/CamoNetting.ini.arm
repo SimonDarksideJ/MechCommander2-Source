@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7C0C0A85E015078F201558D1FF7866B2" />
+  <Asset Name="..\CamoNetting.ini" Type="Physical" Author="franksav" FileSize="342" ModificationTime="2006-03-03T01:28:15.0080994-08:00" CRC="6E1B225078890CF67CD7A892A8F4E2E9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="CamoNetting.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="CamoNettingL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="CamoNettingL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="CamoNettingX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="CamoNettingdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="CamoNettingdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Camo Netting" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

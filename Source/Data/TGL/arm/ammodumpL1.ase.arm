@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9EEC6DDF2EBEF5DFD6B85E072541D4E1" />
+  <Asset Name="..\ammodumpL1.ase" Type="Physical" Author="ngauvin" FileSize="46280" ModificationTime="2006-02-01T10:54:34.2012431-08:00" CRC="661C309F1C5AF098985E8CB8268841B6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_AmmoDumpL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

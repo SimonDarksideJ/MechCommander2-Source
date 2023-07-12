@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="591E883A2EE8049B00817EF3F9A0175C" />
+  <Asset Name="..\smallbarricade.ini" Type="Physical" Author="franksav" FileSize="203" ModificationTime="2006-03-03T01:28:50.6484963-08:00" CRC="836DCEE17CF7513AE64418869909323F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="smallbarricade.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="smallbarricadedam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Barricade" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

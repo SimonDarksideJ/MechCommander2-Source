@@ -1,0 +1,98 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name					="AeroSpotter"
+st AppearanceName				="AeroSpotter"
+l ExplosionObject				=700
+l DestroyedObject				=0
+f ExtentRadius				=20.000000
+
+[General]
+//Read by Type
+uc Chassis					=0
+b MineLayer					=FALSE
+b MineSweeper				=FALSE
+b AeroSpaceSpotter			=TRUE
+l RefitPoints				=0
+f ExplosionRadius				=150.0
+f ExplosionDamage				=9.0
+
+//Read by instance
+l DescIndex					=30618
+f CurTonnage				=20 
+c Status					=0 
+l BattleRating				=25 
+l EncyclopediaID 				=45215
+l IconIndex					=5
+
+[InternalStructure]
+uc Front					=1
+uc Rear					=1
+uc Left					=1
+uc Right					=1
+uc Turret					=1
+
+[VehicleDynamics]
+f MaxAccel					=5.000000
+f MaxVelocity				=15.000000
+l MaxTurretYawRate			=150
+l MaxTurretYaw				=360
+l MaxVehicleYawRate			=720
+
+[Front]
+uc CurInternalStructure 		=1 
+uc MaxArmorPoints				=33 
+uc CurArmorPoints 			=33
+
+[Left]
+uc CurInternalStructure 		=1 
+uc MaxArmorPoints				=33 
+uc CurArmorPoints 			=33 
+
+[Right]
+uc CurInternalStructure 		=1 
+uc MaxArmorPoints 			=33 
+uc CurArmorPoints 			=33
+
+[Rear]
+uc CurInternalStructure 		=1 
+uc MaxArmorPoints 			=33 
+uc CurArmorPoints 			=33 
+
+[Turret]
+uc CurInternalStructure 		=1 
+uc MaxArmorPoints 			=33
+uc CurArmorPoints 			=33 
+
+[InventoryInfo]
+uc NumOther 				=4 
+uc NumWeapons 				=1
+uc NumAmmo 					=0
+
+// Inventory Items -- Other
+
+[Item:0]
+uc MasterID 				=1		//Engine         
+										
+[Item:1]    					                                
+uc MasterID 				=6              //Cockpit       
+										
+[Item:2]    					                                
+uc MasterID 				=35             //LifeSupport   
+
+[Item:3]
+uc MasterID					=36		//Vehicle Sensor
+										
+// Inventory Items -- Weapons                                                   
+										
+[Item:4]                  //DO NOT REMOVE!!!! -- It needs a weapon or it won't attack.  It will never fire it!  Trust me! -fs               
+uc MasterID 					=140        //LAC
+																
+// Inventory Items -- Ammo                                                      
+
+
+FITend 
+

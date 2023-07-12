@@ -1,0 +1,259 @@
+//****************************************************************************************//
+//
+//	BOB BRAIN
+//
+//	
+//
+//****************************************************************************************//
+
+module harasser5 : integer; //changed from BobBrain
+
+//****************************************************************************************//
+
+
+	const
+
+		PILOT_EVENT_NONE = -1;
+		PILOT_EVENT_TARGETED = 0;
+		PILOT_EVENT_HIT = 1;
+		PILOT_EVENT_DAMAGED = 2;
+		PILOT_EVENT_FRIENDLY_KILLED = 3;
+		PILOT_EVENT_FRIENDLY_CRIPPLED = 4;
+		PILOT_EVENT_FRIENDLY_DESTROYED = 5;
+		PILOT_EVENT_CRIPPLED = 6;
+		PILOT_EVENT_DESTROYED = 7;
+		PILOT_EVENT_WITHDRAWN = 8;
+		PILOT_EVENT_MORALE_BREAK = 9;
+		PILOT_EVENT_COLLISION = 10;
+		PILOT_EVENT_GUARD_RADIUS_BREACH = 11;
+		PILOT_EVENT_TARGET_KILLED = 12;
+		PILOT_EVENT_MATE_FIRED_WEAPON = 13;
+		PILOT_EVENT_PLAYER_ORDER = 14;
+		PILOT_EVENT_NO_MOVEPATH = 15;
+		PILOT_EVENT_GATE_CLOSING = 16;
+
+		TARGET_PRIORITY_NONE = 0;
+		TARGET_PRIORITY_GAMEOBJECT = 1;
+		TARGET_PRIORITY_MOVER = 2;
+		TARGET_PRIORITY_BUILDING = 3;
+		TARGET_PRIORITY_CURTARGET = 4;
+		TARGET_PRIORITY_TURRET = 5;
+		TARGET_PRIORITY_TURRET_CONTROL = 6;
+		TARGET_PRIORITY_GATE = 7;
+		TARGET_PRIORITY_GATE_CONTROL = 8;
+		TARGET_PRIORITY_SALVAGE = 9;
+		TARGET_PRIORITY_MECHBAY = 10;
+		TARGET_PRIORITY_LOCATION = 11;
+		TARGET_PRIORITY_EVENT_TARGETED = 12;
+		TARGET_PRIORITY_EVENT_HIT = 13;
+		TARGET_PRIORITY_EVENT_DAMAGED = 14;
+		TARGET_PRIORITY_EVENT_MATE_DIED = 15;
+		TARGET_PRIORITY_EVENT_FRIENDLY_DISABLED = 16;
+		TARGET_PRIORITY_EVENT_FRIENDLY_DESTROYED = 17;
+		TARGET_PRIORITY_EVENT_FRIENDLY_WITHDRAWS = 18;
+
+		PILOT_STATE_IDLE = 0;
+		PILOT_STATE_MISSION = 1;
+		PILOT_STATE_RETREAT = 2;
+		PILOT_STATE_PATROL = 3;
+		PILOT_STATE_ATTACK = 4;
+
+		CONTACT_CRITERIA_NONE = 0;
+		CONTACT_CRITERIA_ENEMY = 1;
+		CONTACT_CRITERIA_VISUAL = 2;
+		CONTACT_CRITERIA_GUARD_BREACH = 4;
+		CONTACT_CRITERIA_NOT_CHALLENGED = 8;
+		CONTACT_CRITERIA_SENSOR = 16;
+		CONTACT_CRITERIA_VISUAL_OR_SENSOR = 32;
+
+		CONTACT_SORT_NONE = 0;
+		CONTACT_SORT_CV = 1;
+		CONTACT_SORT_DISTANCE = 2;
+
+		MAX_PATROL_POINTS = 20;
+		PATROL_TYPE_LINEAR = 0;
+		PATROL_TYPE_LOOPING = 1;
+		PATROL_DIRECTION_FORWARD = 0;
+		PATROL_DIRECTION_BACKWARD = 1;
+
+		TACORDER_PARAM_NONE = 0;
+		TACORDER_PARAM_RUN = 1;
+		TACORDER_PARAM_WAIT = 2;
+		TACORDER_PARAM_FACE_OBJECT = 4;
+		TACORDER_PARAM_LAY_MINES = 8;
+		TACORDER_PARAM_PURSUE = 16;
+		TACORDER_PARAM_OBLITERATE = 32;
+		TACORDER_PARAM_ESCAPE_TILE = 64;
+		TACORDER_PARAM_SCAN = 128;
+		TACORDER_PARAM_ATTACK_DFA = 256;
+		TACORDER_PARAM_RANGE_RAMMING = 1024;
+		TACORDER_PARAM_RANGE_LONGEST = 2048;
+		TACORDER_PARAM_RANGE_OPTIMUM = 4096;
+		TACORDER_PARAM_RANGE_SHORT = 8192;
+		TACORDER_PARAM_RANGE_MEDIUM = 16384;
+		TACORDER_PARAM_RANGE_LONG = 32768;
+		TACORDER_PARAM_AIM_HEAD = 65536;
+		TACORDER_PARAM_AIM_LEG = 131072;
+		TACORDER_PARAM_AIM_ARM = 262144;
+		TACORDER_PARAM_DONT_SET_ORDER = 524288;
+
+	var
+
+		static real[3]		startPosition;
+		static PatrolState	patrolState1;
+		static PatrolPath	patrolPath1;
+	
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//-------------------------------------------
+		// Set up the pilot's target priority list...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 325, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 325, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR);
+		//setTargetPriority(2, TARGET_PRIORITY_TURRET, 0, 325, 0);
+		//setTargetPriority(3, TARGET_PRIORITY_TURRET_CONTROL, 0, 325, 0);
+		//setTargetPriority(5, TARGET_PRIORITY_GATE_CONTROL, 0, 0, 0);
+		getObjectPosition(-1, startPosition);
+		setPilotState(PILOT_STATE_PATROL);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		//-------------------------
+		// Setup the Patrol here...
+		patrolState1[0] = PATROL_TYPE_LOOPING;
+		patrolState1[1] = 2; //num points
+		patrolState1[2] = -1; //num cycles
+		patrolState1[3] = PATROL_DIRECTION_FORWARD;
+		patrolState1[4] = -1; //reset cur point
+		patrolState1[5] = -1; //reset cur cycle
+		patrolPath1[0, 0] = -1642.667;
+		patrolPath1[0, 1] = 2624.000;
+		patrolPath1[1, 0] = -1258.667; 
+		patrolPath1[1, 1] = 2624.000; 
+
+		//setDebugWindow(-1, -1);
+				
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+order update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+
+	code
+
+		//---------------------------------------------------------
+		// First, process the pilot events since the last update...
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						endcase;
+					case PILOT_EVENT_HIT:
+						newAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+						endcase;
+					case PILOT_EVENT_DAMAGED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_KILLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_DESTROYED:
+						endcase;
+					case PILOT_EVENT_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_DESTROYED:
+						endcase;
+					case PILOT_EVENT_WITHDRAWN:
+						endcase;
+					case PILOT_EVENT_MORALE_BREAK:
+						endcase;
+					case PILOT_EVENT_COLLISION:
+						endcase;
+					case PILOT_EVENT_GUARD_RADIUS_BREACH:
+						endcase;
+					case PILOT_EVENT_TARGET_KILLED:
+						endcase;
+					case PILOT_EVENT_MATE_FIRED_WEAPON:
+						endcase;
+					case PILOT_EVENT_PLAYER_ORDER:
+						endcase;
+					case PILOT_EVENT_NO_MOVEPATH:
+						endcase;
+					case PILOT_EVENT_GATE_CLOSING:
+						endcase;
+					case PILOT_EVENT_TARGETED:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		//----------------------------------
+		// Now, go through our state code...
+		thinking = TRUE;
+		while (thinking) do
+			thinking = FALSE;
+			pilotState = getPilotState;
+			switch (pilotState)
+				case PILOT_STATE_IDLE:
+					endcase;
+				case PILOT_STATE_PATROL:
+					setDebugString(-1, 3, " PATROLLING ");
+					patrol(patrolState1, patrolPath1);
+					setPilotState(PILOT_STATE_MISSION);
+					endcase;
+				case PILOT_STATE_ATTACK:
+					setDebugString(-1, 3, " ATTACKING ");
+					setDebugString(-1, 4, "                  ");
+					newAttack(0, TACORDER_PARAM_PURSUE);
+					setPilotState(PILOT_STATE_PATROL);
+					endcase;
+				case PILOT_STATE_MISSION:
+					setDebugString(-1, 3, " MISSIONING ");
+					setDebugString(-1, 4, "                  ");
+					newScan(0, CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_ENEMY);
+					newPower(TRUE);
+					//newAttack(0, TACORDER_PARAM_SCAN);
+					newMoveToObject(0, 0);
+					setPilotState(PILOT_STATE_RETREAT);
+					thinking = TRUE;
+					endcase;
+				case PILOT_STATE_RETREAT:
+					setDebugString(-1, 3, " RETREATING ");
+					setDebugString(-1, 4, "                  ");
+					newMoveTo(startPosition, 0);
+					newPower(FALSE);
+					setPilotState(PILOT_STATE_IDLE);
+					thinking = TRUE;
+					endcase;
+			endswitch;
+		endwhile;
+
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+	code
+
+		update;
+	
+endmodule.
+
+//****************************************************************************************

@@ -1,0 +1,32 @@
+FITini
+
+// This is the LongTom Hit explosion
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 			= "LongTom"		// Text string giving a descriptive name  (only 8 chars long!!)
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject		= -1			// Object Class Number of explosion for Mech
+l DestroyedObject		= 0			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 0			// Extent Radius in Meters
+
+[ExplosionData]
+ul DmgLevel			= 0
+ul SoundEffectId		= 35
+f DamageChunkSize		= 5.0
+
+[LightData]
+f LightMinMaxRadius		= 50.0
+f LightMaxMaxRadius		= 75.0
+f LightOutMinRadius		= 125.0
+f LightOutMaxRadius		= 250.0
+ul LightRGB			= 0x00ffffff
+f MaxIntensity			= .5
+f MinIntensity			= 0.05
+f Duration			= 3.0
+
+FITend
+
+

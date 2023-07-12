@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F0301E9FB0C7A2A949FA9D225E4A43D6" />
+  <Asset Name="..\rock_gformation2.ini" Type="Physical" Author="franksav" FileSize="306" ModificationTime="2006-03-03T01:28:41.632929-08:00" CRC="6E8EB0080719669D50CFA0C88395DA60" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="rock_GFormation2.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="rock_GFormation2L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="rock_GFormation2L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_GFormation2X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Grass Rock Formation 2" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

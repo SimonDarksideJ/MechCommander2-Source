@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DBDC0254E68BB4B2D71711FD5D213405" />
+  <Asset Name="..\runwaypoint.ini" Type="Physical" Author="franksav" FileSize="138" ModificationTime="2006-03-03T01:28:42.8204214-08:00" CRC="C11D1F229400A516D08517DB625F6C09" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="runwaypoint.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

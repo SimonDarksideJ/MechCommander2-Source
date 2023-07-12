@@ -1,0 +1,1722 @@
+/*------------------------------------------------------------------------------------**
+**                                                                                    **
+** 	 Temp Orders Library	For Use with Universal Brain in MechCommander (TM)        **
+**                                                                                    **
+**        Copyright 1997 - FASA Interactive Technologies, Inc. (AKA FIT)              **
+**                                                                                    **
+**   DUPLICATION OR DISTRIBUTION OF THIS FILE IN WHOLE OR PART BY ANY PERSON OR       **
+**	 ORGANIZATION OTHER THAN FIT OR ITS AGENTS IS LIMITED TO NON-COMMERCIAL           **
+**   ENTERPRISE. VIOLATORS WILL BE PROSECUTED.										  **
+**------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------**
+**																				 **
+**																				 **
+** The following functions are used to transfer data between warrior and library **
+**																				 **
+**																				 **
+**-------------------------------------------------------------------------------*/
+//----------------------------------------------------------------------------------
+// BUILD TARGET LIST
+//----------------------------------------------------------------------------------
+function BuildTargetList;
+
+	var
+		integer	x;
+		integer currentCell;
+
+	code
+
+	currentCell = FIRST_TARGET_CELL - 1;
+
+	TargetsOnList = getIntegerMemory(I_TARGETS_TO_REMEMBER);
+
+	for x = 0 to (TargetsOnList - 1) do
+		currentCell = currentCell + 1;
+		TargetList[x] = getIntegerMemory(currentCell);
+		currentCell = currentCell + 1;
+		TargetListRatings[x] = getRealMemory(currentCell);
+	endfor;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// INIT ORDERS
+//----------------------------------------------------------------------------------
+function initOrders;
+
+	code
+
+		Me = getId;
+		CurrentTarget = getTarget(CUR_OBJECT_ID);
+
+		MoveSpeed = (getIntegerMemory(I_MOVE_SPEED) == FAST);
+		ChallengeSetting = getIntegerMemory(I_CHALLENGE_SYSTEM);
+		PermitFighting = (getIntegerMemory(I_PERMIT_FIGHTING) == YES);
+		StickToTarget = (getIntegerMemory(I_STICK_TO_TARGET) == YES);
+		EngageRadius = getRealMemory(R_ENGAGE_RADIUS);
+		DisengageRadius = getRealMemory(R_DISENGAGE_RADIUS);
+		FixEngageZone = (getIntegerMemory(I_FIX_ENGAGE_ZONE) == YES);
+		MyPoint[0] = getRealMemory(R_ENGAGE_X);
+		MyPoint[1] = getRealMemory(R_ENGAGE_Y);
+		MyPoint[2] = 0.0;
+		MinAction = getRealMemory(R_MIN_ACTION);
+		IdentifyContacts = (getIntegerMemory(I_IDENTIFY_CONTACTS) == YES);
+		MoveToEngage = (getIntegerMemory(I_MOVE_TO_ENGAGE) == YES);
+		MoveStatus = getIntegerMemory(I_MOVE_STATUS);
+		GuardMod = getRealMemory(R_GUARD_MOD);
+		IgnoreNonTargets = (getIntegerMemory(I_IGNORE_NON_TARGETS) == YES);
+		AttackInActive = (getIntegerMemory(I_ATTACK_INACTIVE) == YES);
+		myBR = getCurrentBRValue(CUR_OBJECT_ID);
+		CurrentTargetMod = getRealMemory(R_CURRENT_TARGET_MOD);
+		GuardMod = getRealMemory(R_GUARD_MOD);
+		GuardObject = getIntegerMemory(I_GUARD_OBJECT);
+		ConcentrateFireMod = getRealMemory(R_CONCENTRATE_FIRE_MOD);
+
+		BuildTargetList;
+		getFireRanges(FireRange);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// DEFAULT BRAIN
+//----------------------------------------------------------------------------------
+function defaultBrain;
+
+	code
+
+//		setIntegerMemory(I_CURRENT_ORDER,DEFAULT_CURRENT_ORDER);			// 0
+		setRealMemory(R_MIN_ACTION, DEFAULT_MIN_ACTION);					// 1
+		setRealMemory(R_ENGAGE_RADIUS,DEFAULT_ENGAGE_RADIUS);				// 2
+		setRealMemory(R_DISENGAGE_RADIUS,DEFAULT_DISENGAGE_RADIUS);			// 3
+
+		Me = getID;
+
+		if (Me >= CLAN_VEHICLE0_STAR0) then
+			setIntegerMemory(I_ALIGNMENT, CLAN);							// 4
+		else
+			setIntegerMemory(I_ALIGNMENT, INNER_SPHERE);					// 4
+		endif;
+
+		setIntegerMemory(I_IGNORE_NON_TARGETS,DEFAULT_IGNORE_NON_TARGETS);	// 5
+		setIntegerMemory(I_IDENTIFY_CONTACTS,DEFAULT_IDENTIFY_CONTACTS);	// 6
+		setIntegerMemory(I_MOVE_TO_ENGAGE,DEFAULT_MOVE_TO_ENGAGE);			// 7
+		setIntegerMemory(I_PERMIT_FIGHTING,DEFAULT_PERMIT_FIGHTING);		// 8
+		setIntegerMemory(I_MOVE_SPEED,DEFAULT_MOVE_SPEED);					// 9
+		setRealMemory(R_MIN_DISTANCE,DEFAULT_MIN_DISTANCE);					// 10
+		setIntegerMemory(I_FIX_ENGAGE_ZONE,DEFAULT_FIX_ENGAGE_ZONE);		// 11
+
+		getObjectPosition(CUR_OBJECT_ID, aPoint);
+		setRealMemory(R_ENGAGE_X,aPoint[0]);								// 12
+		setRealMemory(R_ENGAGE_Y,aPoint[1]);								// 13
+
+		setIntegerMemory(I_FIGHT_PRECEDENCE,DEFAULT_FIGHT_PRECEDENCE);		// 14
+		setRealMemory(R_CURRENT_TARGET_MOD,DEFAULT_CURRENT_TARGET_MOD);		// 15
+		setRealMemory(R_GUARD_MOD,DEFAULT_GUARD_MOD);						// 16
+		setIntegerMemory(I_MOVE_STATUS,DEFAULT_MOVE_STATUS);				// 17
+		setIntegerMemory(I_HITS,DEFAULT_HITS);								// 18
+		setIntegerMemory(I_TARGETS_TO_REMEMBER,DEFAULT_TARGETS_TO_REMEMBER); // 19
+		setIntegerMemory(I_CHALLENGE_SYSTEM,DEFAULT_CHALLENGE_SYSTEM);		// 20
+		setIntegerMemory(I_STICK_TO_TARGET,DEFAULT_STICK_TO_TARGET);		// 21
+		setIntegerMemory(I_PATH_STEP,DEFAULT_PATH_STEP);					// 22
+		setIntegerMemory(I_DIRECTION,DEFAULT_DIRECTION);					// 23
+		setIntegerMemory(I_PATH_CYCLES,DEFAULT_PATH_CYCLES);				// 24
+		setIntegerMemory(I_ATTACK_INACTIVE,DEFAULT_ATTACK_INACTIVE);		// 25
+		setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);				// 26
+		setRealMemory(R_CONCENTRATE_FIRE_MOD,DEFAULT_CONCENTRATE_FIRE_MOD);	// 27
+
+		// Call initOrders to reset global variables as well
+		initOrders;
+
+endfunction;
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Support functions                                                              **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// CHALLENGE
+//----------------------------------------------------------------------------------
+
+function challenge (integer targetId);
+
+	code
+
+		if (ChallengeSetting == CHALLENGE_ON) then
+			setChallenger(targetId, CUR_OBJECT_ID);
+		endif;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// BREAK CHALLENGE
+//----------------------------------------------------------------------------------
+
+function breakChallenge (integer targetId);
+
+	code
+
+		setChallenger(targetId, 0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// GET TARGET MODIFIER
+//----------------------------------------------------------------------------------
+
+function getTargetModifier(integer contactId,@boolean OnTargetList) : real;
+
+	var
+
+	   integer x;
+
+	code
+
+		OnTargetList = FALSE;
+		if (TargetsOnList < 1) then
+			return(1.0);
+		else
+			for x = 0 to (TargetsOnList - 1) do
+				if (TargetList[x] == contactId) then
+					OnTargetList = TRUE;
+					return(TargetListRatings[x]);
+				endif;
+			endfor;
+			return(1.0);
+		endif;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// NEW TARGET
+//----------------------------------------------------------------------------------
+function NewTarget(integer TargetID, real TargetRating) : boolean;
+
+	var
+
+		integer x;
+		integer y;
+		integer TargetClass;
+
+	code
+
+		if (TargetsOnList > 0) then
+			// First check if it's already on list and modify it
+			for x = 0 to (TargetsOnList - 1) do
+				if (TargetList[x] == TargetID) then
+					if (TargetRating == REMOVE_FROM_LIST) then
+						// What about buildings?
+						// Do I need to setPotentialContact for me (as opposed to team)?
+						if (x == (TargetsOnList - 1)) then
+							TargetsOnList = TargetsOnList - 1;
+							setIntegerMemory(I_TARGETS_TO_REMEMBER,TargetsOnList);
+							return(TRUE);
+						else
+							for y = x to (TargetsOnList - 2) do
+								TargetList[y] = TargetList[y + 1];
+								TargetListRatings[y] = TargetListRatings[y + 1];																
+							endfor;
+							TargetsOnList = TargetsOnList - 1;
+							setIntegerMemory(I_TARGETS_TO_REMEMBER,TargetsOnList);
+							return(TRUE);
+						endif;
+					endif;
+					TargetListRatings[x] = TargetRating;
+				endif;
+			endfor;
+			// Check if list is too big
+			if (TargetsOnList >= TARGET_LIST_SIZE) then
+				print("TargetListSize exceeded.  Target ignored.");
+				return(FALSE);
+			endif;
+		endif;
+					
+		// Now add it to the list
+		if (TargetRating <> REMOVE_FROM_LIST) then
+			TargetList[TargetsOnList] = TargetID;
+			TargetListRatings[TargetsOnList] = TargetRating;
+
+			setIntegerMemory(FIRST_TARGET_CELL + TargetsOnList,TargetID);
+			setRealMemory(FIRST_TARGET_CELL + TargetsOnList + 1,TargetRating);
+
+			TargetsOnList = TargetsOnList + 1;
+			setIntegerMemory(I_TARGETS_TO_REMEMBER,TargetsOnList);
+			// Set Potential Contact if a building
+			TargetClass = ObjectClass(TargetID);
+			if ((TargetClass <> MECH_CLASS) AND (TargetClass <> VEHICLE_CLASS) AND (TargetClass <> ELEMENTAL_CLASS)) then
+				setPotentialContact(TargetID,3);
+				objectChangeSides(TargetID,1);
+			endif;
+		endif;
+
+		return(TRUE); // There may be times when a brain removes from list when not
+					  // on list just in case.  So don't return FALSE if it does.
+
+endfunction;
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Event Handler Functions                                                        **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// HANDLE TARGET OF WEAPON FIRE
+//----------------------------------------------------------------------------------
+function handleTargetOfWeaponFire;
+
+	var
+		IntList		triggers;
+		integer		numAttacks;
+
+	code
+
+		numAttacks = getAlarmTriggers(triggers);
+		setIntegerMemory(I_HITS,getIntegerMemory(I_HITS) + numAttacks);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// HANDLE NO MOVE PATH
+//----------------------------------------------------------------------------------
+function handleNoMovePath;
+
+	var
+		IntList		triggers;
+
+	code
+
+		getAlarmTriggers(triggers);
+		if (getIntegerMemory(I_MOVE_STATUS) == MOVING) then
+			if (triggers[0] == Rtn_NO_SR_PATH) then // SHORT_RANGE_PATH_BLOCKED
+				setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+			else
+				if (triggers[0] == Rtn_LR_FROM_BLOCKED) then
+					print("Long Range Path from Blocked Tile");
+					setIntegerMemory(I_MOVE_STATUS,MOVE_IMPOSSIBLE);
+				else
+					if (triggers[0] == Rtn_CLOSE_ENOUGH) then
+						print("Close Enough");
+						setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+					else
+						if (triggers[0] == Rtn_INVALID_GOAL) then
+							print("Invalid Goal");
+							setIntegerMemory(I_MOVE_STATUS,MOVE_IMPOSSIBLE);
+						else
+							if (triggers[0] == Rtn_TIME_OUT) then
+								print("Time Out");
+								setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+							else
+								setIntegerMemory(I_MOVE_STATUS,MOVE_IMPOSSIBLE);
+							endif;
+						endif;
+					endif;
+				endif;
+			endif;
+		endif;
+
+endfunction;
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Heuristic functions                                                            **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//---------------------------------------------------------------------------
+// CONTACT ACTION RATING
+//---------------------------------------------------------------------------
+function contactActionRating (integer contactHandle) : real;
+
+	var
+
+		integer			contactId;
+		real			actionRating;
+		real			BR;
+		real			range;
+		real			angle;
+		integer			ObjClass;
+		integer			ObjStatus;
+		real			NullRating;
+		integer			contactTarget;
+		boolean			OnTargetList;
+		integer			NumMates;
+		Intlist			Mates;
+		integer			i;
+
+	code
+
+		selectContact(1, contactHandle);
+
+		contactId = getContactId;
+		NullRating = 0.0;
+
+		// If dead, ignore it
+		ObjStatus = objectStatus(contactId);
+		if ((ObjStatus == OBJECT_STATUS_DISABLED) OR (ObjStatus == OBJECT_STATUS_DESTROYED) OR (ObjStatus == -1)) then
+			return (NullRating); // 0
+		endif;
+
+		ObjClass = objectClass(contactId);
+
+		//--------------------------------------------
+		// BUILDINGS
+
+		if ((ObjClass <> MECH_CLASS) AND (ObjClass <> VEHICLE_CLASS) AND (ObjClass <> ELEMENTAL_CLASS)) then
+			// (base value of buildings is 50) ( designer specified modifier
+			actionRating = 50 * getTargetModifier(contactId,OnTargetList);
+			// If not on target list and ignore non targets, bug out
+			if ((IgnoreNonTargets) AND (NOT OnTargetList)) then
+				return(NullRating);
+			else
+				// Modify slightly for range (so they choose the closest of 2 buildings)
+				getContactRelativePosition(range, angle);
+				if (range <= FireRange[FIRERANGE_SHORT]) then
+					actionRating = actionRating * 4;
+				else
+					if (range <= FireRange[FIRERANGE_MEDIUM]) then
+						actionRating = actionRating * 3;
+					else
+						if (range <= FireRange[FIRERANGE_LONG]) then
+							actionRating = actionRating * 2;
+						else
+							actionRating = actionRating * 1;
+						endif;
+					endif;
+				endif;
+				return(actionRating);
+			endif;
+		endif;
+
+		// Get target if not a building (otherwise crash)
+		contactTarget = getTarget(contactID);
+
+		//-------------------------------------------------
+		// Start off with its base Rating (default Min Action * any target list modifier)
+		actionRating = DEFAULT_MIN_ACTION * getTargetModifier(contactId,OnTargetList);
+
+		// If I ignore Non Specified Targets and Not on Target List, bug out
+		if ((IgnoreNonTargets) AND (NOT OnTargetList)) then
+			return(NullRating);
+		endif;
+
+
+		// If InActive, ignore it unless allowed to attack inactive units, but halve its rating
+		if (getObjectActive(contactID) == 0) then
+			if (AttackInActive) then
+				actionRating = actionRating * 0.5;
+			else
+				return (NullRating); // 0
+			endif;
+		else
+			// else IF SHUT DOWN, reduce its rating
+			if ((ObjStatus == OBJECT_STATUS_SHUTTING_DOWN) OR (ObjStatus == OBJECT_STATUS_SHUTDOWN)) then
+				actionRating = actionRating * 0.8;
+			endif;
+		endif;
+
+		// Bonus if current target (CurrentTargetMod)
+		if (contactId == CurrentTarget) then
+			actionRating = actionRating * CurrentTargetMod;
+		endif;
+
+		// Bonus if targeting GuardObject (GuardMod)
+
+		if (contactTarget == GuardObject) then
+			actionRating = actionRating * GuardMod;
+			// Bonus if it's between me and my guard object
+			if (distanceToObject(contactID,GuardObject) < distanceToObject(Me,GuardObject)) then
+				actionRating = actionRating * (1 + (GuardMod / 10));
+			endif;
+		endif;
+
+		// Modify for Distance
+		getContactRelativePosition(range, angle);
+		
+		if (range <= FireRange[FIRERANGE_SHORT]) then
+			actionRating = actionRating * 1.5;
+		else
+			if (range <= FireRange[FIRERANGE_MEDIUM]) then
+				actionRating = actionRating * 1.25;
+			else
+				if (range <= FireRange[FIRERANGE_LONG]) then
+					actionRating = actionRating * 1.0;
+				else
+					if (range <= FireRange[FIRERANGE_EXTREME]) then
+						actionRating = actionRating * 0.75;
+					else
+						actionRating = actionRating * 0.5;
+					endif;
+				endif;
+			endif;
+		endif;
+
+		// Modify for Arc (with the idea of protecting rear & staying focused)
+		if ((angle >= -45.0) and (angle <= 45.0)) then
+			//-------------
+			// Front Arc...  \^/	 	(CurrentTargetMod reflects how focused)
+			actionRating = actionRating * (1 + (CurrentTargetMod / 10));	// 1.2
+		else
+			if ((angle > -90.0) and (angle < 90.0)) then
+				//------------
+				// Front Half ... _^_
+				actionRating = actionRating * (1 + (CurrentTargetMod / 20));	// 1.1 
+			else
+				if ((angle > 135.0) or (angle < -135.0)) then
+					//-------------
+					// Rear Arc... /^\		(protecting the rear by default)
+					actionRating = actionRating * (1 + (DEFAULT_CURRENT_TARGET_MOD / 15));	// 1.15
+				endif;
+			endif;
+		endif;
+
+		// Slight Bump for Targeting Me
+		if (contactTarget == Me) then
+			actionRating = actionRating * 1.1;
+		else
+			// Slight Cut for Targeting Nobody
+			if (contactTarget == 0) then
+				actionRating = actionRating * 0.9;
+			endif;
+		endif;
+
+		// Slight Bump for Being My Lance/Star Mates Target (ConcentrateFireMod)
+		NumMates = getUnitMates(Me,Mates);
+		for i = 0 to (NumMates - 1) do
+			if (getTarget(Mates[i]) == contactID) then
+				actionRating = actionRating * ConcentrateFireMod;
+			endif;
+		endfor;
+		
+		//Now factor in BattleRating or Effectiveness
+		actionRating = actionRating * getCurrentBRValue(contactId);
+	
+		return(actionRating);
+								
+endfunction;
+
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Core functions                                                                 **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// CONTACT WITHIN ZONE
+//----------------------------------------------------------------------------------
+function contactwithinzone (integer contactHandle) : boolean;
+
+	var
+		integer contactId;
+
+	code
+
+		selectContact(1, contactHandle);
+
+		contactId = getContactId;
+
+		if (contactId == CurrentTarget) then
+			if (FixEngageZone) then
+				if (distanceToPosition(contactId,MyPoint) < DisEngageRadius) then
+					return(TRUE);
+				endif;
+			else
+				if (distanceToObject(Me,contactId) < DisEngageRadius) then
+					return(TRUE);
+				endif;
+			endif;
+		else
+			if (FixEngageZone) then
+				if (distanceToPosition(contactId,MyPoint) < EngageRadius) then
+					return(TRUE);
+				endif;
+			else
+				if (distanceToObject(Me,contactId) < EngageRadius) then
+					return(TRUE);
+				endif;
+			endif;
+		endif;
+		
+		return(FALSE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SELECT TARGET
+//----------------------------------------------------------------------------------
+function selectTarget (IntList enemyList, integer numEnemies, boolean LimitToVisual) : integer;
+
+	var
+
+		integer		i;
+		integer		bestContact;
+		real		bestRating;
+		integer		bestId;
+		integer		enemyId;
+		real		curRating;
+
+	code
+
+			
+		bestContact = -1;
+		bestRating = 0.0;
+		for i = 0 to (numEnemies - 1) do
+
+			if (contactwithinzone(enemyList[i])) then
+				SelectContact(1,enemyList[i]);
+				enemyId = getcontactid;
+				if ((LimitToVisual) AND (distanceToObject(Me,enemyId) > getVisualRange(CUR_OBJECT_ID))) then
+					enemyId = 0;
+				endif;
+				if (enemyID > 0) then
+					curRating = contactActionRating(enemyList[i]);
+					if (curRating > bestRating) then
+						bestContact = i;
+						bestRating = curRating;
+						bestId = enemyId;
+					endif;
+				endif;
+			endif;
+
+		endfor;
+
+		if ((bestRating < MinAction) OR (bestRating == 0.0)) then
+			return(0);
+		else
+			return(enemyList[bestContact]);
+		endif;
+		
+endfunction;
+
+//----------------------------------------------------------------------------------
+// FIGHT
+//----------------------------------------------------------------------------------
+function Fight : boolean;
+
+	var
+
+		IntList		enemyList;
+		integer		numTargets;
+		integer		bestTarget;
+		real		bestDistance;
+
+	code
+
+		CurrentTarget = getTarget(CUR_OBJECT_ID); // redundant just in case
+
+		// Having a Current Target and not having an order to attack it
+		// is not possible with this brain, as I clear target before
+		// issuing move orders.
+
+		if ((CurrentTarget > 0) AND (StickToTarget)) then
+			if (FixEngageZone) then
+				if (distanceToPosition(CurrentTarget,MyPoint) < DisengageRadius) then
+					return(TRUE);
+				endif;
+			else
+				if (distanceToObject(CurrentTarget,Me) < DisengageRadius) then
+					return(TRUE);
+				endif;
+			endif;
+		endif;		
+
+		if (PermitFighting) then
+
+			numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS + ChallengeSetting, CS_DISTANCE);
+			if (numTargets > 0) then
+				bestTarget = selectTarget(enemyList, numTargets, TRUE);
+				if (bestTarget > 0) then
+					selectContact(1, bestTarget);
+					challenge(getContactId);
+					orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+					CurrentTarget = getContactId;
+					if (MoveStatus == MOVING) then
+						setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+						MoveStatus = NOT_MOVING;
+					endif;
+					return(TRUE);
+				endif;
+			endif;
+
+			if ((IdentifyContacts) OR (MoveToEngage)) then
+
+				switch (getIntegerMemory(I_FIGHT_PRECEDENCE))
+
+					case ENGAGE_FIRST:
+						if (MoveToEngage) then
+							// don't need to getcontacts again
+							if (numTargets > 0) then
+								bestTarget = selectTarget(enemyList, numTargets, FALSE);
+								if (bestTarget > 0) then
+									selectContact(1, bestTarget);
+									//orderMoveToContact(MoveSpeed);
+									orderMoveToObject(getContactId,MoveSpeed);
+									if (MoveStatus == MOVING) then
+										setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+										MoveStatus = NOT_MOVING;
+									endif;
+									return(TRUE);
+								endif;
+							endif;
+						endif;
+						if (IdentifyContacts) then
+							numTargets = getContacts(enemyList, CT_SENSOR_TRACE + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+							if ((numTargets > 0) AND (contactwithinzone(enemyList[0]))) then
+								selectContact(1, enemyList[0]);
+								//orderMoveToContact(MoveSpeed);
+								orderMoveToObject(getContactId,MoveSpeed);
+								if (MoveStatus == MOVING) then
+									setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+									MoveStatus = NOT_MOVING;
+								endif;
+								return(TRUE);
+							endif;
+						endif;
+
+						endcase;
+
+					case IDENTIFY_FIRST:
+					
+						if (IdentifyContacts) then
+							numTargets = getContacts(enemyList, CT_SENSOR_TRACE + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+							if ((numTargets > 0) AND (contactwithinzone(enemyList[0]))) then
+								selectContact(1, enemyList[0]);
+								//orderMoveToContact(MoveSpeed);
+								orderMoveToObject(getContactId,MoveSpeed);
+								if (MoveStatus == MOVING) then
+									setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+									MoveStatus = NOT_MOVING;
+								endif;
+								return(TRUE);
+							endif;
+						endif;
+
+						if (MoveToEngage) then
+							numTargets = getContacts(enemyList, CT_LOS + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+							if (numTargets > 0) then
+								bestTarget = selectTarget(enemyList, numTargets, FALSE);
+								if (bestTarget > 0) then
+									selectContact(1, bestTarget);
+									//orderMoveToContact(MoveSpeed);
+									orderMoveToObject(getContactId,MoveSpeed);
+									if (MoveStatus == MOVING) then
+										setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+										MoveStatus = NOT_MOVING;
+									endif;
+									return(TRUE);
+								endif;
+							endif;
+						endif;
+
+						endcase;
+
+					case CLOSEST_FIRST:
+
+						numTargets = getContacts(enemyList, CT_LOS + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+						bestTarget = 0;
+						if (numTargets > 0) then
+							bestTarget = selectTarget(enemyList, numTargets, FALSE);
+							if (bestTarget > 0) then				
+								numTargets = getContacts(enemyList, CT_SENSOR_TRACE + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+								if ((numTargets > 0) AND (contactwithinzone(enemyList[0]))) then
+									selectContact(1,bestTarget);
+									bestDistance = distanceToObject(Me,getContactID);
+									selectContact(1,enemyList[0]);
+									if (bestDistance <= distanceToObject(Me,getContactID)) then
+										selectContact(1,bestTarget);
+										orderMoveToObject(getContactId,MoveSpeed);
+										//orderMoveToContact(MoveSpeed);
+										if (MoveStatus == MOVING) then
+											setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+											MoveStatus = NOT_MOVING;
+										endif;
+										return(TRUE);
+									else
+										orderMoveToObject(getContactId,MoveSpeed);
+										//orderMoveToContact(MoveSpeed);
+										if (MoveStatus == MOVING) then
+											setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+											MoveStatus = NOT_MOVING;
+										endif;
+										return(TRUE);
+									endif;
+								else
+									selectContact(1,bestTarget);
+									orderMoveToObject(getContactId,MoveSpeed);
+									//orderMoveToContact(MoveSpeed);
+									if (MoveStatus == MOVING) then
+										setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+										MoveStatus = NOT_MOVING;
+									endif;
+									return(TRUE);
+								endif;
+							endif;
+						endif;
+						numTargets = getContacts(enemyList, CT_SENSOR_TRACE + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+						if ((numTargets > 0) AND (contactwithinzone(enemyList[0]))) then
+							selectContact(1, enemyList[0]);
+							orderMoveToObject(getContactId,MoveSpeed);
+							//orderMoveToContact(MoveSpeed);
+							if (MoveStatus == MOVING) then
+								setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+								MoveStatus = NOT_MOVING;
+							endif;
+							return(TRUE);
+						endif;
+
+						endcase;
+
+				endswitch;
+
+			endif;
+
+		else
+		// NOT PermitFighting, but still IdentifyContacts (for scouts)
+
+			if (IdentifyContacts) then
+				numTargets = getContacts(enemyList, CT_SENSOR_TRACE + CT_ENEMY + ChallengeSetting, CS_DISTANCE);
+				if ((numTargets > 0) AND (contactwithinzone(enemyList[0]))) then
+					selectContact(1, enemyList[0]);
+					//orderMoveToContact(MoveSpeed);
+					orderMoveToObject(getContactId,MoveSpeed);
+					if (MoveStatus == MOVING) then
+						setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+						MoveStatus = NOT_MOVING;
+					endif;
+					return(TRUE);
+				endif;
+			endif;
+
+		endif;
+
+		if (MoveStatus <> MOVING) then
+			OrderWait(0.0,TRUE);
+		endif;
+
+		return(FALSE);	// NOT Fighting
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MOVE
+//----------------------------------------------------------------------------------
+function Move(position MovePoint) : integer;
+
+	code
+
+		MoveStatus = getIntegerMemory(I_MOVE_STATUS); // Redundant just in case
+
+		if (distanceToPosition(Me,MovePoint) <= getRealMemory(R_MIN_DISTANCE)) then
+			MoveStatus = NOT_MOVING;
+			setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+			orderWait(0.0,TRUE); // stops movement (and clears currenttarget)
+			return(SUCCESS);
+		endif;
+
+		switch (MoveStatus)
+
+			case NOT_MOVING:
+				orderWait(0.0,TRUE); // clears currenttarget
+				orderMoveTo(MovePoint,MoveSpeed);
+				MoveStatus = MOVING;
+				setIntegerMemory(I_MOVE_STATUS,MOVING);
+				return(INCOMPLETE);
+				endcase;
+
+			case MOVING:
+				return(INCOMPLETE);
+				endcase;
+			
+			case MOVE_IMPOSSIBLE:
+				MoveStatus = NOT_MOVING;
+				setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+				return(FAILED);
+				endcase;
+
+		endswitch;
+
+		return(ERROR);
+
+endfunction;
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Behavior Modifier functions                                                    **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// SET TARGET
+//----------------------------------------------------------------------------------
+function setTarget(integer TargetID, real RatingMod);
+
+	code
+
+		assert(NewTarget(TargetID,RatingMod),86,"TOO MANY TARGETS");		
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET SPEED
+//----------------------------------------------------------------------------------
+function SetSpeed(boolean Speed);
+
+	code
+
+		if (Speed) then
+			setIntegerMemory(I_MOVE_SPEED,FAST);
+		else
+			setIntegerMemory(I_MOVE_SPEED,SLOW);
+		endif;
+		MoveSpeed = Speed;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET MINIMUM DISTANCE
+//----------------------------------------------------------------------------------
+function SetMinimumDistance(real Distance);
+
+	code
+
+		setRealMemory(R_MIN_DISTANCE,Distance);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET ENGAGE RADIUS
+//----------------------------------------------------------------------------------
+function SetEngageRadius(real Radius);
+
+	code
+
+		setRealMemory(R_ENGAGE_RADIUS,Radius);
+		EngageRadius = Radius;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET DISENGAGE RADIUS
+//----------------------------------------------------------------------------------
+function SetDisengageRadius(real Radius);
+
+	code
+
+		setRealMemory(R_DISENGAGE_RADIUS,Radius);
+		DisengageRadius = Radius;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// FIX ENGAGE POINT
+//----------------------------------------------------------------------------------
+function FixEngagePoint(real X, real Y);
+
+	code
+
+		setIntegerMemory(I_FIX_ENGAGE_ZONE,YES);
+		FixEngageZone = TRUE;
+		setRealMemory(R_ENGAGE_X,X);	
+		setRealMemory(R_ENGAGE_Y,Y);
+		MyPoint[0] = X;
+		MyPoint[1] = Y;
+		MyPoint[2] = 0.0;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// FREE ENGAGE POINT
+//----------------------------------------------------------------------------------
+function FreeEngagePoint;
+
+	var
+
+		Position	NewPoint;
+
+	code
+
+		setIntegerMemory(I_FIX_ENGAGE_ZONE,NO);
+		FixEngageZone = FALSE;
+		getObjectPosition(CUR_OBJECT_ID,NewPoint);
+		setRealMemory(R_ENGAGE_X,NewPoint[0]);	
+		setRealMemory(R_ENGAGE_Y,NewPoint[1]);	
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// IDENTIFY SENSOR CONTACTS -> ON <-
+//----------------------------------------------------------------------------------
+function IdentifySensorContactsON;
+
+	code
+
+		setIntegerMemory(I_IDENTIFY_CONTACTS,ON);
+		IdentifyContacts = TRUE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// IDENTIFY SENSOR CONTACTS -> OFF <-
+//----------------------------------------------------------------------------------
+function IdentifySensorContactsOFF;
+
+	code
+
+		setIntegerMemory(I_IDENTIFY_CONTACTS,OFF);
+		IdentifyContacts = FALSE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CHALLENGE -> ON <-
+//----------------------------------------------------------------------------------
+function ChallengeON;
+
+	code
+
+		setIntegerMemory(I_CHALLENGE_SYSTEM,ON);
+		ChallengeSetting = CHALLENGE_ON;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CHALLENGE -> OFF <-
+//----------------------------------------------------------------------------------
+function ChallengeOFF;
+
+	code
+
+		setIntegerMemory(I_CHALLENGE_SYSTEM,OFF);
+		ChallengeSetting = CHALLENGE_OFF;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MOVE TO ENGAGE -> ON <-
+//----------------------------------------------------------------------------------
+function MoveToEngageON;
+
+	code
+
+		setIntegerMemory(I_MOVE_TO_ENGAGE,ON);
+		MoveToEngage = TRUE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MOVE TO ENGAGE -> OFF <-
+//----------------------------------------------------------------------------------
+function MoveToEngageOFF;
+
+	code
+
+		setIntegerMemory(I_MOVE_TO_ENGAGE,OFF);
+		MoveToEngage = FALSE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET FIGHT PRECEDENCE
+//----------------------------------------------------------------------------------
+function SetFightPrecedence(integer Precedence);
+
+	code
+
+		setIntegerMemory(I_FIGHT_PRECEDENCE,Precedence);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET CURRENT TARGET MOD
+//----------------------------------------------------------------------------------
+function SetCurrentTargetMod(real Modifier);
+
+	code
+
+		setRealMemory(R_CURRENT_TARGET_MOD,Modifier);
+		CurrentTargetMod = Modifier;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET CONCENTRATE FIRE MOD
+//----------------------------------------------------------------------------------
+function SetConcentrateFireMod(real Modifier);
+
+	code
+
+		setRealMemory(R_CONCENTRATE_FIRE_MOD,Modifier);
+		ConcentrateFireMod = Modifier;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET GUARD MOD
+//----------------------------------------------------------------------------------
+function SetGuardMod(real Modifier);
+
+	code
+
+		setRealMemory(R_GUARD_MOD,Modifier);
+		GuardMod = Modifier;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// STICK TO TARGET -> ON <-
+//----------------------------------------------------------------------------------
+function StickToTargetON;
+
+	code
+
+		setIntegerMemory(I_STICK_TO_TARGET,ON);
+		StickToTarget = TRUE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// STICK TO TARGET -> OFF <-
+//----------------------------------------------------------------------------------
+function StickToTargetOFF;
+
+	code
+
+		setIntegerMemory(I_STICK_TO_TARGET,OFF);
+		StickToTarget = FALSE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// IGNORE NON TARGETS -> ON <-
+//----------------------------------------------------------------------------------
+function IgnoreNonTargetsON;
+
+	code
+
+		setIntegerMemory(I_IGNORE_NON_TARGETS,ON);
+		IgnoreNonTargets = TRUE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// IGNORE NON TARGETS -> OFF <-
+//----------------------------------------------------------------------------------
+function IgnoreNonTargetsOFF;
+
+	code
+
+		setIntegerMemory(I_IGNORE_NON_TARGETS,OFF);
+		IgnoreNonTargets = FALSE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// ATTACK INACTIVE -> ON <-
+//----------------------------------------------------------------------------------
+function AttackInActiveON;
+
+	code
+
+		setIntegerMemory(I_ATTACK_INACTIVE,YES);
+		AttackInActive = TRUE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// ATTACK INACTIVE -> OFF <-
+//----------------------------------------------------------------------------------
+function AttackInActiveOFF;
+
+	code
+
+		setIntegerMemory(I_ATTACK_INACTIVE,NO);
+		AttackInActive = FALSE;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// STOP FIGHTING
+//----------------------------------------------------------------------------------
+function StopFighting;
+
+	code
+
+		setIntegerMemory(I_PERMIT_FIGHTING,NO);
+		PermitFighting = FALSE;
+		if (CurrentTarget > 0) then
+			BreakChallenge(CurrentTarget);
+			orderWait(0.0,TRUE);
+		endif;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// START FIGHTING
+//----------------------------------------------------------------------------------
+function StartFighting;
+
+	code
+
+		setIntegerMemory(I_PERMIT_FIGHTING,YES);
+		PermitFighting = TRUE;
+		// I could call FIGHT here.
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SET MINIMUM ACTION RATING
+//----------------------------------------------------------------------------------
+function SetMinimumActionRating(real Rating);
+
+	code
+
+		setRealMemory(R_MIN_ACTION,Rating);
+		MinAction = Rating;
+
+endfunction;
+
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** MISC HIGH-LEVEL functions                                                      **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// MyX
+//----------------------------------------------------------------------------------
+function MyX : real;
+
+	code
+
+		return(MyPoint[0]);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MyY
+//----------------------------------------------------------------------------------
+function MyY : real;
+
+	code
+
+		return(MyPoint[1]);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MyPosition
+//----------------------------------------------------------------------------------
+function MyPosition : position;
+
+	code
+
+		return(MyPoint);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MyTarget
+//----------------------------------------------------------------------------------
+function MyTarget : integer;
+
+	code
+
+		return(CurrentTarget);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CurrentX
+//----------------------------------------------------------------------------------
+function CurrentX : real;
+
+	var
+		position	currentpoint;
+
+	code
+
+		getObjectPosition(CUR_OBJECT_ID, currentpoint);
+		return(currentpoint[0]);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CurrentY
+//----------------------------------------------------------------------------------
+function CurrentY : real;
+
+	var
+		position	currentpoint;
+
+	code
+
+		getObjectPosition(CUR_OBJECT_ID, currentpoint);
+		return(currentpoint[1]);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CurrentPosition
+//----------------------------------------------------------------------------------
+function CurrentPosition : position;
+
+	var
+		position	currentpoint;
+
+	code
+
+		getObjectPosition(CUR_OBJECT_ID, currentpoint);
+		return(currentpoint);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// BEEN HIT
+//----------------------------------------------------------------------------------
+function BeenHit : boolean;
+
+	code
+
+		if (getIntegerMemory(I_HITS) > 0) then
+			return(TRUE);
+		else
+			return(FALSE);
+		endif;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// GET HITS
+//----------------------------------------------------------------------------------
+function GetHits : integer;
+
+	code
+
+		return(getIntegerMemory(I_HITS));
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CLEAR HITS
+//----------------------------------------------------------------------------------
+function ClearHits : integer;
+
+	var
+
+		integer	Hits;
+
+	code
+
+		Hits = getIntegerMemory(I_HITS);
+		setIntegerMemory(I_HITS,DEFAULT_HITS);
+		return(Hits);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// RESET PATH
+//----------------------------------------------------------------------------------
+function ResetPath;
+
+	code
+
+		setIntegerMemory(I_PATH_STEP,DEFAULT_PATH_STEP);					// 22
+		setIntegerMemory(I_DIRECTION,DEFAULT_DIRECTION);					// 23
+		setIntegerMemory(I_PATH_CYCLES,DEFAULT_PATH_CYCLES);				// 24
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CURRENT STEP
+//----------------------------------------------------------------------------------
+function CurrentStep : integer;
+
+	code
+
+		return(getIntegerMemory(I_PATH_STEP));					// 22
+
+
+endfunction;
+						
+/*--------------------------------------------------------------------------------**
+**																				  **
+**																				  **
+** Order functions                                                                **
+**																				  **
+**																				  **
+**--------------------------------------------------------------------------------*/
+
+//----------------------------------------------------------------------------------
+// MOVE TO
+//----------------------------------------------------------------------------------
+function MoveTo(real X, real Y) : integer;
+
+	var
+		position	MovePoint;
+
+	code
+
+		MovePoint[0] = X;
+		MovePoint[1] = Y;
+		MovePoint[2] = 0.0;
+
+		if (NOT fight) then
+			return(Move(MovePoint));
+		endif;
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// GUARD
+//----------------------------------------------------------------------------------
+function Guard(integer GuardObjectID) : integer;
+
+	var
+
+		position	GuardPoint;
+
+	code
+
+		Switch (ObjectStatus(GuardObjectID))
+			case OBJECT_STATUS_DISABLED:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(FAILED);
+				endcase;
+			case OBJECT_STATUS_DESTROYED:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(FAILED);
+				endcase;
+			case OBJECT_STATUS_WITHDRAWN:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(SUCCESS);
+				endcase;
+			case -1:
+				return(ERROR);
+				endcase;
+		endSwitch;
+
+		getObjectPosition(GuardObjectID,GuardPoint);
+		fixEngagePoint(GuardPoint[0],GuardPoint[1]);
+		setIntegerMemory(I_GUARD_OBJECT,GuardObjectID);
+		if (CurrentTarget > 0) then
+			if (distanceToObject(CUR_OBJECT_ID,GuardObjectID) > DisEngageRadius) then
+				Move(MyPoint);
+			else
+				if (NOT fight) then
+					Move(MyPoint);
+				endif;
+			endif;
+		else
+			if (distanceToObject(CUR_OBJECT_ID,GuardObjectID) > EngageRadius) then
+				Move(MyPoint);
+			else
+				if (NOT fight) then
+					Move(MyPoint);
+				endif;
+			endif;
+		endif;
+
+		return(INCOMPLETE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// ESCORT
+//----------------------------------------------------------------------------------
+function Escort(integer GuardObjectID) : integer;
+
+	var
+
+		position	GuardPoint;
+
+	code
+
+		Switch (ObjectStatus(GuardObjectID))
+			case OBJECT_STATUS_DISABLED:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(FAILED);
+				endcase;
+			case OBJECT_STATUS_DESTROYED:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(FAILED);
+				endcase;
+			case OBJECT_STATUS_WITHDRAWN:
+				setIntegerMemory(I_GUARD_OBJECT,DEFAULT_GUARD_OBJECT);
+				freeEngagePoint;
+				return(SUCCESS);
+				endcase;
+			case -1:
+				return(ERROR);
+				endcase;
+		endSwitch;
+
+		getObjectPosition(GuardObjectID,GuardPoint);
+		fixEngagePoint(GuardPoint[0],GuardPoint[1]);
+		setIntegerMemory(I_GUARD_OBJECT,GuardObjectID);
+		if (CurrentTarget > 0) then
+			if (distanceToObject(CUR_OBJECT_ID,GuardObjectID) > DisEngageRadius) then
+				MoveStatus = NOT_MOVING;
+				setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+				Move(MyPoint);
+			else
+				if (NOT fight) then
+					MoveStatus = NOT_MOVING;
+					setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+					Move(MyPoint);
+				endif;
+			endif;
+		else
+			if (distanceToObject(CUR_OBJECT_ID,GuardObjectID) > EngageRadius) then
+				MoveStatus = NOT_MOVING;
+				setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+				Move(MyPoint);
+			else
+				if (NOT fight) then
+					MoveStatus = NOT_MOVING;
+					setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+					Move(MyPoint);
+				endif;
+			endif;
+		endif;
+
+		return(INCOMPLETE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// SENTRY
+//----------------------------------------------------------------------------------
+function Sentry(real X, real Y) : integer;
+
+	code
+
+		fixEngagePoint(X,Y);
+		
+		if (distanceToPosition(Me,MyPoint) > EngageRadius) then
+			if (Move(MyPoint) == FAILED) then
+				freeEngagePoint;
+				return(FAILED); // CAN'T GET TO SENTRY ZONE
+			endif;
+		else
+			if (NOT fight) then
+				Move(MyPoint);
+			endif;
+		endif;
+
+		return(INCOMPLETE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// MOVE PATH
+//----------------------------------------------------------------------------------
+function MovePath(path thisPath, integer Steps) : integer;
+
+	var
+
+		integer	PathStep;
+		position	MovePoint;
+		integer	MoveResult;
+
+	code
+
+		PathStep = getIntegerMemory(I_PATH_STEP);
+		MovePoint[0] = thisPath[PathStep,0];
+		MovePoint[1] = thisPath[PathStep,1];
+		MovePoint[2] = 0.0;
+
+		if (PathStep < (Steps - 1)) then // don't want to fight if I'm near my last step
+			if (NOT fight) then
+				MoveResult = Move(MovePoint);
+				Switch (MoveResult)
+					case FAILED:
+						ResetPath;
+						return(FAILED);
+						endcase;
+					case SUCCESS:
+						PathStep = PathStep + 1;
+						setIntegerMemory(I_PATH_STEP,PathStep);
+						MovePoint[0] = thisPath[PathStep,0];
+						MovePoint[1] = thisPath[PathStep,1];
+						Move(MovePoint); // Don't test this time, just get moving
+						return(INCOMPLETE);
+						endcase;
+				endSwitch;			
+			endif;				
+		else			
+			if (distanceToPosition(Me,MovePoint) <= getRealMemory(R_MIN_DISTANCE)) then
+				MoveStatus = NOT_MOVING;
+				setIntegerMemory(I_MOVE_STATUS,NOT_MOVING);
+				ResetPath;
+				return(SUCCESS);
+			else
+				if (NOT fight) then
+					if (Move(MovePoint) == FAILED) then
+						ResetPath;
+						return(FAILED);
+					endif;
+				endif;
+			endif;					
+		endif;
+
+		return(INCOMPLETE);		
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// PATROL
+//----------------------------------------------------------------------------------
+function Patrol(path thisPath, integer Steps, integer PatrolType, integer Cycles) : integer;
+
+	var
+
+		integer	PathStep;
+		position	MovePoint;
+		integer	MoveResult;
+		integer	CompleteCycles;
+		integer Direction;
+
+	code
+
+		PathStep = getIntegerMemory(I_PATH_STEP);
+		Direction = getIntegerMemory(I_DIRECTION);
+		CompleteCycles = getIntegerMemory(I_PATH_CYCLES);
+
+		MovePoint[0] = thisPath[PathStep,0];
+		MovePoint[1] = thisPath[PathStep,1];
+		MovePoint[2] = 0.0;
+
+		if (NOT fight) then // patrol isn't complete until you stop fighting
+			MoveResult = Move(MovePoint);
+			if (MoveResult == FAILED) then
+				ResetPath;
+				return(FAILED);
+			else
+				if (MoveResult == SUCCESS) then
+
+					if (Direction == FORWARD) then
+						if (PathStep < (Steps - 1)) then
+							PathStep = PathStep + 1;
+						else						
+							CompleteCycles = CompleteCycles + 1;
+							if (CompleteCycles >= Cycles) then
+								ResetPath;
+								return(SUCCESS);
+							else
+								switch (PatrolType)
+									case PATROL_CIRCLE:
+										PathStep = 0;
+										endcase;
+									case PATROL_BACK_AND_FORTH:
+										PathStep = Steps - 2;
+										Direction = REVERSE;
+										endcase;
+									case PATROL_AND_STOP:
+										ResetPath;
+										return(SUCCESS);
+										endcase;
+								endSwitch;
+							endif;
+						endif;						
+					else // REVERSE
+						if (PathStep > 0) then
+							PathStep = PathStep - 1;
+						else
+							CompleteCycles = CompleteCycles + 1;
+							if (CompleteCycles >= Cycles) then
+								ResetPath;
+								return(SUCCESS);
+							else
+								switch (PatrolType)
+									case PATROL_CIRCLE:
+										PathStep = Steps - 1;
+										endcase;
+									case PATROL_BACK_AND_FORTH:
+										PathStep = 1;
+										Direction = FORWARD;
+										endcase;
+									case PATROL_AND_STOP:
+										ResetPath;
+										return(SUCCESS);
+										endcase;
+								endSwitch;
+							endif;
+						endif;	
+					endif;
+
+					// Successful Move Result means New PathStep
+					setIntegerMemory(I_PATH_STEP,PathStep);
+					setIntegerMemory(I_DIRECTION,Direction);
+					setIntegerMemory(I_PATH_CYCLES,CompleteCycles);
+					MovePoint[0] = thisPath[PathStep,0];
+					MovePoint[1] = thisPath[PathStep,1];
+					Move(MovePoint); // Don't test this time, just get moving
+					return(INCOMPLETE);
+
+				endif;
+			endif;
+		endif;
+			
+		return(INCOMPLETE); // cause I'm fighting
+			
+endfunction;
+
+//----------------------------------------------------------------------------------
+// WITHDRAW
+//----------------------------------------------------------------------------------
+function Withdraw : integer;
+
+	code
+
+		orderWait(0.0,TRUE);
+		orderWithdraw;
+		return(INCOMPLETE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// ATTACK
+//----------------------------------------------------------------------------------
+function Attack : integer;
+
+	code
+
+		fight;
+		return(INCOMPLETE);
+
+endfunction;
+
+//----------------------------------------------------------------------------------
+// CLEAR AREA
+//----------------------------------------------------------------------------------
+function ClearArea : integer;
+
+	code
+
+		if (fight) then
+			return(INCOMPLETE);
+		else
+			return(SUCCESS);
+		endif;
+
+endfunction;

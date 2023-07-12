@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0DCE77B3AF417C8982C8B14B4EAB0B85" />
+  <Asset Name="..\dropshipenc.ini" Type="Physical" Author="franksav" FileSize="386" ModificationTime="2006-03-03T01:28:21.8830554-08:00" CRC="2E4F2BAF7EB004C7EF6EA70256724C95" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="dropshipEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

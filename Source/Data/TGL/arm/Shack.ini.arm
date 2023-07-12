@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="04FFE07E43980F563B4E31369A3547D1" />
+  <Asset Name="..\Shack.ini" Type="Physical" Author="franksav" FileSize="545" ModificationTime="2006-03-03T01:28:48.1485123-08:00" CRC="F0ED11BEFE5635933B3895018320D688" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Shack.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="ShackL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="ShackL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="ShackX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="Shackdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="ShackdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shack" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F71B6F0DDCB83FB31C468DF2B24748ED" />
+  <Asset Name="..\FuelPipeDam.ase" Type="Physical" Author="ngauvin" FileSize="74316" ModificationTime="2006-02-01T10:54:53.6076173-08:00" CRC="4A04ED02A3A835123D698C801A3BE8B1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\fuelpipeDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

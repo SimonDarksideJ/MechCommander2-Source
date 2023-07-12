@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8083A1BB655A595B1F915D16DFC271D4" />
+  <Asset Name="..\HQTent.ini" Type="Physical" Author="franksav" FileSize="310" ModificationTime="2006-03-03T01:28:27.8048925-08:00" CRC="6612215568B0B7D1CC6117C8C8DB1FE1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="hqtent.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="hqtentL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="hqtentL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="hqtentX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="hqtentdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="hpentDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="HQ Tent" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8F518A103EDA9A1A55690B858C4716D0" />
+  <Asset Name="..\trafconEnc.ase" Type="Physical" Author="ngauvin" FileSize="73237" ModificationTime="2006-02-01T10:55:34.6703801-08:00" CRC="41900493303CDA7666C1D56208B36F08" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_TrafCon.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

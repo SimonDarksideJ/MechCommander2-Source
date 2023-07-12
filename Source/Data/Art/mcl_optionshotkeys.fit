@@ -1,0 +1,170 @@
+FITini 
+
+
+//insert for options hotkeys
+
+
+
+[Buttons]
+l Buttoncount = 1
+
+[Button0]// reset button
+l XLocation = 449
+l YLocation = 254
+l Width = 150
+l Height = 32
+l ID = 309
+l XTextLocation = 460
+l YTextLocation = 260
+l TextWidth = 127
+l TextHeight = 19
+l color  = 0xffff0000
+b TextOutline = FALSE
+
+
+l TextID = 26536
+l Font = 26537 // use AgencyFB14
+
+l HelpCaption = 27103
+l HelpDesc = 26609
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 150
+l VHeight = 32
+
+l UNormal = 80
+l VNormal = 210
+
+l UPressed = 80
+l VPressed = 210
+
+l UHighlight = 80
+l VHighlight = 210
+
+l UDisabled = 80
+l VDisabled = 210
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffAF0000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffAF0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffAF0000
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffAF0000
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 2
+
+[Rect0]  // outline for scroll box
+l XLocation = 11
+l YLocation = 24
+l Width = 588
+l Height = 225
+l Color = -12373732
+b outline = TRUE
+
+[Rect1] // divider for scroll box
+l XLocation = 358
+l YLocation = 26
+l Width = 0
+l Height = 221
+l Color = -12505576
+b outline = TRUE
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // "COMMAND" header
+l XLocation = 11
+l YLocation = 5
+l Width = 583
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26588 // use agency fb 11
+l TextID = 26587
+l Alignment = 0
+
+[Text1] // "HOTKEY" header
+l XLocation = 358
+l YLocation = 5
+l Width = 200
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26590 // use agency fb 11
+l TextID = 26589
+l Alignment = 0
+
+[Text2] // help text
+l XLocation = 51
+l YLocation = 306
+l Width = 505
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26562 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 1
+
+[ComboBox0] // entry for hotkey commmand and edit text area
+l XLocation = 26
+l YLocation = 195
+st FileName = "mcl_options_combobox0.fit"
+
+
+
+
+
+
+
+
+FITend 

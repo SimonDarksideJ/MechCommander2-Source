@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2195D9DAB87A49EA6F83DDF09EA043A6" />
+  <Asset Name="..\dropshipkurita.ini" Type="Physical" Author="franksav" FileSize="591" ModificationTime="2006-03-03T01:28:21.9299301-08:00" CRC="2342CD9EB1DB9A4DC18AB666ED9216EA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="dropshipKurita.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="dropshipKuritaL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="dropshipKuritaL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="dropshipKuritaX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="dropshipKuritadam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="dropshipKuritadamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Kurita Dropship" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

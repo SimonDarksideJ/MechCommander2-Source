@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D85B39E226DC4C165DF1E94A66675E9F" />
+  <Asset Name="..\D_GateControlX.ase" Type="Physical" Author="ngauvin" FileSize="55741" ModificationTime="2006-02-01T10:54:46.2794454-08:00" CRC="1F27632F2D9A16362FBBAB82DCA19986" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

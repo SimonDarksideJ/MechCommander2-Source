@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="21473CE366ED43CE2F09A5662479CB8A" />
+  <Asset Name="..\sandbagbunkerX.ase" Type="Physical" Author="ngauvin" FileSize="92947" ModificationTime="2006-02-01T10:55:26.8890803-08:00" CRC="67D924F5EC4EC44F57B1C68A41D12FA3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\barriers.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

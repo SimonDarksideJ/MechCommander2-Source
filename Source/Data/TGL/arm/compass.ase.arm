@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E599A46E646F2FB1818436CE0E9C3E44" />
+  <Asset Name="..\compass.ase" Type="Physical" Author="ngauvin" FileSize="3909" ModificationTime="2006-02-01T10:54:42.779423-08:00" CRC="32DD4A0EA3FBF82B0CD1EE72884286C7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Compass.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

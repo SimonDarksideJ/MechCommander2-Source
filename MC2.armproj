@@ -1,0 +1,109 @@
+﻿<ArmProject Version="1">
+    <ProjectName>MechCommander2</ProjectName>
+    <ArmRoot>.\Source\data</ArmRoot>
+    <CategoryAnnotationKey>Type</CategoryAnnotationKey>
+    <DisplayFullAssetName>false</DisplayFullAssetName>
+    <ExportAbsoluteName>true</ExportAbsoluteName>
+    <UseDefaultEditor>true</UseDefaultEditor>
+    <PredefinedQueries>
+        <PredefinedQuery>
+            <Name>Assets &lt; 1k</Name>
+            <Query>Asset[ FileSize &lt; 1000 ]</Query>
+        </PredefinedQuery>
+        <PredefinedQuery>
+            <Name>Assets &gt; 10k</Name>
+            <Query>Asset[ FileSize &gt; 10000 ]</Query>
+        </PredefinedQuery>
+        <PredefinedQuery>
+            <Name>Virtual Assets</Name>
+            <Query>Asset[ Type = 'Virtual' ]</Query>
+        </PredefinedQuery>
+        <PredefinedQuery>
+            <Name>Unreferenced Assets</Name>
+            <Query>Asset[not(ParentRelationship)]</Query>
+        </PredefinedQuery>
+        <PredefinedQuery>
+            <Name>References more than 100 assets</Name>
+            <Query>Asset[count(ChildRelationship) &gt;=100]</Query>
+        </PredefinedQuery>
+        <PredefinedQuery>
+            <Name>Is referenced by more than 50 assets</Name>
+            <Query>Asset[count(ParentRelationship) &gt;=50]</Query>
+        </PredefinedQuery>
+    </PredefinedQueries>
+    <SearchTerms>
+        <SearchTerm>
+            <Name>Name</Name>
+            <Type>String</Type>
+            <Expression>BaseName</Expression>
+            <PropertyBinding>BaseName</PropertyBinding>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>FullName</Name>
+            <Type>String</Type>
+            <Expression>Name</Expression>
+            <PropertyBinding>Name</PropertyBinding>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>Author</Name>
+            <Type>String</Type>
+            <Expression>Author</Expression>
+            <PropertyBinding>Author</PropertyBinding>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>Category</Name>
+            <Type>Set</Type>
+            <Expression>@Type</Expression>
+            <PropertyBinding>Type</PropertyBinding>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>FileSize</Name>
+            <Type>Numeric</Type>
+            <Expression>FileSize</Expression>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>AssetType</Name>
+            <Type>Set</Type>
+            <Expression>Type</Expression>
+            <PropertyBinding>AssetType</PropertyBinding>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>Parent Count</Name>
+            <Type>Numeric</Type>
+            <Expression>count(ParentRelationship)</Expression>
+        </SearchTerm>
+        <SearchTerm>
+            <Name>Child Count</Name>
+            <Type>Numeric</Type>
+            <Expression>count (ChildRelationship)</Expression>
+        </SearchTerm>
+    </SearchTerms>
+    <Editors />
+    <Categories>
+        <Category>
+            <DisplayName>Mission</DisplayName>
+            <Identifier>Mission</Identifier>
+            <Type>Level</Type>
+        </Category>
+        <Category>
+            <DisplayName>Campaign</DisplayName>
+            <Identifier>Campaign</Identifier>
+            <Type>Mesh</Type>
+        </Category>
+        <Category>
+            <DisplayName>Mission Group</DisplayName>
+            <Identifier>Mission Group</Identifier>
+            <Type>Object</Type>
+        </Category>
+        <Category>
+            <DisplayName>Object</DisplayName>
+            <Identifier>Object Definition</Identifier>
+            <Type>Vehicle</Type>
+        </Category>
+        <Category>
+            <DisplayName>Warrior</DisplayName>
+            <Identifier>Warrior</Identifier>
+            <Type>Character</Type>
+        </Category>
+    </Categories>
+</ArmProject>

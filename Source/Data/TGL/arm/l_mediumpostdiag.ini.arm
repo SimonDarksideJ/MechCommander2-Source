@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CCC00E17446B89D7370801E699A15A8C" />
+  <Asset Name="..\l_mediumpostdiag.ini" Type="Physical" Author="franksav" FileSize="207" ModificationTime="2006-03-03T01:28:31.1954958-08:00" CRC="ED86319A05439F111C1AAFBC6437E9C1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_mediumPostDiag.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_mediumPostDiagdam.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

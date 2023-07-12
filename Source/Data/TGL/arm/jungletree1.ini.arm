@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="220FB57C2DF0AFDE477E1F6336F49099" />
+  <Asset Name="..\jungletree1.ini" Type="Physical" Author="franksav" FileSize="312" ModificationTime="2006-03-03T01:28:29.3673825-08:00" CRC="23B85385B0265E46151396C6E0BE0484" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="jungletree1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="jungletree1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="jungletree1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="jungletree1X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Jungle Tree" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

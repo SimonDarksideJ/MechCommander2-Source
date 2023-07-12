@@ -1,0 +1,329 @@
+FITini 
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons]
+l ButtonCount = 1
+
+[Button0] // This is the check box for the salvageable mechs. 
+st Animation = "Animation0"  
+l ID = xxx
+l XLocation = 4
+l YLocation = 2
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+l UNormal = 205
+l VNormal = 94
+
+l UPressed = 205
+l VPressed = 48
+
+l UHighlight = 205
+l VHighlight = 94
+
+l UHighlightPressed = 205
+l VHighlightPressed = 94
+
+l UDisabled = 205
+l VDisabled = 94
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l RectCount = 2
+
+[Rect0] // outline for salvage entry box
+l XLocation = 51
+l YLocation = 2
+l Width = 263
+l Height = 45
+l Color = 0xffffffff
+b outline = TRUE
+st Animation = "Animation1"
+
+
+[Rect1] // outline for check box button
+l XLocation = 4
+l YLocation = 2
+l Width = 46
+l Height = 46
+l Color = 0xffffffff
+b outline = TRUE
+st Animation = "Animation1"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l StaticCount = 3
+
+[Static0] // MechEntryIcon
+l XLocation = 53 
+l YLocation = 10
+l Width = 32
+l Height = 38
+l UWidth  = 32
+l VHeight = 38
+// use MCUI_Med4 icons
+// don't animate
+
+[Static1] // WeightIcon
+l XLocation = 295
+l YLocation = 7
+l Width = 15
+l Height = 15
+l UNormal = 214
+l VNormal = 30
+l UWidth  = 15
+l VHeight = 15
+st FileName = "MCUI_MR_2"
+st Animation = "Animation2"
+
+[Static2] //CBills Icon	
+l XLocation = 295
+l YLocation = 29
+l Width = 15
+l Height = 15
+l UNormal = 229
+l VNormal = 30
+l UWidth  = 15
+l VHeight = 15
+st FileName = "MCUI_MR_2"
+st Animation = "Animation0"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts]
+l TextCount = 4
+
+
+[Text0] // MechNameText 
+l XLocation = 93
+l YLocation = 5
+l Width = 143
+l Height = 22
+l Color = 0xff5C96C2
+b outline = FALSE
+l Font = 28000 // use agencyfb14
+l TextID = 0
+l Alignment = 0
+st Animation = "Animation2"
+
+[Text1] // VariantNameText
+l XLocation = 93
+l YLocation = 26
+l Width = 143
+l Height = 22
+l Color = 0xff005392
+b outline = FALSE
+l Font = 28001 // use agencyfb14
+l TextID = 0
+l Alignment = 0
+st Animation = "Animation0"
+
+[Text2] // WeightText
+l XLocation = 243
+l YLocation = 5
+l Width = 46
+l Height = 22
+l Color = 0xff5C96C2
+b outline = FALSE
+l Font = 28002 // use agencyfb14
+l TextID = 0
+l Alignment = 1 
+st Animation = "Animation2"
+
+[Text3] // CBillsText
+l XLocation = 243
+l YLocation = 26
+l Width = 46
+l Height = 22
+l Color = 0xff005392
+b outline = FALSE
+l Font = 28003 // use agencyfb14
+l TextID = 0
+l Alignment = 1 
+st Animation = "Animation0"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Animation0] // medium blue
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffff0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffff0000
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff0000
+f HighlightTime2 = .75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffff0000
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+
+[Animation1] // dark blue
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffff0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffff0000
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff0000
+f HighlightTime2 = .75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffff0000
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+
+[Animation2] // light blue
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffff0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffff0000
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff0000
+f HighlightTime2 = .75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffff0000
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FITend 

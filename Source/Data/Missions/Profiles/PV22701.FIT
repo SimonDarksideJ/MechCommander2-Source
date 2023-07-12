@@ -1,0 +1,92 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  22701   'Armored Car'  Type:  415 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     22701 
+st Crew =                                                  "PCREWB"
+ul Chassis =                                                415 
+st Name =                                                  "Armored Car"
+ul VehicleTypeID =                                          415 
+l NameIndex =                                               0 
+l DescIndex =                                               501 
+f CurTonnage =                                              7.5 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          750 
+l BattleRating =                                            20 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           21 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 1.5 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         3 
+uc CurArmorPoints =                                         3 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               143 
+uc FacesForward =                                           1 
+
+FITEnd

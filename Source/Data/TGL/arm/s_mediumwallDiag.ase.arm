@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D3A7123503B3BEC22E09476B24C986D2" />
+  <Asset Name="..\s_mediumwallDiag.ase" Type="Physical" Author="ngauvin" FileSize="103450" ModificationTime="2006-02-01T10:55:26.0296998-08:00" CRC="C92AAE0F73D2DF347232309BD77E242E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\S_Wall.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

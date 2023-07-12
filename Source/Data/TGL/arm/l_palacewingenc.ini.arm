@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B3436FD893C50DD9BE5163126F5B8393" />
+  <Asset Name="..\l_palacewingenc.ini" Type="Physical" Author="franksav" FileSize="390" ModificationTime="2006-03-03T01:28:31.7267424-08:00" CRC="77AA590EEA2EF9C7DB8B1A3A361F7539" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_palacewingEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

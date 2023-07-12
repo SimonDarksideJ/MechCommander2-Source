@@ -1,0 +1,66 @@
+FITini
+
+[Components]
+
+b AllComponents = FALSE
+
+l Component0 = 7		//Heat Sink
+l Component1 = 10		//Jump Jets
+l Component2 = 25		//Armor Plating
+l Component3 = 114		//MG Array
+l Component4 = 152		//Clan ER Laser
+l Component5 = 150		//Clan ER Large Laser
+l Component6 = 153		//Clan Pulse Laser
+l Component7 = 151		//Clan Large Pulse Laser
+l Component8 = 154		//Clan ER PPC
+l Component9 = 135		//Clan Streak SRM2 Pack
+l Component10 = 130		//Clan LRM5 Rack
+l Component11 = 110		//Clan Light Ultra Autocannon (AC5)
+l Component12 = 111		//Clan Ultra Autocannon (AC10)
+l Component13 = 109		//Clan Heavy Ultra Autocannon (AC20)
+l Component14 = 113		//Clan Gauss Rifle
+l Component15 = 139		//Clan Heavy Laser
+l Component16 = 147		//Clan Heavy Large Laser
+
+[Mechs]
+
+st Mech0 = "Bloodasp"
+st Mech1 = "Shadowcat"
+st Mech2 = "Uller"
+st Mech3 = "Vulture"
+st Mech4 = "Madcat"
+st Mech5 = "Thor"
+st Mech6 = "Ryoken"
+st Mech7 = "Cougar"
+
+
+[Pilots]
+
+st Pilot0 = "pmp_Chopper"
+st Pilot1 = "pmp_Claymore"
+st Pilot2 = "pmp_Creep"
+st Pilot3 = "pmp_Flash"
+st Pilot4 = "pmp_Hacksaw"
+st Pilot5 = "pmp_Hammer"
+st Pilot6 = "pmp_Jinx"
+st Pilot7 = "pmp_Longshot"
+st Pilot8 = "pmp_Psycho"
+st Pilot9 = "pmp_Shadow"
+st Pilot10 = "pmp_Cobra"
+st Pilot11 = "pmp_Dagger"
+st Pilot12 = "pmp_Palerider"
+st Pilot13 = "pmp_Payback"
+st Pilot14 = "pmp_Nuke"
+st Pilot15 = "pmp_Twitch"
+st Pilot16 = "pmp_Worm"
+st Pilot17 = "pmp_Bubba"
+st Pilot18 = "pmp_Scooter"
+st Pilot19 = "pmp_Steel"
+st Pilot20 = "pmp_Venom"
+st Pilot21 = "pmp_Wicked"
+st Pilot22 = "pmp_Ghost"
+st Pilot23 = "pmp_Meat"
+st Pilot24 = "pmp_Mother"
+st Pilot25 = "pmp_Rooster"
+
+FITend

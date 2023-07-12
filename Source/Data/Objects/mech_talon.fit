@@ -1,0 +1,275 @@
+FITini
+
+//--------------------------------------------
+// This is the new Mech/Vehicle File Format.
+// Stores all variants for this type of mech.
+// Player variants added into here as well.
+//--------------------------------------------
+
+[General]
+st Name						= "Talon"		// mech type description
+f TonnageClass					= 70.0			// 70 tons
+l DescIndex 					= 409 			//Points to mech name in Resource file
+l AbbrIndex 					= 4 			//Points to mech abbreviation in res file
+l ResourcePoints 				= 2500			//Base Resource points on Chassis  in CBills now!
+l ChassisBR 					= 25 			//Base Battle Rating of Chassis
+l EncyclopediaId				= -1			//Points to entry in encyclopedia on this Mech
+l HelpId					= -1			//Points to help entry for this mech.
+l HouseId					= -1			//Identifies which house runs this mech.
+b CanHaveAdvSensor				= f			//Can Mech Have Advanced Sensor installed.
+b CanHaveOptics					= f			//Can Mech Have Optics Installed.
+b CanHaveGlobalSensor				= f			//Can Mech have Global Sensor installed.
+b CanHaveECM					= f			//Can Mech have ECM Installed.
+b CanHaveActiveProbe				= f			//Can Mech have Active Probe Installed.
+f BaseHeatIndex					= 30.0			//Made up number.  How much heat the mech itself generates.
+f MaxHeatIndex					= 100.0			//Made up number.  How much heat capacity the mech has.
+st iconFileName					= "Talon"
+
+[ObjectType]
+st Name						= "talon"		// Text string giving a descriptive name
+l ExplosionObject				= 41			// Object Class Number of explosion for Mech
+l DestroyedObject				= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius					= 12			// Extent Radius in Meters
+st AppearanceName				= "shayu"		// Appearance Name of Object.
+
+[MaxInternalStructure]
+uc Head					       	= 3
+uc CenterTorso					= 22
+uc LeftTorso					= 15
+uc RightTorso					= 15
+uc LeftArm				       	= 11
+uc RightArm					= 11
+uc LeftLeg					= 15
+uc RightLeg					= 15
+
+[MechDynamics]
+l maxTorsoYawRate				= 360			//Degrees per sec
+l maxTorsoYaw					= 120			//(+/-)Degrees
+l maxArmYaw					= 60			//(+/-)Degrees
+l maxMechYawRate				= 180			//Degrees per sec
+l maxRightArmYawRate				= 180			//Degrees per sec
+l maxLeftArmYawRate				= 180			//Degrees per sec
+f maxAccel					= 3.0			//Meters per sec per sec
+f maxVelocity					= 40.0			//Meters per sec
+
+[Variants]
+l numVariants					= 1
+st VariantName000				= "Base Talon"
+
+//Variant 000 -- Base Variant
+
+[V000:MaxArmorPoints]
+uc Head 					= 9 
+uc CenterTorso 					= 16 
+uc LeftTorso 					= 14 
+uc RightTorso 					= 14 
+uc LeftArm 					= 12 
+uc RightArm 					= 12 
+uc LeftLeg 					= 13 
+uc RightLeg 					= 13 
+uc RearCenterTorso 				= 7 
+uc RearLeftTorso 				= 5 
+uc RearRightTorso 				= 5 
+
+[V000:CurArmorPoints]							//Technically, we do not need current armor or internal structure points
+									//Stored in the file because they are always repaired or new whenever
+									//we load the mech into either the mission or logistics.
+									//Does Mike want damaged enemy mechs on the field?
+uc Head 					= 9
+uc CenterTorso 					= 16 
+uc LeftTorso 					= 14 
+uc RightTorso 					= 14 
+uc LeftArm					= 12 
+uc RightArm 					= 12 
+uc LeftLeg 					= 13 
+uc RightLeg 					= 13 
+uc RearCenterTorso 				= 7 
+uc RearLeftTorso 				= 5 
+uc RearRightTorso 				= 5 
+
+[V000:InventoryInfo]
+uc NumOther					= 13 		//Number of other components.  Anything NOT weapon or AMMO
+uc NumWeapons 					= 5 		//Number of Weapon Components.
+uc NumAmmo 					= 4 		//Number of AMMO components.  Each ammo weapon REQUIRES one AMMO component.
+
+[V000:Head]
+uc CurInternalStructure 			= 3 
+uc Component:0 					= 6		//Always the Cockpit
+uc Component:1 					= 7		//Always Life Support
+uc Component:2 					= 12		//Always the Sensor package (can be 255 indicating no sensor)
+uc Component:3 					= 255		//Always the ECM package (can be 255 indicating no ECM)
+uc Component:4 					= 255		//Always the Optics package (can be 255 indicating no Optics)
+uc Component:5 					= 255		//Always the Active Probe (can be 255 indicating no Active Probe)
+
+[V000:CenterTorso]
+uc CurInternalStructure 			= 8 
+uc Component:0 					= 0		//Always the Fusion Engine
+uc Component:1 					= 1		//Always the Gyroscope
+uc Component:2 					= 255		//Open Weapon Slot. (can be 255 indicating slot is empty) 
+uc Component:3 					= 255		//Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:4 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:5 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:6 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:7 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:8 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:9 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:10 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:11 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+
+[V000:LeftTorso]
+uc CurInternalStructure 			= 6 
+uc Component:0 					= 14            //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:1 					= 19            //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:2 					= 17            //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:3 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:4 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:5 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:6 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:7 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:8 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:9 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:10 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+uc Component:11 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)  
+
+[V000:RightTorso]
+uc CurInternalStructure 			= 6 
+uc Component:0 					= 15		//Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:1 					= 20            //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:2 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:3 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:4 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:5 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:6 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:7 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:8 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:9 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:10 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+uc Component:11 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)   
+
+[V000:LeftArm]
+uc CurInternalStructure 			= 4 
+uc Component:0 					= 8		//Always the Shoulder
+uc Component:1 					= 2		//Always the Arm Actuator
+uc Component:2 					= 2		//Always the Arm Actuator 
+uc Component:3 					= 2             //Always the Arm Actuator 
+uc Component:4 					= 13            //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:5 					= 18		//Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:6 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:7 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:8 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:9 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:10 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+uc Component:11 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)    
+
+[V000:RightArm]
+uc CurInternalStructure 			= 4 
+uc Component:0 					= 9		//Always the Shoulder
+uc Component:1 					= 3		//Always the Arm Actuator
+uc Component:2 					= 3		//Always the Arm Actuator 
+uc Component:3 					= 3             //Always the Arm Actuator 
+uc Component:4 					= 16		//Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:5 					= 21            //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:6 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:7 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:8 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:9 					= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:10 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+uc Component:11 				= 255           //Open Weapon Slot. (can be 255 indicating slot is empty)     
+
+[V000:LeftLeg]
+uc CurInternalStructure 			= 6 
+uc Component:0 					= 10		//Always the Hip
+uc Component:1 					= 4		//Always the Leg Actuator
+uc Component:2 					= 4		//Always the Leg Actuator
+uc Component:3 					= 255		//Jump Jet (can Be 255 Indicating no Jump Jet)
+uc Component:4 					= 255		//Jump Jet (can Be 255 Indicating no Jump Jet) 
+uc Component:5 					= 255           //Jump Jet (can Be 255 Indicating no Jump Jet) 
+
+[V000:RightLeg]
+uc CurInternalStructure 			= 6 
+uc Component:0 					= 11		//Always the Hip                                
+uc Component:1 					= 5             //Always the Leg Actuator                       
+uc Component:2 					= 5             //Always the Leg Actuator                       
+uc Component:3 					= 255           //Jump Jet (can Be 255 Indicating no Jump Jet)  
+uc Component:4 					= 255           //Jump Jet (can Be 255 Indicating no Jump Jet)  
+uc Component:5 					= 255           //Jump Jet (can Be 255 Indicating no Jump Jet)  
+
+[V000:Item:0]
+uc MasterID =                                    1  //ALWAYS Fusion Engine
+
+[V000:Item:1]
+uc MasterID =                                    22 //ALWAYS Gyroscope
+
+[V000:Item:2]
+uc MasterID =                                    4  //ALWAYS LEFT Arm Actuator
+
+[V000:Item:3]
+uc MasterID =                                    4  //ALWAYS RIGHT Arm Actuator
+
+[V000:Item:4]
+uc MasterID =                                    5  //ALWAYS LEFT Leg Actuator
+
+[V000:Item:5]
+uc MasterID =                                    5  //ALWAYS RIGHT Leg Actuator
+
+[V000:Item:6]
+uc MasterID =                                    6  //ALWAYS Cockpit
+
+[V000:Item:7]
+uc MasterID =                                    35  //ALWAYS LifeSupport
+
+[V000:Item:8]
+uc MasterID =                                    33  //ALWAYS LEFT Shoulder
+
+[V000:Item:9]
+uc MasterID =                                    33  //ALWAYS RIGHT Shoulder
+
+[V000:Item:10]
+uc MasterID =                                    34  //ALWAYS LEFT Hip
+
+[V000:Item:11]
+uc MasterID =                                    34  //ALWAYS RIGHT Hip
+
+[V000:Item:12]
+uc MasterID =                                    13  //Sensor if there is one.
+							//If there is NO sensor, This ITEM is not present!
+							//Same for Optics, ECM and Active Probe!
+
+[V000:Item:13]
+uc MasterID =                                    123  //SRM/2
+uc FacesForward =                                1 
+
+[V000:Item:14]
+uc MasterID =                                    123  //SRM/2
+uc FacesForward =                                1 
+
+[V000:Item:15]
+uc MasterID =                                    123  //SRM/2
+uc FacesForward =                                1 
+
+[V000:Item:16]
+uc MasterID =                                    123  //SRM/2
+uc FacesForward =                                1 
+
+[V000:Item:17]
+uc MasterID =                                    143  //Medium Laser
+uc FacesForward =                                1 
+
+[V000:Item:18]
+uc MasterID =                                    223  //SRM/2 Pack
+l Amount =                                      -1 
+
+[V000:Item:19]
+uc MasterID =                                    223  //SRM/2 Pack
+l Amount =                                      -1 
+
+[V000:Item:20]
+uc MasterID =                                    223  //SRM/2 Pack
+l Amount =                                      -1 
+
+[V000:Item:21]
+uc MasterID =                                    223  //SRM/2 Pack
+l Amount =                                      -1 
+
+FITEnd
+

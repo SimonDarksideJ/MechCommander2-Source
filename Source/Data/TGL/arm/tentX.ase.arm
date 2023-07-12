@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="44D5456DAD6894DF4A96EC8E9823DF8D" />
+  <Asset Name="..\tentX.ase" Type="Physical" Author="ngauvin" FileSize="6974" ModificationTime="2006-02-01T10:55:33.5922482-08:00" CRC="7636C5955128671ABE11F8E20A4C61AE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Tent.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

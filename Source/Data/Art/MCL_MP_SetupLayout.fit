@@ -1,0 +1,1622 @@
+FITini
+
+
+
+// comment codes:
+// DDMPN : drop down menu player name
+// DDMUN : drop down menu unit name
+// DDMUI : drop down menu unit insignia
+// COLPI : color picker
+
+
+
+
+
+
+
+[Statics]
+
+l staticCount = 27
+
+
+
+
+[Static0]  // A 
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 256
+l VHeight = 8
+
+
+
+[Static1]  // B
+
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 8
+l UWidth  = 256
+l VHeight = 8
+
+
+
+[Static2]  // C
+
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 16
+l UWidth  = 256
+l VHeight = 8
+
+
+
+[Static3]  // D
+
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 188
+l VNormal = 118
+l UWidth  = 32
+l VHeight = 8
+
+
+[Static4]  // E
+
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 120
+l VNormal = 0
+l UWidth  = 10
+l VHeight = 32
+
+
+
+[Static5]  // F
+
+l XLocation = 426
+l YLocation = 8
+l Width = 188
+l Height = 32
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 118
+l UWidth  = 188
+l VHeight = 32
+
+
+
+[Static6]  // G
+
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 120
+l VNormal = 32
+l UWidth  = 10
+l VHeight = 40
+
+
+
+[Static7]  // H
+
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 20
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 24
+l UWidth  = 256
+l VHeight = 20
+
+
+
+[Static8]  // I
+
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 20
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 44
+l UWidth  = 256
+l VHeight = 20
+
+
+
+
+[Static9]  // J
+
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 20
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 143
+l VNormal = 162
+l UWidth  = 102
+l VHeight = 20
+
+
+
+[Static10]  // K
+
+l XLocation = 614
+l YLocation = 48
+l Width = 186
+l Height = 12
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 150
+l UWidth  = 186
+l VHeight = 12
+
+
+
+
+[Static11]  // L
+
+l XLocation = 0
+l YLocation = 60
+l Width = 20
+l Height = 256
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 256
+
+
+[Static12]  // M
+
+l XLocation = 475
+l YLocation = 60
+l Width = 20
+l Height = 256
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 20
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 256
+
+
+
+
+[Static13]  // N
+
+l XLocation = 780
+l YLocation = 60
+l Width = 20
+l Height = 256
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 40
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 256
+
+
+
+
+[Static14]  // O
+
+l XLocation = 0
+l YLocation = 316
+l Width = 20
+l Height = 207
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 60
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 207
+
+
+
+[Static15]  // P
+
+l XLocation = 475
+l YLocation = 316
+l Width = 20
+l Height = 207
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 80
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 207
+
+
+
+[Static16]  // Q
+
+l XLocation = 780
+l YLocation = 316
+l Width = 20
+l Height = 207
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 100
+l VNormal = 0
+l UWidth  = 20
+l VHeight = 207
+
+
+
+
+[Static17]  // R
+
+l XLocation = 0
+l YLocation = 523
+l Width = 143
+l Height = 77
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 162
+l UWidth  = 143
+l VHeight = 77
+
+
+
+
+[Static18]  // S
+
+l XLocation = 143
+l YLocation = 523
+l Width = 256
+l Height = 22
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 64
+l UWidth  = 256
+l VHeight = 22
+
+
+
+
+
+[Static19]  // T
+
+l XLocation = 399
+l YLocation = 523
+l Width = 256
+l Height = 22
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 86
+l UWidth  = 256
+l VHeight = 22
+
+
+
+
+[Static20]  // U
+
+l XLocation = 655
+l YLocation = 523
+l Width = 69
+l Height = 13
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 143
+l VNormal = 182
+l UWidth  = 69
+l VHeight = 13
+
+
+
+
+
+[Static21]  // V
+
+l XLocation = 724
+l YLocation = 523
+l Width = 76
+l Height = 13
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 143
+l VNormal = 195
+l UWidth  = 76
+l VHeight = 13
+
+
+
+
+[Static22]  // W
+
+l XLocation = 655
+l YLocation = 536
+l Width = 11
+l Height = 59
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 121
+l VNormal = 72
+l UWidth  = 10
+l VHeight = 59
+
+
+
+
+[Static23]  // X
+
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+
+st FileName = "MCL_MP_Setup2"
+
+l UNormal = 120
+l VNormal = 131
+l UWidth  = 6
+l VHeight = 59
+
+
+
+
+[Static24]  // Y
+
+l XLocation = 143
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 108
+l UWidth  = 256
+l VHeight = 5
+
+
+
+[Static25]  // Z
+
+l XLocation = 399
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 113
+l UWidth  = 256
+l VHeight = 5
+
+
+
+[Static26]  // Z.A
+
+l XLocation = 655
+l YLocation = 595
+l Width = 145
+l Height = 5
+
+st FileName = "MCL_MP_Setup1"
+
+l UNormal = 0
+l VNormal = 239
+l UWidth  = 145
+l VHeight = 5
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[Rects]
+
+l rectCount = 5
+
+[Rect0] // outline rect for scaled-up insignia image
+l left = 337
+l right = 404
+l top = 199
+l bottom = 266
+l color  = 0xff43311C	
+b outline = 1
+
+
+// COLPI
+[Rect1] // outline rect- animation of mech is centered in here
+l left = 337
+l right = 464
+l top = 297
+l bottom = 512
+l color  = 0xff43311C	
+b outline = 1
+
+
+[Rect2] // outline rect- information about connection types goes here
+l left = 505
+l right = 769
+l top = 377
+l bottom = 512
+l color  = 0xff002F55	
+b outline = 1
+
+// COLPI
+[Rect3] // Player Name editable text goes in here
+// Start of Player name drop down menu
+l left = 30
+l right = 309
+l top = 85
+l bottom = 105
+l color  = 0xff43311C	
+b outline = 1
+
+
+
+
+
+// COLPI
+[Rect4]// outline for color picker gradient
+l XLocation = 176
+l YLocation = 454
+l Width = 128
+l Height = 32
+l Color = 0xffc66600
+b outline = 1
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Buttons]
+
+l buttonCount = 6
+
+
+
+
+
+[Button0] // DONE button in lower right corner  
+//this button has three parts- pixel art, rectangle, and text
+
+
+
+l ID = 50 // MB_MSG_NEXT
+l XLocation = 666 // bmp art
+l YLocation = 536 // bmp art doesn't take color animation
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+//l XTextLocation = 711// rect-  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+//l YTextLocation = 551// 
+l TextWidth = 100
+l TextHeight = 31
+l color  = 0xff005392
+b DrawOutline = TRUE
+
+l TextID = 27100
+l Font = 26020
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup3"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0  // animate the rect and the text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 59
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = TRUE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UDisabled = 0
+l VDisabled = 59
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button1] // main menubutton in upper right hand corner  
+//this button has three parts- pixel art, rectangle, and text
+
+
+
+l ID = 57 // MB_MSG_MAINMENU
+l XLocation = 614 // bmp  art
+l YLocation = 8 // bmp  art doesn't take color animation
+l Width = 176
+l Height = 40
+
+l XTextLocation = 622 // rect-  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 16 // 
+l TextWidth = 158
+l TextHeight = 22
+l color  = 0xff005392
+b DrawOutline = TRUE
+
+l TextID = 27104
+l Font = 26021
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup3"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 128
+
+b AnimateBmp = 0  // animate the rect and the text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 168
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = TRUE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UDisabled = 0
+l VDisabled = 168
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+[Button2] // Radio button for internet (zone)
+
+l ID = xxx
+
+l XLocation = 505 //
+l YLocation = 99
+l Width = 46
+l Height = 46
+b Toggle = 1  // 
+
+l XTextLocation = 559 //  use AgencyFB17. 
+l YTextLocation = 109 // text uses same color animation as bmp  art
+l color  = 0xff005392
+
+
+l TextID = xxx
+l Font = xxx
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup1"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 145
+l VNormal = 208
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 191
+l VPressed = 208
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 145
+l VHighlight = 208
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 191
+l VHighlightPressed = 208
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 145
+l VDisabled = 208
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button3] // Radio button for LAN
+
+l ID = xxx
+
+l XLocation = 505
+l YLocation = 171
+l Width = 46
+l Height = 46
+b Toggle = 1  
+
+l XTextLocation = 559 //  use AgencyFB17. 
+l YTextLocation = 181// text uses same color animation as bmp  art
+l color  = 0xff005392
+
+
+l TextID = xxx
+l Font = xxx
+
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup1"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 145
+l VNormal = 208
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 191
+l VPressed = 208
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 145
+l VHighlight = 208
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 191
+l VHighlightPressed = 208
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 145
+l VDisabled = 208
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button4] // Radio button for direct tcp/ip
+
+l ID = xxx
+
+l XLocation = 505 
+l YLocation = 242
+l Width = 46
+l Height = 46
+b Toggle = 1  // 
+
+l XTextLocation = 559 //  use AgencyFB17. 
+l YTextLocation = 252 // text uses same color animation as bmp  art
+l color  = 0xff005392
+
+
+l TextID = xxx
+l Font = xxx
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup1"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 145
+l VNormal = 208
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 191
+l VPressed = 208
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 145
+l VHighlight = 208
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 191
+l VHighlightPressed = 208
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 145
+l VDisabled = 208
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button5] // Radio button for modem to modem
+
+l ID = xxx
+
+l XLocation = 505 //
+l YLocation = 314
+l Width = 46
+l Height = 46
+b Toggle = 1  
+
+l XTextLocation = 559 //  use AgencyFB17. 
+l YTextLocation = 324 // text uses same color animation as bmp  art
+l color  = 0xff005392
+
+
+l TextID = xxx
+l Font = xxx
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup1"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 145
+l VNormal = 208
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 191
+l VPressed = 208
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 145
+l VHighlight = 208
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 191
+l VHighlightPressed = 208
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 145
+l VDisabled = 208
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+// below here are listed text entries for MP setup.
+
+
+
+[Texts]
+
+l TextCount = 8
+
+
+
+[Text0]  // big Title text
+
+l XLocation = 17 //  Left Justify All Caps
+l YLocation = 10 //  Use AgencyFB20
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+// DDMPN
+[Text1]  // Player name header
+
+l XLocation = 30 //  Left Justify All Caps 
+l YLocation = 61 //  Use AgencyFB14
+l color  = 0xffFF8A0D
+l TextID = 45035
+l Font = 40038
+
+// DDMUN
+[Text2]  // Unit Name header
+
+l XLocation = 30 //  Left Justify 
+l YLocation = 119 //  Use AgencyFB14
+l color  = 0xffFF8A0D // All Caps
+l TextID = 45035
+l Font = 40038
+
+// DDMUI
+[Text3]  // Unit Insignia header
+
+l XLocation = 29 //  Left Justify 
+l YLocation = 176 //  Use AgencyFB14
+l color  = 0xffFF8A0D // All Caps
+l TextID = 45035
+l Font = 40038
+
+
+[Text4]  //  Player colors header
+
+l XLocation = 29 //  Left Justify 
+l YLocation = 274 //  Use AgencyFB14
+l color  = 0xffFF8A0D // all caps
+l TextID = 45035
+l Font = 40038
+
+
+[Text5]  // Help text area
+
+l XLocation = 148 //  Left Justify 
+l YLocation = 547 //  Use AgencyFB11
+l color  = 0xffFFFFFF 
+l TextID = 45035
+l Font = 40035
+
+
+[Text6]  // connection type header
+
+l XLocation = 504 //  Left Justify. 
+l YLocation = 64 //  Use AgencyFB14
+l color  = 0xff005392
+l TextID = 45035
+l Font = 40038
+
+
+[Text7]  // Description of Connection type
+
+l XLocation = 511 //  Left Justify. 
+l YLocation = 380 //  Use AgencyFB11
+l color  = 0xffffffff
+l TextID = 45035
+l Font = 40035
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+// below here is misc. stuff for the multiplayer setup area.
+
+
+
+// COLPI
+// below here goes color picker information
+
+[ColorPicker]
+ 
+[ColorPickerMainRect] // outline rect for whole color picker
+l left = 150
+l right = 326
+l top = 297
+l bottom = 512
+l color  = 0xffc66600	
+b outline = 1
+
+
+
+
+
+
+// COLPI
+[ColorPickerTabs]
+
+l TabCount = 2
+
+
+// COLPI
+[ColorPickerTab0] // This is the tab for base color
+// it has four parts:  the outer tab bmp art,
+// the outline rect around the color to be changed, the color rect
+// and the text.  
+
+// COLPI
+[Tab0Text] // tab text info- use font agencyfb11
+l XLocation = 35
+l YLocation = 300
+l Color = 0xffC66600 
+l TextID = 45035
+l Font = 40035 //  Use AgencyFB11
+
+// COLPI
+[Tab0ColorOutlineRect] // rectangle around tabcolor
+l XLocation = 49
+l YLocation = 328
+l Width = 64
+l Height = 64
+b outline = 1
+l Color = 0xffC66600 
+
+// COLPI
+[Tab0ColorRect]// tab color is in this filled rectangle
+// color of rect is whatever the player picks or whatever the default is.
+l XLocation = 51
+l YLocation = 330
+l Width = 62
+l Height = 62
+b outline = 0
+
+// COLPI
+[Tab0Button]
+l ID = xxx
+l XLocation = 30
+l YLocation = 297
+l Width = 121
+l Height = 106
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup2"
+
+l UWidth = 121
+l VHeight = 106
+
+l UNormal = 131
+//l VNormal = 106
+l VNormal = 0
+
+l UPressed = 131
+l VPressed = 0
+
+
+
+
+
+
+
+
+
+
+// COLPI
+[ColorPickerTab1] // This is the tab for STRIPE color
+
+// COLPI
+[Tab1Text] // tab text info- use font agencyfb11
+l XLocation = 35
+l YLocation = 409
+l Color = 0xffC66600 
+l TextID = 45035
+l Font = 40035 //  Use AgencyFB11
+
+// COLPI
+[Tab1ColorOutlineRect] // rectangle around tabcolor
+l XLocation = 49
+l YLocation = 438
+l Width = 64
+l Height = 64
+b outline = 1
+l Color = 0xffC66600 
+
+
+// COLPI
+[Tab1ColorRect]// tab color is in this filled rectangle
+// color of rect is whatever the player picks or whatever the default is.
+l XLocation = 51
+l YLocation = 440
+l Width = 62
+l Height = 62
+b outline = 0
+
+
+// COLPI
+[Tab1Button]
+l ID = xxx
+l XLocation = 30
+l YLocation = 407
+l Width = 121
+l Height = 106
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCL_MP_Setup2"
+
+l UWidth = 121
+l VHeight = 106
+
+l UNormal = 131
+//l VNormal = 106
+l VNormal = 0
+
+l UPressed = 131
+l VPressed = 0
+
+
+
+
+// COLPI
+[ColorPickerCircleStatic]
+// Bmp circle for color picker goes here
+// This circle shows hue and saturation
+l XLocation = 176
+l YLocation = 316
+
+l Width = 128
+l Height = 128
+
+st FileName = "MCL_MP_Setup3"
+
+l UNormal = 128
+l VNormal = 0
+l UWidth  = 128
+l VHeight = 128
+
+// COLPI
+[ColorPickerValueGradient] // gradient for color picker goes in this rectangle
+l XLocation = 178
+l YLocation = 456
+l Width = 124
+l Height = 28
+b outline = 0
+l Color = 0xff808080
+
+
+
+
+
+
+
+// COLPI
+[GradientSlider]
+
+l Min = 295 // horizontal measurement
+l Max = 468
+
+l ID = xxx
+l XLocation = 173
+l YLocation = 489
+l Width = 12
+l Height = 6
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_Scroll"
+
+l UWidth = 12
+l VHeight = 6
+
+
+l UNormal = 0
+l VNormal = 12
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 15.5
+l NormalColor2 = 0xffFFAE4D
+f NormalTime3 = 16.0
+l NormalColor3 = 0xffC66600
+
+
+l UPressed = 0
+l VPressed = 12
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l UHighlight = 0
+l VHighlight = 12
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l UDisabled = 0
+l VDisabled = 12
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+// COLPI
+[HueCirclePicker] // circle cursor inside 
+// the main color picker circle
+// It can't leave a circle described by
+// a 60p radius from the location below.
+
+l ID = xxx
+l XLocation = 240 // this is in the center of the 
+l YLocation = 379 // color picker circle
+l Width = 12
+l Height = 12
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_Scroll"
+
+l UWidth = 12
+l VHeight = 12
+
+
+l UNormal = 12
+l VNormal = 0
+l NormalColor = 0xffC66600
+
+
+l UPressed = 12
+l VPressed = 0
+l PressedColor = 0xffFFAE4D
+
+
+l UHighlight = 12
+l VHighlight = 0
+l HighlightColor = 0xffFFAE4D
+
+
+l UDisabled = 12
+l VDisabled = 0
+l DisabledColor = 0xff373737
+
+
+// end of color picker info
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 3
+
+
+
+[ComboBox0] // player name drop down
+
+l XLocation = 30
+l YLocation = 85
+
+st FileName = "mcl_mp_setup_combobox0"
+
+
+[ComboBox1] // unit name drop down
+
+l XLocation = 30
+l YLocation = 142
+
+st FileName = "mcl_mp_setup_combobox1"
+
+
+
+[ComboBox2] // unit insignia drop down
+
+l XLocation = 30
+l YLocation = 199
+
+st FileName = "mcl_mp_setup_combobox2"
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FitEnd

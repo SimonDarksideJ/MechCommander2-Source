@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4429FF0DAF2B2FC4E4EDCBB53C626E2E" />
+  <Asset Name="..\heavycopterX.ase" Type="Physical" Author="ngauvin" FileSize="50406" ModificationTime="2006-02-01T10:54:55.8888819-08:00" CRC="9BCC2AD66BB7E68B6C8B9C3B7BE4F25D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

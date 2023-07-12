@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="310E2279BDB6EDFA54DB5D70A7E79F4D" />
+  <Asset Name="..\mc2_m02_warrior87" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Thor.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Thor.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\pmp_creep.fit" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

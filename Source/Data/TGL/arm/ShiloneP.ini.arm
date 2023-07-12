@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="54CF6B4E09E06675E40EA57A331E2C76" />
+  <Asset Name="..\ShiloneP.ini" Type="Physical" Author="franksav" FileSize="332" ModificationTime="2006-03-03T01:28:49.3047549-08:00" CRC="5A35353B3E7AD80B016CDFA41211DD80" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="shiloneP.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="shiloneparkedL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="shiloneparkedL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="shiloneparkedX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="shilonePdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="shiloneparkedDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shilone" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

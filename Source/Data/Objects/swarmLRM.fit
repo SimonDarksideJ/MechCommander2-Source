@@ -1,0 +1,43 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=24
+
+[ObjectType]
+st Name=""
+l Appearance=0
+l ExplosionObject=0
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BoltProjectileData]
+f ProjectileLength=110.000000
+f BulgeLength=35.000000
+f BulgeWidth=4.000000
+f Velocity=250.000000
+l FiringEffect=0
+l TrailEffect=0
+
+//Which Effect number in effects.csv to play -- ONLY for area effect weapons
+l HitEffect=6
+
+l MissEffect=0
+l FiringSoundFX=30
+l LightEffect=0
+ul FrontRGB=255
+ul MidEdgeRGB=33023
+ul MiddleRGB=65535
+ul BackRGB=64
+uc EdgeAlpha=200
+uc BoltAlpha=255
+
+//Area Effect!
+f AreaEffectDamage = 3.0
+f AreaEffectRadius = 120.0
+
+b ArcEffect = t
+f ArcHeight = 30.0
+f AfterHitTime = 1.0
+
+FITend 
+

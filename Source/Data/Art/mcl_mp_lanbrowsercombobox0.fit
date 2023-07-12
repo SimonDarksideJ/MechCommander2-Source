@@ -1,0 +1,274 @@
+FITini 
+
+// this is used in the lan browser list box.  Each game shown should be in this format.
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[GameList]
+
+l XLocation = 72
+l YLocation = 106
+l Width = 675
+l Height = 270
+b ChildCoordinatesAreRelative = 1
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[GameListItem]
+
+[Rects]
+l Rectcount = 5
+
+[Rect0] // rect around locked icon
+l XLocation = 0
+l YLocation = 0
+l Width = 28
+l Height = 24
+l Color = 0xff000000
+b outline = TRUE
+st Animation = "Animation1"
+
+
+[Rect1] // game name rectangle
+l XLocation = 31
+l YLocation = 0
+l Width = 214
+l Height = 24
+l Color = 0xff000000
+b outline = TRUE
+st Animation = "Animation1"
+
+
+[Rect2] // player # rectangle
+l XLocation = 248
+l YLocation = 0
+l Width = 101
+l Height = 24
+l Color = 0xff000000
+b outline = TRUE
+st Animation = "Animation1"
+
+[Rect3] // map name rectangle
+l XLocation = 352
+l YLocation = 0
+l Width = 215
+l Height = 24
+l Color = 0xff000000
+b outline = TRUE
+st Animation = "Animation1"
+
+[Rect4] // PING rectangle
+l XLocation = 570
+l YLocation = 0
+l Width = 84
+l Height = 24
+l Color = 0xff000000
+b outline = TRUE
+st Animation = "Animation1"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Statics]
+l Staticcount = 2
+
+[Static0] // locked icon
+l XLocation = 9
+l YLocation = 6
+l Width = 12
+l Height = 12
+l UNormal = 240
+l VNormal = 0
+l UWidth = 12
+l VHeight = 12
+st FileName = "mcl_mp_lanbrowser_1.tga"
+st Animation = "Animation0"
+
+[Static1] // latency icon sequence
+// there are three icons available
+// green, yellow, red,
+// listed in best to worst order in the tga
+// each is 12p below the previous
+l XLocation = 577
+l YLocation = 6
+l Width = 12
+l Height = 12
+l UNormal = 139
+l VNormal = 132
+l UWidth = 12
+l VHeight = 12
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // game name
+l XLocation = 40
+l YLocation = 3
+l Width = 197
+l Height = 18
+l Color = -3774976
+b outline = FALSE
+l Font = 26067 // use agency fb 11
+l TextID = 26051
+l Alignment = 0
+st Animation = "Animation0"
+
+[Text1] // # of players
+l XLocation = 256
+l YLocation = 3
+l Width = 86
+l Height = 18
+l Color = -3774975
+b outline = FALSE
+l Font = 26067 // use agency fb 11
+l TextID = 26051
+l Alignment = 0
+st Animation = "Animation0"
+
+
+[Text2] // map name 
+l XLocation = 361
+l YLocation = 3
+l Width = 200
+l Height = 18
+l Color = -3774974
+b outline = FALSE
+l Font = 26067 // use agency fb 11
+l TextID = 26051
+l Alignment = 0
+st Animation = "Animation0"
+
+
+[Text3] // ping number
+l XLocation = 599
+l YLocation = 5
+l Width = 50
+l Height = 18
+l Color = //color is one of three:
+//best = 0xff1EFF00 
+//middle = 0xffFFCC00 
+//worst = 0xffff0000 
+b outline = FALSE
+l Font = 26067 // use agency fb 11
+l TextID = 26051
+l Alignment = 0
+st Animation = "Animation0"
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Animation0] // for text and locked icon
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffc66600
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Animation1] // for highlight rects
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 15
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffC66600
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+FITend 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5913C249FCA47E490EF3436535FAD5A2" />
+  <Asset Name="..\mcl_mc_armorplating.ase" Type="Physical" Author="ngauvin" FileSize="167506" ModificationTime="2006-02-01T10:55:10.4983504-08:00" CRC="AC4D618DFE4E5DEC3EC80191FB49DEDE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Armorplatting.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

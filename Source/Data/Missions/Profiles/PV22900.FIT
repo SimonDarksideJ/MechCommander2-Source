@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  22900   'Mine Layer'  Type:  609 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     22900 
+st Crew =                                                  "PCREWD"
+ul Chassis =                                                609 
+st Name =                                                  "Mine Layer"
+ul VehicleTypeID =                                          609 
+l NameIndex =                                               8 
+l DescIndex =                                               507 
+f CurTonnage =                                              40 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          8000 
+l BattleRating =                                            900 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 7 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

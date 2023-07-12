@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D7299783A9DC9B9E96A975746A8D52E6" />
+  <Asset Name="..\mediumautocannonturretenc.ini" Type="Physical" Author="franksav" FileSize="313" ModificationTime="2006-03-03T01:28:36.2423385-08:00" CRC="8652F94FA356705D8F74C8D5129EF390" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="MediumAutoCannonTurretEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

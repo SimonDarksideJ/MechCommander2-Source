@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3E8752B5D09C2D0351F9C6B8FA84F97C" />
+  <Asset Name="..\JagermechL1.ase" Type="Physical" Author="ngauvin" FileSize="140349" ModificationTime="2006-02-01T10:55:01.3889171-08:00" CRC="D69E85DA9B97671D5317BE5865F3DF9B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\JagermechRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

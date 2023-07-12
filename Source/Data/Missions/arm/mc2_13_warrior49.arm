@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="45A9C5E7807E1E546CE4F7696478DC0E" />
+  <Asset Name="..\mc2_13_warrior49" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\pv20500.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\PoweredArmor.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\PoweredArmor.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWElite.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_13_WFac1_PWARM_1.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

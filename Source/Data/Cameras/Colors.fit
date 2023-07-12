@@ -1,0 +1,129 @@
+FITini
+
+[Main]
+l NumTables = 2
+
+[Table0]
+ul Color0  = 0x00000000				
+ul Color1  = 0x00000000
+ul Color2  = 0x00000000
+ul Color3  = 0x00000000
+ul Color4  = 0x00000000
+ul Color5  = 0x00000000
+ul Color6  = 0x00000000
+ul Color7  = 0x00000000
+ul Color8  = 0x00000000
+ul Color9  = 0x00000000
+ul Color10 = 0x00000000
+ul Color11 = 0x00000000
+ul Color12 = 0x00000000
+ul Color13 = 0x00000000
+ul Color14 = 0x00000000
+ul Color15 = 0x00000000
+
+ul Color16 = 0xff001000
+ul Color17 = 0xff002000
+ul Color18 = 0xff003000
+ul Color19 = 0xff004000
+ul Color20 = 0xff005000
+ul Color21 = 0xff006000
+ul Color22 = 0xff007000
+ul Color23 = 0xff008000
+ul Color24 = 0xff009000
+ul Color25 = 0xff00A000
+ul Color26 = 0xff00B000
+ul Color27 = 0xff00C000
+ul Color28 = 0xff00D000
+ul Color29 = 0xff00E000
+ul Color30 = 0xff00F000
+ul Color31 = 0xff00FF00
+
+ul Color32 = 0x00000000
+ul Color33 = 0x00000000
+ul Color34 = 0x00000000
+ul Color35 = 0x00000000
+ul Color36 = 0x00000000
+ul Color37 = 0x00000000
+ul Color38 = 0x00000000
+ul Color39 = 0x00000000
+
+ul Color40 = 0xff000020
+ul Color41 = 0xff000040
+ul Color42 = 0xff000060
+ul Color43 = 0xff000080
+ul Color44 = 0xff0000A0
+ul Color45 = 0xff0000C0
+ul Color46 = 0xff0000E0
+ul Color47 = 0xff0000FF
+
+ul Color48 = 0xff200000
+ul Color49 = 0xff400000
+ul Color50 = 0xff600000
+ul Color51 = 0xff800000
+ul Color52 = 0xffA00000
+ul Color53 = 0xffC00000
+ul Color54 = 0xffE00000
+ul Color55 = 0xffFF0000
+
+[Table1]
+ul Color0  = 0x00000000
+ul Color1  = 0x00000000
+ul Color2  = 0x00000000
+ul Color3  = 0x00000000
+ul Color4  = 0x00000000
+ul Color5  = 0x00000000
+ul Color6  = 0x00000000
+ul Color7  = 0x00000000
+ul Color8  = 0x00000000
+ul Color9  = 0x00000000
+ul Color10 = 0x00000000
+ul Color11 = 0x00000000
+ul Color12 = 0x00000000
+ul Color13 = 0x00000000
+ul Color14 = 0x00000000
+ul Color15 = 0x00000000
+
+ul Color16 = 0xff686868
+ul Color17 = 0xff707070
+ul Color18 = 0xff787878
+ul Color19 = 0xff808080
+ul Color20 = 0xff888888
+ul Color21 = 0xff909090
+ul Color22 = 0xff9c9c9c
+ul Color23 = 0xffa8a8a8
+ul Color24 = 0xffb4b4b4
+ul Color25 = 0xffc4c4c4
+ul Color26 = 0xffd0d0d0
+ul Color27 = 0xffe0e0e0
+ul Color28 = 0xffececec
+ul Color29 = 0xf8f8f8f8
+ul Color30 = 0xffffffff
+ul Color31 = 0xffffffff
+
+ul Color32 = 0x00000000
+ul Color33 = 0x00000000
+ul Color34 = 0x00000000
+ul Color35 = 0x00000000
+ul Color36 = 0x00000000
+ul Color37 = 0x00000000
+ul Color38 = 0x00000000
+ul Color39 = 0x00000000
+
+ul Color40 = 0xff30241c
+ul Color41 = 0xff4c443c
+ul Color42 = 0xff686460
+ul Color43 = 0xff888484
+ul Color44 = 0xff9c9894
+ul Color45 = 0xffb0aca8
+ul Color46 = 0xffc4c0b8
+ul Color47 = 0xffdcd4c8
+
+ul Color48 = 0xff3c342c
+ul Color49 = 0xff58342c
+ul Color50 = 0xff74342c
+ul Color51 = 0xff943830
+ul Color52 = 0xffac4030
+ul Color53 = 0xffc44834
+ul Color54 = 0xffdc5038
+ul Color55 = 0xffff745c
+

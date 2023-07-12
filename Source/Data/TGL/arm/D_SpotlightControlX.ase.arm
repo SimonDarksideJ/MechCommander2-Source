@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B859630675A5F9FFE5B96298E906C9D4" />
+  <Asset Name="..\D_SpotlightControlX.ase" Type="Physical" Author="ngauvin" FileSize="32316" ModificationTime="2006-02-01T10:54:48.4982096-08:00" CRC="2513CA97330553B605A7E84892EFD53A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

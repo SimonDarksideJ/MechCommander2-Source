@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="656BF21ECBC7CA4FFB3551398658D0BE" />
+  <Asset Name="..\s_LightWall.ase" Type="Physical" Author="ngauvin" FileSize="108829" ModificationTime="2006-02-01T10:55:24.9828181-08:00" CRC="156FFE31A6B129A721C9394C56110025" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\S_Wall.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

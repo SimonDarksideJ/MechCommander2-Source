@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1FB99ED5A2045C95B9DDF5AEBBD576F6" />
+  <Asset Name="..\vtol.ase" Type="Physical" Author="ngauvin" FileSize="386188" ModificationTime="2006-02-01T10:55:36.7485184-08:00" CRC="80049D023F198911DC0DF0B945D9FCF2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\VTOLRGB.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\VTOLA.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\VTOLB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

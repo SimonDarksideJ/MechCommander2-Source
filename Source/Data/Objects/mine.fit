@@ -1,0 +1,28 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				MapIcon:	Mine Indicator
+//				BASE ID:	59
+//
+//---------------------------------------------------------------------------
+
+[ObjectClass]
+l ObjectTypeNum = 13
+
+[MineData]
+ul dmgPotential = 5								//Five points of damage
+f ExtentRadius = 25								//Five meters
+l MineType = 1
+	
+[ObjectType]
+st Name 							= "MINE"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 59			// ID number for this mech type
+l Appearance						= 0x020000F4
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 0				// Amount of damage mine does on impact
+l ExplosionObject					= 39			// Object Class Number of explosion
+l DestroyedObject					= -1			// Object Class Number of Destroyed shape
+f ExtentRadius						= 15			// Extent Radius in Meters (0 Can't hit hit ever)
+
+FITEnd

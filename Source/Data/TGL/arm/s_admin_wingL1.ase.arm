@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A5D1EAB6D7A6BAC13566DEFFE4A78557" />
+  <Asset Name="..\s_admin_wingL1.ase" Type="Physical" Author="ngauvin" FileSize="58655" ModificationTime="2006-02-01T10:55:22.1077997-08:00" CRC="9EB50C71B3645B4D2F006C5061FACEC3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_G_Window.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Stone2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Door.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Roof.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_G_Window2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_stone_windows.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

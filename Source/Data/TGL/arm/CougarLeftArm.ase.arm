@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="50A42CA95EC1ED3B6FD1E9C4484EE6AF" />
+  <Asset Name="..\CougarLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="24452" ModificationTime="2006-02-01T10:54:43.3575517-08:00" CRC="E3FED7B04C906C0633A56DF271383C0A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\CougerRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

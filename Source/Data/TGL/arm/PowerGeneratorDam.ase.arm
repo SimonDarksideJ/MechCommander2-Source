@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0EC1730343CE7C40BB8E10E4E72C4B7D" />
+  <Asset Name="..\PowerGeneratorDam.ase" Type="Physical" Author="ngauvin" FileSize="74197" ModificationTime="2006-02-01T10:55:15.7640091-08:00" CRC="38D95BEC7F384C0590A47CB5646759B7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_L_TurretGeneratorDAM.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_TurretGeneratorBDAM.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

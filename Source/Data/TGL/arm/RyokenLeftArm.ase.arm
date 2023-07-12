@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7B97D72BB2CA41CA42F54F59F3AA4D7A" />
+  <Asset Name="..\RyokenLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="30783" ModificationTime="2006-02-01T10:55:21.4202953-08:00" CRC="FDB346A763AD5D1752F8448760F78F72" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\RyokenRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

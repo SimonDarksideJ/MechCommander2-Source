@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2B4599542EA75764B84656F71E59682D" />
+  <Asset Name="..\UrbanMech.ini" Type="Physical" Author="franksav" FileSize="3955" ModificationTime="2006-03-03T01:28:55.070343-08:00" CRC="087288C63689BB9775CBFD4D58CAF17E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Urbanmech.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="UrbanmechL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="UrbanmechL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="UrbanmechX.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmech.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="urbanmechFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="urbanmechFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="urbanmechFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="UrbanMech" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

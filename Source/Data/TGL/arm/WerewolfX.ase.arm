@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="11C4218A9DE994FD1A7C94CE4A3689CF" />
+  <Asset Name="..\WerewolfX.ase" Type="Physical" Author="ngauvin" FileSize="148521" ModificationTime="2006-02-01T10:55:38.873532-08:00" CRC="7F0979B8F41F2CE495B1B7CB6F2F6841" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A1C6B89B163EBA72C3A248D620BBAAD8" />
+  <Asset Name="..\gantry.ase" Type="Physical" Author="ngauvin" FileSize="63925" ModificationTime="2006-02-01T10:54:54.029495-08:00" CRC="80DD4CED546F65F0CACB811B61B0E89C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Gantry.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

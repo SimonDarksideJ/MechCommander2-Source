@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BE1DEF432B07E7F9BD2923DC707AA7F3" />
+  <Asset Name="..\guntowerEnc.ase" Type="Physical" Author="ngauvin" FileSize="46720" ModificationTime="2006-02-01T10:54:54.9826261-08:00" CRC="08C17661E731A08FD420581B934BE61B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_GunTower.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

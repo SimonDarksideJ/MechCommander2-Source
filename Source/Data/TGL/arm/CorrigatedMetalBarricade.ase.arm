@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8673E541A28BEE35745AD383F053700C" />
+  <Asset Name="..\CorrigatedMetalBarricade.ase" Type="Physical" Author="ngauvin" FileSize="12873" ModificationTime="2006-02-01T10:54:42.9825493-08:00" CRC="85FF8379FE8E3A8CB2C7953F456E1E09" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_cammo.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

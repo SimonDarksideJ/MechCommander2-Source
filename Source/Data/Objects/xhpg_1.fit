@@ -1,0 +1,29 @@
+FITini
+
+// This is the xhpg data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xhpg_1"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x0200035B
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 25			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 298
+l BattleRating		= 2500
+b BlocksLineOfFire 	= FALSE
+ul DmgLevel			= 78
+ul BlownEffectId	= -1			//Sound Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is normal.
+ul DamageEffectId	= 73			//Sound Effect Played when building is dmg/destroyed.
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00003838
+			
+FITend

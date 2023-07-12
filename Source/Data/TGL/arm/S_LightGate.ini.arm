@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A55633ABFC6A0353071566CABA76BFEB" />
+  <Asset Name="..\S_LightGate.ini" Type="Physical" Author="franksav" FileSize="969" ModificationTime="2006-03-03T01:28:45.3672801-08:00" CRC="ECB5E9334AB86EE6FBBE45F2A401A50B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_lightgate.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_lightgateL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_lightgateL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_lightgateX.ase" />
+        <Relationship Type="Animation" RelatedAsset="s_lightgate.ase" />
+        <Relationship Type="Animation" RelatedAsset="s_lightgateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="s_lightgateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="s_lightgateopen.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_lightgateDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_lightgatedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Light Gate" ObjectType="Building" BuildingType="Editor Gate" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

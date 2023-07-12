@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="928A2C28B97B32961DFED681EB06326C" />
+  <Asset Name="..\uller.ini" Type="Physical" Author="franksav" FileSize="3943" ModificationTime="2006-03-03T01:28:54.5859711-08:00" CRC="68AC1A774E8DD0E9D92EC4F3E6C8C605" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Uller.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="UllerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="UllerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="UllerX.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="uller.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ullerFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ullerFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ullerFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Uller" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

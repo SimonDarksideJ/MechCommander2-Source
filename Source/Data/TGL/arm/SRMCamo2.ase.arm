@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4EA10DF1C40A3F1E942B072CC037FEE4" />
+  <Asset Name="..\SRMCamo2.ase" Type="Physical" Author="ngauvin" FileSize="80313" ModificationTime="2006-02-01T10:55:31.4203593-08:00" CRC="590C9DBB1CEC14FA4A94490D2D3AB302" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Turrets.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turretbase.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Tundra_Cliffs_1.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turrets.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

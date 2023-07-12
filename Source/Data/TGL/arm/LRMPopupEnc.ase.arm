@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7041865563F6398EAF6F16CE1E411E5A" />
+  <Asset Name="..\LRMPopupEnc.ase" Type="Physical" Author="ngauvin" FileSize="42173" ModificationTime="2006-02-01T10:55:09.5920946-08:00" CRC="492BD4FC97E7FE3CA0F80679283664A5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\LRM6.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turretbase.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Popupcase.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

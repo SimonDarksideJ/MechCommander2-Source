@@ -1,0 +1,29 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				MapIcon:	Artillery Indicator
+//
+//				BASE ID:	61
+//
+//---------------------------------------------------------------------------
+
+[ObjectClass]
+l ObjectTypeNum = 10
+
+[MapIcon]
+st MapIconSpriteName 	= "artillery"				//Name of Sprite .SHP file with waypoint icon in it.
+ul FrameCount 			= 1							//Number of frames of animation.
+f FrameRate 			= 15.0						//Frame Rate to playback animation at.
+	
+[ObjectType]
+st Name 							= "ARTLRY"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 61			// ID number for this mech type
+l Appearance						= 0x00000000
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 100			// Damage points on impact
+l ExplosionObject					= -1			// Object Class Number of explosion
+l DestroyedObject					= -1			// Object Class Number of Destroyed shape
+f ExtentRadius						= 0				// Extent Radius in Meters (0 Can't hit hit ever)
+
+FITEnd

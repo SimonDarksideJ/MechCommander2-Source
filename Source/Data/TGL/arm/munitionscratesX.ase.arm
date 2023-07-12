@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8D091242D9A87E63DC994382099B7C7A" />
+  <Asset Name="..\munitionscratesX.ase" Type="Physical" Author="ngauvin" FileSize="11554" ModificationTime="2006-02-01T10:55:13.873372-08:00" CRC="5986926C7C213DEFD68F21A9B83A729B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

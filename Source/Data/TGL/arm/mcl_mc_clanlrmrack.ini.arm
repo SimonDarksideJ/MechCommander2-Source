@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E03855C885FEBAB148225C86E7955C99" />
+  <Asset Name="..\mcl_mc_clanlrmrack.ini" Type="Physical" Author="franksav" FileSize="155" ModificationTime="2006-03-03T01:28:35.070471-08:00" CRC="1BCD93AFA3C1FD6D9CCAE2C551BA4315" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_ClanLRMRack.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

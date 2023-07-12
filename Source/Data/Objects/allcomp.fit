@@ -1,0 +1,267 @@
+FITini 
+
+[Components]
+ul NumComponents=50
+
+// Short Range
+
+[Componant0]
+// Short-Range Missile Pack (IS) 
+uc ComponantID = 123
+l NumAvailable = 6
+
+[Componant1]
+// SRM/2
+uc ComponantID = 133
+l NumAvailable = 0
+
+[Componant2]
+// Laser (IS) 
+uc ComponantID = 143
+l NumAvailable = 4
+
+[Componant3]
+// Pulse Laser (IS) 
+uc ComponantID = 144
+l NumAvailable = 0
+
+[Componant4]
+// PS laser
+uc ComponantID = 153
+l NumAvailable = 0
+
+[Componant5]
+// Streak Short-Range Missile Pack(IS) 
+uc ComponantID = 125
+l NumAvailable = 3
+
+[Componant6]
+// Streak SRM/2
+uc ComponantID = 135
+l NumAvailable = 0
+
+[Componant7]
+// Heavy Flamer (IS) 
+uc ComponantID = 147
+l NumAvailable = 2
+
+[Componant8]
+// Flamer
+uc ComponantID = 155
+l NumAvailable = 0
+
+[Componant9]
+// Heavy Autocannon (IS) 
+uc ComponantID = 102
+l NumAvailable = 0
+
+[Componant10]
+// Ultra AC/20
+uc ComponantID = 112
+l NumAvailable = 0
+
+//Medium Range
+
+[Componant11]
+//  Autocannon (IS) 
+uc ComponantID = 101
+l NumAvailable = 1
+
+[Componant12]
+// ER laser
+uc ComponantID = 152
+l NumAvailable = 0
+
+[Componant13]
+// Large Laser (IS) 
+uc ComponantID = 140
+l NumAvailable = 1
+
+[Componant14]
+// Large Pulse Laser (IS) 
+uc ComponantID = 142
+l NumAvailable = 1
+
+[Componant15]
+// Large PS laser
+uc ComponantID = 151
+l NumAvailable = 0
+
+[Componant16]
+// Particle Projector Cannon (IS) 
+uc ComponantID = 145
+l NumAvailable = 1
+
+// Long Range
+
+[Componant17]
+// Light Autocannon (IS) 
+uc ComponantID = 100
+l NumAvailable = 2
+
+[Componant18]
+// Ultra AC/10
+uc ComponantID = 111
+l NumAvailable = 0
+
+[Componant19]
+// Long-Range Missile Rack (IS) 
+uc ComponantID = 120
+l NumAvailable = 5
+
+[Componant20]
+// LRM/5
+uc ComponantID = 130
+l NumAvailable = 0
+
+[Componant21]
+// Light Ultra Autocannon (IS) 
+uc ComponantID = 103
+l NumAvailable = 0
+
+[Componant22]
+// Ultra AC/5
+uc ComponantID = 110
+l NumAvailable = 0
+
+[Componant23]
+// Large ER Laser (IS) 
+uc ComponantID = 141
+l NumAvailable = 0
+
+[Componant24]
+// Large ER laser
+uc ComponantID = 150
+l NumAvailable = 0
+
+[Componant25]
+// ER Particle Projector Cannon (IS) 
+uc ComponantID = 146
+l NumAvailable = 0
+
+[Componant26]
+// ER PPC
+uc ComponantID = 154
+l NumAvailable = 0
+
+[Componant27]
+// Gauss Rifle (IS) 
+uc ComponantID = 104
+l NumAvailable = 0
+
+[Componant28]
+// Guass Rifle
+uc ComponantID = 113
+l NumAvailable = 0
+
+// Sensor
+
+[Componant29]
+// Sensor (Basic) (IS) 
+uc ComponantID = 13
+l NumAvailable = 2
+
+[Componant30]
+// Sensor - Basic
+uc ComponantID = 16
+l NumAvailable = 0
+
+[Componant31]
+// Sensor (Intermediate) (IS) 
+uc ComponantID = 14
+l NumAvailable = 0
+
+[Componant32]
+// Sensor (Advanced) (IS) 
+uc ComponantID = 15
+l NumAvailable = 0
+
+[Componant33]
+// Sensor - Advanced
+uc ComponantID = 17
+l NumAvailable = 0
+
+[Componant34]
+// Beagle Probe (IS) 
+uc ComponantID = 37
+l NumAvailable = 0
+
+[Componant35]
+// Active Probe
+uc ComponantID = 43
+l NumAvailable = 0
+
+[Componant36]
+// Guardian ECM (IS) 
+uc ComponantID = 38
+l NumAvailable = 0
+
+[Componant37]
+// ECM Suite
+uc ComponantID = 42
+l NumAvailable = 0
+
+//////
+
+[Componant38]
+// Lt LBX
+uc ComponantID = 107
+l NumAvailable = 0
+
+[Componant39]
+// LBX
+uc ComponantID = 108
+l NumAvailable = 0
+
+[Componant40]
+// Hvy LBX
+uc ComponantID = 109
+l NumAvailable = 0
+
+[Componant41]
+// Clan Lt LBX
+uc ComponantID = 116
+l NumAvailable = 0
+
+[Componant42]
+// Clan LBX
+uc ComponantID = 117
+l NumAvailable = 0
+
+[Componant43]
+// Clan Hvy LBX
+uc ComponantID = 118
+l NumAvailable = 0
+
+[Componant44]
+// Lt Gauss
+uc ComponantID = 98
+l NumAvailable = 0
+
+[Componant45]
+// Hvy Gauss
+uc ComponantID = 99
+l NumAvailable = 0
+
+[Componant46]
+// Thunderbolt
+uc ComponantID = 126
+l NumAvailable = 0
+
+[Componant47]
+// X Pulse
+uc ComponantID = 139
+l NumAvailable = 0
+
+[Componant48]
+// Long Tom
+uc ComponantID = 160
+l NumAvailable = 0
+
+[Componant49]
+// Sniper Cannon
+uc ComponantID = 161
+l NumAvailable = 0
+
+
+FITend 

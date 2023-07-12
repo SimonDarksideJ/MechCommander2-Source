@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="81548D9A036C11715DD1DEDFE579317B" />
+  <Asset Name="..\Enfield.ase" Type="Physical" Author="ngauvin" FileSize="161758" ModificationTime="2006-02-01T10:54:50.6388483-08:00" CRC="AD1BC5F92814995C36C267C97C756E1E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\EnfieldRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

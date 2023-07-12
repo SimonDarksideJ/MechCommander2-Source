@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EBA52B2344A4C3FB6278CE63020328B9" />
+  <Asset Name="..\bluebeaconlightDamX.ase" Type="Physical" Author="ngauvin" FileSize="4042" ModificationTime="2006-02-01T10:54:37.8262663-08:00" CRC="B0E913EE7F6F2B1A85CC7B021B71D744" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

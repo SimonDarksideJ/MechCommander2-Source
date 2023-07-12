@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2C8CFA833763943A7CB9E28C5E8A3512" />
+  <Asset Name="..\highlanderleftarm.ini" Type="Physical" Author="franksav" FileSize="154" ModificationTime="2006-03-03T01:28:26.2424025-08:00" CRC="C50EB538B3C9B69B4644F36DDA1CFED4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="HighlanderLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

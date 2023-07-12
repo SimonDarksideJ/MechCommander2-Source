@@ -1,0 +1,20 @@
+		//**************************************************************************
+		//Clan End Include File	3/19
+		//------------------------ 
+
+		switch (CurrentCombatMode)
+			case COMBAT_MODE_WAIT:
+				combatModeWait;
+				endcase;
+			case COMBAT_MODE_DESTROY:
+				combatModeDestroy;
+				endcase;
+			case COMBAT_MODE_GUARD:
+				combatModeGuard;
+				endcase;
+			case COMBAT_MODE_IDENTIFY:
+				combatModeIdentify;
+				endcase;
+		endswitch;
+
+		return(0);

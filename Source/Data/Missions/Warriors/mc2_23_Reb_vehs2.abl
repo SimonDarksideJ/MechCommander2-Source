@@ -1,0 +1,347 @@
+//****************************************************************************************//
+//
+//		Encounter ?
+//			Group of ???
+//
+//      MISSION:  Mc2_23
+//		Unit(s) that Powerup when player is near then Patrol Starport Area
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_23_Reb_vehs2;
+
+	var
+
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState		startTownPatrolState;
+		static PatrolPath		startTownPatrolPath;
+		static PatrolState		startPatrolToStarportState;
+		static PatrolPath		startPatrolToStarportPath;
+		static PatrolState		startStarportPatrolState;
+		static PatrolPath		startStarportPatrolPath;
+    static boolean			Rebels_Triggered;
+    static boolean			PatrolToStarport_Check;
+    static boolean			StarportPatrol_Check;
+		static boolean			poweredDown;
+		static boolean			poweredUp;
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 325, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+
+		AttackStateHandle = getStateHandle("attack");
+
+		Rebels_Triggered = false;
+		PatrolToStarport_Check = false;
+		StarportPatrol_Check = false;
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase1PatrolState Start
+
+		startTownPatrolState[0] = PATROL_TYPE_LINEAR;
+		startTownPatrolState[1] = 4;    //?num points
+		startTownPatrolState[2] = -1;    //?num cycles
+		startTownPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startTownPatrolState[4] = -1;    //reset cur point
+		startTownPatrolState[5] = -1;    //reset cur cycle
+		startTownPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startTownPatrolPath[0, 0] = -1472.000;
+		startTownPatrolPath[0, 1] = 2240.000;
+		startTownPatrolPath[1, 0] = -1472.000;
+		startTownPatrolPath[1, 1] = 1472.000;
+		startTownPatrolPath[2, 0] = -1088.000;
+		startTownPatrolPath[2, 1] = 1472.000;
+		startTownPatrolPath[3, 0] = -1088.000;
+		startTownPatrolPath[3, 1] = 1685.333;
+		
+		startPatrolToStarportState[0] = PATROL_TYPE_LINEAR;
+		startPatrolToStarportState[1] = 2;    //?num points
+		startPatrolToStarportState[2] = 1;    //?num cycles
+		startPatrolToStarportState[3] = PATROL_DIRECTION_FORWARD;
+		startPatrolToStarportState[4] = -1;    //reset cur point
+		startPatrolToStarportState[5] = -1;    //reset cur cycle
+		startPatrolToStarportState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startPatrolToStarportPath[0, 0] = -64.000;
+		startPatrolToStarportPath[0, 1] = 448.000;
+		startPatrolToStarportPath[1, 0] = 1088.000;
+		startPatrolToStarportPath[1, 1] = -2368.000;
+
+		
+		startStarportPatrolState[0] = PATROL_TYPE_LINEAR;
+		startStarportPatrolState[1] = 2;    //?num points
+		startStarportPatrolState[2] = -1;    //?num cycles
+		startStarportPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startStarportPatrolState[4] = -1;    //reset cur point
+		startStarportPatrolState[5] = -1;    //reset cur cycle
+		startStarportPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startStarportPatrolPath[0, 0] = 960.000;
+		startStarportPatrolPath[0, 1] = -2624.000;
+		startStarportPatrolPath[1, 0] = 3648.000;
+		startStarportPatrolPath[1, 1] = -2624.000;
+		
+		
+		//XLs startBase1PatrolPath end
+
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		// Trigger for Rebels to Start Town Patrol
+		if (Rebels_Freed) then
+			if (NOT Rebels_Triggered) then
+				if (NOT PatrolToStarport_Check) then
+					Rebels_Triggered = TRUE;
+					if (curStateHandle <> AttackStateHandle) then
+					 trans TownPatrol;
+					endif;
+				endif;
+			endif;
+		endif;
+		
+
+		// Trigger for Rebels to Start Patrol to Starport
+		if ((Starport_Attacked_North) OR (Starport_Attacked_South)) then
+			if (NOT PatrolToStarport_Check) then
+				PatrolToStarport_Check = TRUE;
+				if (curStateHandle <> AttackStateHandle) then
+					trans PatrolToStarport;
+				endif;
+			endif;
+		endif;
+		
+
+/*		// Trigger for Rebels to Start Starport Patrol
+		if (TC2_Captured) then
+			if (NOT StarportPatrol_Check) then
+				StarportPatrol_Check = TRUE;
+				if (curStateHandle <> AttackStateHandle) then
+					trans StarportPatrol;
+				endif;
+			endif;
+		endif;
+*/		
+		
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state TownPatrol;
+	
+	code
+		update;
+		setDebugString(-1, 3, " TownPatrol    ");
+//		corePatrol(startTownPatrolState, startTownPatrolPath, -1);
+		corePatrol(startTownPatrolState, startTownPatrolPath, AttackStateHandle);
+		resetOrders(1);
+
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state PatrolToStarport;
+
+	code
+
+		//coreRun = TRUE;
+		update;
+		setDebugString(-1, 3, "  PatrolToStarport     ");
+		corePatrol(startPatrolToStarportState, startPatrolToStarportPath, AttackStateHandle);
+		trans StarportPatrol;
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state StarportPatrol;
+
+	code
+
+		//coreRun = FALSE;
+		update;
+		setDebugString(-1, 3, "  StarportPatrol     ");
+		corePatrol(startStarportPatrolState, startStarportPatrolPath, AttackStateHandle);
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+
+		integer		tacticState;
+
+	code
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_LEFT_FLANK, tacticState);
+//		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+
+state start;
+
+	code
+	
+		setDebugString(-1, 3, " WAIT    ");
+		update;
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

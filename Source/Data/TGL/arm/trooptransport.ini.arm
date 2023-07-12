@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4D6259B9A500D6CDC1BB43E78AEBEC7E" />
+  <Asset Name="..\trooptransport.ini" Type="Physical" Author="franksav" FileSize="309" ModificationTime="2006-03-03T01:28:54.3047229-08:00" CRC="CAC2A2553B797D07D9E4C91070876171" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="TroopTransport.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="TroopTransportL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="TroopTransportL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="TroopTransportX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="TroopTransportDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Troop Transport" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

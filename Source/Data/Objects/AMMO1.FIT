@@ -1,0 +1,36 @@
+FITini
+
+// This is a sample Component Data File.
+
+[General Data]
+st Name =					"InnerSphere Autocannon 2"	// Text string giving a descriptive name
+l Type =					404							// ID number for this component
+uc Tonnage =				12							// 6.0 tons (remember, in half-tons)
+
+[Critical Spaces]
+uc[9] NumCriticalSpaces =	1,							// Anywhere
+							0,							// Head
+							0,							// Left Arm
+							0,							// Right Arm
+							6,							// Center Torso
+							0,							// Left Torso
+							0,							// Right Torso
+							0,							// Left Leg
+							0							// Right Leg
+
+[Damage Levels]
+c DamageLevel =				-1							// Never damaged--only destroyed.
+c DestroyLevel =			1							// If hit, it's destroyed
+
+[Weapon Data]
+f Heat =					0.25
+f Damage =					0.5
+uc Recycle =				5							// In half-seconds
+s MinRange =				120							// In meters
+s ShortRange =				240							// In meters
+s MediumRange =				480							// In meters
+s LongRange =				720							// In meters
+s AmmoType =				180
+uc Status =					0							// [READY, RECYCL., DAM., DESTROYED]
+
+FITEnd

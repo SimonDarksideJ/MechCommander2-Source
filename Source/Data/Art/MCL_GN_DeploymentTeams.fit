@@ -1,0 +1,294 @@
+FITini
+
+// DEPLOYMENT TEAMS FOR LOGISTICS
+
+[DeploymentTeamBox] // this info gets used in Mech Bay and Pilot Ready area only
+
+
+
+
+l XSkip = 4 // four boxes 
+l YSkip = 5 // three boxes
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[MechNameText] // this reads EMPTY if no mech is assigned
+l XLocation = 4 // left justify
+l YLocation = 4	
+l Color = 0xffFF8A00 // normal color
+l Font = 27855 // Use ArialNarrow8
+st Animation = "Animation0"
+
+[PilotNameText] // this reads NO PILOT if no pilot is assigned
+l XLocation = 4 // left justify
+l YLocation = 15	
+l Color = 0xffC66600 // normal color
+l Font = 27856 // Use ArialNarrow8
+st Animation = "Animation1"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[MechEntryIcon]  // get icons from MCUI_GN_MechIcons
+l XLocation = 3
+l YLocation = 31
+l Width = 25
+l Height = 30
+l Color = 0xffFF8900
+st FileName = "mcui_gn_mechicons"
+st Animation = "Animation0"
+
+
+[PilotIcon]  // get icons from MCUI_Low2
+l XLocation = 51
+l YLocation = 32
+l Width = 20
+l Height = 28
+b AnimateBmp = 0 //pilot icon shouldn't change color with the rest of the box pieces
+st FileName = "mcui_low2"
+//don't animate
+
+
+[IconConnector] // bmp art for connecting lines from
+// mech icon to pilot icon
+// only shows up when a mech is in the dep. team box
+// needs to go behind the mech and pilot icons
+l XLocation = 1
+l YLocation = 27
+l Width = 73
+l Height = 36
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 177
+l VNormal = 128
+l UWidth  = 73
+l VHeight = 36
+st Animation = "Animation2"
+
+[BoxOutline] 
+// bmp art for outline around text and icons
+// coordinates are from upper left hand corner of whole screen
+// this bmp should be used as the defining area for one 
+// deployment team box
+st Animation = "Animation3"
+l XLocation = 25 
+l YLocation = 86 
+l Width = 75  
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UWidth  = 75
+l VHeight = 64
+
+l UNormal = 176
+l VNormal = 64
+
+l UPressed = 176
+l VPressed = 64
+
+l UHighlight = 176
+l VHighlight = 64
+
+l UHighlightPressed = 176
+l VHighlightPressed = 64
+
+l UDisabled = 176
+l VDisabled = 64
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Animation0] // bright orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8A00
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffFF8A00
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffFF8A00
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffFF8A00
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+[Animation1] // medium orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffC66600
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffC66600
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffC66600
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+[Animation2] // dark orange
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff43311C
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff43311C
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xff43311C
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+[Animation3] // outline orange
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 0.1
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffC66600
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xffC66600
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffC66600
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.1
+l DisabledColor1 = 0xff373737
+
+
+
+
+FitEnd

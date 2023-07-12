@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0F4C8CE95FB2EE8F3FA7AD3F139EE237" />
+  <Asset Name="..\GreenHouse.ini" Type="Physical" Author="franksav" FileSize="572" ModificationTime="2006-03-03T01:28:24.9611607-08:00" CRC="65C43BBADE5EF74C201A3476AA2D75C5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="greenhouse.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="greenhouseL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="greenhouseL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="greenhouseX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="GreenHouseDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="GreenHouseDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Greenhouse" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

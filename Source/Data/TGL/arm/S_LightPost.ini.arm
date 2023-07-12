@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2B2708FEBCE162E3B6F6511E5A8FFAFE" />
+  <Asset Name="..\S_LightPost.ini" Type="Physical" Author="franksav" FileSize="334" ModificationTime="2006-03-03T01:28:45.539154-08:00" CRC="56A3AA8277F635BB2519476365E2856B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_Lightpost.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_LightpostL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_LightpostL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_LightpostX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_LightPostdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_LightpostdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Light Post" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

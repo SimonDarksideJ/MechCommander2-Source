@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E7CA7D7ADA64F0E663621F036CFC88C5" />
+  <Asset Name="..\SandBagBunker.ini" Type="Physical" Author="franksav" FileSize="348" ModificationTime="2006-03-03T01:28:47.3672673-08:00" CRC="488970914EC07DFCA99056EB08AEFA4E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="sandbagbunker.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="sandbagbunkerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="sandbagbunkerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="sandbagbunkerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="sandbagbunkerdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="sandbagbunkerDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Sandbag Bunker" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

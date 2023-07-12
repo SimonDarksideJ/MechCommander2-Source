@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DFA5F731CC4332B82BE4ADA7D6BC4D75" />
+  <Asset Name="..\s_govresidence.ini" Type="Physical" Author="franksav" FileSize="589" ModificationTime="2006-03-03T01:28:44.5704102-08:00" CRC="1434FBF94DD7ADDEEBB756731B4A12F6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_govResidence.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_govResidenceL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_govResidenceL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_govResidenceX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_govResidencedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_govResidencedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hall of Records" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B02B6EB47B6B4A8254539606BDC5BFAE" />
+  <Asset Name="..\Werewolf.ini" Type="Physical" Author="franksav" FileSize="4129" ModificationTime="2006-03-03T01:28:56.7265824-08:00" CRC="B30C464F234C2824BF5A18BDC2280336" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Werewolf.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="WerewolfL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="WerewolfL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="WerewolfX.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolf.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="werewolfFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="werewolfFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="werewolfFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Razorback" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

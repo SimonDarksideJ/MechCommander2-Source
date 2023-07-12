@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B23D229CEAD8FA0FC292977D673DA8F9" />
+  <Asset Name="..\heavycopterenc.ase" Type="Physical" Author="ngauvin" FileSize="102058" ModificationTime="2006-02-01T10:54:55.6076301-08:00" CRC="63E90D95EBB6795DF8C3542EAA2AA3F9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\HeavyCopter.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

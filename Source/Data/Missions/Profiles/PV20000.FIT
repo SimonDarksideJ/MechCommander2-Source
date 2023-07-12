@@ -1,0 +1,88 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20000   'Swiftwind'  Type:  426 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20000 
+st Crew =                                                  "PCREWA"
+ul Chassis =                                                426 
+st Name =                                                  "Swiftwind"
+ul VehicleTypeID =                                          426 
+l NameIndex =                                               20 
+l DescIndex =                                               517 
+f CurTonnage =                                              5 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          500 
+l BattleRating =                                            20 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           21 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 1.5 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         6 
+uc CurArmorPoints =                                         6 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[InventoryInfo]
+uc NumOther =                                               4 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+[Item:3]
+uc MasterID =                                               18 
+
+FITEnd

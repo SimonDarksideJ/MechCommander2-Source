@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5F3D25BE3D9636B7F4BD94AC0B548D71" />
+  <Asset Name="..\Nav1.ini" Type="Physical" Author="franksav" FileSize="158" ModificationTime="2006-03-03T01:28:37.7735787-08:00" CRC="57D38ACD32784C4A84688FA62C825C16" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="nav1.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Nav Marker" ObjectType="Building" BuildingType="Nav Marker" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

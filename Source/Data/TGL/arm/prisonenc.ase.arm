@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D5B4BE6DB0756CCAC2BA383ADAB32ED0" />
+  <Asset Name="..\prisonenc.ase" Type="Physical" Author="ngauvin" FileSize="146150" ModificationTime="2006-02-01T10:55:15.8890099-08:00" CRC="4DF30736FF60703504B5A891B681D3B0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Prison.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_wirefence.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

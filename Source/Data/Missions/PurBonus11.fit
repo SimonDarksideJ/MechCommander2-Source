@@ -1,0 +1,12 @@
+FITini
+
+[Components]
+
+l Component0 = 123		//Swarm LRM5 Rack
+l Component1 = 152		//Clan ER Laser
+l Component2 = 150		//Clan ER Large Laser
+l Component3 = 153		//Clan Pulse Laser
+l Component4 = 151		//Clan Large Pulse Laser
+l Component5 = 154		//Clan ER PPC
+
+FITend

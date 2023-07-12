@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6ADD4A7AA7D4C34097FED54F325755CA" />
+  <Asset Name="..\D_LightWalldam.ase" Type="Physical" Author="ngauvin" FileSize="72707" ModificationTime="2006-02-01T10:54:47.6075789-08:00" CRC="47ECF1DB21AB31521D13A3DE71B61015" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\D_LightWallDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\DavionLightWall_damaged.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

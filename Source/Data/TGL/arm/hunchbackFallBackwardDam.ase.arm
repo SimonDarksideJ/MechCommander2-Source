@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4A7089ADB13F81B12E70B78DEE9FC72D" />
+  <Asset Name="..\hunchbackFallBackwardDam.ase" Type="Physical" Author="ngauvin" FileSize="93560" ModificationTime="2006-02-01T10:54:59.6389059-08:00" CRC="6DC745D14927A635B7E20598222DA3C3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

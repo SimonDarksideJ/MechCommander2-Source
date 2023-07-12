@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DDEA515CA6080566BA3142C529D5873C" />
+  <Asset Name="..\catapultrightarm.ini" Type="Physical" Author="franksav" FileSize="155" ModificationTime="2006-03-03T01:28:15.9455934-08:00" CRC="9430066B6D44E5FAF57EC96DFE558832" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="CatapultRightArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

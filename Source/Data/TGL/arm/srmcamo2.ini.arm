@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EC913882843CCF1E152A02C6DCCCD725" />
+  <Asset Name="..\srmcamo2.ini" Type="Physical" Author="franksav" FileSize="1232" ModificationTime="2006-03-03T01:28:50.9141196-08:00" CRC="01D310934E100AA726FF65A7E9184804" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="SRMCamo2.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SRMPopupX.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmcamo2.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmcamoopen2.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmcamoopen2.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmcamoopen2.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PopupDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PopupDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="SRM Tundra Camo Turret" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

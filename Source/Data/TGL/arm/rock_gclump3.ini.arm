@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F0F333D57CB09B7D3A45B23702E99780" />
+  <Asset Name="..\rock_gclump3.ini" Type="Physical" Author="franksav" FileSize="292" ModificationTime="2006-03-03T01:28:41.4610551-08:00" CRC="6E71FAE64FBEC0FE52B6FA623B8F9094" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="rock_GClump3.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="rock_GClump3L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="rock_GClump3L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_GClump3X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Grass Rock Clump 3" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

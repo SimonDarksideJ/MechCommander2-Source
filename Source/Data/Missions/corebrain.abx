@@ -1,0 +1,1361 @@
+//****************************************************************************************//
+//
+//	CORE BRAIN
+//
+//	Mechcommander 2 Core Brain Library
+//
+//****************************************************************************************//
+
+library CoreBrain;
+
+//****************************************************************************************//
+
+	const
+
+		PILOT_EVENT_NONE = -1;
+		PILOT_EVENT_TARGETED = 0;
+		PILOT_EVENT_HIT = 1;
+		PILOT_EVENT_DAMAGED = 2;
+		PILOT_EVENT_FRIENDLY_KILLED = 3;
+		PILOT_EVENT_FRIENDLY_CRIPPLED = 4;
+		PILOT_EVENT_FRIENDLY_DESTROYED = 5;
+		PILOT_EVENT_CRIPPLED = 6;
+		PILOT_EVENT_DESTROYED = 7;
+		PILOT_EVENT_WITHDRAWN = 8;
+		PILOT_EVENT_MORALE_BREAK = 9;	//obsolete--in for compatability with older brains
+		PILOT_EVENT_ATTACK_ORDER = 9;
+		PILOT_EVENT_COLLISION = 10;
+		PILOT_EVENT_GUARD_RADIUS_BREACH = 11;
+		PILOT_EVENT_TARGET_KILLED = 12;
+		PILOT_EVENT_MATE_FIRED_WEAPON = 13;
+		PILOT_EVENT_PLAYER_ORDER = 14;
+		PILOT_EVENT_NO_MOVEPATH = 15;
+		PILOT_EVENT_GATE_CLOSING = 16;
+		PILOT_EVENT_CONTACT = 17;		//obsolete--do not use!
+		PILOT_EVENT_FIRED_WEAPON = 17;
+		PILOT_EVENT_NEW_MOVER = 18;
+
+		TARGET_PRIORITY_NONE = 0;
+		TARGET_PRIORITY_GAMEOBJECT = 1;
+		TARGET_PRIORITY_MOVER = 2;
+		TARGET_PRIORITY_BUILDING = 3;
+		TARGET_PRIORITY_CURTARGET = 4;
+		TARGET_PRIORITY_TURRET = 5;
+		TARGET_PRIORITY_TURRET_CONTROL = 6;
+		TARGET_PRIORITY_GATE = 7;
+		TARGET_PRIORITY_GATE_CONTROL = 8;
+		TARGET_PRIORITY_SALVAGE = 9;
+		TARGET_PRIORITY_MECHBAY = 10;
+		TARGET_PRIORITY_LOCATION = 11;
+		TARGET_PRIORITY_EVENT_TARGETED = 12;
+		TARGET_PRIORITY_EVENT_HIT = 13;
+		TARGET_PRIORITY_EVENT_DAMAGED = 14;
+		TARGET_PRIORITY_EVENT_MATE_DIED = 15;
+		TARGET_PRIORITY_EVENT_FRIENDLY_DISABLED = 16;
+		TARGET_PRIORITY_EVENT_FRIENDLY_DESTROYED = 17;
+		TARGET_PRIORITY_EVENT_FRIENDLY_WITHDRAWS = 18;
+		TARGET_PRIORITY_SKIP = 19;
+
+		PILOT_STATE_IDLE = 0;
+		PILOT_STATE_MISSION = 1;
+		PILOT_STATE_RETREAT = 2;
+		PILOT_STATE_PATROL = 3;
+		PILOT_STATE_ATTACK = 4;
+		PILOT_STATE_RETREAT_BUILDING = 5;
+
+		CONTACT_CRITERIA_NONE = 0;
+		CONTACT_CRITERIA_ENEMY = 1;
+		CONTACT_CRITERIA_VISUAL = 2;
+		CONTACT_CRITERIA_GUARD_BREACH = 4;
+		CONTACT_CRITERIA_NOT_CHALLENGED = 8;
+		CONTACT_CRITERIA_SENSOR = 16;
+		CONTACT_CRITERIA_VISUAL_OR_SENSOR = 32;
+		CONTACT_CRITERIA_NOT_DISABLED = 64;
+		CONTACT_CRITERIA_THREAT = 128;
+
+		CONTACT_SORT_NONE = 0;
+		CONTACT_SORT_CV = 1;
+		CONTACT_SORT_DISTANCE = 2;
+
+		MAX_PATROL_POINTS = 60;
+		PATROL_TYPE_LINEAR = 0;
+		PATROL_TYPE_LOOPING = 1;
+		PATROL_DIRECTION_FORWARD = 0;
+		PATROL_DIRECTION_BACKWARD = 1;
+
+		TACORDER_PARAM_NONE = 0;
+		TACORDER_PARAM_RUN = 1;
+		TACORDER_PARAM_WAIT = 2;
+		TACORDER_PARAM_FACE_OBJECT = 4;
+		TACORDER_PARAM_LAY_MINES = 8;
+		TACORDER_PARAM_PURSUE = 16;
+		TACORDER_PARAM_OBLITERATE = 32;
+		TACORDER_PARAM_ESCAPE_TILE = 64;
+		TACORDER_PARAM_SCAN = 128;
+		TACORDER_PARAM_ATTACK_DFA = 256;
+		TACORDER_PARAM_RANGE_RAMMING = 1024;
+		TACORDER_PARAM_RANGE_LONGEST = 2048;
+		TACORDER_PARAM_RANGE_OPTIMAL = 4096;
+		TACORDER_PARAM_RANGE_SHORT = 8192;
+		TACORDER_PARAM_RANGE_MEDIUM = 16384;
+		TACORDER_PARAM_RANGE_LONG = 32768;
+		TACORDER_PARAM_AIM_HEAD = 65536;
+		TACORDER_PARAM_AIM_LEG = 131072;
+		TACORDER_PARAM_AIM_ARM = 262144;
+		TACORDER_PARAM_DONT_SET_ORDER = 524288;
+		TACORDER_PARAM_JUMP = 1048576;
+		TACORDER_PARAM_DONT_KEEP_MOVING = 2097152;
+		TACORDER_PARAM_FLANK_RIGHT = 4194304;
+		TACORDER_PARAM_FLANK_LEFT = 8388608;
+		TACORDER_PARAM_FLANK_REAR = 16777216;
+		TACORDER_PARAM_STOP_AND_FIRE = 33554432;
+		TACORDER_PARAM_TURRET = 67108864;
+		TACORDER_PARAM_JOUST = 134217728;
+
+
+		ORDER_ORIGIN_PLAYER = 0;
+		ORDER_ORIGIN_COMMANDER = 1;
+		ORDER_ORIGIN_SELF = 2;
+
+		WEAPONS_STATUS_CANNOT_FIRE = -1;
+		WEAPONS_STATUS_NO_TARGET = -2;
+		WEAPONS_STATUS_OUT_OF_RANGE = -3;
+		WEAPON_STATUS_NOT_READY	= -1;
+		WEAPON_STATUS_OUT_OF_AMMO = -2;
+		WEAPON_STATUS_OUT_OF_RANGE = -3;
+		WEAPON_STATUS_NOT_LOCKED = -4;
+		WEAPON_STATUS_NO_CHANCE = -5;
+		WEAPON_STATUS_TOO_HOT = -6;
+
+		TACTIC_DEFAULT = 0;
+		TACTIC_OPTIMAL = 0;
+		TACTIC_REAR = 1;
+		TACTIC_JOUST = 2;
+		TACTIC_HIT_AND_RUN = 3;
+		TACTIC_SWARM = 4;
+		TACTIC_DFA_RANDOM = 5;
+		TACTIC_RAM_RANDOM = 6;
+		TACTIC_RAM = 7;
+		TACTIC_LONG = 8;
+		TACTIC_MEDIUM = 9;
+		TACTIC_SHORT = 10;
+		TACTIC_NO_PURSUIT = 11;
+		TACTIC_STOP_AND_ATTACK = 12;
+		TACTIC_RUN_AWAY = 13;
+		TACTIC_CIRCLE = 14;
+		TACTIC_LEFT_FLANK = 15;
+		TACTIC_RIGHT_FLANK = 16;
+		TACTIC_CALL_STRIKE = 17;
+		TACTIC_IN_YOUR_FACE = 18;
+		TACTIC_DEPLOY_ELEMENTALS = 19;
+		TACTIC_FIRE_FROM_HERE = 20;
+
+		ANGLE_NORTHEAST = 135.0;
+		ANGLE_NORTH = 180.0;
+		ANGLE_NORTHWEST = -135.0;
+		ANGLE_WEST = -90.0;
+		ANGLE_SOUTHWEST = -45.0;
+		ANGLE_EAST = 90.0;
+		ANGLE_SOUTHEAST = 45.0;
+		ANGLE_SOUTH = 0.0;
+
+		OBJ_TEAM_1 = 500;
+		OBJ_TEAM_2 = 501;
+		OBJ_TEAM_3 = 502;
+		OBJ_TEAM_4 = 503;
+		OBJ_TEAM_5 = 504;
+		OBJ_TEAM_6 = 505;
+		OBJ_TEAM_7 = 506;
+
+		OBJ_STATUS_NORMAL = 0;
+		OBJ_STATUS_DISABLED = 1;
+		OBJ_STATUS_DESTROYED = 2;
+		OBJ_STATUS_STARTING_UP = 3;
+		OBJ_STATUS_SHUTTING_DOWN = 4;
+		OBJ_STATUS_SHUTDOWN = 5;
+
+
+	type
+
+		PatrolState = integer[9];
+		PatrolPath = real[MAX_PATROL_POINTS, 2];
+		WorldPosition = real[3];
+	
+	var
+
+		static boolean CoreRun;
+		static boolean CoreJump;
+
+//****************************************************************************************
+
+order resetPatrol (@PatrolState pState, @PatrolPath pPath) : integer;
+
+	code
+
+		pState[3] = PATROL_DIRECTION_FORWARD;
+		pState[4] = -1;
+		pState[5] = -1;
+		return(1);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order corePatrol (@PatrolState pState, @PatrolPath pPath, integer contactState) : integer;
+
+	// pState[0] = patrol type
+	// pState[1] = num patrol points
+	// pState[2] = num cycles
+	// pState[3] = current direction
+	// pState[4] = current patrol point
+	// pState[5] = current cycle
+	// pState[6] = contact criteria
+	// pState[7] = contact id
+	// pState[8] = contact type
+
+	var
+
+		integer		patrolType;
+		integer		numSteps;
+		integer		numCycles;
+		integer		curDirection;
+		integer		curStep;
+		integer		curCycle;
+		real[2]		goal;
+		integer		i;
+		integer		closestPoint;
+		real		shortestDist;
+		real		dist;
+		char[25]	debugS;
+		integer		curParams;
+
+	code
+
+		curParams = 0;
+		if (CoreRun) then
+			curParams = curParams + TACORDER_PARAM_RUN;
+			CoreRun = false;
+		endif;
+		if (CoreJump) then
+			curParams = curParams + TACORDER_PARAM_JUMP;
+			CoreJump = false;
+		endif;
+
+		patrolType = pState[0];
+		numSteps = pState[1];
+		numCycles = pState[2];
+		curDirection = pState[3];
+		curStep = pState[4];
+		curCycle = pState[5];
+
+		if (curStep == -1) then
+			//---------------------------------
+			// find closest to current position
+			closestPoint = 0;
+			shortestDist = 999999.0;
+			for i = 0 to (numSteps - 1) do
+				goal[0] = pPath[i, 0];
+				goal[1] = pPath[i, 1];
+				dist = distanceToPosition(-1, goal);
+				if (dist < shortestDist) then
+					closestPoint = i;
+					shortestDist = dist;
+				endif;
+			endfor;
+			curStep = closestPoint;
+		endif;
+		if (curCycle == -1) then
+			//-------------------------
+			// Start new cycle count...
+			curCycle = 0;
+			curDirection = PATROL_DIRECTION_FORWARD;
+		endif;
+
+		//---------------------------
+		// First, scan for targets...
+		pState[7] = newScan(0, pState[6]);
+		if (pState[7] > 0) then
+			pState[8] = 0; // ultimately, store contact type here, if needed...
+			//-------------------------------------------------------
+			// If contacts should be ignored, set contactState to -1.
+			if (contactState > 0) then
+				//---------------------------------------------------------------
+				// If a state to go into upon contact is given, set our new state
+				// and force an end to this update. Be sure to reset the step and
+				// cycle counters, first...
+				//pState[4] = -1;
+				//pState[5] = -1;
+				setPilotState(contactState);
+				return(0);
+			else
+				if (contactState == 0) then
+					//-------------------------------
+					// Drop thru to the next order...
+					pState[4] = -1;
+					pState[5] = -1;
+					return(1);
+				endif;
+			endif;
+		endif;
+		
+		if (pState[1] > 0) then
+			debugS = "cs=";
+			concat(debugS, curStep);
+			concat(debugS, ", d=");
+			concat(debugS, curDirection);
+			concat(debugS, ", cyc=");
+			concat(debugS, curCycle);
+			concat(debugS, "/");
+			concat(debugS, numCycles);
+			setDebugString(-1, 4, debugS);
+
+			goal[0] = pPath[curStep, 0];
+			goal[1] = pPath[curStep, 1];
+			coreMoveTo(goal, curParams);
+			if (pState[1] > 1) then
+				if (patrolType == PATROL_TYPE_LINEAR) then
+					if (curDirection == PATROL_DIRECTION_FORWARD) then
+						curStep = curStep + 1;
+						if (curStep == numSteps) then
+							curStep = curStep - 1;
+							curDirection = PATROL_DIRECTION_BACKWARD;
+							curCycle = curCycle + 1;
+						endif;
+					else
+						curStep = curStep - 1;
+						if (curStep == -1) then
+							curStep = 1;
+							curDirection = PATROL_DIRECTION_FORWARD;
+							curCycle = curCycle + 1;
+						endif;
+					endif;
+				else
+					curStep = curStep + 1;
+					if (curStep == numSteps) then
+						curStep = 0;
+						curCycle = curCycle + 1;
+					endif;
+				endif;
+				pState[3] = curDirection;
+				pState[4] = curStep;
+				pState[5] = curCycle;
+			endif;
+
+			if (curCycle == numCycles) then
+				pState[4] = -1;
+				pState[5] = -1;
+				return(1);
+			endif;
+		endif;
+
+		return(0);
+
+endorder;
+
+//---------------------------------------------------------------------------------------
+
+order corePatrolDelayed (@PatrolState pState, @PatrolPath pPath, real startTime, integer contactState) : integer;
+
+	code
+
+		if (getTime > startTime) then
+			return(corePatrol(pState, pPath, contactState));
+		else
+			//--------------------
+			// Scan for targets...
+			pState[7] = newScan(0, pState[6]);
+			if (pState[7] > 0) then
+				pState[8] = 0; // ultimately, put contact type here...
+				//-------------------------------------------------------
+				// If contacts should be ignored, set contactState to -1.
+				if (contactState > 0) then
+					//---------------------------------------------------------------
+					// If a state to go into upon contact is given, set our new state
+					// and force an end to this update...
+					//pState[4] = -1;
+					//pState[5] = -1;
+					setPilotState(contactState);
+					return(0);
+				else
+					if (contactState == 0) then
+						//-------------------------------
+						// Drop thru to the next order...
+						//pState[4] = -1;
+						//pState[5] = -1;
+						return(1);
+					endif;
+				endif;
+			endif;
+		endif;
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order coreWait (real waitTime, integer scanCriteria, integer contactState) : integer;
+
+	var
+
+		integer		scanResult;
+
+	code
+
+		if (waitTime < 0.0) then
+			waitTime = 999999.0;
+		endif;
+		if (getTime > waitTime) then
+			return(1);
+		else
+			//--------------------
+			// Scan for targets...
+			if (scanCriteria == -1) then
+				scanCriteria = CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+			endif;
+			scanResult = newScan(0, scanCriteria);
+			if (scanResult > 0) then
+				//-------------------------------------------------------
+				// If contacts should be ignored, set contactState to -1.
+				if (contactState > 0) then
+					//---------------------------------------------------------------
+					// If a state to go into upon contact is given, set our new state
+					// and force an end to this update...
+					setPilotState(contactState);
+					return(0);
+				else
+					if (contactState == 0) then
+						//-------------------------------
+						// Drop thru to the next order...
+						return(1);
+					endif;
+				endif;
+				return(0);
+			endif;
+		endif;
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order coreGuard (WorldPosition guardPoint, integer scanCriteria, integer contactState) : integer;
+
+	var
+
+		integer		curParams;
+		integer		result;
+
+	code
+
+		curParams = 0;
+		if (CoreRun) then
+			curParams = curParams + TACORDER_PARAM_RUN;
+			CoreRun = false;
+		endif;
+		if (CoreJump) then
+			curParams = curParams + TACORDER_PARAM_JUMP;
+			CoreJump = false;
+		endif;
+
+		//---------------------------
+		// First, scan for targets...
+		if (scanCriteria == -1) then
+			scanCriteria = CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		endif;
+		result = newScan(0, scanCriteria);
+		if (result > 0) then
+			//-------------------------------------------------------
+			// If contacts should be ignored, set contactState to -1.
+			if (contactState > 0) then
+				//---------------------------------------------------------------
+				// If a state to go into upon contact is given, set our new state
+				// and force an end to this update...
+				setPilotState(contactState);
+				return(0);
+			else
+				if (contactState == 0) then
+					//-------------------------------
+					// Drop thru to the next order...
+					return(1);
+				endif;
+			endif;
+		endif;
+		coreMoveTo(guardPoint, curParams);
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order coreEscort (integer guardObjectID, real range, real angle, integer scanCriteria) : integer;
+
+	var
+
+		WorldPosition	guardObjectPos;
+		WorldPosition	escortPos;
+		integer			guardObjectStatus;
+		real			distanceToGuardObject;
+		integer			result;
+		char[50]		debugS;
+		integer			curParams;
+
+	code
+
+		curParams = 0;
+		if (CoreRun) then
+			curParams = curParams + TACORDER_PARAM_RUN;
+			CoreRun = false;
+		endif;
+		if (CoreJump) then
+			curParams = curParams + TACORDER_PARAM_JUMP;
+			CoreJump = false;
+		endif;
+
+		guardObjectStatus = objectStatus(guardObjectID);
+		if ((guardObjectStatus == OBJECT_STATUS_DISABLED) or
+		    (guardObjectStatus == OBJECT_STATUS_DESTROYED) or
+			(guardObjectStatus == OBJECT_STATUS_WITHDRAWN)) then
+			return(1);
+		endif;
+
+		distanceToGuardObject = distanceToObject(guardObjectID, -1);
+
+		//---------------------------
+		// First, scan for targets...
+		if (scanCriteria == -1) then
+			scanCriteria = CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		endif;
+		result = newScan(0, scanCriteria);
+		if (result > 0) then
+			debugS = "coreEscort: @";
+			concat(debugS, result);
+			setDebugString(-1, 4, debugS);
+			coreAttack(0, curParams + TACORDER_PARAM_PURSUE);
+			return(0);
+		endif;
+
+		getRelativePositionToObject(guardObjectID, angle, range, 2, escortPos);
+		debugS = "coreEscort: ";
+		concat(debugS, guardObjectID);
+		concat(debugS, " (");
+		concat(debugS, escortPos[0]);
+		concat(debugS, ",");
+		concat(debugS, escortPos[1]);
+		concat(debugS, ",");
+		concat(debugS, escortPos[2]);
+		concat(debugS, ")");
+		setDebugString(-1, 4, debugS);
+		coreMoveTo(escortPos, curParams);
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order coreAttackTactic (integer targetID, integer params, integer tactic, @integer tacticState) : integer;
+
+	var
+
+		WorldPosition		attackPoint;
+		real				Range;
+		real				Angle;
+		integer				curTacCode;
+		static integer[15]	tacOrderParams;
+		real				time;
+		integer				targetClass;
+		real				MinWeaponRange;
+		real[3]				weaponRanges;
+		integer[30]			weaponList;
+		integer				numFunctionalWeapons;
+		integer				targetObjectStatus;
+		integer				result;
+		char[50]			debugS;
+
+	code
+
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			clearTacOrder;
+			return(1);
+		endif;
+
+		if (targetID == 0) then
+			targetID = getLastScan;
+			if (targetID == 0) then
+				result = newScan(0, -1);
+				if (result == 0) then
+					return(1);
+				endif;
+			endif;
+		endif;
+
+		targetObjectStatus = objectStatus(targetID);
+		if ((targetObjectStatus == OBJECT_STATUS_DISABLED) or
+		    (targetObjectStatus == OBJECT_STATUS_DESTROYED) or
+			(targetObjectStatus == OBJECT_STATUS_WITHDRAWN)) then
+			return(1);
+		endif;
+
+		targetClass = objectClass(targetID);		  
+		if ((targetClass <> MECH_CLASS) and (targetClass <> VEHICLE_CLASS) and (targetClass <> ELEMENTAL_CLASS) and (tactic <> TACTIC_CALL_STRIKE)) then
+			coreAttack(targetID, TACORDER_PARAM_PURSUE);
+			return(1);
+		endif;
+
+		getWeaponRanges(-1, weaponRanges);
+
+		switch (tactic)
+
+			case TACTIC_OPTIMAL:
+				setDebugString(-1, 4, "TACTIC: Optimal");
+				coreAttack(targetID, TACORDER_PARAM_PURSUE);
+				endcase;
+
+			case TACTIC_FIRE_FROM_HERE:
+				setDebugString(-1, 4, "TACTIC: Fire From Here");
+				//coreWait(0.0,FALSE);
+				//SetTarget(CUR_OBJECT_ID,TargetID);
+				coreAttack(targetID, TACORDER_PARAM_NONE);
+				endcase;
+
+/*			case TACTIC_IN_YOUR_FACE:
+
+
+				challenge(TargetID);
+				SetTarget(CUR_OBJECT_ID,TargetID);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				getRelativePositionToObject(TargetID, SOUTH, 15.0, 2, AttackPoint);
+				orderMoveTo(AttackPoint,RUN);
+
+				endcase;
+*/
+			case TACTIC_REAR:
+				debugS = "TACTIC: Rear (";
+				concat(debugS, targetID);
+				concat(debugS, ")");
+				setDebugString(-1, 4, debugS);
+				setTarget(-1, targetID);
+				getRelativePositionToObject(targetID, ANGLE_NORTH, weaponRanges[1] - 20.0, 2, attackPoint);
+				params = setFlag(params, TACORDER_PARAM_DONT_KEEP_MOVING, true);
+				coreMoveTo(attackPoint, params);
+				endcase;
+
+			case TACTIC_LEFT_FLANK:
+				debugS = "TACTIC: Left Flank (";
+				concat(debugS, targetID);
+				concat(debugS, ")");
+				setDebugString(-1, 4, debugS);
+				setTarget(-1, targetID);
+				getRelativePositionToObject(targetID, ANGLE_EAST, weaponRanges[1], 2, attackPoint);
+				params = setFlag(params, TACORDER_PARAM_DONT_KEEP_MOVING, true);
+				coreMoveTo(attackPoint, params);
+				endcase;
+
+			case TACTIC_RIGHT_FLANK:
+				debugS = "TACTIC: Right Flank (";
+				concat(debugS, targetID);
+				concat(debugS, ")");
+				setDebugString(-1, 4, debugS);
+				setTarget(-1, targetID);
+				getRelativePositionToObject(targetID, ANGLE_WEST, weaponRanges[1], 2, attackPoint);
+				params = setFlag(params, TACORDER_PARAM_DONT_KEEP_MOVING, true);
+				coreMoveTo(attackPoint, params);
+				endcase;
+
+			case TACTIC_JOUST:
+				debugS = "TACTIC: Joust (";
+				concat(debugS, targetID);
+				concat(debugS, ")");
+				setDebugString(-1, 4, debugS);
+
+				setTarget(-1, targetID);
+
+				if (getTarget(-1) == TargetID) then
+					// Check move order
+					curTacCode = getTacOrder(-1, time, tacOrderParams);
+					if ((CurTacCode == 2) and (tacticState == targetID)) then
+						return(0);
+					endif;
+				endif;
+
+				tacticState = targetID;
+
+				SelectContact(1, targetID);
+				getContactRelativePosition(range, angle);
+				if ((angle >= -22.5) and (angle <= 22.5)) then
+					getRelativePositionToObject(-1, ANGLE_SOUTH, (range + 100.0), 2, attackPoint);
+				else
+					if ((angle > 22.5) and (angle <= 67.5)) then
+						getRelativePositionToObject(-1, ANGLE_SOUTHWEST, (range + 100.0), 2, attackPoint);						
+					else
+						if ((angle > 67.5) and (angle <= 112.5)) then
+							getRelativePositionToObject(-1, ANGLE_WEST, (range + 100.0), 2, attackPoint);
+						else
+							if ((angle > 112.5) and (angle < 157.5)) then
+								getRelativePositionToObject(-1, ANGLE_NORTHWEST, (range + 100.0), 2, attackPoint);
+							else
+								if (angle > 157.5) then
+									getRelativePositionToObject(-1, ANGLE_NORTH, (range + 100.0), 2, attackPoint);
+								else
+									if ((angle < -22.5) and (angle >= -67.5)) then
+										getRelativePositionToObject(-1, ANGLE_SOUTHEAST, (range + 100.0), 2, attackPoint);
+									else
+										if ((angle < -67.5) and (angle >= -112.5)) then
+											getRelativePositionToObject(-1, ANGLE_EAST, (range + 100.0), 2, attackPoint);
+										else
+											if ((angle < -112.5) and (angle >= -157.5)) then
+												getRelativePositionToObject(-1, ANGLE_NORTHEAST, (range + 100.0), 2, attackPoint);
+											else
+												if (angle < -157.5) then
+													getRelativePositionToObject(-1, ANGLE_NORTH, (range + 100.0), 2, attackPoint);
+												else
+													fatal(86,"Bad Relative Position in Tactic.");
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+					endif;
+				endif;
+		
+				params = setFlag(params, TACORDER_PARAM_DONT_KEEP_MOVING, true);
+				coreMoveTo(attackPoint, params);
+				endcase;
+
+/*
+			case TACTIC_DEPLOY_ELEMENTALS:
+
+				if (getIntegerMemory(I_INTEGER_A) == 0) then
+
+					SelectContact(1,TargetID);
+					getContactRelativePosition(range, angle);
+
+					if (range > 40.0) then
+
+						if ((angle >= -22.5) and (angle <= 22.5)) then
+							getRelativePositionToObject(Me, SOUTH, (range - 30.0), 2, AttackPoint);
+						else
+							if ((angle > 22.5) and (angle <= 67.5)) then
+								getRelativePositionToObject(Me, SOUTHWEST, (range - 30.0), 2, AttackPoint);
+							else
+								if ((angle > 67.5) and (angle <= 112.5)) then
+									getRelativePositionToObject(Me, WEST, (range - 30.0), 2, AttackPoint);
+								else
+									if ((angle > 112.5) and (angle < 157.5)) then
+										getRelativePositionToObject(Me, NORTHWEST, (range - 30.0), 2, AttackPoint);
+									else
+										if (angle > 157.5) then
+											getRelativePositionToObject(Me, NORTH, (range - 30.0), 2, AttackPoint);
+										else
+											if ((angle < -22.5) and (angle >= -67.5)) then
+												getRelativePositionToObject(Me, SOUTHEAST, (range - 30.0), 2, AttackPoint);
+											else
+												if ((angle < -67.5) and (angle >= -112.5)) then
+													getRelativePositionToObject(Me, EAST, (range - 30.0), 2, AttackPoint);
+												else
+													if ((angle < -112.5) and (angle >= -157.5)) then
+														getRelativePositionToObject(Me, NORTHEAST, (range - 30.0), 2, AttackPoint);
+													else
+														if (angle < -157.5) then
+															getRelativePositionToObject(Me, NORTH, (range - 30.0), 2, AttackPoint);
+														else
+															fatal(86,"Bad Relative Position in Tactic.");
+														endif;
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+
+						orderMoveTo(AttackPoint,RUN);
+						return;
+						
+					else
+
+						orderWait(0.0,FALSE);
+						setIntegerMemory(I_RETURN_FIRE,NO);
+						orderDeployElementals(0);
+						setIntegerMemory(I_INTEGER_A,1);
+
+					endif;
+
+				else
+
+					if (getIntegerMemory(I_INTEGER_A) < 3) then
+						setIntegerMemory(I_INTEGER_A, getIntegerMemory(I_INTEGER_A) + 1);
+					else
+						setIntegerMemory(I_RETURN_FIRE,YES);
+						challenge(TargetID);
+						orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+						SetIntegerMemory(I_SITUATION,FIGHTING);
+						CurrentTarget = TargetID;
+					endif;
+
+				endif;
+
+				endcase;
+
+*/
+
+/*
+			case TACTIC_HIT_AND_RUN:
+
+				if (CurrentTarget == TargetID) then
+
+					// Check move order
+					CurTacCode = getTacORder(-1, time, tacOrderParams);
+					if ((CurTacCode == 2) AND (getIntegerMemory(I_SITUATION) == FIGHTING)) then
+						return;
+					endif;
+
+				endif;
+
+				challenge(TargetID);
+				SetTarget(CUR_OBJECT_ID,TargetID);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+								
+				SelectContact(1,TargetID);
+				getContactRelativePosition(range, angle);
+
+				if (range > 40.0) then
+			
+					if ((angle >= -22.5) and (angle <= 22.5)) then
+						getRelativePositionToObject(Me, SOUTH, (range - 30.0), 2, AttackPoint);
+					else
+						if ((angle > 22.5) and (angle <= 67.5)) then
+							getRelativePositionToObject(Me, SOUTHWEST, (range - 30.0), 2, AttackPoint);						
+						else
+							if ((angle > 67.5) and (angle <= 112.5)) then
+								getRelativePositionToObject(Me, WEST, (range - 30.0), 2, AttackPoint);
+							else
+								if ((angle > 112.5) and (angle < 157.5)) then
+									getRelativePositionToObject(Me, NORTHWEST, (range - 30.0), 2, AttackPoint);
+								else
+									if (angle > 157.5) then
+										getRelativePositionToObject(Me, NORTH, (range - 30.0), 2, AttackPoint);
+									else
+										if ((angle < -22.5) and (angle >= -67.5)) then
+											getRelativePositionToObject(Me, SOUTHEAST, (range - 30.0), 2, AttackPoint);
+										else
+											if ((angle < -67.5) and (angle >= -112.5)) then
+												getRelativePositionToObject(Me, EAST, (range - 30.0), 2, AttackPoint);
+											else
+												if ((angle < -112.5) and (angle >= -157.5)) then
+													getRelativePositionToObject(Me, NORTHEAST, (range - 30.0), 2, AttackPoint);
+												else
+													if (angle < -157.5) then
+														getRelativePositionToObject(Me, NORTH, (range - 30.0), 2, AttackPoint);
+													else
+														fatal(86,"Bad Relative Position in Tactic.");
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+					endif;
+
+				else
+
+					if ((angle >= -22.5) and (angle <= 22.5)) then
+						getRelativePositionToObject(Me, NORTH, (150.0 - range), 2, AttackPoint);
+					else
+						if ((angle > 22.5) and (angle <= 67.5)) then
+							getRelativePositionToObject(Me, NORTHEAST, (150.0 - range), 2, AttackPoint);						
+						else
+							if ((angle > 67.5) and (angle <= 112.5)) then
+								getRelativePositionToObject(Me, EAST, (150.0 - range), 2, AttackPoint);
+							else
+								if ((angle > 112.5) and (angle < 157.5)) then
+									getRelativePositionToObject(Me, SOUTHEAST, (150.0 - range), 2, AttackPoint);
+								else
+									if (angle > 157.5) then
+										getRelativePositionToObject(Me, SOUTH, (150.0 - range), 2, AttackPoint);
+									else
+										if ((angle < -22.5) and (angle >= -67.5)) then
+											getRelativePositionToObject(Me, NORTHWEST, (150.0 - range), 2, AttackPoint);
+										else
+											if ((angle < -67.5) and (angle >= -112.5)) then
+												getRelativePositionToObject(Me, WEST, (150.0 - range), 2, AttackPoint);
+											else
+												if ((angle < -112.5) and (angle >= -157.5)) then
+													getRelativePositionToObject(Me, SOUTHWEST, (150.0 - range), 2, AttackPoint);
+												else
+													if (angle < -157.5) then
+														getRelativePositionToObject(Me, SOUTH, (150.0 - range), 2, AttackPoint);
+													else
+														fatal(86,"Bad Relative Position in Tactic.");
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+					endif;
+
+				endif;
+		
+				params = setFlag(params, TACORDER_PARAM_DONT_KEEP_MOVING, true);
+				orderMoveTo(AttackPoint,RUN);
+
+				endcase;
+*/
+
+/*
+
+			case TACTIC_SWARM:
+
+				challenge(TargetID);				
+				SetTarget(CUR_OBJECT_ID,TargetID);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				if (ObjectClass(Me) == ELEMENTAL_CLASS) then
+
+					if (distancetoObject(Me,TargetID) > 25.0) then // 1.0
+						getRelativePositionToObject(TargetID, RandomAngle, 9.0, 2, AttackPoint);
+					    //orderMoveToObject(TargetID,RUN);
+						orderMoveTo(AttackPoint,RUN);
+				   	endif;
+
+				else
+
+					if (distancetoObject(Me,TargetID) > 1.0) then // 1.0
+						getRelativePositionToObject(TargetID, RandomAngle, 9.0, 2, AttackPoint);					
+						orderMoveTo(AttackPoint,RUN);
+				   	endif;
+
+				endif;
+
+				endcase;
+
+*/
+
+/*
+			case TACTIC_DFA_RANDOM:
+				
+				if (Random(5) == 4) then
+					challenge(TargetID);
+					orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_DFA, FIRERANGE_OPTIMAL, TRUE);
+				else
+					challenge(TargetID);
+					orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				endif;
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+*/
+
+/*
+			case TACTIC_RAM_RANDOM:
+
+				if (Random(5) == 5) then
+					challenge(TargetID);
+					orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RAM, FIRERANGE_OPTIMAL, TRUE);
+				else
+					challenge(TargetID);
+					orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+				endif;
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+*/
+
+/*
+			case TACTIC_RAM:
+
+				challenge(TargetID);
+				orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RAM, FIRERANGE_OPTIMAL, TRUE);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+*/
+
+/*
+			case TACTIC_LONG:
+
+				challenge(TargetID);
+				orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_LONG, TRUE);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+
+			case TACTIC_MEDIUM:
+
+				challenge(TargetID);
+				orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_MEDIUM, TRUE);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+
+			case TACTIC_SHORT:
+
+				challenge(TargetID);
+				orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_SHORT, TRUE);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+
+			case TACTIC_NO_PURSUIT:
+
+				challenge(TargetID);
+				orderAttackObject(TargetID,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, FALSE);
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				CurrentTarget = TargetID;
+
+				endcase;
+*/
+
+			case TACTIC_STOP_AND_ATTACK:
+				debugS = "TACTIC: Stop And Attack (";
+				concat(debugS, targetID);
+				concat(debugS, ")");
+				setDebugString(-1, 4, debugS);
+
+				selectContact(1, targetID);
+				getContactRelativePosition(range, angle);	
+
+				if (myWeaponRanges[2] > 150.0) then
+					MinWeaponRange = 50.0;
+				else
+					if (myWeaponRanges[2] > 75.0) then
+						MinWeaponRange = 25.0;
+					else
+						MinWeaponRange = 0.0;
+					endif;
+				endif;
+
+				if (range < myWeaponRanges[2] - 15.0) then
+					if (range <= MinWeaponRange) then
+						// Try to Move back
+						if ((angle >= -22.5) and (angle <= 22.5)) then
+							getRelativePositionToObject(-1, ANGLE_NORTH, (100.0 - Range), 2, attackPoint);
+						else
+							if ((angle > 22.5) and (angle <= 67.5)) then
+								getRelativePositionToObject(-1, ANGLE_NORTHEAST, (100.0 - Range), 2, attackPoint);
+							else
+								if ((angle > 67.5) and (angle <= 112.5)) then
+									getRelativePositionToObject(-1, ANGLE_EAST, (100.0 - Range), 2, attackPoint);
+								else
+									if ((angle > 112.5) and (angle < 157.5)) then
+										getRelativePositionToObject(-1, ANGLE_SOUTHEAST, (100.0 - Range), 2, attackPoint);
+									else
+										if (angle > 157.5) then
+											getRelativePositionToObject(-1, ANGLE_SOUTH, (100.0 - Range), 2, attackPoint);
+										else
+											if ((angle < -22.5) and (angle >= -67.5)) then
+												getRelativePositionToObject(-1, ANGLE_NORTHWEST, (100.0 - Range), 2, attackPoint);
+											else
+												if ((angle < -67.5) and (angle >= -112.5)) then
+													getRelativePositionToObject(-1, ANGLE_WEST, (100.0 - Range), 2, attackPoint);
+												else
+													if ((angle < -112.5) and (angle >= -157.5)) then
+														getRelativePositionToObject(-1, ANGLE_SOUTHWEST, (100.0 - Range), 2, attackPoint);
+													else
+														if (angle < -157.5) then
+															getRelativePositionToObject(-1, ANGLE_SOUTH, (100.0 - Range), 2, attackPoint);
+														endif;
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+						// Move forward if can't move back
+						if (distanceToPosition(-1,AttackPoint) + range <= MinWeaponRange) then
+							if ((angle >= -22.5) and (angle <= 22.5)) then
+								getRelativePositionToObject(-1, ANGLE_SOUTH, (100.0 + Range), 2, AttackPoint);
+							else
+								if ((angle > 22.5) and (angle <= 67.5)) then
+									getRelativePositionToObject(-1, ANGLE_SOUTHWEST, (100.0 + Range), 2, AttackPoint);
+								else
+									if ((angle > 67.5) and (angle <= 112.5)) then
+										getRelativePositionToObject(-1, ANGLE_WEST, (100.0 + Range), 2, AttackPoint);
+									else
+										if ((angle > 112.5) and (angle < 157.5)) then
+											getRelativePositionToObject(-1, ANGLE_NORTHWEST, (100.0 + Range), 2, AttackPoint);
+										else
+											if (angle > 157.5) then
+												getRelativePositionToObject(-1, ANGLE_NORTH, (100.0 + Range), 2, AttackPoint);
+											else
+												if ((angle < -22.5) and (angle >= -67.5)) then
+													getRelativePositionToObject(-1, ANGLE_SOUTHEAST, (100.0 + Range), 2, AttackPoint);
+												else
+													if ((angle < -67.5) and (angle >= -112.5)) then
+														getRelativePositionToObject(-1, ANGLE_EAST, (100.0 + Range), 2, AttackPoint);
+													else
+														if ((angle < -112.5) and (angle >= -157.5)) then
+															getRelativePositionToObject(-1, ANGLE_NORTHEAST, (100.0 + Range), 2, AttackPoint);
+														else
+															if (angle < -157.5) then
+																getRelativePositionToObject(-1, ANGLE_NORTH, (100.0 + Range), 2, AttackPoint);
+															endif;
+														endif;
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;							
+						endif;
+						coreMoveTo(attackPoint, params);
+					else
+						coreAttack(targetID, TACORDER_PARAM_NONE);
+						//orderWait(0.0,FALSE); // keep target
+						//setTarget(-1, targetID);
+					endif;
+				else
+					coreMoveToObject(targetID, params);
+				endif;
+				endcase;
+
+/*
+			case TACTIC_RUN_AWAY:
+
+				//SetTarget(CUR_OBJECT_ID,TargetID);  // RUN AWAY SHOOTING
+				SetIntegerMemory(I_SITUATION,FIGHTING);
+				//CurrentTarget = TargetID;
+				print("RUN AWAY");
+				print("AttackRange");
+				print(AttackRange);
+				print("Range");
+								
+				SelectContact(1,TargetID);
+				getContactRelativePosition(range, angle);
+				print(range);
+
+				if ((angle >= -22.5) and (angle <= 22.5)) then
+					getRelativePositionToObject(Me, NORTH, (250.0 - Range), 2, AttackPoint);
+				else
+					if ((angle > 22.5) and (angle <= 67.5)) then
+						getRelativePositionToObject(Me, NORTHEAST, (250.0 - Range), 2, AttackPoint);
+					else
+						if ((angle > 67.5) and (angle <= 112.5)) then
+							getRelativePositionToObject(Me, EAST, (250.0 - Range), 2, AttackPoint);
+						else
+							if ((angle > 112.5) and (angle < 157.5)) then
+								getRelativePositionToObject(Me, SOUTHEAST, (250.0 - Range), 2, AttackPoint);
+							else
+								if (angle > 157.5) then
+									getRelativePositionToObject(Me, SOUTH, (250.0 - Range), 2, AttackPoint);
+								else
+									if ((angle < -22.5) and (angle >= -67.5)) then
+										getRelativePositionToObject(Me, NORTHWEST, (250.0 - Range), 2, AttackPoint);
+									else
+										if ((angle < -67.5) and (angle >= -112.5)) then
+											getRelativePositionToObject(Me, WEST, (250.0 - Range), 2, AttackPoint);
+										else
+											if ((angle < -112.5) and (angle >= -157.5)) then
+												getRelativePositionToObject(Me, SOUTHWEST, (250.0 - Range), 2, AttackPoint);
+											else
+												if (angle < -157.5) then
+													getRelativePositionToObject(Me, SOUTH, (250.0 - Range), 2, AttackPoint);
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+					endif;
+				endif;
+
+				orderMoveTo(AttackPoint,RUN);
+
+				endcase;
+
+			case TACTIC_CALL_STRIKE:
+
+				SelectContact(1,TargetID);
+				getContactRelativePosition(range, angle);
+				getObjectPosition(TargetID,AttackPoint);
+
+				// 0 is ready
+				// 1 is moving in
+				// 2 is running away
+
+				if (getIntegerMemory(I_INTEGER_A) == 2) then
+					// Check move order
+					CurTacCode = getTacORder(-1, time, tacOrderParams);
+					if (CurTacCode == 2) then 
+						return; // let him finish his run away
+					else
+						setIntegerMemory(I_INTEGER_A,0);
+					endif;
+				endif;
+
+				if (range > 75.0) then
+
+					playSoundEffect(PERIMETER_ALARM_SOUND);
+					
+					orderMoveToObject(TargetID,RUN);
+					setIntegerMemory(I_INTEGER_A,1);
+					return;
+
+				else
+
+					// Stop and Call Strike
+					orderWait(0.0,FALSE);
+					SetTarget(CUR_OBJECT_ID,TargetID);
+					CallStrikeEx(508,-1,AttackPoint[0],AttackPoint[1],-1.0,TRUE,6.0);
+
+					// Runaway from movers or really close targets
+					TargetClass = ObjectClass(TargetID);
+					if ((TargetClass == MECH_CLASS) OR (TargetClass == ELEMENTAL_CLASS) OR (TargetClass == VEHICLE_CLASS) OR (Range < 30.0)) then
+
+						// Find a point directly away from target
+						if ((angle >= -22.5) and (angle <= 22.5)) then
+							getRelativePositionToObject(Me, NORTH, (175.0 - range), 2, AttackPoint);
+						else
+							if ((angle > 22.5) and (angle <= 67.5)) then
+								getRelativePositionToObject(Me, NORTHEAST, (175.0 - range), 2, AttackPoint);						
+							else
+								if ((angle > 67.5) and (angle <= 112.5)) then
+									getRelativePositionToObject(Me, EAST, (175.0 - range), 2, AttackPoint);
+								else
+									if ((angle > 112.5) and (angle < 157.5)) then
+										getRelativePositionToObject(Me, SOUTHEAST, (175.0 - range), 2, AttackPoint);
+									else
+										if (angle > 157.5) then
+											getRelativePositionToObject(Me, SOUTH, (175.0 - range), 2, AttackPoint);
+										else
+											if ((angle < -22.5) and (angle >= -67.5)) then
+												getRelativePositionToObject(Me, NORTHWEST, (175.0 - range), 2, AttackPoint);
+											else
+												if ((angle < -67.5) and (angle >= -112.5)) then
+													getRelativePositionToObject(Me, WEST, (175.0 - range), 2, AttackPoint);
+												else
+													if ((angle < -112.5) and (angle >= -157.5)) then
+														getRelativePositionToObject(Me, SOUTHWEST, (175.0 - range), 2, AttackPoint);
+													else
+														if (angle < -157.5) then
+															getRelativePositionToObject(Me, SOUTH, (175.0 - range), 2, AttackPoint);
+														else
+															fatal(86,"Bad Relative Position in Tactic.");
+														endif;
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+						endif;
+
+						// AttackPoint was redefined above for a destination			
+						if ((distanceToPosition(TargetID,AttackPoint) < 30.0) OR (distanceToPosition(Me,AttackPoint) < 15.0)) then
+
+							// Find a point on the other side of target
+							if ((angle >= -22.5) and (angle <= 22.5)) then
+								getRelativePositionToObject(Me, SOUTH, (175.0 + range), 2, AttackPoint);
+							else
+								if ((angle > 22.5) and (angle <= 67.5)) then
+									getRelativePositionToObject(Me, SOUTHWEST, (175.0 + range), 2, AttackPoint);						
+								else
+									if ((angle > 67.5) and (angle <= 112.5)) then
+										getRelativePositionToObject(Me, WEST, (175.0 + range), 2, AttackPoint);
+									else
+										if ((angle > 112.5) and (angle < 157.5)) then
+											getRelativePositionToObject(Me, NORTHWEST, (175.0 + range), 2, AttackPoint);
+										else
+											if (angle > 157.5) then
+												getRelativePositionToObject(Me, NORTH, (175.0 + range), 2, AttackPoint);
+											else
+												if ((angle < -22.5) and (angle >= -67.5)) then
+													getRelativePositionToObject(Me, SOUTHEAST, (175.0 + range), 2, AttackPoint);
+												else
+													if ((angle < -67.5) and (angle >= -112.5)) then
+														getRelativePositionToObject(Me, EAST, (175.0 + range), 2, AttackPoint);
+													else
+														if ((angle < -112.5) and (angle >= -157.5)) then
+															getRelativePositionToObject(Me, NORTHEAST, (175.0 + range), 2, AttackPoint);
+														else
+															if (angle < -157.5) then
+																getRelativePositionToObject(Me, NORTH, (175.0 + range), 2, AttackPoint);
+															else
+																fatal(86,"Bad Relative Position in Tactic.");
+															endif;
+														endif;
+													endif;
+												endif;
+											endif;
+										endif;
+									endif;
+								endif;
+							endif;
+
+						endif;
+
+						orderMoveTo(AttackPoint,RUN);
+						setIntegerMemory(I_INTEGER_A,2);
+					else
+						setIntegerMemory(I_INTEGER_A,0);
+					endif;
+
+				endif;
+
+				endcase;
+*/
+
+		endswitch;
+		return(0);
+
+endorder;
+
+
+//****************************************************************************************
+// "OLD" Functions
+//****************************************************************************************
+
+order patrol (@PatrolState pState, @PatrolPath pPath) : integer;
+
+	code
+
+		return(corePatrol(pState, pPath, 0));
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+
+order patrolDelayed (@PatrolState pState, @PatrolPath pPath, real startTime) : integer;
+
+	code
+
+		return(corePatrolDelayed(pState, pPath, startTime, 0));
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+	code
+
+		print("CoreBrain v0.1");
+		CoreRun = false;
+		CoreJump = false;
+	
+endlibrary.
+
+//****************************************************************************************

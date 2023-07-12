@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="41A32466A1B66033BC341B67EF6E483E" />
+  <Asset Name="..\orbitalturretEnc.ase" Type="Physical" Author="ngauvin" FileSize="48663" ModificationTime="2006-02-01T10:55:14.4202505-08:00" CRC="EF9E343F790013E77DC4AFA1612AFA48" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\OrbitalTurret.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

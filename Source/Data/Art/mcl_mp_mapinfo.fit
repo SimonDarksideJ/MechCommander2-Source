@@ -1,0 +1,490 @@
+FITini 
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons] 
+l Buttoncount = 1
+
+
+[Button0] // Close button 
+l XLocation = 491
+l YLocation = 407
+l Width = 128
+l Height = 59
+l ID = 7
+
+
+l XTextLocation = 505
+l YTextLocation = 421
+l TextWidth = 100
+l TextHeight = 31
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 26230
+l Font = 26231 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27208
+
+st FileName = "mcl_sm_4.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 118
+
+l UPressed = 128
+l VPressed = 118
+
+l UHighlight = 0
+l VHighlight = 118
+
+l UDisabled = 128
+l VDisabled = 118
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+[Rects]
+l rectCount = 4 
+
+[Rect0] // header background
+l XLocation = 181
+l YLocation = 131
+l Width = 437
+l Height = 31
+l Color = 0xff000000
+b outline = FALSE
+ 
+[Rect1] // main background
+l XLocation = 181
+l YLocation = 173
+l Width = 437
+l Height = 213
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect2] // tac map outline rect- tac map is defined by a static....
+l XLocation = 191
+l YLocation = 183
+l Width = 137
+l Height = 137
+l Color = 0xff43311C
+b outline = TRUE
+
+[Rect3] // rect around game info list
+l XLocation = 339
+l YLocation = 183
+l Width = 269
+l Height = 193
+l Color = 0xff43311C
+b outline = TRUE
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 21
+
+[Static0]
+l XLocation = 124
+l YLocation = 71
+l Width = 256
+l Height = 60
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static1]
+l XLocation = 380
+l YLocation = 71
+l Width = 256
+l Height = 60
+l UNormal = 0
+l VNormal = 60
+l UWidth = 256
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static2]
+l XLocation = 636
+l YLocation = 71
+l Width = 164
+l Height = 60
+l UNormal = 0
+l VNormal = 120
+l UWidth = 164
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static3]
+l XLocation = 124
+l YLocation = 131
+l Width = 57
+l Height = 32
+l UNormal = 181
+l VNormal = 185
+l UWidth = 57
+l VHeight = 32
+st FileName = "mcl_sm_2.tga"
+
+[Static4]
+l XLocation = 619
+l YLocation = 131
+l Width = 181
+l Height = 32
+l UNormal = 0
+l VNormal = 209
+l UWidth = 181
+l VHeight = 32
+st FileName = "mcl_sm_2.tga"
+
+[Static5]
+l XLocation = 124
+l YLocation = 163
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 180
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static6]
+l XLocation = 380
+l YLocation = 163
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 190
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static7]
+l XLocation = 636
+l YLocation = 163
+l Width = 164
+l Height = 10
+l UNormal = 0
+l VNormal = 200
+l UWidth = 164
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static8]
+l XLocation = 124
+l YLocation = 173
+l Width = 57
+l Height = 214
+l UNormal = 181
+l VNormal = 0
+l UWidth = 57
+l VHeight = 214
+st FileName = "mcl_sm_3.tga"
+
+[Static9]
+l XLocation = 619
+l YLocation = 173
+l Width = 181
+l Height = 214
+l UNormal = 0
+l VNormal = 0
+l UWidth = 181
+l VHeight = 214
+st FileName = "mcl_sm_3.tga"
+
+[Static10] // this static defines the area that the tac map should go into
+l XLocation = 196
+l YLocation = 188
+l Width = 128
+l Height = 128
+
+[Static11]
+l XLocation = 124
+l YLocation = 387
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 210
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_sm_1.tga"
+
+[Static12]
+l XLocation = 380
+l YLocation = 387
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 230
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_sm_1.tga"
+
+[Static13]
+l XLocation = 636
+l YLocation = 387
+l Width = 164
+l Height = 20
+l UNormal = 0
+l VNormal = 189
+l UWidth = 164
+l VHeight = 20
+st FileName = "mcl_sm_2.tga"
+
+[Static14]
+l XLocation = 124
+l YLocation = 407
+l Width = 57
+l Height = 59
+l UNormal = 164
+l VNormal = 126
+l UWidth = 57
+l VHeight = 59
+st FileName = "mcl_sm_2.tga"
+
+[Static15]
+l XLocation = 309
+l YLocation = 407
+l Width = 182
+l Height = 59
+l UNormal = 0
+l VNormal = 59
+l UWidth = 182
+l VHeight = 59
+st FileName = "mcl_sm_4.tga"
+
+[Static16]
+l XLocation = 619
+l YLocation = 407
+l Width = 181
+l Height = 59
+l UNormal = 0
+l VNormal = 0
+l UWidth = 181
+l VHeight = 59
+st FileName = "mcl_sm_4.tga"
+
+[Static17]
+l XLocation = 124
+l YLocation = 466
+l Width = 256
+l Height = 63
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+[Static18]
+l XLocation = 380
+l YLocation = 466
+l Width = 256
+l Height = 63
+l UNormal = 0
+l VNormal = 63
+l UWidth = 256
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+[Static19]
+l XLocation = 636
+l YLocation = 466
+l Width = 164
+l Height = 63
+l UNormal = 0
+l VNormal = 126
+l UWidth = 164
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+
+[Static20]
+l XLocation = 181
+l YLocation = 407
+l Width = 128
+l Height = 59
+l UNormal = 0
+l VNormal = 0
+l UWidth = 128
+l VHeight = 59
+st FileName = "mcl_mp_mapinfo_1.tga"
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // main header text- MAP INFO
+l XLocation = 188
+l YLocation = 135
+l Width = 425
+l Height = 26
+l Color = -30208
+b outline = FALSE
+l Font = 26229 // use agency fb 17
+l TextID = 26228
+l Alignment = 0
+
+[Text1] // actual map info text
+l XLocation = 345
+l YLocation = 185
+l Width = 260
+l Height = 185
+l Color = 0xFF846643
+b outline = FALSE
+l Font = 26232 // use agency fb 11
+l TextID = 27662
+l Alignment = 0
+
+[Text2] // blurb text
+l XLocation = 345
+l YLocation = 278
+l Width = 260
+l Height = 91
+l Color = 0xFF846643
+b outline = FALSE
+l Font = 26232 // use agency fb 11
+l TextID = 27662
+l Alignment = 0
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[InAnim]  // coordinates from upper left hand corner of static0
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 800
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+
+[OutAnim]  
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = 800
+l Pos1Y = 0
+
+
+
+
+FITend 

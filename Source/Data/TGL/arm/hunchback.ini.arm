@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="55269F47B1A67E306CEDEB5DFADF054A" />
+  <Asset Name="..\hunchback.ini" Type="Physical" Author="franksav" FileSize="4070" ModificationTime="2006-03-03T01:28:28.0236411-08:00" CRC="2F465DFE00AF690C0803FCAB8C53B960" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Hunchback.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HunchbackL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HunchbackL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HunchbackX.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchback.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hunchbackFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="hunchbackFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="hunchbackFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hunchback" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="31D4AD8000C6B250937FAF9C36662088" />
+  <Asset Name="..\campaign_group07" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission Group" />
+      <Relationships>
+        <Relationship Type="Operation" RelatedAsset="..\Art\MCL_CM_op2_1.fit" />
+        <Relationship Type="PreVideo" RelatedAsset="..\Movies\cinema2.bik" />
+        <Relationship Type="Video" RelatedAsset="..\Movies\NODE_10.bik" />
+        <Relationship Type="Mission" RelatedAsset="..\Missions\mc2_10.fit" />
+        <Relationship Type="PurchaseFile" RelatedAsset="..\Missions\Purchase10.fit" Mission="mc2_10" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

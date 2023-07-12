@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A301FE3A781B67FF79A8A7B8DAA4C7F3" />
+  <Asset Name="..\trianglecontact.ini" Type="Physical" Author="franksav" FileSize="171" ModificationTime="2006-03-03T01:28:54.2265984-08:00" CRC="C1E2E56A90351FCDFE8D206F19B1FB6B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="TriangleContact.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

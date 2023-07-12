@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="85E8DCF848F5C141958B5E4D7FA050B9" />
+  <Asset Name="..\TinShackX.ase" Type="Physical" Author="ngauvin" FileSize="17834" ModificationTime="2006-02-01T10:55:34.5141291-08:00" CRC="2812900988E09946F481163C402E34D6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

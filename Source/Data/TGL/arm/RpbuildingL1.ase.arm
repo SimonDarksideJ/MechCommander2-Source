@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BE852FD6751816A531B66575E517D1F5" />
+  <Asset Name="..\RpbuildingL1.ase" Type="Physical" Author="ngauvin" FileSize="60034" ModificationTime="2006-02-01T10:55:20.7015407-08:00" CRC="46BFA9590686E3AFEED2011A7183776F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_RP.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

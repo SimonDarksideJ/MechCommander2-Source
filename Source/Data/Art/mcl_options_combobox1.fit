@@ -1,0 +1,164 @@
+FITini
+
+// for hotkey entry
+
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // command
+l XLocation = 7
+l YLocation = 5
+l Width = 336
+l Height = 16
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26591// AgencyFB11
+l TextID = 26591
+l Alignment = 0
+st Animation = "Animation0"
+
+[Text1] // hotkey- this entry changes depending on what player wants
+l XLocation = 354
+l YLocation = 5
+l Width = 211
+l Height = 16
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26591// AgencyFB11
+l TextID = 26589
+l Alignment = 0
+st Animation = "Animation1"
+
+
+
+
+
+[Rects]
+l Rectcount = 2
+
+[Rect0] // underline
+l XLocation = 0
+l YLocation = 25
+l Width = 570
+l Height = 0
+l Color = 0xff43311C
+b outline = TRUE
+
+[Rect1] // full color rect for "editing" highlight
+l XLocation = 349
+l YLocation = 2
+l Width = 219
+l Height = 21
+l Color = 0xffffffff
+b outline = FALSE
+st Animation = "Animation2"
+
+
+
+
+
+
+[Animation0] // for command text
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff846643
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff846643
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff846643
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[Animation1] // for hotkey text
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff846643
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff000000
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff846643
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+
+
+
+[Animation2] // for highlight rectangle
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffff8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff000000
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+FitEnd

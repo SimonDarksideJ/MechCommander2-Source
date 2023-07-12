@@ -1,0 +1,334 @@
+FITini 
+
+
+// TEMP OPERATION- LOSE THIS AFTER REAL OPS ARE ADDED
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Buttons]
+l Buttoncount = 3
+
+
+[Button0] // first standin button for mission selection
+
+l ID = 55
+l XLocation = 32
+l YLocation = 32
+l Width = 64
+l Height = 64
+
+st FileName = "MCL_CM_5"
+
+l UWidth = 64
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 0
+
+b AnimateChildren = 0
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0x77ffffff
+f NormalTime1 = 15
+l NormalColor1 = 0x77ffffff
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = TRUE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedScale0 = 1.0
+f PressedTime1 = 1.2
+l PressedColor1 = 0x00ffffff
+f PressedScale1 = 1.5
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0x00ffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x77373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x77373737
+
+// crosshair
+
+[Button0Bmp0]
+l XLocation = 48
+l YLocation = 48
+l Width = 32
+l Height = 32
+l UNormal = 64
+l VNormal = 0
+l UWidth = 32
+l VHeight = 32
+st FileName = "MCL_CM_5"
+l color  = 0xffffffff
+b AnimateBmp = 0
+
+
+
+
+
+[Button1] // second standin button for mission selection
+
+l ID = 55
+l XLocation = 160
+l YLocation = 32
+l Width = 64
+l Height = 64
+
+st FileName = "MCL_CM_5"
+
+l UWidth = 64
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 0
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0x77ffffff
+f NormalTime1 = 15
+l NormalColor1 = 0x77ffffff
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = TRUE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedScale0 = 1.0
+f PressedTime1 = 1.2
+l PressedColor1 = 0x00ffffff
+f PressedScale1 = 1.5
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0x00ffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x77373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x77373737
+
+b AnimateChildren = 0
+
+
+
+// crosshair
+
+[Button1Bmp0]
+l XLocation = 176
+l YLocation = 48
+l Width = 32
+l Height = 32
+l UNormal = 64
+l VNormal = 0
+l UWidth = 32
+l VHeight = 32
+st FileName = "MCL_CM_5"
+l color  = 0xffffffff
+b AnimateBmp = 0
+
+
+
+[Button2] // third standin button for mission selection
+
+l ID = 55
+l XLocation = 160
+l YLocation = 96
+l Width = 64
+l Height = 64
+
+st FileName = "MCL_CM_5"
+
+l UWidth = 64
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 0
+
+b AnimateChildren = 0
+
+
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0x77ffffff
+f NormalTime1 = 15
+l NormalColor1 = 0x77ffffff
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = TRUE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedScale0 = 1.0
+f PressedTime1 = 1.2
+l PressedColor1 = 0x00ffffff
+f PressedScale1= 1.5
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0x00ffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x77373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x77373737
+
+// crosshair
+
+[Button1Bmp0]
+l XLocation = 176
+l YLocation = 48
+l Width = 32
+l Height = 32
+l UNormal = 64
+l VNormal = 0
+l UWidth = 32
+l VHeight = 32
+st FileName = "MCL_CM_5"
+l color  = 0xffffffff
+b AnimateBmp = 0
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Statics] // map behind everything else
+l Staticcount = 1
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "MCL_CM_Standin"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Texts] 
+l Textcount = 1
+
+[Text0] // mission name for rollover goes here- only draw during highlight
+l XLocation = 5
+l YLocation = 228
+l Width = 246
+l Height = 23
+l color = 0xffffffff
+b outline = TRUE
+l Font = 27801 // agencyfb11
+l TextID = 27211
+l Alignment = 3
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 1
+
+[Rect0]  // transparent rect behind rollover- only draw during highlight
+l XLocation = 6
+l YLocation = 229
+l Width = 244
+l Height = 21
+l color = 0x77002F55
+b outline = FALSE
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+FITend 

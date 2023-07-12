@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="813694B5D136D472A583D52C35180E1F" />
+  <Asset Name="..\l_guardhouseX.ase" Type="Physical" Author="ngauvin" FileSize="107160" ModificationTime="2006-02-01T10:55:03.8889331-08:00" CRC="230685135403BB9F647DC342CF8EB0FB" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

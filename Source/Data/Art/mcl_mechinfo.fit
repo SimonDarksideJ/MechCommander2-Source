@@ -1,0 +1,494 @@
+FITini 
+
+
+// mech purchasing info area
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Rects]
+l Rectcount = 17
+
+
+
+
+
+[Rect0] // rect for component info scroll area
+l XLocation = 491
+l YLocation = 345
+l Width = 227
+l Height = 165
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // left vert. line for mech animation
+l XLocation = 337
+l YLocation = 353
+l Width = 0
+l Height = 148
+l Color = -16765099
+b outline = TRUE
+
+[Rect2] right vert. line for mech animation
+l XLocation = 462
+l YLocation = 353
+l Width = 0
+l Height = 148
+l Color = -16765099
+b outline = TRUE
+
+[Rect3] // rect to fit mech animation into
+l XLocation = 338
+l YLocation = 346
+l Width = 124
+l Height = 162
+l Color = 0x00000000
+b outline = FALSE
+
+
+[Rect4]  // thin line
+
+l xlocation = 477
+l ylocation = 515
+l width = 246
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+[Rect5]  // thin line
+
+l xlocation = 76
+l ylocation = 316
+l width = 235
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+
+[Rect6]  // thin line
+
+l xlocation = 76
+l ylocation = 316
+l width = 0
+l height = 199
+l color  = 0xff002f55	
+b outline = 1
+
+[Rect7]  // thin line
+
+l xlocation = 76
+l ylocation = 515
+l width = 246
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+[Rect8]  // thin line
+
+l xlocation = 488
+l ylocation = 316
+l width = 235
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+[Rect9]  // thin line
+
+l xlocation = 723
+l ylocation = 316
+l width = 0
+l height = 199
+l color  = 0xff002f55	
+b outline = 1
+
+[Rect10] // help rect for currently selected mech name and pic
+l XLocation = 339
+l YLocation = 311
+l Width = 125
+l Height = 198
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29051
+
+[Rect11] // help rect for all tonnage parts
+l XLocation = 85
+l YLocation = 322
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29055
+
+[Rect12] // help rect for all range parts
+l XLocation = 85
+l YLocation = 360
+l Width = 222
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29056
+
+[Rect13] // help rect for all armor parts
+l XLocation = 85
+l YLocation = 400
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29057
+
+[Rect14] // help rect for all speed parts
+l XLocation = 85
+l YLocation = 438
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29058
+
+[Rect15]
+] // help rect for all jump parts
+l XLocation = 85
+l YLocation = 476
+l Width = 222
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29059
+
+[Rect16] // mask rect for mech animation
+l XLocation = 327
+l YLocation = 346
+l Width = 10
+l Height = 162
+l Color = 0xff000000
+b outline = FALSE
+l HelpDesc = 29965
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Statics]
+l Staticcount = 11
+
+
+[Static0]  // icon for range
+l XLocation = 82
+l YLocation = 361
+l Width = 96
+l Height = 32
+l UNormal = 72
+l VNormal = 139
+l UWidth = 96
+l VHeight = 32
+st FileName = "mcl_m$_3.tga"
+
+[Static1] // top static for mech animation box
+l XLocation = 337
+l YLocation = 345
+l Width = 126
+l Height = 7
+l UNormal = 0
+l VNormal = 222
+l UWidth = 126
+l VHeight = 7
+st FileName = "mcl_m$_1.tga"
+
+[Static2] // icon for tonnage
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+l UNormal = 72
+l VNormal = 171
+l UWidth = 96
+l VHeight = 32
+st FileName = "mcl_m$_3.tga"
+
+
+[Static3] // icon for armor
+l XLocation = 82
+l YLocation = 400
+l Width = 96
+l Height = 32
+l UNormal = 0
+l VNormal = 208
+l UWidth = 96
+l VHeight = 32
+st FileName = "mcl_m$_3.tga"
+
+[Static4] // icon for speed
+l XLocation = 82
+l YLocation = 439
+l Width = 96
+l Height = 32
+l UNormal = 96
+l VNormal = 208
+l UWidth = 96
+l VHeight = 32
+st FileName = "mcl_m$_3.tga"
+
+[Static5] // icon for jump
+l XLocation = 82
+l YLocation = 478
+l Width = 96
+l Height = 32
+l UNormal = 129
+l VNormal = 208
+l UWidth = 96
+l VHeight = 32
+st FileName = "mcl_m$_2.tga"
+
+
+[Static6] // bottom static for mech animation box
+l XLocation = 337
+l YLocation = 502
+l Width = 126
+l Height = 7
+l UNormal = 0
+l VNormal = 229
+l UWidth = 126
+l VHeight = 7
+st FileName = "mcl_m$_1.tga"
+
+
+
+[Static7]  // mechinfo corner left uppper
+
+l XLocation=313
+l YLocation=316
+l Width=24
+l Height=30
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 38
+l VNormal = 208
+l UWidth  = 24
+l VHeight = 30
+
+
+[Static8]  // mechinfo corner right uppper
+
+l XLocation=463
+l YLocation=316
+l Width=24
+l Height=30
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 62
+l VNormal = 208
+l UWidth  = 24
+l VHeight = 30
+
+
+[Static9]  // mechinfo corner left lower
+
+l XLocation = 324
+l YLocation = 509
+l Width = 13
+l Height = 7
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 86
+l VNormal = 208
+l UWidth  = 13
+l VHeight = 7
+
+
+
+[Static10]  // mechinfo corner rightlower
+
+l XLocation = 463
+l YLocation = 509
+l Width = 13
+l Height = 7
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 86
+l VNormal = 222
+l UWidth  = 13
+l VHeight = 7
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts] 
+l Textcount = 8
+
+
+
+[Text0] // mech info name header - above mech animation
+l XLocation = 337
+l YLocation = 317
+l Width = 126
+l Height = 27
+l Color = -10709310
+b outline = FALSE
+l Font = 27219 // agencyfb17
+l TextID = 0
+l Alignment = 3
+
+
+[Text1] // variant name header- above weapon rect
+l XLocation = 491
+l YLocation = 322
+l Width = 227
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27220 // agencyfb14
+l TextID = 0
+l Alignment = 0
+l HelpDesc = 29052
+
+
+[Text2] // for mech range
+l XLocation = 183
+l YLocation = 376
+l Width = 146
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27221 // agencyfb14
+l TextID = 0
+l Alignment = 0
+
+
+[Text3] // for mech weight
+l XLocation = 183
+l YLocation = 337
+l Width = 146
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27221 // agencyfb14
+l TextID = 0
+l Alignment = 0
+
+
+[Text4] // for mech armor
+l XLocation = 280
+l YLocation = 414
+l Width = 47
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27221 // agencyfb14
+l TextID = 0
+l Alignment = 0
+
+
+[Text5] // for mech speed
+l XLocation = 280
+l YLocation = 454
+l Width = 47
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27221 // agencyfb14
+l TextID = 0
+l Alignment = 0
+
+
+[Text6] // for mech jump range
+l XLocation = 280
+l YLocation = 493
+l Width = 47
+l Height = 22
+l Color = -16755822
+b outline = FALSE
+l Font = 27221 // agencyfb14
+l TextID = 0
+l Alignment = 0
+
+[Text7] // help text
+l XLocation = 146
+l YLocation = 542
+l Width = 463
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 27322 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[AttributeMeters] // meters for the mech info area of mech purchasing
+
+l AttributeMeterCount = 3
+
+[AttributeMeter0] // for armor
+l left = 182
+l right = 274
+l top = 400
+l bottom = 431
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[AttributeMeter1] // for speed
+l left = 182
+l right = 274
+l top = 439
+l bottom = 470
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+[AttributeMeter2] // for jump distance
+l left = 182
+l right = 274
+l top = 478
+l bottom = 509
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+
+

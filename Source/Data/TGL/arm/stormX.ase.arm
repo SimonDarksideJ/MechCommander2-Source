@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="11CE6B980783CC67D22C3E59241989C8" />
+  <Asset Name="..\stormX.ase" Type="Physical" Author="ngauvin" FileSize="31649" ModificationTime="2006-02-01T10:55:32.5766167-08:00" CRC="AFF5A76B89CA26C93DE83402BF925214" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_GenericX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

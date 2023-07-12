@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9A9E7193B4FFC01B07AC2490351DBABD" />
+  <Asset Name="..\s_mediumPostX.ase" Type="Physical" Author="ngauvin" FileSize="45493" ModificationTime="2006-02-01T10:55:25.9984496-08:00" CRC="F2A118998181F90FE5AE8268A2817AE8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

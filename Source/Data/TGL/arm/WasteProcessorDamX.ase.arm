@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DD1C94FDAC0EB7D3E1C1458B1B7CABA0" />
+  <Asset Name="..\WasteProcessorDamX.ase" Type="Physical" Author="ngauvin" FileSize="34393" ModificationTime="2006-02-01T10:55:37.5610236-08:00" CRC="BB122ACEE600C13F475B6D26E0777691" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_WasteProcessorDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

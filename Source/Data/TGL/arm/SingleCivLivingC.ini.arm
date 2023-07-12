@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C4E5651FCC43826735FC081DC7D0ED51" />
+  <Asset Name="..\SingleCivLivingC.ini" Type="Physical" Author="franksav" FileSize="598" ModificationTime="2006-03-03T01:28:50.2578738-08:00" CRC="A3FDAE6AC8E296BE8AAEFCD8B4537AC4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="SingleCivLivingC.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="SingleCivLivingCL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="SingleCivLivingCL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SingleCivLivingCX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="SingleCivLivingCDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="SingleCivLivingCdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shanty House" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

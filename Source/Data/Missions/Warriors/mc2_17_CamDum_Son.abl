@@ -1,0 +1,338 @@
+//****************************************************************************************//
+// 
+//		Brains used for Renard in his most Awesome Atlas
+//
+//      MISSION:  Mc2_17
+//
+//
+//****************************************************************************************//
+
+fsm mc2_17_CamDum_son;
+
+	var
+
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState, attackPatrolState, searchPatrolState;
+		static PatrolPath			startPatrolPath,  attackPatrolPath, searchPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+
+		static boolean			poweredDown;
+
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+		static boolean			BeginFlankMove;
+	
+		static boolean			attackBase;
+		static boolean			playTaunt;
+		static boolean			MoveToMeeting;
+
+
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 0, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 0, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("RunsAways");
+		BeginFlankMove = False;
+		attackBase = False;
+		playTaunt = False;
+		MoveToMeeting = False;
+
+
+		startPatrolState[0] = PATROL_TYPE_LINEAR;    
+		startPatrolState[1] = 3;    //?num points
+		startPatrolState[2] = 1;    //?num cycles
+		startPatrolState[3] = PATROL_DIRECTION_FORWARD;    
+		startPatrolState[4] = -1;    //reset cur point
+		startPatrolState[5] = -1;    //reset cur cycle
+		startPatrolState[6] = CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;    
+		startPatrolPath[0, 0] = -5866;
+		startPatrolPath[0, 1] = -234.667;
+		startPatrolPath[1, 0] = -6762;
+		startPatrolPath[1, 1] = -422;
+		startPatrolPath[2, 0] = -7274;
+		startPatrolPath[2, 1] = -362;
+
+		//-------------------------------------------	
+		// Setup the Patrol here...	
+		//XL attackPatrolState Start	
+
+		attackPatrolState[0] = PATROL_TYPE_LINEAR;    	
+		attackPatrolState[1] = 6;    //?num points	
+		attackPatrolState[2] = 1;    //?num cycles	
+		attackPatrolState[3] = PATROL_DIRECTION_FORWARD;    	
+		attackPatrolState[4] = -1;    //reset cur point	
+		attackPatrolState[5] = -1;    //reset cur cycle	
+		attackPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED;    	
+
+		attackPatrolPath[0, 0] = -6720.000;	
+		attackPatrolPath[0, 1] = -405.000;	
+		attackPatrolPath[1, 0] = -6080.000;	
+		attackPatrolPath[1, 1] = -1045.000;	
+		attackPatrolPath[2, 0] = -4501.000;	
+		attackPatrolPath[2, 1] = -2880.000;	
+		attackPatrolPath[3, 0] = -2538.000;	
+		attackPatrolPath[3, 1] = -4373.000;	
+		attackPatrolPath[4, 0] = 320.000;	
+		attackPatrolPath[4, 1] = -4074.000;	
+		attackPatrolPath[5, 0] = 1344.000;	
+		attackPatrolPath[5, 1] = -2496.000;	
+			
+			
+		//XLs attackPatrolPath end	
+
+
+		//-------------------------------------------	
+		// Setup the Patrol here...	
+		//XL searchPatrolstate Start	
+
+		searchPatrolstate[0] = PATROL_TYPE_LINEAR;    	
+		searchPatrolstate[1] = 4;    //?num points	
+		searchPatrolstate[2] = -1;    //?num cycles	
+		searchPatrolstate[3] = PATROL_DIRECTION_FORWARD;    	
+		searchPatrolstate[4] = -1;    //reset cur point	
+		searchPatrolstate[5] = -1;    //reset cur cycle	
+		searchPatrolstate[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED;    	
+
+		searchPatrolPath[0, 0] = 3349.000;	
+		searchPatrolPath[0, 1] = 149.000;	
+		searchPatrolPath[1, 0] = 2154.000;	
+		searchPatrolPath[1, 1] = -3520.000;	
+		searchPatrolPath[2, 0] = -3964.000;	
+		searchPatrolPath[2, 1] = -5184.000;	
+		searchPatrolPath[3, 0] = 277.000;	
+		searchPatrolPath[3, 1] = -2410.000;	
+			
+			
+		//XLs searchPatrolPath end	
+
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 100; //?in meters
+		defenderHelpRadius = 125; //?in meters
+		lastHelpRequestTime = -100.0;
+
+		setWillHelp(False);
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+		curStateHandle = getCurrentStateHandle;
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+		
+		//--------------------------------------------------		
+		//Check to see it's time to run away
+		if (BothRunAways) and (not BeginFlankMove) then
+			BeginFlankMove = True;
+			trans RunsAways;
+		endif;
+
+
+		//--------------------------------------------------
+		// Check to see if time to attack the player
+		if (LiaoSonMoveToValley) and (not MoveToMeeting) then
+			MoveToMeeting = True;
+			trans MovieMoving;
+		endif;
+		
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+		integer		tacticState;
+
+	code
+
+		if (Not playTaunt) then
+			mcprint("FireD");
+			playTaunt = True;
+			playWave("data\sound\mc2_17_4.wav", -1); //Vo Rebels help the player						
+		endif;
+
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+		//coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_JOUST, tacticState);
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state RunsAways;
+
+	code
+
+		update;
+
+		setDebugString(-1, 3, " RunsAways ");	
+		corePatrol(startPatrolState, startPatrolPath, -1);
+		resetOrders(1);
+	
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state MovieMoving;
+
+	var
+		worldPosition		MeetingPoint;
+
+	code
+
+		update;
+		
+		MeetingPoint[0] = -4970;
+		MeetingPoint[1] = -2026;
+		MeetingPoint[2] = 0;		
+
+		setDebugString(-1, 3, " Meeting ");	
+		coreMoveTo(MeetingPoint, 0);		
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+		update;
+
+
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

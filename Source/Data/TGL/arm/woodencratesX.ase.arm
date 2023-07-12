@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="37890B174BA470D413650F09C7883132" />
+  <Asset Name="..\woodencratesX.ase" Type="Physical" Author="ngauvin" FileSize="7859" ModificationTime="2006-02-01T10:55:40.0766647-08:00" CRC="4BE68CB8BE086FD94311E98644322ADB" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Crates.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

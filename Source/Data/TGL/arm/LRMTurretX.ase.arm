@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9E779F05A3BFA5AD8205F438EDC02B4F" />
+  <Asset Name="..\LRMTurretX.ase" Type="Physical" Author="ngauvin" FileSize="28871" ModificationTime="2006-02-01T10:55:09.7014703-08:00" CRC="205EE88890AA1689031966AF5BC07271" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

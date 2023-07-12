@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4FDD2BEA88332582248E47A4A0CBAC05" />
+  <Asset Name="..\mcl_mc_flamerarray.ini" Type="Physical" Author="franksav" FileSize="155" ModificationTime="2006-03-03T01:28:35.3517192-08:00" CRC="A7B1DC25441DE47F97BC0F8D11E6D5E1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_FlamerArray.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

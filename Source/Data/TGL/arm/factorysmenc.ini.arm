@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="54F0C5FA040852E78F15E8892A4E8299" />
+  <Asset Name="..\factorysmenc.ini" Type="Physical" Author="franksav" FileSize="390" ModificationTime="2006-03-03T01:28:23.4611703-08:00" CRC="01698841755A80F39D4DEBEDBC50D818" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="factorysmEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

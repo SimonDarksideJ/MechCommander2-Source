@@ -1,0 +1,11 @@
+FITini
+
+[Main]
+ul NumPaintSchemes = 1
+
+[Scheme0]
+ul RedColor = 0xff5E0000
+ul GreenColor = 0xff000000
+ul BlueColor = 0xff7f7f7f
+
+FITend

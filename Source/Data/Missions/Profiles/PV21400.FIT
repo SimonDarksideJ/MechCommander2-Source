@@ -1,0 +1,107 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  21400   'Saracen'  Type:  503 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     21400 
+st Crew =                                                  "PCREWD"
+ul Chassis =                                                503 
+st Name =                                                  "Saracen"
+ul VehicleTypeID =                                          503 
+l NameIndex =                                               15 
+l DescIndex =                                               512 
+f CurTonnage =                                              35 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          100 
+l BattleRating =                                            35 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 3.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         12 
+uc CurArmorPoints =                                         12 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             2 
+uc NumAmmo =                                                2 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               100 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               100 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:5]
+uc MasterID =                                               200 
+l Amount =                                                 -1 
+
+[Item:6]
+uc MasterID =                                               200 
+l Amount =                                                 -1 
+
+FITEnd

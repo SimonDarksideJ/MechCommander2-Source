@@ -1,0 +1,201 @@
+FITini 
+
+
+
+// drop down menu for resolution in options/graphics	
+
+[PlayerNameComboBox]
+l XLocation = 26
+l YLocation = 195
+l Width = 261
+l Height = 20
+b ChildCoordinatesAreRelative = 1
+
+
+[ExpandButton] // 
+
+l XLocation = 245
+l YLocation = 1
+l Width = 16
+l Height = 19
+
+l UWidth = 16
+l VHeight = 19
+l UNormal = 151
+l VNormal = 75
+l UPressed = 151
+l VPressed = 75
+l UDisabled = 151
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6B6B6B
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6B6B6B
+
+
+st FileName = "mcl_options_1.tga"
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[EditBox]
+l XLocation = 5
+l YLocation = 0
+l Width = 236
+l Height = 18
+l Color = 0xffc66600
+l CursorColor = 0xffC66600
+l HighlightColor = 0xffC66600
+l SelectedColor = 0xff000000
+l OutlineColor = 0xffffffff
+l Font = 27656 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 3
+
+[Rect0] // divider between button and text
+l XLocation = 244
+l YLocation = 1
+l Width = 0
+l Height = 18
+l Color = 0xff43311C
+b outline = TRUE
+
+
+[Rect1] // outline for whole drop down menu   
+//EditBoxRect
+l XLocation = 0
+l YLocation = 0
+l Width = 261
+l Height = 20
+l Color = 0xff43311C
+b outline = TRUE
+
+
+[Rect2] // rectangle for list box 
+// this is max height for the list box.
+//ListBoxRect
+l XLocation = 0
+l YLocation = 20
+l Width = 261
+l Height = 75
+l Color = 0xff43311C
+b outline = TRUE
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Text0] // list box text
+l XLocation = 6
+l YLocation = 0
+l Width = 128
+l Height = 17
+l Color = 0xFFc66600 
+b outline = FALSE
+l Font = 27333 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+
+[Animation0] // for list box text
+ 
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff846643
+f NormalTime1 = 15
+l NormalColor1 = 0xff846643
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+FITend 

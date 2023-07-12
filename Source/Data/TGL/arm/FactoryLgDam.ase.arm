@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="92C4BD6975688144D0D2E22219E7DE19" />
+  <Asset Name="..\FactoryLgDam.ase" Type="Physical" Author="ngauvin" FileSize="42585" ModificationTime="2006-02-01T10:54:51.5607292-08:00" CRC="6AA898B2F76DD120EE95F4AD238DE038" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_FactoryADam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\FactoryBDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

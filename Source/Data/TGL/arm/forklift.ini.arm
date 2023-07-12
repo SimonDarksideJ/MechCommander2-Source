@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DC616C7363771D4D49160903A6C6E032" />
+  <Asset Name="..\forklift.ini" Type="Physical" Author="franksav" FileSize="332" ModificationTime="2006-03-03T01:28:23.9299173-08:00" CRC="16425D11742C71C517F6E3008874EAF8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="forkliftprop.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="forkliftpropL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="forkliftpropL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="forkliftpropX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="forkliftpropdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="forkliftpropdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Forklift" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="819F491C4C8F9D40BA11C02E70943C30" />
+  <Asset Name="..\rock_jformation3.ini" Type="Physical" Author="franksav" FileSize="308" ModificationTime="2006-03-03T01:28:41.9610519-08:00" CRC="E083C3BF6D08225DFDBF20D083F8E735" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="rock_JFormation3.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="rock_JFormation3L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="rock_JFormation3L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_JFormation3X.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

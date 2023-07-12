@@ -1,0 +1,1162 @@
+FITini 
+
+// SPLASH SCREEN FOR BEHIND MAIN MENU..
+
+
+
+
+
+
+[AnimObjects]
+l Count = 36
+
+[AnimObject0]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_1.tga"
+l Color = 0xffffffff  
+st Animation = "Stars0"
+b Alpha = TRUE
+
+[Stars0]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+f Time1 = 20.0
+l Pos1X = 0
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 20.001
+l Pos2X = 0
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 0
+l Pos3Y = 0
+l Color3 = 0xffffffff 
+
+
+
+[AnimObject1]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_2.tga"
+l Color = 0xffffffff  
+st Animation = "Stars1"
+b Alpha = TRUE
+
+[Stars1]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+f Time1 = 20.0
+l Pos1X = 256
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 20.001
+l Pos2X = 256
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 256
+l Pos3Y = 0
+l Color3 = 0xffffffff 
+
+
+[AnimObject2]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_3.tga"
+l Color = 0xffffffff  
+st Animation = "Stars2"
+b Alpha = TRUE
+
+[Stars2]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+f Time1 = 20.0
+l Pos1X = 512
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 20.001
+l Pos2X = 512
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 512
+l Pos3Y = 0
+l Color3 = 0xffffffff 
+
+
+[AnimObject3]
+l XLocation = 0
+l XLocation = 0
+l Width = 32
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 32
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_7.tga"
+l Color = 0xffffffff  
+st Animation = "Stars3"
+b Alpha = TRUE
+
+[Stars3]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+f Time1 = 20.0
+l Pos1X = 768
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 20.001
+l Pos2X = 768
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 768
+l Pos3Y = 0
+l Color3 = 0xffffffff 
+
+
+
+
+[AnimObject4]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_4.tga"
+l Color = 0xffffffff  
+st Animation = "Stars4"
+b Alpha = TRUE
+
+[Stars4]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 256
+l Color0 = 0xffffffff 
+  
+f Time1 = 40.0
+l Pos1X = 0
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 40.001
+l Pos2X = 0
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 0
+l Pos3Y = 256
+l Color3 = 0xffffffff 
+
+
+
+[AnimObject5]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_5.tga"
+l Color = 0xffffffff  
+st Animation = "Stars5"
+b Alpha = TRUE
+
+[Stars5]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 256
+l Color0 = 0xffffffff 
+  
+f Time1 = 40.0
+l Pos1X = 256
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 40.001
+l Pos2X = 256
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 256
+l Pos3Y = 256
+l Color3 = 0xffffffff 
+
+
+[AnimObject6]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_6.tga"
+l Color = 0xffffffff  
+st Animation = "Stars6"
+b Alpha = TRUE
+
+[Stars6]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 256
+l Color0 = 0xffffffff 
+  
+f Time1 = 40.0
+l Pos1X = 512
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 40.001
+l Pos2X = 512
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 512
+l Pos3Y = 256
+l Color3 = 0xffffffff 
+
+
+[AnimObject7]
+l XLocation = 0
+l XLocation = 0
+l Width = 32
+l Height = 256
+l UNormal = 32
+l VNormal = 0
+l UWidth = 32
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_7.tga"
+l Color = 0xffffffff  
+st Animation = "Stars7"
+b Alpha = TRUE
+
+[Stars7]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 4
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 256
+l Color0 = 0xffffffff 
+  
+f Time1 = 40.0
+l Pos1X = 768
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 40.001
+l Pos2X = 768
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 60.0
+l Pos3X = 768
+l Pos3Y = 256
+l Color3 = 0xffffffff 
+
+
+
+
+
+
+
+
+
+[AnimObject8]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_1.tga"
+l Color = 0xffffffff  
+st Animation = "Stars8"
+b Alpha = TRUE
+
+[Stars8]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 3
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 512
+l Color0 = 0xffffffff 
+  
+f Time1 = 60.0
+l Pos1X = 0
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 60.001
+l Pos2X = 0
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+
+
+
+
+[AnimObject9]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_2.tga"
+l Color = 0xffffffff  
+st Animation = "Stars9"
+b Alpha = TRUE
+
+[Stars9]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 3
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 512
+l Color0 = 0xffffffff 
+  
+f Time1 = 60.0
+l Pos1X = 256
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 60.001
+l Pos2X = 256
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+
+
+[AnimObject10]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_3.tga"
+l Color = 0xffffffff  
+st Animation = "Stars10"
+b Alpha = TRUE
+
+[Stars10]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 3
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 512
+l Color0 = 0xffffffff 
+  
+f Time1 = 60.0
+l Pos1X = 512
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 60.001
+l Pos2X = 512
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+
+
+
+[AnimObject11]
+l XLocation = 0
+l XLocation = 0
+l Width = 32
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 32
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_7.tga"
+l Color = 0xffffffff  
+st Animation = "Stars11"
+b Alpha = TRUE
+
+[Stars11]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 3
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 512
+l Color0 = 0xffffffff 
+  
+f Time1 = 60.0
+l Pos1X = 768
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 60.001
+l Pos2X = 768
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+
+[AnimObject12] // moon
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_moon.tga"
+l Color = 0xffffffff  
+st Animation = "moon"
+
+[moon]
+b AnimationLoops = TRUE
+l AnimationTimeStamps= 5
+
+f Time0 = 0.0
+l Pos0X = 58
+l Pos0Y = 256
+l Color0 = 0xffffffff 
+  
+f Time1 = 40.0
+l Pos1X = 58
+l Pos1Y = -256
+l Color1 = 0xffffffff 
+
+f Time2 = 40.001
+l Pos2X = 58
+l Pos2Y = 512
+l Color2 = 0xffffffff 
+
+f Time3 = 100
+l Pos3X = 58
+l Pos3Y = 512
+l Color3 = 0xffffffff 
+
+f Time4 = 120
+l Pos4X = 58
+l Pos4Y = 256
+l Color4 = 0xffffffff 
+
+
+
+
+
+
+
+[AnimObject13]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_planet_1.tga"
+l Color = 0xffffffff  
+st Animation = "Planet0"
+b Alpha = TRUE
+
+[Planet0]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 276
+l Color0 = 0xffffffff 
+  
+
+
+[AnimObject14]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_planet_2.tga"
+l Color = 0xffffffff  
+st Animation = "Planet1"
+b Alpha = TRUE
+
+[Planet1]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 276
+l Color0 = 0xffffffff 
+  
+
+
+[AnimObject15]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256 
+st FileName = "mcl_splashscreen_planet_3.tga"
+l Color = 0xffffffff  
+st Animation = "Planet2"
+b Alpha = TRUE
+
+[Planet2]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 276
+l Color0 = 0xffffffff 
+
+
+[AnimObject16]
+l XLocation = 0
+l XLocation = 0
+l Width = 32
+l Height = 256
+l UNormal = 64
+l VNormal = 0
+l UWidth = 32
+l VHeight = 256 
+st FileName = "mcl_splashscreen_stars_7.tga"
+l Color = 0xffffffff  
+st Animation = "Planet3"
+b Alpha = TRUE
+
+[Planet3]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 276
+l Color0 = 0xffffffff 
+
+
+[AnimObject17]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 68
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 68
+st FileName = "mcl_splashscreen_planet_4.tga"
+l Color = 0xffffffff  
+st Animation = "Planet4"
+b Alpha = TRUE
+
+[Planet4]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 532
+l Color0 = 0xffffffff 
+
+
+[AnimObject18]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 68
+l UNormal = 0
+l VNormal = 68
+l UWidth = 256
+l VHeight = 68
+st FileName = "mcl_splashscreen_planet_4.tga"
+l Color = 0xffffffff  
+st Animation = "Planet5"
+b Alpha = TRUE
+
+[Planet5]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 532
+l Color0 = 0xffffffff 
+  
+  
+  
+  
+
+[AnimObject19]
+l XLocation = 0
+l XLocation = 0
+l Width = 256
+l Height = 68
+l UNormal = 0
+l VNormal = 136
+l UWidth = 256
+l VHeight = 68
+st FileName = "mcl_splashscreen_planet_4.tga"
+l Color = 0xffffffff  
+st Animation = "Planet6"
+b Alpha = TRUE
+
+[Planet6]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 532
+l Color0 = 0xffffffff 
+  
+  
+    
+
+[AnimObject20]
+l XLocation = 0
+l XLocation = 0
+l Width = 32
+l Height = 68
+l UNormal = 96
+l VNormal = 0
+l UWidth = 32
+l VHeight = 68
+st FileName = "mcl_splashscreen_stars_7.tga"
+l Color = 0xffffffff  
+st Animation = "Planet7"
+
+b Alpha = TRUE
+
+[Planet7]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 532
+l Color0 = 0xffffffff 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+[AnimObject21]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 37
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 37
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame0"
+b Alpha = TRUE
+
+[frame0]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+
+
+[AnimObject22]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 37
+l UNormal = 0
+l VNormal = 37
+l UWidth = 256
+l VHeight = 37
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame1"
+b Alpha = TRUE
+
+[frame1]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+
+
+
+
+
+[AnimObject23]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 37
+l UNormal = 0
+l VNormal = 74
+l UWidth = 256
+l VHeight = 37
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame2"
+b Alpha = TRUE
+
+[frame2]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+  
+
+
+  
+  
+[AnimObject24]
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 37
+l UNormal = 150
+l VNormal = 63
+l UWidth = 32
+l VHeight = 37
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame3"
+b Alpha = TRUE
+
+[frame3]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 0
+l Color0 = 0xffffffff 
+  
+
+
+
+  
+[AnimObject25]
+l XLocation = 0
+l YLocation = 0
+l Width = 37
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 37
+l VHeight = 256
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame4"
+b Alpha = TRUE
+
+[frame4]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 37
+l Color0 = 0xffffffff 
+  
+
+
+  
+[AnimObject26]
+l XLocation = 0
+l YLocation = 0
+l Width = 38
+l Height = 256
+l UNormal = 37
+l VNormal = 0
+l UWidth = 38
+l VHeight = 256
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame5"
+b Alpha = TRUE
+
+[frame5]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 762
+l Pos0Y = 37
+l Color0 = 0xffffffff 
+  
+
+
+
+  
+[AnimObject27]
+l XLocation = 0
+l YLocation = 0
+l Width = 37
+l Height = 256
+l UNormal = 75
+l VNormal = 0
+l UWidth = 37
+l VHeight = 256
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame6"
+b Alpha = TRUE
+
+[frame6]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 293
+l Color0 = 0xffffffff 
+  
+
+
+
+
+
+[AnimObject28]
+l XLocation = 0
+l YLocation = 0
+l Width = 38
+l Height = 256
+l UNormal = 112
+l VNormal = 0
+l UWidth = 38
+l VHeight = 256
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame7"
+b Alpha = TRUE
+
+[frame7]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 762
+l Pos0Y = 293
+l Color0 = 0xffffffff 
+
+
+
+[AnimObject29]
+l XLocation = 0
+l YLocation = 0
+l Width = 37
+l Height = 12
+l UNormal = 150
+l VNormal = 12
+l UWidth = 37
+l VHeight = 12
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame8"
+b Alpha = TRUE
+
+[frame8]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 549
+l Color0 = 0xffffffff 
+
+
+[AnimObject30]
+l XLocation = 0
+l YLocation = 0
+l Width = 38
+l Height = 12
+l UNormal = 150
+l VNormal = 0
+l UWidth = 38
+l VHeight = 12
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame9"
+b Alpha = TRUE
+
+[frame9]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 762
+l Pos0Y = 549
+l Color0 = 0xffffffff 
+
+
+
+[AnimObject31]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 39
+l UNormal = 0
+l VNormal = 111
+l UWidth = 256
+l VHeight = 39
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame10"
+b Alpha = TRUE
+
+[frame10]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 561
+l Color0 = 0xffffffff 
+
+
+[AnimObject32]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 39
+l UNormal = 0
+l VNormal = 150
+l UWidth = 256
+l VHeight = 39
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame11"
+b Alpha = TRUE
+
+[frame11]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 256
+l Pos0Y = 561
+l Color0 = 0xffffffff 
+
+
+
+[AnimObject33]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 39
+l UNormal = 0
+l VNormal = 189
+l UWidth = 256
+l VHeight = 39
+st FileName = "mcl_splashscreen_frame_1.tga"
+l Color = 0xffffffff  
+st Animation = "frame12"
+b Alpha = TRUE
+
+[frame12]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 512
+l Pos0Y = 561
+l Color0 = 0xffffffff 
+
+
+[AnimObject34]
+l XLocation = 0
+l YLocation = 0
+l Width = 32
+l Height = 39
+l UNormal = 150
+l VNormal = 24
+l UWidth = 32
+l VHeight = 39
+st FileName = "mcl_splashscreen_frame_2.tga"
+l Color = 0xffffffff  
+st Animation = "frame13"
+b Alpha = TRUE
+
+[frame13]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 768
+l Pos0Y = 561
+l Color0 = 0xffffffff 
+
+
+
+
+[AnimObject35] // rect at very top of screen
+l XLocation = 0
+l YLocation = 0
+l Width = 800
+l Height = 1
+l Color = 0xff000000  
+st Animation = "frame14"
+
+[frame14]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = -1
+l Color0 = 0xff000000
+
+
+
+[AnimObject36] // TEXT
+// indicia	
+l XLocation = 0
+l YLocation = 0
+l Width = 793
+l Height = 49
+l Color = 0xff000000
+b outline = FALSE
+l Font = 60019 // use arialnarrow8
+l TextID = 60017 
+l Alignment = 3
+
+st Animation = "TEXT"
+
+[TEXT]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 1
+
+f Time0 = 0.0
+l Pos0X = 3
+l Pos0Y = 549
+l Color0 = 0xffC66600
+
+
+
+
+
+
+
+
+
+
+  
+
+FITend 

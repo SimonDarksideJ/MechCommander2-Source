@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9D3E8C1A858A492BAE2F89138E64D843" />
+  <Asset Name="..\UrbanmechL1.ase" Type="Physical" Author="ngauvin" FileSize="121109" ModificationTime="2006-02-01T10:55:36.2797654-08:00" CRC="8A5E593DE9B91594D46491812B708349" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\UrbanMechRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

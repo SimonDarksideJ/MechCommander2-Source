@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CF96F09F4F892298D766387B688D88B8" />
+  <Asset Name="..\catapult.ini" Type="Physical" Author="franksav" FileSize="4073" ModificationTime="2006-03-03T01:28:15.4768464-08:00" CRC="5F648EA1E95C46B2D68FDCB0B4F17EEE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Catapult.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="CatapultL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="CatapultL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="CatapultX.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapult.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="catapultFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="catapultFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="catapultFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Catapult" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

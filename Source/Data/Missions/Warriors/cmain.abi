@@ -1,0 +1,33 @@
+//************************
+//Clan Main Include File 3/19
+//------------------------
+
+		Me = getId;
+		
+		//---------------------
+		// Update Clan Doctrine
+		IssuedCombatMode = getIntegerMemory(MI_MODE);
+
+		if (IssuedCombatMode == COMBAT_MODE_DESTROY) then
+			PrimaryTarget =	getIntegerMemory(MI_OBJECT);
+		else
+			PrimaryTarget = 0;
+		endif;
+
+		GuardObjective = getIntegerMemory(MI_OBJECT);
+		GuardEngageRadius = getRealMemory(MI_ENGAGE_RADIUS);
+		IdentifyRadius = getRealMemory(MI_DISENGAGE_RADIUS);
+		GuardDisengageRadius = getRealMemory(MI_DISENGAGE_RADIUS);
+		GuardPriority = getRealMemory(MI_PRIORITY);
+		if (GuardObjective == GUARD_OBJECTIVE_POINT) then
+			GuardPoint[0] = getRealMemory(MI_COORD_X);
+			GuardPoint[1] = getRealMemory(MI_COORD_Y);
+			GuardPoint[2] = getRealMemory(MI_COORD_Z);
+			GuardDistance = distanceToPosition(CUR_OBJECT_ID, GuardPoint);
+		else
+			GuardDistance = distanceToObject(CUR_OBJECT_ID,GuardObjectId);
+			GuardObjectCF = 100 - getObjectDamage(GuardObjective);				//getObjectDamage returns percent
+		endif;
+
+		CurrentTarget = getTarget(CUR_OBJECT_ID);
+		CurrentCombatMode = getIntegerMemory(MC_MODE);

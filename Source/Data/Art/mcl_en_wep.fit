@@ -1,0 +1,250 @@
+FITini 
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Rects]
+l Rectcount = 7
+
+[Rect0] // weapon description scroll box
+l XLocation = 284
+l YLocation = 35
+l Width = 209
+l Height = 207
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // static weapon icon outline
+l XLocation = 10
+l YLocation = 272
+l Width = 117
+l Height = 180
+l Color = -16634027
+b outline = TRUE
+
+[Rect2] weapon stats scroll box
+l XLocation = 137
+l YLocation = 272
+l Width = 356
+l Height = 180
+l Color = -16699563
+b outline = TRUE
+
+[Rect3] 
+l XLocation = 18
+l YLocation = 241
+l Width = 247
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+[Rect4] 
+l XLocation = 273
+l YLocation = 43
+l Width = 0
+l Height = 190
+l Color = 0xff002F55
+b outline = TRUE
+
+[Rect5] 
+l XLocation = 10
+l YLocation = 43
+l Width = 0
+l Height = 190
+l Color = 0xff002F55
+b outline = TRUE
+
+[Rect6] 
+l XLocation = 18
+l YLocation = 35
+l Width = 247
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Statics]
+l Staticcount = 10
+
+[Static0]
+l XLocation = 10
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static1]
+l XLocation = 18
+l YLocation = 35
+l Width = 248
+l Height = 1
+
+l UNormal = 216
+l VNormal = 80
+l UWidth = 1
+l VHeight = 1
+st FileName = "mcl_en_2.tga"
+
+[Static2]
+l XLocation = 267
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static3]
+l XLocation = 10
+l YLocation = 43
+l Width = 1
+l Height = 191
+
+l UNormal = 222
+l VNormal = 80
+l UWidth = 1
+l VHeight = 1
+st FileName = "mcl_en_2.tga"
+
+[Static4] // rotating view of weapon is centered here
+l XLocation = 12
+l YLocation = 43
+l Width = 260
+l Height = 191
+
+[Static5]
+l XLocation = 273
+l YLocation = 43
+l Width = 1
+l Height = 191
+
+l UNormal = 218
+l VNormal = 80
+l UWidth = 1
+l VHeight = 1
+st FileName = "mcl_en_2.tga"
+
+[Static6]
+l XLocation = 10
+l YLocation = 235
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static7]
+l XLocation = 267
+l YLocation = 235
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static8]
+l XLocation = 18
+l YLocation = 241
+l Width = 248
+l Height = 1
+l UNormal = 220
+l VNormal = 80
+l UWidth = 1
+l VHeight = 1
+st FileName = "mcl_en_2.tga"
+
+[Static9] // static icon of weapon gets centered here
+l XLocation = 20
+l YLocation = 282
+l Width = 96
+l Height = 160
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 2
+ 
+[Text0] // weapon name 
+l XLocation = 10
+l YLocation = 9
+l Width = 483
+l Height = 22
+l Color = -10709309
+b outline = FALSE
+l Font = 27724 // use agency fb 14
+l TextID = 0
+l Alignment = 0
+
+[Text1] // weapon stats header
+l XLocation = 137
+l YLocation = 248
+l Width = 356
+l Height = 22
+l Color = -10709309
+b outline = FALSE
+l Font = 27724 // use agency fb 14
+l TextID = 27723
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+FITend 

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="32070E1D61C8CDCB4FA8C8FDA453BC55" />
+  <Asset Name="..\repairBayEnc.ase" Type="Physical" Author="ngauvin" FileSize="123892" ModificationTime="2006-02-01T10:55:17.6390211-08:00" CRC="2AE47DE5ADF29EDB8E3646914291B4C9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_RepairBayB.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_RepairBayA.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

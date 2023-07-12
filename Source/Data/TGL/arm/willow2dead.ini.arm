@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="44142F2BD7D40F27E351522F3C724DCF" />
+  <Asset Name="..\willow2dead.ini" Type="Physical" Author="franksav" FileSize="318" ModificationTime="2006-03-03T01:28:57.3515784-08:00" CRC="82A00718787669E1E4712067E833893B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="willow2dead.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="willow2deadL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="willow2deadL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="willow2deadX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Dead Willow" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

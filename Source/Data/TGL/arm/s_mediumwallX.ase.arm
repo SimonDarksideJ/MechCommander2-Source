@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9E698F5CBD1B4A6DFB40C738DCF76BEA" />
+  <Asset Name="..\s_mediumwallX.ase" Type="Physical" Author="ngauvin" FileSize="50980" ModificationTime="2006-02-01T10:55:26.0922002-08:00" CRC="FC7EDA3A41130F1C14AB69A06D85D0FA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

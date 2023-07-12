@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EE89F023122BF878884CEBDAA07FE5CA" />
+  <Asset Name="..\heavycopter.ini" Type="Physical" Author="franksav" FileSize="3385" ModificationTime="2006-03-03T01:28:25.383033-08:00" CRC="3FDD6C34A696F06B8073F19FE9154038" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="heavycopter.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="heavycopterL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="heavycopterL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="heavycopterX.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopter.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="heavycopterFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="heavycopterFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="heavycopterFallForwardDam.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="heavycopterdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="heavycopterdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Heavy 'Copter" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EF7C9E3B555AE266387D1CB34F9AC333" />
+  <Asset Name="..\l_lightgate.ase" Type="Physical" Author="ngauvin" FileSize="83097" ModificationTime="2006-02-01T10:55:04.6076877-08:00" CRC="5FA7C4948957C90E4BBA9383535FC64E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\L_LightGate.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

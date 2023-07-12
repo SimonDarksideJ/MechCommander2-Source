@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="108BDCF20900BFCB106A468AFB3C9DA2" />
+  <Asset Name="..\streetlightX.ase" Type="Physical" Author="ngauvin" FileSize="10073" ModificationTime="2006-02-01T10:55:32.8422434-08:00" CRC="AA6FD9886E099F3FB32560DC2314D95D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

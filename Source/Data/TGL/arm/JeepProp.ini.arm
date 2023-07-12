@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6AB66D883D86AD3090787507C8EC2C43" />
+  <Asset Name="..\JeepProp.ini" Type="Physical" Author="franksav" FileSize="284" ModificationTime="2006-03-03T01:28:29.2580082-08:00" CRC="4C718AC71624E80F2A4E2957CCC938F9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="jeepProp.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="jeeppropL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="jeeppropL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="JeeppropX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="jeeppropdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Jeep" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

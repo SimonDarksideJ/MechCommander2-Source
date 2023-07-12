@@ -1,0 +1,228 @@
+FITini 
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 8
+
+// PLAYERSTATSROW
+[Rect0] // outline around player info name, icon, and colors
+l XLocation = 20
+l YLocation = 0
+l Width = 195
+l Height = 35
+l Color = -12373732
+b outline = TRUE
+
+// PLAYERSTATSROW
+[Rect1] // divider between player unit icon and player color
+l XLocation = 55
+l YLocation = 0
+l Width = 0
+l Height = 34
+l Color = -12373730
+b outline = TRUE
+
+// PLAYERSTATSROW
+
+[Rect2] // player color
+l XLocation = 57
+l YLocation = 2
+l Width = 14
+l Height = 32
+l Color = -65536
+b outline = FALSE
+
+// PLAYERSTATSROW
+[Rect3] // divider between player color and team color
+l XLocation = 72
+l YLocation = 0
+l Width = 0
+l Height = 34
+l Color = -12373728
+b outline = TRUE
+
+// PLAYERSTATSROW
+[Rect4] // team color
+l XLocation = 74
+l YLocation = 2
+l Width = 140
+l Height = 32
+l Color = -65534
+b outline = FALSE
+
+// PLAYERSTATSROW
+[Rect5] // horizontal divider 
+l XLocation = 217
+l YLocation = 35
+l Width = 251
+l Height = 0
+l Color = -12373732
+b outline = TRUE
+
+
+// PLAYERSTATSROW
+[Rect6] // horizontal divider 
+l XLocation = 0
+l YLocation = 35
+l Width = 17
+l Height = 0
+l Color = -12373732
+b outline = TRUE
+
+// PLAYERSTATSROW
+[Rect7] // rect for rank status: gold for winner, silver for secondary 
+l XLocation = -2
+l YLocation = -2
+l Width = 472
+l Height = 39
+l Color = 0xff785E00 // <--- that's gold.  for silver use---> 0xff8C8C8C
+b outline = TRUE
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 2
+
+
+
+
+// PLAYERSTATSROW
+[Static0] // unit icon 
+l XLocation = 22
+l YLocation = 2
+l Width = 32
+l Height = 32
+
+
+// PLAYERSTATSROW
+[Static1]  // laurels for  winners
+l XLocation = 220
+l YLocation = 0
+l Width = 220
+l Height = 16
+l UNormal = 35
+l VNormal = 198  // <--- that's gold. for silver, use---> l VNormal = 214 
+l UWidth = 220
+l VHeight = 16
+st FileName = "mcl_mp_stats_4.tga"
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Texts]
+l Textcount = 6
+
+
+
+// PLAYERSTATSROW
+[Text0] //  SCORE number
+l XLocation = 226
+l YLocation = 16
+l Width = 83
+l Height = 17
+l Color = -3774975
+b outline = FALSE
+l Font = 26368 // use agency fb 11
+l TextID = 27000
+l Alignment = 2
+
+// PLAYERSTATSROW
+[Text1] // kills number
+l XLocation = 315
+l YLocation = 16
+l Width = 83
+l Height = 17
+l Color = -3774971
+b outline = FALSE
+l Font = 26368 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+// PLAYERSTATSROW
+[Text2] // losses number
+l XLocation = 405
+l YLocation = 16
+l Width = 83
+l Height = 17
+l Color = -3774974
+b outline = FALSE
+l Font = 26368 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+// PLAYERSTATSROW
+[Text3] // Player name  
+l XLocation = 77
+l YLocation = 3
+l Width = 132
+l Height = 17
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26368 // use agency fb 11, with black drop shadow
+l TextID = 27000
+l Alignment = 0
+
+// PLAYERSTATSROW
+[Text4]  //unit name text
+l XLocation = 77
+l YLocation = 21
+l Width = 132
+l Height = 12
+l Color = -1
+b outline = FALSE
+l Font = 26377 // use arial narrow 8, with black drop shadow
+l TextID = 27000
+l Alignment = 0
+
+// PLAYERSTATSROW
+[Text5] //  RANKING number
+l XLocation = 1
+l YLocation = 15
+l Width = 16
+l Height = 17
+l Color = -3774975
+b outline = FALSE
+l Font = 26368 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+FITend 

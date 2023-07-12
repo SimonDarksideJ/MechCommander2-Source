@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AE130726ACB8C506330D2FA3B2A36738" />
+  <Asset Name="..\crashribDamX.ase" Type="Physical" Author="ngauvin" FileSize="25586" ModificationTime="2006-02-01T10:54:43.9825557-08:00" CRC="5A6A5450F9E1287A6CD0249019544073" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CrashRibX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

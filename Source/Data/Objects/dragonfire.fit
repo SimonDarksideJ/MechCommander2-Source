@@ -1,0 +1,33 @@
+FITini
+
+// This is a sample Smoke Data File
+
+[ObjectClass]
+l ObjectTypeNum = 7
+
+[ObjectType]
+st Name 					= "ssmoke"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 23				// ID number for this mech type
+l Appearance				= 0x03000017
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+
+[SmokeData]
+f FrameRate				= 17.0
+b HasRotation				= TRUE				//Do the smoke spheres have a rotation?
+l numRotations				= 32				// How many?
+f zVelocity				= 0.0				// m/s
+f SlowDownPercent			= 0.1				// Percent slower smoke goes then object due to drag.
+f SmokePerSecond			= 33				// number of spheres per second.
+ul maxSmokeSpheres			= 100				// max number of spheres around.
+l Duration				= 25				// Lasts forever = -1 (s)
+f randomVelX				= 0.0				// How much can x/y velocity vary by.
+f randomVelY				= 0.0				// This should get crowded spheres going.
+f randomVelZ				= 0.0				// This should get crowded spheres going.
+f randomPosX				= 2.0				// How much can x/y/z position vary by.
+f randomPosY				= 2.0				// This should get crowded spheres going.
+f randomPosZ				= 0.0
+st SmokeShape				= "smsl_a"
+FITend

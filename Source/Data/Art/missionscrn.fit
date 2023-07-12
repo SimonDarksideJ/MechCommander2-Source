@@ -1,0 +1,22 @@
+FITini
+
+[CameraData]
+f RotationDegPerSec = 6000.0			//Actually degrees per frameLength
+f RotationIncrement = 11.25
+f ZoomIncrement = 10.0
+
+f ScrollIncrement = 5000.0
+f ScrollLeft = 5.0
+f ScrollRight = 5.0
+f ScrollUp = 5.0
+f ScrollDown = 5.0
+
+f BaseFrameLength = 15.0
+
+f MouseDragThreshold = 10				//In Pixels
+f MouseDoubleClickThreshold = 0.2		//In Seconds
+
+[Elements]
+l numElements = 0
+
+FITend

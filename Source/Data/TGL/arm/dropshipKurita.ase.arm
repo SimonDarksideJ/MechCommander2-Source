@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2A1BC49D1ACD39669C685ADDBD9151EF" />
+  <Asset Name="..\dropshipKurita.ase" Type="Physical" Author="ngauvin" FileSize="197855" ModificationTime="2006-02-01T10:54:49.1232136-08:00" CRC="6F8BD4B257023144ED1ABFF70C533A8A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_DropshipKurita.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

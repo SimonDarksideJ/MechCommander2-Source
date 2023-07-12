@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7602E51EA25099AF2A1E34D8BDE6639B" />
+  <Asset Name="..\lightcopterFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="73606" ModificationTime="2006-02-01T10:55:08.87334-08:00" CRC="E33AAFA11D45346C6A539208F33D37DF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

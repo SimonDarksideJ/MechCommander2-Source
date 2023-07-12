@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="31C5D9C5C0542D2C16E465D085412D83" />
+  <Asset Name="..\hpg_gen.ini" Type="Physical" Author="franksav" FileSize="554" ModificationTime="2006-03-03T01:28:27.2267712-08:00" CRC="E112228B26C50F1965EF47946CCE7ADE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_Gen.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_GenL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HPG_GenL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HPG_GenX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="HPG_Gendam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Comstar Generator" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

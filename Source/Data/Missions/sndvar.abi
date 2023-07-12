@@ -1,0 +1,19 @@
+//************************
+//Music VAR Include File
+//------------------------
+
+        //------------------
+        // Music
+        //------------------
+	eternal boolean		playingMissionResultTune;
+	eternal boolean         playingObjectiveTune;
+	eternal boolean         playingDeathTune;
+	eternal boolean		playingNONCombatTune;
+	eternal boolean		playingCombatTune;
+	eternal boolean		playMissionStartTune;
+	eternal boolean		playingAmbientTune;
+	eternal boolean		playingSensorTune;
+
+	
+
+

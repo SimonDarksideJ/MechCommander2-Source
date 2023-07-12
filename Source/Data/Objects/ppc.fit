@@ -1,0 +1,37 @@
+FITini
+
+// This is the PPC Projectile
+
+[ObjectClass]
+l ObjectTypeNum = 17
+
+[ObjectType]
+st Name 					= "nPPC"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 25				// ID number for this object type
+l Appearance				= 0					// This can be a flash FX
+l Duration					= 2					// Lasts forever = -1 (s)  2 second burst
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+
+[ProjectileLaserData]
+f Velocity					= 600.0				// m/s
+f ProjectileLength			= 32.0				// w.u.
+f BulgeLength				= 8.0				// w.u.
+f BulgeWidth				= 2.0				// w.u.
+uc f0Color					= 233
+uc f1Color					= 232
+uc f2Color					= 232
+uc f3Color					= 234
+uc e0Color					= 233
+uc e1Color					= 232
+uc e2Color					= 232
+uc e3Color					= 234
+f CloseDistance				= 25.0
+ul SoundEffectId			= 1					// Id of soundEffect to play on Fire.
+ul SmokeObjectId			= 652
+ul ProjectileMissEffect		= 481
+ul ProjectileHitEffect		= 656
+
+FITend

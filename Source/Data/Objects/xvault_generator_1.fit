@@ -1,0 +1,32 @@
+FITini
+
+// This is the gtower data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name = "xvault_generator_1"
+l Type = 0x7
+l Appearance = 0x0200031D
+l Duration				= -1			// Lasts forever = -1
+l MaxDamage				= 0				// Number of damage points before BOOM!
+l ExplosionObject	   	= 42			// Object Class Number of explosion for Mech
+l DestroyedObject	   	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 25			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName = 254
+b BlocksLineOfFire = t
+ul DmgLevel				= 22
+ul BlownEffectId	= -1			//Sound Effect played when building dies.
+ul NormalEffectId	= 38			//Sound Effect played when building is normal.
+ul DamageEffectId	= 73			//Sound Effect Played when building is dmg/destroyed.
+l SetImpassable			= 1
+// l XImpasse				= 1
+// l YImpasse				= 1
+l LowTemplate		= 0x18000000
+l HighTemplate		= 0x00000018
+
+			
+FITend

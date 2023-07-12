@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="08C2A64E046ECD14207DA55A24775FFD" />
+  <Asset Name="..\bluebeaconlight.ini" Type="Physical" Author="franksav" FileSize="465" ModificationTime="2006-03-03T01:28:13.976856-08:00" CRC="13C8D70F40ABB9559E406B02D848E6AD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="blueBeaconlight.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="blueBeaconlightL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="blueBeaconlightL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="blueBeaconlightX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="bluebeaconlightdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="bluebeaconlightDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Blue Beacon Light" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

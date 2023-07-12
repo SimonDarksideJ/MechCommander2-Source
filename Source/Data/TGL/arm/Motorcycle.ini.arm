@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7A39209E419FACA9E68213B682FDA701" />
+  <Asset Name="..\Motorcycle.ini" Type="Physical" Author="franksav" FileSize="327" ModificationTime="2006-03-03T01:28:37.6173297-08:00" CRC="36DDD1668509AE0773048CF6A8FC57DC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="motorcycle.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="MotorcycleL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="MotorcycleL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="MotorcycleX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="motorcycledam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="MotorcycleDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Motorcycle" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

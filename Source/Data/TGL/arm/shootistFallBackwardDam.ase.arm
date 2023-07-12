@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1A88F87BDDAFD7F992AD1509B713B850" />
+  <Asset Name="..\shootistFallBackwardDam.ase" Type="Physical" Author="ngauvin" FileSize="99923" ModificationTime="2006-02-01T10:55:29.5922226-08:00" CRC="8AE27DD21DE898165B8E4E74E2F9341C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

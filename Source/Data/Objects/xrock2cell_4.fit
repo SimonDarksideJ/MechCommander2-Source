@@ -1,0 +1,25 @@
+FITini
+
+// This is the TEMPLATE data file
+
+[ObjectClass]
+l ObjectTypeNum = 11
+
+[ObjectType]
+st Name 			= "xrock2cell_4"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 19
+l Appearance		= 0x02000383
+l Duration			= -1					// Lasts forever = -1
+l MaxDamage			= 0						// Number of damage points before BOOM!
+l ExplosionObject	= 0						// Object Class Number of explosion for this building
+l DestroyedObject	= 0						// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 0						// Extent Radius in Meters
+
+[TerrainObjectData]
+ul DmgLevel			= 0						// How much damage before changing to destroyed shape
+l BasePixelOffsetX  = 0        	   			//Where on tile to draw this building.
+l BasePixelOffsetY  = 0                
+l LowTemplate		= 0x00000000
+l HighTemplate		= 0x00001010
+
+FITend

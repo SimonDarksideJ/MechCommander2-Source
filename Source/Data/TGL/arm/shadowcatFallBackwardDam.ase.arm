@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="19627AD4E94AE6193A3ECAD685B55F01" />
+  <Asset Name="..\shadowcatFallBackwardDam.ase" Type="Physical" Author="ngauvin" FileSize="103005" ModificationTime="2006-02-01T10:55:28.2328389-08:00" CRC="F9C1EDF28812FD76BB1A208E8EC3E467" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

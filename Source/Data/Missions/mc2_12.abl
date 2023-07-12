@@ -1,0 +1,655 @@
+//*********************************************************************************
+
+module mc2_12 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+			eternal boolean		CvA_Start_Trigger;
+			static boolean		CvA_Start_Trigger_Check;
+			static real			CvATimerDelay;
+			static boolean		CvATimerCheck;
+
+			eternal boolean		CvA_Start_Trigger2;
+			static boolean		CvA_Start_Trigger_Check2;
+			static real			CvATimerDelay2;
+			static boolean		CvATimerCheck2;
+
+			eternal boolean		CvB_Start_Trigger;
+			static boolean		CvB_Start_Trigger_Check;
+			static real			CvBTimerDelay;
+			static boolean		CvBTimerCheck;
+
+			eternal boolean		CvB_Start_Trigger2;
+			static boolean		CvB_Start_Trigger_Check2;
+			static real			CvBTimerDelay2;
+			static boolean		CvBTimerCheck2;
+
+			eternal boolean		CvC_Start_Trigger;
+			static boolean		CvC_Start_Trigger_Check;
+			static real			CvCTimerDelay;
+			static boolean		CvCTimerCheck;
+
+			eternal boolean		CvC_Start_Trigger2;
+			static boolean		CvC_Start_Trigger_Check2;
+			static real			CvCTimerDelay2;
+			static boolean		CvCTimerCheck2;
+
+			eternal boolean		CvD_Start_Trigger;
+			static boolean		CvD_Start_Trigger_Check;
+			static real			CvDTimerDelay;
+			static boolean		CvDTimerCheck;
+
+			eternal boolean		CvD_Start_Trigger2;
+			static boolean		CvD_Start_Trigger_Check2;
+			static real			CvDTimerDelay2;
+			static boolean		CvDTimerCheck2;
+
+			eternal boolean		River_Area_Trigger;
+			eternal integer		RiverAreaTrigger;
+
+			eternal boolean		City_Area_Trigger;
+			eternal integer		CityAreaTrigger;
+
+			eternal boolean		Island_Area_Trigger;
+			eternal integer		IslandAreaTrigger;
+
+			eternal boolean		Hill_Area_Trigger;
+			eternal integer		HillAreaTrigger;
+
+			eternal boolean		BaseVO_Area_Trigger;
+			eternal integer		BaseVOAreaTrigger;
+			static boolean		Base_VO_Trigger_Check;
+
+			static real		BaseVOTimerDelay;
+
+			static boolean		Base_Vo;
+
+			eternal boolean		MoverRunningToBase;
+
+
+			eternal boolean		CvA_End_Trigger;
+			eternal boolean		CvB_End_Trigger;
+			eternal boolean		CvC_End_Trigger;
+			eternal boolean		CvD_End_Trigger;
+
+			static boolean		NPatrol_End_Vo_Check;
+			static boolean		SPatrol_End_Vo_Check;
+			static boolean		North_Base_Vo;
+			static boolean		South_Base_Vo;
+
+			static real		NBaseVOTimerDelay;
+			static real		SBaseVOTimerDelay;
+			
+			static boolean		ConvoyStart_VO_Check;
+			static boolean		ConvoyStart_Trigger_Check;
+      static real				ConvoyVOTimerDelay;
+			static boolean		ConvoyStart_Vo;
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+			
+			
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		CvA_Start_Trigger = FALSE; //GT, used to start convoy A moving
+		CvA_Start_Trigger_Check = FALSE; //LT, used to check CvA Start Trigger
+		CvATimerCheck = FALSE; //LT, used to check CvA Timer
+
+		CvA_Start_Trigger2 = FALSE; //GT, used to start convoy A moving
+		CvA_Start_Trigger_Check2 = FALSE; //LT, used to check CvA Start Trigger
+		CvATimerCheck2 = FALSE; //LT, used to check CvA Timer
+
+		CvB_Start_Trigger = FALSE; //GT, used to start convoy A moving
+		CvB_Start_Trigger_Check = FALSE; //LT, used to check CvA Start Trigger
+		CvBTimerCheck = FALSE; //LT, used to check CvA Timer
+
+		CvB_Start_Trigger2 = FALSE; //GT, used to start convoy A moving
+		CvB_Start_Trigger_Check2 = FALSE; //LT, used to check CvA Start Trigger
+		CvBTimerCheck2 = FALSE; //LT, used to check CvA Timer
+
+		CvC_Start_Trigger = FALSE; //GT, used to start convoy A moving
+		CvC_Start_Trigger_Check = FALSE; //LT, used to check CvA Start Trigger
+		CvCTimerCheck = FALSE; //LT, used to check CvA Timer
+
+		CvC_Start_Trigger2 = FALSE; //GT, used to start convoy A moving
+		CvC_Start_Trigger_Check2 = FALSE; //LT, used to check CvA Start Trigger
+		CvCTimerCheck2 = FALSE; //LT, used to check CvA Timer
+
+		CvC_Start_Trigger = FALSE; //GT, used to start convoy A moving
+		CvC_Start_Trigger_Check = FALSE; //LT, used to check CvA Start Trigger
+		CvCTimerCheck = FALSE; //LT, used to check CvA Timer
+
+		CvC_Start_Trigger2 = FALSE; //GT, used to start convoy A moving
+		CvC_Start_Trigger_Check2 = FALSE; //LT, used to check CvA Start Trigger
+		CvCTimerCheck2 = FALSE; //LT, used to check CvA Timer
+
+		River_Area_Trigger = FALSE;
+
+		City_Area_Trigger = FALSE;
+
+		Island_Area_Trigger = FALSE;
+
+		Hill_Area_Trigger = FALSE;
+
+		BaseVO_Area_Trigger = FALSE;
+		Base_VO_Trigger_Check = FALSE; //LT, used to check BaseVO Trigger
+		Base_Vo = FALSE;  //LT, used to check BaseVO
+		MoverRunningToBase = FALSE; //GT, used to flag when a CV Mover is running to base
+
+		CvA_End_Trigger = FALSE; //GT, used to set when CvA NCV Patrol at end
+		CvB_End_Trigger = FALSE; //GT, used to set when CvB NCV Patrol at end
+		CvC_End_Trigger = FALSE; //GT, used to set when CvC NCV Patrol at end
+		CvD_End_Trigger = FALSE; //GT, used to set when CvD NCV Patrol at end
+
+		NPatrol_End_Vo_Check = FALSE; //LT, used to check North Base Patrol Ended Check
+		SPatrol_End_Vo_Check = FALSE; //LT, used to check South Base Patrol Ended Check
+		North_Base_Vo = FALSE;  //LT, used to check north base VO
+		South_Base_Vo = FALSE;  //LT, used to check north base VO
+		
+		ConvoyStart_Trigger_Check = FALSE;
+		ConvoyStart_VO_Check = FALSE;
+		ConvoyStart_Vo = FALSE;
+
+			worldLoc[0] = 2496.000;
+			worldLoc[1] = -3520.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			RiverAreaTrigger = addTriggerArea(cellLoc[0] - 10, cellLoc[1] - 10, cellLoc[0] + 10, cellLoc[1] + 10, 2, 0);
+
+			worldLoc[0] = -320.000;
+			worldLoc[1] = 320.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			CityAreaTrigger = addTriggerArea(cellLoc[0] - 20, cellLoc[1] - 20, cellLoc[0] + 20, cellLoc[1] + 20, 2, 0);
+
+			worldLoc[0] = -3264.000;
+			worldLoc[1] = -2624.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			IslandAreaTrigger = addTriggerArea(cellLoc[0] - 30, cellLoc[1] - 30, cellLoc[0] + 30, cellLoc[1] + 30, 2, 0);
+
+			worldLoc[0] = 2880.000;
+			worldLoc[1] = -448.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			HillAreaTrigger = addTriggerArea(cellLoc[0] - 27, cellLoc[1] - 27, cellLoc[0] + 27, cellLoc[1] + 27, 2, 0);
+	
+			worldLoc[0] = -2752.000;
+			worldLoc[1] = 832.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			BaseVOAreaTrigger = addTriggerArea(cellLoc[0] - 18, cellLoc[1] - 18, cellLoc[0] + 18, cellLoc[1] + 18, 2, 1);
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+// ***********************Mission 12 Stuff*****************************************
+
+
+			//*******************************************************
+			//Trigger for River Area Trigger
+			if (isTriggerAreaHit(RiverAreaTrigger)) then
+				River_Area_Trigger = True;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for City Area Trigger
+			if (isTriggerAreaHit(CityAreaTrigger)) then
+				City_Area_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//Trigger for Island Area Trigger
+			if (isTriggerAreaHit(IslandAreaTrigger)) then
+				Island_Area_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//Trigger for Hill Area Trigger
+			if (isTriggerAreaHit(HillAreaTrigger)) then
+				Hill_Area_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//VO that gets played at start of level
+
+			if (Not ConvoyStart_Trigger_Check) then
+				if (Not ConvoyStart_VO_Check) then
+					ConvoyVOTimerDelay = getTime + 5; //Wait 5 secs before playing VO
+					ConvoyStart_VO_Check = True;
+				else
+					if ((getTime > ConvoyVOTimerDelay) AND (Not ConvoyStart_Vo)) then
+						ConvoyStart_Vo = True;
+						ConvoyStart_Trigger_Check = True;
+						playWave("data\sound\mc2_12_3.WAV", -1); //Tac Officer VO plays
+					endif;
+				endif;
+			endif;	
+
+			//*******************************************************
+			//VO that gets played when any CVA or C movers finish their Patrol
+
+			if (CvA_End_Trigger) OR (CvC_End_Trigger) then
+				if (Not NPatrol_End_Vo_Check) then
+					NBaseVOTimerDelay = getTime + 4; //Wait 4 secs before playing VO
+					NPatrol_End_Vo_Check = True;
+				else
+					if ((getTime > NBaseVOTimerDelay) AND (Not North_Base_Vo)) then
+						North_Base_Vo = True;
+						playWave("data\sound\mc2_12_0.WAV", -1); //Cash VO plays
+					endif;
+				endif;
+			endif;	
+
+
+			//*******************************************************
+			//VO that gets played when any CVB or D movers finish their Patrol
+
+			if (CvB_End_Trigger) OR (CvD_End_Trigger) then
+				if (Not SPatrol_End_Vo_Check) then
+					SBaseVOTimerDelay = getTime + 4; //Wait 4 secs before playing VO
+					SPatrol_End_Vo_Check = True;
+				else
+					if ((getTime > SBaseVOTimerDelay) AND (Not South_Base_Vo)) then
+						South_Base_Vo = True;
+						playWave("data\sound\mc2_12_1.WAV", -1); //Cash VO plays
+					endif;
+				endif;
+			endif;	
+
+
+
+			//*******************************************************
+			//VO that gets played when any CV movers trigger BaseVO Area Trigger
+
+			if (isTriggerAreaHit(BaseVOAreaTrigger)) AND (MoverRunningToBase) then
+				if (Not Base_VO_Trigger_Check) then
+					BaseVOTimerDelay = getTime + 4; //Wait 4 secs before playing VO
+					Base_VO_Trigger_Check = True;
+				else
+					if ((getTime > BaseVOTimerDelay) AND (Not Base_Vo)) then
+						Base_Vo = True;
+						playWave("data\sound\mc2_12_2.WAV", -1); //Cash VO plays
+					endif;
+				endif;
+			endif;	
+
+
+			//*******************************************************
+			if (Not CvATimerCheck) then
+				CvATimerDelay = getTime + 10; //Wait 30 secs before Convoy Moves
+				CvATimerCheck = True;
+			else
+				if ((getTime > CvATimerDelay) AND (Not CvA_Start_Trigger_Check)) then
+					CvA_Start_Trigger_Check = True;
+					CvA_Start_Trigger = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			if (Not CvATimerCheck2) then
+				CvATimerDelay2 = getTime + 20; //Wait 30 secs before Convoy Moves
+				CvATimerCheck2 = True;
+			else
+				if ((getTime > CvATimerDelay2) AND (Not CvA_Start_Trigger_Check2)) then
+					CvA_Start_Trigger_Check2 = True;
+					CvA_Start_Trigger2 = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			if (Not CvBTimerCheck) then
+//				CvBTimerDelay = getTime + 70; //for testing
+				CvBTimerDelay = getTime + 180; //Wait 3 mins before Convoy Moves
+				CvBTimerCheck = True;
+			else
+				if ((getTime > CvBTimerDelay) AND (Not CvB_Start_Trigger_Check)) then
+					CvB_Start_Trigger_Check = True;
+					CvB_Start_Trigger = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			if (Not CvBTimerCheck2) then
+//				CvBTimerDelay2 = getTime + 80; //for testing
+				CvBTimerDelay2 = getTime + 190; //Wait 3 mins before Convoy Moves
+				CvBTimerCheck2 = True;
+			else
+				if ((getTime > CvBTimerDelay2) AND (Not CvB_Start_Trigger_Check2)) then
+					CvB_Start_Trigger_Check2 = True;
+					CvB_Start_Trigger2 = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not CvCTimerCheck) then
+//				CvCTimerDelay = getTime + 130; //for testing
+				CvCTimerDelay = getTime + 480; //Wait 7.5 mins before Convoy Moves
+				CvCTimerCheck = True;
+			else
+				if ((getTime > CvCTimerDelay) AND (Not CvC_Start_Trigger_Check)) then
+					CvC_Start_Trigger_Check = True;
+					CvC_Start_Trigger = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			if (Not CvCTimerCheck2) then
+//				CvCTimerDelay2 = getTime + 140; //for testing
+				CvCTimerDelay2 = getTime + 490; //Wait 7.5 mins before Convoy Moves
+				CvCTimerCheck2 = True;
+			else
+				if ((getTime > CvCTimerDelay2) AND (Not CvC_Start_Trigger_Check2)) then
+					CvC_Start_Trigger_Check2 = True;
+					CvC_Start_Trigger2 = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			if (Not CvDTimerCheck) then
+//				CvDTimerDelay = getTime + 220; //for testing
+				CvDTimerDelay = getTime + 730; //Wait 11.5 mins before Convoy Moves
+				CvDTimerCheck = True;
+			else
+				if ((getTime > CvDTimerDelay) AND (Not CvD_Start_Trigger_Check)) then
+					CvD_Start_Trigger_Check = True;
+					CvD_Start_Trigger = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			if (Not CvDTimerCheck2) then
+//				CvDTimerDelay2 = getTime + 230; //for testing
+				CvDTimerDelay2 = getTime + 740; //Wait 11.5 mins before Convoy Moves
+				CvDTimerCheck2 = True;
+			else
+				if ((getTime > CvDTimerDelay2) AND (Not CvD_Start_Trigger_Check2)) then
+					CvD_Start_Trigger_Check2 = True;
+					CvD_Start_Trigger2 = True;
+				endif;
+			endif;
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (1) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune0);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune0);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(3) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune5);
+			StartMusicTimer = getTime + 122; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

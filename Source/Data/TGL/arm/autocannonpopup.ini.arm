@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="35C8556B2FFDEE02B60B596C99B55E26" />
+  <Asset Name="..\autocannonpopup.ini" Type="Physical" Author="franksav" FileSize="1268" ModificationTime="2006-03-03T01:28:12.726864-08:00" CRC="6E910665EAD8AED6CBE5CA4E0A08FA43" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="AutoCannonPopup.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="AutocannonPopupX.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannonpopup.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannonpopupopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannonpopupopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannonpopupopen.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PopupDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PopupDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Popup Autocannon Turret" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5A9B59545060580BE5866D20073AF0F6" />
+  <Asset Name="..\laohu.ini" Type="Physical" Author="franksav" FileSize="3948" ModificationTime="2006-03-03T01:28:32.4298629-08:00" CRC="08563B3D489EAFBE9A3A3F09AFD90D85" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="LaoHu.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LaoHuL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LaoHuL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LaoHuX.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHu.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="LaoHuFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="LaoHuFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="LaoHuFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Lao Hu" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

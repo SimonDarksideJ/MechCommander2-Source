@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="58FEA7B39F7F329DE9400CF5E380A6E5" />
+  <Asset Name="..\cornerPipeEnc.ase" Type="Physical" Author="ngauvin" FileSize="37401" ModificationTime="2006-02-01T10:54:42.9512991-08:00" CRC="488EED583C027777A7AF3D8736D793E4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Pipemap.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

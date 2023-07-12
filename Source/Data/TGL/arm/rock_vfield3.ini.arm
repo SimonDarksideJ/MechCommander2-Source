@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="030252248160A74865DA287C58D49E82" />
+  <Asset Name="..\rock_vfield3.ini" Type="Physical" Author="franksav" FileSize="224" ModificationTime="2006-03-03T01:28:42.570423-08:00" CRC="966281BF7C46CF8B4866B64B535666E0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="rock_VField3.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_VField3X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Volcanic Rock Field 3" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0E79B6DC27BB498378293476514D853E" />
+  <Asset Name="..\ambulanceprop.ini" Type="Physical" Author="franksav" FileSize="195" ModificationTime="2006-03-03T01:28:10.8206262-08:00" CRC="67385B8E0623EC8BD07CE311FFEBE3C0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="ambulanceprop.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="ambulancePropDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Ambulance" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

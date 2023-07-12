@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="936AFAD1C4369B51D9E7B510D618231C" />
+  <Asset Name="..\ryoken.ini" Type="Physical" Author="franksav" FileSize="4146" ModificationTime="2006-03-03T01:28:42.9297957-08:00" CRC="1BE0343D0F97A2B633056DB604AE1DFD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="ryoken.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="ryokenL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="ryokenL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="ryokenX.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryoken.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="ryokenFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ryokenFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="ryokenFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Ryoken" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

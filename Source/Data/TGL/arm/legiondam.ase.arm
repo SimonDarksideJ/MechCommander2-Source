@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2FB2EF3176D222F7FE848E423C55EF18" />
+  <Asset Name="..\legiondam.ase" Type="Physical" Author="ngauvin" FileSize="38258" ModificationTime="2006-02-01T10:55:08.092085-08:00" CRC="10860045F2ECD77E15EC40CFA77C5E0C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

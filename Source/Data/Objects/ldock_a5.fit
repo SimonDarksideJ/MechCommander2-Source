@@ -1,0 +1,32 @@
+FITini
+
+// This is the ldock_a5 Building Data File
+
+[ObjectClass]
+l ObjectTypeNum = 1
+
+[ObjectType]
+st Name 			= "ldock_a5"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 19
+l Appearance			= 0x0700015D
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject		= 42			// Object Class Number of explosion for this building
+l DestroyedObject		= 0			// Object Class Number of Destroyed shape for building
+f ExtentRadius			= 35			// Extent Radius in Meters
+
+[BuildingData]
+l BuildingName = 373
+ul DmgLevel			= 90
+ul BlownEffectId		= -1			//Sound Effect played when building dies.
+ul NormalEffectId		= -1			//Sound Effect played when building is normal.
+ul DamageEffectId		= -1			//Sound Effect Played when building is dmg/destroyed.
+//st NormalShadow			= "hvindya_a1_gt"		//Tile to draw under building -- Not Required
+//st DestroyedShadow		= "hvindya_a1_gt_dmg"	//Tile to draw under destroyed buiding -- Not required.
+l BasePixelOffsetX		= -12			//Where on tile to draw this building.
+l BasePixelOffsetY		= 62			//
+l CollisionOffsetX		= -5				//Some buildings were not rendered to spec.  This fixes the problem.
+l CollisionOffsetY		= 30
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00003838
+FITendTemplate		= 0x00003838

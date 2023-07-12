@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E9DDF2F570F55C7E6571625293AB95AA" />
+  <Asset Name="..\tut_03.fit" Type="Physical" Author="franksav" FileSize="20145" ModificationTime="2006-03-06T13:44:38.3728882-08:00" CRC="BDDA91DC9A1BD58DA1F1C0E7DD44C84B" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Tutorial Mission 3: Capturing" MissionAuthor="Team Dirty" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="tut_03.pak" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="tut_03_warrior09" />
+        <Relationship Type="ScenarioScript" RelatedAsset="tut_03.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_HeavyWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_HeavyGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_GateControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_MediumWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MediumAutoCannonTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Nav1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_SensorControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SensorTower.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LookoutTower.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,56 @@
+FITini
+
+// This is a sample GroundVehicleBase Data File.
+[Header]
+st FileType							= "GroundVehicleType"
+
+[General]
+ul ID								= 205			// ID number for this mech type
+uc Type								= -1			// 1 = Inner Sphere, -1 = Clan
+st Name								= "Harasser"	// mech type description
+uc Chassis							= 2				// 0=wheeled, 1=tracked, 2=hover		
+f TonnageClass						= 25.0			// 25 tons
+//uc EndoSteel						= 0				// does not have EndoSteel IS	
+//f InternalStructureTonnage			= 2.5			// 2.5 tons
+
+[InternalStructure]
+uc Front							= 3
+uc Left								= 3
+uc Right							= 3
+uc Rear								= 3
+uc Turret							= 3
+
+[HotSpots]
+st HotSpotFileName					= "NOTH'N"
+//uc[11] DrawFootprint				= -1,0,-1,0,1,0,0,1,0,1,0
+//l FootprintType						= 2
+
+[ObjectType]
+st Name 							= "gveht001"	// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 1				// ID number for this vehicle type
+l Appearance						= 0x01000001
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 200			// Number of damage points before BOOM!
+l ExplosionObject					= 5				// Object Class Number of explosion for vehicle
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for vehicle
+f ExtentRadius						= 12			// Extent Radius in Meters
+
+[Control]
+ul Type								= 1				//player = 1, ai = 2, net = 3
+ul DataType							= 2				//vehicle control data = 2?
+
+[Dynamics]
+ul Type								= 1				//Vehicle dynamics = 2
+
+[VehicleDynamics]
+l maxTurretYawRate					= 24			//Degrees per sec
+l maxTurretYaw						= 60			//(+/-)Degrees
+l maxVehicleYawRate					= 45			//Degrees per sec
+f maxAccel							= 3.0			//Meters per sec per sec
+f maxVelocity						= 40.0			//Meters per sec
+
+[AudioVisual]
+st Anim =							"animString"
+uc[3] MoveAnimSpeed =				0,2,1
+
+FITEnd

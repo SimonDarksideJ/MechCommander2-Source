@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2DF1FB6B874125DDE4CF71AE8F15390A" />
+  <Asset Name="..\BloodAspX.ase" Type="Physical" Author="ngauvin" FileSize="184951" ModificationTime="2006-02-01T10:54:37.6700153-08:00" CRC="717E105E796B5CBAA7F8DACB3E1FA6C2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,25 @@
+FITini
+
+// This is a sample Explosion Data File
+
+[ObjectClass]
+l ObjectTypeNum = 1
+
+[ObjectType]
+st Name 				= "bldg"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type					= 5					// ID number for this mech type
+l Appearance			= 0x01000000
+l Duration				= -1				// Lasts forever = -1
+l MaxDamage			= 0					// Number of damage points before BOOM!
+l ExplosionObject		= 5					// Object Class Number of explosion for Mech
+l DestroyedObject		= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 0					// Extent Radius in Meters
+
+[BuildingData]
+ul DmgLevel			= 20
+st ShapeId				= "TEMPY"
+ul BlownEffectId		= -1					//Sound Effect played when building dies.
+ul NormalEffectId		= -1				//Sound Effect played when building is normal.
+ul DamageEffectId		= -1				//Sound Effect Played when building is dmg/destroyed.
+			
+FITend

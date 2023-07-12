@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C02D6BB582355BA269D98280F6EED2D4" />
+  <Asset Name="..\s_promenade.ase" Type="Physical" Author="ngauvin" FileSize="67429" ModificationTime="2006-02-01T10:55:26.1234504-08:00" CRC="2B47246B9439F8C2501C3332719A1F26" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\S_stairs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_floor.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Prom.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_roofs.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

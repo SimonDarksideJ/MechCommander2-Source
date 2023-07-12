@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C5B039FC7D6EF0CD7B04D0C791211DBD" />
+  <Asset Name="..\pine3dead.ase" Type="Physical" Author="ngauvin" FileSize="9809" ModificationTime="2006-02-01T10:55:15.2640059-08:00" CRC="BA82647928C3776B47EF5396ACC31064" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Pinedead.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

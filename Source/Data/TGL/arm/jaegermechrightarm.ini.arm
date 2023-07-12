@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5FAAA07C7844AD7FBB02D48CDD6B5CB8" />
+  <Asset Name="..\jaegermechrightarm.ini" Type="Physical" Author="franksav" FileSize="157" ModificationTime="2006-03-03T01:28:29.0236347-08:00" CRC="EA32C761E2166EC672D579006A8EE58A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="JaegermechRightArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4CE60E5026C7CEDE8AD9B99C8CBB2D16" />
+  <Asset Name="..\s_gov2dam.ase" Type="Physical" Author="ngauvin" FileSize="143441" ModificationTime="2006-02-01T10:55:23.6703097-08:00" CRC="61A637875ED029A86C02FA425CA4DFE5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows2Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_doorDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_roofs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_door1.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Prom.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_roofs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_door1.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_floorDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_stairs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_roofs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_door1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

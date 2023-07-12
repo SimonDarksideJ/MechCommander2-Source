@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F63A4C67DF3722CD53867E1898C8D7E7" />
+  <Asset Name="..\mediumcopterdam.ase" Type="Physical" Author="ngauvin" FileSize="65171" ModificationTime="2006-02-01T10:55:12.2483616-08:00" CRC="1593F33EB6EA6598E71E3B0FE396D417" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\MediumCopterDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

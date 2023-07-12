@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2156FD6E941978B10430B9363200C618" />
+  <Asset Name="..\fuelpipeenc.ini" Type="Physical" Author="franksav" FileSize="146" ModificationTime="2006-03-03T01:28:24.1955406-08:00" CRC="854A5B3B0C7483C10DCFA2BF62E03AE0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="FuelPipeEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,420 @@
+//*********************************************************************************
+
+module tut_03 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+				eternal boolean		enemy_trigger;	
+			
+			static boolean			objective0completed;
+			static boolean			objective1completed;
+			static boolean			objective2completed;
+			static boolean			objective3completed;
+			static boolean			objective4completed;
+			static boolean			objective5completed;
+			static boolean			objective6completed;
+
+			static boolean			obj0check;
+			static boolean			obj1check;
+			static boolean			obj2check;
+			static boolean			obj3check;
+			static boolean			obj4check;
+			static boolean			obj5check;
+			static boolean			obj6check;
+			static boolean			obj7check;
+
+			static real					obj0_TimerDelay;
+			static real					obj1_TimerDelay;
+			static real					obj2_TimerDelay;
+			static real					obj3_TimerDelay;
+			static real					obj4_TimerDelay;
+			static real					obj5_TimerDelay;
+			static real					obj6_TimerDelay;
+			static real					obj7_TimerDelay;
+
+			static boolean			obj0_VO_check;
+			static boolean			obj1_VO_check;
+			static boolean			obj2_VO_check;
+			static boolean			obj3_VO_check;
+			static boolean			obj4_VO_check;
+			static boolean			obj5_VO_check;
+			static boolean			obj6_VO_check;
+			static boolean			obj7_VO_check;
+
+//---------------------------------------
+// TUTORIAL STUFF
+        eternal integer missionTutorialStage;
+        eternal real    startTime;
+        eternal real    currentTime;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		 enemy_trigger = FALSE;
+
+			objective0completed = FALSE;
+			objective1completed = FALSE;
+			objective2completed = FALSE;
+			objective3completed = FALSE;
+			objective4completed = FALSE;
+			objective5completed = FALSE;
+			objective6completed = FALSE;
+
+			obj0check = FALSE;
+			obj1check = FALSE;
+			obj2check = FALSE;
+			obj3check = FALSE;
+			obj4check = FALSE;
+			obj5check = FALSE;
+			obj6check = FALSE;
+			obj7check = FALSE;
+
+			obj0_VO_check = FALSE;
+			obj1_VO_check = FALSE;
+			obj2_VO_check = FALSE;
+			obj3_VO_check = FALSE;
+			obj4_VO_check = FALSE;
+			obj5_VO_check = FALSE;
+			obj6_VO_check = FALSE;
+			obj7_VO_check = FALSE;
+
+//---------------------------------------
+// TUTORIAL STUFF
+        missionTutorialStage = 0;
+        startTime = 0.0;
+        currentTime = 0.0;
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+			StopMusic;
+			
+
+					//Objective for player to capture gate control
+					if (checkObjectiveStatus(3) == 1) then
+						if (NOT obj0check) then
+							obj0check = TRUE;
+							obj0_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj0_TimerDelay) AND (NOT obj0_VO_check)) then
+								obj0_VO_check = True;
+								missionTutorialStage = 5;
+							endif;
+						endif;
+					endif;																																		
+
+					//Objective for player to move all units to area
+					if (checkObjectiveStatus(0) == 1) then
+						if (NOT obj1check) then
+							obj1check = TRUE;
+							obj1_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj1_TimerDelay) AND (NOT obj1_VO_check)) then
+								obj1_VO_check = True;
+								missionTutorialStage = 6;
+							endif;
+						endif;
+					endif;																																		
+
+					//Objective for player to capture Turret Control
+					if (checkObjectiveStatus(4) == 1) then
+						if (NOT obj2check) then
+							obj2check = TRUE;
+							obj2_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj2_TimerDelay) AND (NOT obj2_VO_check)) then
+								obj2_VO_check = True;
+								missionTutorialStage = 7;
+							endif;
+						endif;
+					endif;																																		
+
+					//Objective for player to move all units to area
+					if (checkObjectiveStatus(1) == 1) then
+						if (NOT obj3check) then
+							obj3check = TRUE;
+							obj3_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj3_TimerDelay) AND (NOT obj3_VO_check)) then
+								obj3_VO_check = True;
+ 							missionTutorialStage = 9;
+							endif;
+						endif;
+					endif;																																		
+
+					//Objective for player to capture sensor control
+					if (checkObjectiveStatus(5) == 1) then
+						if (NOT obj4check) then
+							obj4check = TRUE;
+							obj4_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj4_TimerDelay) AND (NOT obj4_VO_check)) then
+								obj4_VO_check = True;
+//								Reinf_G1_Trigger = TRUE;
+							missionTutorialStage = 10;
+							endif;
+						endif;
+					endif;																																		
+
+					//Objective for player to destroy building
+					if (checkObjectiveStatus(2) == 1) then
+						if (NOT obj5check) then
+							obj5check = TRUE;
+							obj5_TimerDelay = getTime + 4;
+						else
+							if ((getTime > obj5_TimerDelay) AND (NOT obj5_VO_check)) then
+								obj5_VO_check = True;
+//								Reinf_G1_Trigger = TRUE;
+//								mcprint ("Enemies Triggered");
+								missionTutorialStage = 12;
+							endif;
+						endif;
+					endif;																																		
+
+
+
+					if (missionTutorialStage == 106) then
+						if (NOT obj6check) then
+							obj6check = TRUE;
+							obj6_TimerDelay = getTime + 14;
+						else
+							if ((getTime > obj6_TimerDelay) AND (NOT obj6_VO_check)) then
+								obj6_VO_check = True;
+								playWave("tut_03_b",-1);
+//								missionTutorialStage = 106;
+							endif;
+						endif;
+					endif;																																		
+
+
+					if (missionTutorialStage == 108) then
+						if (NOT obj7check) then
+							obj7check = TRUE;
+							obj7_TimerDelay = getTime + 9;
+						else
+							if ((getTime > obj7_TimerDelay) AND (NOT obj7_VO_check)) then
+								obj7_VO_check = True;
+								playWave("tut_03_c",-1);
+//								missionTutorialStage = 108;
+							endif;
+						endif;
+					endif;																																		
+
+
+        //-------------------------------------------------------------------------------
+        //Mission 3 Tutorial
+        //-------------------
+        setInvulnerable(true);
+
+
+					mcprint (missionTutorialStage);
+
+				if (missionTutorialStage == 0) then
+            startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 1) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 4000) then        //4 Seconds - Let camera get where its going
+							playWave("tut_03_0",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 2)) then
+						playWave("tut_03_1",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 3)) then
+						playWave("tut_03_2",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 4)) then
+						playWave("tut_01_2",-1);
+            missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 5)) then
+//        if ((checkObjectiveStatus(0) == 1) AND (missionTutorialStage == 5)) then
+						playWave("tut_03_3",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 6)) then
+//        if ((checkObjectiveStatus(1) == 1) AND (missionTutorialStage == 6)) then
+						playWave("tut_03_4",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 7)) then
+//        if ((checkObjectiveStatus(2) == 1) AND (missionTutorialStage == 7)) then
+						playWave("tut_03_5",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 8)) then
+						playWave("tut_03_6",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 9)) then
+//        if ((checkObjectiveStatus(3) == 1) AND (missionTutorialStage == 9)) then
+						playWave("tut_03_7",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 10)) then
+//        if ((checkObjectiveStatus(4) == 1) AND (missionTutorialStage == 10)) then
+						playWave("tut_03_8",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 11)) then
+						playWave("tut_03_9",-1);
+						missionTutorialStage = missionTutorialStage + 100;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 12)) then
+//        if ((checkObjectiveStatus(5) == 1) AND (missionTutorialStage == 12)) then
+						playWave("tut_03_a",-1);
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+
+        //DONE
+        //-------------------------------------------------------------------------------
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            //Don't allow mission to exit until voiceOver is done
+/*            if (NOT isPlayingVoiceOver AND (missionTutorialStage == 35)) then
+                return (ScenarioResult);
+            else
+                return (-1);
+            endif;*/
+
+             return (ScenarioResult);
+
+endmodule.
+//******************************************************************

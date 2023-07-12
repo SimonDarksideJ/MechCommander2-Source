@@ -1,0 +1,26 @@
+FITini
+
+// This is the AC20Hit Explosion Data File
+// reved 12/12/97 - jbm
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 					= "achit"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 39				// ID number for this object type
+l Appearance				= 0x0200001B		// dec= 27  (ac20hit.ini ac20_hit.pak)
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[ExplosionData]
+ul DmgLevel					= 0
+ul LightObjectId			= 699	
+ul SoundEffectId			= 25
+		
+FITend
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="60CD9F5FB4826991BEFD16EB7E61E95C" />
+  <Asset Name="..\mcl_mc_streaksrmpack.ini" Type="Physical" Author="franksav" FileSize="157" ModificationTime="2006-03-03T01:28:35.7735915-08:00" CRC="BA7FDC34237F0F3F34DA496394FE3DFD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_StreakSRMPack.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

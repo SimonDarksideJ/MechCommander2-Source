@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C3B440460432F5E577EDA2A0749CE587" />
+  <Asset Name="..\s_gov1dam.ase" Type="Physical" Author="ngauvin" FileSize="188048" ModificationTime="2006-02-01T10:55:23.4203081-08:00" CRC="12682A0330B9C3BEBF02F68BB02D60C8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_S_doorDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_doorDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_doorDam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_roofs.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_door1.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Prom.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_floorDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

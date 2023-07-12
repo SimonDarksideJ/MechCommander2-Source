@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EAFF238BA1C932F4AA1A5435745C62F7" />
+  <Asset Name="..\repairtruck.ini" Type="Physical" Author="franksav" FileSize="1048" ModificationTime="2006-03-03T01:28:40.7579346-08:00" CRC="591DBEE7AE1B96217D918A130CAEF2D7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="RepairTruck.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck_deploy.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck_deploy.ase" />
+        <Relationship Type="Animation" RelatedAsset="repairtruck_deploy.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="RepairTruckdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Repair Truck" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

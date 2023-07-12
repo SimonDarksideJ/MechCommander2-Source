@@ -1,0 +1,25 @@
+FITini
+
+// This is the xsupport_building data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xsupport_building_1"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x0200036C
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 727			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 35			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 222
+ul DmgLevel			= 22
+l NumMarines 		= 2				//Little guys will come running out
+l LowTemplate		= 0x18000000
+l HighTemplate		= 0x00003838
+			
+FITend

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="00215A7C894563BACC756D3E3D51FA85" />
+  <Asset Name="..\dropship.ini" Type="Physical" Author="franksav" FileSize="613" ModificationTime="2006-03-03T01:28:21.7424313-08:00" CRC="072FC825057ADECE6BF61FD399DB4DA4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="dropship.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="dropshipL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="dropshipL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="dropshipX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="dropshipdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="dropshipdamX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

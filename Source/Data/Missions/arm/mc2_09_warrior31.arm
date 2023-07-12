@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="14D163604C943B31852D29D8EEFC2EBD" />
+  <Asset Name="..\mc2_09_warrior31" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\pv20500.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Partisan.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Partisan.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWRegular.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_09_EC3_Grp2_Fire.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

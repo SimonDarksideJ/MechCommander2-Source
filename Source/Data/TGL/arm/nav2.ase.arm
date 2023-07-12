@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="539409E7A6C254AA62D1ABAFA60ABA83" />
+  <Asset Name="..\nav2.ase" Type="Physical" Author="ngauvin" FileSize="8086" ModificationTime="2006-02-01T10:55:13.9046222-08:00" CRC="3BCEE0557E6C7B5A34570B86D91E53BD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Nav2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

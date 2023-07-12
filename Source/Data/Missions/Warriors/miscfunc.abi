@@ -1,0 +1,428 @@
+//**********************************************************
+//
+//  Miscellaneous Functions Include file
+//
+//**********************************************************
+
+//------------------------------------------------------------------------------------
+
+function isalive(integer ID) : boolean;
+
+	var
+
+		integer	objstatus;
+		boolean	alive;
+
+	code
+
+		objstatus = ObjectStatus(ID);
+		if ((objstatus == 1) or (objstatus == 2)) then
+			alive = FALSE;
+		else
+			alive = TRUE;
+		endif;
+		return(alive);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function isdead(integer ID) : boolean;
+
+	var
+
+		integer	objstatus;
+		boolean	dead;
+
+	code
+
+		objstatus = ObjectStatus(ID);
+		if ((objstatus == 1) or (objstatus == 2)) then
+			dead = TRUE;
+		else
+			dead = FALSE;
+		endif;
+		return(dead);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function VehicleID(integer Unit, integer Member, integer StartAt) : integer;
+
+	var
+
+		integer	VehID;
+		boolean	alive;
+
+	code
+
+		if ((Unit > 0) AND (Unit < 165)) then // Player
+			VehID = ((Unit - 1) * 4) + 512 + Member;
+		else
+			if ((Unit > 164) AND (Unit < 329)) then // Allied
+				VehID = ((Unit - 165) * 4) + 1168 + Member;
+			else
+				if ((Unit > 328) AND (Unit < 493)) then // Clan
+					VehID = ((Unit - 329) * 5) + 1824 + Member;
+				else
+					dstring = "Bad Unit Num";
+					print(dstring);
+					return(0);
+				endif;
+			endif;
+		endif;
+		
+		if (StartAt <> 0) then
+			VehID = VehID - 1;
+		endif;
+		return(VehID);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function getVehicleID(integer Force, integer Group, integer Member) : integer;
+
+	var
+
+		integer	VehID;
+
+	code
+
+		switch (Force)
+			case PLAYER_FORCE:
+				assert(Group < MAX_PLAYER_LANCES,86,"Maximum Lances exceeded.");
+				assert(Group > -1,86,"Group cannot be negative.");
+				assert((Member > -1) AND (Member < 4),86,"Invalid Member Number.");
+				VehID = PLAYER_VEHICLE0_LANCE0 + (Group * 4) + Member;
+				return(VehID);
+				endcase;
+			case CLAN_FORCE:
+				assert(Group < MAX_CLAN_STARS,86,"Maximum Stars exceeded.");
+				assert(Group > -1,86,"Group cannot be negative.");
+				assert((Member > -1) AND (Member < 5),86,"Invalid Member Number.");
+				VehID = CLAN_VEHICLE0_STAR0 + (Group * 5) + Member;
+				return(VehID);
+				endcase;				
+			case ALLIED_FORCE:
+				assert(Group < MAX_ALLIED_LANCES,86,"Maximum Lances exceeded.");
+				assert(Group > -1,86,"Group cannot be negative.");
+				assert((Member > -1) AND (Member < 4),86,"Invalid Member Number.");
+				VehID = ALLIED_VEHICLE0_LANCE0 + (Group * 4) + Member;
+				return(VehID);
+				endcase;
+		endswitch;
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function getMemberNumber(integer VehID, integer StartAt) : integer;
+
+	var
+
+		char[50] dstring;
+		integer MemberNumber;
+
+	code
+
+		if ((VehID >= 1824) AND (VehID < 2645)) then // Clan Vehicle
+			MemberNumber = VehID - 1823;
+			while MemberNumber > 5 do
+				MemberNumber = MemberNumber - 5;
+			endwhile;
+		else
+			if ((VehID >= 1168) AND (VehID < 1824)) then // Allied Vehicle
+				MemberNumber = VehID - 1167;
+				while MemberNumber > 4 do
+					MemberNumber = MemberNumber - 4;
+				endwhile;
+			else
+				if ((VehID >= 512) AND (VehID < 1168)) then // Player Vehicle
+					MemberNumber = VehID - 511;
+					while MemberNumber > 4 do
+						MemberNumber = MemberNumber - 4;
+					endwhile;
+				else
+					dstring = "Bad VehicleID passed to getMemberNumber = ";
+					concat(dstring,VehID);
+					print(dstring);
+				endif;
+			endif;
+		endif;
+
+		if (StartAt == 0) then
+			MemberNumber = MemberNumber - 1;
+		endif;
+
+		return(MemberNumber);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumDead(integer Unit) : integer;
+
+	var
+		integer	x;
+		integer VehID;
+		integer Size;
+		integer Dead;
+
+	code
+		
+		if ((Unit > 0) AND (Unit < 165)) then // Player Lance
+			VehID = ((Unit - 1) * 4) + 512;
+			Size = 4;
+		else
+			if ((Unit > 164) AND (Unit < 329)) then // Allied Lance
+				VehID = ((Unit - 165) * 4) + 1168;
+				Size = 4;
+			else
+				if ((Unit > 328) AND (Unit < 493)) then // Clan Lance
+					VehID = ((Unit - 329) * 5) + 1824;
+					Size = 5;
+				else
+					if ((Unit > 499) AND (Unit < 503)) then
+						if (Unit == 500) then
+							VehID = 512;
+							Size = 4 * 32; // Assuming player force is no bigger than 32
+						endif;
+						if (Unit == 501) then
+							VehID = 1168;
+							Size = 4 * 164;
+						endif;
+						if (Unit == 502) then
+							VehID = 1824;
+							Size = 5 * 164;
+						endif;
+					else
+						dstring = "Bad Unit Num";
+						print(dstring);
+						return(-1);
+					endif;
+				endif;
+			endif;
+		endif;
+
+		Dead = 0;
+		for x = 0 to (Size - 1) do
+			if (isDead(VehID + x)) then
+				Dead = Dead + 1;
+			endif;
+		endfor;
+
+		return(Dead);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function NumAlive(integer Unit) : integer;
+
+	var
+		integer	x;
+		integer VehID;
+		integer Size;
+		integer Alive;
+
+	code
+		
+		if ((Unit > 0) AND (Unit < 165)) then // Player Lance
+			VehID = ((Unit - 1) * 4) + 512;
+			Size = 4;
+		else
+			if ((Unit > 164) AND (Unit < 329)) then // Allied Lance
+				VehID = ((Unit - 165) * 4) + 1168;
+				Size = 4;
+			else
+				if ((Unit > 328) AND (Unit < 493)) then // Clan Lance
+					VehID = ((Unit - 329) * 5) + 1824;
+					Size = 5;
+				else
+					if ((Unit > 499) AND (Unit < 503)) then
+						if (Unit == 500) then
+							VehID = 512;
+							Size = 4 * 32; // Assuming player force is no bigger than 32
+						endif;
+						if (Unit == 501) then
+							VehID = 1168;
+							Size = 4 * 164;
+						endif;
+						if (Unit == 502) then
+							VehID = 1824;
+							Size = 5 * 164;
+						endif;
+					else
+						dstring = "Bad Unit Num";
+						print(dstring);
+						return(-1);
+					endif;
+				endif;
+			endif;
+		endif;
+
+		Alive = 0;
+		for x = 0 to (Size - 1) do
+			if (isAlive(VehID + x)) then
+				Alive = Alive + 1;
+			endif;
+		endfor;
+
+		return(Alive);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function ClanStar(integer star) : integer;
+
+	code
+		return(CLAN_STAR0 + star);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+		
+function isWithinArea(integer Unit, position Point, real Radius) : boolean;
+
+	var
+		integer	x;
+		integer VehID;
+		integer Size;
+		real Distance;
+
+	code
+		if ((Unit > 0) AND (Unit < 165)) then // Player Lance
+			VehID = ((Unit - 1) * 4) + 512;
+			Size = 4;
+		else
+			if ((Unit > 164) AND (Unit < 329)) then // Allied Lance
+				VehID = ((Unit - 165) * 4) + 1168;
+				Size = 4;
+			else
+				if ((Unit > 328) AND (Unit < 493)) then // Clan Lance
+					VehID = ((Unit - 329) * 5) + 1824;
+					Size = 5;
+				else
+					if ((Unit > 499) AND (Unit < 503)) then
+						if (Unit == 500) then
+							VehID = 512;
+							Size = 4 * 32; // Assuming player force is no bigger than 32
+						endif;
+						if (Unit == 501) then
+							VehID = 1168;
+							Size = 4 * 164;
+						endif;
+						if (Unit == 502) then
+							VehID = 1824;
+							Size = 5 * 164;
+						endif;
+					else
+						dstring = "Bad Unit Num";
+						print(dstring);
+						return(FALSE);
+					endif;
+				endif;
+			endif;
+		endif;
+
+		for x = 0 to (size - 1) do
+			if (isAlive(VehID + x)) then
+				distance = distanceToPosition(VehID + x, Point);
+				if ((distance <> -1) and (distance > Radius)) then
+					return(FALSE);
+				endif;
+			endif;
+		endfor;
+
+		return(TRUE);
+
+endfunction;
+
+
+//------------------------------------------------------------------------------------
+
+function inHotSpot(integer Unit, real X, real Y, real Radius) : boolean;
+
+	var
+		position	Spot;
+		real		distance;
+		integer	i;
+		integer VehID;
+		integer Size;
+
+	code
+
+		Spot[0] = X;
+		Spot[1] = Y;
+		Spot[2] = 0.0;
+
+
+		if ((Unit > 0) AND (Unit < 165)) then // Player Lance
+			VehID = ((Unit - 1) * 4) + 512;
+			Size = 4;
+		else
+			if ((Unit > 164) AND (Unit < 329)) then // Allied Lance
+				VehID = ((Unit - 165) * 4) + 1168;
+				Size = 4;
+			else
+				if ((Unit > 328) AND (Unit < 493)) then // Clan Lance
+					VehID = ((Unit - 329) * 5) + 1824;
+					Size = 5;
+				else
+					if ((Unit > 499) AND (Unit < 503)) then
+						if (Unit == 500) then
+							VehID = 512;
+							Size = 4 * 32; // Assuming player force is no bigger than 32
+						endif;
+						if (Unit == 501) then
+							VehID = 1168;
+							Size = 4 * 164;
+						endif;
+						if (Unit == 502) then
+							VehID = 1824;
+							Size = 5 * 164;
+						endif;
+					else
+						dstring = "Bad Unit Num";
+						print(dstring);
+						return(FALSE);
+					endif;
+				endif;
+			endif;
+		endif;
+
+		for i = 0 to (size - 1) do
+			if (isAlive(VehID + i)) then
+				distance = distanceToPosition(VehID + i, Spot);
+				if ((distance <> -1) and (distance <= Radius)) then
+					return(TRUE);
+				endif;
+			endif;
+		endfor;
+
+		return(FALSE);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function PlayerLance(integer lance) : integer;
+
+	code
+		return(PLAYER_LANCE0 + lance);
+
+endfunction;
+
+//------------------------------------------------------------------------------------
+
+function AlliedLance(integer lance) : integer;
+
+	code
+		return(ALLIED_LANCE0 + lance);
+
+endfunction;
+
+//------------------------------------------------------------------------------------

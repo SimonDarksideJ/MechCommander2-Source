@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7A66233932FD758E325AA06C2AA308CE" />
+  <Asset Name="..\zeusrightarm.ini" Type="Physical" Author="franksav" FileSize="153" ModificationTime="2006-03-03T01:28:58.6953198-08:00" CRC="F165323C87C54C795F5A44730717C305" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="ZeusRightArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

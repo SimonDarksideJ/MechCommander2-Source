@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A7B97E32B6A3873A034CF824B4CF081B" />
+  <Asset Name="..\L_TurretControlX.ase" Type="Physical" Author="ngauvin" FileSize="49139" ModificationTime="2006-02-01T10:55:07.2327045-08:00" CRC="1BC268DF0F2D2442C7D1F001181E4547" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

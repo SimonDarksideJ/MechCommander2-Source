@@ -1,0 +1,31 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				Debris:		Thor Right Arm
+//
+//				BASE ID:	57
+//
+//---------------------------------------------------------------------------
+
+[ObjectClass]
+l ObjectTypeNum = 9
+
+[ArmFall]
+f ArmFallYaw 		= 45.0
+f ArmFallYawRange 	= 45.0
+f ArmFallVelMag		= 10.0
+f ArmFallVelRange	= 5.0
+f ArmFallDecelRate	= -3.0
+	
+[ObjectType]
+st Name 							= "THLARM"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 57			// ID number for this mech type
+l Appearance						= 0x06000033
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 0				// Number of damage points before BOOM!
+l ExplosionObject					= -1			// Object Class Number of explosion for Mech
+l DestroyedObject					= -1			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 0				// Extent Radius in Meters (0 Can't hit hit ever)
+
+FITEnd

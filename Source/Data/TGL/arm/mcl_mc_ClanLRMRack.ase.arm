@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BE35801C18D241DE264A8C376A3E3DC0" />
+  <Asset Name="..\mcl_mc_ClanLRMRack.ase" Type="Physical" Author="ngauvin" FileSize="242377" ModificationTime="2006-02-01T10:55:10.7171018-08:00" CRC="45D06C8C18B741E29CBE817283FEF21A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ClanLRMRack.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

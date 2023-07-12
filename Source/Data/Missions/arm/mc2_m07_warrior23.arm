@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E9D84FF61028F9B807E8104640D7E2EF" />
+  <Asset Name="..\mc2_m07_warrior23" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\LaoHu.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\LaoHu.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\pmp_ghost.fit" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

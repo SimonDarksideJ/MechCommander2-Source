@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C5E471F32F18A160C7C0F54E20EAA987" />
+  <Asset Name="..\rock_dField2X.ase" Type="Physical" Author="ngauvin" FileSize="22948" ModificationTime="2006-02-01T10:55:18.092149-08:00" CRC="5F8FFFC63B4E1792542EA3A4D1FBD45A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,587 @@
+FITini 
+
+
+
+//for loading bar 
+[LoadingBar]
+l XLocation = 651
+l YLocation = 409
+l Width = 297
+l Height = 32
+l UNormal = 0
+l VNormal = 0
+l UWidth = 297
+l VHeight = 32
+st FileName = "MCL_LoadingScreen_014.tga"
+st backgroundFileName = "MCL_LoadingScreen_013.tga"
+
+
+//for mp wait image 
+[WaitImage]
+l XLocation = 644
+l YLocation = 370
+l Width = 312
+l Height = 80
+l UNormal = 0
+l VNormal = 0
+l UWidth = 312
+l VHeight = 80
+st FileName = "mcl_loadingscreen_15.tga"
+
+
+
+
+
+
+
+
+
+
+FITini 
+
+// LOADING/WAIT SCREEN
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[AnimObjects]
+l Count = 20// 18 statics, 1 text, 1 meter, 1 rect
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[AnimObject0] // (static) top
+l XLocation = 0
+l YLocation = 0
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_1"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject1]  // (static) top
+l XLocation = 512
+l YLocation = 0
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_2"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject2]  // (static) top
+l XLocation = 1024
+l YLocation = 0
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_3"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject3]  // (static) top
+l XLocation = 1536
+l YLocation = 0
+l Width = 64
+l Height = 72
+l UNormal = 122
+l VNormal = 104
+l UWidth = 32
+l VHeight = 36
+st FileName = "mcl_loadingscreen_4"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject4] // (static) top
+l XLocation = 268
+l YLocation = 512
+l Width = 244
+l Height = 208
+l UNormal = 0
+l VNormal = 104
+l UWidth = 122
+l VHeight = 104
+st FileName = "mcl_loadingscreen_4"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject5] // (static) top
+l XLocation = 512
+l YLocation = 512
+l Width = 512
+l Height = 208
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 104
+st FileName = "mcl_loadingscreen_4"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject6] // (static) top
+l XLocation = 1024
+l YLocation = 512
+l Width = 308
+l Height = 208
+l UNormal = 0
+l VNormal = 0
+l UWidth = 154
+l VHeight = 104
+st FileName = "mcl_loadingscreen_5"
+st Animation = "AnimationTopIn"
+st AnimationOut = "AnimationTopOut"
+
+[AnimObject7] // (static) bottom
+l XLocation = 0
+l YLocation = 688
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_6"
+st Animation = "AnimationBottomIn"
+st AnimationOut = "AnimationBottomOut"
+
+[AnimObject8] // (static) bottom
+l XLocation = 512
+l YLocation = 688
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_7"
+st Animation = "AnimationBottomIn"
+st AnimationOut = "AnimationBottomOut"
+
+[AnimObject9] // (static) bottom
+l XLocation = 1024
+l YLocation = 688
+l Width = 512
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_loadingscreen_8"
+st Animation = "AnimationBottomIn"
+st AnimationOut = "AnimationBottomOut"
+
+
+[AnimObject10] // (static) bottom
+l XLocation = 1536
+l YLocation = 1116
+l Width = 64
+l Height = 84
+l UNormal = 154
+l VNormal = 104
+l UWidth = 32
+l VHeight = 42
+st FileName = "mcl_loadingscreen_4"
+st Animation = "AnimationBottomIn"
+st AnimationOut = "AnimationBottomOut"
+
+[AnimObject11] // (static) left
+l XLocation = 0
+l YLocation = 0
+l Width = 386
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 193
+l VHeight = 256
+st FileName = "mcl_loadingscreen_10"
+st Animation = "AnimationLeftIn"
+st AnimationOut = "AnimationLeftOut"
+
+
+
+[AnimObject12] // (static) left
+l XLocation = 0
+l YLocation = 512
+l Width = 386
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 193
+l VHeight = 256
+st FileName = "mcl_loadingscreen_11"
+st Animation = "AnimationLeftIn"
+st AnimationOut = "AnimationLeftOut"
+
+
+[AnimObject13] // (static) left
+l XLocation = 0
+l YLocation = 1024
+l Width = 386
+l Height = 176
+l UNormal = 0
+l VNormal = 104
+l UWidth = 193
+l VHeight = 88
+st FileName = "mcl_loadingscreen_5"
+st Animation = "AnimationLeftIn"
+st AnimationOut = "AnimationLeftOut"
+
+[AnimObject14] // (static) right
+l XLocation = 1214
+l YLocation = 0
+l Width = 386
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 193
+l VHeight = 256
+st FileName = "mcl_loadingscreen_12"
+st Animation = "AnimationRightIn"
+st AnimationOut = "AnimationRightOut"
+
+
+[AnimObject15] // (static) right
+l XLocation = 1214
+l YLocation = 512
+l Width = 386
+l Height = 512
+l UNormal = 0
+l VNormal = 0
+l UWidth = 193
+l VHeight = 256
+st FileName = "mcl_loadingscreen_9"
+st Animation = "AnimationRightIn"
+st AnimationOut = "AnimationRightOut"
+
+
+[AnimObject16] // (static) right
+l XLocation = 1214
+l YLocation = 1024
+l Width = 386
+l Height = 80
+l UNormal = 0
+l VNormal = 208
+l UWidth = 193
+l VHeight = 40
+st FileName = "mcl_loadingscreen_4"
+st Animation = "AnimationRightIn"
+st AnimationOut = "AnimationRightOut"
+
+[AnimObject17] // (static) right
+l XLocation = 1214
+l YLocation = 1104
+l Width = 386
+l Height = 98
+l UNormal = 0
+l VNormal = 192
+l UWidth = 193
+l VHeight = 48d
+st FileName = "mcl_loadingscreen_5"
+st Animation = "AnimationRightIn"
+st AnimationOut = "AnimationRightOut"
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[AnimObject18] // (text)- "LOADING... XXX%"
+l XLocation = 498
+l YLocation = 342
+l Width = 592
+l Height = 48
+l Color = 0xff005392
+b outline = FALSE
+l Font = 27781 // use agency fb 17
+l TextID = 27780
+l Alignment = 0
+st Animation = "AnimationTop2In"
+st AnimationOut = "AnimationTop2Out"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[AnimObject19] // (attribute meter)
+l XLocation = 502
+l YLocation = 406
+l Width = 594
+l Height = 64
+l unitHeight = 28
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 49
+l ColorMin = 0xffC66600
+l ColorMax = 0xffffffff
+l Color  = 0xff43311C
+st Animation = "AnimationTop2In"
+st AnimationOut = "AnimationTop2Out"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[AnimationTopIn]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 2
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = -720
+
+f Time1 = 0.4
+l Pos1X = 0
+l Pos1Y = 0
+   
+
+
+
+[AnimationTopOut]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 3
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 0
+
+f Time1 = 1.6
+l Pos1X = 0
+l Pos1Y = 0
+   
+f Time2 = 2
+l Pos2X = 0
+l Pos2Y = -720
+
+[AnimationTop2In]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 2
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = -720
+l Color0 = 0xff000000
+
+f Time1 = 0.4
+l Pos1X = 0
+l Pos1Y = 0
+l Color1 = 0xff000000
+   
+
+
+
+[AnimationTop2Out]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 4
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 0
+l Color0 = 0xff000000
+
+f Time1 = 1.6
+l Pos1X = 0
+l Pos1Y = 0
+l Color1 = 0xff000000
+   
+f Time2 = 2
+l Pos2X = 0
+l Pos2Y = -720
+l Color2 = 0xff000000
+
+
+f Time3 = 2.25
+l Pos3X = 0
+l Pos3Y = -720
+l Color3 = 0xff000000
+
+
+
+
+
+
+
+
+[AnimationBottomIn]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 2
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 688
+
+f Time1 = 0.4
+l Pos1X = 0
+l Pos1Y = 0
+   
+
+
+[AnimationBottomOut]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 4
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 0
+
+f Time1 = 1.6
+l Pos1X = 0
+l Pos1Y = 0
+   
+f Time2 = 2
+l Pos2X = 0
+l Pos2Y = 688
+
+f Time3 = 2.25
+l Pos3X = 0
+l Pos3Y = 688
+
+
+
+
+
+
+
+
+[AnimationLeftIn]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 4
+
+f Timeo = 0
+l Pos0X = -386
+l Pos0Y = 0
+
+f Time1 = .4
+l Pos1X = -386
+l Pos1Y = 0
+
+f Time2 = .7
+l Pos2X = 0
+l Pos2Y = 0
+
+f Time3 = 1
+l Pos3X = 0
+l Pos3Y = 0
+   
+
+
+
+[AnimationLeftOut]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 3
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 0
+
+f Time1 = 1
+l Pos1X = 0
+l Pos1Y = 0
+
+f Time2 = 1.6
+l Pos2X = -386
+l Pos2Y = 0
+   
+
+
+
+
+
+
+
+
+
+[AnimationRightIn]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 4
+
+f Time0 = 0
+l Pos0X = 386
+l Pos0Y = 0
+
+f Time1 = .4
+l Pos1X = 386
+l Pos1Y = 0
+
+f Time2 = .7
+l Pos2X = 0
+l Pos2Y = 0
+
+f Time3 = 1.0
+l Pos3X = 0
+l Pos3Y = 0
+   
+
+
+
+
+
+
+
+[AnimationRightOut]  
+
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 3
+
+f Time0 = 0
+l Pos0X = 0
+l Pos0Y = 0
+
+f Time1 = 1
+l Pos1X = 0
+l Pos1Y = 0
+
+f Time2 = 1.6
+l Pos2X = 386
+l Pos2Y = 0
+
+
+
+
+
+ 
+ 
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+FITend 

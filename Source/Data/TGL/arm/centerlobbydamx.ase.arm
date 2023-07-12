@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5A149BCA21A876AC12B7C2ED4DC64A9B" />
+  <Asset Name="..\centerlobbydamx.ase" Type="Physical" Author="ngauvin" FileSize="18381" ModificationTime="2006-02-01T10:54:40.3887827-08:00" CRC="D2E681330F6226F1A1BBF8BBFA3D0EB8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CenterLobbyDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

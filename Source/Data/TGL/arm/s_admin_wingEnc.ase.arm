@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="74ADF42C576FEEBFB69A2D0D1A39A955" />
+  <Asset Name="..\s_admin_wingEnc.ase" Type="Physical" Author="ngauvin" FileSize="63872" ModificationTime="2006-02-01T10:55:21.9202985-08:00" CRC="B7C03ECF04B649EA0CE3915B8C3A4EEF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_G_Window.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Stone2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Door.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\G_Roof.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_G_Window2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_stone_windows.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_stone_.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_window_strips.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_patio.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_door.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_cell1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

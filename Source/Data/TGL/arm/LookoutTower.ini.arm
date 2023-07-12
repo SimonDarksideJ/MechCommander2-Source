@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="26A15900D3086B942F0D70FF59426689" />
+  <Asset Name="..\LookoutTower.ini" Type="Physical" Author="franksav" FileSize="576" ModificationTime="2006-03-03T01:28:33.9298533-08:00" CRC="921614BCDE9012E05806EC3B537C81D7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="lookouttower.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LookoutTowerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LookoutTowerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LookoutTowerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="LookoutTowerdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="LookoutTowerDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Lookout Tower" ObjectType="Building" BuildingType="Lookout" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

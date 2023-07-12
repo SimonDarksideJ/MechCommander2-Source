@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AA6B7B3341315D81C4C1F450A6A081AE" />
+  <Asset Name="..\WalkwayX.ase" Type="Physical" Author="ngauvin" FileSize="13200" ModificationTime="2006-02-01T10:55:37.5297734-08:00" CRC="0BE3BD1924F618AFE3300A866CE35411" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

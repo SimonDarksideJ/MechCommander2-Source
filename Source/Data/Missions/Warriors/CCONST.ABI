@@ -1,0 +1,157 @@
+//************************
+//Clan Const Include File 3/19
+//------------------------
+
+		MI_MODE = 0;
+		MI_OBJECT = 1;
+		MI_COORD_X = 2;
+		MI_COORD_Y = 3;
+		MI_COORD_Z = 4;
+		MI_ENGAGE_RADIUS = 5;
+		MI_DISENGAGE_RADIUS = 6;
+		MI_PRIORITY = 7;
+		MI_MIN_ACTION = 8;
+		MC_MODE = 10;
+
+		COMBAT_MODE_IDLE = 0;
+		COMBAT_MODE_WAIT = 1;
+		COMBAT_MODE_DESTROY = 2;
+		COMBAT_MODE_GUARD = 3;
+		COMBAT_MODE_IDENTIFY = 4;
+
+		CUR_OBJECT_ID = -1;
+
+		BUILDING = 8;
+
+		CONTACT_TYPE_ENEMY = 0;
+		CONTACT_TYPE_FRIENDLY = 1;
+
+		CONTACT_STATUS_NONE = 0;
+		CONTACT_STATUS_LOS = 1;
+		CONTACT_STATUS_SENSORS = 2;
+		CONTACT_STATUS_TEAMINFO = 3;
+
+		CT_NONE = 0;
+		CT_ENEMY = 1;
+		CT_LOS = 2;
+		CT_GUARD_BREACH = 4;
+		CT_NOT_CHALLENGED = 8;
+
+		CS_NONE = 0;
+		CS_CV = 1;
+
+		ATTACK_TO_DESTROY = 1;
+		ATTACK_TO_DISABLE = 2;
+		ATTACK_TO_SALVAGE = 3;
+
+		ATTACK_RANGED = 0;
+		ATTACK_DFA = 1;
+		ATTACK_RAM = 2;
+
+		FIRERANGE_SHORT = 0;
+		FIRERANGE_MEDIUM = 1;
+		FIRERANGE_LONG = 2;
+		FIRERANGE_EXTREME = 3;
+		FIRERANGE_OPTIMAL = -1;
+
+		FIREARC_FRONT = 0;
+		FIREARC_SIDE = 1;
+		FIREARC_REAR = 2;
+
+		OBJECT_STATUS_NORMAL = 0;
+		OBJECT_STATUS_DISABLED = 1;
+		OBJECT_STATUS_DESTROYED = 2;
+		OBJECT_STATUS_STARTING_UP = 3;
+		OBJECT_STATUS_SHUTTING_DOWN = 4;
+		OBJECT_STATUS_SHUTDOWN = 5;
+
+		GUARD_OBJECTIVE_NONE = -1;
+		GUARD_OBJECTIVE_POINT = 0;
+
+		SENSOR_TAG = 0;
+		SENSOR_TRACE = 1;
+
+		BUILDING_CLASS = 15;
+		MECH_CLASS = 2;
+		VEHICLE_CLASS = 3;
+		ELEMENTAL_CLASS = 4;
+
+		WALK = FALSE;
+		RUN = TRUE;
+
+		PROCESS_OVERWRITE = -1;
+		PROCESS_APPEND = 0;
+
+		NUM_HIT_LISTS = 8;
+		HIT_LIST_SIZE = 20;
+		NUM_OBJ_LISTS = 3;
+		PREFERENCE_ORDER = 2;
+		ANY_ORDER = 0;
+		IN_ORDER = 1;
+
+		OBJ_LIST1 = -1;
+		OBJ_LIST2 = -2;
+		OBJ_LIST3 = -3;
+
+		CHALLENGE_ON = 8;
+		CHALLENGE_OFF = 0;
+
+          //------------------
+          // Scenario Timers
+          //------------------
+          SCENARIO_TIMER_1             = 7;
+          SCENARIO_TIMER_2             = 8;
+          SCENARIO_TIMER_3             = 9;
+          SCENARIO_TIMER_4             = 10;
+          SCENARIO_TIMER_5             = 11;
+          SCENARIO_TIMER_6             = 12;
+          SCENARIO_TIMER_7             = 13;
+          EXIT_TIMER                   = 14;
+
+
+          //------------------
+          // GROUP PARTS
+          //------------------
+          PLAYER_LANCE0                = 1;
+          PLAYER_LANCE1                = 2;
+          PLAYER_LANCE2                = 3;
+          PLAYER_LANCE3                = 4;
+          PLAYER_LANCE4                = 5;
+          PLAYER_LANCE5                = 6;
+          PLAYER_LANCE6                = 7;
+          PLAYER_LANCE7                = 8;
+          MAX_PLAYER_LANCES		       = 164;
+
+          ALLIED_LANCE0                = 165;
+          ALLIED_LANCE1                = 166;
+          ALLIED_LANCE2                = 167;
+          ALLIED_LANCE3                = 168;
+          ALLIED_LANCE4                = 169;
+          ALLIED_LANCE5                = 170;
+          ALLIED_LANCE6                = 171;
+          ALLIED_LANCE7                = 172;
+          MAX_ALLIED_LANCES		       = 164;
+
+          CLAN_STAR0                   = 329;
+          CLAN_STAR1                   = 330;
+          CLAN_STAR2                   = 331;
+          CLAN_STAR3                   = 332;
+          CLAN_STAR4                   = 333;
+          CLAN_STAR5                   = 334;
+          CLAN_STAR6                   = 335;
+          CLAN_STAR7                   = 336;
+          MAX_CLAN_STARS		       = 164;
+
+          PLAYER_FORCE                 = 500;
+          ALLIED_FORCE                 = 501;
+          CLAN_FORCE                   = 502;
+
+          //------------------
+          // GENERIC PARTS
+          //------------------
+          PLAYER_VEHICLE0_LANCE0       = 512;
+
+          ALLIED_VEHICLE0_LANCE0       = 1168;
+
+          CLAN_VEHICLE0_STAR0          = 1824;
+

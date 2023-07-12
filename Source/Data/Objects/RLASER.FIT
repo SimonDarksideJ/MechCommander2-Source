@@ -1,0 +1,37 @@
+FITini
+
+// This is the red Laser Data File
+
+[ObjectClass]
+l ObjectTypeNum = 6
+
+[ObjectType]
+st Name 					= "rlaser"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 						= 4					// ID number for this mech type
+l Appearance				= 0x01000000
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[LaserData]
+uc PixelWidth 				= 1					//Width of laser beam
+uc NumStages				= 2					//Number of distinct laser stages
+ul DmgLevel					= 200				//Amount of Damage laser does
+ul SoundEffectId			= 3					//No SFX yet
+ul LaserHitEffect			= 40
+ul LaserMissEffect			= 398				//Effect to play when laser misses
+
+[Laser0]
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 237				//Cool Color of stage
+uc StageHot					= 239				//Hot Color of Stage
+
+[Laser1]
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 237				//Cool Color of stage
+uc StageHot					= 239				//Hot Color of Stage
+
+FITend

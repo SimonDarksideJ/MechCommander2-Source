@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B767DDB64851B8451D998663A919B114" />
+  <Asset Name="..\Quonset.ini" Type="Physical" Author="franksav" FileSize="551" ModificationTime="2006-03-03T01:28:39.5548173-08:00" CRC="A42197CC2349FE15705DF18332B7B393" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Quonset.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="QuonsetL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="QuonsetL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="QuonsetX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="Quonsetdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="QuonsetDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Rusty Quonset" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

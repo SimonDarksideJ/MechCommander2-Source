@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="04E32F05635B47A3B7DB82EB02AF504D" />
+  <Asset Name="..\LargeFuelTankX.ase" Type="Physical" Author="ngauvin" FileSize="35581" ModificationTime="2006-02-01T10:55:08.092085-08:00" CRC="4D269505486419BBC090F85F8C1C1C52" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

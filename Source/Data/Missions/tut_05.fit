@@ -1,0 +1,899 @@
+FITini 
+FITini 
+
+[Cameras]
+f ProjectionAngle = 50.500000
+f PositionX = 826.229126
+f PositionY = -2525.117676
+f PositionZ = 0.000000
+b Ready = TRUE
+uc LightRed = 255
+uc LightGreen = 255
+uc LightBlue = 255
+uc AmbientBlue = 85
+uc AmbientGreen = 85
+uc AmbientRed = 85
+uc TerrainShadowColorEnabled = 1
+uc TerrainShadowBlue = 31
+uc TerrainShadowGreen = 31
+uc TerrainShadowRed = 31
+uc DayLightRed = 255
+uc DayLightGreen = 255
+uc DayLightBlue = 255
+uc DayAmbientBlue = 85
+uc DayAmbientGreen = 85
+uc DayAmbientRed = 85
+uc SunsetLightRed = 205
+uc SunsetLightGreen = 84
+uc SunsetLightBlue = 31
+uc NightLightRed = 64
+uc NightLightGreen = 64
+uc NightLightBlue = 64
+uc NightAmbientBlue = 32
+uc NightAmbientGreen = 32
+uc NightAmbientRed = 32
+uc SeenBlue = 255
+uc SeenGreen = 0
+uc SeenRed = 0
+uc BaseBlue = 47
+uc BaseGreen = 47
+uc BaseRed = 47
+f LightDirPitch = 45.000000
+f DayLightPitch = 45.000000
+f DayToNightTime = -1.000000
+f LightDirYaw = -75.000000
+f NewScale = 0.585721
+f StartRotation = -180.000000
+f[3] LODScales = 1.00, 0.50, 0.30,
+f ElevationAdjustFactor = 150.000000
+f ZoomMax = 1.000000
+f ZoomMin = 0.100000
+f FOVMax = 0.000000
+f FOVMin = 0.000000
+f FogStart = -1.000000
+f FogFull = -2.000000
+ul FogColor = 0
+f FogTransparency = 0.000000
+l UserMin = 0
+l UserMax = 500
+l BaseTerrain = 1
+
+[Water]
+f Elevation = 100.000000
+f Frequency = 4.000000
+f Ampliture = 10.000000
+ul AlphaShallow = 1056964608
+ul AlphaMiddle = -1358954496
+ul AlphaDeep = -16777216
+f AlphaDepth = 15.000000
+f ShallowDepth = 15.000000
+
+[Terrain]
+l UserMin = 0
+l UserMax = 500
+f TerrainMinX = -3840.000000
+f TerrainMinY = 3840.000000
+uc Noise = 1
+uc Threshold = 3
+f DetailTextureTilingFactor = 60.000000
+f WaterTextureTilingFactor = 20.000000
+f WaterDetailTilingFactor = 30.000000
+
+[Warriors]
+ul NumWarriors = 8
+
+[Parts]
+ul NumParts = 8
+
+[Warrior1]
+st Profile = "pmwworm"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part1]
+ul ObjectNumber = 45
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 1
+f PositionX = 832.000122
+f PositionY = -2496.000000
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -16711936
+ul HighlightColor1 = -16711936
+ul HighlightColor2 = -16711936
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Werewolf"
+ul VariantNumber = 0
+ul SquadNum = 1
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 10
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior2]
+st Profile = "PMWGreen"
+st Brain = "tut_05_mechs_2"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior2Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior2Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior2Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part2]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 2
+f PositionX = 1600.000244
+f PositionY = 3648.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 2
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 11
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior3]
+st Profile = "PMWGreen"
+st Brain = "tut_05_mechs_3"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior3Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior3Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior3Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part3]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 3
+f PositionX = 1728.000244
+f PositionY = 3648.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 3
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 12
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior4]
+st Profile = "PMWGreen"
+st Brain = "tut_05_mechs_1"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior4Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior4Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior4Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part4]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 4
+f PositionX = 1472.000244
+f PositionY = 3648.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 4
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 13
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior5]
+st Profile = "PMWGreen"
+st Brain = "tut_05_CNV"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior5Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior5Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior5Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part5]
+ul ObjectNumber = 16
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 5
+f PositionX = 64.000114
+f PositionY = -1600.000244
+f Rotation = 45.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Hunchback"
+ul VariantNumber = 0
+ul SquadNum = 5
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 14
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior6]
+st Profile = "PMWGreen"
+st Brain = "tut_05_CNV"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior6Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior6Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior6Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part6]
+ul ObjectNumber = 148
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 6
+f PositionX = -1728.000000
+f PositionY = 2368.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "FuelTruck"
+ul VariantNumber = 0
+ul SquadNum = 6
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 15
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior7]
+st Profile = "PMWGreen"
+st Brain = "tut_05_CNV"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior7Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior7Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior7Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part7]
+ul ObjectNumber = 148
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 7
+f PositionX = -1472.000000
+f PositionY = 2368.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "FuelTruck"
+ul VariantNumber = 0
+ul SquadNum = 7
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 16
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior8]
+st Profile = "PMWGreen"
+st Brain = "tut_05_CNV"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior8Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior8Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior8Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part8]
+ul ObjectNumber = 148
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 8
+f PositionX = -1600.000000
+f PositionY = 2368.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -65536
+ul HighlightColor1 = -65536
+ul HighlightColor2 = -65536
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "FuelTruck"
+ul VariantNumber = 0
+ul SquadNum = 8
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 17
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Teams]
+
+[Commander0Group:0]
+l[12] Mates = 1,0,0,0,0,0,0,0,0,0,0,0,
+
+[Commander1Group:0]
+l[12] Mates = 2,3,4,5,6,7,8,0,0,0,0,0,
+
+[NavMarker0]
+f xPos = 832.000000
+f yPos = -1600.000000
+f radius = 256.000000
+
+[NavMarker1]
+f xPos = 832.000000
+f yPos = -106.666664
+f radius = 256.000000
+
+[NavMarkers]
+ul NumNavMarkers = 2
+
+[Artillery]
+l NumLargeStrikes = 0
+l NumSmallStrikes = 0
+l NumSensorStrikes = 0
+l NumCameraStrikes = 0
+
+[MissionSettings]
+st MissionName = "Tutorial Mission 5: Advanced Support"
+b MissionNameUseResourceString = TRUE
+ul MissionNameResourceStringID = 57049
+st Author = "Team Dirty"
+st Blurb = ""
+b BlurbUseResourceString = TRUE
+ul BlurbResourceStringID = 55029
+st Blurb2 = ""
+b Blurb2UseResourceString = TRUE
+ul Blurb2ResourceStringID = 56029
+f TimeLimit = -1.000000
+f DropWeightLimit = 300.000000
+l ResourcePoints = 100000
+ul IsSinglePlayer = 1
+ul MaximumNumberOfTeams = 2
+ul MaximumNumberOfPlayers = 2
+uc scenarioTuneNum = 0
+st AVIFilename = ""
+l AdditionalCBills = 0
+ul NumRandomRPbuildings = 0
+st DownloadURL = ""
+ul MissionType = 0
+b AirStrikesEnabledDefault = TRUE
+b MineLayersEnabledDefault = TRUE
+b ScoutCoptersEnabledDefault = TRUE
+b SensorProbesEnabledDefault = TRUE
+b UnlimitedAmmoEnabledDefault = TRUE
+b AllTechEnabledDefault = TRUE
+b RepairVehicleEnabledDefault = TRUE
+b SalvageCraftEnabledDefault = TRUE
+b ResourceBuildingsEnabledDefault = TRUE
+b NoVariantsEnabledDefault = TRUE
+b ArtilleryPieceEnabledDefault = TRUE
+b RPsForMechsEnabledDefault = TRUE
+
+[Weather]
+ul MaxRainDrops = 0
+f StartingRainLevel = 0.000000
+l ChanceOfRain = 0
+f BaseLighteningChance = 0.000000
+
+[TheSky]
+l SkyNumber = 21
+
+[Objectives Version]
+ul Version = 3
+
+[Team0Objectives]
+ul NumObjectives = 6
+
+[Team0Objective0]
+st Title = "1. Move Unit To Area "
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50158
+st Description = "1. Move Unit To Area "
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50158
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = 832.000000
+f MarkerY = -1600.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective0Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 832.000000
+f TargetCenterY = -1600.000000
+f TargetRadius = 256.000000
+
+[Team0Objective1]
+st Title = "2. Move Minelayer to Nav Marker"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50159
+st Description = "2. Move Minelayer to Nav Marker"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50159
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = 832.000000
+f MarkerY = -106.667000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective1Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 832.000000
+f TargetCenterY = -106.667000
+f TargetRadius = 256.000000
+
+[Team0Objective1Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "1"
+b Value = TRUE
+
+[Team0Objective2]
+st Title = "3. Destroy Approaching Enemy Units"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50160
+st Description = "3. Destroy Approaching Enemy Units"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50160
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 0.000000
+f MarkerY = 0.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "1"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 3
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective2Condition0]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1472.000244
+f PositionY = 3648.000000
+ul CellX = 4
+ul CellY = 124
+ul Commander = 1
+ul Group = 2
+ul Mate = 0
+
+[Team0Objective2Condition1]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1600.000244
+f PositionY = 3648.000000
+ul CellX = 4
+ul CellY = 127
+ul Commander = 1
+ul Group = 0
+ul Mate = 0
+
+[Team0Objective2Condition2]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1728.000244
+f PositionY = 3648.000000
+ul CellX = 4
+ul CellY = 130
+ul Commander = 1
+ul Group = 1
+ul Mate = 0
+
+[Team0Objective2Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "2"
+b Value = TRUE
+
+[Team0Objective3]
+st Title = "4. Move Scout Copter to Island"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50161
+st Description = "4. Move Scout Copter to Island"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50161
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = -1472.000000
+f MarkerY = 2496.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "2"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective3Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = -1472.000000
+f TargetCenterY = 2496.000000
+f TargetRadius = 500.000000
+
+[Team0Objective3Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "3"
+b Value = TRUE
+
+[Team0Objective4]
+st Title = "5. Destroy Convoy"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50162
+st Description = "5. Destroy Convoy"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50162
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 0.000000
+f MarkerY = 0.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "3"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 3
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective4Condition0]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = -1728.000000
+f PositionY = 2368.000000
+ul CellX = 34
+ul CellY = 49
+ul Commander = 1
+ul Group = 4
+ul Mate = 0
+
+[Team0Objective4Condition1]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = -1600.000000
+f PositionY = 2368.000000
+ul CellX = 34
+ul CellY = 52
+ul Commander = 1
+ul Group = 6
+ul Mate = 0
+
+[Team0Objective4Condition2]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = -1472.000000
+f PositionY = 2368.000000
+ul CellX = 34
+ul CellY = 55
+ul Commander = 1
+ul Group = 5
+ul Mate = 0
+
+[Team0Objective5]
+st Title = "Hidden Trigger when Hunchback Destroyed"
+b TitleUseResourceString = FALSE
+ul TitleResourceStringID = 0
+st Description = "Hidden Trigger when Hunchback Destroyed"
+b DescriptionUseResourceString = FALSE
+ul DescriptionResourceStringID = 0
+ul Priority = 2
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 0.000000
+f MarkerY = 0.000000
+b HiddenTrigger = TRUE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective5Condition0]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 64.000114
+f PositionY = -1600.000244
+ul CellX = 127
+ul CellY = 91
+ul Commander = 1
+ul Group = 3
+ul Mate = 0
+
+[Team0Objective5Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "0"
+b Value = TRUE
+
+[Team1Objectives]
+ul NumObjectives = 0
+
+[Team2Objectives]
+ul NumObjectives = 0
+
+[Team3Objectives]
+ul NumObjectives = 0
+
+[Team4Objectives]
+ul NumObjectives = 0
+
+[Team5Objectives]
+ul NumObjectives = 0
+
+[Team6Objectives]
+ul NumObjectives = 0
+
+[Team7Objectives]
+ul NumObjectives = 0
+
+[Player0]
+ul DefaultTeam = 0
+
+[Player1]
+ul DefaultTeam = 1
+
+[Player2]
+ul DefaultTeam = 0
+
+[Player3]
+ul DefaultTeam = 0
+
+[Player4]
+ul DefaultTeam = 0
+
+[Player5]
+ul DefaultTeam = 0
+
+[Player6]
+ul DefaultTeam = 0
+
+[Player7]
+ul DefaultTeam = 0
+
+[Music]
+uc scenarioTuneNum = 0
+
+[Script]
+st ScenarioScript = "tut_05"
+FITend 

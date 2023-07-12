@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8BBB1386FCA435332BA8505D33CB1DD2" />
+  <Asset Name="..\Barrelsdam.ase" Type="Physical" Author="ngauvin" FileSize="434505" ModificationTime="2006-02-01T10:54:36.841885-08:00" CRC="FED7FF1F89BEA6922316009BEDE26CC6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

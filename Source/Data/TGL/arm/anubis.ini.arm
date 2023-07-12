@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="027CFB80594BC4AF591D5265518F0742" />
+  <Asset Name="..\anubis.ini" Type="Physical" Author="franksav" FileSize="4129" ModificationTime="2006-03-03T01:28:10.9768752-08:00" CRC="963D214FBF3F20A41B46435B5F4E6DB7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Anubis.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="AnubisL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="AnubisL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="AnubisX.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubis.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="anubisFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="anubisFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="anubisFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Anubis" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

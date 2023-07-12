@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B1A8821227DA2B78B9E2823E04449E1A" />
+  <Asset Name="..\SmallFuelTankL1.ase" Type="Physical" Author="ngauvin" FileSize="38735" ModificationTime="2006-02-01T10:55:31.1703577-08:00" CRC="CA99570232BAC6BA4589F212A7A17117" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\smallfueltank.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,41 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=1
+
+[ObjectType]
+st Name="xgenerator_main_1.fit"
+st AppearanceName="DavionPowerGenerator"
+l ExplosionObject=41
+l DestroyedObject=0
+f ExtentRadius=5.000000
+
+[BuildingData]
+ul DmgLevel=61
+f ExtentRadius=5.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30588
+l SetImpassable=1
+l XImpasse=0
+l YImpasse=0
+ul NormalEffectId=37
+ul BlownEffectId=0
+ul DamageEffectId=35
+b CanRefit=FALSE
+b MechBay=FALSE
+f TimeToBurnDamage=5.000000
+f BurnDamagePerTime=1.000000
+f DamageLvlForBurn=61.000000
+f SensorRange=-1.000000
+l TeamID=-1
+l Tonnage=20
+l BattleRating=20
+l NumMarines=0
+b blockLineOfFire=FALSE
+l LowTemplate=939524096
+l HighTemplate=14392
+l PotentialContact=0
+l BasePixelOffsetX=0
+l BasePixelOffsetY=0
+FITend 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B72DC73E85F4F0DFB743DCE127A58B46" />
+  <Asset Name="..\streetlightDamX.ase" Type="Physical" Author="ngauvin" FileSize="10994" ModificationTime="2006-02-01T10:55:32.8109932-08:00" CRC="4579B91F667B78CDC31672E25C4E56FE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

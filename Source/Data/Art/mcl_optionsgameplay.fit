@@ -1,0 +1,1151 @@
+FITini 
+
+
+
+// gameplay insert for options screen
+
+
+
+
+b ChildCoordinatesAreRelative = 1
+
+[Buttons]
+l Buttoncount = 9
+
+[Button0] // check box: unlimited ammo
+l XLocation = 253
+l YLocation = 14
+l Width = 12
+l Height = 12
+
+b Toggle = 1
+l ID = 406
+
+l XTextLocation = 273 // text should be part of button too
+l YTextLocation = 12
+l TextWidth = 320
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26585
+l Font = 26586  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+[Button1] // difficulty level radio: green
+l XLocation = 14
+l YLocation = 35
+l Width = 12
+l Height = 12
+
+b Toggle = 1
+l ID = 400
+
+l XTextLocation = 36 // text should be part of button too
+l YTextLocation = 33
+l TextWidth = 203
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26565
+l Font = 26566  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 217
+l VNormal = 47
+
+l UPressed = 229
+l VPressed = 47
+
+l UHighlight = 217
+l VHighlight = 47
+
+l UHighlightPressed = 229
+l VHighlightPressed = 47
+
+l UDisabled = 217
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button2] // check box: left click/right click
+l XLocation = 253
+l YLocation = 44
+l Width = 12
+l Height = 12
+
+
+b Toggle = 1
+l ID = 407
+
+l XTextLocation = 273 // text should be part of button too
+l YTextLocation = 42
+l TextWidth = 320
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26579
+l Font = 26580  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 193
+l VNormal = 47
+
+l UPressed = 205
+l VPressed = 47
+
+l UHighlight = 193
+l VHighlight = 47
+
+l UHighlightPressed = 205
+l VHighlightPressed = 47
+
+l UDisabled = 193
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button3]// difficulty level radio: regular
+l XLocation = 14
+l YLocation = 55
+l Width = 12
+l Height = 12
+
+b Toggle = 1
+l ID = 401
+
+l XTextLocation = 36 // text should be part of button too
+l YTextLocation = 53
+l TextWidth = 203
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26567
+l Font = 26568  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 217
+l VNormal = 47
+
+l UPressed = 229
+l VPressed = 47
+
+l UHighlight = 217
+l VHighlight = 47
+
+l UHighlightPressed = 229
+l VHighlightPressed = 47
+
+l UDisabled = 217
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+[Button4]// difficulty level radio: veteran
+l XLocation = 14
+l YLocation = 75
+l Width = 12
+l Height = 12
+
+b Toggle = 1
+l ID = 402
+
+l XTextLocation = 36 // text should be part of button too
+l YTextLocation = 73
+l TextWidth = 203
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26569
+l Font = 26570  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 217
+l VNormal = 47
+
+l UPressed = 229
+l VPressed = 47
+
+l UHighlight = 217
+l VHighlight = 47
+
+l UHighlightPressed = 229
+l VHighlightPressed = 47
+
+l UDisabled = 217
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button5]// difficulty level radio: elite
+l XLocation = 14
+l YLocation = 95
+l Width = 12
+l Height = 12
+
+b Toggle = 1
+l ID = 403
+
+l XTextLocation = 36 // text should be part of button too
+l YTextLocation = 93
+l TextWidth = 203
+l TextHeight = 16
+l color  = 0xffFFFFFF
+b TextOutline = FALSE
+
+l TextID = 26571
+l Font = 26572  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_options_1.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 217
+l VNormal = 47
+
+l UPressed = 229
+l VPressed = 47
+
+l UHighlight = 217
+l VHighlight = 47
+
+l UHighlightPressed = 229
+l VHighlightPressed = 47
+
+l UDisabled = 217
+l VDisabled = 47
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffFFAE4D
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button6] // base color tab
+l XLocation = 12
+l YLocation = 150
+l Width = 121
+l Height = 65
+l ID = 404
+
+l XTextLocation = 18
+l YTextLocation = 154
+l TextWidth = 111
+l TextHeight = 17
+l color  = 0xffFF8A00
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26575
+l Font = 26576 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 121
+l VHeight = 65
+
+l UNormal = 80
+l VNormal = 145
+
+l UPressed = 80
+l VPressed = 80
+
+
+st FileName = "mcl_options_6.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26408
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+
+
+
+
+[Button7] // accent color tab
+l XLocation = 12
+l YLocation = 221
+l Width = 121
+l Height = 65
+l ID = 405
+
+l XTextLocation = 18
+l YTextLocation = 225
+l TextWidth = 111
+l TextHeight = 17
+l color  = 0xffFF8A00
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26577
+l Font = 26578 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 121
+l VHeight = 65
+
+l UNormal = 80
+l VNormal = 145
+
+l UPressed = 80
+l VPressed = 80
+
+
+st FileName = "mcl_options_6.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26409
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+
+
+
+[Button8] // reset button
+l XLocation = 449
+l YLocation = 254
+l Width = 150
+l Height = 32
+l ID = 309
+
+l XTextLocation = 460
+l YTextLocation = 260
+l TextWidth = 127
+l TextHeight = 19
+l color  = 0xffff0000
+b TextOutline = FALSE
+
+l TextID = 26536
+l Font = 26537 // use AgencyFB14
+l Alignment = 2
+
+l HelpCaption = 27103
+l HelpDesc = 26609
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 150
+l VHeight = 32
+
+l UNormal = 80
+l VNormal = 210
+
+l UPressed = 80
+l VPressed = 210
+
+l UHighlight = 80
+l VHighlight = 210
+
+l UDisabled = 80
+l VDisabled = 210
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffAF0000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffAF0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffAF0000
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffAF0000
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 43
+
+[Rect0] // outline for color picker
+l XLocation = 132
+l YLocation = 150
+l Width = 164
+l Height = 135
+l Color = 0xffFF8A00
+b outline = TRUE
+
+[Rect1] // outline for mech animation 
+l XLocation = 307
+l YLocation = 150
+l Width = 126
+l Height = 136
+l Color = -12373732
+b outline = TRUE
+
+[Rect2] 
+l XLocation = 296
+l YLocation = 151
+l Width = 1
+l Height = 135
+l Color = 0x00000000
+b outline = TRUE
+
+[Rect3] // mech animation is placed using this rect
+l XLocation = 309
+l YLocation = 152
+l Width = 122
+l Height = 132
+l Color = 0
+b outline = FALSE
+
+[Rect4] // color rect, row 1 col1
+l XLocation = 140
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xffe83030
+b outline = FALSE
+
+[Rect5] //color rect, row 1 col2
+l XLocation = 159
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xffd79418
+b outline = FALSE
+
+[Rect6] //color rect, row 1 col3
+l XLocation = 178
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xfffae525
+b outline = FALSE
+
+[Rect7] //color rect, row 1 col4
+l XLocation = 197
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xff30e830
+b outline = FALSE
+
+[Rect8] //color rect, row 1 col5
+l XLocation = 216
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xff2fe88b
+b outline = FALSE
+
+[Rect9] //color rect, row 1 col6
+l XLocation = 235
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xff30e7e8
+b outline = FALSE
+
+[Rect10] //color rect, row 1 col7
+l XLocation = 254
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xff2f30e8
+b outline = FALSE
+
+[Rect11] //color rect, row 1 col8
+l XLocation = 273
+l YLocation = 158
+l Width = 16
+l Height = 28
+l Color = 0xffe830e7
+b outline = FALSE
+
+
+[Rect12] //color rect, row 2 col1
+l XLocation = 140
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff990f0f
+b outline = FALSE
+
+[Rect13] //color rect, row 2 col2
+l XLocation = 159
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff98770e
+b outline = FALSE
+
+[Rect14] //color rect, row 2 col3
+l XLocation = 178
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff98990f
+b outline = FALSE
+
+[Rect15] //color rect, row 2 col4
+l XLocation = 197
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff398b1c
+b outline = FALSE
+
+[Rect16] //color rect, row 2 col5
+l XLocation = 216
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff1d8b54
+b outline = FALSE
+
+[Rect17] //color rect, row 2 col6 
+l XLocation = 235
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff1c8b8b
+b outline = FALSE
+
+[Rect18] //color rect, row 2 col7
+l XLocation = 254
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff1d1c8b
+b outline = FALSE
+
+[Rect19] //color rect, row 2 col8
+l XLocation = 273
+l YLocation = 189
+l Width = 16
+l Height = 28
+l Color = 0xff8b1d8c
+b outline = FALSE
+
+[Rect20] //color rect, row 3 col1
+l XLocation = 140
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff4e0705
+b outline = FALSE
+
+[Rect21] //color rect, row 3 col2
+l XLocation = 159
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff5b3713
+b outline = FALSE
+
+[Rect22] //color rect, row 3 col3
+l XLocation = 178
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff4c4c06
+b outline = FALSE
+
+[Rect23] //color rect, row 3 col4
+l XLocation = 197
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff244c0b
+b outline = FALSE
+
+[Rect24] //color rect, row 3 col5
+l XLocation = 216
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff064c2a
+b outline = FALSE
+
+[Rect25] //color rect, row 3 col6
+l XLocation = 235
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff064c4c
+b outline = FALSE
+
+[Rect26] //color rect, row 3 col7
+l XLocation = 254
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff07083e
+b outline = FALSE
+
+[Rect27] //color rect, row 3 col8
+l XLocation = 273
+l YLocation = 220
+l Width = 16
+l Height = 28
+l Color = 0xff4d044d
+b outline = FALSE
+
+
+[Rect28] //color rect, row 4 col1
+l XLocation = 140
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xffffffff
+b outline = FALSE
+
+[Rect29] //color rect, row 4 col2
+l XLocation = 159
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xff999999
+b outline = FALSE
+
+[Rect30] //color rect, row 4 col3
+l XLocation = 178
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xff666666
+b outline = FALSE
+
+[Rect31] //color rect, row 4 col4
+l XLocation = 197
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xffe8e797
+b outline = FALSE
+
+[Rect32] //color rect, row 4 col5
+l XLocation = 216
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xff9d8b75
+b outline = FALSE
+
+[Rect33] //color rect, row 4 col6
+l XLocation = 235
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xffc8a56f
+b outline = FALSE
+
+[Rect34] //color rect, row 4 col7
+l XLocation = 254
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xff8e6336
+b outline = FALSE
+
+[Rect35] //color rect, row 4 col8
+l XLocation = 273
+l YLocation = 251
+l Width = 16
+l Height = 28
+l Color = 0xff2c2c2c
+b outline = FALSE
+
+
+[Rect36] // base color rect- this changes depending on color player selects
+l XLocation = 28
+l YLocation = 175
+l Width = 32
+l Height = 32
+l Color = -1
+b outline = FALSE
+
+
+[Rect37] // accent color rect- this changes according to what color player selects
+l XLocation = 28
+l YLocation = 246
+l Width = 32
+l Height = 32
+l Color = -1800
+b outline = FALSE
+
+
+
+[Rect38] // difficulty
+l XLocation = 11
+l YLocation = 10
+l Width = 100
+l Height = 95
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26615
+
+[Rect39] // unlimited ammo
+l XLocation = 250
+l YLocation = 11
+l Width = 114
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26616
+
+[Rect40] // left-click
+l XLocation = 250
+l YLocation = 42
+l Width = 249
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26617
+
+
+
+[Rect41] // computer message
+l XLocation = 24
+l YLocation = 226
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26614
+
+[Rect42] // unit colors
+l XLocation = 10
+l YLocation = 125
+l Width = 288
+l Height = 162
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26618
+
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] //"DIFFICULTY LEVEL" header for radio buttons
+l XLocation = 14
+l YLocation = 11
+l Width = 226
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26564 // use agency fb 11
+l TextID = 26563
+l Alignment = 0
+
+[Text1] //"UNIT COLORS" header for color picker
+l XLocation = 13
+l YLocation = 126
+l Width = 226
+l Height = 17
+l Color = -29696
+b outline = FALSE
+l Font = 26574
+l TextID = 26573
+l Alignment = 0
+
+[Text2] // help text
+l XLocation = 51
+l YLocation = 306
+l Width = 505
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26562 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+
+
+
+
+
+
+
+
+
+
+FITend 

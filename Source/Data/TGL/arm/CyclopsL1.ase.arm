@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E67C76E460D7AFFC8338E6A5CFCA5EC7" />
+  <Asset Name="..\CyclopsL1.ase" Type="Physical" Author="ngauvin" FileSize="150663" ModificationTime="2006-02-01T10:54:45.5138155-08:00" CRC="4A1358C0FB27D80A09A9C79EAC0416CF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\CyclopsRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

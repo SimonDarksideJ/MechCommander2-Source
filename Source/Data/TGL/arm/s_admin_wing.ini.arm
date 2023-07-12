@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5F3A0AA5A2CAADF09673A910E6ADA8C6" />
+  <Asset Name="..\s_admin_wing.ini" Type="Physical" Author="franksav" FileSize="633" ModificationTime="2006-03-03T01:28:43.6016664-08:00" CRC="46D1F75E9AB7E41B3F25C084E82FA940" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_admin_wing.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_admin_wingL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_admin_wingL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_admin_wingX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_admin_wingdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_admin_wingdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Gulag Wing" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

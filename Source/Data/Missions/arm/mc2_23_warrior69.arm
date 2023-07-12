@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="713D5E037A9BE01A435A76BFDE90FCDC" />
+  <Asset Name="..\mc2_23_warrior69" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Hunchback.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Hunchback.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWVeteran.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_23_Rif2_Mechs_Town.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

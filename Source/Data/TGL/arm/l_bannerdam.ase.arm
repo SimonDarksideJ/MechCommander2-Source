@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D50EB454B6BD907B0C2EA7F53FEEAB77" />
+  <Asset Name="..\l_bannerdam.ase" Type="Physical" Author="ngauvin" FileSize="3144" ModificationTime="2006-02-01T10:55:02.7014255-08:00" CRC="CD9D5EF47DC435FB8E430036BEAFA1F7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_banners.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

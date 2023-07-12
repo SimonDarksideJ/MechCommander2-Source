@@ -1,0 +1,592 @@
+FITini 
+
+[InsigniaDropList]
+
+l XLocation = 30
+l YLocation = 199
+b ChildCoordinatesAreRelative = 1
+
+[ExpandButton] // down triangle
+
+l ID = xxx
+
+l XLocation = 282
+l YLocation = 8
+l Width = 12
+l Height = 6
+b Toggle = 0
+
+l XTextLocation = xxx
+l YTextLocation = xxx
+l color  = xxx
+
+
+l TextID = xxx
+l Font = xxx
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+
+l UWidth = 12
+l VHeight = 6
+l UNormal = 0
+l VNormal = 18
+
+st FileName = "MCUI_Scroll"
+st Animation = "Animation3"
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 15.5
+l NormalColor2 = 0xffFFAE4D
+f NormalTime3 = 16.0
+l NormalColor3 = 0xffC66600
+
+
+l UPressed = 0
+l VPressed = 18
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l UHighlight = 0
+l VHighlight = 18
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 0
+l VHighlightPressed = 18
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l UDisabled = 0
+l VDisabled = 18
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+[Statics]
+l Staticcount = 1
+
+[Static0] // unit insignia icon
+l XLocation = 2
+l YLocation = 2
+l Width = 32
+l Height = 32
+
+l UWidth = 32
+l VHeight = 32
+l UNormal = 0
+l VNormal = 0
+
+st FileName = "mcl_mp_uniticon00x"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Rects]
+l Rectcount = 3
+
+[Rect0] // divider between down triangle and text in drop down rect
+// use animation 2
+l XLocation = 279
+l YLocation = 1
+l Width = 1
+l Height = 34
+l Color = -13031403
+b outline = TRUE
+st Animation = "Animation1"
+
+
+[Rect1] // outline for variant drop down menu
+// use animation 2
+l XLocation = 0
+l YLocation = 0
+l Width = 297
+l Height = 36
+l Color = -12373732
+b outline = TRUE
+st Animation = "Animation1"
+
+[EditBox]
+l XLocation = 0
+l YLocation = 0
+l Width = 297
+l Height = 36
+l Color = -12373732
+l CursorColor = 0xffffffff
+l HighlightColor = 0xffFF8300
+l SelectedColor = 0xff000000
+l OutlineColor = 0xff846643
+l Font = 40012
+
+[Rect2] // rectangle for list box 
+// this is max height for the list box.
+// scroll bar appears at max height.
+l XLocation = 0
+l YLocation = 20
+l Width = 297
+l Height = 239
+l Color = -13031403
+b outline = TRUE
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[ListItems]
+
+l ListItemCount = 11
+
+[ListItem0]
+l Width = 234
+l Height = 32
+
+[ListItem0Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon000"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem0Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem1]
+l Width = 234
+l Height = 32
+
+[ListItem1Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon001"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem1Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem2]
+l Width = 234
+l Height = 32
+
+[ListItem2Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon002"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem2Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem3]
+l Width = 234
+l Height = 32
+
+[ListItem3Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon003"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem3Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem4]
+l Width = 234
+l Height = 32
+
+[ListItem4Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon004"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem4Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem5]
+l Width = 234
+l Height = 32
+
+[ListItem5Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon005"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem5Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem6]
+l Width = 234
+l Height = 32
+
+[ListItem6Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon006"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem6Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem7]
+l Width = 234
+l Height = 32
+
+[ListItem7Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon007"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem7Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem8]
+l Width = 234
+l Height = 32
+
+[ListItem8Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon008"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem8Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem9]
+l Width = 234
+l Height = 32
+
+[ListItem9Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon009"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem9Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+[ListItem10]
+l Width = 234
+l Height = 32
+
+[ListItem10Static]
+l Width = 32
+l Height = 32
+
+st FileName = "mcl_mp_uniticon010"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[ListItem10Text]
+l Width = 202
+l Height = 17
+l Color = 0xFF846643 
+b outline = FALSE
+l Font = 40012 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+// elements using the animations below are labeled
+// according to which they should use.
+
+[Animation0] // for light brown text
+ 
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff846643
+f NormalTime1 = 15
+l NormalColor1 = 0xff846643
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+[Animation1] // for dark brown rectangles
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+f NormalTime1 = 15
+l NormalColor1 = 0xff43311C
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+[Animation2] // for orange button static
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 15.5
+l NormalColor2 = 0xffFFAE4D
+f NormalTime3 = 16.0
+l NormalColor3 = 0xffC66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+FITend 

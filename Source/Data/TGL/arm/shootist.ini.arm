@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FF655E81544FA273A55C71FE971B3EC5" />
+  <Asset Name="..\shootist.ini" Type="Physical" Author="franksav" FileSize="3952" ModificationTime="2006-03-03T01:28:49.445379-08:00" CRC="E429D5544A5B8A20F7D90544E71D83C3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Shootist.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="ShootistL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="ShootistL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="ShootistX.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootist.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shootistFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shootistFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shootistFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shootist" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

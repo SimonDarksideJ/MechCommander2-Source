@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="65FF5FE3FDF86D4BB4F0F963F07B8DCD" />
+  <Asset Name="..\enfield.ini" Type="Physical" Author="franksav" FileSize="4113" ModificationTime="2006-03-03T01:28:22.6643004-08:00" CRC="EA5E303350D5FDA7983AC7E46F25FCDF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Enfield.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="EnfieldL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="EnfieldL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="EnfieldX.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfield.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="enfieldFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="enfieldFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="enfieldFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Enfield" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

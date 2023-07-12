@@ -1,0 +1,286 @@
+//****************************************************************************************//
+//
+//		Encounter 2 - Non-Combat Vehicles
+//				???Vehicles
+//
+//      MISSION:  Mc2_07
+//		Unit(s) that PATROL to BASE 2
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_07_E2_NCV1_CT2;
+
+	var
+
+//**************ORIGINAL******************
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static PatrolState		startBase1PatrolState;
+		static PatrolPath		startBase1PatrolPath;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+//**************ORIGINAL******************
+
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 0, CONTACT_CRITERIA_NONE);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+//		AttackStateHandle = getStateHandle("attack");
+
+//**************NEW***********************
+
+
+		//-------------------------------------------
+		// Setup the Patrol here...
+		//XL startBase1PatrolState Start
+
+		startBase1PatrolState[0] = PATROL_TYPE_LINEAR;
+		startBase1PatrolState[1] = 30;    //?num points
+		startBase1PatrolState[2] = -1;    //?num cycles
+		startBase1PatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startBase1PatrolState[4] = -1;    //reset cur point
+		startBase1PatrolState[5] = -1;    //reset cur cycle
+		startBase1PatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startBase1PatrolPath[0, 0] = -3392.000;
+		startBase1PatrolPath[0, 1] = 3520.000;
+		startBase1PatrolPath[1, 0] = -3392.000;
+		startBase1PatrolPath[1, 1] = 3648.000;
+		startBase1PatrolPath[2, 0] = -3136.000;
+		startBase1PatrolPath[2, 1] = 3648.000;
+		startBase1PatrolPath[3, 0] = -3136.000;
+		startBase1PatrolPath[3, 1] = 3392.000;
+		startBase1PatrolPath[4, 0] = -2368.000;
+		startBase1PatrolPath[4, 1] = 3392.000;
+		startBase1PatrolPath[5, 0] = -2368.000;
+		startBase1PatrolPath[5, 1] = 1600.000;
+		startBase1PatrolPath[6, 0] = -1344.000;
+		startBase1PatrolPath[6, 1] = 1600.000;
+		startBase1PatrolPath[7, 0] = 64.000;
+		startBase1PatrolPath[7, 1] = 1600.000;
+		startBase1PatrolPath[8, 0] = 64.000;
+		startBase1PatrolPath[8, 1] = 1728.000;
+		startBase1PatrolPath[9, 0] = 832.000;
+		startBase1PatrolPath[9, 1] = 1728.000;
+		startBase1PatrolPath[10, 0] = 832.000;
+		startBase1PatrolPath[10, 1] = 1856.000;
+		startBase1PatrolPath[11, 0] = 1856.000;
+		startBase1PatrolPath[11, 1] = 1856.000;
+		startBase1PatrolPath[12, 0] = 1856.000;
+		startBase1PatrolPath[12, 1] = 2965.333;
+		startBase1PatrolPath[13, 0] = 2325.333;
+		startBase1PatrolPath[13, 1] = 3008.000;
+		startBase1PatrolPath[14, 0] = 2410.667;
+		startBase1PatrolPath[14, 1] = 3392.000;
+		startBase1PatrolPath[15, 0] = 2368.000;
+		startBase1PatrolPath[15, 1] = 3477.333;
+		startBase1PatrolPath[16, 0] = 2368.000;
+		startBase1PatrolPath[16, 1] = 3349.333;
+		startBase1PatrolPath[17, 0] = 2368.000;
+		startBase1PatrolPath[17, 1] = 3050.667;
+		startBase1PatrolPath[18, 0] = 1898.667;
+		startBase1PatrolPath[18, 1] = 3008.000;
+		startBase1PatrolPath[19, 0] = 1856.000;
+		startBase1PatrolPath[19, 1] = 1856.000;
+		startBase1PatrolPath[20, 0] = 832.000;
+		startBase1PatrolPath[20, 1] = 1856.000;
+		startBase1PatrolPath[21, 0] = 832.000;
+		startBase1PatrolPath[21, 1] = 1728.000;
+		startBase1PatrolPath[22, 0] = 64.000;
+		startBase1PatrolPath[22, 1] = 1728.000;
+		startBase1PatrolPath[23, 0] = 64.000;
+		startBase1PatrolPath[23, 1] = 1600.000;
+		startBase1PatrolPath[24, 0] = -1600.000;
+		startBase1PatrolPath[24, 1] = 1600.000;
+		startBase1PatrolPath[25, 0] = -2368.000;
+		startBase1PatrolPath[25, 1] = 1600.000;
+		startBase1PatrolPath[26, 0] = -2368.000;
+		startBase1PatrolPath[26, 1] = 3392.000;
+		startBase1PatrolPath[27, 0] = -3136.000;
+		startBase1PatrolPath[27, 1] = 3392.000;
+		startBase1PatrolPath[28, 0] = -3136.000;
+		startBase1PatrolPath[28, 1] = 3520.000;
+		startBase1PatrolPath[29, 0] = -3392.000;
+		startBase1PatrolPath[29, 1] = 3520.000;
+
+
+		//XLs startBase1PatrolPath end
+		
+//**************ORIGINAL******************
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+//**************NEW***********************
+
+		curTime = getTime;
+
+		
+//**************ORIGINAL******************
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			//trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+//state attack;
+
+//	var
+
+//		integer		tacticState;
+
+//	code
+
+
+//		update;
+//		setDebugString(-1, 3, " ATTACK    ");
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_RIGHT_FLANK, tacticState);
+//		resetOrders(1);
+//		transBack;
+
+//endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+
+		update;
+		setDebugString(-1, 3, " Base1Patrol    ");
+		corePatrol(startBase1PatrolState, startBase1PatrolPath, AttackStateHandle);
+		resetOrders(1);
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

@@ -1,0 +1,1657 @@
+zFITini
+
+
+
+// FOR OPTIONS SCREEN-
+
+
+// four parts: Options Area, Pilot Review, Promotion Gadget Left, and Promotion Gadget Right
+// each part is broken into five sections: statics, rects, buttons, text, and misc. (animations, etc)
+
+
+
+
+
+[OptionsAreaStatics]
+
+l staticCount = 1
+
+
+
+
+[OptionsAreaStatic0]  // ONE  horizontal top left 
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 256
+l VHeight = 8
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[OptionsAreaRects]
+
+l rectCount = 1
+
+
+
+[OptionsAreaRect0]
+l left = 20
+l right = 780
+l top = 20
+l bottom = 400
+//l color  = 0xff000000
+l color  = 0x40c0c0c0
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[OptionsAreaButtons]
+
+l OptionsAreaButtonCount = 18
+
+[OptionsAreaButton0] // DONE button in lower right corner  
+//this button has three parts- pixel art, rectangle, and text
+// maybe it should be in the misc. section since it's so non-standard?
+
+
+
+l ID = 1000001
+l XLocation = 612 // pixel art
+l YLocation = 301 // pixel art doesn't take color animation
+l Width = 128   
+l Height = 64
+
+l XTextLocation = 623 // rect  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 318 // 
+l TextWidth = 106
+l TextHeight = 30
+l color  = 0xff005392
+b DrawOutline = true;
+
+//l TextID = 45040
+l TextID = 28017
+l Font = 40036
+
+
+l HelpCaption = 45038
+l HelpDesc = 45039
+
+st FileName = "MCUI_MR_5"
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 128
+
+b AnimateBmp = 0 		// animate the rect and the text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 192
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UDisabled = 0
+l VDisabled = 192
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton1] // This is the check box 
+l ID = xxx
+l XLocation = 25
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton2] // This is the check box 
+l ID = xxx
+l XLocation = 75
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton3] // This is the check box 
+l ID = xxx
+l XLocation = 275
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton4] // This is the check box 
+l ID = xxx
+l XLocation = 325
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton5] // This is the check box 
+l ID = xxx
+l XLocation = 525
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton6] // This is the check box 
+l ID = xxx
+l XLocation = 575
+l YLocation = 25
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton7] // This is the check box 
+l ID = xxx
+l XLocation = 25
+l YLocation = 125
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton8] // This is the check box 
+l ID = xxx
+l XLocation = 275
+l YLocation = 125
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton9] // This is the check box 
+l ID = xxx
+l XLocation = 525
+l YLocation = 125
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton10] // This is the check box 
+l ID = xxx
+l XLocation = 575
+l YLocation = 125
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton11] // This is the check box 
+l ID = xxx
+l XLocation = 25
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton12] // This is the check box 
+l ID = xxx
+l XLocation = 75
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton13] // This is the check box 
+l ID = xxx
+l XLocation = 125
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton14] // This is the check box 
+l ID = xxx
+l XLocation = 325
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton15] // This is the check box 
+l ID = xxx
+l XLocation = 525
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+[OptionsAreaButton16] // This is the check box 
+l ID = xxx
+l XLocation = 575
+l YLocation = 225
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+
+[OptionsAreaButton17] // cancel button
+
+l ID = 1000002
+l XLocation = 462 // pixel art
+l YLocation = 301 // pixel art doesn't take color animation
+l Width = 128   
+l Height = 64
+
+l XTextLocation = 473 // rect  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 318 // 
+l TextWidth = 106
+l TextHeight = 30
+l color  = 0xff005392
+b DrawOutline = true;
+
+l TextID = 28016
+l Font = 40036
+
+
+l HelpCaption = 45038
+l HelpDesc = 45039
+
+st FileName = "MCUI_MR_5"
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 128
+
+b AnimateBmp = 0 		// animate the rect and the text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 192
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+
+
+l UDisabled = 0
+l VDisabled = 192
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+// below here are listed text entries for the salvageable mech screen.
+
+
+
+[OptionsAreaText]
+
+l OptionsTextEntryCount = 9
+
+
+
+[OptionsTextEntry0]
+
+l XLocation = 130 //  Left Justify. 
+l YLocation = 25 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry1]
+
+l XLocation = 380 //  Left Justify. 
+l YLocation = 25 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry2]
+
+l XLocation = 630 //  Left Justify. 
+l YLocation = 25 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry3]
+
+l XLocation = 80 //  Left Justify. 
+l YLocation = 125 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry4]
+
+l XLocation = 330 //  Left Justify. 
+l YLocation = 125 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry5]
+
+l XLocation = 630 //  Left Justify. 
+l YLocation = 125 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry6]
+
+l XLocation = 180 //  Left Justify. 
+l YLocation = 225 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry7]
+
+l XLocation = 380 //  Left Justify. 
+l YLocation = 225 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+[OptionsTextEntry8]
+
+l XLocation = 630 //  Left Justify. 
+l YLocation = 225 //  Use AgencyFB28
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 40036
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+FitEnd

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EACB840A520607BC5204DD51B0911D78" />
+  <Asset Name="..\HPG_WalkwayEnc.ase" Type="Physical" Author="ngauvin" FileSize="12809" ModificationTime="2006-02-01T10:54:58.3732728-08:00" CRC="8325A6F6072A72965BB3371355FD6219" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\HPG_Office2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

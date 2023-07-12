@@ -1,0 +1,811 @@
+FITini 
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Buttons]
+l Buttoncount = 3
+
+[Button0] // cancel button
+l ID = 51 // MB_MSG_PREV
+l XLocation = 115
+l YLocation = 481
+l Width = 128
+l Height = 64
+
+st FileName = "mcl_mp_addai_4.tga"
+
+l XTextLocation = 124
+l YTextLocation = 498
+l TextWidth = 110
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27651
+l Font = 26104 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27508
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 116
+l VNormal = 114
+
+l UPressed = 116
+l VPressed = 178
+
+l UHighlight = 116
+l VHighlight = 114
+
+l UDisabled = 116
+l VDisabled = 178
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+[Button1] // accept button
+l ID = 50 // MB_MSG_NEXT
+l XLocation = 556
+l YLocation = 481
+l Width = 128
+l Height = 64
+
+st FileName = "mcl_mp_addai_4.tga"
+
+l XTextLocation = 565
+l YTextLocation = 498
+l TextWidth = 110
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27209
+l Font = 26105 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27508
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 116
+l VNormal = 114
+
+l UPressed = 116
+l VPressed = 178
+
+l UHighlight = 116
+l VHighlight = 114
+
+l UDisabled = 116
+l VDisabled = 178
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+[Button2] // check box for allow all technologies
+l XLocation = 126
+l YLocation = 190  
+l Width = 24
+l Height = 24
+b Toggle = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 24
+l VHeight = 24
+
+l UNormal = 60
+l VNormal = 226
+
+l UPressed = 84
+l VPressed = 226
+
+l UHighlight = 60
+l VHighlight = 226
+
+l UHighlightPressed = 84
+l VHighlightPressed = 226
+
+l UDisabled = 84
+l VDisabled = 226
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+f NormalTime1 = 15
+l NormalColor1 = 0xff43311C
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFF8A00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff43311C
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xffFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 2
+
+
+
+[Rect0] // background black
+l XLocation = 115
+l YLocation = 102
+l Width = 568
+l Height = 368
+l Color = Oxff000000
+b outline = TRUE
+
+[Rect1] // main header background black
+l XLocation = 108
+l YLocation = 59
+l Width = 575
+l Height = 31
+l Color = Oxff000000
+b outline = TRUE
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 30
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 59
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 59
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 59
+l UNormal = 0
+l VNormal = 59
+l UWidth = 256
+l VHeight = 59
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 59
+l UNormal = 0
+l VNormal = 118
+l UWidth = 256
+l VHeight = 59
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 59
+l UNormal = 32
+l VNormal = 146
+l UWidth = 32
+l VHeight = 59
+st FileName = "mcl_mp_addai_4.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 59
+l Width = 108
+l Height = 32
+l UNormal = 0
+l VNormal = 205
+l UWidth = 108
+l VHeight = 32
+st FileName = "mcl_mp_addai_4.tga"
+
+[Static5]
+l XLocation = 684
+l YLocation = 59
+l Width = 116
+l Height = 32
+l UNormal = 0
+l VNormal = 114
+l UWidth = 116
+l VHeight = 32
+st FileName = "mcl_mp_addai_4.tga"
+
+[Static6]
+l XLocation = 0
+l YLocation = 91
+l Width = 255
+l Height = 10
+l UNormal = 0
+l VNormal = 177
+l UWidth = 255
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static7]
+l XLocation = 255
+l YLocation = 91
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 187
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static8]
+l XLocation = 511
+l YLocation = 91
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 197
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static9]
+l XLocation = 767
+l YLocation = 91
+l Width = 33
+l Height = 10
+l UNormal = 0
+l VNormal = 239
+l UWidth = 33
+l VHeight = 10
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static10]
+l XLocation = 0
+l YLocation = 101
+l Width = 115
+l Height = 256
+l UNormal = 1
+l VNormal = 0
+l UWidth = 115
+l VHeight = 256
+st FileName = "mcl_mp_addai_3.tga"
+
+[Static11]
+l XLocation = 684
+l YLocation = 101
+l Width = 116
+l Height = 256
+l UNormal = 116
+l VNormal = 0
+l UWidth = 116
+l VHeight = 256
+st FileName = "mcl_mp_addai_3.tga"
+
+[Static12]
+l XLocation = 0
+l YLocation = 357
+l Width = 115
+l Height = 114
+l UNormal = 116
+l VNormal = 0
+l UWidth = 115
+l VHeight = 114
+st FileName = "mcl_mp_addai_4.tga"
+
+[Static13]
+l XLocation = 684
+l YLocation = 357
+l Width = 116
+l Height = 114
+l UNormal = 0
+l VNormal = 0
+l UWidth = 116
+l VHeight = 114
+st FileName = "mcl_mp_addai_4.tga"
+
+[Static14]
+l XLocation = 0
+l YLocation = 471
+l Width = 255
+l Height = 10
+l UNormal = 0
+l VNormal = 207
+l UWidth = 255
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static15]
+l XLocation = 255
+l YLocation = 471
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 217
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static16]
+l XLocation = 511
+l YLocation = 471
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 227
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static17]
+l XLocation = 767
+l YLocation = 471
+l Width = 33
+l Height = 10
+l UNormal = 33
+l VNormal = 239
+l UWidth = 33
+l VHeight = 10
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static18]
+l XLocation = 0
+l YLocation = 481
+l Width = 115
+l Height = 64
+l UNormal = 0
+l VNormal = 175
+l UWidth = 115
+l VHeight = 64
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static19]
+l XLocation = 243
+l YLocation = 481
+l Width = 10
+l Height = 64
+l UNormal = 231
+l VNormal = 175
+l UWidth = 10
+l VHeight = 64
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static20]
+l XLocation = 253
+l YLocation = 481
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 237
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_1.tga"
+
+[Static21]
+l XLocation = 509
+l YLocation = 481
+l Width = 37
+l Height = 10
+l UNormal = 66
+l VNormal = 239
+l UWidth = 37
+l VHeight = 10
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static22]
+l XLocation = 546
+l YLocation = 481
+l Width = 10
+l Height = 64
+l UNormal = 241
+l VNormal = 175
+l UWidth = 10
+l VHeight = 64
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static23]
+l XLocation = 684
+l YLocation = 481
+l Width = 116
+l Height = 64
+l UNormal = 115
+l VNormal = 175
+l UWidth = 116
+l VHeight = 64
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static24]
+l XLocation = 253
+l YLocation = 535
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 165
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static25]
+l XLocation = 509
+l YLocation = 535
+l Width = 37
+l Height = 10
+l UNormal = 103
+l VNormal = 239
+l UWidth = 37
+l VHeight = 10
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static26]
+l XLocation = 0
+l YLocation = 545
+l Width = 256
+l Height = 55
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 55
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static27]
+l XLocation = 256
+l YLocation = 545
+l Width = 256
+l Height = 55
+l UNormal = 0
+l VNormal = 55
+l UWidth = 256
+l VHeight = 55
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static28]
+l XLocation = 512
+l YLocation = 545
+l Width = 256
+l Height = 55
+l UNormal = 0
+l VNormal = 110
+l UWidth = 256
+l VHeight = 55
+st FileName = "mcl_mp_addai_2.tga"
+
+[Static29]
+l XLocation = 768
+l YLocation = 545
+l Width = 32
+l Height = 55
+l UNormal = 0
+l VNormal = 146
+l UWidth = 32
+l VHeight = 55
+st FileName = "mcl_mp_addai_4.tga"
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Texts]
+l Textcount = 5
+
+[Text0] // main header
+l XLocation = 114
+l YLocation = 61
+l Width = 567
+l Height = 27
+l Color = -30208
+b outline = FALSE
+l Font = 26106 // use agency fb 17
+l TextID = 26100
+l Alignment = 0
+
+[Text1] // name entry header
+l XLocation = 126
+l YLocation = 110
+l Width = 122
+l Height = 18
+l Color = -30208
+b outline = FALSE
+l Font = 26107 // use agency fb 14
+l TextID = 26101
+l Alignment = 0
+
+[Text2] // Allow All Technologies
+l XLocation = 126
+l YLocation = 170
+l Width = 122
+l Height = 18
+l Color = -30208
+b outline = FALSE
+l Font = 26108 // use agency fb 14
+l TextID = 26102 
+l Alignment = 0
+
+[Text3] // Maximum Number of Players
+l XLocation = 126
+l YLocation = 231
+l Width = 122
+l Height = 18
+l Color = -30208
+b outline = FALSE
+l Font = 26109 // use agency fb 14
+l TextID = 26103
+l Alignment = 0
+
+[Text4] // help text
+l XLocation = 257
+l YLocation = 494
+l Width = 286
+l Height = 39
+l Color = -1
+b outline = FALSE
+l Font = 26110 // use arial narrow 8
+l TextID = 26051
+l Alignment = 0
+
+
+[EditBox0] // name entry edit box
+// use animation 2
+l XLocation = 126
+l YLocation = 130
+l Width = 122
+l Height = 32
+l Color = 0xff43311C
+l CursorColor = 0xffffffff
+l HighlightColor = 0xffFF8300
+l SelectedColor = 0xff000000
+l OutlineColor = 0xff846643
+l Font = 26111
+
+[EditBoxRect0] // outline for dd
+// use animation 2
+l XLocation = 126
+l YLocation = 130
+l Width = 122
+l Height = 32
+l Color = 0xff43311C
+b outline = TRUE
+st Animation = "Animation1"
+
+
+
+
+[DropList0] // num players drop down
+
+l XLocation = 126
+l YLocation = 251
+
+st FileName = "mcl_mp_hostgame_droplist0.fit"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[EnterAnim]  // use when dialog appears on screen
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 800
+l Pos0Y = 0
+f Time1 = 0.23
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+[LeaveAnim]  // use when dialog leaves after cancel or okay is pressed
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = .23
+l Pos1X = 800
+l Pos1Y = 0
+
+
+
+[Animation1] // for dark brown rectangles
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+f NormalTime1 = 15
+l NormalColor1 = 0xff43311C
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+FITend 

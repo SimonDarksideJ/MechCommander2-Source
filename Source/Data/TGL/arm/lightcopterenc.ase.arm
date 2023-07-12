@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6311BA690F0DEC57C38FFEDE4AFE4CD4" />
+  <Asset Name="..\lightcopterenc.ase" Type="Physical" Author="ngauvin" FileSize="99295" ModificationTime="2006-02-01T10:55:08.5920882-08:00" CRC="7BCA5AB87C04FA15F568A2F34902626C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\AttackCopter.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

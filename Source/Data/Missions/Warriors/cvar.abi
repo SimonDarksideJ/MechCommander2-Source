@@ -1,0 +1,37 @@
+//************************
+//Clan Var Include File	3/19
+//------------------------
+
+	real[3]			aPoint;
+	char[50]		aString;
+	real			aReal;
+	integer			aInteger;
+	integer			bInteger;
+	static boolean	HunterKiller;
+	static boolean	MoveSpeed;
+	static boolean	IdentifyContacts;
+	static real		IdentifyRadius;
+	static boolean	MovingToIdentify;
+	static integer	IdentifyTarget;
+	static position	nullPoint;
+	static boolean	AttackOrders;
+	static AttList	AttackList;
+	static integer	AttackOrder;
+	static real[NUM_HIT_LISTS]	PreferenceRatings;
+	ObjList			ObjectList;
+	integer[NUM_OBJ_LISTS]	ObjectListSize;
+	static boolean	IgnoreNonInOrderTargets;
+	static boolean	IgnoreNonHitListTargets;
+	static integer	NumHitLists;
+	static integer	InOrderIndex;
+	static integer	ChallengeSetting;
+	integer			objstatus;
+	static boolean	AttackInActive;
+	static integer  VisualRangeMod;
+
+
+
+
+
+
+

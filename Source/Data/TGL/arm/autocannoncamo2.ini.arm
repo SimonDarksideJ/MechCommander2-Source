@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="49A709AD402C326246C124C23EDD15B5" />
+  <Asset Name="..\autocannoncamo2.ini" Type="Physical" Author="franksav" FileSize="1272" ModificationTime="2006-03-03T01:28:12.4924905-08:00" CRC="4694149DE725FEE94BD45A77E3114110" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="AutoCannonCamo2.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="AutocannonPopupX.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamo2.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen2.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen2.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen2.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PopupDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PopupDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="AC Tundra Camo Turret" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

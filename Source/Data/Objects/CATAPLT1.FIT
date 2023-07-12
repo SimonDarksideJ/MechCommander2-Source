@@ -1,0 +1,75 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				MECH:			CATAPULT
+//
+//				BASE ID:		12
+//
+//---------------------------------------------------------------------------
+
+// This is a sample MechBase Data File.
+[ObjectClass]
+l ObjectTypeNum = 2
+
+[Header]
+st FileType							= "MechType"
+
+[General]
+ul ID								= 12				// ID number for this mech base type
+uc Type								= 0					// 0 = Inner Sphere, 1 = Clan
+st Name								= "Catapult 3025"	// mech type description
+uc Chassis							= 0					// Standard Chassis		
+f TonnageClass						= 65.0				// 25 tons
+uc EndoSteel						= 0					// does not have EndoSteel IS	
+f InternalStructureTonnage			= 6.5				// 6.5 tons
+
+[InternalStructure]
+//------------------------------------------------------------------------
+// In theory, the following should be dictated by the MaxTonnage, correct?
+uc Head								= 3
+uc CenterTorso						= 21
+uc LeftTorso						= 15
+uc RightTorso						= 15
+uc LeftArm							= 10
+uc RightArm							= 10
+uc LeftLeg							= 15
+uc RightLeg							= 15
+
+[HotSpots]
+st HotSpotFileName					= "p"
+l FootprintType						= 2
+
+[ObjectType]
+st Name 							= "Cataplt"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 2				// ID number for this mech type
+l Appearance						= 0x0100000B
+l Duration							= -1			// Lasts forever = -1
+l MaxDamage							= 200			// Number of damage points before BOOM!
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 12			// Extent Radius in Meters
+l IconNumber						= 10
+
+[Control]
+ul Type								= 2				//player = 1, ai = 2, net = 3
+ul DataType							= 1				//mech control data = 1
+
+[Dynamics]
+ul Type								= 1				//Mech dynamics = 1
+
+[MechDynamics]
+l maxTorsoYawRate					= 360			//Degrees per sec
+l maxTorsoYaw						= 120			//(+/-)Degrees
+l maxArmYaw							= 60			//(+/-)Degrees
+l maxMechYawRate					= 180			//Degrees per sec
+l maxRightArmYawRate				= 12			//Degrees per sec
+l maxLeftArmYawRate					= 12			//Degrees per sec
+f maxAccel							= 3.0			//Meters per sec per sec
+f maxVelocity						= 40.0			//Meters per sec
+
+[AudioVisual]
+st Anim =							"animString"
+uc[3] MoveAnimSpeed =				0,2,1
+
+FITEnd

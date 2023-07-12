@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D0043CF959A6AE3B951E275FD019298E" />
+  <Asset Name="..\skybox.ase" Type="Physical" Author="ngauvin" FileSize="11729" ModificationTime="2006-02-01T10:55:30.6234792-08:00" CRC="C827F9681B89777C84CAA50611857C63" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Sky_Back_Left.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Sky_front_Right.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

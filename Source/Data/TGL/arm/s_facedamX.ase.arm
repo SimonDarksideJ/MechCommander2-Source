@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="75CB1854CB2B0F7DEC93C31292D486AA" />
+  <Asset Name="..\s_facedamX.ase" Type="Physical" Author="ngauvin" FileSize="35799" ModificationTime="2006-02-01T10:55:22.7953041-08:00" CRC="B7337C94B09A76A4DE6BF0BF927BFA3A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\131.jpg" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

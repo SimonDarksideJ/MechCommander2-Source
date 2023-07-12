@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F6FB89BC206BCF26163A4A685586DA03" />
+  <Asset Name="..\l_elitebarracksdam.ase" Type="Physical" Author="ngauvin" FileSize="22245" ModificationTime="2006-02-01T10:55:03.0139275-08:00" CRC="80C1AB8F25B76DF382D5F3EAB28B0CA7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\L_stone.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

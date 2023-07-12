@@ -1,0 +1,23 @@
+FITini
+
+// This is a mech placement marker fit file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name = "xmp_thor_01"
+l Type = 0x7
+l Appearance = 0x02000427
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 0			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 0			// Extent Radius in Meters
+
+[TreeData]
+ul DmgLevel			= 0
+	
+FITend
+
+

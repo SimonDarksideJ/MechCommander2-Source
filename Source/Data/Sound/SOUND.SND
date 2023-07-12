@@ -1,0 +1,993 @@
+FITini
+
+[SoundSetup]
+ul sampleRate = 22050
+ul bitDepth = 16
+ul channels = 2
+ul soundHeapSize = 15500000
+ul DirectSound = 1
+
+ul StreamBufferSize = 88200
+ul StreamSampleRate = 22050
+ul StreamBitDepth = 16
+ul StreamChannels = 1
+
+ul wcSampleRate = 11025
+ul wcBitDepth = 8
+ul wcChannels = 1
+
+uc SFXVolume = 85
+uc RadioVolume = 102
+uc MusicVolume = 85
+
+f maxSoundDistance = 2800.0
+
+[SoundBites]
+ul numBites = 117
+
+[SoundBite0]            //No Longer Valid
+ul priority = 1
+ul cache = 1
+ul soundId = 0
+ul preload = 0
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite1]            //ER Laser SFX
+ul priority = 1
+ul cache = 1
+ul soundId = 1
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite2]            //Mech Explode
+ul priority = 0
+ul cache = 1
+ul soundId = 2
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite3]            //Laser SFX
+ul priority = 1
+ul cache = 1
+ul soundId = 3
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite4]            //Mech Collide
+ul priority = 0
+ul cache = 1
+ul soundId = 4
+ul preload = 1
+f volume = 0.7			// Volume can range from 1.0 to 0.0
+
+[SoundBite5]            //LRM Hit
+ul priority = 2
+ul cache = 2
+ul soundId = 5
+ul preload = 1
+f volume = 0.7			// Volume can range from 1.0 to 0.0
+
+[SoundBite6]            //Flamer Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 6
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite7]            //AutoCannon Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 7
+ul preload = 1
+f volume = 0.9			// Volume can range from 1.0 to 0.0
+
+[SoundBite8]            //LRM Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 8
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+
+[SoundBite9]            //SRM Hit
+ul priority = 1
+ul cache = 1
+ul soundId = 9
+ul preload = 1
+f volume = 0.7			// Volume can range from 1.0 to 0.0
+
+[SoundBite10]           //PPC & ER PPC Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 10
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite11]           //SRM Fire
+ul priority = 2
+ul cache = 0
+ul soundId = 11
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+
+[SoundBite12]           //Gauss Rifle Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 12
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite13]           //Footfall
+ul priority = 2
+ul cache = 0
+ul soundId = 13
+ul preload = 1
+f volume = 0.4			// Volume can range from 1.0 to 0.0
+
+[SoundBite14]           //SRM Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 14
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+
+[SoundBite15]           //Button 5
+ul priority = 2
+ul cache = 0
+ul soundId = 15
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite16]           //Button 7
+ul priority = 2
+ul cache = 0
+ul soundId = 16
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite17]           //Button 6
+ul priority = 2
+ul cache = 0
+ul soundId = 17
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite18]           //Buzzer 1
+ul priority = 2
+ul cache = 0
+ul soundId = 18
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite19]           //Critical Hit
+ul priority = 0
+ul cache = 1
+ul soundId = 19
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite20]           //Ping
+ul priority = 0
+ul cache = 1
+ul soundId = 19
+ul preload = 1
+f volume = 0.4			// Volume can range from 1.0 to 0.0
+
+[SoundBite21]           //Machine Gun Fire
+ul priority = 1
+ul cache = 1
+ul soundId = 21
+ul preload = 0
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite22]           //Thunderbolt
+ul priority = 1
+ul cache = 1
+ul soundId = 22
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite23]           //ER Laser Hit
+ul priority = 1
+ul cache = 1
+ul soundId = 23
+ul preload = 1
+f volume = 0.7			// Volume can range from 1.0 to 0.0
+
+[SoundBite24]           //Gauss/PPC Hit
+ul priority = 1
+ul cache = 1
+ul soundId = 24
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite25]           //AC Hit
+ul priority = 1
+ul cache = 1
+ul soundId = 25
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite26]           //Machine Gun Hit
+ul priority = 1
+ul cache = 1
+ul soundId = 26
+ul preload = 0
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite27]           //Eject
+ul priority = 0
+ul cache = 1
+ul soundId = 27
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite28]           //Tree Fall 2
+ul priority = 1
+ul cache = 1
+ul soundId = 28
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite29]           //Mech Fall
+ul priority = 1
+ul cache = 1
+ul soundId = 29
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite30]           //Swarm LRM Sound
+ul priority = 0
+ul cache = 1
+ul soundId = 30
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite31]           //Give up
+ul priority = 1
+ul cache = 1
+ul soundId = 31
+ul preload = 0
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite32]           //Static
+ul priority = 1
+ul cache = 1
+ul soundId = 32
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite33]           //long static
+ul priority = 1
+ul cache = 1
+ul soundId = 33
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite34]			//Perimeter Alarm General Alarm
+ul priority = 1
+ul cache = 1
+ul soundId = 34
+ul preload = 0
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite35]			//building_destruct.wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 35			
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+						
+[SoundBite36]			//electrical(loop).wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 36			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+						
+[SoundBite37]			//generator_hum(loop).wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 37			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+						
+[SoundBite38]			//radar_hum(loop).wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 38			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+						
+[SoundBite39]			//heavy_rotation(loop).wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 39			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+						
+[SoundBite40]			//orbital_gun.wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 40			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+						
+[SoundBite41]			//defense_silo.wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 41			
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+
+[SoundBite42]			//gate_open.wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 42			
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite43]			//train_xing(loop).wav
+ul priority = 1			
+ul cache = 1			
+ul soundId = 43
+ul preload = 1
+f volume = 0.3			// Volume can range from 1.0 to 0.0
+
+[SoundBite44]			//hpg_antenna.wav
+ul priority = 1			
+ul cache = 1
+ul soundId = 44
+ul preload = 1
+f volume = 0.4			// Volume can range from 1.0 to 0.0
+
+[SoundBite45]			//gate_close.wav
+ul priority = 1
+ul cache = 1
+ul soundId = 45
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite46]			//int_invalid
+ul priority = 1
+ul cache = 1
+ul soundId = 46
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite47]			//int_zoom
+ul priority = 1
+ul cache = 1
+ul soundId = 47
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite48]			//int_force
+ul priority = 1
+ul cache = 1
+ul soundId = 48
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite49]			//int_sensors
+ul priority = 1
+ul cache = 1
+ul soundId = 49
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite50]			//int_map_place
+ul priority = 1
+ul cache = 1
+ul soundId = 50
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite51]			//int_map_buttons
+ul priority = 1
+ul cache = 1
+ul soundId = 51
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite52]			//int_click_off
+ul priority = 1
+ul cache = 1
+ul soundId = 52
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite53]			//int_click_on
+ul priority = 1
+ul cache = 1
+ul soundId = 53
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite54]			//int_folder
+ul priority = 1
+ul cache = 1
+ul soundId = 54
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite55]			//int_outsideselect
+ul priority = 1
+ul cache = 1
+ul soundId = 55
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite56]			//int_page
+ul priority = 1
+ul cache = 1
+ul soundId = 56
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite57]			//int_select
+ul priority = 1
+ul cache = 1
+ul soundId = 57
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite58]			//int_start_mission
+ul priority = 1
+ul cache = 1
+ul soundId = 58
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite59]			//int_tab
+ul priority = 1
+ul cache = 1
+ul soundId = 59
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite60]			//engine_powerup
+ul priority = 1
+ul cache = 1
+ul soundId = 60
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite61]			//engine_powerDn
+ul priority = 1
+ul cache = 1
+ul soundId = 61
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite62]			//artilleryStrike
+ul priority = 1
+ul cache = 1
+ul soundId = 62
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite63]			//Air Strike
+ul priority = 1
+ul cache = 1
+ul soundId = 63
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite64]			//Window Open
+ul priority = 1
+ul cache = 1
+ul soundId = 64
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite65]			//Window Close
+ul priority = 1
+ul cache = 1
+ul soundId = 65
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite66]			//Start Group Select
+ul priority = 1
+ul cache = 1
+ul soundId = 66
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite67]			//End Group Select
+ul priority = 1
+ul cache = 1
+ul soundId = 67
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite68]			//Zoom In
+ul priority = 1
+ul cache = 1
+ul soundId = 68
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite69]			//Zoom Out
+ul priority = 1
+ul cache = 1
+ul soundId = 69
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite70]			//wrong button
+ul priority = 1
+ul cache = 1
+ul soundId = 70
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite71]			//FRP buttons
+ul priority = 1
+ul cache = 1
+ul soundId = 71
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite72]			//Fence Smashing
+ul priority = 1
+ul cache = 1
+ul soundId = 72
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite73]			//Building Collapses
+ul priority = 1
+ul cache = 1
+ul soundId = 73
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite74]			//VTOL Down and Up
+ul priority = 1
+ul cache = 1
+ul soundId = 74
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite75]			//VTOL Drop
+ul priority = 1
+ul cache = 1
+ul soundId = 75
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite76]			//JUMPJETS
+ul priority = 1
+ul cache = 1
+ul soundId = 76
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite77]			//Thunder1
+ul priority = 1
+ul cache = 1
+ul soundId = 77
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite78]			//Thunder2
+ul priority = 1
+ul cache = 1
+ul soundId = 78
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite79]			//Thunder3
+ul priority = 1
+ul cache = 1
+ul soundId = 79
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite80]			//Thunder4
+ul priority = 1
+ul cache = 1
+ul soundId = 80
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite81]			//Rain1
+ul priority = 1
+ul cache = 1
+ul soundId = 81
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite82]			//Rain2
+ul priority = 1
+ul cache = 1
+ul soundId = 82
+ul preload = 1
+f volume = 0.5			// Volume can range from 1.0 to 0.0
+
+[SoundBite83]			//Rain3
+ul priority = 1
+ul cache = 1
+ul soundId = 83
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite84]			//Rain4
+ul priority = 1
+ul cache = 1
+ul soundId = 84
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite85]			//Sensor 1
+ul priority = 1
+ul cache = 1
+ul soundId = 85
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite86]			//Sensor 2
+ul priority = 1
+ul cache = 1
+ul soundId = 86
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite87]			//Sensor 3
+ul priority = 1
+ul cache = 1
+ul soundId = 87
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite88]			//Sensor 4
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite89]			//wrong button
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite90]			//video button
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite91]			//Start Mission button
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite92]			// select
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite93]			// Next Back
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite94]			//Mission select
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite95]			//Main Menu
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite96]			// Highlight button
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite97]			//Exit Game
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite98]			//click
+ul priority = 1
+ul cache = 1
+ul soundId = 88
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite99]			//Mine Explosion
+ul priority = 1
+ul cache = 1
+ul soundId = 99
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite100]			// Digital highlight
+ul priority = 1
+ul cache = 1
+ul soundId = 100
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite101]			// mech repair
+ul priority = 1
+ul cache = 1
+ul soundId = 101
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite102]			// Pilot Medal
+ul priority = 1
+ul cache = 1
+ul soundId = 102
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite103]			// Kill Markers
+ul priority = 1
+ul cache = 1
+ul soundId = 103
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite104]			// Pilot Promoted
+ul priority = 1
+ul cache = 1
+ul soundId = 104
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite105]			// mech Destruct
+ul priority = 1
+ul cache = 1
+ul soundId = 105
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite106]			// Copter Power Down
+ul priority = 1
+ul cache = 1
+ul soundId = 106
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite107]			// Copter Power Up
+ul priority = 1
+ul cache = 1
+ul soundId = 107
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite108]			// Vehicle Power Down
+ul priority = 1
+ul cache = 1
+ul soundId = 108
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite109]			// Vehicle Power Up
+ul priority = 1
+ul cache = 1
+ul soundId = 109
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+
+[SoundBite110]			// load doors close
+ul priority = 1
+ul cache = 1
+ul soundId = 110
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite111]			// load doors opening
+ul priority = 1
+ul cache = 1
+ul soundId = 111
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite112]			// team chat
+ul priority = 1
+ul cache = 1
+ul soundId = 112
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+
+[SoundBite113]			// regular chat
+ul priority = 1
+ul cache = 1
+ul soundId = 113
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite114]			// regular chat
+ul priority = 1
+ul cache = 1
+ul soundId = 114
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+
+[SoundBite115]			// unready button click
+ul priority = 1
+ul cache = 1
+ul soundId = 115
+ul preload = 1
+f volume = 1.0			// Volume can range from 1.0 to 0.0
+
+[SoundBite116]	    		// Salvage craft sound Effect
+ul priority = 1
+ul cache = 1
+ul soundId = 115
+ul preload = 1
+f volume = 1.0
+
+[DigitalMusic]
+l NumDMS = 34
+f streamFadeDownTime = 1.0
+ul StreamBitDepth = 16
+ul StreamChannels = 1
+ul DigitalStreamBufferSize = 88200
+
+st DMS0 = "music00"		//"LiaoMStart2444ds" - Mission Start Tune
+b DMSLoop0 = f
+f DMSVolume0 = 0.8
+
+st DMS1 = "music01"		//"SteinerMStart1v2-444ds" - Mission Start Tune
+b DMSLoop1 = f
+f DMSVolume1 = 0.8
+
+st DMS2 = "music02"		//"LaioMStart1 444ds" - Mission Start Tune
+b DMSLoop2 = f
+f DMSVolume2 = 0.8
+
+st DMS3 = "music03"		//"DavionMStart1 444ds" - Mission Start Tune
+b DMSLoop3 = f
+f DMSVolume3 = 0.8
+
+st DMS4 = "music04"		//"DavionMStart2 444ds" - Mission Start Tune
+b DMSLoop4 = f
+f DMSVolume4 = 0.8
+
+st DMS5 = "music05"		//DaylightRaid444ds - Mission Start Tune
+b DMSLoop5 = f
+f DMSVolume5 = 0.8
+
+st DMS6 = "music06"		//Impending1v2 444ds - Mission Start Tune
+b DMSLoop6 = f
+f DMSVolume6 = 0.8
+
+st DMS7 = "music07"		//Kong444s - Mission Start Tune
+b DMSLoop7 = f
+f DMSVolume7 = 0.8
+
+st DMS8 = "music08"		//Davion Win 444ds - Win Tune
+b DMSLoop8 = f
+f DMSVolume8 = 0.8
+
+st DMS9 = "music09"		//Davion Lose 444ds - Lose Tune
+b DMSLoop9 = f
+f DMSVolume9 = 0.8
+
+st DMS10 = "music10"		//Pound444s - Mission Start Tune
+b DMSLoop10 = f
+f DMSVolume10 = 0.8
+
+st DMS11 = "music11"		//Predator444s - Mission Start Tune
+b DMSLoop11 = f
+f DMSVolume11 = 0.8
+
+st DMS12 = "music12"		//Zambeezi 444ds.wav - Mission Start Tune
+b DMSLoop12 = f
+f DMSVolume12 = 0.8
+
+st DMS13 = "music13"		//BadDream444s.wav - Mission Start Tune
+b DMSLoop13 = f
+f DMSVolume13 = 0.8
+
+st DMS14 = "music14"		//"War(loop)444s" - Combat Tune
+b DMSLoop14 = t
+f DMSVolume14 = 0.8
+
+st DMS15 = "music15"		//"Battle2(loop) 444ds" - Combat Tune
+b DMSLoop15 = t
+f DMSVolume15 = 0.8
+
+st DMS16 = "music16"		//Divergence(loop) 444s - Combat Tune
+b DMSLoop16 = t
+f DMSVolume16 = 0.8
+
+st DMS17 = "music17"		//Lost(loop)444s - Combat Tune
+b DMSLoop17 = t
+f DMSVolume17 = 0.8
+
+st DMS18 = "music18"		//Trenches(loop)444s - Combat Tune
+b DMSLoop18 = t
+f DMSVolume18 = 0.8
+
+st DMS19 = "music19"		//Attack(loop)444s - Combat Tune
+b DMSLoop19 = t
+f DMSVolume19 = 0.8
+
+st DMS20 = "music20"		//"LiaoLogistics 444ds" - Logistics Tune
+b DMSLoop20 = t
+f DMSVolume20 = 0.8
+
+st DMS21 = "music21"		//"desertAtmosphere444ds" - Ambient Loop
+b DMSLoop21 = T
+f DMSVolume21 = 0.7
+
+st DMS22 = "music22"		//"SteinerLogistics444ds" - Logistics Tune
+b DMSLoop22 = T
+f DMSVolume22 = 0.8
+
+st DMS23 = "music23"		//PainInFull(loop)444s - Logistics Tune
+b DMSLoop23 = T
+f DMSVolume23 = 0.8
+
+st DMS24 = "music24"		//splash(loop)444ds" - Sensor/LOS tune
+b DMSLoop24 = f
+f DMSVolume24 = 0.8
+
+st DMS25 = "music25"		//GrassAtmosphere(loop)444s - Ambient Loop
+b DMSLoop25 = T
+f DMSVolume25 = 0.7
+
+st DMS26 = "music26"		//"CarverVAtmosphere444ds" - Ambient Loop
+b DMSLoop26 = T
+f DMSVolume26 = 0.7
+
+st DMS27 = "music27"		//"Bandits444s" - Splash Screen Loop
+b DMSLoop27 = t
+f DMSVolume27 = 0.8
+
+st DMS28 = "music28"		//"DCorps(loop)444s" - Results Screen Loop
+b DMSLoop28 = T
+f DMSVolume28 = 0.8
+
+st DMS29 = "music29"		//SinkingFeeling44s - Mission Cue
+b DMSLoop29 = f
+f DMSVolume29 = 0.8
+
+st DMS30 = "music30"		//Velocity2-444s - Mission Cue
+b DMSLoop30 = f
+f DMSVolume30 = 0.8
+
+st DMS31 = "music31"		//TundraAtmosphere(loop)444s - Ambient Loop
+b DMSLoop31 = T
+f DMSVolume31 = 0.7
+
+st DMS32 = "music32"		//Relections - vista cue - pivotal story line change
+b DMSLoop32 = f
+f DMSVolume32 = 1.0
+
+st DMS33 = "music33"		//EndCredits Tune
+b DMSLoop33 = f
+f DMSVolume33 = 1.0
+
+FITend

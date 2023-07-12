@@ -1,0 +1,75 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  32700   'traintwo'  Type:  428 
+//
+//      Creation Date: 1/15/98      Creator: tom dowd
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     32700 
+st Crew =                                                  "PCREWC"
+ul Chassis =                                                428 
+st Name =                                                  "traintwo"
+ul VehicleTypeID =                                          428 
+uc Variation =                                              0 
+l DescIndex =                                              
+f CurTonnage =                                              0 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                         
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 0 
+ul Rating =                                                 0 
+uc MaxMoveSpeed =                                           0 
+
+[Armor]
+uc Type =                                                   0 
+f Tonnage =                                                 0 
+
+[Front]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Left]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Right]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Rear]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Turret]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[InventoryInfo]
+uc NumOther =                                               0 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+FITEnd

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4506077F2E0E04AF6B36DFFA3F7FE91D" />
+  <Asset Name="..\crateswithtarpDamX.ase" Type="Physical" Author="ngauvin" FileSize="32044" ModificationTime="2006-02-01T10:54:44.8419362-08:00" CRC="34D80B6F83434D71A55EB97703BA6275" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CratesDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,1101 @@
+//*********************************************************************************
+
+module mc2_17: integer;
+
+	const
+
+		#include_ "misconst.abi"
+		#include_ "sndconst.abi"
+
+	type
+
+	var
+#include_ "sndvar.abi"
+
+            static boolean		Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+//*******************************************MOVIE TRIGGERS
+			static integer			moviePhase;					//used to setup Camera Phases
+			eternal real[3]			startCameraPosition;
+			eternal real[3]			startCameraRotation;
+			eternal real[3]			camRotation;
+			eternal real[3]			camPosition;
+			eternal real			camTime;					//Used to store Time
+			eternal real			startTime;	
+			static boolean			removeCamDummies;		
+
+			eternal boolean			LiaoSonMoveToValley;		//Trigger which tells Liao Son to Move into Valley
+			eternal boolean			SteinerMoveToValley;		//Trigger which tells Steiner to Move into the Valley
+			eternal boolean			BothRunAways;				//Trigger which tells both Steiner and Liao Dude to Run for the Hills	
+			static boolean			StartShow;					//Trigger to start the game
+			static boolean			forceMovieToEnd;			//Check if the Player Hits EsC
+
+//*******************************************GAME TRIGGERS
+			static boolean			startingTacVO_Check;		//Trigger to check if the Timer has been set to play Tac's 1st VO
+			static boolean			startingTacVO_Play;		//Trigger to play Tac Officer VO
+			static real				startingTacVO_Timer;		//Timer used to Track when to play Tac's 1st VO
+			eternal boolean			liaoBetrays;			//Trigger Start Steiner Units to attack player
+			eternal boolean			LiaoSonAttack;			//Trigger to start Liao Son's Units
+
+			static real				liaoSonVOTimer;			//Timer used to play Liao Son's VO
+			static boolean			liaoSonVOTimer_Check; 		//Trigger to set Liao's Timer
+			static boolean			liaoSonVOTimer_Play;		//Trigger to play Liao Son's  VO
+			
+			static boolean			baxterVO1_Play;			//Trigger to play Baxter 1 VO
+			static boolean			LiaoSonGroupDeath_Check;	//Trigger used to detect if Liao Son is Dead
+			static real				LiaoSonGroupTimer;		//Timer used to play Baxter VO
+			
+			eternal integer			escortUnitID;			//Liao Son's UNIT ID
+			eternal Boolean			LiaoSendReinforce;		//Trigger to call in Liao Reinforcements
+			static real				LiaoSendReinforce_Timer;	//Timer used to Track when Liao Sent ReinForcements
+			
+			static real				SonDeathVOTimer;			//Timer used to play Liao Son's VO
+			static boolean			SonDeathVOTimer_Check; 		//Trigger to set Liao's Timer
+			static boolean			SonDeathVOTimer_Play;		//Trigger to play Liao Son's  VO
+
+			eternal Boolean			LiaoReinforce_1_Left; 		//Trigger used to track Liao Reinforcement Movements
+			eternal Boolean			LiaoReinforce_1_Right; 		//Trigger used to track Liao Reinforcement Movements
+			eternal Boolean			LiaoReinforce_1_Center;		//Trigger used to track Liao Reinforcement Movements
+			eternal Real			LiaoReinforce_Wait_Timer;	//Timer used to tell Reinforcement to Move
+
+			eternal integer			LiaoReinForce_Cat_1;		//Liao Catapult Escort ID # 1
+			eternal integer			LiaoReinForce_Cat_2;		//Liao Catapult Escort ID # 2
+
+			eternal boolean			goRebels;				//Trigger Used to Call in the Rebel		
+			eternal boolean			goRebelHover;			//Trigger used to call in the rebel hovercrahts.
+
+			eternal boolean			LiaoReinForce_2;			//Trigger used to call in Liao 2nd Wave of Reinforcement.
+			eternal boolean			LiaoReinForce_2a;			//Trigger used to call in Liao 2nd Wave of Reinforcement.			
+
+			static real				RebelHelpVOTimer;			//Timer used to play Rebel Help VO
+			static boolean			RebelHelpVOTimer_Check; 	//Trigger to set Rebel Timer
+			static boolean			RebelHelpVOTimer_Play;		//Trigger to play Rebel VO
+
+			static boolean			TacForce2VO_Play;	
+
+			static integer					numUnits, i;
+			static integer[12]				moverList;
+			static integer					camUnits, camI;
+			static integer[12]				camDummyList;
+			static worldposition			unitPosition;		//Trigger to play Tac 2nd VO
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		
+		integer		moverID;
+		WorldPosition	moverPos;
+
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*******************************************	MOVIE TRIGGERS Inits
+			
+			moviePhase = 0;
+			//getCameraPosition(startCameraPosition);
+			//getCameraRotation(startCameraRotation);
+			startCameraPosition[0] = -4543;
+			startCameraPosition[1] = -2666;
+			startCameraPosition[2] = 357.9;
+			startCameraRotation[0] = 35;
+			startCameraRotation[1] = -170.000;
+			startCameraRotation[2] = 1500;
+			
+			LiaoSonMoveToValley = False;
+			SteinerMoveToValley = False;
+			BothRunAways = False;
+			StartShow = False;
+
+//*******************************************	Game TRIGGERS Inits
+
+			liaoBetrays = False;
+
+			LiaoSonAttack = False;
+			liaoSonVOTimer_Check = False;
+			liaoSonVOTimer_Play = False;
+			
+			SonDeathVOTimer_Check = False;
+			SonDeathVOTimer_Play = False;	
+			LiaoSonGroupDeath_Check = False;
+
+			LiaoReinforce_1_Left = False;
+			LiaoReinforce_1_Right = False;
+			LiaoReinforce_1_Center = False;
+
+			LiaoReinforce_Wait_Timer = 50;
+
+			goRebels = False;
+			goRebelHover = False;
+
+			LiaoReinForce_2 = False;
+			LiaoReinForce_2a = False;
+
+			RebelHelpVOTimer_Check = False;
+			RebelHelpVOTimer_Play = False;
+
+			startingTacVO_Play = False;
+			startingTacVO_Check = False;
+
+			baxterVO1_Play = False;
+			TacForce2VO_Play = False;
+
+			LiaoSendReinforce = False;
+			LiaoSendReinforce_Timer = 0;
+
+			numUnits = getUnitMates(101, moverList);
+			i = 0;
+
+			camUnits = getUnitMates(105, camDummyList);
+			camI = 0;
+			removeCamDummies = False;
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+		
+//--------------------------------------------------- Mission 17 Stuff
+
+
+
+				if (Not ForceMovieToEnd) then
+				
+					if (MoviePhase == 0) then
+						camPosition[0] = -1943;
+						camPosition[1] = -1595;
+						camPosition[2] = 50;
+						CamRotation[0] = 10.25;		//ANGLE
+						CamRotation[1] = -89;		//ROTATION
+						camRotation[2] = 1200;		//HEIGHT				
+						setCameraPosition(camPosition);
+						setCameraRotation(CamRotation);
+						SetMovieMode;
+					endif;
+
+					if (MoviePhase == 0) and (getTime > 2) then
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+
+					if (MoviePhase == 1) then
+						camPosition[0] = -4726.92;
+						camPosition[1] = -2448.29;
+						camPosition[2] = 254.82;
+						CamRotation[0] = 25.75;
+						CamRotation[1] = 39.25;
+						camRotation[2] = 560;
+	mcprint("Cam2");					
+						setCameraGoalPosition(camPosition, 6.0);
+						MoviePhase = MoviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 2) then
+						camTime = GetLogisticsTime - startTime;
+						if camTime > 4500 then
+							setCameraGoalRotation(camRotation, 2.5);
+						endif;
+						if (camTime > 6000) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 3) then
+						camPosition[0] = -4726.92;
+						camPosition[1] = -2448.29;
+						camPosition[2] = 254.82;
+						CamRotation[0] = 25.75;
+						CamRotation[1] = 39.25;
+						camRotation[2] = 560;
+	mcprint("Cam3");					
+						setCameraGoalPosition(camPosition, 2.3);
+						setCameraGoalRotation(camRotation, 2.3);
+						startTime = GetLogisticsTime;
+						MoviePhase = MoviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 4) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3000) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+
+					if (MoviePhase == 5) then
+						camPosition[0] = -4726.92;
+						camPosition[1] = -2448.29;
+						camPosition[2] = 254.82;
+						CamRotation[0] = 25.75;
+						CamRotation[1] = 39.25;
+						camRotation[2] = 560;
+	mcprint("Cam4");					
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);
+						playWave("data\sound\mc2_17_8.wav", -1);		//Son say do nothing
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 6) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2000) then
+							LiaoSonMoveToValley = True;					//GO Son to meet spot
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 7) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3000) then
+	mcprint("OpenChannel");
+							playWave("data\sound\mc2_17_9.wav", -1); //Son say open channel
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+						
+					if (MoviePhase == 8) then
+						camPosition[0] = -4816.705;
+						camPosition[1] = -2057.199;
+						camPosition[2] = 264.7149;
+						CamRotation[0] = 25.75;
+						CamRotation[1] = 39.25;
+						camRotation[2] = 560;
+	mcprint("Cam5");	
+						setCameraGoalPosition(camPosition, 4.3);
+						setCameraGoalRotation(camRotation, 4.3);				
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 9) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 4300) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 10) then	
+						camPosition[0] = -5339.98;
+						camPosition[1] = -1091.900;
+						camPosition[2] = -338.400;
+						CamRotation[0] = 10;
+						CamRotation[1] = -136.000;
+						camRotation[2] = 560;
+	mcprint("Cam6");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);				
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 11) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 500) then
+	mcprint("GoodDay");
+							playWave("data\sound\mc2_17_a.wav", -1); //Renard say Good day
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 12) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2500) then
+							moviePhase = moviePhase + 1;
+						endif;				
+					endif;
+					
+					if (MoviePhase == 13) then
+						camPosition[0] = -4897.113;
+						camPosition[1] = -1568.911;
+						camPosition[2] = 205.021;
+						CamRotation[0] = 3;
+						CamRotation[1] = -158.00;
+						camRotation[2] = 560;
+	mcprint("Cam7");	
+						setCameraGoalPosition(camPosition, 6.0);
+						setCameraGoalRotation(camRotation, 6.0);				
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 14) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3800) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+
+					if (MoviePhase == 15) then
+	mcprint("SonImpress");
+						playWave("data\sound\mc2_17_b.wav", -1); //Son say Impress
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 16) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2200) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+
+					if (MoviePhase == 17) then
+						camPosition[0] = -5277.37;
+						camPosition[1] = -1414.85;
+						camPosition[2] = 1168.27;
+						CamRotation[0] = 25.75;
+						CamRotation[1] = 18;
+						camRotation[2] = 1200;
+	mcprint("Cam8");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 18) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 0400) then
+							SteinerMoveToValley = True;				//Go for Steiner Commander
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 19) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 1500) then
+	mcprint("Respect");
+							playWave("data\sound\mc2_17_C.wav", -1); //Respect from Renards		
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+									
+					if (MoviePhase == 20) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 4000) then
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+							
+					if (MoviePhase == 21) then			
+						camPosition[0] = -5063;
+						camPosition[1] = -1665.64;
+						camPosition[2] = 168.27;
+						CamRotation[0] = 30.25;
+						CamRotation[1] = -67.5;
+						camRotation[2] = 1200;
+	mcprint("Cam9");
+						setCameraGoalPosition(camPosition, 5.0);		
+						setCameraGoalRotation(camRotation, 5.0);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 22) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2500) then
+	mcprint("Mommy");
+							playWave("data\sound\mc2_17_D.wav", -1); //Mommy CHO made me 	
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 23) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2500) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+				
+					if (MoviePhase == 24) then
+						camPosition[0] = -5165.29;
+						camPosition[1] = -1444.03;
+						camPosition[2] = 165.27;
+						CamRotation[0] = 10;
+						CamRotation[1] = -171.00;
+						camRotation[2] = 800;
+	mcprint("Cam10");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 25) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 0500) then
+	mcprint("Friends");
+							playWave("data\sound\mc2_17_E.wav", -1); //Renard Speach both friends
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 26) then
+						camPosition[0] = -5165.29;
+						camPosition[1] = -1444.03;
+						camPosition[2] = 165.27;
+						CamRotation[0] = 10;
+						CamRotation[1] = -171.00;
+						camRotation[2] = 800;
+	mcprint("Cam11");	
+						setCameraGoalPosition(camPosition, 4.5);
+						setCameraGoalRotation(camRotation, 4.5);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 27) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2000) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 28) then
+						camPosition[0] = -5016.10;
+						camPosition[1] = -1640.33;
+						camPosition[2] = 179.25;
+						CamRotation[0] = 21.25;
+						CamRotation[1] = 0;
+						camRotation[2] = 810;
+	mcprint("Cam12");	
+						setCameraGoalPosition(camPosition, 11.0);
+						setCameraGoalRotation(camRotation, 11.0);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+						
+					if (MoviePhase == 29) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 4200) then
+	mcprint("Allied");
+							playWave("data\sound\mc2_17_F.wav", -1); //Renard We should Allied
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+								
+					if (MoviePhase ==30) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3500) then
+							startTime = GetLogisticsTime;
+	mcprint("LetDoit");
+							playWave("data\sound\mc2_17_G.wav", -1); //Cho Say Yeah to Allied
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase ==31) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2500) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 32) then
+						camPosition[0] = -5265.68;
+						camPosition[1] = -1328.90;
+						camPosition[2] = 167.49;
+						CamRotation[0] = 10;
+						CamRotation[1] = -167.625;
+						camRotation[2] = 1034.200;
+	mcprint("Cam13");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);	
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase == 33) then
+						camPosition[0] = -5144.000;
+						camPosition[1] = -1881.600;
+						camPosition[2] = 167.49;
+						CamRotation[0] = 10;
+						CamRotation[1] = -167.625;
+						camRotation[2] = 1034.200;
+	mcprint("Cam14");	
+						setCameraGoalPosition(camPosition, 8.0);
+						setCameraGoalRotation(camRotation, 7.0);
+	mcprint("Responds");
+						playWave("data\sound\mc2_17_H.wav", -1); //Renard Responds We want something
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+				
+					if (MoviePhase ==34) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 6800) then
+							startTime = GetLogisticsTime;
+	mcprint("ChoExpects");
+							playWave("data\sound\mc2_17_I.wav", -1); //Cho expects that much
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase ==35) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3100) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+
+					if (MoviePhase == 36) then
+						camPosition[0] = -5249;
+						camPosition[1] = -1456;
+						camPosition[2] = -100;
+						CamRotation[0] = 10;
+						CamRotation[1] = -138.37500;
+						camRotation[2] = -100;
+	mcprint("Cam15");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);
+	mcprint("MechDie");
+						playWave("data\sound\mc2_17_J.wav", -1); //Renard Mercs need to die
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase ==37) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 2500) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 38) then
+						camPosition[0] = -4928.68;
+						camPosition[1] = -2161.34;
+						camPosition[2] = 120;
+						CamRotation[0] = 12.25;
+						CamRotation[1] = 17.125;
+						camRotation[2] = 850;
+	mcprint("Cam16");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);
+	mcprint("SureThing");
+						playWave("data\sound\mc2_17_K.wav", -1); //Cho agree with deal
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					if (MoviePhase ==39) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 3000) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == 40) then
+						camPosition[0] = -5035.47;
+						camPosition[1] = -1787.9666;
+						camPosition[2] = 129;
+						CamRotation[0] = 37;
+						CamRotation[1] = -151.875;
+						camRotation[2] = 1500;
+	mcprint("Cam17");	
+						setCameraPosition(camPosition);
+						setCameraRotation(camRotation);
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;
+					
+					
+					if (MoviePhase == 41) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 0700) then
+	mcprint("Run4it");
+//							playWave("data\sound\mc2_17_4.wav", -1); //RUN for the Hills
+//							playWave("data\sound\mc2_17_l.wav", -1); //RUN for the Hills
+							BothRunAways = True;
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+						endif;
+					endif;		
+					
+					if (MoviePhase == 42) then
+	mcprint("Cam18");	
+						setCameraGoalPosition(startCameraPosition, 8.0);
+						setCameraGoalRotation(startCameraRotation, 8.0);
+						startTime = GetLogisticsTime;
+						moviePhase = moviePhase + 1;
+					endif;	
+					
+					if (MoviePhase == 43) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 8000) then
+							StartShow = True;
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase + 1;
+							removeCamDummies = True;
+							EndMovieMode;
+						endif;
+					endif;		
+			endif;
+			
+			if (forceMovieToEnd) and (Not StartShow) then
+					if (MoviePhase > 0) then
+						fadeToColor(4278190080,1.0);
+						startTime = GetLogisticsTime;
+						moviePhase = - 1;
+					endif;
+					
+					if (MoviePhase == -1) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 1000) then
+							removeCamDummies = True;
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == -2) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 10) then
+							setCameraGoalPosition(startCameraPosition, 0.5);
+							setCameraGoalRotation(startCameraRotation, 0.5);
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == -3) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 100) then
+							setCameraPosition(startCameraPosition);
+							setCameraRotation(startCameraRotation);
+							fadeToColor(0,1.0);
+							StartShow = True;
+							EndMovieMode;
+							BothRunAways = True;	
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;			
+			endif;
+				
+
+//*******************************************	GAME CoDE
+
+				//*******************************************************
+				//Make Camera Dummies go away
+				if (removeCamDummies) then
+					objectRemove(camDummyList[camI]);
+					if (camI  == camUnits - 1) then
+						camI  = 0;
+					else
+						camI  = camI  + 1;
+					endif;
+				endif;
+
+
+				//*******************************************************
+				//PlaceHolder Start the ball rolling
+			if (BothRunAways) and (Not startingTacVO_Check) then
+				startingTacVO_Check = True;	
+				startingTacVO_Timer = getTime + 5;
+			endif;
+			if ((getTime > startingTacVO_Timer) and (Not startingTacVO_Play)) And (startingTacVO_Check) then
+				startingTacVO_Play = True;
+				playVideo("MC2_17A.bik");
+//				playWave("data\sound\mc2_17_6.wav", -1); //Son attacks the player
+			endif;
+			
+			if (getTime > startingTacVO_Timer + 5) and (startingTacVO_Check) then						
+				liaoBetrays = True;
+//LiaoSonAttack = True;	
+//LiaoSendReinforce = True;
+//goRebels = True;
+//LiaoReinForce_2 = True;
+			endif;
+
+
+			//*******************************************
+			//Trigers to tell LiaoReinforcement to Attack the Base.
+				if (getTIme > LiaoSendReinforce_Timer + 90) AND (LiaoSendReinforce) then
+					LiaoReinforce_1_Center = True;
+
+				endif;
+				if (getTIme > LiaoSendReinforce_Timer + 60) AND (LiaoSendReinforce) then
+					LiaoReinforce_1_Right = True;
+
+				endif;
+				if (getTIme > LiaoSendReinforce_Timer + 60) AND (LiaoSendReinforce) then
+					LiaoReinforce_1_Left = True;
+
+				endif;
+
+
+			//*******************************************
+			// This is used to trigger Liao Son to attack the player
+			// Also Play the Liao Son VO
+			if ((checkObjectiveStatus(3) == 1)) And (Not liaoSonVOTimer_Check) then
+				liaoSonVOTimer = getTime + 6; //
+				liaoSonVOTimer_Check = True;
+			endif;
+				if ((getTime > liaoSonVOTimer) AND (Not SonDeathVOTimer_Play) and (liaoSonVOTimer_Check)) then
+		mcPrint("SonVO");
+					SonDeathVOTimer_Play = True;
+					playWave("data\sound\mc2_17_3.wav", -1); //Son attacks the player
+					LiaoSonAttack = True;	
+				endif;
+	
+
+
+			//*******************************************
+			// This is the Trigger for Liao Reinforcements to attack
+			//		Trigger After the Death of Liao Son
+			if ((checkObjectiveStatus(4) == 1)) And (Not SonDeathVOTimer_Check) then
+		mcPrint("DeathVO");
+				playWave("data\sound\mc2_17_5.wav", -1); //Son is dead
+				SonDeathVOTimer = getTime + 13; //
+				SonDeathVOTimer_Check = True;
+			endif;
+				//''''''''''''''''''''''''''''''''''''''''
+				//Plays the VO Lady Cho
+				if ((getTime > SonDeathVOTimer) AND (Not liaoSonVOTimer_Play) And (SonDeathVOTimer_Check)) then
+		mcPrint("Cho1");
+					liaoSonVOTimer_Play = True;
+					playVideo("MC2_17B.bik");
+//					playWave("data\sound\mc2_17_2.wav", -1); //Son is dead
+				endif;
+
+
+			//*******************************************
+			// This is the Trigger for Liao Reinforcements to attack
+			//		Trigger After the Death od Liao Son's Group
+			if ((checkObjectiveStatus(6) == 1) And (Not LiaoSonGroupDeath_Check)) and  (getTime > SonDeathVOTimer + 31) then
+				LiaoSonGroupTimer = getTime + 19; //
+				LiaoSonGroupDeath_Check = True;
+			endif;
+				//'''''''''''''''''''''''''''''''''''''''''
+				//Plays the Baxter Vo
+				if ((getTime > LiaoSonGroupTimer) AND (Not baxterVO1_Play) And (LiaoSonGroupDeath_Check)) then
+					baxterVO1_Play = True;
+		mcPrint ("Bax");
+					playVideo("MC2_17C.bik");
+//					playWave("data\sound\mc2_17_0.wav", -1); //Son is dead
+				endif;
+				//'''''''''''''''''''''''''''''''''''''''''
+				//Calls the Reinforcements
+				if ((getTime > LiaoSonGroupTimer + 10) And (baxterVO1_Play)) and (LiaoSendReinforce_Timer == 0)then
+					LiaoSendReinforce_Timer = getTime;
+					LiaoSendReinforce = True;	
+				endif;
+
+
+
+			//**********************************************
+			// This is the Trigger for Liao Reinforcements  Group 2 to attack
+			//		Trigger after Group Reinforcement 1 dies
+			if ((checkObjectiveStatus(5) == 1)) And (Not RebelHelpVOTimer_Check) then
+				RebelHelpVOTimer = getTime + 10; //
+				RebelHelpVOTimer_Check = True;
+				mcprint("Liao ForceENTERs2");
+			endif;
+
+					//'''''''''''''''''''''''''''''''''''''
+					//Plays the Group 2 Baxter VO
+				if ((getTime > RebelHelpVOTimer) AND (Not TacForce2VO_Play) And (RebelHelpVOTimer_Check)) then
+					TacForce2VO_Play = True;
+		mcprint("TAC2");
+					playVideo("MC2_17D.bik");
+//					playWave("data\sound\mc2_17_7.wav", -1); //Vo Rebels help the player
+				endif;
+
+					//'''''''''''''''''''''''''''''''''''''
+					//Plays the Group 2 Tac VO
+				if ((getTime > RebelHelpVOTimer + 29) AND (Not RebelHelpVOTimer_Play) And (TacForce2VO_Play)) then
+					RebelHelpVOTimer_Play = True;
+		mcprint("Bax2");
+					playVideo("MC2_17E.bik");
+//					playWave("data\sound\mc2_17_1.wav", -1); //Vo Rebels help the player
+					goRebels = True;
+				endif;
+
+				if ((getTime > RebelHelpVOTimer + 84) And (RebelHelpVOTimer_Check)) then
+					LiaoReinForce_2 = True;
+				endif;
+				if ((getTime > RebelHelpVOTimer + 124) And (RebelHelpVOTimer_Check)) then
+					LiaoReinForce_2a = True;
+				endif;
+
+				//*******************************************************
+				//Hack to make Guards Disappear
+				getObjectPosition(moverList[i], unitPosition);
+				if (unitPosition[0] < -7000) then
+					objectRemove(moverList[i]);
+				endif;			
+
+				if (i == numUnits - 1) then
+					i = 0;
+				else
+					i = i + 1;
+				endif;
+
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (5) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 6) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune4);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune1);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune1);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(5) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune11);
+			StartMusicTimer = getTime + 135; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+				//Test Movie Modes
+				// FIRST, Check if player pressed Esc through this movie!!	
+				if (getTime > 3) then
+					forceMovieToEnd = (forceMovieEnd == 1);
+				endif;
+
+					
+			
+
+//---------------------------------------------------- Mission 17 Stuff End
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

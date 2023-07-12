@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F728C973D87F5F92C7A4576D56384D24" />
+  <Asset Name="..\scrubbrushpatch3.ini" Type="Physical" Author="franksav" FileSize="159" ModificationTime="2006-03-03T01:28:47.9766384-08:00" CRC="A5FE0EFF794CCF8643CF03834C12F5E2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="ScrubBrushPatch3.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

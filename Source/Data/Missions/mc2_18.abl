@@ -1,0 +1,595 @@
+//*********************************************************************************
+
+module mc2_18: integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean		Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+//*******************************************NEW
+			eternal boolean			goGroup1;		//Trigger used to Call in Group 1
+			eternal boolean			goGroup2;		//Trigger used to Call in Group 2
+			eternal boolean			goGroup3;		//Trigger used to Call in Group 3
+			eternal boolean			goGroup4;		//Trigger used to Call in Group 4
+			eternal boolean			goSneaky;		//Trigger used to Call in Sneaky Group
+			eternal boolean			goGroup0;   	//Trigger used to Call in Group 0
+			static real				grp0Timer;		//Timer to Trigger Group ;
+
+			static boolean			objBeenAttackVO_Play;
+			static boolean			group2_Check;
+			static boolean			group3_Check;
+			static boolean			group4_Check;
+			static boolean			sneaky_Check;
+			static real				timerDelay;
+			static real				sneaky_Timer;
+			static integer			sneakyAreaTrigger;
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+//*******************************************MovieStuff
+
+			static integer				moviePhase;					//used to setup Camera Phases
+			eternal real[3]				camRotation;
+			eternal real[3]				camPosition;
+			eternal real				camTime;					//Used to store Time
+			eternal real				startTime;	
+			static boolean				removeCamDummies;	
+			static boolean				forceMovieTOEnd;	//Trigger used to check if Player Has Press <ESC> during movie
+			static boolean				cancelMovie;		//Trigger used to start the Cancel Movie Process
+			eternal real[3] 			camStartingPos;		//Array Used to Store the Camera Starting Position
+			eternal real[3] 			camStartingRot;		//Array Used to Store the Camera Starting Rotation
+			static boolean				StartShow;					//Trigger to start the game
+			
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		
+		integer		moverID;
+		WorldPosition	moverPos;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+	//****************camTriggers********************
+
+		MoviePhase = 1;
+       	getCameraPosition(camStartingPos); //Read Starting Pos
+		getCameraRotation(camStartingRot); //Read Starting ROt
+		camStartingRot[2] = 1200;			//For SomeReason I need to do this
+		StartShow = False;					//Trigger to start the game
+
+	//************************************
+	
+			goGroup1 = False;		//Trigger used to Call in Group 1
+			goGroup2 = False;		//Trigger used to Call in Group 2
+			goGroup3 = False;		//Trigger used to Call in Group 3
+			goGroup4 = False;		//Trigger used to Call in Group 4
+			goSneaky = False;	
+			objBeenAttackVO_Play = False;
+			group2_Check = False;
+			group3_Check = False;
+			group4_Check = False;
+			sneaky_Check = False;
+			goGroup0 = False;
+
+
+		worldLoc[0] = 5482;
+		worldLoc[1] = 4580;
+		worldLoc[2] = 0.0;
+		convertCoords(0, worldLoc, cellLoc);
+		sneakyAreaTrigger = addTriggerArea(cellLoc[0] -18, cellLoc[1] - 18, cellLoc[0] + 18, cellLoc[1] + 18, 2, 0);
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+		
+//--------------------------------------------------- Mission 18 Stuff
+				
+				// FIRST, Check if player pressed Esc through this movie
+				forceMovieToEnd = (forceMovieEnd == 1);
+		
+		
+		if (Not ForceMovieToEnd) then
+			if (MoviePhase == 1) then
+				camPosition[0] = -1967.58;
+				camPosition[1] = -2016.62;
+				camPosition[2] = 113.777;
+				CamRotation[0] = 88;
+				CamRotation[1] = 179.99;
+				camRotation[2] = 1600;
+	mcprint("Start");					
+				setCameraPosition(camPosition);
+				setCameraRotation(camRotation);
+				MoviePhase = MoviePhase + 1;
+				SetMovieMode;
+			endif;
+			
+			if (MoviePhase == 2) and (getTime > 2) then
+				MoviePhase = MoviePhase + 1;
+			endif;
+			
+			if (MoviePhase == 3) then
+				camPosition[0] = -1898.636;
+				camPosition[1] = -1984.000;
+				camPosition[2] = 114.95;
+				CamRotation[0] = 45.25;
+				CamRotation[1] = 126.875;
+				camRotation[2] = 1545.19;
+	mcprint("cam1");					
+				setCameraGoalPosition(camPosition, 3.0);
+				setCameraGoalRotation(camRotation, 3.0);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase + 1;
+			endif;
+										
+			if (MoviePhase == 4) then
+				camTime = GetLogisticsTime - startTime;
+				if (camTime > 2900) then
+					moviePhase = moviePhase + 1;
+				endif;
+			endif;
+			
+			if (MoviePhase == 5) then
+				camPosition[0] = -1898.63;
+				camPosition[1] = -1984.00;
+				camPosition[2] = 114.95;
+				CamRotation[0] = 10;
+				CamRotation[1] = 43.62;
+				camRotation[2] = 1500;
+	mcprint("cam2");					
+				setCameraGoalPosition(camPosition, 3.0);
+				setCameraGoalRotation(camRotation, 3.0);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase + 1;
+			endif;
+			
+			if (MoviePhase == 6) then
+				camTime = GetLogisticsTime - startTime;
+				if (camTime > 2900) then
+				moviePhase = moviePhase + 1;
+				endif;
+			endif;
+			
+			if (MoviePhase == 7) then
+				camPosition[0] = -1898.63;
+				camPosition[1] = -1984.00;
+				camPosition[2] = 114.95;
+				CamRotation[0] = 10;
+				CamRotation[1] = -32.875;
+				camRotation[2] = 1141.64;
+	mcprint("cam3");					
+				setCameraGoalPosition(camPosition, 3.0);
+				setCameraGoalRotation(camRotation, 3.0);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase + 1;
+			endif;
+			
+			if (MoviePhase == 8) then
+				camTime = GetLogisticsTime - startTime;
+				if (camTime > 2800) then
+					moviePhase = moviePhase + 1;
+				endif;
+			endif;
+			
+			if (MoviePhase == 9) then
+				camPosition[0] = -1898.63;
+				camPosition[1] = -1984.00;
+				camPosition[2] = 114.90;
+				CamRotation[0] = 10;
+				CamRotation[1] = -179;
+				camRotation[2] = 1500;
+	mcprint("cam4");					
+				setCameraGoalPosition(camPosition, 3.2);
+				setCameraGoalRotation(camRotation, 3.2);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase + 1;
+			endif;
+			
+			if (MoviePhase == 10) then
+				camTime = GetLogisticsTime - startTime;
+				if (camTime > 4200) then
+					moviePhase = moviePhase + 1;
+				endif;
+				if (camTime > 3000) then
+					EndMovieMode;
+				endif;
+			endif;
+			
+			
+			if (MoviePhase == 11) then
+	mcprint("EndCam");					
+				setCameraGoalPosition(camStartingPos, 0.5);
+				setCameraGoalRotation(camStartingRot, 0.5);
+				setCameraPosition(camStartingPos);
+				setCameraRotation(camStartingRot);
+				startTime = GetLogisticsTime;
+				MoviePhase = MoviePhase + 1;
+				startShow = True;		//You waited too long. No Cancel for you.
+			endif;
+		endif;
+		
+		///***************If you cancel you get this
+				if (forceMovieToEnd) and (Not StartShow) then
+					if (MoviePhase > 0) then
+						fadeToColor(4278190080,1.0);
+						startTime = GetLogisticsTime;
+						moviePhase = - 1;
+					endif;
+					
+					if (MoviePhase == -1) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 1000) then
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == -2) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 10) then
+							setCameraGoalPosition(camStartingPos, 0.5);
+							setCameraGoalRotation(camStartingRot, 0.5);
+							startTime = GetLogisticsTime;
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;
+					
+					if (MoviePhase == -3) then
+						camTime = GetLogisticsTime - startTime;
+						if (camTime > 100) then
+							setCameraPosition(camStartingPos);
+							setCameraRotation(camStartingRot);
+							fadeToColor(0,1.0);
+							StartShow = True;
+							EndMovieMode;
+							moviePhase = moviePhase - 1;
+						endif;
+					endif;			
+				endif;
+					
+			
+
+	
+			
+
+
+
+				
+			
+				
+				
+
+			//**************************************************
+			//Trigger for Group 1	
+			if ((checkObjectiveStatus(11) == 1)) and (Not goGroup0) then	
+		//mcprint("GOGRP0");
+				grp0Timer = getTime + 70;
+				goGroup0 = True;
+			endif;
+
+		
+			//**************************************************
+			//Trigger for Group 1			
+			if ((getTime >  grp0Timer) and (Not goGroup1)) and (goGroup0) then
+		//mcprint("GOGRP1");
+				goGroup1 = True;
+			endif;		
+
+
+			//**************************************************
+			//Trigger for Group 2
+			if ((checkObjectiveStatus(5) == 1)) and (Not group2_Check) then
+				timerDelay = getTime + 30;
+				group2_Check = True;
+			endif;
+				if (getTime > timerDelay) and (group2_Check) then
+		//mcprint("GOGRP2");
+					goGroup2 = True;	
+				endif;
+
+			//**************************************************
+			//Trigger for Group 3
+			if ((checkObjectiveStatus(6) == 1)) and (Not group3_Check) then
+				timerDelay = getTime + 30;
+				group3_Check = True;
+				playWave("data\sound\mc2_18_1.wav", -1); //VO plays when Objective building is attacked
+			endif;
+				if (getTime > timerDelay) and (group3_Check) then
+		//mcprint("GOGRP3");
+					goGroup3 = True;	
+				endif;
+
+			//**************************************************
+			//Trigger for Group 4
+			if ((checkObjectiveStatus(7) == 1)) and (Not group4_Check) then
+				timerDelay = getTime + 30;
+				group4_Check = True;
+			endif;
+				if (getTime > timerDelay) and (group4_Check) then
+		//mcprint("GOGRP4");
+					goGroup4 = True;	
+				endif;
+
+			//**************************************************
+			//Trigger for Sneaky
+			if ((checkObjectiveStatus(9) == 1)) and (Not sneaky_Check) then
+				sneaky_Timer = getTime + 10;
+				sneaky_Check = True;
+			endif;
+				if (getTime > sneaky_Timer) and (sneaky_Check) and (not goSneaky) then
+		mcprint("Sneaky");
+					goSneaky = True;	
+				endif;
+			
+			
+			//**************************************************
+			//VO plays when Objective building gets's attacked
+			if (getTime > 6 ) and  (Not objBeenAttackVO_Play) Then
+				objBeenAttackVO_Play = True;
+				playWave("data\sound\mc2_18_0.wav", -1); //VO plays when Objective building is attacked
+			endif;
+				
+
+			//**************************************************
+			//Area Trigger 4 group Sneaky
+			if  (isTriggerAreaHit(sneakyAreaTrigger)) and  (Not goSneaky) Then
+		mcprint("areaTrigger");
+				goSneaky = True;		
+			endif;
+			
+			
+
+
+//---------------------------------------------------- Mission 18 Stuff End
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (4) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+			//	mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune0);
+	 // 		playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune3);
+			//	mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune3);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+	
+	if (NOT (checkObjectiveStatus(8) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+			//	  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune3);
+			StartMusicTimer = getTime + 37; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

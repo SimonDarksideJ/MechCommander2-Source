@@ -1,0 +1,30 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=24
+
+[ObjectType]
+st Name=""
+l Appearance=0
+l ExplosionObject=0
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BeamProjectileData]
+l FiringSoundFX			= 1				//Sound Effect ID
+
+f BulgeWidth			= 3.0
+ul MidEdgeRGB			= 0xFFFFFF			//Color of the start of the beam
+ul MiddleRGB			= 0x5A5AFF			//Color of the end of the beam
+uc EdgeAlpha			= 0x3f    
+uc BoltAlpha			= 0xff   
+
+b IsBeam 				= t
+f BeamDuration 			= 0.5				//(seconds)
+f BeamWiggle 			= 1.0				//(magic/wizard)
+st TextureName 			= "fx_laser03"		//(located in data\effects directory)
+f UVAnimRate 			= 1.0				//Amount UV moves per second)
+f UVRepeat 				= 15.0			//Amount UV repeats along beam)
+f UnitLength			= 100.0			//Amount of distance necessary to repeat above times
+
+FITend 

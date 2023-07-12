@@ -1,0 +1,262 @@
+//***************************************************************************
+
+module CHunterKillerBrain00005 : integer;
+
+	const
+
+		#include_ "cconst.abi"
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;		// Meters... Set this to distance Clanner will give up.
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		static integer		PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static position		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+
+		integer		TempNum;
+		integer		HitNum;
+		integer		NumNear;
+		IntList		TempList;
+		IntList		HitList;
+		static real			HungerRange;
+		static boolean		AttackInOrder;
+		static real			FreezeTargetRange;
+		static boolean		StartPointKillingZone;
+
+		static boolean			WithdrawAtPoint;
+		static real[3]			WithdrawPoint;
+		static boolean			InWithdrawMode;
+		static boolean			Withdraw;
+		static boolean			LetMeWithdraw;
+ 		static boolean			WithdrawSpeed;
+
+		real					closestDistance;
+		real					thisDistance;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// 
+		setIntegerMemory(MI_MODE, COMBAT_MODE_DESTROY);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 280.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 300.0);
+		setRealMemory(MI_PRIORITY, 5.0); // Used by guard brain only at this point.
+		setRealMemory(MI_MIN_ACTION, 10.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+
+		//-----------------------------------------------------------------------
+		// Enter/Change any Hunter Killer Attributes here
+
+		MoveSpeed = WALK;		// Set this to RUN or WALK to set his initial speed.
+		HungerRange = getRealMemory(MI_ENGAGE_RADIUS);
+		AttackInOrder = FALSE;	// Set this to TRUE to make him go after players within HungerRange first
+		FreezeTargetRange = 300.0;	// Set this to range within which he will stick to this target
+		StartPointKillingZone = TRUE;	// TRUE makes hunger radius attached to start point instead of 'Mech
+
+		//-----------------------------------------------------------------------
+		// If you want to withdraw at some point, edit this.
+
+		LetMeWithdraw = FALSE;  // Set this to TRUE to let it happen.
+
+		WithdrawSpeed = RUN;	// Enter WALK or RUN to set the speed he moves when withdrawing
+								// Note:  This depends on use of WithdrawAtPoint below.
+
+		WithdrawAtPoint = FALSE;  // Set this to TRUE if specifying withdraw coordinates.
+		WithdrawPoint[0] = 4500.0; // X  Enter your coordinates here.
+		WithdrawPoint[1] = 4500.0; // Y
+		WithdrawPoint[2] = 0.0; // Z
+
+		//******************************
+		// Don't change this stuff.
+		//--------------------------
+
+		HunterKiller = TRUE;	// Set this to TRUE to make it KNOW where its primary target is.
+
+		moveToPosition[0] = StartPoint[0];
+		moveToPosition[1] = StartPoint[1];
+		moveToPosition[2] = StartPoint[2];
+
+		InWithdrawMode = FALSE;
+		Withdraw = FALSE;
+
+		PrimaryTarget = 0;
+
+
+endfunction;
+
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+	if (NOT Withdraw) then
+
+		if ((CurrentTarget == 0) or (distancetoObject(CurrentTarget,Me) > FreezeTargetRange)) then
+
+			TempNum = BuildActiveUnitList(TempList,PLAYER_FORCE);
+			if (NOT StartPointKillingZone) then
+				NumNear = OrderByDistance(TempList, TempNum, Me, NullPoint, HungerRange);
+			else
+				NumNear = OrderByDistance(TempList, TempNum, 0, StartPoint, HungerRange);
+			endif;
+			dstring = "Closest Player = ";
+			concat(dstring,TempList[0]);
+			print(dstring);
+			HitNum = ConcatIntList(HitList,0,TempList,NumNear);
+			TempNum = BuildActiveUnitList(TempList,ALLIED_FORCE);
+			if (NOT StartPointKillingZone) then
+				NumNear = OrderByDistance(TempList, TempNum, Me, NullPoint, HungerRange);
+			else
+				NumNear = OrderByDistance(TempList, TempNum, 0, StartPoint, HungerRange);
+			endif;
+			dstring = "Closest Allied = ";
+			concat(dstring,TempList[0]);
+			print(dstring);
+			HitNum = ConcatIntList(HitList,HitNum,TempList,NumNear);
+			dstring = "Num on Hit List = ";
+			concat(dstring,HitNum);
+			print(dstring);
+			if (NOT AttackInOrder) then
+				if (NOT StartPointKillingZone) then
+					NumNear = OrderByDistance(HitList, HitNum, Me, NullPoint, HungerRange);
+				else
+					NumNear = OrderByDistance(HitList, HitNum, 0, StartPoint, HungerRange);
+				endif;
+			endif;
+			if (HitNum > 0) then
+				if (CurrentTarget <> HitList[0]) then
+					orderAttackObject(HitList[0],ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+					CurrentTarget = HitList[0];
+					setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+					MovingToObjective = FALSE;
+				endif;
+			else
+				if (CurrentTarget <> 0) then
+					breakChallenge(CurrentTarget);
+					orderwait(0.0);
+					if (StartPointKillingZone) AND (NOT MovingToObjective) then
+						orderMoveTo(StartPoint,MoveSpeed);
+						MovingToObjective = TRUE;
+					endif;
+				endif;
+			endif;
+
+		endif;
+
+    else	// Withraw will make him leave the mission area. If you want him to move to specific
+			// point to exit, set WithdrawAtPoint to TRUE (above) and edit the coordinates.
+
+		if (CurrentTarget <> 0) then
+			breakChallenge(CurrentTarget);
+		endif;
+
+		MoveSpeed = WithdrawSpeed;
+
+		if (WithdrawAtPoint) then
+
+			if ((NOT InWithdrawMode) AND (NOT MovingToObjective)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderMoveTo(WithdrawPoint,MoveSpeed);
+				MovingToObjective = TRUE;
+			endif;
+												  
+			if ((NOT InWithdrawMode) AND (distancetoposition(Me,WithdrawPoint) <= MIN_DISTANCE)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw(CUR_OBJECT_ID);
+				InWithdrawMode = TRUE;
+			endif;
+
+		else // Not WithdrawAtPoint
+
+			if (NOT InWithdrawMode) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw(CUR_OBJECT_ID);
+				InWithdrawMode = TRUE;
+			endif;
+
+		endif;
+
+	endif; // End of Withdraw Loop
+
+	CurrentCombatMode = getIntegerMemory(MC_MODE);		
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************

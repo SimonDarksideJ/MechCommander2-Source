@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AFD0E2CABBFFDD5FA1D2DFC3853F8751" />
+  <Asset Name="..\chemicalplant.ini" Type="Physical" Author="franksav" FileSize="580" ModificationTime="2006-03-03T01:28:16.2268416-08:00" CRC="8580616253E31EDB898AAE72E711C095" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="chemicalPlant.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="chemicalplantL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="chemicalplantL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="chemicalPlantX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="chemicalPlantdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="chemicalplantDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Chemical Plant" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

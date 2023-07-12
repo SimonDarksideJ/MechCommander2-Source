@@ -1,0 +1,420 @@
+//*********************************************************************************
+
+module MissionBrain_Heidi : integer;
+
+     //--------------------------------------------------------
+     // Mission Name: Heidi
+     // Created: 7/19/99 
+     //--------------------------------------------------------
+
+//------------------------------------------------------------------
+//
+//     Constant Definitions
+//
+//------------------------------------------------------------------
+     const
+
+          #include_ "misconst.abi"
+
+
+//------------------------------------------------------------------
+//
+//     Type Definitions
+//
+//------------------------------------------------------------------
+     type
+
+
+//------------------------------------------------------------------
+//
+//     Variable Declarations
+//
+//------------------------------------------------------------------
+      var
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+	    static Position	startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	    
+	static boolean			startCam;
+	static boolean			endCam;
+	static boolean			fadeDown;
+	static boolean			forceMovieToEnd;
+	static real			velTime;
+	static real			zoomFOV;
+	static real			startFOV;
+	static integer			camObject;
+
+//------------------------------------------------------------------
+//
+//     Init Function    (automatically run first time through)
+//
+//------------------------------------------------------------------
+function init;
+
+       code
+
+            ScenarioResult = PLAYING;
+            PlayerForceDead = FALSE;
+            ClanForceDead = FALSE;
+            AlliedForceDead = FALSE;
+            ExitTimerSet = FALSE;
+            VictoryLevel = 0; // New Scheme
+            NextSecond = 1.0;
+            GeneralAlarmCounter = -1;
+            GeneralAlarm = FALSE;
+            Flag1 = FALSE;
+            Flag2 = FALSE;
+            Flag3 = FALSE;
+            Flag4 = FALSE;
+            Flag5 = FALSE;
+            Flag6 = FALSE;
+            Flag7 = FALSE;
+            Flag8 = FALSE;
+            Flag9 = FALSE;
+            Flag10 = FALSE;
+            PlayPASound = FALSE;
+            PlayGASound = FALSE;
+
+            Objective_0_Decided = FALSE;
+	    
+		startCam = FALSE;
+		endCam = FALSE;
+		fadeDown = TRUE;
+		forceMovieToEnd = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+endfunction;
+
+//------------------------------------------------------------------
+//
+//     Main Code
+//
+//------------------------------------------------------------------
+      code
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+             //---------------------------------------
+            // Force Dead Checks
+            //---------------------------------------
+ //           if (isDeadorFled(PLAYER_FORCE)) then
+   //               PlayerForceDead = TRUE;
+     //       endif;
+       //     if (isDeadorFled(CLAN_FORCE)) then
+         //         ClanForceDead = TRUE;
+//            endif;
+//            if (isDeadorFled(ALLIED_FORCE)) then
+//                  AlliedForceDead = TRUE;
+//            endif;
+
+            //---------------------------------------
+            // SET EXIT TIMER IF PLAYER DEAD/DISABLED
+            //---------------------------------------
+
+//            if ((NOT ExitTimerSet) AND (PlayerForceDead)) then
+//                  // Fail any Undecided Player Objectives
+//                  if (checkObjectiveStatus(0) == INCOMPLETE) then
+//                        setObjectiveStatus(0, FAILED);
+//                  endif;
+//            endif;
+
+            //---------------------------------------
+            // Test Camera Scripting
+            //---------------------------------------
+	/*
+	//Test Movie Modes
+	// FIRST, Check if player pressed Esc through this movie!!
+	forceMovieToEnd = (forceMovieEnd == 1);
+	
+	//Always allow the movie to start.
+	if (NOT startCam) then
+		SetMovieMode;		//You can keep calling this, it knows not to reset all the time!
+		if (nextSecond > 10) then
+			startCam = TRUE;
+		endif;
+	endif;
+	
+	if ((NOT forceMovieToEnd) AND (startCam) AND (NOT endCam)) then
+		if (fadeDown) then
+			fadeToColor(4278190080,5.0);
+			fadeDown = FALSE;
+		endif;
+		
+		if (nextSecond > 20) then
+			endCam = TRUE;
+		endif;
+	endif;
+	
+	if ((NOT forceMovieToEnd) AND endCam) then
+		fadeToColor(0,3.0);	//Fade Up to transparent.  This is the magic number to make that happen!
+		if (nextSecond > 30) then
+			endMovieMode;
+		endif;
+	endif;
+	
+	if (forceMovieToEnd) then
+		startCam = TRUE;
+		endCam = TRUE;
+		endMovieMode;
+	endif;
+	*/
+ 		//FOR STEVE SCOTT -- CAMERA INITIAL POSITION CODE
+//		if (NOT startCam) then
+//			aPoint[0] = -831.192627;	//Camera X Position
+//			aPoint[1] = 2280.819824;	//Camera Y Position
+//			aPoint[2] = -7.408423; 		//Camera Z position
+//			
+//			SetCameraPosition(aPoint);
+//			
+//			aPoint[0] = 18.0;		//Camera Angle
+//			aPoint[1] = -57.5;		//Camera Rotation
+//			aPoint[2] = 800.0;		//Camera Altitude
+//			
+//			SetCameraRotation(aPoint);
+//			
+//			//Keep doing this until 5 seconds have elapsed
+//			if (nextSecond > 5) then
+//				startCam = TRUE;
+//			endif;
+//		endif;
+		
+	//Test Opening Script for Mission
+//		if (NOT startCam) then
+//			aPoint[0] = 10.0;
+//			aPoint[1] = 10.0;
+//			aPoint[2] = 2000.0;
+//			
+//			SetCameraPosition(aPoint);
+//			
+//			aPoint[0] = 89.0;
+//			aPoint[1] = 235.0;
+//			aPoint[2] = 0.0;
+//			
+//			SetCameraRotation(aPoint);
+//			
+//			startCam = TRUE;
+//			
+//			aPoint[0] = 0.0;
+//			aPoint[1] = 0.0;
+//			apoint[2] = 200.0;
+//			
+//			SetCameraGoalPosition(aPoint,5.0);
+//		endif;
+//		
+//		GetCameraPosition(aPoint);
+//		
+//		if ((aPoint[0] == 0.0) AND (aPoint[1] == 0.0) AND NOT endCam) then
+//			GetObjectPosition(PLAYER_VEHICLE0_LANCE0,aPoint);
+//			SetCameraGoalPosition(aPoint,20.0);
+//			
+//			aPoint[0] = 25.0;
+//			aPoint[1] = 0.0;
+//			aPoint[2] = 0.0;
+//			SetCameraGoalRotation(aPoint,10.0);
+//			
+//			endCam = TRUE;
+//		endif;
+		
+	//Test LookAtObject
+//		SetCameraLookObject(PLAYER_VEHICLE1_LANCE0);
+//		
+//		camObject = GetCameraLookObject;
+//		
+//		SetCameraLookObject(camObject);
+//		
+//		zoomFOV = getCameraFrameLength;
+		
+	//Test ZOOM/FOV Goals
+//		if (NOT startCam) then
+//			startFOV = GetCameraZoom;
+//			SetCameraGoalZoom(20.0,10.0);
+//			startCam = TRUE;
+//		endif;
+//		
+//		if ((GetCameraZoom == 20.0) AND not endCam) then
+//			SetCameraGoalZoom(startFOV,5.0);
+//			endCam = TRUE;
+//		endif;
+		
+	//Test Zoom/FOV
+//		if (NOT startCam) then
+//			velTime = gettime + 5.0;
+//			startFOV = GetCameraZoom;
+//			zoomFOV = startFOV;
+//			startCam = TRUE;
+//		endif;
+//		
+//		if (NOT endCam) then
+//			zoomFOV = zoomFOV - 1.0;
+//			SetCameraZoom(zoomFOV);
+//		endif;
+//		
+//		if (gettime > velTime) then
+//			endCam = TRUE;
+//			SetCameraZoom(startFOV);
+//		endif;
+		
+		
+	//Test Rotation Goals
+//		if (NOT startCam) then
+//			GetCameraRotation(startP);
+//			aPoint[0] = 89.0;
+//			aPoint[1] = 180.0;
+//			aPoint[2] = 0.0;
+//			SetCameraGoalRotation(aPoint,15.0);
+//			startCam = TRUE;
+//		endif;
+//		
+//		GetCameraRotation(aPoint);
+//		if ((aPoint[0] == 89.0) AND (aPoint[1] == 180.0) AND NOT endCam) then
+//			SetCameraGoalRotation(startP,5.0);
+//			endCam = TRUE;
+//		endif;
+
+			
+	//Test Rotation
+//		if (NOT startCam) then
+//			velTime = gettime + 2.0;
+//			GetCameraRotation(aPoint);
+//			startCam = TRUE;
+//			startP[0] = aPoint[0];
+//			startP[1] = aPoint[1];
+//			startP[2] = aPoint[2];
+//		endif;
+//		
+//		if (NOT endCam) then
+//			startP[0] = startP[0] + 2.0;
+//			startP[1] = startP[1] + 10.0;
+//		
+//			SetCameraRotation(startP);
+//		endif;
+//		
+//		if ((gettime > velTime) AND NOT endCam) then
+//			SetCameraRotation(aPoint);
+//			endCam = TRUE;
+//		endif;
+		
+	//Test Velocity
+//		if (NOT startCam) then
+//			velTime = gettime + 10.0;
+//			aPoint[0] = -50.0;
+//			aPoint[1] = -70.0;
+//			aPoint[2] = 30.0; 
+//			startCam = TRUE;
+//		endif;
+//		
+//		SetCameraVelocity(aPoint);
+//		
+//		if (gettime > velTime) then
+//			aPoint[0] = 0.0;
+//			aPoint[1] = 0.0;
+//			aPoint[2] = 0.0; 
+//			SetCameraVelocity(aPoint);
+//		endif;
+		
+	//Test Velocity Goals
+//		if (NOT startCam) then
+//			aPoint[0] = -50.0;
+//			aPoint[1] = -70.0;
+//			aPoint[2] = 30.0;
+//	    
+//			SetCameraGoalVelocity(aPoint,10.0);
+//			startCam = TRUE;
+//		endif;
+//		
+//		GetCameraVelocity(aPoint);
+//		
+//		if ((aPoint[0] == -50.0) AND (aPoint[1] == -70.0) AND (aPoint[2] == 30.0)) then
+//			aPoint[0] = 0.0;
+//			aPoint[1] = 0.0;
+//			aPoint[2] = 0.0;
+// 			SetCameraGoalVelocity(aPoint,15.0);
+//		endif;
+
+	    
+	//Test Position Goals
+//		if (NOT startCam) then
+//			GetCameraPosition(startP);
+//			aPoint[0] = 10.0;
+//			aPoint[1] = 10.0;
+//			aPoint[2] = 0.0;
+//	    
+//			SetCameraGoalPosition(aPoint,20.0);
+//		    
+//			if (NOT (startP[0] == 0.0)) then
+//				startCam = TRUE;
+//			endif;
+//		endif;
+//		
+//		GetCameraPosition(aPoint);
+//		
+//		if ((aPoint[0] == 10.0) AND (aPoint[1] == 10.0) AND NOT endCam) then
+//			aPoint[0] = startP[0];
+//			aPoint[1] = startP[1];
+//			aPoint[2] = startP[2];
+// 			SetCameraGoalPosition(startP,15.0);
+//			endCam = TRUE;
+//		endif;
+
+            //---------------------------------------
+            // END SCENARIO
+            //---------------------------------------
+
+	if (getMissionStatus <> PLAYING) then
+		//Just set scenarioResult to 9999 here and you're all set!!
+	endif;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

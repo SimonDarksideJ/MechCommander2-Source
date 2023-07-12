@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1DEF6959A15690E820226655835AF506" />
+  <Asset Name="..\hollander.ini" Type="Physical" Author="franksav" FileSize="4133" ModificationTime="2006-03-03T01:28:26.476776-08:00" CRC="BD7511A793AC60CD8401A2C31DF0CE9D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Hollander.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HollanderL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HollanderL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HollanderX.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollander.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="hollanderFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="hollanderFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="hollanderFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hollander" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

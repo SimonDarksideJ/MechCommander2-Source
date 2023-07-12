@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="538162A8CD98D716E65986323FEBFC10" />
+  <Asset Name="..\scoutcopterenc.ini" Type="Physical" Author="franksav" FileSize="151" ModificationTime="2006-03-03T01:28:47.6172657-08:00" CRC="73A3FF9FC5325B6E61725A19E55270B8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="scoutcopterenc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

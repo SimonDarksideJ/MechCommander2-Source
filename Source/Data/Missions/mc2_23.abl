@@ -1,0 +1,482 @@
+//*********************************************************************************
+
+module mc2_07 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+/*			static real				PatrolTimerDelay;
+			eternal boolean		patrols_Area_Trigger;
+			static integer		PatrolsAreaTrigger;
+*/
+
+		eternal boolean		Valley_Trap_triggered;
+
+		eternal boolean		EC2_PlayerAtBridge;
+		eternal boolean		EC2_PlayerAtWater;
+		eternal boolean		EC2_Recapture_Sensors;
+
+		eternal boolean		Rebels_Freed;
+		eternal boolean		Starport_Attacked_North;
+		eternal boolean		Starport_Attacked_South;
+		eternal boolean		North_Drop_Attacked;
+		eternal boolean		South_Drop_Attacked;
+		eternal boolean		East_Drop_Attacked;
+		eternal boolean		Starport_Reinforcements_Trigger;
+		
+		eternal boolean		Southbase_Attacked;
+		eternal boolean		Cv_End_Trigger;
+		static boolean		HQVO;
+		static boolean		HQ_Captured_Check;
+		static real				HQ_VOTimerDelay;
+			
+		static integer					numUnits, i;
+		static integer[128]				moverList;
+		static worldposition				unitPosition;
+
+ 		static real				Starport_VOTimerDelay;
+ 		static real				Rebels_VOTimerDelay1;
+ 		static real				Rebels_VOTimerDelay2;
+ 		static real				Rebels_VOTimerDelay3;
+		static boolean		Starport_Cleared;
+		static boolean		RebelVO1;
+		static boolean		RebelVO2;
+		static boolean		RebelVO3;
+		static boolean		Rebels_To_Starport_Check;
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+			
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		
+/*		patrols_Area_Trigger = FALSE; //LT, used to get patrollers to patrol
+		
+			worldLoc[0] = 1216.000;
+			worldLoc[1] = -5312.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			PatrolsAreaTrigger = addTriggerArea(cellLoc[0] - 10, cellLoc[1] - 10, cellLoc[0] + 10, cellLoc[1] + 10, 2, 0);
+*/
+			Valley_Trap_triggered = FALSE;
+
+			EC2_PlayerAtBridge = FALSE;
+			EC2_PlayerAtWater = FALSE;
+			EC2_Recapture_Sensors = FALSE;
+
+			Rebels_Freed = FALSE;
+			Starport_Attacked_North = FALSE;
+			Starport_Attacked_South = FALSE;
+			Starport_Reinforcements_Trigger = FALSE;
+			
+			Southbase_Attacked = FALSE;
+			Cv_End_Trigger = FALSE;
+			HQVO = FALSE;
+			HQ_Captured_Check = FALSE;
+
+			RebelVO1 = FALSE;
+			RebelVO2 = FALSE;
+			RebelVO3 = FALSE;
+			Starport_Cleared = FALSE;
+			Rebels_To_Starport_Check = FALSE;
+			
+			numUnits = getUnitMates(51, moverList);
+			i = 0;
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+// ***********************Mission 07 Stuff*****************************************
+
+/*			//*******************************************************
+			//Trigger for Patrollers to Start when player hits Area Trigger
+			if ((isTriggerAreaHit(PatrolsAreaTrigger)) OR (checkObjectiveStatus(0) == 1)) AND (NOT patrols_Area_Trigger) then
+				patrols_Area_Trigger = True;
+			endif;
+*/
+
+
+			//*******************************************************
+			//Trigger for Razorbacks to Recapture Sensors
+			if (checkObjectiveStatus(0) == 1) then
+				if (Not Starport_Cleared) then
+					Starport_VOTimerDelay = getTime + 3; //Wait 2 secs before playing VO
+					Starport_Cleared = True;
+				else
+					if ((getTime > Starport_VOTimerDelay) AND (Not EC2_Recapture_Sensors)) then
+						playWave("data\sound\mc2_23_2.wav", -1); //Tac Officer informing player wall breached
+						EC2_Recapture_Sensors = TRUE;
+						Starport_Reinforcements_Trigger = TRUE;
+					endif;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for VO and Rebels to Patrol to Starport if NOT freed by player
+			if (Starport_Attacked_North) OR (Starport_Attacked_South) then
+				if (checkObjectiveStatus(3) == 0) then
+					if (Not Rebels_To_Starport_Check) then
+						Rebels_VOTimerDelay1 = getTime + 10; //Wait 2 secs before playing VO
+						Rebels_To_Starport_Check = True;
+						Rebels_Freed = True;
+					else
+						if ((getTime > Rebels_VOTimerDelay1) AND (Not Starport_Cleared) AND (Not RebelVO1)) then
+							playWave("data\sound\mc2_23_5.wav", -1); //Tac Officer informing player wall breached
+							RebelVO1 = True;
+			  		endif;
+					endif;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for VO and Rebels to Patrol to Starport if freed by player
+			if (Starport_Attacked_North) OR (Starport_Attacked_South) then
+				if (checkObjectiveStatus(3) == 1) then
+					if (Not Rebels_To_Starport_Check) then
+						Rebels_VOTimerDelay2 = getTime + 10; //Wait 2 secs before playing VO
+						Rebels_To_Starport_Check = True;
+					else
+						if ((getTime > Rebels_VOTimerDelay2) AND (Not Starport_Cleared) AND (Not RebelVO2)) then
+							playWave("data\sound\mc2_23_4.wav", -1); //Tac Officer informing player wall breached
+							RebelVO2 = True;
+			  		endif;
+					endif;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for Rebels to Town Patrol
+			if (checkObjectiveStatus(3) == 1) then
+				if (Not Rebels_Freed) then
+//				 if (Not Rebels_To_Starport_Check) then
+						Rebels_VOTimerDelay3 = getTime + 3; //Wait 2 secs before playing VO
+						Rebels_Freed = True;
+				 else
+					 if ((getTime > Rebels_VOTimerDelay3) AND (Not Rebels_To_Starport_Check) AND (Not RebelVO3)) then
+						 playWave("data\sound\mc2_23_1.wav", -1); //Tac Officer informing player wall breached
+						 RebelVO3 = True;
+					 endif;
+//				 endif;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for Mobile HQ VO
+			if (checkObjectiveStatus(5) == 1) then
+				if (Not HQ_Captured_Check) then
+						HQ_VOTimerDelay = getTime + 4; //Wait 2 secs before playing VO
+						HQ_Captured_Check = True;
+				 else
+					 if ((getTime > HQ_VOTimerDelay) AND (Not HQVO)) then
+						 playWave("data\sound\mc2_23_3.wav", -1); //Tac Officer informing player wall breached
+						 HQVO = True;
+					 endif;
+				endif;
+			endif;
+
+
+
+
+				//*******************************************************
+				//Hack to make HQ Vehicle
+				getObjectPosition(moverList[i], unitPosition);
+//				if (unitPosition[1] < -6080) then
+				if (unitPosition[1] < -7018.667) then
+					objectRemove(moverList[i]);
+				endif;			
+
+				if (i == numUnits - 1) then
+					i = 0;
+				else
+					i = i + 1;
+				endif;
+				
+//---------------------------------------------------- Mission 07 Stuff End
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (0) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+			//	mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune4);
+	 // 		playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune1);
+			 // mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune1);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+	
+	if (NOT (checkObjectiveStatus(0) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+			//	  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+			 //   mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune3);
+			StartMusicTimer = getTime + 37; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+	
+
+
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

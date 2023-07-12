@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="591960CAB1511F0EAAB1A83311CCC27F" />
+  <Asset Name="..\willow3.ase" Type="Physical" Author="ngauvin" FileSize="19737" ModificationTime="2006-02-01T10:55:39.0922834-08:00" CRC="FC1532AF65A91E6704533446B61F892E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Willow.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

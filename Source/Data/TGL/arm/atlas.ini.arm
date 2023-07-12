@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BB9FD3FCA4A50A6438B81BA5380E83E4" />
+  <Asset Name="..\atlas.ini" Type="Physical" Author="franksav" FileSize="4087" ModificationTime="2006-03-03T01:28:11.8831194-08:00" CRC="D2374B1CAD75077C303C00F1790F33FC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Atlas.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="AtlasL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="AtlasL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="AtlasX.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlas.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="atlasFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="atlasFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="atlasFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Atlas" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

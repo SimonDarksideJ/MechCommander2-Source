@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2A5FE6A8ADD107455001FB16EE8D74DD" />
+  <Asset Name="..\mcl_mc_pulselaser.ini" Type="Physical" Author="franksav" FileSize="154" ModificationTime="2006-03-03T01:28:35.7110919-08:00" CRC="213B2BC7DD7006AFD9F978C2A8B93776" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_PulseLaser.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

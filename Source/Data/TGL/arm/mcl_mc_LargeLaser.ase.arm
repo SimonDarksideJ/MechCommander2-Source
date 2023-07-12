@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A7CAD4A12E66BB04237B3F6F7D1FD252" />
+  <Asset Name="..\mcl_mc_LargeLaser.ase" Type="Physical" Author="ngauvin" FileSize="206583" ModificationTime="2006-02-01T10:55:11.1233544-08:00" CRC="580920EB87248C99B5A55D4576031929" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\largelaser.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

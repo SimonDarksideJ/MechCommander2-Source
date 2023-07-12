@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F96E3A15D135FA82831106BBD06CD4A4" />
+  <Asset Name="..\greenhouseenc.ini" Type="Physical" Author="franksav" FileSize="391" ModificationTime="2006-03-03T01:28:25.0080354-08:00" CRC="E3A6510270D8FCF79C78D7E74E07230C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="greenhouseEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

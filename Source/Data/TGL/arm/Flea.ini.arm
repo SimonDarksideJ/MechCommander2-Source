@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1D7C2ADED96E11201183909224DE612C" />
+  <Asset Name="..\Flea.ini" Type="Physical" Author="franksav" FileSize="4139" ModificationTime="2006-03-03T01:28:23.508045-08:00" CRC="F4D30F588C3706C917193EDD487BCAF8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Flea.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="FleaL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="FleaL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="FleaX.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="flea.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="fleaFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="fleaFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="fleaFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Fire Ant" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

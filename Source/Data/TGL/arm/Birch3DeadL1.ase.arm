@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4DB83F20091752CEC8768F9E1E1CA20C" />
+  <Asset Name="..\Birch3DeadL1.ase" Type="Physical" Author="ngauvin" FileSize="6494" ModificationTime="2006-02-01T10:54:37.0606364-08:00" CRC="05D23B3B875B819EBC88183066D8EB4F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_DeadTreesL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

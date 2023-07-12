@@ -1,0 +1,119 @@
+//****************************************************************************************//
+//
+//    UNIVERSAL WARRIOR BRAIN     CREATED:11/3/98   BY:david abzug
+//                              by the MechCommander(TM) Data Entry Application
+//
+//   Modification, duplication & distribution is strictly limited to non-commercial
+//   enterprise unless otherwise indicated by FASA Interactive Technologies, Inc.
+//
+//           Copyright 1999 Microsoft Corporation
+//
+//****************************************************************************************//
+
+module GotoBrain : integer;
+
+		/*********************************************************************
+
+		 The following brain cells must be loaded:
+
+         R_ENGAGE_RADIUS		cell 2, real --> radius in meters
+         I_MOVE_SPEED			cell 9, integer --> 1 = FAST, 0 = SLOW
+		 I_TACTIC				cell 28, integer --> 0 thru 20
+		 I_MOVE_AND_FIRE		cell 31, integer --> 0 = OFF, 1 = ON
+
+		 In addition, the following static variables should be loaded:
+
+		 Path1					real array, the path coords
+		 NumPoints				integer, number of path points
+		 StartTime				integer, mission time to begin patrol
+
+		 *********************************************************************/
+
+//****************************************************************************************//
+
+const
+    #include_ "OConst.abi"
+    #include_ "UnitConst.abi"
+type
+
+var
+	char[256]	s;
+	real	r;
+    //-------------------------------------
+    // Enter Additional Variables Here
+
+    static integer						Order1Status;
+    static integer						Order2Status;
+
+    // PATHS
+    static path							Path1;
+	static integer						NumPoints;
+	static integer						StartTime;
+
+//----------------------------------------------------------------------------------------
+function Init;
+
+    code
+         #include_ "UBInit.abi"
+         //----------------------------------------
+         // Enter Initial Behavior Variations Here
+
+         // OrderStatus
+         Order1Status = INCOMPLETE;
+         Order2Status = INCOMPLETE;
+
+         SetEngageRadius(getRealMemory(R_ENGAGE_RADIUS));
+         SetDisEngageRadius(650);
+		 SetSpeed(getIntegerMemory(I_MOVE_SPEED) == 1);  
+		 SetTactic(getIntegerMemory(I_TACTIC));
+         if (getIntegerMemory(I_MOVE_AND_FIRE) == 1) then
+			MoveAndFireON;
+		 else
+			MoveAndFireOFF;
+		 endif;
+
+endfunction;
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+code
+#print_on
+
+    //Initialize Orders Library
+    initOrders;
+
+    if (gametime > StartTime) then
+         // Order  2 
+         if (Order2Status == INCOMPLETE) then
+              Order2Status = MovePath(Path1,NumPoints);
+			  s = "p = ";
+			  r = path1[0, 0];
+			  concat(s, r);
+			  concat(s, ", ");
+			  r = path1[0,1];
+			  concat(s, r);
+			  concat(s, ", numPoints = ");
+			  concat(s, numPoints);
+			  concat(s, "/n");
+			  print(s);
+              if (Order2Status == INCOMPLETE) then
+                   return(1);
+              endif;
+         endif;
+    endif;
+
+    if (TRUE) then
+         // Order  1 
+         if (Order1Status == INCOMPLETE) then
+              Order1Status = Attack;
+              if (Order1Status == INCOMPLETE) then
+                   return(1);
+              endif;
+         endif;
+    endif;
+
+         return(1);
+endmodule.

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E57240226B62EB5F4D7D7B947122E2D3" />
+  <Asset Name="..\factorymd.ini" Type="Physical" Author="franksav" FileSize="563" ModificationTime="2006-03-03T01:28:23.3205462-08:00" CRC="C09AA1AEE784D4A58C327B3918C9D6D3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="factorymd.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="factorymdL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="factorymdL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="factorymdX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="factorymdDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="factorymdDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Factory" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

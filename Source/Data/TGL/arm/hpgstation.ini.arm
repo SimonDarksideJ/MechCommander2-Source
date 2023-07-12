@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A0EA440684A17776160E258AECEC29DD" />
+  <Asset Name="..\hpgstation.ini" Type="Physical" Author="franksav" FileSize="619" ModificationTime="2006-03-03T01:28:27.726768-08:00" CRC="E102075BD50D4C1CE4E596BEA79C6DA1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="hpgStation.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HPGStationL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HPGStationL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HPGStationX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="hpgStationdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="hpgStationdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="HPG Station" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

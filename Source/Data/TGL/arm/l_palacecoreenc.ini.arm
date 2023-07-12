@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="41DE79AC2AB663123C1E6644253FC3DF" />
+  <Asset Name="..\l_palacecoreenc.ini" Type="Physical" Author="franksav" FileSize="388" ModificationTime="2006-03-03T01:28:31.4298693-08:00" CRC="3566D63239BF3AAF9FFFFD46A420B0D4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_palacecoreEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

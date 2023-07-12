@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0AB38225B8CCF47C31B1A3BEE82747BD" />
+  <Asset Name="..\woodenfencediagL1.ase" Type="Physical" Author="ngauvin" FileSize="6673" ModificationTime="2006-02-01T10:55:40.1704153-08:00" CRC="1918FC433298B115D8312A99F44ADE95" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_cammo.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

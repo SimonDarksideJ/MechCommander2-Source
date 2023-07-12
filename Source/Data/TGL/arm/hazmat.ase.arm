@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="384BD80C214684C2CEE8278F2DBC9B82" />
+  <Asset Name="..\hazmat.ase" Type="Physical" Author="ngauvin" FileSize="20622" ModificationTime="2006-02-01T10:54:55.4670042-08:00" CRC="5C462ECA05404AFF77B9434E5D2D836E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Hazmat.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

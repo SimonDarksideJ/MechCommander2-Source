@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  30900   'Sports Car'  Type:  436 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     30900 
+st Crew =                                                  "PCREWB"
+ul Chassis =                                                436 
+st Name =                                                  "Sports Car"
+ul VehicleTypeID =                                          436 
+l NameIndex =                                               0 
+l DescIndex =                                               536 
+f CurTonnage =                                              5 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          500 
+l BattleRating =                                            20 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           33 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 0.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         1 
+uc CurArmorPoints =                                         1 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         1 
+uc CurArmorPoints =                                         1 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         1 
+uc CurArmorPoints =                                         1 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         1 
+uc CurArmorPoints =                                         1 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         1 
+uc CurArmorPoints =                                         1 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

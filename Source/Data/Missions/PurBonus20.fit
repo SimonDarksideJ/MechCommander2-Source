@@ -1,0 +1,9 @@
+FITini
+
+[Pilots]
+
+st Pilot0 = "PMWGhost"
+st Pilot1 = "PMWMother"
+st Pilot2 = "PMWRooster"
+
+FITend

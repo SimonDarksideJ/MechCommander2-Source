@@ -1,0 +1,362 @@
+FITini
+
+[Elements]
+l numElements = 10
+
+[Element0]
+l ElementType = 0			//Background
+l Left = 0
+l Top = 0
+l Width = 640
+l Height = 480
+l NumPlanes = 6
+
+st Art0 = "master4"
+f uvtlx0 = 0.0
+f uvtly0 = 0.0
+f uvbrx0 = 1.0
+f uvbry0 = 1.0
+
+st Art1 = "master5"
+f uvtlx1 = 0.0
+f uvtly1 = 0.0
+f uvbrx1 = 1.0
+f uvbry1 = 1.0
+	   
+st Art2 = "master6"
+f uvtlx2 = 0.0
+f uvtly2 = 0.0
+f uvbrx2 = 0.5
+f uvbry2 = 1.0
+
+st Art3 = "master7"
+f uvtlx3 = 0.0
+f uvtly3 = 0.0
+f uvbrx3 = 1.0
+f uvbry3 = 0.875
+
+st Art4 = "master8"
+f uvtlx4 = 0.0
+f uvtly4 = 0.0
+f uvbrx4 = 1.0
+f uvbry4 = 0.875
+
+st Art5 = "master9"
+f uvtlx5 = 0.0
+f uvtly5 = 0.0
+f uvbrx5 = 0.5
+f uvbry5 = 0.875
+
+[Element1]
+l ElementType = 0			//Background
+l Left = 333
+l Top = 14
+l Width = 290
+l Height =339
+l NumPlanes = 4
+
+st Art0 = "master10"
+f uvtlx0 = 0.0
+f uvtly0 = 0.0
+f uvbrx0 = 1.0
+f uvbry0 = 1.0
+
+st Art1 = "master11"
+f uvtlx1 = 0.0
+f uvtly1 = 0.0
+f uvbrx1 = 0.12890625
+f uvbry1 = 1.0
+
+st Art2 = "master12"
+f uvtlx2 = 0.0
+f uvtly2 = 0.0
+f uvbrx2 = 1.0
+f uvbry2 = 0.3203125
+
+st Art3 = "master12"
+f uvtlx3 = 0.0
+f uvtly3 = 0.328125
+f uvbrx3 = 0.12890625
+f uvbry3 = 0.64453125
+
+[Element9]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 56
+l Width = 173
+l Height = 26
+
+st NormalArt = "master1"
+f uvtlx0 = 0.0
+f uvtly0 = 0.0
+f uvbrx0 = 0.671875
+f uvbry0 = 0.09765625
+
+st GreyArt   = "master1"
+f uvtlx1 = 0.0
+f uvtly1 = 0.10546875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.203125
+
+st PressArt  = "master1"
+f uvtlx2 = 0.0
+f uvtly2 = 0.2109375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.30859375
+
+st OverArt   = "master1"
+f uvtlx3 = 0.0
+f uvtly3 = 0.0
+f uvbrx3 = 0.671875
+f uvbry3 = 0.09765625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 0	// new
+
+[Element3]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 87
+l Width = 173
+l Height = 26
+
+st NormalArt = "Master1"
+f uvtlx0 = 0.0
+f uvtly0 = 0.31640625
+f uvbrx0 = 0.671875
+f uvbry0 = 0.4140625
+
+st GreyArt   = "Master1"
+f uvtlx1 = 0.0
+f uvtly1 = 0.421875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.51953125
+
+st PressArt  = "Master1"
+f uvtlx2 = 0.0
+f uvtly2 = 0.52734375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.625
+
+st OverArt   = "Master1"
+f uvtlx3 = 0.0
+f uvtly3 = 0.31640625
+f uvbrx3 = 0.671875
+f uvbry3 = 0.4140625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 2	// save
+
+[Element4]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 118
+l Width = 173
+l Height = 26
+
+st NormalArt = "Master1"
+f uvtlx0 = 0.0
+f uvtly0 = 0.6328125
+f uvbrx0 = 0.671875
+f uvbry0 = 0.73046875
+
+st GreyArt   = "Master1"
+f uvtlx1 = 0.0
+f uvtly1 = 0.73828125
+f uvbrx1 = 0.671875
+f uvbry1 = 0.8359375
+
+st PressArt  = "Master1"
+f uvtlx2 = 0.0
+f uvtly2 = 0.84375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.94140625
+
+st OverArt   = "Master1"
+f uvtlx3 = 0.0
+f uvtly3 = 0.6328125
+f uvbrx3 = 0.671875
+f uvbry3 = 0.73046875
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 1	// load
+
+[Element5]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 149
+l Width = 173
+l Height = 26
+
+st NormalArt = "master2"
+f uvtlx0 = 0.0
+f uvtly0 = 0.0
+f uvbrx0 = 0.671875
+f uvbry0 = 0.09765625
+
+st GreyArt   = "master2"
+f uvtlx1 = 0.0
+f uvtly1 = 0.10546875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.203125
+
+st PressArt  = "master2"
+f uvtlx2 = 0.0
+f uvtly2 = 0.2109375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.30859375
+
+st OverArt   = "master2"
+f uvtlx3 = 0.0
+f uvtly3 = 0.0
+f uvbrx3 = 0.671875
+f uvbry3 = 0.09765625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 4	// prefs
+
+[Element6]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 180
+l Width = 173
+l Height = 26
+
+st NormalArt = "Master2"
+f uvtlx0 = 0.0
+f uvtly0 = 0.31640625
+f uvbrx0 = 0.671875
+f uvbry0 = 0.4140625
+
+st GreyArt   = "Master2"
+f uvtlx1 = 0.0
+f uvtly1 = 0.421875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.51953125
+
+st PressArt  = "Master2"
+f uvtlx2 = 0.0
+f uvtly2 = 0.52734375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.625
+
+st OverArt   = "Master2"
+f uvtlx3 = 0.0
+f uvtly3 = 0.31640625
+f uvbrx3 = 0.671875
+f uvbry3 = 0.4140625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 3	// multi-player
+
+[Element7]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 211
+l Width = 173
+l Height = 26
+
+st NormalArt = "Master2"
+f uvtlx0 = 0.0
+f uvtly0 = 0.6328125
+f uvbrx0 = 0.671875
+f uvbry0 = 0.73046875
+
+st GreyArt   = "Master2"
+f uvtlx1 = 0.0
+f uvtly1 = 0.73828125
+f uvbrx1 = 0.671875
+f uvbry1 = 0.8359375
+
+st PressArt  = "Master2"
+f uvtlx2 = 0.0
+f uvtly2 = 0.84375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.94140625
+
+st OverArt   = "Master2"
+f uvtlx3 = 0.0
+f uvtly3 = 0.6328125
+f uvbrx3 = 0.671875
+f uvbry3 = 0.73046875
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 5	// cinema
+
+[Element8]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 242
+l Width = 173
+l Height = 26
+
+st NormalArt = "master3"
+f uvtlx0 = 0.0
+f uvtly0 = 0.0
+f uvbrx0 = 0.671875
+f uvbry0 = 0.09765625
+
+st GreyArt   = "master3"
+f uvtlx1 = 0.0
+f uvtly1 = 0.10546875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.203125
+
+st PressArt  = "master3"
+f uvtlx2 = 0.0
+f uvtly2 = 0.2109375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.30859375
+
+st OverArt   = "master3"
+f uvtlx3 = 0.0
+f uvtly3 = 0.0
+f uvbrx3 = 0.671875
+f uvbry3 = 0.09765625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 7	// return
+
+[Element2]
+l ElementType = 1			//Button
+l Left = 389
+l Top = 273
+l Width = 173
+l Height = 26
+
+st NormalArt = "Master3"
+f uvtlx0 = 0.0
+f uvtly0 = 0.31640625
+f uvbrx0 = 0.671875
+f uvbry0 = 0.4140625
+
+st GreyArt   = "Master3"
+f uvtlx1 = 0.0
+f uvtly1 = 0.421875
+f uvbrx1 = 0.671875
+f uvbry1 = 0.51953125
+
+st PressArt  = "Master3"
+f uvtlx2 = 0.0
+f uvtly2 = 0.52734375
+f uvbrx2 = 0.671875
+f uvbry2 = 0.625
+
+st OverArt   = "Master3"
+f uvtlx3 = 0.0
+f uvtly3 = 0.31640625
+f uvbrx3 = 0.671875
+f uvbry3 = 0.4140625
+
+l OverSFX = 16
+l PressSFX = 15
+l Message = 6				// quit
+
+FITend

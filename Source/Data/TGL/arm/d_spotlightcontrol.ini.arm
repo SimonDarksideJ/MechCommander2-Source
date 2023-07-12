@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="120AD7BC7677EF3824872D2164DB4A07" />
+  <Asset Name="..\d_spotlightcontrol.ini" Type="Physical" Author="franksav" FileSize="805" ModificationTime="2006-03-03T01:28:21.4611831-08:00" CRC="9D054CF2AF7514CE339082C89E1E8801" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="D_SpotlightControl.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="D_SpotlightControlL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="D_SpotlightControlL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="D_SpotlightControlX.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_spotlightcontrol.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="D_SpotLightControldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="D_SpotlightControldamX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

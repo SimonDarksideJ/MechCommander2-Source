@@ -1,0 +1,186 @@
+//****************************************************************************************//
+//
+//	INFANTRY: PATROL AND RETREAT
+//
+//	First brain using the new Behavioral AI system for MC2.
+//
+//****************************************************************************************//
+
+module mc2_demo_infantry : integer;
+
+		/*	DESCRIPTION:
+
+				This pilot will simply stand and scan. Once a visual contact is made,
+				the pilot will retreat to a randomly selected building within 200 meters
+				(or approximately 25 cells) of his location. Once the building is
+				reached, he will be removed from the game. 
+
+			PARAMETERS:
+
+				No brain cells should be set.
+		*/ 
+
+//****************************************************************************************
+
+	var
+
+		static real[3]		startPosition;
+		static integer		retreatBuilding;
+		static PatrolState	patrolState1;
+		static PatrolPath	patrolPath1;
+	
+//****************************************************************************************
+
+function init;
+
+	var
+
+		integer		i;
+		integer		numPatrolPoints;
+
+    code
+
+		//----------------------------------------------------
+		// Grab his start position, and set his start state...
+		getObjectPosition(-1, startPosition);
+		setPilotState(PILOT_STATE_PATROL);
+		//setDebugWindow(-1, -1);
+
+		//--------------------------------------------------------
+		// This is the building the soldier retreats to as soon as
+		// he's created. The building's partID is in brain
+		// cells 0 and 1...
+		retreatBuilding = 93430;
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 100, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 100, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		//-------------------------
+		// Setup the Patrol here...
+		patrolState1[0] = PATROL_TYPE_LINEAR;
+		patrolState1[1] = 0;
+		patrolState1[2] = -1;
+		patrolState1[3] = PATROL_DIRECTION_FORWARD;
+		patrolState1[4] = -1; //reset cur point
+		patrolState1[5] = -1; //reset cur cycle
+		patrolState1[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+				
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+order update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+		integer		curTarget;
+
+	code
+
+		//---------------------------------------------------------
+		// First, process the pilot events since the last update...
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						setPilotState(PILOT_STATE_RETREAT_BUILDING);
+						endcase;
+					case PILOT_EVENT_HIT:
+						endcase;
+					case PILOT_EVENT_DAMAGED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_KILLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_DESTROYED:
+						endcase;
+					case PILOT_EVENT_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_DESTROYED:
+						endcase;
+					case PILOT_EVENT_WITHDRAWN:
+						endcase;
+					case PILOT_EVENT_MORALE_BREAK:
+						endcase;
+					case PILOT_EVENT_COLLISION:
+						endcase;
+					case PILOT_EVENT_GUARD_RADIUS_BREACH:
+						endcase;
+					case PILOT_EVENT_TARGET_KILLED:
+						endcase;
+					case PILOT_EVENT_MATE_FIRED_WEAPON:
+						endcase;
+					case PILOT_EVENT_PLAYER_ORDER:
+						endcase;
+					case PILOT_EVENT_NO_MOVEPATH:
+						endcase;
+					case PILOT_EVENT_GATE_CLOSING:
+						endcase;
+					case PILOT_EVENT_TARGETED:
+						endcase;
+					case PILOT_EVENT_CONTACT:
+						setPilotState(PILOT_STATE_RETREAT_BUILDING);
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		//----------------------------------
+		// Now, go through our state code...
+		thinking = TRUE;
+		while (thinking) do
+			thinking = FALSE;
+			pilotState = getPilotState;
+			switch (pilotState)
+				case PILOT_STATE_IDLE:
+					endcase;
+				case PILOT_STATE_PATROL:
+					setDebugString(-1, 3, " WAIT      ");
+					coreWait(-1.0, CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED, PILOT_STATE_RETREAT_BUILDING);
+					endcase;
+				case PILOT_STATE_ATTACK:
+					setDebugString(-1, 3, " ATTACK      ");
+					newAttack(0, TACORDER_PARAM_PURSUE);
+					setPilotState(PILOT_STATE_PATROL);
+					endcase;
+				case PILOT_STATE_RETREAT_BUILDING:
+					setDebugString(-1, 3, " RETREAT BLD ");
+					if (retreatBuilding == 0) then
+						retreatBuilding = requestShelter(200);
+					endif;
+					if (retreatBuilding <> 0) then
+						newMoveToObject(retreatBuilding, 0);
+						objectRemove(-1);
+					endif;
+					endcase;
+			endswitch;
+		endwhile;
+
+		return(0);
+
+endorder;
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+	code
+
+		update;
+	
+endmodule.
+
+//****************************************************************************************

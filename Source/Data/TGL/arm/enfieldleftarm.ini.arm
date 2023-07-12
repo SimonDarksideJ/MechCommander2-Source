@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FC1009B9E21B40954F003BECBD7F12C2" />
+  <Asset Name="..\enfieldleftarm.ini" Type="Physical" Author="franksav" FileSize="151" ModificationTime="2006-03-03T01:28:22.9299237-08:00" CRC="12989BF5BDA9F47D7B23DB075E68240E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="EnfieldLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

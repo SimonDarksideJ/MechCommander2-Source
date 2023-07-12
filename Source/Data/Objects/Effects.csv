@@ -1,0 +1,85 @@
+3,PP2K Effect Name,PP2K Muzzle Flash Name,PP2K Hit Effect Name,Object Number,PP2K Miss Effect Name,Weapon Name
+3,NONE,NONE,NONE,0,NONE,No Weapon Here.  Trust me!
+1,Med_ClanER_hit,Med_ClanER_flare,Generic_hit,461,Ground_Hit_Small,Medium ER Clan Laser
+2,Lrg_ClanER_hit,Lrg_ClanER_flare,Generic_hit,462,Ground_Hit_Small,Large ER Clan Laser
+3,flamer_trail,Missile_flare,Flamer_hit,188,Flamer_Miss,Flamer
+4,ppc_trail,PPC_flare,ppc_hit,467,PPC_Miss,PPC
+5,ppc_trail,PPC_flare,ppc_hit,468,PPC_Miss,ER PPC
+6,Swarm_lrm_hit,NONE,NONE,910,NONE,Swarm LRM Hit
+7,AC_5_Trail,ac_5_flare,Generic_hit,458,AC_5_Miss,AC 5
+8,srm_trail,Missile_flare,missile_hit,14,Missile_Miss,SRM
+9,lrm_trail,Missile_flare,missile_hit,190,Missile_Miss,LRM
+10,gauss_trail,Gauss_flare,Gauss_hit,191,Gauss_Miss,Gauss
+11,NONE,mg_flare,mg_hit,192,MG_Miss,Machine Gun
+12,Med_las_hit,med_las_flare,Generic_hit,456,Ground_Hit_Small,Medium Laser
+13,Med_Pulse_hit,Med_Pulse_flare,Generic_hit,463,Ground_Hit_Small,Medium Pulse Laser
+14,Med_ER_hit,Med_ER_flare,Generic_hit,464,Ground_Hit_Small,Medium ER Laser
+15,Lrg_las_hit,Lrg_las_flare,Generic_hit,457,Ground_Hit_Small,Large Laser
+16,lrg_pulse_hit,Lrg_Pulse_flare,Generic_hit,465,Ground_Hit_Small,Large Pulse Laser
+17,Lrg_ER_hit,Lrg_ER_flare,Generic_hit,466,Ground_Hit_Small,Large ER Laser
+18,ac_10_Trail,ac_10_flare,AC_10_Hit,459,AC_10_Miss,AC 10
+19,ac_20_Trail,ac_20_flare,AC_20_Hit,460,AC_20_Miss,AC 20
+20,NONE,NONE,NONE,879,NONE,NONE
+21,NONE,NONE,NONE,0,NONE,NONE
+22,NONE,NONE,NONE,0,NONE,NONE
+23,NONE,NONE,NONE,0,NONE,NONE
+24,NONE,NONE,NONE,0,NONE,NONE
+25,NONE,NONE,NONE,0,NONE,NONE
+26,red_las_hit,red_las_flare,Generic_hit,885,Ground_Hit,Large X-Pulse Laser
+27,TBolt_trail,missile_flare,TBolt_hit,886,Missile_Miss,Thunderbolt
+28,Light_gauss_trail,Gauss_flare,Gauss_hit,887,Gauss_Miss,Light Gauss Cannon
+29,hvy_las_hit,hvy_las_flare,Generic_hit,888,Ground_Hit,Heavy Laser
+30,Hvy_Lrg_hit,Hvy_lrg_flare,Generic_hit,889,Ground_Hit,Heavy Large Laser
+31,long_tom_trail,NONE,Long_Tom_Hit,890,Long_Tom_Hit,Long Tom
+32,large_poof,NONE,NONE,0,NONE,Heavy Mech Foot Dust
+33,medium_poof,NONE,NONE,0,NONE,Light Mech Foot Dust
+34,Mech_Wake,NONE,NONE,0,NONE,Mech Water Wake
+35,Critical_hit,NONE,NONE,63,NONE,Mech Critical Hit Explosion
+36,Damaged_fire,NONE,NONE,0,NONE,Small Fire
+37,Damaged_fire,NONE,NONE,0,NONE,Medium Fire
+38,Damaged_fire,NONE,NONE,0,NONE,Large Fire
+39,Mech_Explosion,NONE,NONE,632,NONE,Mech Destruct Explosion
+40,Medium_Explosion,NONE,NONE,700,NONE,Vehicle Explosion
+41,Large_Gas_Explosion,NONE,NONE,694,NONE,Large Fuel Tank Explosion
+42,Small_Gas_Explosion,NONE,NONE,0,NONE,Small Fuel Tank Explosion
+43,Jump_Jets,NONE,NONE,0,NONE,Mech JumpJet
+44,Small_Explosion,NONE,NONE,696,NONE,Turret Explosion
+45,Large_Explosion,NONE,NONE,42,NONE,Building Explosion
+46,Small_Gas_Explosion,NONE,NONE,700,NONE,Splash Vehicle Explosion
+47,Critical_hit,NONE,NONE,656,NONE,Death From Above Explosion
+48,Mech_Smoking,NONE,NONE,0,NONE,Mech Smoke
+49,mech_disable,NONE,NONE,41,NONE,Mech Disable Explosion
+50,Large_Airstrike,NONE,NONE,NA,NONE,Large Air Strike
+51,Small_Airstrike,NONE,NONE,NA,NONE,Small Air Strike
+52,NONE,NONE,NONE,NA,NONE,Sensor Strike
+53,Mine_Explosion,NONE,NONE,655,NONE,Mine Explosion
+54,NONE,NONE,NONE,694,NONE,Empty Explosion NEVER CHANGE!!!
+55,Infantry_Explosion,NONE,NONE,0,NONE,Infantry Explosion
+56,VTOL_Effect,NONE,NONE,0,NONE,VTOL Dust Cloud
+57,Repair_Vehicle,NONE,NONE,0,NONE,Repair Effect
+58,Jet_Contrail,NONE,NONE,0,NONE,Jet Contrail
+59,NONE,NONE,NONE,0,NONE,Building Smoke Stack FX
+60,NONE,NONE,NONE,0,NONE,Birdies
+61,Arm_Burn,NONE,NONE,0,NONE,Arm Flying Effect
+62,Critical_hit,NONE,NONE,0,NONE,Shoulder Arm Pop Effect
+63,long_tom_hit,NONE,NONE,902,NONE,Long Tom Hit -- Different because area Effect!!
+64,NONE,NONE,NONE,NONE,NONE ,Placeholder
+65,Mech_Critical,NONE,NONE,NONE,NONE,Mech Smoking (critical)
+66,Hovercraft_Wake,NONE,NONE,NONE,NONE,Hovercraft Wake
+67,Helicopter_Dust_Cloud,NONE,NONE,NONE,NONE,Helicopter Dust Cloud
+68,Mine_Layer,NONE,NONE,NONE,NONE,Mine Layer
+69,Recovery_Effect,NONE,NONE,NONE,NONE,Recovery Vehicle
+70,Vehicle_Dust_Cloud,NONE,NONE,NONE,NONE,Vehicle_Dust_Cloud
+71,Sensor_Probe_Water,NONE,NONE,NONE,NONE,Sensor_Probe_Water
+72,Sensor_Probe_Land,NONE,NONE,NONE,NONE,Sensor_Probe_Land
+73,Recovery_Dust_Cloud,NONE,NONE,NONE,NONE,Recovery Vehicle Dust Cloud
+74,Swarm_lrm_trail,missile_flare,Swarm_LRM_Hit,909,Swarm_LRM_Hit,Swarm LRM
+75,Turret_Power_Down,NONE,NONE,NONE,NONE,Turret Power Down
+76,Ground_Hit_Water,NONE,NONE,NONE,NONE,Weapon Miss Water
+77,HPG_Effect,NONE,NONE,NONE,NONE,HPG Bldg Data Transfer
+78,Bandit_Engine_Glow,NONE,NONE,NONE,NONE,Bandit_Engine_Glow
+79,Power_Generator_Effect,NONE,NONE,NONE,NONE,Power_Generator_Effect
+80,Repair_Bay,NONE,NONE,NONE,NONE,Repair_Bay
+81,Steam,NONE,NONE,NONE,NONE,Building Steam
+82,Infantry_Blood,NONE,NONE,NONE,NONE,Infantry Blood squirt
+83,NONE,NONE,NONE,NONE,NONE,NONE

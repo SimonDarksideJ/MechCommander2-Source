@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="890BE9CAD1E6B60D9581F5B8EFC58267" />
+  <Asset Name="..\centerlobbyEnc.ase" Type="Physical" Author="ngauvin" FileSize="33516" ModificationTime="2006-02-01T10:54:40.3887827-08:00" CRC="3F08D9ACBB837199439BFACC8918CD29" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CenterLobby.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

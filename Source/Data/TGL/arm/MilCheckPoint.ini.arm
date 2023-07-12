@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C333FC3E37AF72760DB07560E13B968D" />
+  <Asset Name="..\MilCheckPoint.ini" Type="Physical" Author="franksav" FileSize="587" ModificationTime="2006-03-03T01:28:37.2267072-08:00" CRC="603CAE21E8A4041337C33302B4EEF36D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="milcheckpoint.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="milcheckpointL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="milcheckpointL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="milcheckpointX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="milcheckpointdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="milcheckpointDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Military Checkpoint" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2BE084B478356AD5827485EA7E8787A9" />
+  <Asset Name="..\tripodbarricade.ase" Type="Physical" Author="ngauvin" FileSize="27507" ModificationTime="2006-02-01T10:55:34.8578813-08:00" CRC="A4CB60F079E9A193AFD052726CA905F2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_cammo.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

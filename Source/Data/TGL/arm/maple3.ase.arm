@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="462C3E375D93401FC131A60AB5884986" />
+  <Asset Name="..\maple3.ase" Type="Physical" Author="ngauvin" FileSize="10200" ModificationTime="2006-02-01T10:55:10.3889747-08:00" CRC="A2BAE2486FB1788A1C0849BDD209EDDC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Maple.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

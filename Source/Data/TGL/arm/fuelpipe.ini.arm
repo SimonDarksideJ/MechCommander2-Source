@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8DE2F069C9F364456CA852CCA1BDF336" />
+  <Asset Name="..\fuelpipe.ini" Type="Physical" Author="franksav" FileSize="185" ModificationTime="2006-03-03T01:28:24.1799157-08:00" CRC="B0BD23A2D608B3E3066FE0054D9E0C2C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="FuelPipe.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="FuelPipeDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Fuel Pipe" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="30549293D10ED1690C86FAD4F0296A56" />
+  <Asset Name="..\shilonePEnc.ase" Type="Physical" Author="ngauvin" FileSize="78989" ModificationTime="2006-02-01T10:55:29.4828469-08:00" CRC="9F5E15EF0805CA5357BE42E7C8B0EF53" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Shilone.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5DE6C39E9AEA9F3F2F7099CC4D415560" />
+  <Asset Name="..\dropshipLiaodamX.ase" Type="Physical" Author="ngauvin" FileSize="147779" ModificationTime="2006-02-01T10:54:49.7169674-08:00" CRC="68F0389B20DC2A474CADD70D5B6E35BC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

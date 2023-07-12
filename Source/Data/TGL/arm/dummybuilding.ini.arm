@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A84F6E5700941BBE75BC930D67CFF8B0" />
+  <Asset Name="..\dummybuilding.ini" Type="Physical" Author="franksav" FileSize="150" ModificationTime="2006-03-03T01:28:22.2893028-08:00" CRC="BC69805463EB0F3108F999D8295D0B51" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="DummyBuilding.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

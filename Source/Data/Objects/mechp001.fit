@@ -1,0 +1,268 @@
+FITini
+
+// This is a sample Mech Data File.
+[Header]
+st FileType =						"MechProfile"
+
+[General]
+ul ID =								1					// Mech Type unique reference number
+st Name =							"Commando COM-2D"	// Text string giving a descriptive name
+uc Chassis =						1					// Chassis component index
+ul BaseID =							1					// MechBase ID
+uc Variation =						0
+f CurTonnage =						25					// 0 = calc after construction
+ul MaxCV =							0
+ul CurCV =							0
+st icon =                                               "atlas.ico"
+
+[HeatSinks]
+uc HeatSinkType =					1					// 1 = Single, 2 = Double
+uc ExtraHeatSinks =					0					// Total of 18 heat sinks (10 built-in)
+uc HeatBuildUp =					0					// 5 heat points build-up (starts at 0)
+
+[Engine]
+f Tonnage =							5.5					// engine tonnage
+ul Rating =							150
+uc MaxRunSpeed =					27
+uc JumpRange =						10
+
+//-----------------------------------------------------------------------------------
+// I assume the Conditions can be calced from current component damage states and IS?
+
+[Armor]
+uc Type =							1					// 0 = standard, 1 = ferrofib.
+f Tonnage =							4.0					// 4 tons of armor
+
+[MaxArmorPoints]
+uc Head =							6					// in points :)
+uc CenterTorso =					8
+uc LeftTorso =						6
+uc RightTorso =						6
+uc LeftArm =						6
+uc RightArm =						6
+uc LeftLeg =						8
+uc RightLeg =						8
+uc RearCenterTorso =				4
+uc RearLeftTorso =					3
+uc RearRightTorso =					3
+
+[CurArmorPoints]
+uc Head =							6
+uc CenterTorso =					8
+uc LeftTorso =						6
+uc RightTorso =						6
+uc LeftArm =						6
+uc RightArm =						6
+uc LeftLeg =						8
+uc RightLeg =						8
+uc RearCenterTorso =				4
+uc RearLeftTorso =					3
+uc RearRightTorso =					3
+
+//--------------------------------
+// Inventory: Weapons, Ammo, Other
+
+[InventoryInfo]
+l NumOther =						15
+l NumWeapons =						3
+l NumAmmo =							2
+
+// Other
+
+[Item:0]
+uc MasterID =						6		// Cockpit
+
+[Item:1]
+uc MasterID =						13		// Sensor
+
+[Item:2]
+uc MasterID =						35		// Life Support
+
+[Item:3]
+uc MasterID =						1		// Engine
+
+[Item:4]
+uc MasterID =						22		// Gyro
+
+[Item:5]
+uc MasterID =						7		// Heat Sink
+
+[Item:6]
+uc MasterID =						7		// Heat Sink
+
+[Item:7]
+uc MasterID =						33		// Shoulder
+
+[Item:8]
+uc MasterID =						4		// Arm Actuator
+
+[Item:9]
+uc MasterID =						33		// Shoulder
+
+[Item:10]
+uc MasterID =						4		// Arm Actuator
+
+[Item:11]
+uc MasterID =						34		// Hip
+
+[Item:12]
+uc MasterID =						5		// Leg Actuator
+
+[Item:13]
+uc MasterID =						34		// Hip
+
+[Item:14]
+uc MasterID =						5		// Leg Actuator
+
+// Weapons
+
+[Item:15]
+uc MasterID =						166		// SRM-6
+uc FacesForward =					1		// 0 = rear facing, 1 = forward
+
+[Item:16]
+uc MasterID =						111		// Medium Laser
+uc FacesForward =					1
+
+[Item:17]
+uc MasterID =						165		// SRM-4
+
+// Ammos
+
+[Item:18]
+uc MasterID =						231		// SRM-6 Ammo
+uc Amount =							15
+
+[Item:19]
+uc MasterID =						230		// SRM-4 Ammo
+uc Amount =							25
+
+//---------------------------------------------------------------
+// Each component has two values:
+// 1) Component ID (indexes into master component list)
+//			if 0 -- empty slot
+//			if 255 -- same as previous slot
+
+// 2) Hit (is the critical space intact, or has it been hit/destroyed)
+//			if 0 -- intact
+//			if 1 -- hit
+
+[Head]
+uc CASE =							0				// 1 = has CASE here
+uc CurInternalStructure =			3				// IS left here (<= MaxIS from MechBase)
+
+uc[2] Component:0 =					[5, 0]
+uc[2] Component:1 =					[6, 0]
+uc[2] Component:2 =					[6, 0]
+uc[2] Component:3 =					[7, 0]
+uc[2] Component:4 =					[7, 0]
+uc[2] Component:5 =					[0, 0]
+
+[CenterTorso]
+uc CASE =							0
+uc CurInternalStructure =			8
+
+uc[2] Component:0 =					[8, 0]
+uc[2] Component:1 =					[8, 0]
+uc[2] Component:2 =					[8, 0]
+uc[2] Component:3 =					[8, 0]
+uc[2] Component:4 =					[8, 0]
+uc[2] Component:5 =					[8, 0]
+uc[2] Component:6 =					[9, 0]
+uc[2] Component:7 =					[9, 0]
+uc[2] Component:8 =					[9, 0]
+uc[2] Component:9 =					[9, 0]
+uc[2] Component:10 =				[0, 0]
+uc[2] Component:11 =				[0, 0]
+
+[LeftTorso]
+uc CASE =							0
+uc CurInternalStructure =			6
+
+uc[2] Component:0 =					[10, 0]
+uc[2] Component:1 =					[10 0]
+uc[2] Component:2 =					[3, 0]
+uc[2] Component:3 =					[0, 0]
+uc[2] Component:4 =					[0, 0]
+uc[2] Component:5 =					[0, 0]
+uc[2] Component:6 =					[0, 0]
+uc[2] Component:7 =					[0, 0]
+uc[2] Component:8 =					[0, 0]
+uc[2] Component:9 =					[0, 0]
+uc[2] Component:10 =				[0, 0]
+uc[2] Component:11 =				[0, 0]
+
+[RightTorso]
+uc CASE =							0
+uc CurInternalStructure =			6
+
+uc[2] Component:0 =					[11, 0]
+uc[2] Component:1 =					[11, 0]
+uc[2] Component:2 =					[4, 0]
+uc[2] Component:3 =					[0, 0]
+uc[2] Component:4 =					[0, 0]
+uc[2] Component:5 =					[0, 0]
+uc[2] Component:6 =					[0, 0]
+uc[2] Component:7 =					[0, 0]
+uc[2] Component:8 =					[0, 0]
+uc[2] Component:9 =					[0, 0]
+uc[2] Component:10 =				[0, 0]
+uc[2] Component:11 =				[0, 0]
+
+[LeftArm]
+uc CASE =							0
+uc CurInternalStructure =			4
+
+uc[2] Component:0 =					[12, 0]
+uc[2] Component:1 =					[13, 0]
+uc[2] Component:2 =					[13, 0]
+uc[2] Component:3 =					[13, 0]
+uc[2] Component:4 =					[1, 0]
+uc[2] Component:5 =					[0, 0]
+uc[2] Component:6 =					[0, 0]
+uc[2] Component:7 =					[0, 0]
+uc[2] Component:8 =					[0, 0]
+uc[2] Component:9 =					[0, 0]
+uc[2] Component:10 =				[0, 0]
+uc[2] Component:11 =				[0, 0]
+
+[RightArm]
+uc CASE =							0
+uc CurInternalStructure =			4
+
+uc[2] Component:0 =					[14, 0]
+uc[2] Component:1 =					[15, 0]
+uc[2] Component:2 =					[15, 0]
+uc[2] Component:3 =					[15, 0]
+uc[2] Component:4 =					[2, 0]
+uc[2] Component:5 =					[0, 0]
+uc[2] Component:6 =					[0, 0]
+uc[2] Component:7 =					[0, 0]
+uc[2] Component:8 =					[0, 0]
+uc[2] Component:9 =					[0, 0]
+uc[2] Component:10 =				[0, 0]
+uc[2] Component:11 =				[0, 0]
+
+[LeftLeg]
+uc CASE =							0
+uc CurInternalStructure =			6
+
+uc[2] Component:0 =					[16, 0]
+uc[2] Component:1 =					[17, 0]
+uc[2] Component:2 =					[17, 0]
+uc[2] Component:3 =					[17, 0]
+uc[2] Component:4 =					[0, 0]
+uc[2] Component:5 =					[0, 0]
+
+[RightLeg]
+uc CASE =							0
+uc CurInternalStructure =			6
+
+uc[2] Component:0 =					[18, 0]
+uc[2] Component:1 =					[19, 0]
+uc[2] Component:2 =					[19, 0]
+uc[2] Component:3 =					[19, 0]
+uc[2] Component:4 =					[0, 0]
+uc[2] Component:5 =					[0, 0]
+
+FITEnd

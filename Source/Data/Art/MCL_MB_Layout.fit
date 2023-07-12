@@ -1,0 +1,2543 @@
+FITini
+// mech bay
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MechBayStatics]
+
+l staticCount = 68
+
+
+
+
+[MechBayStatic0]  // A
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 256
+l VHeight = 8
+
+
+[MechBayStatic1]  // B
+
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 8
+
+l UWidth  = 256
+l VHeight = 8
+
+
+[MechBayStatic2]  // C
+
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 16
+
+l UWidth  = 256
+l VHeight = 8
+
+
+[MechBayStatic3]  // D
+
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 176
+l VNormal = 205
+l UWidth  = 32
+l VHeight = 8
+
+
+[MechBayStatic4]  // E
+
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 224
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 32
+b Alpha = TRUE
+
+
+[MechBayStatic5]  // F
+
+l XLocation = 426
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 234
+l VNormal = 0
+
+l UWidth  = 20
+l VHeight = 32
+
+
+[MechBayStatic6]  // G
+
+l XLocation = 594
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 224
+l VNormal = 32
+
+l UWidth  = 20
+l VHeight = 32
+
+
+[MechBayStatic7]  // H
+
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 244
+l VNormal = 32
+
+l UWidth  = 10
+l VHeight = 40
+
+
+[MechBayStatic8]  // I
+
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 24
+
+l UWidth  = 256
+l VHeight = 18
+
+
+[MechBayStatic9]  // K
+
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 42
+
+l UWidth  = 256
+l VHeight = 18
+
+
+[MechBayStatic10]  // L
+
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 8
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 222
+
+l UWidth  = 102
+l VHeight = 8
+
+
+[MechBayStatic11]  // M
+
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 10
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 60
+
+l UWidth  = 256
+l VHeight = 10
+
+[MechBayStatic12]  // N
+
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 176
+l VNormal = 213
+
+l UWidth  = 32
+l VHeight = 10
+
+
+[MechBayStatic13]  // O
+
+l XLocation = 0
+l YLocation = 58
+l Width = 15
+l Height = 240
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 15
+l VHeight = 240
+
+
+[MechBayStatic14]  // P
+
+l XLocation = 345
+l YLocation = 58
+l Width = 11
+l Height = 101
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 182
+l VNormal = 0
+
+l UWidth  = 11
+l VHeight = 101
+
+
+[MechBayStatic15]  // Q
+
+l XLocation = 532
+l YLocation = 58
+l Width = 11
+l Height = 240
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 15
+l VNormal = 0
+
+l UWidth  = 11
+l VHeight = 240
+
+
+[MechBayStatic16]  // R
+
+l XLocation = 788
+l YLocation = 58
+l Width = 12
+l Height = 240
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 26
+l VNormal = 0
+
+l UWidth  = 12
+l VHeight = 240
+
+
+[MechBayStatic17]  // S
+
+l XLocation = 356
+l YLocation = 100
+l Width = 176
+l Height = 4
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 218
+
+l UWidth  = 176
+l VHeight = 4
+
+[MechBayStatic18]  // T
+
+l XLocation = 356
+l YLocation = 146
+l Width = 176
+l Height = 13
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 205
+
+l UWidth  = 176
+l VHeight = 13
+
+
+[MechBayStatic19]  // U
+
+l XLocation = 0
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 70
+
+l UWidth  = 256
+l VHeight = 14
+
+[MechBayStatic20]  // V
+
+l XLocation = 256
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 84
+l UWidth  = 256
+l VHeight = 14
+
+
+[MechBayStatic21]  // W
+
+l XLocation = 512
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 98
+
+l UWidth  = 256
+l VHeight = 14
+
+
+[MechBayStatic22]  // X
+
+l XLocation = 768
+l YLocation = 298
+l Width = 32
+l Height = 14
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 208
+l VNormal = 205
+
+l UWidth  = 32
+l VHeight = 14
+
+
+[MechBayStatic23]  // Y
+
+l XLocation = 0
+l YLocation = 312
+l Width = 72
+l Height = 208
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 38
+l VNormal = 0
+
+l UWidth  = 72
+l VHeight = 208
+
+
+[MechBayStatic24]  // Z
+
+l XLocation = 728
+l YLocation = 312
+l Width = 72
+l Height = 196
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 110
+l VNormal = 0
+
+l UWidth  = 72
+l VHeight = 196
+
+
+
+[MechBayStatic25]  // ZZ
+
+l XLocation = 728
+l YLocation = 508
+l Width = 72
+l Height = 12
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 182
+l VNormal = 101
+
+l UWidth  = 72
+l VHeight = 12
+
+
+[MechBayStatic26]  // AA
+
+l XLocation = 0
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 112
+
+l UWidth  = 256
+l VHeight = 26
+
+
+[MechBayStatic27]  // BB
+
+l XLocation = 256
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 138
+
+l UWidth  = 256
+l VHeight = 26
+
+
+[MechBayStatic28]  // CC
+
+l XLocation = 512
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 164
+
+l UWidth  = 256
+l VHeight = 26
+
+
+
+[MechBayStatic29]  // DD
+
+l XLocation = 768
+l YLocation = 520
+l Width = 32
+l Height = 16
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 208
+l VNormal = 219
+
+l UWidth  = 32
+l VHeight = 16
+
+
+[MechBayStatic30]  // EE
+
+l XLocation = 0
+l YLocation = 536
+l Width = 5
+l Height = 59
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 193
+l VNormal = 0
+
+l UWidth  = 5
+l VHeight = 59
+
+
+
+
+
+
+[MechBayStatic31]  // FF
+
+l XLocation = 133
+l YLocation = 546
+l Width = 10
+l Height = 49
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 198
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 49
+
+
+[MechBayStatic32]  // GG
+
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 208
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 49
+
+
+[MechBayStatic33]  // HH
+
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 218
+l VNormal = 0
+
+l UWidth  = 6
+l VHeight = 59
+
+
+[MechBayStatic34]  // II
+
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 190
+
+l UWidth  = 256
+l VHeight = 5
+
+
+[MechBayStatic35]  // KK
+
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 195
+
+l UWidth  = 256
+l VHeight = 5
+
+
+[MechBayStatic36]  // LL
+
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 0
+l VNormal = 200
+
+l UWidth  = 256
+l VHeight = 5
+
+[MechBayStatic37]  // MM
+
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+
+st FileName = "MCL_MB_3"
+
+l UNormal = 176
+l VNormal = 223
+
+l UWidth  = 32
+l VHeight = 5
+
+
+[MechBayStatic38]  // cbills icon
+
+l XLocation = 447
+l YLocation = 9
+l Width = 30
+l Height = 30
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 182
+l VNormal = 113
+
+l UWidth  = 30
+l VHeight = 30
+
+
+[MechBayStatic39]  // team weight icon
+
+l XLocation = 371
+l YLocation = 251
+l Width = 32
+l Height = 32
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 193
+l VNormal = 69
+
+l UWidth  = 32
+l VHeight = 32
+
+
+[MechBayStatic40]  // team weight bracket left
+
+l XLocation = 345
+l YLocation = 164
+l Width = 7
+l Height = 124
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 225
+l VNormal = 132
+
+l UWidth  = 7
+l VHeight = 124
+
+
+[MechBayStatic41]  // team weight bracket right
+
+l XLocation = 520
+l YLocation = 164
+l Width = 7
+l Height = 124
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 232
+l VNormal = 132
+
+l UWidth  = 7
+l VHeight = 124
+
+
+[MechBayStatic42]  // mech info tonnage icon
+
+l XLocation=82
+l YLocation=322
+l Width=96
+l Height=32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 96
+l VHeight = 32
+
+
+[MechBayStatic43]  // mech info armor icon
+
+l XLocation=82
+l YLocation=400
+l Width=96
+l Height=32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 32
+l UWidth  = 96
+l VHeight = 32
+
+
+[MechBayStatic44]  // mech info speed icon
+
+l XLocation=82
+l YLocation=439
+l Width=96
+l Height=32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 96
+l VHeight = 32
+
+[MechBayStatic45]  // mech info jump dist. icon
+
+l XLocation=82
+l YLocation=478
+l Width=96
+l Height=32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 96
+
+l UWidth  = 96
+l VHeight = 32
+
+
+[MechBayStatic46]  // mech picture top bracket
+
+l XLocation = 337
+l YLocation = 345
+l Width = 126
+l Height = 7
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 0
+l VNormal = 228
+
+l UWidth  = 126
+l VHeight = 7
+
+
+[MechBayStatic47]  // mech picture bottom bracket
+
+l XLocation = 337
+l YLocation = 502
+l Width = 126
+l Height = 7
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 0
+l VNormal = 235
+
+l UWidth  = 126
+l VHeight = 7
+
+
+[MechBayStatic48]  // dep team combo item 1
+
+l XLocation = 25
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+[MechBayStatic49]  // dep team combo item 2
+
+l XLocation = 104
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+[MechBayStatic50]  // dep team combo item 3
+
+l XLocation = 183
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+[MechBayStatic51]  // dep team combo item 4
+
+l XLocation = 262
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic52]  // dep team combo item 5
+
+l XLocation = 25
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic53]  // dep team combo item 6
+
+l XLocation = 104
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic54]  // dep team combo item 7
+
+l XLocation = 183
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic55]  // dep team combo item 8
+
+l XLocation = 262
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic56]  // dep team combo item 9
+
+l XLocation = 25
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic57]  // dep team combo item 10
+l XLocation = 104
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic58]  // dep team combo item 11
+l XLocation = 183
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[MechBayStatic59]  // dep team combo item 12
+
+l XLocation = 262
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_MB_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+
+[MechBayStatic60]  // range attribute icon
+
+l XLocation=82
+l YLocation=361
+l Width=96
+l Height=32
+
+st FileName = "MCUI_MR_11"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 96
+l VHeight = 32
+
+
+[MechBayStatic61]  // mechinfo corner left uppper
+
+l XLocation=313
+l YLocation=316
+l Width=24
+l Height=30
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 38
+l VNormal = 208
+l UWidth  = 24
+l VHeight = 30
+
+
+[MechBayStatic62]  // mechinfo corner right uppper
+
+l XLocation=463
+l YLocation=316
+l Width=24
+l Height=30
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 62
+l VNormal = 208
+l UWidth  = 24
+l VHeight = 30
+
+
+[MechBayStatic63]  // mechinfo corner left lower
+
+l XLocation = 324
+l YLocation = 509
+l Width = 13
+l Height = 7
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 86
+l VNormal = 208
+l UWidth  = 13
+l VHeight = 7
+
+
+
+[MechBayStatic64]  // mechinfo corner rightlower
+
+l XLocation = 718	
+l YLocation = 467
+l Width = 6
+l Height = 10
+
+st FileName = "mcl_mb_4.tga"
+
+l UNormal = 99
+l VNormal = 208
+l UWidth  = 6
+l VHeight = 10
+
+
+[MechBayStatic65]  // brackets around current team weight limit thing
+
+l XLocation = 353
+l YLocation = 246
+l Width = 128
+l Height = 42
+
+st FileName = "mcl_mb_5.tga"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 128
+l VHeight = 42
+
+
+[MechBayStatic66]  // brackets around current team weight limit thing
+
+l XLocation = 481
+l YLocation = 246
+l Width = 38
+l Height = 42
+
+st FileName = "mcl_mb_5.tga"
+
+l UNormal = 0
+l VNormal = 42
+l UWidth  = 38
+l VHeight = 42
+
+
+[MechBayStatic67]  // new static to left of mechlab button
+
+l XLocation = 473
+l YLocation = 478
+l Width = 10
+l Height = 42
+
+st FileName = "mcl_mb_6.tga"
+
+l UNormal = 245
+l VNormal = 0
+l UWidth  = 10	
+l VHeight = 42
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[MechBayRects]
+
+l rectCount = 24
+
+
+[MechBayRect0] //  mech storage box- 
+// this is an outlined rect
+// available mechs go in here
+// has a scroll bar
+// describes scrolling area
+
+l left = 552
+l right = 778
+l top = 86
+l bottom = 251
+l color  = 0xff43311c
+b outline = 1
+
+
+[MechBayRect1] // outline pixel line
+// for mech picture left bracket
+l left = 337
+l right = 337
+l top = 353
+l bottom = 500
+l color  = 0xff002f55
+b outline = 1
+
+
+[MechBayRect2] // // for mech picture right bracket
+l left = 462
+l right = 462
+l top = 353
+l bottom = 500
+l color  = 0xff002f55
+b outline = 1
+
+
+[MechBayRect3]  //  component info box- 
+// this is an outlined rect
+// has a scroll bar
+// describes scrolling area
+
+l left = 491
+l right = 717
+l top = 345
+l bottom = 472
+l color  = 0xff002F55	
+b outline = 1
+
+
+[MechBayRect4]  // this rect defines the borders
+// for the mech animation
+
+l left = 339
+l right = 460
+l top = 353
+l bottom = 506
+l color  = 0x00000000	
+b outline = 0
+
+
+[MechBayRect5]  // deployment team area focus rect
+// animation is below:  frectanim
+l left = 19
+l right = 341
+l top = 62
+l bottom = 293
+l color  = 0	
+b outline = 1
+l HelpDesc = 29959
+
+
+[MechBayRect6]  // available mechs focus rect
+// animation is below:  frectanim
+l left = 547
+l right = 783
+l top = 62
+l bottom = 293
+l color  = 0	
+b outline = 1
+
+
+[MechBayRect7]  
+
+l xlocation = 76
+l ylocation = 316
+l width = 235
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+
+[MechBayRect8]  
+
+l xlocation = 76
+l ylocation = 316
+l width = 0
+l height = 199
+l color  = 0xff002f55	
+b outline = 1
+
+
+[MechBayRect9]  
+
+l xlocation = 76
+l ylocation = 515
+l width = 246
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+
+[MechBayRect10]  
+
+l xlocation = 488
+l ylocation = 316
+l width = 235
+l height = 0
+l color  = 0xff002f55	
+b outline = 1
+
+
+[MechBayRect11]  
+
+l xlocation = 723
+l ylocation = 316
+l width = 0
+l height = 150
+l color  = 0xff002f55	
+b outline = 1
+
+
+[MechBayRect12]  
+
+l xlocation = 477
+l ylocation = 515
+l width = 246
+l height = 0
+l color  = 0x00002f55	
+b outline = 1
+
+
+[MechBayRect13]  //team weight
+
+l xlocation = 346
+l ylocation = 163
+l width = 178
+l height = 124
+l color  = 0	
+b outline = FALSE
+l HelpDesc = 29960
+
+[MechBayRect14]  //
+
+l xlocation = 448
+l ylocation = 7
+l width = 147
+l height = 32
+l color  = 0	
+b outline = FALSE
+l HelpDesc = 29003
+
+
+[MechBayRect15] // help rect for screen title box
+l XLocation = 11
+l YLocation = 7
+l Width = 416
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29957
+
+
+[MechBayRect16] // help rect for currently selected mech name and pic
+l XLocation = 339
+l YLocation = 311
+l Width = 125
+l Height = 198
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29053
+
+[MechBayRect17] // help rect for all tonnage parts
+l XLocation = 85
+l YLocation = 322
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29961
+
+[MechBayRect18] // help rect for all range parts
+l XLocation = 85
+l YLocation = 360
+l Width = 222
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29962
+
+[MechBayRect19] // help rect for all armor parts
+l XLocation = 85
+l YLocation = 400
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29963
+
+[MechBayRect20] // help rect for all speed parts
+l XLocation = 85
+l YLocation = 438
+l Width = 222
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29964
+
+[MechBayRect21] // help rect for all jump parts
+l XLocation = 85
+l YLocation = 476
+l Width = 222
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29965
+
+
+[MechBayRect22] // mask rect for mech animation
+l XLocation = 327
+l YLocation = 346
+l Width = 10
+l Height = 162
+l Color = 0xff000000
+b outline = FALSE
+l HelpDesc = 29965
+
+[MechBayRect23]  // team weight icon
+l XLocation = 370
+l YLocation = 250
+l Width = 34
+l Height = 34
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[MechBayButtons]
+
+l ButtonCount = 7
+
+
+[MechBayButton0] // back button
+
+l ID = 51
+l XLocation = 5
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 33
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27101
+l Font = 27107 // use AgencyFB17
+
+l HelpCaption = 27100
+l HelpDesc = 27109
+
+st FileName = "MCL_MB_2"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 59
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l UDisabled = 0
+l VDisabled = 59
+
+l DisabledColor = 0xff373737
+
+[MechBayButton0Bmp0]
+
+// coordinates for back arrow
+l XLocation = 21
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392
+
+st FileName = "MCL_MB_1"
+
+b AnimateBmp = 1
+
+l UNormal = 227
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+
+[MechBayButton1] // next button
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27100
+l Font = 27107 // use AgencyFB17
+
+l HelpCaption = 27100
+l HelpDesc = 27108
+
+st FileName = "MCL_MB_2"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 59
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UDisabled = 0
+l VDisabled = 59
+
+l DisabledColor = 0xff373737
+
+
+[MechBayButton1Bmp0]
+// coordinates for next arrow
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392  
+
+st FileName = "MCL_MB_1"
+
+b AnimateBmp = 1
+
+l UNormal = 238
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+
+[MechBayButton2] // add mech button
+
+l ID = 52
+l XLocation = 356
+l YLocation = 58
+l Width = 176
+l Height = 42
+
+l XTextLocation = 378
+l YTextLocation = 67
+l TextWidth = 144
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27105
+l Font = 27110 // use AgencyFB14
+
+l HelpCaption = 27105
+l HelpDesc = 27111
+
+st FileName = "MCL_MB_1"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 7.5
+l NormalColor2 = 0xffC66600
+f NormalTime3 = 8.0
+l NormalColor3 = 0xffC66600
+
+
+l UPressed = 0
+l VPressed = 42
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 0
+l VDisabled = 42
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.05
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.10
+l DisabledColor1 = 0xff373737
+
+
+[MechBayButton2Bmp0]
+
+// coordinates for add arrow
+l XLocation = 366
+l YLocation = 68
+l Width = 11
+l Height = 22
+l color  = 0xffC66600
+
+st FileName = "MCL_MB_1"
+
+b AnimateBmp = 1
+
+l UNormal = 227
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+
+
+
+
+
+
+
+
+
+
+[MechBayButton3] // remove mech button
+
+l ID = 53
+l XLocation = 356
+l YLocation = 104
+l Width = 176
+l Height = 42
+
+l XTextLocation = 365
+l YTextLocation = 113
+l TextWidth = 144
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27106
+l Font = 27110 // use AgencyFB14
+
+l HelpCaption = 27106
+l HelpDesc = 27112
+
+st FileName = "MCL_MB_1"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 7.5
+l NormalColor2 = 0xffC66600
+f NormalTime3 = 8.0
+l NormalColor3 = 0xffC66600
+
+l UPressed = 0
+l VPressed = 42
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 0
+l VDisabled = 42
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.05
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.10
+l DisabledColor1 = 0xff373737
+
+
+[MechBayButton3Bmp0]
+
+l XLocation = 511
+l YLocation = 114
+l Width = 11
+l Height = 22
+l color  = 0xffC66600
+
+st FileName = "MCL_MB_1"
+
+b AnimateBmp = 1
+
+l UNormal = 238
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MechBayButton4] // main menu button
+
+l ID = 57
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 27110 // use AgencyFB14
+
+l HelpCaption = 27104
+l HelpDesc = 27113
+
+st FileName = "MCL_MB_1"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 84
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 124
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l UHighlight = 0
+l VHighlight = 84
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 0
+l VDisabled = 124
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+
+
+
+
+
+
+[MechBayButton5] // change weapons button
+
+l ID = 55
+l XLocation = 483
+l YLocation = 478
+l Width = 245
+l Height = 42
+
+l XTextLocation = 515
+l YTextLocation = 487
+l TextWidth = 180
+l TextHeight = 23
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27102
+l Font = 27127 // use AgencyFB14
+
+l HelpCaption = 27102
+l HelpDesc = 27114
+
+st FileName = "MCL_MB_6"
+
+l UWidth = 245
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 84
+
+b AnimateBmp = 0 // don't animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l UPressed = 0
+l VPressed = 126
+
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff005392
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xff5C96C2
+
+l UHighlight = 0
+l VHighlight = 84
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 0
+l VDisabled = 126
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[MechBayButton5Bmp0]
+// coordinates for DOWN arrow 1
+l XLocation = 492
+l YLocation = 487
+l Width = 22
+l Height = 24
+l color  = 0xff005392  
+
+st FileName = "MCL_MB_6"
+
+b AnimateBmp = 1
+
+l UNormal = 25
+l VNormal = 169
+
+l UWidth = 22
+l VHeight = 24
+
+
+[MechBayButton5Bmp1]
+// coordinates for DOWN arrow 2
+l XLocation = 697
+l YLocation = 487
+l Width = 22
+l Height = 24
+l color  = 0xff005392  
+
+st FileName = "MCL_MB_6"
+
+b AnimateBmp = 1
+
+l UNormal = 25
+l VNormal = 169
+
+l UWidth = 22
+l VHeight = 24
+
+
+
+
+
+
+
+[MechBayButton6] // purchase mechs button
+
+l ID = 54
+l XLocation = 543
+l YLocation = 256
+l Width = 245
+l Height = 42
+
+l XTextLocation = 575
+l YTextLocation = 265
+l TextWidth = 180
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27103
+l Font = 27127 // use AgencyFB14
+
+l HelpCaption = 27103
+l HelpDesc = 29958
+
+st FileName = "MCL_MB_6"
+
+l UWidth = 245
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 0
+
+b AnimateBmp = 0 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+f NormalTime2 = 7.5
+l NormalColor2 = 0xffC66600
+f NormalTime3 = 8.0
+l NormalColor3 = 0xffC66600
+
+l UPressed = 0
+l VPressed = 42
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l UHighlight = 0
+l VHighlight = 0
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l UDisabled = 0
+l VDisabled = 42
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+[MechBayButton6Bmp0]
+// coordinates for UP arrow 1
+l XLocation = 552
+l YLocation = 265
+l Width = 22
+l Height = 24
+l color  = 0xff005392  
+
+st FileName = "MCL_MB_6"
+
+b AnimateBmp = 1
+
+l UNormal = 1	
+l VNormal = 169
+
+l UWidth = 22
+l VHeight = 24
+
+[MechBayButton6Bmp1]
+// coordinates for UP arrow 2
+l XLocation = 757
+l YLocation = 265
+l Width = 22
+l Height = 24
+l color  = 0xff005392  
+
+st FileName = "MCL_MB_6"
+
+b AnimateBmp = 1
+
+l UNormal = 1
+l VNormal = 169
+
+l UWidth = 22
+l VHeight = 24
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[MechBayTextEntrys]
+
+
+l TextEntryCount = 15
+
+
+[MechBayTextEntry0]  // 'MECH BAY header
+
+l XLocation = 16 //  Left Justify. 
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27116
+l TextID = 27115
+
+
+[MechBayTextEntry1]  // cbills text
+
+l XLocation = 587 //  Right Justify. 
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xff005392  // All Caps
+l Font = 27121
+l TextID = 0
+l Alignment = 1
+
+[MechBayTextEntry2]  // DEPLOYMENT TEAMS  header
+
+l XLocation = 25 //  Left Justify. 
+l YLocation = 63 //  Use AgencyFB14
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27127
+l TextID = 27117
+
+[MechBayTextEntry3]  // 'MECH STORAGE header
+
+l XLocation = 552 //  Left Justify. 
+l YLocation = 63 //  Use AgencyFB14
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27127
+l TextID = 27119
+
+[MechBayTextEntry4]  // TEAM WEIGHT LIMIT header
+
+l XLocation = 357 //  Left Justify. 
+l YLocation = 162//  Use AgencyFB14
+l Width = 158
+l Height = 20
+l color  = 0xffC8E100  // All Caps
+l Font = 27123
+l TextID = 27122
+l Alignment = 2
+
+
+[MechBayTextEntry5]  // CURRENT: team weight header
+
+l XLocation = 406 //  Left Justify. 
+l YLocation = 250 //  Use AgencyFB11
+l color  = 0xff4B5500  // All Caps
+l Font = 27125
+l TextID = 27124
+
+
+[MechBayTextEntry6]  // ###/### team weight readout
+
+l XLocation = 406 //  Left Justify. 
+l YLocation = 262 //  Use AgencyFB17
+l color  = 0xffC8E100  // All Caps
+l Font = 27126
+l TextID = 0
+
+
+[MechBayTextEntry7]  // mech info tonnage 
+
+l XLocation = 183//  Left Justify. 
+l YLocation = 337 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27127
+l TextID = 0
+
+
+[MechBayTextEntry8]  // mech info armor
+
+l XLocation = 280 //  Left Justify. 
+l YLocation = 415 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27127
+l TextID = 0
+
+
+[MechBayTextEntry9]  // mech info speed
+
+l XLocation = 280 //  Left Justify. 
+l YLocation = 454 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27127
+l TextID = 0
+
+
+[MechBayTextEntry10]  // mech info jump dist.
+
+l XLocation = 280 //  Left Justify. 
+l YLocation = 493 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27127
+l TextID = 0
+
+
+[MechBayTextEntry11]  // MECH NAME header
+
+l XLocation = 337//  Center Justify. 
+l YLocation = 319 //  Use AgencyFB17
+l Width = 125
+l Height = 27
+l Alignment = 2
+l color  = 0xff5C96C2 // All Caps
+l Font = 27128
+l TextID = 0
+
+
+
+[MechBayTextEntry12]  // VARIANT NAME header
+
+l XLocation = 492 //  Left Justify. 
+l YLocation = 323 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27129
+l TextID = 0
+l HelpDesc = 29054
+
+
+[MechBayTextEntry13]  // help text
+
+l XLocation = 146
+l YLocation = 541
+l Width = 456
+l Height = 55
+l color  = 0xffffffff   
+l Font = 27322
+l TextID = 0
+
+[MechBayTextEntry14]  // mech info range text
+
+l XLocation = 183 //  Left Justify. 
+l YLocation = 376 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27127
+l TextID = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[DropWeightMeter]
+
+// static for semicircle graphic and mask over rays
+l XLocation = 378
+l YLocation = 181
+l Width = 115
+l Height = 60
+
+st FileName = "MCL_MB_4"
+
+l UNormal = 110
+l VNormal = 196
+l UWidth  = 115
+l VHeight = 60
+
+l RayCenterX = 435 // rays should start from here 
+l RayCenterY = 238
+l RayStartColor = 0xffC8E100 
+l RayEndColor = 0xffF9FFC8 
+
+// there are 20 rays, each 9 degrees
+// they should be 50 pixels long
+
+
+// When a mech is added to the 
+// deployment team area, the rays to be added
+// should flash several times, 
+// then fade to the normal color, green
+
+
+[weightAddAnimation]
+l AnimationTimeStamps= 11
+f Time0 = 0.0
+l Color0  = 0xffffffff  // white
+f Time1 = 0.2
+l Color1  = 0xffffffff  // white
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xffffffff  // white
+f Time5 = 0.7
+l Color5  = 0xffffffff  // white
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xffffffff  // white
+f Time9 = 1.2
+l Color9  = 0xffffffff  // white
+f Time10 = 2.5
+l Color10  = 0xffC8E100  // green
+
+
+
+// When a mech is removed from the 
+// deployment team area, the rays to be removed
+// should flash several times, 
+// then fade to black
+
+[weightRemoveAnimation]
+l AnimationTimeStamps= 11
+f Time0 = 0.0
+l Color0  = 0xffffffff  // white
+f Time1 = 0.2
+l Color1  = 0xffffffff  // white
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xffffffff  // white
+f Time5 = 0.7
+l Color5  = 0xffffffff  // white
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xffffffff  // white
+f Time9 = 1.2
+l Color9  = 0xffffffff  // white
+f Time10 = 2.5
+l Color10  = 0xff000000  // black
+
+
+[AttributeMeters] // meters for the mech info area of mech bay
+
+l AttributeMeterCount = 3
+
+[AttributeMeter0] // for armor
+l left = 182
+l right = 274
+l top = 400
+l bottom = 431
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[AttributeMeter1] // for speed
+l left = 182
+l right = 274
+l top = 439
+l bottom = 470
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+[AttributeMeter2] // for jump distance
+l left = 182
+l right = 274
+l top = 478
+l bottom = 509
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[FRectAnim]
+b AnimationLoops = FALSE
+l AnimationTimeStamps= 13
+f Time0 = 0.0
+l Color0  = 0xffffffff  // white
+f Time1 = 0.2
+l Color1  = 0xffffffff  // white
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xffffffff  // white
+f Time5 = 0.7
+l Color5  = 0xffffffff  // white
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+
+f Time8 = 1.0
+l Color8  = 0xffffffff  // white
+f Time9 = 1.2
+l Color9  = 0xffffffff  // white
+f Time10 = 1.3
+l Color10  = 0xff000000  // black
+f Time11 = 1.4
+l Color11  = 0xff000000  // black
+
+f Time12 = 2.0
+l Color12  = 0xffffffff  // white
+
+
+[DownAnim]  // for use in MB to M$, and MC to MB ^^^^^^
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = -600
+f Time1 = 0.2
+l Pos1X = 0
+l Pos1Y = -275
+f Time2 = 0.3
+l Pos2X = 0
+l Pos2Y = -150
+f Time3 = 0.4
+l Pos3X = 0
+l Pos3Y = -70
+f Time4 = 0.5
+l Pos4X = 0
+l Pos4Y = -10
+f Time5 = .54
+l Pos5X = 0
+l Pos5Y = 0
+
+
+[UpAnim]  // for use in M$ to MB, and MB to MC VVVVVVV
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 600
+f Time1 = 0.2
+l Pos1X = 0
+l Pos1Y = 275
+f Time2 = 0.3
+l Pos2X = 0
+l Pos2Y = 150
+f Time3 = 0.4
+l Pos3X = 0
+l Pos3Y = 70
+f Time4 = 0.5
+l Pos4X = 0
+l Pos4Y = 10
+f Time5 = 0.54
+l Pos5X = 0
+l Pos5Y = 0
+
+
+[NextAnim]  // for use when NEXT button is pressed >>>>>
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = -350
+l Pos1Y = 0
+f Time2 = 0.3
+l Pos2X = -500
+l Pos2Y = 0
+f Time3 = 0.4
+l Pos3X = -620
+l Pos3Y = 0
+f Time4 = 0.5
+l Pos4X = -715
+l Pos4Y = 0
+f Time5 = 0.66
+l Pos5X = -800
+l Pos5Y = 0
+
+
+[BackAnim]  // for use when BACK button is pressed <<<<<<
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = 350
+l Pos1Y = 0
+f Time2 = 0.3
+l Pos2X = 500
+l Pos2Y = 0
+f Time3 = 0.4
+l Pos3X = 620
+l Pos3Y = 0
+f Time4 = 0.5
+l Pos4X = 715
+l Pos4Y = 0
+f Time5 = 0.66
+l Pos5X = 800
+l Pos5Y = 0
+
+
+
+
+
+
+
+
+
+FitEnd

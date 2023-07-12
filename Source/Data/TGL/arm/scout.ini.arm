@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="709DAA64D653309651B4B5266C5C0497" />
+  <Asset Name="..\scout.ini" Type="Physical" Author="franksav" FileSize="184" ModificationTime="2006-03-03T01:28:47.570391-08:00" CRC="9BBD1C34A73BB92F16FB8220B646C005" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="Scout.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="Scout_damaged.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

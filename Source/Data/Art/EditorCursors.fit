@@ -1,0 +1,224 @@
+FITini
+
+[Main]
+l numCursors = 35
+
+[Cursor0]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Normal"
+
+[Cursor1]
+ul NumFrames = 1
+c HotSpotX = -16
+c HotSpotY = -16
+b Animate = F
+st CursorName = "IC_Paint"
+
+[Cursor2]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_AreaSelect"
+
+[Cursor3]			// the eraser
+ul NumFrames = 1		
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Eraser"
+
+[Cursor4]			// terrains for the next 12
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor5]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor6]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor7]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor8]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+
+[Cursor9]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor10]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor11]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+
+[Cursor12]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor13]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor14]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor15]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor16]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Terrain"
+
+[Cursor17]			// overlays for the next 10
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor18]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor19]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor20]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor21]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor22]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor23]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor24]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor25]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor26]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor27]
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Overlay"
+
+[Cursor28]			// flatten
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Flatten"
+
+[Cursor29]			// drag smooth
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Smooth"
+
+[Cursor30]			// drag rough
+ul NumFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "IC_Rough"
+
+[Cursor31]
+ul numFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "MOVE_BUILDING"
+
+[Cursor32]
+ul numFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "DRAG_HAND"
+
+[Cursor33]
+ul numFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "Hammer"
+
+
+[Cursor34]
+ul numFrames = 1
+c HotSpotX = -10
+c HotSpotY = -6
+st CursorName = "Wrench"
+
+
+
+
+FITend
+     

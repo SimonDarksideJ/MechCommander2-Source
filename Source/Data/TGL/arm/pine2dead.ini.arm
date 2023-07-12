@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="26DDFDF07EFE8BAACEBF876EE8A93CF0" />
+  <Asset Name="..\pine2dead.ini" Type="Physical" Author="franksav" FileSize="320" ModificationTime="2006-03-03T01:28:38.7110727-08:00" CRC="C404C3514CA07135EFA5180F38034025" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="pine2dead.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="pine2deadL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="pine2deadL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="pine2deadX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Dead Pine" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

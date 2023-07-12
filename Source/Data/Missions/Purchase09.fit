@@ -1,0 +1,58 @@
+FITini
+
+[Components]
+
+b AllComponents = False
+
+l Component0 = 7		//Heat Sink
+l Component1 = 10		//Jump Jets
+l Component2 = 25		//Armor Plating
+l Component3 = 156		//Laser
+l Component4 = 145		//PPC
+l Component5 = 140		//Large Laser
+l Component6 = 155		//Flamer Array
+l Component7 = 100		//Light Autocannon (AC5)
+l Component8 = 101		//Autocannon (AC10)
+l Component9 = 102		//Heavy Autocannon (AC20)
+l Component10 = 114		//MG Array
+l Component11 = 125		//Streak SRM2 Pack
+l Component12 = 120		//LRM5 Rack
+l Component13 = 99		//Light Gauss Rifle
+l Component14 = 104		//Gauss Rifle
+l Component15 = 144		//Pulse Laser
+l Component16 = 142		//Large Pulse Laser
+l Component17 = 143		//ER Laser
+l Component18 = 141		//ER Large Laser
+l Component19 = 146		//ER PPC
+
+[Mechs]
+
+st Mech0 = "werewolf"
+st Mech1 = "hollander"
+st Mech2 = "hunchback"
+st Mech3 = "bushwacker"
+st Mech4 = "shootist"
+st Mech5 = "zeus"
+st Mech6 = "highlander"
+st Mech7 = "atlas"
+
+[Pilots]
+
+st Pilot0 = "PMWChopper"
+st Pilot1 = "PMWDagger"
+st Pilot2 = "PMWCreep"
+st Pilot3 = "PMWFlash"
+st Pilot4 = "PMWHacksaw"
+st Pilot5 = "PMWHammer"
+st Pilot6 = "PMWJinx"
+st Pilot7 = "PMWLongshot"
+st Pilot8 = "PMWPsycho"
+st Pilot9 = "PMWShadow"
+st Pilot10 = "PMWCobra"
+st Pilot11 = "PMWPalerider"
+st Pilot12 = "PMWTwitch"
+st Pilot13 = "PMWWorm"
+st Pilot14 = "PMWMeat"
+st Pilot15 = "PMWSteel"
+
+FITend

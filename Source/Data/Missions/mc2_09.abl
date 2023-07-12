@@ -1,0 +1,547 @@
+//*********************************************************************************
+
+module mc2_09 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+			eternal boolean		ec1_Group_Attack;
+			eternal boolean		ec3_Area_Trigger;
+			eternal boolean		ec5_Event_Trigger;
+			eternal integer		WeaponsFacilityTrigger;
+			static boolean		Facility_Check;
+			static boolean		Depot_Check;
+			eternal boolean		ec4_Detect_Player;
+			static real			timerDelay;
+			static boolean		ec3_WF_VO_Trigger;
+			static boolean		ec3_WF_VO_Trigger_Check;
+			static boolean		WF_VO;
+			static boolean		Kill_Unit_Check;
+			static boolean		ec5_Steiner_Check;
+			static boolean		Steiner_VO;
+			static boolean		ec5_After_Event_Trigger;
+			static boolean		obj0_check;
+			static boolean		obj1_check;
+			static boolean		obj2_check;
+			static boolean		obj3_check;
+			
+			eternal boolean		defend_nosecone;
+
+
+			static real			BosstimerDelay1;
+			static real			BosstimerDelay2;
+			static real			BosstimerDelay3;
+			static boolean		ec5_Event_Trigger_Check1;
+			static boolean		ec5_Event_Trigger_Check2;
+			static boolean		ec5_Event_Trigger_Check3;
+			static boolean		Boss_VO1;
+			static boolean		Boss_VO2;
+			static boolean		Boss_VO3;
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		ec1_Group_Attack = FALSE; //GT, used to get EC1 movers to attack
+		ec3_Area_Trigger = FALSE; //GT, used to get EC3 movers to attack
+		ec5_Event_Trigger = FALSE;  //GT, used to trigger Boss VO to play & Boss to move to HQ
+		Boss_VO1 = FALSE; //LT, used to get Boss VO to play
+		Boss_VO2 = FALSE; //LT, used to get Boss VO to play
+		Boss_VO3 = FALSE; //LT, used to get Boss VO to play
+		Facility_Check = FALSE; //LT, used to check Facility Trigger
+		Depot_Check = FALSE; //LT, used to check Depot Trigger
+		ec4_Detect_Player = FALSE; //GT, used to check ec4 units detecting the player
+		ec5_Event_Trigger_Check1 = False;  //LT, used to double check ec5 Trigger
+		ec5_Event_Trigger_Check2 = False;  //LT, used to double check ec5 Trigger
+		ec5_Event_Trigger_Check3 = False;  //LT, used to double check ec5 Trigger
+		ec3_WF_VO_Trigger = FALSE;  //LT, used to trigger Cash VO
+		ec3_WF_VO_Trigger_Check = FALSE;  //LT, used to check Cash VO
+		WF_VO = FALSE;  //LT, used to get WF VO to play
+		Kill_Unit_Check = FALSE;  //LT, used to check kill unit trigger
+		ec5_Steiner_Check = FALSE; //LT, used to check Steiner VO
+		Steiner_VO = FALSE; //LT, used to check Steiner VO
+		ec5_After_Event_Trigger = FALSE; //LT, used to play Steiner VO
+		obj0_check = FALSE;
+		obj1_check = FALSE;
+		obj2_check = FALSE;
+		obj3_check = FALSE;
+		
+		defend_nosecone = FALSE;
+
+			worldLoc[0] = -2496.000;
+			worldLoc[1] = 4672.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			WeaponsFacilityTrigger = addTriggerArea(cellLoc[0] - 10, cellLoc[1] - 10, cellLoc[0] + 10, cellLoc[1] + 10, 2, 0);
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if ((checkObjectiveStatus (0) == 1) OR (checkObjectiveStatus (1) == 1)) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 3) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune0);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune0);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(5) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune4 for 1st trigger");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune0 for 1st trigger");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(3) == 1)) then
+	 if ((checkObjectiveStatus (0) == 1) OR (checkObjectiveStatus (1) == 1)) then
+	  if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune4 for 2nd trigger");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune0 for 2nd trigger");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+		endif;
+	 endif;
+ endif;
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune9);
+			StartMusicTimer = getTime + 113; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+// ***********************Mission 9 Stuff*****************************************
+
+			//*******************************************************
+			//Trigger for EC3 Area Trigger
+			if (isTriggerAreaHit(WeaponsFacilityTrigger)) then
+				ec3_Area_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//Trigger for EC3 WF VO Trigger
+			if (checkObjectiveStatus(0) == 1) then
+				if (Not Facility_Check) AND (Not ec3_WF_VO_Trigger) then
+					ec3_WF_VO_Trigger = True;
+					Facility_Check = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			//VO that gets played when any EC3 Events get triggered
+
+			if (ec3_WF_VO_Trigger) then
+				if (Not ec3_WF_VO_Trigger_Check) then
+					timerDelay = getTime + 4; //Wait 4 secs before playing VO
+					ec3_WF_VO_Trigger_Check = True;
+				else
+					if ((getTime > timerDelay) AND (Not WF_Vo)) then
+						WF_Vo = True;
+							playVideo("W05.bik");	 //Cash Video
+//						playWave("data\sound\mc2_09_1.wav", -1); //Cash VO plays
+					endif;
+				endif;
+			endif;	
+
+
+
+			//*******************************************************
+			//Trigger #1 for Fuel Depot Destruction for EC5 Event Trigger
+			if (checkObjectiveStatus(1) == 1) then
+				if (Not Depot_Check) AND (Not ec5_Event_Trigger) then
+					ec5_Event_Trigger = True;
+					Depot_Check = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger #2 for HQ Being Attacked for EC5 Event Trigger
+			if (getObjectDamage(73487) > 0 ) Then
+				ec5_Event_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//Trigger #3 for HQ Units Detecting Player for EC5 Event Trigger
+			if (ec4_Detect_Player) then
+				ec5_Event_Trigger = True;
+			endif;
+
+			//*******************************************************
+			//Trigger #4 for Fuel Depot Destruction for EC5 Event Trigger
+			if (checkObjectiveStatus(5) == 1) then
+				if (Not Kill_Unit_Check) AND (Not ec5_Event_Trigger) then
+					ec5_Event_Trigger = True;
+					Kill_Unit_Check = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			//VO that gets played when any EC5 Events get triggered
+
+			if (ec5_Event_Trigger) then
+				if (Not ec5_Event_Trigger_Check1) then
+					BosstimerDelay1 = getTime + 4; //Wait 4 secs before playing VO
+					ec5_Event_Trigger_Check1 = True;
+				else
+					if ((getTime > BosstimerDelay1) AND (Not Boss_Vo1)) then
+						Boss_Vo1 = True;
+							playVideo("MC2_09A.bik");
+//						playWave("data\sound\mc2_09_1.wav", -1); //VO Boss asks for help, then says he's going to HQ
+					endif;
+				endif;
+			endif;	
+
+
+
+			if (Boss_Vo1) then
+				if (Not ec5_Event_Trigger_Check2) then
+					BosstimerDelay2 = getTime + 9; //Wait 9 secs before playing VO
+					ec5_Event_Trigger_Check2 = True;
+				else
+					if ((getTime > BosstimerDelay2) AND (Not Boss_Vo2)) then
+						Boss_Vo2 = True;
+						playWave("data\sound\mc2_09_1.wav", -1); //VO Boss asks for help, then says he's going to HQ
+					endif;
+				endif;
+			endif;	
+
+
+			if (Boss_Vo2) then
+				if (Not ec5_Event_Trigger_Check3) then
+					BosstimerDelay3 = getTime + 22; //Wait 9 secs before playing VO
+					ec5_Event_Trigger_Check3 = True;
+				else
+					if ((getTime > BosstimerDelay3) AND (Not Boss_Vo3)) then
+						Boss_Vo3 = True;
+							playVideo("MC2_09B.bik");
+//						playWave("data\sound\mc2_09_1.wav", -1); //VO Boss asks for help, then says he's going to HQ
+						ec5_After_Event_Trigger = True;
+					endif;
+				endif;
+			endif;	
+
+
+			//*******************************************************
+			//VO that gets played when all mission objectives complete
+
+			if (checkObjectiveStatus(0) == 1) then
+				obj0_check = True;
+			endif;
+
+			if (checkObjectiveStatus(1) == 1) then
+				obj1_check = True;
+			endif;
+
+			if (checkObjectiveStatus(2) == 1) then
+				obj2_check = True;
+			endif;
+
+			if (checkObjectiveStatus(3) == 1) then
+				obj3_check = True;
+			endif;
+
+			
+			if (obj0_check) AND
+				   (obj1_check) AND
+					   (obj2_check) AND
+						   (obj3_check) then
+							if (Not ec5_Steiner_Check) then
+								timerDelay = getTime + 16; //Wait 35 secs before playing VO
+								ec5_Steiner_Check = True;
+							else
+								if ((getTime > timerDelay) AND (Not Steiner_Vo)) then
+									Steiner_Vo = True;
+//									playVideo("W02.bik");
+//									playWave("data\sound\mc2_09_2.wav", -1); //VO Boss asks for help, then says he's going to HQ
+								endif;
+							endif;
+      endif;	
+
+
+/*			if (ec5_After_Event_Trigger) then
+				if (Not ec5_Steiner_Check) then
+					timerDelay = getTime + 37; //Wait 35 secs before playing VO
+					ec5_Steiner_Check = True;
+				else
+					if ((getTime > timerDelay) AND (Not Steiner_Vo)) then
+						Steiner_Vo = True;
+						playWave("data\sound\mc2_09_2.wav", -1); //VO Boss asks for help, then says he's going to HQ
+					endif;
+				endif;
+			endif;	
+*/
+
+			//*******************************************************
+			//Trigger that signals for enemies to converge on nosecone
+
+			if (checkObjectiveStatus(6) == 1) then
+				defend_nosecone = True;
+			endif;
+
+
+						//------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

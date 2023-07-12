@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C16ACE53076A0A45A871B09F85CFE2FD" />
+  <Asset Name="..\s_barracks2L1.ase" Type="Physical" Author="ngauvin" FileSize="24095" ModificationTime="2006-02-01T10:55:22.5140523-08:00" CRC="EFD923181C9EC2A17FBD3D04D14E363A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\G_TinRoof.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Barracks.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_stone_windows.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

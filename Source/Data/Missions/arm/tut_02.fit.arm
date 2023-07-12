@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="805DC31B3C4C4655A4D49B0660E4537A" />
+  <Asset Name="..\tut_02.fit" Type="Physical" Author="franksav" FileSize="22463" ModificationTime="2006-03-06T13:44:19.1696403-08:00" CRC="619118B32FD66AC8AEB014135DB16377" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Mission 2: LOS, Sensors, and Combat" MissionAuthor="Team Dirty" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="tut_02.pak" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior09" />
+        <Relationship Type="warrior" RelatedAsset="tut_02_warrior10" />
+        <Relationship Type="ScenarioScript" RelatedAsset="tut_02.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\City8StoryB.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Nav1.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

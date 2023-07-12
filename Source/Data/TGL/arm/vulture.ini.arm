@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6989C0921828A81BA89CB977568D1C04" />
+  <Asset Name="..\vulture.ini" Type="Physical" Author="franksav" FileSize="3956" ModificationTime="2006-03-03T01:28:55.7578386-08:00" CRC="1A8E41C43E1B10294B6585DC486D937B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Vulture.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="VultureL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="VultureL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="VultureX.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="vulture.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="vultureFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="vultureFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="vultureFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Vulture" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

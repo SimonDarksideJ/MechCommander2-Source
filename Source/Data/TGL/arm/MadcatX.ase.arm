@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="648CEF5D70C7C3C4782D34E7C1A4D3AF" />
+  <Asset Name="..\MadcatX.ase" Type="Physical" Author="ngauvin" FileSize="148517" ModificationTime="2006-02-01T10:55:10.1858484-08:00" CRC="12C3FA626993EB202410980DFE2A6CE1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

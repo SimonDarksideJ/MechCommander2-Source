@@ -1,0 +1,32 @@
+FITini
+
+// This is the Amazing Exploding Keg Object
+
+[ObjectClass]
+l ObjectTypeNum = 18				//Misc Terrain Object
+
+[ObjectType]
+st Name 			= "xkeg"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x020003CD
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 10			// Number of damage points before BOOM!
+l ExplosionObject	= 700			// Object Class Number of explosion for this building
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 15			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 357
+ul DmgLevel			= 6				// How much damage before changing to destroyed shape
+ul BlownEffectId	= 42			//Special Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is dies.
+l LowTemplate		= 0x00000000
+l HighTemplate		= 0x00000010
+f ExplosionDamage	= 50.0		   	//When the building dies, it does this much damage
+f ExplosionRadius	= 250.0		   	//in this radius.  Radius is World Units.  
+f TimeToBurnDamage	= 0.5		   	//Ok.  This means that at 30 points of damage, the building bursts
+f BurnDamagePerTime	= 5.0		   	//info flame.  Each half second its on fire, the building takes
+f DamageLvlForBurn	= 1.0
+
+FITend
+

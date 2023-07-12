@@ -1,0 +1,255 @@
+//****************************************************************************************//
+// 
+//		GROUP E3_GROUP2
+//
+//      MISSION:  GENCON
+//
+//****************************************************************************************//
+
+fsm mc2_gencon_e3_Group2;
+
+	var
+
+		static WorldPosition	startPosition;
+		static PatrolState		zonePatrolState;
+		static PatrolPath		zonePatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static integer			ZoneGuardStateHandle;
+		static boolean			ZoneEnteredSet;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		//setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 200, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+		ZoneGuardStateHandle = getStateHandle("zoneGuard");
+
+		ZoneEnteredSet = false;
+
+		zonePatrolState[0] = PATROL_TYPE_LINEAR;    
+		zonePatrolState[1] = 3;    //?num points
+		zonePatrolState[2] = 1;    //?num cycles
+		zonePatrolState[3] = PATROL_DIRECTION_FORWARD;    
+		zonePatrolState[4] = -1;    //reset cur point
+		zonePatrolState[5] = -1;    //reset cur cycle
+		zonePatrolState[6] = CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;    
+		zonePatrolPath[0, 0] = -6122.667;
+		zonePatrolPath[0, 1] = 2410.667;
+		zonePatrolPath[1, 0] = -6165.333;
+		zonePatrolPath[1, 1] = 3264.0;
+		zonePatrolPath[2, 0] = -5354.667;
+		zonePatrolPath[2, 1] = 3221.333;
+
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+		integer		curTarget;
+		real		curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real		distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+		//-----------------------------------
+		// Is it time to move to a new state?
+		curStateHandle = getCurrentStateHandle;
+		if (ZoneEntered > 0) then
+			if (not ZoneEnteredSet) then
+				ZoneEnteredSet = true;
+				if (curStateHandle <> zoneGuardStateHandle) then
+					mcprint("trans zoneGuard");
+					trans zoneGuard;
+				endif;
+			endif;
+		endif;
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	code
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state zoneGuard;
+
+	var
+
+		WorldPosition	zoneLoc;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "zoneGuard");
+		if (numFunctionalWeapons > 0) then
+			if (ZoneEntered <> 2) then
+				zonePatrolState[1] = 2;
+				zonePatrolPath[0, 0] = -4970.667;
+				zonePatrolPath[0, 1] = -5354.667;
+				zonePatrolPath[1, 0] = -5354.667;
+				zonePatrolPath[1, 1] = 3221.333;
+			endif;
+			corePatrol(zonePatrolState, zonePatrolPath, -1);
+			setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 600, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+			setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 600, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+			zoneLoc[0] = -5354.667;
+			zoneLoc[1] = 3221.333;
+			zoneLoc[2] = 0.0;
+			setWillRequestHelp(true);
+			coreGuard(zoneLoc, -1, AttackStateHandle);
+		else
+			trans noWeapons;
+		endif;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+		setWillRequestHelp(false);
+		update;
+		setDebugString(-1, 3, "   GUARD    ");
+		coreGuard(startPosition, -1, AttackStateHandle);
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

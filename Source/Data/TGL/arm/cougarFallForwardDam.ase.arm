@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5790D3ADF01A059956005616A31BDEEF" />
+  <Asset Name="..\cougarFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="103440" ModificationTime="2006-02-01T10:54:43.2169258-08:00" CRC="4FF10DB30A5CD79B54AABD1386E601F9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

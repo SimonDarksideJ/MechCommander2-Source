@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="06405C277169750E1EA7B30AC0117619" />
+  <Asset Name="..\mediumcopter.ini" Type="Physical" Author="franksav" FileSize="3392" ModificationTime="2006-03-03T01:28:36.320463-08:00" CRC="4A16B1718125091EA9756DE1F01BC1CD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="mediumcopter.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="mediumcopterL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="mediumcopterL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="mediumcopterX.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopter.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="mediumcopterFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="mediumcopterFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="mediumcopterFallForwardDam.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="mediumcopterdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="mediumcopterdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Attack 'Copter" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

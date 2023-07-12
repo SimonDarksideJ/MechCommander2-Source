@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4EFADC990303D6443D2AA8D2130E9210" />
+  <Asset Name="..\S_SensorControl.ini" Type="Physical" Author="franksav" FileSize="698" ModificationTime="2006-03-03T01:28:46.9922697-08:00" CRC="2EF7163052BD5D7443C8FC8E7354B8E5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="S_SensorControl.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="S_SensorControlL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="S_SensorControlL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="S_SensorControlX.ase" />
+        <Relationship Type="Animation" RelatedAsset="s_sensorcontrol.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="S_SensorControldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="S_SensorControldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Sensor Control" ObjectType="Building" BuildingType="Sensor Control" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,29 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=1
+
+[ObjectType]
+st Name="ruinhanger"
+st AppearanceName="ruinhanger"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BuildingData]
+ul DmgLevel = 0
+f ExtentRadius = 0.000000
+f ExplosionRadius = 0.000000
+f ExplosionDamage = 0.000000
+l BuildingName = 30295
+l SetImpassable = 1
+b ImpassableWhenDestroyed = true
+b CanRefit = false
+b MechBay = false
+f SensorRange = -1.000000
+l TeamID = -1
+l Tonnage = 20
+l BattleRating = 20
+l PotentialContact = 0
+
+FITend 

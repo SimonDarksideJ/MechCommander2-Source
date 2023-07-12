@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="799B57F40713D9B6FDC2CF80076B11DE" />
+  <Asset Name="..\s_main_rightwingdamX.ase" Type="Physical" Author="ngauvin" FileSize="52289" ModificationTime="2006-02-01T10:55:25.2640699-08:00" CRC="4F103BCC0A2846C47EDF087C2FC6E160" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2X.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3DamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

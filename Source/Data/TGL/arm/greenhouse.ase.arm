@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A46B4E40D12AEC6118B8FDEAD70EC5A3" />
+  <Asset Name="..\greenhouse.ase" Type="Physical" Author="ngauvin" FileSize="10030" ModificationTime="2006-02-01T10:54:54.81075-08:00" CRC="E493B13C3189FE5A4EFA4DA1BD52B36E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\GreenHouse.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

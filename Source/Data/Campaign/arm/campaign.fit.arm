@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F1DC75A0D722C42A3506BF6ACB07DF90" />
+  <Asset Name="..\campaign.fit" Type="Physical" Author="franksav" FileSize="4866" ModificationTime="2006-03-03T01:25:50.3215254-08:00" CRC="CAE91A8470FE38968FA39EA9E3D838B5" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Campaign" />
+      <Relationships>
+        <Relationship Type="Group" RelatedAsset="campaign_group01" />
+        <Relationship Type="Group" RelatedAsset="campaign_group02" />
+        <Relationship Type="Group" RelatedAsset="campaign_group03" />
+        <Relationship Type="Group" RelatedAsset="campaign_group04" />
+        <Relationship Type="Group" RelatedAsset="campaign_group05" />
+        <Relationship Type="Group" RelatedAsset="campaign_group06" />
+        <Relationship Type="Group" RelatedAsset="campaign_group07" />
+        <Relationship Type="Group" RelatedAsset="campaign_group08" />
+        <Relationship Type="Group" RelatedAsset="campaign_group09" />
+        <Relationship Type="Group" RelatedAsset="campaign_group10" />
+        <Relationship Type="Group" RelatedAsset="campaign_group11" />
+        <Relationship Type="Group" RelatedAsset="campaign_group12" />
+        <Relationship Type="Group" RelatedAsset="campaign_group13" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

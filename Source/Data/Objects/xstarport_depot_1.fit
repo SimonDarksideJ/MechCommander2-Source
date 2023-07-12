@@ -1,0 +1,28 @@
+FITini
+
+// This is the Starport Depot data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xstarport_depot_1"
+l Type 				= 0x7
+l Appearance 		= 0x020002D7
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 613				// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 65			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 225
+b BlocksLineOfFire 	= FALSE
+ul DmgLevel			= 46
+ul BlownEffectId	= -1			//Sound Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is normal.
+ul DamageEffectId	= 73			//Sound Effect Played when building is dmg/destroyed.
+l LowTemplate		= 0x3c380000
+l HighTemplate		= 0x00003c3c
+
+FITend

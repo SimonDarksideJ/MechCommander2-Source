@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D75A9C3C36BDF915FA486CFD34FC81D0" />
+  <Asset Name="..\hunchbackleftarm.ini" Type="Physical" Author="franksav" FileSize="153" ModificationTime="2006-03-03T01:28:28.2580146-08:00" CRC="0B5A1741A62F88CD2D180A87708EC280" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="HunchbackLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

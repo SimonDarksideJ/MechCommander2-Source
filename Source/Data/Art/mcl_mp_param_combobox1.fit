@@ -1,0 +1,199 @@
+FITini 
+
+
+
+// drop down menu for faction type
+
+[FactionTypeComboBox]
+
+l XLocation = 269
+l YLocation = 87
+l Width = 83
+l Height = 34
+b ChildCoordinatesAreRelative = 1
+
+
+[ExpandButton] // 
+
+l XLocation = 67
+l YLocation = 13
+l Width = 16
+l Height = 10
+
+l UWidth = 16
+l VHeight = 10
+l UNormal = 218
+l VNormal = 108
+l UPressed = 218
+l VPressed = 108
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6B6B6B
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6B6B6B
+
+
+st FileName = "mcl_mp_param_2.tga"
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[EditBox]
+l XLocation = 8
+l YLocation = 8
+l Width = 60
+l Height = 33
+l Color = 0xffc66600// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xffffffff
+l SelectedColor = 0xffff8a00
+l Font = 26212 // use agency fb 11
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 3
+
+[Rect0] // outline for whole drop down menu   
+//EditBoxRect
+l XLocation = 0
+l YLocation = 0
+l Width = 83
+l Height = 34
+l Color = 0xff43311C
+b outline = TRUE
+
+
+[Rect1] // rectangle for list box 
+// this is max height for the list box.
+//ListBoxRect
+l XLocation = 0
+l YLocation = 34
+l Width = 83
+l Height = 99
+l Color = 0xff43311C
+b outline = TRUE
+
+
+[Rect2] // divider between button and text
+l XLocation = 66
+l YLocation = 1
+l Width = 0
+l Height = 33
+l Color = 0xff43311C
+b outline = TRUE
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Text0] // variant name for list box
+l XLocation = 5
+l YLocation = 36
+l Width = 78
+l Height = 17
+l Color = 0xffffffff 
+b outline = FALSE
+l Font = 26212 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+st Animation = "Animation0"
+
+
+[Animation0] // for list box text
+ 
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600 
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600 
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffff8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+FITend 

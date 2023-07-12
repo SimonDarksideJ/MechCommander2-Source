@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BC141106D23C5343D57F404FE1FC1FC1" />
+  <Asset Name="..\autocannoncamo3.ini" Type="Physical" Author="franksav" FileSize="1272" ModificationTime="2006-03-03T01:28:12.5549901-08:00" CRC="432B9FE3F0A51CAF0775F4B3BE5BBDD6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="AutoCannonCamo3.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="AutocannonPopupX.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamo3.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen3.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen3.ase" />
+        <Relationship Type="Animation" RelatedAsset="autocannoncamoopen3.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PopupDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PopupDamX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

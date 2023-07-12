@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DCB2935B1691A9A437DC3BD2E9FDED7D" />
+  <Asset Name="..\gantry.ini" Type="Physical" Author="franksav" FileSize="419" ModificationTime="2006-03-03T01:28:24.4299141-08:00" CRC="F17430F0A3573060B101966B2EA3F004" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="gantry.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="gantrydam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Gantry" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

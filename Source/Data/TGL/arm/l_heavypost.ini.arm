@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6DE738742DB3DEFC68B4E610CD547407" />
+  <Asset Name="..\l_heavypost.ini" Type="Physical" Author="franksav" FileSize="336" ModificationTime="2006-03-03T01:28:30.4142508-08:00" CRC="148B424261D2C4F6EAE681638C422330" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="L_heavypost.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="L_heavypostL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="L_heavypostL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="L_heavypostX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="L_heavypostdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="L_heavypostdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Heavy Post" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

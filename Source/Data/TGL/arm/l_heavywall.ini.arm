@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A5DEF7DAF8D0C20255BCB299F9851A04" />
+  <Asset Name="..\l_heavywall.ini" Type="Physical" Author="franksav" FileSize="336" ModificationTime="2006-03-03T01:28:30.53925-08:00" CRC="66F8376254C3442D70F3B9D139F0E375" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="L_heavywall.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="L_heavywallL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="L_heavywallL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="L_heavywallX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="L_heavywalldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="L_heavywalldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Heavy Wall" ObjectType="Building" BuildingType="Wall" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

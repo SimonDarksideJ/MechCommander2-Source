@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BFFC7949B951124ACD44FB65A456C9B2" />
+  <Asset Name="..\AnubisLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="22827" ModificationTime="2006-02-01T10:54:34.5293702-08:00" CRC="FEC45673C73CC365A043DA0CAB9E30E6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\AnubisRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

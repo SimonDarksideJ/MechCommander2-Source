@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4E74461E403F5C881B52C8AB4B450D5F" />
+  <Asset Name="..\perimeterAlarm.ase" Type="Physical" Author="ngauvin" FileSize="52658" ModificationTime="2006-02-01T10:55:14.8890035-08:00" CRC="3479ED8DF19E1C495218CEF1B3406BB9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\PerimeterAlarm.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

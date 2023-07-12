@@ -1,0 +1,217 @@
+FITini 
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Rects]
+l Rectcount = 7
+
+[Rect0] // outline for structure readout
+l XLocation = 10
+l YLocation = 310
+l Width = 236
+l Height = 29
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // building description scroll box
+l XLocation = 257
+l YLocation = 35
+l Width = 235
+l Height = 416
+l Color = -16634027
+b outline = TRUE
+
+[Rect2] // weapons loadout scroll box
+l XLocation = 10
+l YLocation = 366
+l Width = 237
+l Height = 86
+l Color = -16699563
+b outline = TRUE
+
+[Rect3] // davion line
+l XLocation = 18
+l YLocation = 282
+l Width = 218
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect4] // davion line
+l XLocation = 243
+l YLocation = 43
+l Width = 0
+l Height = 232
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect5] // davion line
+l XLocation = 10
+l YLocation = 43
+l Width = 0
+l Height = 232
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect6] // davion line
+l XLocation = 18
+l YLocation = 35
+l Width = 218
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 5
+
+[Static0] // davion corner, upper left
+l XLocation = 10
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+
+[Static1] //  davion corner, lower right
+l XLocation = 237
+l YLocation = 276
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static2] // davion corner, upper right
+l XLocation = 237
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static3] //  davion corner, lower left
+l XLocation = 10
+l YLocation = 276
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static4] // rotating picture of building goes here, davion version
+l XLocation = 12
+l YLocation = 43
+l Width = 230
+l Height = 232
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // building name header
+l XLocation = 10
+l YLocation = 9
+l Width = 483
+l Height = 22
+l Color = -10709309
+b outline = FALSE
+l Font = 27712 // use agency fb 14
+l TextID = 27712 
+l Alignment = 0
+
+
+
+
+
+[Text1] // structure readout
+l XLocation = 17
+l YLocation = 315
+l Width = 223
+l Height = 18
+l Color = -10643773
+b outline = FALSE
+l Font = 27733 // use agency fb 11
+l TextID = 27732
+l Alignment = 0
+
+[Text2] // weapons loadout header
+l XLocation = 10
+l YLocation = 346
+l Width = 236
+l Height = 18
+l Color = -10512701
+b outline = FALSE
+l Font = 27733 // use agency fb 11
+l TextID = 27732
+l Alignment = 0
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+FITend 

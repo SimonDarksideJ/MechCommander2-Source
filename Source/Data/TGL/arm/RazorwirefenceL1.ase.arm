@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="773D8050B173B4207E9EC21E48E05D3F" />
+  <Asset Name="..\RazorwirefenceL1.ase" Type="Physical" Author="ngauvin" FileSize="5875" ModificationTime="2006-02-01T10:55:17.4515199-08:00" CRC="E60ADA33373B3E24E12555FF149A8C44" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Razorfence1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

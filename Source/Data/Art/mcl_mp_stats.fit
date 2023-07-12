@@ -1,0 +1,704 @@
+FITini 
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons]
+l Buttoncount = 2
+
+
+
+
+
+
+
+[Button0]  // CLOSE button
+
+l XLocation = 666
+l YLocation = 536
+l Width = 128
+l Height = 59
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 99
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27708
+l Font = 27207 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26093
+
+st FileName = "mcl_mp_stats_4.tga"
+
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 35
+l VNormal = 0
+
+l UPressed = 35
+l VPressed = 59
+
+l UHighlight = 35
+l VHighlight = 0
+
+l UDisabled = 35
+l VDisabled = 59
+
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+
+
+[Button1] // chat button
+l XLocation = 146
+l YLocation = 549
+l Width = 36
+l Height = 43
+
+
+st FileName = "mcl_mp_stats_4.tga"
+
+
+l UWidth = 36
+l VHeight = 43
+
+l UNormal = 163
+l VNormal = 0
+
+l UPressed = 163
+l VPressed = 43
+
+l UHighlight = 163
+l VHighlight = 0
+
+l UHighlightPressed = 163
+l VHighlightPressed = 43
+
+l UDisabled = 163
+l VDisabled = 43
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 2
+
+
+[Rect0] // rect around tac map
+l XLocation = 505
+l YLocation = 166
+l Width = 138
+l Height = 138
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // first entry goes here
+l XLocation = 27
+l YLocation = 127
+l Width = 468
+l Height = 40
+l Color = 0x00ffffff
+b outline = TRUE
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 32
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 220
+l VNormal = 245
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 230
+l VNormal = 205
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 86
+l Height = 32
+l UNormal = 0
+l VNormal = 205
+l UWidth = 86
+l VHeight = 32
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static6]
+l XLocation = 512
+l YLocation = 8
+l Width = 102
+l Height = 40
+l UNormal = 86
+l VNormal = 205
+l UWidth = 102
+l VHeight = 40
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static7]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 220
+l VNormal = 205
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static8]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 58
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 58
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static9]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 58
+l UNormal = 0
+l VNormal = 82
+l UWidth = 256
+l VHeight = 58
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static10]
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 50
+l UNormal = 0
+l VNormal = 140
+l UWidth = 256
+l VHeight = 50
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static11]
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 50
+l UNormal = 188
+l VNormal = 205
+l UWidth = 32
+l VHeight = 50
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static12]
+l XLocation = 0
+l YLocation = 98
+l Width = 17
+l Height = 256
+l UNormal = 18
+l VNormal = 0
+l UWidth = 17
+l VHeight = 256
+st FileName = "mcl_mp_stats_4.tga"
+
+[Static13]
+l XLocation = 782
+l YLocation = 98
+l Width = 18
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 18
+l VHeight = 256
+st FileName = "mcl_mp_stats_4.tga"
+
+[Static14]
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+l UNormal = 0
+l VNormal = 237
+l UWidth = 32
+l VHeight = 5
+st FileName = "mcl_mp_stats_1.tga"
+
+
+
+
+
+
+[Static15] // tac map 
+l XLocation = 510
+l YLocation = 171
+l Width = 128
+l Height = 128
+
+
+[Static16]
+l XLocation = 0
+l YLocation = 354
+l Width = 17
+l Height = 105
+l UNormal = 199
+l VNormal = 0
+l UWidth = 17
+l VHeight = 105
+st FileName = "mcl_mp_stats_4.tga"
+
+[Static17]
+l XLocation = 782
+l YLocation = 354
+l Width = 18
+l Height = 26
+l UNormal = 231
+l VNormal = 78
+l UWidth = 18
+l VHeight = 26
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static18]
+l XLocation = 504
+l YLocation = 380
+l Width = 256
+l Height = 79
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 79
+st FileName = "mcl_mp_stats_2.tga"
+
+[Static19]
+l XLocation = 760
+l YLocation = 380
+l Width = 40
+l Height = 79
+l UNormal = 175
+l VNormal = 78
+l UWidth = 40
+l VHeight = 79
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static20]
+l XLocation = 0
+l YLocation = 459
+l Width = 256
+l Height = 87
+l UNormal = 0
+l VNormal = 79
+l UWidth = 256
+l VHeight = 87
+st FileName = "mcl_mp_stats_2.tga"
+
+[Static21]
+l XLocation = 256
+l YLocation = 459
+l Width = 256
+l Height = 87
+l UNormal = 0
+l VNormal = 166
+l UWidth = 256
+l VHeight = 87
+st FileName = "mcl_mp_stats_2.tga"
+
+[Static22]
+l XLocation = 512
+l YLocation = 459
+l Width = 256
+l Height = 77
+l UNormal = 0
+l VNormal = 1
+l UWidth = 256
+l VHeight = 77
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static23]
+l XLocation = 768
+l YLocation = 459
+l Width = 32
+l Height = 77
+l UNormal = 143
+l VNormal = 78
+l UWidth = 32
+l VHeight = 77
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static24]
+l XLocation = 512
+l YLocation = 536
+l Width = 144
+l Height = 10
+l UNormal = 44
+l VNormal = 245
+l UWidth = 144
+l VHeight = 10
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static25]
+l XLocation = 656
+l YLocation = 536
+l Width = 10
+l Height = 59
+l UNormal = 215
+l VNormal = 78
+l UWidth = 10
+l VHeight = 59
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static26]
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+l UNormal = 225
+l VNormal = 78
+l UWidth = 6
+l VHeight = 59
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static27]
+l XLocation = 0
+l YLocation = 546
+l Width = 143
+l Height = 49
+l UNormal = 0
+l VNormal = 78
+l UWidth = 143
+l VHeight = 49
+st FileName = "mcl_mp_stats_3.tga"
+
+[Static28]
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 190
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static29]
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 195
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static30]
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 200
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_stats_1.tga"
+
+[Static31] // cover up for main menu
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+l UNormal = 35
+l VNormal = 118
+l UWidth = 176
+l VHeight = 40
+st FileName = "mcl_mp_stats_4.tga"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Texts]
+l Textcount = 9
+
+[Text0] //  STATS RECAP main header
+l XLocation = 17
+l YLocation = 12
+l Width = 406
+l Height = 28
+l Color = -30208
+b outline = FALSE
+l Font = 26351 // use agency fb 17
+l TextID = 26350
+l Alignment = 0
+
+[Text1] // MAP NAME
+l XLocation = 505
+l YLocation = 103
+l Width = 272
+l Height = 23
+l Color = -9589796
+b outline = FALSE
+l Font = 26355 // Use agency fb 14
+l TextID = 27000
+l Alignment = 0
+
+
+[Text2] // player name header
+l XLocation = 47
+l YLocation = 107
+l Width = 196
+l Height = 20
+l Color = -30208
+b outline = FALSE
+l Font = 26353 // use agency fb 14
+l TextID = 26352
+l Alignment = 0
+
+[Text3] // SCORE header
+l XLocation = 214
+l YLocation = 107
+l Width = 83
+l Height = 17
+l Color = -30207
+b outline = FALSE
+l Font = 26357 // use agency fb 11
+l TextID = 26356
+l Alignment = 2
+
+[Text4] // kills header
+l XLocation = 303
+l YLocation = 107
+l Width = 83
+l Height = 17
+l Color = -30206
+b outline = FALSE
+l Font = 26359 // use agency fb 11
+l TextID = 26358
+l Alignment = 2
+
+[Text5] // losses header
+l XLocation = 415
+l YLocation = 107
+l Width = 83
+l Height = 17
+l Color = -30205
+b outline = FALSE
+l Font = 26361 // use agency fb 11
+l TextID = 26360
+l Alignment = 0
+
+[Text6] // mission type 
+l XLocation = 505
+l YLocation = 126
+l Width = 272
+l Height = 17
+l Color = -16755822
+b outline = FALSE
+l Font = 26362 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+[Text7] // max players number 
+l XLocation = 505
+l YLocation = 143
+l Width = 272
+l Height = 17
+l Color = -16756079
+b outline = FALSE
+l Font = 26362 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+[Text8]  //help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 26366 // use arial narrow 8
+l TextID = 27000
+l Alignment = 0
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+FITend 

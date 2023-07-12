@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E87C2330D226E112B1CE7C0E9B805ED5" />
+  <Asset Name="..\lrmpopupenc.ini" Type="Physical" Author="franksav" FileSize="305" ModificationTime="2006-03-03T01:28:34.0704774-08:00" CRC="1BAC4BA1742647100BE97B60C0358B0D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="LRMPopupEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

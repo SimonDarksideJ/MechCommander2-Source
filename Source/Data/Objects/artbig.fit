@@ -1,0 +1,102 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				MapIcon:	Big Artillery Strike Indicator
+//
+//				BASE ID:	58
+//
+//---------------------------------------------------------------------------
+
+[ObjectClass]
+l ObjectTypeNum = 12
+
+[Artillery]
+st ArtillerySpriteName 	= "artlry"					//Name of Sprite .SHP file with waypoint icon in it.
+ul StartFrame			= 0							//Frame to start at
+ul FrameCount 			= 30						//Number of frames of animation.
+f FrameRate 			= 15.0						//Frame Rate to playback animation at.
+f NominalTimeToImpact	= 7.0						//Time it takes strike to arrive.
+f NominalDamage			= 15.0						//Points of Damage per hit.
+f nominalMajorRange		= 25						//This is in Meters
+f nominalMajorHits		= 3.0						//Number of hits inside Major Range
+f nominalMinorRange		= 80						//This is in Meters
+f nominalMinorHits		= 2.0						//Number of hits inside Minor Range
+
+f NominalSensorTime		= 0.0
+f NominalSensorRange	= 0.0
+
+f fontScale				= 1.7
+f fontXOffset			= -14.0
+f fontYOffset			= -5.0
+ul fontColor			= 242
+
+l NumExplosions			= 12
+f ExplosionDelay0		= 0.0;
+f ExplosionDelay1		= 0.1;
+f ExplosionDelay2		= 0.2;
+f ExplosionDelay3		= 0.2;
+f ExplosionDelay4		= 0.5;
+f ExplosionDelay5		= 0.5;
+f ExplosionDelay6		= 0.5;
+f ExplosionDelay7		= 0.5;
+f ExplosionDelay8		= 0.9;
+f ExplosionDelay9		= 0.9;
+f ExplosionDelay10		= 0.9;
+f ExplosionDelay11		= 0.9;
+f ExplosionDelay12		= 0.9;
+
+f ExplosionOffsetX0		= 0.0;
+f ExplosionOffsetY0		= 0.0;
+
+f ExplosionOffsetX1		= 25
+f ExplosionOffsetY1		= 25
+
+f ExplosionOffsetX2		= -25
+f ExplosionOffsetY2		= 25
+
+f ExplosionOffsetX3		= -25
+f ExplosionOffsetY3		= -25
+
+f ExplosionOffsetX4		= 25
+f ExplosionOffsetY4		= -25
+
+f ExplosionOffsetX5		= 50
+f ExplosionOffsetY5		= 50
+
+f ExplosionOffsetX6		= -50
+f ExplosionOffsetY6		= 50
+
+f ExplosionOffsetX7		= -50
+f ExplosionOffsetY7		= -50
+
+f ExplosionOffsetX8		= 50
+f ExplosionOffsetY8		= -50
+
+f ExplosionOffsetX9		= 25
+f ExplosionOffsetY9		= 50
+
+f ExplosionOffsetX10	= 50 
+f ExplosionOffsetY10	= 25
+
+f ExplosionOffsetX11	= -25
+f ExplosionOffsetY11	= -50
+
+f ExplosionOffsetX12	= -50
+f ExplosionOffsetY12	= -25
+
+l ExplosionsPerExplosion = 1
+l ExplosionRandomOffsetX = 25
+l ExplosionRandomOffsetY = 25
+
+[ObjectType]
+st Name 				= "ARTBig"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 					= 58			// ID number for this mech type
+l Appearance			= 0x00000000
+l Duration				= -1			// Lasts forever = -1
+l MaxDamage				= 0				// Number of damage points before BOOM!
+l ExplosionObject		= 519			// Object Class Number of explosion
+l DestroyedObject		= -1			// Object Class Number of Destroyed shape
+f ExtentRadius			= 187			// Extent Radius in Meters (0 Can't hit hit ever)
+
+FITEnd

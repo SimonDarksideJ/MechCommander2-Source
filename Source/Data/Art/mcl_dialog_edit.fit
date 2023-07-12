@@ -1,0 +1,424 @@
+FITini 
+// Dialog box with editable text area
+[Buttons]
+l Buttoncount = 2
+
+[Button0] // cancel button
+
+l ID = 8
+l XLocation = 237
+l YLocation = 367
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 251
+l YTextLocation = 381
+l TextWidth = 86
+l TextHeight = 31
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27653
+l Font = 27655 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+st FileName = "mcl_dialog_3.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 50
+l VNormal = 118
+
+l UPressed = 50
+l VPressed = 177
+
+l UHighlight = 50
+l VHighlight = 118
+
+l UDisabled = 50
+l VDisabled = 177
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 4
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.1
+l HighlightColor1 = 0xff000000
+f HighlightTime0 = 0.2
+l HighlightColor2 = 0xffffffff
+f HighlightTime1 = 0.8
+l HighlightColor3 = 0xff5C96C2
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor = 0xff373737
+
+
+
+[Button1] // OKAY button
+
+l ID = 7
+l XLocation = 435
+l YLocation = 367
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 449
+l YTextLocation = 381
+l TextWidth = 86
+l TextHeight = 31
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27652
+l Font = 27655 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+st FileName = "mcl_dialog_edit_3.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 50
+l VNormal = 118
+
+l UPressed = 50
+l VPressed = 177
+
+l UHighlight = 50
+l VHighlight = 118
+
+l UDisabled = 50
+l VDisabled = 177
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff5C96C2
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 4
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.1
+l HighlightColor1 = 0xff000000
+f HighlightTime0 = 0.2
+l HighlightColor2 = 0xffffffff
+f HighlightTime1 = 0.8
+l HighlightColor3 = 0xff5C96C2
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor = 0xff373737
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+[Rects]
+l Rectcount = 3
+
+[Rect0] // black rect behind text
+l XLocation = 237 
+l YLocation = 256
+l Width = 325
+l Height = 132
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect1] // outline rect for text
+l XLocation = 247
+l YLocation = 226
+l Width = 305
+l Height = 112
+l Color = 0xff43311C
+b outline = TRUE
+
+[Rect1] // outline rect for text edit area
+l XLocation = 291
+l YLocation = 295
+l Width = 217
+l Height = 32
+l Color = 0xff43311C
+b outline = TRUE
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 11
+
+[Static0]
+l XLocation = 187
+l YLocation = 0
+l Width = 256
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 256
+st FileName = "mcl_dialog_edit_1.tga"
+
+[Static1]
+l XLocation = 443
+l YLocation = 0
+l Width = 170
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 170
+l VHeight = 256
+st FileName = "mcl_dialog_edit_2.tga"
+
+[Static2]
+l XLocation = 187
+l YLocation = 256
+l Width = 50
+l Height = 93
+l UNormal = 170
+l VNormal = 0
+l UWidth = 50
+l VHeight = 93
+st FileName = "mcl_dialog_edit_2.tga"
+
+[Static3]
+l XLocation = 563
+l YLocation = 256
+l Width = 50
+l Height = 93
+l UNormal = 170
+l VNormal = 93
+l UWidth = 50
+l VHeight = 93
+st FileName = "mcl_dialog_edit_2.tga"
+
+[Static4]
+l XLocation = 187
+l YLocation = 349
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_dialog_edit_3.tga"
+
+[Static5]
+l XLocation = 443
+l YLocation = 349
+l Width = 170
+l Height = 18
+l UNormal = 0
+l VNormal = 59
+l UWidth = 170
+l VHeight = 18
+st FileName = "mcl_dialog_edit_3.tga"
+
+[Static6]
+l XLocation = 187
+l YLocation = 367
+l Width = 50
+l Height = 59
+l UNormal = 170
+l VNormal = 59
+l UWidth = 50
+l VHeight = 59
+st FileName = "mcl_dialog_edit_3.tga"
+
+[Static7]
+l XLocation = 365
+l YLocation = 367
+l Width = 70
+l Height = 59
+l UNormal = 170
+l VNormal = 186
+l UWidth = 70
+l VHeight = 59
+st FileName = "mcl_dialog_edit_2.tga"
+
+[Static8]
+l XLocation = 563
+l YLocation = 367
+l Width = 50
+l Height = 59
+l UNormal = 0
+l VNormal = 118
+l UWidth = 50
+l VHeight = 59
+st FileName = "mcl_dialog_edit_3.tga"
+
+[Static9]
+l XLocation = 187
+l YLocation = 426
+l Width = 256
+l Height = 41
+l UNormal = 0
+l VNormal = 18
+l UWidth = 256
+l VHeight = 41
+st FileName = "mcl_dialog_edit_3.tga"
+
+[Static10]
+l XLocation = 443
+l YLocation = 426
+l Width = 170
+l Height = 41
+l UNormal = 0
+l VNormal = 77
+l UWidth = 170
+l VHeight = 41
+st FileName = "mcl_dialog_edit_3.tga"
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // explanation text 
+l XLocation = 252
+l YLocation = 231
+l Width = 295
+l Height = 59
+l Color = 0xffC66600
+b outline = FALSE
+l Font = 27656 // use agencyfb11
+l TextID = 27654
+l Alignment = 3
+
+[Text1]
+l XLocation = 295
+l YLocation = 299
+l Width = 209
+l Height = 24
+l Color = -3774976
+b outline = FALSE
+l Font = 27656 // use agencyfb11
+l TextID = 27654
+l Alignment = 0
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[EnterAnim]  // use when dialog appears on screen
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = -466
+f Time1 = 0.15
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+[LeaveAnim]  // use when dialog leaves after cancel or okay is pressed
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = .1
+l Pos1X = 0
+l Pos1Y = -466
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+FITend 

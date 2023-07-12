@@ -1,0 +1,24 @@
+FITini
+
+// This is the radiotwr data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 		= "radiotwr"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type			= 0x7
+l Appearance		= 0x020001ba
+l Duration		= -1			// Lasts forever = -1
+l MaxDamage		= 0			// Number of damage points before BOOM!
+l ExplosionObject	= 42			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 20			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName = 410
+ul DmgLevel		= 13
+l LowTemplate	= 0x08000000
+l HighTemplate	= 0x00000010
+
+FITend

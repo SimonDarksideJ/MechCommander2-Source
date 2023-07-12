@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="27742A7442E9AD6C81F6E594304BF5B6" />
+  <Asset Name="..\Hollander.ase" Type="Physical" Author="ngauvin" FileSize="165068" ModificationTime="2006-02-01T10:54:56.9045134-08:00" CRC="0414376FD74D62425D68734F0A3979C7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\HollanderRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

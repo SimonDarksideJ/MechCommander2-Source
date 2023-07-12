@@ -1,0 +1,31 @@
+FITini
+
+// This is the TEMPLATE data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xpipe_end_3"
+l Type 				= 0x7
+l Appearance 		= 0x02000305
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 10			// Number of damage points before BOOM!
+l ExplosionObject	= 703			// Object Class Number of explosion for this building
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 15			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 212
+ul DmgLevel			= 6				// How much damage before changing to destroyed shape
+ul BlownEffectId	= 42			//Special Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is dies.
+f ExplosionDamage	= 25.0			//When the building dies, it does this much damage
+f ExplosionRadius	= 125.0			//in this radius.  Radius is World Units.  
+f TimeToBurnDamage	= 0.5			//Ok.  This means that at 30 points of damage, the building bursts
+f BurnDamagePerTime	= 5.0			//info flame.  Each half second its on fire, the building takes
+f DamageLvlForBurn	= 1.0
+l LowTemplate		= 0x00000000
+l HighTemplate		= 0x00000038
+
+FITend

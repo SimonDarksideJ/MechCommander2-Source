@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4AF51DB7B8658F6FDD89998BA609B0C9" />
+  <Asset Name="..\HPG_OutBldgL1.ase" Type="Physical" Author="ngauvin" FileSize="25106" ModificationTime="2006-02-01T10:54:58.1388963-08:00" CRC="0ECC38C1F860CF21EB2F1529E9626192" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\HPGOutBldg.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

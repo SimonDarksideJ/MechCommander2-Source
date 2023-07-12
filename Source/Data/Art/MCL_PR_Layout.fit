@@ -1,0 +1,2386 @@
+FITini
+
+// PILOT READY AREA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[PilotReadyStatics]
+
+l staticCount = 74
+
+[PilotReadyStatic0]  // A
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 256
+l VHeight = 8
+
+[PilotReadyStatic1]  // B
+
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 8
+
+l UWidth  = 256
+l VHeight = 8
+
+[PilotReadyStatic2]  // C
+
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 16
+
+l UWidth  = 256
+l VHeight = 8
+
+[PilotReadyStatic3]  // D
+
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 176
+l VNormal = 205
+l UWidth  = 32
+l VHeight = 8
+
+[PilotReadyStatic4]  // E
+
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 224
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 32
+
+[PilotReadyStatic5]  // F
+
+l XLocation = 426
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 234
+l VNormal = 0
+
+l UWidth  = 20
+l VHeight = 32
+
+[PilotReadyStatic6]  // G
+
+l XLocation = 594
+l YLocation = 8
+l Width = 20
+l Height = 32
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 224
+l VNormal = 32
+
+l UWidth  = 20
+l VHeight e= 32
+
+[PilotReadyStatic7]  // H
+
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 244
+l VNormal = 32
+
+l UWidth  = 10
+l VHeight = 40
+
+[PilotReadyStatic8]  // I
+
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 24
+
+l UWidth  = 256
+l VHeight = 18
+
+[PilotReadyStatic9]  // K
+
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 42
+
+l UWidth  = 256
+l VHeight = 18
+
+[PilotReadyStatic10]  // L
+
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 8
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 222
+
+l UWidth  = 102
+l VHeight = 8
+
+[PilotReadyStatic11]  // M
+
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 10
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 60
+
+l UWidth  = 256
+l VHeight = 10
+
+[PilotReadyStatic12]  // N
+
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 176
+l VNormal = 213
+
+l UWidth  = 32
+l VHeight = 10
+
+[PilotReadyStatic13]  // O
+
+l XLocation = 0
+l YLocation = 58
+l Width = 15
+l Height = 240
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 15
+l VHeight = 240
+
+[PilotReadyStatic14]  // P
+
+l XLocation = 345
+l YLocation = 58
+l Width = 11
+l Height = 101
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 0
+
+l UWidth  = 11
+l VHeight = 101
+
+[PilotReadyStatic15]  // Q
+
+l XLocation = 532
+l YLocation = 58
+l Width = 11
+l Height = 240
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 15
+l VNormal = 0
+
+l UWidth  = 11
+l VHeight = 240
+
+[PilotReadyStatic16]  // R
+
+l XLocation = 788
+l YLocation = 58
+l Width = 12
+l Height = 240
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 26
+l VNormal = 0
+
+l UWidth  = 12
+l VHeight = 240
+
+[PilotReadyStatic17]  // S
+
+l XLocation = 356
+l YLocation = 100
+l Width = 176
+l Height = 4
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 218
+
+l UWidth  = 176
+l VHeight = 4
+
+[PilotReadyStatic18]  // T
+
+l XLocation = 356
+l YLocation = 146
+l Width = 176
+l Height = 13
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 205
+
+l UWidth  = 13
+l VHeight = 13
+
+[PilotReadyStatic19]  // U
+
+l XLocation = 0
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 70
+
+l UWidth  = 256
+l VHeight = 14
+
+[PilotReadyStatic20]  // V
+
+l XLocation = 256
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 84
+l UWidth  = 256
+l VHeight = 14
+
+[PilotReadyStatic21]  // W
+
+l XLocation = 512
+l YLocation = 298
+l Width = 256
+l Height = 14
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 98
+
+l UWidth  = 256
+l VHeight = 14
+
+[PilotReadyStatic22]  // X
+
+l XLocation = 768
+l YLocation = 298
+l Width = 32
+l Height = 14
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 208
+l VNormal = 205
+
+l UWidth  = 32
+l VHeight = 14
+
+[PilotReadyStatic23]  // Y
+
+l XLocation = 0
+l YLocation = 312
+l Width = 72
+l Height = 208
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 38
+l VNormal = 0
+
+l UWidth  = 72
+l VHeight = 208
+
+[PilotReadyStatic24]  // Z
+
+l XLocation = 728
+l YLocation = 312
+l Width = 72
+l Height = 196
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 110
+l VNormal = 0
+
+l UWidth  = 72
+l VHeight = 196
+
+
+
+[PilotReadyStatic25]  // ZZ
+
+l XLocation = 728
+l YLocation = 508
+l Width = 72
+l Height = 12
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 101
+
+l UWidth  = 72
+l VHeight = 12
+
+[PilotReadyStatic26]  // AA
+
+l XLocation = 0
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 112
+
+l UWidth  = 256
+l VHeight = 26
+
+[PilotReadyStatic27]  // BB
+
+l XLocation = 256
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 138
+
+l UWidth  = 256
+l VHeight = 26
+
+[PilotReadyStatic28]  // CC
+
+l XLocation = 512
+l YLocation = 520
+l Width = 256
+l Height = 26
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 164
+
+l UWidth  = 256
+l VHeight = 26
+
+[PilotReadyStatic29]  // DD
+
+l XLocation = 768
+l YLocation = 520
+l Width = 32
+l Height = 16
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 208
+l VNormal = 219
+
+l UWidth  = 32
+l VHeight = 16
+
+
+
+
+
+
+[PilotReadyStatic30]  // EE
+
+l XLocation = 0
+l YLocation = 536
+l Width = 5
+l Height = 59
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 193
+l VNormal = 0
+
+l UWidth  = 5
+l VHeight = 59
+
+
+
+
+
+
+[PilotReadyStatic31]  // FF
+
+l XLocation = 133
+l YLocation = 546
+l Width = 10
+l Height = 49
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 198
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 49
+
+
+
+
+
+[PilotReadyStatic32]  // GG
+
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 208
+l VNormal = 0
+
+l UWidth  = 10
+l VHeight = 49
+
+
+
+
+
+
+[PilotReadyStatic33]  // HH
+
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 218
+l VNormal = 0
+
+l UWidth  = 6
+l VHeight = 59
+
+
+
+
+
+
+[PilotReadyStatic34]  // II
+
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 190
+
+l UWidth  = 256
+l VHeight = 5
+
+
+
+
+
+[PilotReadyStatic35]  // KK
+
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 195
+
+l UWidth  = 256
+l VHeight = 5
+
+
+
+
+
+
+[PilotReadyStatic36]  // LL
+
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 0
+l VNormal = 200
+
+l UWidth  = 256
+l VHeight = 5
+
+
+
+
+
+[PilotReadyStatic37]  // MM
+
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+
+st FileName = "MCL_PR_3"
+
+l UNormal = 176
+l VNormal = 223
+
+l UWidth  = 32
+l VHeight = 5
+
+
+
+
+
+
+[PilotReadyStatic38]  // cbills icon
+
+l XLocation = 447
+l YLocation = 9
+l Width = 30
+l Height = 30
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 113
+
+l UWidth  = 30
+l VHeight = 30
+
+l HelpDesc = 29003
+
+
+
+[PilotReadyStatic39]  // where team weight used to be- big static
+
+l XLocation = 345
+l YLocation = 159
+l Width = 187
+l Height = 139
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 187
+l VHeight = 139
+
+
+
+
+
+[PilotReadyStatic40]  // pilot info targeting icon
+
+l XLocation = 82
+l YLocation = 374
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyStatic41]  // pilot info piloting icon
+
+l XLocation = 82
+l YLocation = 426
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyStatic42]  // pilot info KILLS ICON
+
+l XLocation = 82
+l YLocation = 478
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 0
+l VNormal = 64
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyStatic43]  // dep team combo item 1
+
+l XLocation = 25
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+[PilotReadyStatic44]  // dep team combo item 2
+
+l XLocation = 104
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+[PilotReadyStatic45]  // dep team combo item 3
+
+l XLocation = 183
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+[PilotReadyStatic46]  // dep team combo item 4
+
+l XLocation = 262
+l YLocation = 86
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic47]  // dep team combo item 5
+
+l XLocation = 25
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic48]  // dep team combo item 6
+
+l XLocation = 104
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic49]  // dep team combo item 7
+
+l XLocation = 183
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic50]  // dep team combo item 8
+
+l XLocation = 262
+l YLocation = 155
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic51]  // dep team combo item 9
+
+l XLocation = 25
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic52]  // dep team combo item 10
+l XLocation = 104
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic53]  // dep team combo item 11
+l XLocation = 183
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+
+
+[PilotReadyStatic54]  // dep team combo item 12
+
+l XLocation = 262
+l YLocation = 224
+l Width = 75
+l Height = 64
+
+st FileName = "MCL_PR_1"
+
+l UNormal = 176
+l VNormal = 0
+l UWidth  = 75
+l VHeight = 64
+
+[PilotReadyStatic55]  // small border piece for medals
+
+l XLocation = 360
+l YLocation = 344
+l Width = 36
+l Height = 7
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 248
+l UWidth  = 36
+l VHeight = 7
+
+
+
+
+[PilotReadyStatic56]  // small right  border piece for medals
+
+l XLocation = 492
+l YLocation = 344
+l Width = 36
+l Height = 7
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 248
+l UWidth  = 36
+l VHeight = 7
+
+
+
+
+
+
+
+[PilotReadyStatic57]  // mid size mid border piece for medals
+
+l XLocation = 395
+l YLocation = 471
+l Width = 98
+l Height = 6
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 242
+l UWidth  = 98
+l VHeight = 6
+
+
+[PilotReadyStatic58]  // large size bottom border piece for medals
+
+l XLocation = 360
+l YLocation = 505
+l Width = 168
+l Height = 7
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 235
+l UWidth  = 168
+l VHeight = 7
+
+
+[PilotReadyStatic59]  // left vertical line 1
+
+l XLocation = 360
+l YLocation = 352
+l Width = 1
+l Height = 152
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+
+[PilotReadyStatic60]  // left vertical line 2
+
+l XLocation = 395
+l YLocation = 352
+l Width = 1
+l Height = 118
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+
+[PilotReadyStatic61]  // right vertical line 2
+
+l XLocation = 527 
+l YLocation = 352
+l Width = 1
+l Height = 152
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+
+[PilotReadyStatic62]  // right vertical line 1
+
+l XLocation = 492
+l YLocation = 352
+l Width = 1
+l Height = 118
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+[PilotReadyStatic63]  // left vertical line for spec skills
+
+l XLocation = 684
+l YLocation = 328
+l Width = 1
+l Height = 176
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+[PilotReadyStatic64]  // right vertical line for spec skills
+
+l XLocation = 719
+l YLocation = 328
+l Width = 1
+l Height = 176
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 255
+l UWidth  = 1
+l VHeight = 1
+
+
+
+
+[PilotReadyStatic65]  // small bottom border piece for spec. skills
+
+l XLocation = 684
+l YLocation = 505
+l Width = 36
+l Height = 7
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 36
+l VNormal = 248
+l UWidth  = 36
+l VHeight = 7
+
+
+
+[PilotReadyStatic66]  // small top border piece for spec. skills
+
+l XLocation = 684
+l YLocation = 320
+l Width = 36
+l Height = 7
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 248
+l UWidth  = 36
+l VHeight = 7
+
+
+[PilotReadyStatic67]  // this rect defines the placement
+// for the pilot picture
+// pilot pictures are 92x, 128y
+// labeled MCL_PR_[pilot'sname]
+l XLocation = 398
+l Width = 92
+l YLocation = 344
+l Height = 128
+
+l UNormal = 0
+l VNormal = 0
+l UWidth = 92
+l VHeight = 128
+l HelpDesc = 29081
+
+[PilotReadyStatic68]  // corner left of pilot name
+l XLocation = 345
+l YLocation = 317
+l Width = 16
+l Height = 27
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 143
+l UWidth  = 16
+l VHeight = 27
+
+[PilotReadyStatic69]  // corner right of pilot name
+
+l XLocation = 527
+l YLocation = 317
+l Width = 16
+l Height = 27
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 198
+l VNormal = 143
+l UWidth  = 16
+l VHeight = 27
+
+[PilotReadyStatic70]  // corner right top of spec skills
+
+l XLocation = 676
+l YLocation = 317
+l Width = 8
+l Height = 3
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 173
+l UWidth  = 8
+l VHeight = 3
+
+[PilotReadyStatic71]  // corner right bottom of spec skills
+
+l XLocation = 676
+l YLocation = 512
+l Width = 8
+l Height = 3
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 170
+l UWidth  = 8
+l VHeight = 3
+
+
+[PilotReadyStatic72]  // corner right bottom of pilot pic
+
+l XLocation = 528
+l YLocation = 512
+l Width = 8
+l Height = 3
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 190
+l VNormal = 170
+l UWidth  = 8
+l VHeight = 3
+
+
+[PilotReadyStatic73]  // corner left bottom of pilot pic
+
+l XLocation = 352
+l YLocation = 512
+l Width = 8
+l Height = 3
+
+st FileName = "MCL_PR_4"
+
+l UNormal = 182
+l VNormal = 170
+l UWidth  = 8
+l VHeight = 3
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[PilotReadyRects]
+
+l rectCount = 16
+
+[PilotReadyRect0] 
+// this is an outlined rect
+// available pilot entries go in here
+// has a scroll bar
+
+l left = 552
+l right = 778
+l top = 86
+l bottom = 288
+l color  = 0xff43311c
+b outline = 1
+l HelpDesc = 29075
+
+[PilotReadyRect1]  // decoline left top
+
+l XLocation = 77
+l YLocation = 317
+l Width = 266
+l Height = 0
+l color  = 0xff002F55
+b outline = 1
+
+
+[PilotReadyRect2] // decoline right top
+l XLocation = 544
+l YLocation = 317
+l Width = 129
+l Height = 0
+l color  = 0xff002F55
+b outline = 1
+
+[PilotReadyRect3] // decoline left vert
+
+l XLocation = 77
+l YLocation = 317
+l Width = 0
+l Height = 197
+l color  = 0xff002F55
+b outline = 1
+
+[PilotReadyRect4] // decoline left bot
+l XLocation = 77
+l YLocation = 514
+l Width = 273
+l Height = 0
+l color  = 0xff002F55
+b outline = 1
+
+[PilotReadyRect5] // decoline right bot
+l XLocation = 537
+l YLocation = 514
+l Width = 137
+l Height = 0
+l color  = 0xff002F55
+b outline = 1
+
+[PilotReadyRect6] // pilot name
+l XLocation = 359
+l YLocation = 312
+l Width = 162
+l Height = 28
+l color  = 0
+b outline = FALSE
+
+[PilotReadyRect7] // pilot specialty
+l XLocation = 526
+l YLocation = 312
+l Width = 155
+l Height = 199
+l color  = 0
+b outline = FALSE
+l HelpDesc = 0				//  change back to 29083 if you want generic specialty skill help
+
+[PilotReadyRect8] // help rect for screen title box
+l XLocation = 11
+l YLocation = 7
+l Width = 416
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29072
+
+[PilotReadyRect9] // help rect for cbill icon and text readout
+l XLocation = 448
+l YLocation = 7
+l Width = 147
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29003
+
+[PilotReadyRect10] // help rect for currently selected pilot name and pic
+l XLocation = 396
+l YLocation = 316
+l Width = 93
+l Height = 159
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29081
+
+[PilotReadyRect11] // help rect for gunnery box
+l XLocation = 82
+l YLocation = 373
+l Width = 218
+l Height = 31
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29078
+
+[PilotReadyRect12] // help rect for piloting skill box
+l XLocation = 82
+l YLocation = 426
+l Width = 218
+l Height = 31
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29079
+
+[PilotReadyRect13] // help rect for kills box
+l XLocation = 82
+l YLocation = 477
+l Width = 218
+l Height = 31
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29080
+
+[PilotReadyRect14] // help rect for ranks box
+l XLocation = 82
+l YLocation = 322
+l Width = 218
+l Height = 30
+l Color = 0
+b outline = FALSE
+l HelpDesc = 29077
+
+[PilotReadyRect15] // Transparent Rect Defining Deployment area for Tutorial
+l left = 19
+l right = 341
+l top = 62
+l bottom = 293
+l color  = 0	
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[PilotReadyButtons]
+
+l ButtonCount = 5
+
+
+[PilotReadyButton0] // back button
+
+l ID = 51
+l XLocation = 5
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 33
+l YTextLocation = 550
+l TextWidth = 86
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27101
+l Font = 27175 // use AgencyFB17
+
+l HelpCaption = 27101
+l HelpDesc = 27151
+
+st FileName = "MCL_PR_2"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 59
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 59
+
+
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledColor = 0xff373737
+
+[PilotReadyButton0Bmp0]
+l XLocation = 21
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392
+
+st FileName = "MCL_PR_1"
+
+b AnimateBmp = 1
+
+l UNormal = 227
+l VNormal = 164
+l UWidth = 11
+l VHeight = 22
+
+[PilotReadyButton1] // LAUNCH  button
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xffff0000
+b TextOutline = TRUE
+
+l TextID = 27171
+l Font = 27175 // use AgencyFB17
+
+l HelpCaption = 27100
+l HelpDesc = 29076
+
+st FileName = "MCL_PR_2"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 128
+l VNormal = 0
+
+l UPressed = 128
+l VPressed = 118
+
+l UHighlight = 128
+l VHighlight = 59
+
+l UDisabled = 128
+l VDisabled = 118
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC61C00
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC61C00
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC61C00
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xffC61C00
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.2
+l DisabledColor1 = 0xff373737
+
+
+[PilotReadyButton1Bmp0]
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xffC61C00  
+
+st FileName = "MCL_PR_1"
+
+b AnimateBmp = 1
+
+l UNormal = 238
+l VNormal = 186
+l UWidth = 11
+l VHeight = 22
+
+
+[PilotReadyButton2] // add pilot button
+
+l ID = 62
+l XLocation = 356
+l YLocation = 58
+l Width = 176
+l Height = 42
+
+l XTextLocation = 377
+l YTextLocation = 67
+l TextWidth = 145
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27150
+l Font = 27153 // use AgencyFB14
+
+l HelpCaption = 27150
+l HelpDesc = 27154
+
+st FileName = "MCL_PR_1"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 42
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 42
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.05
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.10
+l DisabledColor1 = 0xff373737
+
+[PilotReadyButton2Bmp0]
+l XLocation = 365
+l YLocation = 68
+l Width = 11
+l Height = 22
+l color  = 0xffC66600
+
+st FileName = "MCL_PR_1"
+
+b AnimateBmp = 1
+
+l UNormal = 227
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+[PilotReadyButton3] // remove pilot button
+
+l ID = 63
+l XLocation = 356
+l YLocation = 104
+l Width = 176
+l Height = 42
+
+l XTextLocation = 365
+l YTextLocation = 113
+l TextWidth = 145
+l TextHeight = 23
+l color  = 0xffc66600
+b TextOutline = TRUE
+
+l TextID = 27155
+l Font = 27156 // use AgencyFB14
+
+l HelpCaption = 27155
+l HelpDesc = 27157
+
+st FileName = "MCL_PR_1"
+
+l UWidth = 176
+l VHeight = 42
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 42
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 42
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.05
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.10
+l DisabledColor1 = 0xff373737
+
+[PilotReadyButton3Bmp0]
+l XLocation = 512
+l YLocation = 114
+l Width = 11
+l Height = 22
+l color  = 0xffC66600
+
+st FileName = "MCL_PR_1"
+
+b AnimateBmp = 1
+
+l UNormal = 238
+l VNormal = 164
+
+l UWidth = 11
+l VHeight = 22
+
+
+
+
+
+[PilotReadyButton4] // main menu button
+
+l ID = 57
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 27174 // use AgencyFB17
+
+l HelpCaption = 27104
+l HelpDesc = 27113
+
+st FileName = "MCL_PR_1"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 84
+
+l UPressed = 0
+l VPressed = 124
+
+l UHighlight = 0
+l VHighlight = 84
+
+l UDisabled = 0
+l VDisabled = 124
+
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledColor = 0xff373737
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[PilotReadyTextEntrys]
+
+
+l TextCount = 14
+
+
+[PilotReadyTextEntry0]  // PILOT READY AREA header
+
+l XLocation = 18 //  Left Justify. 
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27159
+l TextID = 27158	
+
+
+
+
+[PilotReadyTextEntry1]  // cbills text
+
+l XLocation = 482
+l YLocation = 12
+l Width = 106
+l Height = 30
+l Color = -16755822
+b outline = FALSE
+l Font = 27161 // agencyfb17
+l TextID = 27213
+l Alignment = 1
+l HelpDesc = 29003
+
+
+[PilotReadyTextEntry2]  // DEPLOYMENT TEAMS  header
+l XLocation = 25 //  Left Justify. 
+l YLocation = 63 //  Use AgencyFB14
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27163
+l TextID = 27162
+
+[PilotReadyTextEntry3]  // AVAILABLE PILOTS header
+l XLocation = 552 //  Left Justify. 
+l YLocation = 63 //  Use AgencyFB14
+l color  = 0xffFF8A0D  // All Caps
+l Font = 27165
+l TextID = 27164
+
+
+
+
+[PilotReadyTextEntry4]  // PILOT info rank
+
+l XLocation = 183 //  Left Justify. 
+l YLocation = 337 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27166
+l TextID = 0
+
+[PilotReadyTextEntry5]  // pilot info targeting number
+
+l XLocation = 280 //  Left Justify. 
+l YLocation = 389 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27176
+l TextID = 0
+
+[PilotReadyTextEntry6]  // pilot info piloting number
+
+l XLocation = 280 //  Left Justify. 
+l YLocation = 441 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27176
+l TextID = 0
+
+[PilotReadyTextEntry7]  // pilot info kills number
+l XLocation = 183 //  Left Justify. 
+l YLocation = 493 //  Use AgencyFB14
+l color  = 0xff005392   // All Caps
+l Font = 27176
+l TextID = 0
+
+[PilotReadyTextEntry8]  // pilot NAME header
+l XLocation = 362 //  Center Justify. 
+l YLocation = 319 //  Use AgencyFB17
+l Width = 163
+l Height = 35
+l color  = 0xff5C96C2 // All Caps
+l Font = 27167
+l TextID = 0
+l Alignment = 2
+
+[PilotReadyTextEntry9]  // special skill 1
+
+l XLocation = 475 //  Right Justify. 
+l YLocation = 340 //  Use AgencyFB11
+l color  = 0xff005392  
+l Font = 27168 
+l TextID = 0
+l Alignment = 1
+l Width = 200
+
+
+
+[PilotReadyTextEntry10]  // special skill 2
+
+l XLocation = 475 //  Right Justify. 
+l YLocation = 391 //  Use AgencyFB11
+l color  = 0xff005392  
+l Font = 27168 
+l TextID = 0
+l Alignment = 1
+l Width = 200
+
+
+[PilotReadyTextEntry11]  // special skill 3
+
+l XLocation = 475 //  Right Justify. 
+l YLocation = 444 // Use AgencyFB11
+l color  = 0xff005392  
+l Font = 27168 
+l TextID = 0
+l Alignment = 1
+l Width = 200
+
+
+[PilotReadyTextEntry12]  // special skill 4
+
+l XLocation = 475 //  Right Justify. 
+l YLocation = 496 //  Use AgencyFB11
+l color  = 0xff005392  
+l Font = 27168 
+l TextID = 0
+l Alignment = 1
+l Width = 200
+
+
+
+[PilotReadyTextEntry13]  // help text
+
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 27177 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[AttributeMeters] // meters for the pilot info area of pilot ready area
+
+l AttributeMeterCount = 2
+
+[AttributeMeter0] // for targeting
+l left = 182
+l right = 274
+l top = 374
+l bottom = 405
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+[AttributeMeter1] // for piloting
+l left = 182
+l right = 274
+l top = 426
+l bottom = 457
+l Height = 28
+l UnitWidth = 4
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[PilotReadyRankIcon0] // green
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 139
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyRankIcon1] // regular
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 96
+l VNormal = 139
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyRankIcon2] // veteran
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 171
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyRankIcon3] // elite
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 96
+l VNormal = 171
+
+l UWidth  = 96
+l VHeight = 32
+
+[PilotReadyRankIcon4] // ace
+l XLocation = 82
+l YLocation = 322
+l Width = 96
+l Height = 32
+
+st FileName = "MCL_PR_5"
+
+l UNormal = 0
+l VNormal = 203
+l UWidth  = 96
+l VHeight = 32
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[PilotSpecialtySkill0] // placement for pilot's first specialty skill
+
+l left = 686
+l right = 717
+l top = 322
+l bottom = 353
+
+
+[PilotSpecialtySkill1] // placement for pilot's second specialty skill
+l left = 686
+l right = 717
+l top = 374
+l bottom = 405
+
+[PilotSpecialtySkill2] // placement for pilot's third specialty skill
+l left = 686
+l right = 717
+l top = 426
+l bottom = 457
+
+[PilotSpecialtySkill3] // placement for pilot's fourth specialty skill
+l left = 686
+l right = 717
+l top = 478
+l bottom = 509
+
+
+[PilotSpecialtySkillIcon0] // weapon type specialty skill icon
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 96
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[PilotSpecialtySkillIcon1] // mech type specialty skill icon
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 96
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+
+[PilotSpecialtySkillIcon2] // range type specialty skill icon
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 96
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+
+[PilotSpecialtySkillIcon3] // generic type specialty skill icon
+
+st FileName = "MCL_PR_PilotSkillIcons"
+
+l UNormal = 96
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[PilotMedal0] // campaign 1 no honors
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[PilotMedal1] // campaign 2 no honors
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 64
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+[PilotMedal2] // campaign 3 no honors
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 0
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal3] // campaign 1 honors- overrides original
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 32
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+
+
+[PilotMedal4] // campaign 2 honors- overrides original
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 96
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+
+
+
+
+[PilotMedal5] // campaign 3 honors- overrides original
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 32
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+
+[PilotMedal6] // purple heart- pilot can earn more than one, but only one should show
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 64
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+
+[PilotMedal7] // valor- pilot can earn more than one, but only one should show
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 96
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal8] // extreme valor- pilot can earn more than one, but only one should show
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 0
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal9] // specific mission award 1
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 32
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal10] // specific mission award 2
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 64
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal11] // specific mission award 3
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 96
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal12] // specific mission award 4
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 0
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal13] // liao medal
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 32
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+
+
+[PilotMedal14] // davion medal
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 64
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+
+[PilotMedal15] // steiner medal
+
+st FileName = "MCL_PR_Medals"
+
+l UNormal = 96
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[PilotMedalPlacement0] // placement for pilot's first medal
+l left = 428
+l right = 459
+l top = 478
+l bottom = 509
+
+[PilotMedalPlacement1] // placement for pilot's second medal
+l left = 461
+l right = 492
+l top = 478
+l bottom = 509
+
+[PilotMedalPlacement2] // placement for pilot's third medal
+l left = 395
+l right = 426
+l top = 478
+l bottom = 509
+
+[PilotMedalPlacement3] // placement for pilot's fourth medal
+l left = 494
+l right = 525
+l top = 478
+l bottom = 509
+
+[PilotMedalPlacement4] // placement for pilot's fifth medal
+l left = 362
+l right = 393
+l top = 478
+l bottom = 509
+
+[PilotMedalPlacement5] // placement for pilot's sixth medal
+l left = 494
+l right = 525
+l top = 445
+l bottom = 476
+
+[PilotMedalPlacement6] // placement for pilot's seventh medal
+l left = 362
+l right = 393
+l top = 445
+l bottom = 476
+
+[PilotMedalPlacement7] // placement for pilot's eighth medal
+l left = 494
+l right = 525
+l top  = 412
+l bottom = 443
+
+[PilotMedalPlacement8] // placement for pilot's ninth medal
+l left = 362
+l right = 393
+l top = 412
+l bottom = 443
+
+[PilotMedalPlacement9] // placement for pilot's tenth medal
+l left = 494
+l right = 525
+l top = 369
+l bottom = 410
+
+[PilotMedalPlacement10] // placement for pilot's eleventh medal
+l left = 362
+l right = 393
+l top = 369
+l bottom = 410
+
+[PilotMedalPlacement11] // placement for pilot's twelfth medal
+l left = 494
+l right = 525
+l top = 346
+l bottom = 377
+
+[PilotMedalPlacement12] // placement for pilot's thirteenth medal
+l left = 362
+l right = 393
+l top = 346
+l bottom = 377
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FitEnd

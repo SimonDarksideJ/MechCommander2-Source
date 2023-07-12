@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="88E5C5787014E06B36A82F888CF035F5" />
+  <Asset Name="..\Rock_GField2.ini" Type="Physical" Author="franksav" FileSize="216" ModificationTime="2006-03-03T01:28:41.5235547-08:00" CRC="93F3604AC4682DC7D11B6CA0F944500E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="rock_GField2.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_GField2X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Grass Rock Field 2" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

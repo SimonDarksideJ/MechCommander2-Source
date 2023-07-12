@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="673F6F445B4B5C98A44AAE05BCE3BCFE" />
+  <Asset Name="..\Portable.ini" Type="Physical" Author="franksav" FileSize="558" ModificationTime="2006-03-03T01:28:38.9298213-08:00" CRC="EA5AB7824DB359317C7FBD5551D75840" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="portable.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="portableL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="portableL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="portableX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="portabledam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="portableDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Portable" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="340A051BB4D693BB5471329FA6A4464E" />
+  <Asset Name="..\pulselaserturret.ini" Type="Physical" Author="franksav" FileSize="452" ModificationTime="2006-03-03T01:28:39.445443-08:00" CRC="6176D27DBE9200D4F29C609FF981E841" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="PulseLaserTurret.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="PulseLaserTurretX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="TurretBaseDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="TurretBaseDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Large Pulse Laser Turret" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

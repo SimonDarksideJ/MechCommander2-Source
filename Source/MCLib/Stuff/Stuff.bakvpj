@@ -1,0 +1,33 @@
+[ASSOCIATION]
+makefile=Stuff.dsp
+makefiledate=
+makefiletype=microsoft visual c++
+[GLOBAL]
+workingdir=.
+version=7.0
+packname=Microsoft Visual C++ for 32 bit Windows >= 6.0
+[CONFIGURATIONS]
+[COMPILER."CFG=Stuff - Win32 Release"]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn /rebuild
+DEBUG=cmd: msdev "%bdStuff.exe"
+EXECUTE=cmd: "%bdStuff.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: msdev
+[COMPILER."CFG=Stuff - Win32 Profile"]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn /rebuild
+DEBUG=cmd: msdev "%bdStuff.exe"
+EXECUTE=cmd: "%bdStuff.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: msdev
+[COMPILER."CFG=Stuff - Win32 Debug"]
+INCLUDEDIRS=%(INCLUDE)
+COMPILE=copts: savecurrent|concur|capturecmd: nmake /F "%rn.mak" %b "%bd%n.obj"
+MAKE=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn
+REBUILD=copts: saveworkspacefiles|concur|capturecmd: msdev "%rn.dsp" /make %bn /rebuild
+DEBUG=cmd: msdev "%bdStuff.exe"
+EXECUTE=cmd: "%bdStuff.exe"
+usertool_resource_editor=copts: saveworkspacefiles|hide|menu: Resource Editor:Resource Editorcmd: msdev

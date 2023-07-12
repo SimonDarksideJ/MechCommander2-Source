@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  32300   'Refit Truck'  Type:  479 
+//
+//      Creation Date: 5/31/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     32300 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                479 
+st Name =                                                  "Refit Truck"
+ul VehicleTypeID =                                          479 
+l NameIndex =                                               13 
+l DescIndex =                                               510 
+f CurTonnage =                                              35 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          3500 
+l BattleRating =                                            10000 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 4.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         17 
+uc CurArmorPoints =                                         17 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         17 
+uc CurArmorPoints =                                         17 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         14 
+uc CurArmorPoints =                                         14 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         17 
+uc CurArmorPoints =                                         17 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

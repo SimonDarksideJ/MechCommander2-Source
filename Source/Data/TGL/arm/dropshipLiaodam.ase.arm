@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="43A615A59E28A244CCFFFDB6BFA777EB" />
+  <Asset Name="..\dropshipLiaodam.ase" Type="Physical" Author="ngauvin" FileSize="267895" ModificationTime="2006-02-01T10:54:49.6388419-08:00" CRC="D69C6CAF652BCC2B4EEDE6B9B366E10C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_DropshipLiaoDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

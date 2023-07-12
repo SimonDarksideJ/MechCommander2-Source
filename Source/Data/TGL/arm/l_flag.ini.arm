@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2710715108F0B46E3921B34385ACD1AB" />
+  <Asset Name="..\l_flag.ini" Type="Physical" Author="franksav" FileSize="309" ModificationTime="2006-03-03T01:28:30.0392532-08:00" CRC="D9618994AA9DCAB357A637A598584E9B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="L_Flag.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="L_FlagL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="L_FlagL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="L_FlagX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="L_FlagDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="L_FlagDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Liao Flag" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

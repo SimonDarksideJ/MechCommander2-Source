@@ -1,0 +1,41 @@
+//*********************************************************************************
+
+module tutorial0 : integer;
+
+	const
+        pMissionSelectionScreen     = 1;
+        pBriefingScreen             = 11;
+        pMechBayScreen              = 21;
+        pPilotSelectionScreen       = 31;
+        pPurchaseMechScreen         = 20;
+        pMechLabScreen              = 22;
+        pLoadScreen                 = 41;
+        
+	type
+
+	var
+        eternal boolean firstTimeMechBay;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+	code
+        firstTimeMechBay = true;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+    code
+        return (0);
+endmodule.
+//******************************************************************
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="823C63E4C69B2B3CFD332A420616E784" />
+  <Asset Name="..\SwarmLRMC.ase" Type="Physical" Author="ngauvin" FileSize="60224" ModificationTime="2006-02-01T10:55:33.0141195-08:00" CRC="8547A12DDD2F4E710D3C558B1FD35A9C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\SRMC.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

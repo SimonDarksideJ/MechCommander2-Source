@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4643D118CAA6DEE7B27D3BA851942E83" />
+  <Asset Name="..\privatejet.ini" Type="Physical" Author="franksav" FileSize="327" ModificationTime="2006-03-03T01:28:39.289194-08:00" CRC="4C5F6EF2C7BB10B7BDFB828C66B7779D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="privatejet.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="privatejetL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="privatejetL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="PrivateJetX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PrivateJetDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PrivateJetDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Private Jet" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

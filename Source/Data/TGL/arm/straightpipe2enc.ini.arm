@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A06E6CC12DFBA24261B5B93737CBA4B9" />
+  <Asset Name="..\straightpipe2enc.ini" Type="Physical" Author="franksav" FileSize="153" ModificationTime="2006-03-03T01:28:52.3359855-08:00" CRC="60BB9BD843AC414FE71D95206EF61810" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="straightPipe2Enc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

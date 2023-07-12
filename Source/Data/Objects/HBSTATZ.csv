@@ -1,0 +1,258 @@
+//,,Component,Critical,,Location,,,,,,,,Vehicle,Mech,Tech,Fit,Installed,Hits To,Stats,,,,,,,,
+//  #,Name,Type,Spaces,Tons,0,1,2,3,4,5,6,7,Part?,Part?,Base,Both?,Art,Disable,1,2,3,4,5,6,7,8,9
+0,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+1,Fusion Engine,Engine,6,0,No,6,No,No,No,No,No,No,Yes,Yes,Both,Yes,0,3,na,na,na,na,na,na,na,na,na
+2,XL Fusion Engine,Engine,12,0,No,6,3,3,No,No,No,No,Yes,Yes,IS,No,0,3,na,na,na,na,na,na,na,na,na
+3,Clan XL Fusion Engine,Engine,10,0,No,6,2,2,No,No,No,No,Yes,Yes,Clan,No,0,3,na,na,na,na,na,na,na,na,na
+4,Arm Actuator,Actuator,3,0,No,No,No,No,Yes,Yes,No,No,No,Yes,Both,Yes,0,3,na,na,na,na,na,na,na,na,na
+5,Leg Actuator,Actuator,3,0,No,No,No,No,No,No,Yes,Yes,No,Yes,Both,Yes,0,3,na,na,na,na,na,na,na,na,na
+6,Cockpit,Cockpit,1,3,1,No,No,No,No,No,No,No,No,Yes,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+7,Heat Sink,HeatSink,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Both,Yes,0,1,1,na,na,na,na,na,na,na,na
+8,Double Heat Sink,HeatSink,3,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,No,0,1,2,na,na,na,na,na,na,na,na
+9,Clan Double Heat Sink,HeatSink,2,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,No,0,1,2,na,na,na,na,na,na,na,na
+10,Large Jump Jet,JumpJet,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Both,Yes,0,1,1,na,na,na,na,na,na,na,na
+11,Medium Jump Jet,JumpJet,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Both,Yes,0,1,1,na,na,na,na,na,na,na,na
+12,Small Jump Jet,JumpJet,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Both,Yes,0,1,1,na,na,na,na,na,na,na,na
+13,Basic IS Mech Sensor,Sensors,2,1,1,1,No,No,No,No,No,No,No,Yes,IS,No,0,2,200,0,na,na,na,na,na,na,na
+14,Intermediate IS Mech Sensor,Sensors,2,1.5,1,1,No,No,No,No,No,No,No,Yes,IS,No,0,2,280,5,na,na,na,na,na,na,na
+15,Advanced IS Mech Sensor,Sensors,3,2,1,2,No,No,No,No,No,No,No,Yes,IS,No,0,3,360,10,na,na,na,na,na,na,na
+16,Basic Clan Mech Sensor,Sensors,2,0.5,1,1,No,No,No,No,No,No,No,Yes,Clan,No,0,2,320,10,na,na,na,na,na,na,na
+17,Advanced Clan Mech Sensor,Sensors,2,1,1,1,No,No,No,No,No,No,No,Yes,Clan,No,0,2,420,15,na,na,na,na,na,na,na
+18,Basic Vehicle Sensor,Sensors,1,0.5,1,No,No,No,No,No,No,No,Yes,No,Both,Yes,0,1,240,-20,na,na,na,na,na,na,na
+19,Advanced Vehicle Sensor,Sensors,3,2,3,No,No,No,No,No,No,No,Yes,No,Both,Yes,0,1,300,-10,na,na,na,na,na,na,na
+20,Gyroscope IV,Gyroscope,4,4,No,4,No,No,No,No,No,No,No,Yes,Both,Yes,0,4,na,na,na,na,na,na,na,na,na
+21,Gyroscope III,Gyroscope,4,3,No,4,No,No,No,No,No,No,No,Yes,Both,Yes,0,4,na,na,na,na,na,na,na,na,na
+22,Gyroscope II,Gyroscope,4,2,No,4,No,No,No,No,No,No,No,Yes,Both,Yes,0,4,na,na,na,na,na,na,na,na,na
+23,Gyroscope I,Gyroscope,4,1,No,4,No,No,No,No,No,No,No,Yes,Both,Yes,0,4,na,na,na,na,na,na,na,na,na
+24,Power Amplifier,PowerAmplifier,0,0.1,No,No,No,No,No,No,No,No,Yes,No,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+25,Ferro-Fibrous Armor,Bulk,14,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,IS,No,0,0,na,na,na,na,na,na,na,na,na
+26,Vehicle Ferro-Fibrous Armor,Bulk,2,0,No,No,No,No,No,No,No,No,Yes,No,IS,No,0,0,na,na,na,na,na,na,na,na,na
+27,Clan Ferro-Fibrous Armor,Bulk,7,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Clan,No,0,0,na,na,na,na,na,na,na,na,na
+28,Clan Vehicle Ferro-Fibrous,Bulk,1,0,No,No,No,No,No,No,No,No,Yes,No,Clan,No,0,0,na,na,na,na,na,na,na,na,na
+29,Endosteal Internal Structure,Bulk,14,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,IS,No,0,0,na,na,na,na,na,na,na,na,na
+30,Clan Endosteal Internal Structure,Bulk,7,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Clan,No,0,0,na,na,na,na,na,na,na,na,na
+31,Case,Case,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,No,0,0,na,na,na,na,na,na,na,na,na
+32,Clan Case,Case,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,No,0,0,na,na,na,na,na,na,na,na,na
+33,Shoulder,undefined,1,0,No,No,No,No,1,1,No,No,No,Yes,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+34,Hip,undefined,1,0,No,No,No,No,No,No,1,1,No,Yes,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+35,Life Support,undefined,2,0,2,No,No,No,No,No,No,No,No,Yes,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+36,Artimis IV Fire Control System,undefined,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Both,Yes,0,1,na,na,na,na,na,na,na,na,na
+37,Beagle Probe,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+38,Guardian ECM,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+39,TAG,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+40,Targeting Computer,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+41,Anti Personel Pod,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+42,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+43,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+44,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+45,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+46,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+47,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+48,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+49,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+50,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+51,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+52,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+53,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+54,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+55,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+56,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+57,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+58,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+59,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+60,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+61,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+62,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+63,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+64,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+65,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+66,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+67,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+68,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+69,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+70,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+71,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+72,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+73,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+74,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+75,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+76,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+77,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+78,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+79,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+80,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+81,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+82,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+83,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+84,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+85,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+86,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+87,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+88,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+89,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+90,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+91,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+92,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+93,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+94,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+95,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+96,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+97,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+98,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+99,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+100,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+101,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+102,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+103,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+104,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+105,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+106,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+107,Large ER Laser,EnergyWeapon,2,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,7,8.75,10.5,0,0,0,210,420,570
+108,ER PPC,EnergyWeapon,3,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,10,10,15,0,0,0,210,420,690
+109,Flamer,EnergyWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,IS,Yes,0,1,1,5,1.5,0,0,0,30,60,90
+110,Large Laser,EnergyWeapon,2,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,6,7.5,6,0,0,0,150,300,450
+111,Medium Laser,EnergyWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,3,6,1.8,0,0,0,90,180,270
+112,Small Laser,EnergyWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,3,0.7,0,0,0,30,60,90
+113,PPC,EnergyWeapon,3,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,10,10,10,0,0,90,180,360,540
+114,Large Pulse Laser,EnergyWeapon,2,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,8,9,9,0,0,0,90,210,300
+115,Medium Pulse Laser,EnergyWeapon,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,4,6,2.7,0,0,0,60,120,180
+116,Small Pulse Laser,EnergyWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,6,1.2,0,0,0,30,60,90
+117,Large ER Laser,EnergyWeapon,1,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,8,8,9.6,0,0,0,240,450,750
+118,Medium ER Laser,EnergyWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,6,8.6,4.3,0,0,0,150,300,450
+119,Small ER Laser,EnergyWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,3,6,1.2,0,0,0,60,120,180
+120,ER PPC,EnergyWeapon,2,6,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,15,10,15,0,0,0,210,420,690
+121,Flamer,EnergyWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Clan,Yes,0,1,1,5,1.5,0,0,0,30,60,90
+122,Large Pulse Laser,EnergyWeapon,2,6,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,9,9,9,0,0,0,180,420,600
+123,Medium Pulse Laser,EnergyWeapon,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,5,7,2.9,0,0,0,120,240,360
+124,Small Pulse Laser,EnergyWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,6.7,1.3,0,0,0,60,120,180
+125,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+126,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+127,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+128,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+129,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+130,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+131,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+132,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+133,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+134,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+135,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+136,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+137,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+138,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+139,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+140,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+141,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+142,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+143,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+144,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+145,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+146,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+147,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+148,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+149,NARC Beacon Launcher,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+150,Anti-Missile System,BallisticWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,0,5,1,0,0,0,0,0,0
+151,Autocannon/2,BallisticWeapon,1,6,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,5,0.5,0,0,120,240,480,720
+152,Autocannon/5,BallisticWeapon,4,8,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,4,0.4,0,0,90,180,360,540
+153,Autocannon/10,BallisticWeapon,7,12,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,IS,Yes,0,1,5,5,0.75,0,0,0,150,300,450
+154,Autocannon/20,BallisticWeapon,10,14,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,IS,Yes,0,1,20,10,7,0,0,0,90,180,270
+155,Gas Flamer,BallisticWeapon,1,0.5,No,No,No,No,No,No,No,No,Yes,No,IS,Yes,0,1,1,5,1.5,0,0,0,30,60,90
+156,Gauss Rifle,BallisticWeapon,7,15,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,IS,Yes,0,1,15,10,1,0,0,60,210,450,660
+157,LB 10-X AC,BallisticWeapon,6,11,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,IS,Yes,0,1,5,5,1,0,0,0,180,360,540
+158,Machine Gun,BallisticWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,5,0,0,0,0,30,60,90
+159,Ultra AC/5,BallisticWeapon,5,9,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,4,0.4,0,0,0,180,390,600
+160,LRM/5,MissileWeapon,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,10,2,5,LRM,180,210,420,630
+161,LRM/10,MissileWeapon,2,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,10,4,10,LRM,180,210,420,630
+162,LRM/15,MissileWeapon,3,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,1,10,5,15,LRM,180,210,420,630
+163,LRM/20,MissileWeapon,5,10,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,IS,Yes,0,1,1,10,6,20,LRM,180,210,420,630
+164,SRM/2,MissileWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,10,2,2,SRM,0,90,180,270
+165,SRM/4,MissileWeapon,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,10,3,4,SRM,0,90,180,270
+166,SRM/6,MissileWeapon,2,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,10,4,6,SRM,0,90,180,270
+167,Streak SRM/2,MissileWeapon,1,1.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,2,10,2,2,ST,0,90,180,270
+168,Anti-Missile System,BallisticWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,0,5,1,0,0,0,0,0,0
+169,Gas Flamer,BallisticWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Clan,Yes,0,1,1,5,1.5,0,0,0,30,60,90
+170,Gauss Rifle,BallisticWeapon,6,12,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,15,10,1,0,0,60,210,430,660
+171,LB 2-X AC,BallisticWeapon,3,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,5,0.5,0,0,120,300,600,900
+172,LB 5-X AC,BallisticWeapon,4,7,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,2,4,0.4,0,0,90,240,450,720
+173,LB 10-X AC,BallisticWeapon,5,10,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,10,10,2,0,0,0,180,360,540
+174,LB 20-X AC,BallisticWeapon,9,12,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,20,10,6,0,0,0,120,240,360
+175,Machine Gun,BallisticWeapon,1,0.25,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,5,0,0,0,0,30,60,90
+176,Ultra AC/2,BallisticWeapon,2,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,5,0.5,0,0,60,270,450,810
+177,Ultra AC/5,BallisticWeapon,3,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,4,0.4,0,0,0,210,420,630
+178,Ultra AC/10,BallisticWeapon,4,10,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,5,5,1.5,0,0,0,180,360,540
+179,Ultra AC/20,BallisticWeapon,8,12,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,20,10,7,0,0,0,120,240,360
+180,LRM/5,MissileWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,10,2,5,LRM,0,210,420,630
+181,LRM/10,MissileWeapon,1,2.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,10,4,10,LRM,0,210,420,630
+182,LRM/15,MissileWeapon,2,3.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,1,10,5,15,LRM,0,210,420,630
+183,LRM/20,MissileWeapon,4,5,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Clan,Yes,0,1,1,10,6,20,LRM,0,210,420,630
+184,SRM/2,MissileWeapon,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,2,2,SRM,0,90,180,270
+185,SRM/4,MissileWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,3,4,SRM,0,90,180,270
+186,SRM/6,MissileWeapon,2,1.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,4,6,SRM,0,90,180,270
+187,Streak SRM/2,MissileWeapon,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,2,2,ST,0,120,280,360
+188,Streak SRM/4,MissileWeapon,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,3,4,ST,0,120,280,360
+189,Streak SRM/6,MissileWeapon,2,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,2,10,4,6,ST,0,120,280,360
+190,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+191,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+192,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+193,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+194,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+195,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+196,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+197,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+198,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+199,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+200,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+201,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+202,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+203,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+204,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+205,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+206,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+207,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+208,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+209,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+210,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+211,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+212,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+213,undefined,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+214,NARC Ammo,undefined,0,0,0,0,0,0,0,0,0,0,No,No,0,No,0,0,na,na,na,na,na,na,na,na,na
+215,Anti-Missile System Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,24,na,na,na,na,na,5,na,12
+216,Autocannon/2 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,90,na,na,na,na,na,5,na,45
+217,Autocannon/5 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,50,na,na,na,na,na,4,na,20
+218,Autocannon/10 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,20,na,na,na,na,na,5,na,10
+219,Autocannon/20 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,5,na,na,na,na,na,10,na,5
+220,Gas Flamer Cannister,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,IS,Yes,0,1,40,na,na,na,na,na,5,na,20
+221,Gauss Rifle Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,8,na,na,na,na,na,10,na,8
+222,LB 10-X AC Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,20,na,na,na,na,na,5,na,10
+223,Machine Gun Ammo,Ammo,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,400,na,na,na,na,na,5,na,200
+224,Ultra AC/5 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,50,na,na,na,na,na,4,na,20
+225,LRM/5 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,24,na,na,na,na,na,10,na,24
+226,LRM/10 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,12,na,na,na,na,na,10,na,12
+227,LRM/15 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,8,na,na,na,na,na,10,na,8
+228,LRM/20 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,6,na,na,na,na,na,10,na,6
+229,SRM/2 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,50,na,na,na,na,na,10,na,50
+230,SRM/4 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,25,na,na,na,na,na,10,na,25
+231,SRM/6 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,15,na,na,na,na,na,10,na,15
+232,Streak SRM/2 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,IS,Yes,0,1,50,na,na,na,na,na,10,na,50
+233,Anti-Missile System Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,48,na,na,na,na,na,5,na,24
+234,Gas Flamer Cannister,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Clan,Yes,0,1,40,na,na,na,na,na,5,na,20
+235,Gauss Rifle Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,8,na,na,na,na,na,10,na,8
+236,LB 2-X AC Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,90,na,na,na,na,na,5,na,45
+237,LB 5-X AC Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,50,na,na,na,na,na,4,na,20
+238,LB 10-X AC Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,10,na,na,na,na,na,10,na,10
+239,LB 20-X AC Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,5,na,na,na,na,na,10,na,5
+240,Machine Gun Ammo,Ammo,1,0.5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,400,na,na,na,na,na,5,na,200
+241,Ultra AC/2 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,90,na,na,na,na,na,5,na,45
+242,Ultra AC/5 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,50,na,na,na,na,na,4,na,20
+243,Ultra AC/10 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,20,na,na,na,na,na,5,na,10
+244,Ultra AC/20 Ammo,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,5,na,na,na,na,na,10,na,5
+245,LRM/5 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,24,na,na,na,na,na,10,na,24
+246,LRM/10 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,12,na,na,na,na,na,10,na,12
+247,LRM/15 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,8,na,na,na,na,na,10,na,8
+248,LRM/20 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,6,na,na,na,na,na,10,na,6
+249,SRM/2 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,50,na,na,na,na,na,10,na,50
+250,SRM/4 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,25,na,na,na,na,na,10,na,25
+251,SRM/6 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,15,na,na,na,na,na,10,na,15
+252,Streak SRM/2 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,50,na,na,na,na,na,10,na,50
+253,Streak SRM/4 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,25,na,na,na,na,na,10,na,25
+254,Streak SRM/6 Pack,Ammo,1,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Clan,Yes,0,1,15,na,na,na,na,na,10,na,15
+

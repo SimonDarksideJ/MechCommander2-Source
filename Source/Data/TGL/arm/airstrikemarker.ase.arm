@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="03C86990510900205F60E7B8AC064D7D" />
+  <Asset Name="..\airstrikemarker.ase" Type="Physical" Author="ngauvin" FileSize="3434" ModificationTime="2006-02-01T10:54:33.6387395-08:00" CRC="43D92425A09E4D15BF488DAB7FBF4616" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_AirstrikeMarker.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

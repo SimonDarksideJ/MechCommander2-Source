@@ -1,0 +1,317 @@
+//****************************************************************************************//
+//
+//	FIGHTER: PATROL AND CALL IN REINFORCEMENTS
+//      MISSION:  Mc2_06
+//		Wave 2 1st group
+//      	 	
+//
+//****************************************************************************************//
+
+fsm mc2_06_w21;
+
+	var
+
+		static real[3]		startPosition;
+		static integer		retreatBuilding;
+		static PatrolState	startpatrolState;
+		static PatrolPath		startpatrolPath;
+		static PatrolState	patrolState1;
+		static PatrolPath		patrolPath1;
+		static PatrolState	patrolState2;
+		static PatrolPath		patrolPath2;
+		static PatrolState	patrolState3;
+		static PatrolPath		patrolPath3;
+		static PatrolState	patrolState4;
+		static PatrolPath		patrolPath4;
+		static PatrolState	patrolState5;
+		static PatrolPath		patrolPath5;
+		static boolean		willRequestHelp;
+		static real			lastHelpRequestTime;
+		static real			helpRequestFrequency;
+		static real			attackerHelpRadius;
+		static real			defenderHelpRadius;
+		static integer		AttackStateHandle;
+		//char[25]			debugS;  //DEBUG
+		static integer	numhits;
+			
+//****************************************************************************************
+
+//state attack; forward;
+
+function init;
+
+	var
+
+		integer		i;
+		integer		numPatrolPoints;
+
+    code
+
+		//----------------------------------------------------
+		// Grab his start position, and set his start state...
+		getObjectPosition(-1, startPosition);
+		//setPilotState(PILOT_STATE_PATROL);
+		//setDebugWindow(-1, -1);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 275, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 325, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		retreatBuilding = 0;
+
+		AttackStateHandle = getStateHandle("attack");
+
+		
+		//Get off edge of map
+		startPatrolState[0] = PATROL_TYPE_LINEAR;
+		startPatrolState[1] = 4;    //?num points
+		startPatrolState[2] = 1;    //?num cycles
+		startPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startPatrolState[4] = -1;    //reset cur point
+		startPatrolState[5] = -1;    //reset cur cycle
+		startPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED;
+
+		startPatrolPath[0, 0] = startPosition[0];
+		startPatrolPath[0, 1] = startPosition[1];
+		startPatrolPath[1, 0] = startPosition[0] + 13;
+		startPatrolPath[1, 1] = startPosition[1] - 213.333;
+		startPatrolPath[2, 0] = startPosition[0] + 13;
+		startPatrolPath[2, 1] = startPosition[1] - 597.333;
+		startPatrolPath[3, 0] = startPosition[0] + 13;
+		startPatrolPath[3, 1] = startPosition[1] - 1109.333;
+		
+		//-------------------------				
+		// Setup the Patrol here...
+		patrolState1[0] = PATROL_TYPE_LINEAR;
+		patrolState1[1] = 3; //?num points
+		patrolState1[2] = 1; //?num cycles
+		patrolState1[3] = PATROL_DIRECTION_FORWARD;
+		patrolState1[4] = -1; //reset cur point
+		patrolState1[5] = -1; //reset cur cycle
+		patrolState1[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		patrolPath1[0, 0] = -5184; //?x coord
+		patrolPath1[0, 1] = 6080.333; //?y coord
+		patrolPath1[1, 0] = -3520; //?x coord
+		patrolPath1[1, 1] = -1941.333; //?y coord
+		patrolPath1[2, 0] = -3520; //?x coord
+		patrolPath1[2, 1] = -1941.333; //?y coord	
+
+		//-------------------------				
+		// Setup the Patrol here...
+		patrolState2[0] = PATROL_TYPE_LINEAR;
+		patrolState2[1] = 2; //?num points
+		patrolState2[2] = 1; //?num cycles
+		patrolState2[3] = PATROL_DIRECTION_FORWARD;
+		patrolState2[4] = -1; //reset cur point
+		patrolState2[5] = -1; //reset cur cycle
+		patrolState2[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		patrolPath2[0, 0] = -3008; //?x coord
+		patrolPath2[0, 1] = -3477.333; //?y coord
+		patrolPath2[1, 0] = -3008; //?x coord
+		patrolPath2[1, 1] = -3477.333; //?y coord	
+
+	//-------------------------				
+		// Setup the Patrol here...
+		patrolState3[0] = PATROL_TYPE_LINEAR;
+		patrolState3[1] = 2; //?num points
+		patrolState3[2] = 1; //?num cycles
+		patrolState3[3] = PATROL_DIRECTION_FORWARD;
+		patrolState3[4] = -1; //reset cur point
+		patrolState3[5] = -1; //reset cur cycle
+		patrolState3[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		patrolPath3[0, 0] = -3306.667; //?x coord
+		patrolPath3[0, 1] = -3648; //?y coord
+		patrolPath3[1, 0] = -3306.667; //?x coord
+		patrolPath3[1, 1] = -3648; //?y coord	
+
+	//-------------------------				
+		// Setup the Patrol here...
+		patrolState4[0] = PATROL_TYPE_LINEAR;
+		patrolState4[1] = 2; //?num points
+		patrolState4[2] = 1; //?num cycles
+		patrolState4[3] = PATROL_DIRECTION_FORWARD;
+		patrolState4[4] = -1; //reset cur point
+		patrolState4[5] = -1; //reset cur cycle
+		patrolState4[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		patrolPath4[0, 0] = -3136; //?x coord
+		patrolPath4[0, 1] = -3904; //?y coord
+		patrolPath4[1, 0] = -3136; //?x coord
+		patrolPath4[1, 1] = -3904; //?y coord	
+
+	//-------------------------				
+		// Setup the Patrol here...
+		patrolState5[0] = PATROL_TYPE_LINEAR;
+		patrolState5[1] = 2; //?num points
+		patrolState5[2] = 1; //?num cycles
+		patrolState5[3] = PATROL_DIRECTION_FORWARD;
+		patrolState5[4] = -1; //reset cur point
+		patrolState5[5] = -1; //reset cur cycle
+		patrolState5[6] = CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_NOT_DISABLED;
+		patrolPath5[0, 0] = -1813.333; //?x coord
+		patrolPath5[0, 1] = -4757.333; //?y coord
+		patrolPath5[1, 0] = -1813.333; //?x coord
+		patrolPath5[1, 1] = -4757.333; //?y coord	
+						
+		willRequestHelp = true; //?true or false
+		helpRequestFrequency = 50.0; //?in secs
+		attackerHelpRadius = 125; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+		
+		numhits = 0;
+		
+		  			
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]	pilotEventParams;
+		integer		curTarget;
+		real		curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real		distanceToAttacker;
+
+
+	code
+
+		curTime = getTime;
+
+		//---------------------------------------------------------
+		// First, process the pilot events since the last update...
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						if (curTarget == 0) then
+							coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+							setState(AttackStateHandle);
+						endif;
+						endcase;
+					//addedevent!	 *germ for trans berzerk.
+					case PILOT_EVENT_HIT:
+					numhits = numhits + 1;
+						endcase;
+					case PILOT_EVENT_DAMAGED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_KILLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_FRIENDLY_DESTROYED:
+						endcase;
+					case PILOT_EVENT_CRIPPLED:
+						endcase;
+					case PILOT_EVENT_DESTROYED:
+						endcase;
+					case PILOT_EVENT_WITHDRAWN:
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curTarget == 0) then
+							coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+							setState(AttackStateHandle);
+						endif;
+						endcase;
+					case PILOT_EVENT_COLLISION:
+						endcase;
+					case PILOT_EVENT_GUARD_RADIUS_BREACH:
+						endcase;
+					case PILOT_EVENT_TARGET_KILLED:
+						endcase;
+					case PILOT_EVENT_MATE_FIRED_WEAPON:
+						endcase;
+					case PILOT_EVENT_PLAYER_ORDER:
+						endcase;
+					case PILOT_EVENT_NO_MOVEPATH:
+						endcase;
+					case PILOT_EVENT_GATE_CLOSING:
+						endcase;
+					case PILOT_EVENT_CONTACT:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	code
+		setDebugString(-1, 3, " ATTACK    ");
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		//transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+var			
+		integer		tacticState;
+		char [50] s;
+		
+	code
+		update;
+			//coreWait(30, -1, -1);
+			coreWait(300, -1, -1);
+			
+			s =  "TACTIC_FIRE_FROM_HERE ";
+		concat(s, numhits);
+		
+		setDebugString(-1, 3, s);
+		if (numhits > 2) then
+	    // If I have taken 3 or more hits attack enemy.
+			trans Attack;
+		endif;
+		
+			patrol(startpatrolState, startpatrolPath);
+			patrol(patrolState1, patrolPath1);
+			coreAttack(140967, TACORDER_PARAM_PURSUE); //1st tc	@ -3349.333, -1728
+			patrol(patrolState2, patrolPath2);
+			coreAttack(173315, TACORDER_PARAM_PURSUE); //2nd tc	 @ ?	-5568, -3648
+			patrol(patrolState3, patrolPath3);
+			coreAttack(174802, TACORDER_PARAM_PURSUE); //3rd tc	@ -3562.67, -3733.33
+			patrol(patrolState4, patrolPath4);
+			coreAttack(177692, TACORDER_PARAM_PURSUE); //1st gate	@ -3136, -3904
+			patrol(patrolState5, patrolPath5);
+			coreAttack(197162, TACORDER_PARAM_PURSUE); //Steiner HQ @	 -1813.33, -4970.67
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//**********************************************************************************

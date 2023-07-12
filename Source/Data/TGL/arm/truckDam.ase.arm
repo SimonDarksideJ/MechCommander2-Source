@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="24BAD7BDB5EA109040092A1321D0C0C3" />
+  <Asset Name="..\truckDam.ase" Type="Physical" Author="ngauvin" FileSize="38476" ModificationTime="2006-02-01T10:55:35.0610076-08:00" CRC="478A964844585F0CC58E6EBE75086117" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

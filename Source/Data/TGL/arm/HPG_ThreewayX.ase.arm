@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2AC652591935A2103B816C21F545987C" />
+  <Asset Name="..\HPG_ThreewayX.ase" Type="Physical" Author="ngauvin" FileSize="20002" ModificationTime="2006-02-01T10:54:58.2326469-08:00" CRC="CA5A6E622109EEDE1D2909DABF354986" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

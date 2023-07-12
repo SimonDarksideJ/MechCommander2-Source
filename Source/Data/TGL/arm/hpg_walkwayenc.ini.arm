@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E400683EBB34EA6967C25C920EA9C80A" />
+  <Asset Name="..\hpg_walkwayenc.ini" Type="Physical" Author="franksav" FileSize="396" ModificationTime="2006-03-03T01:28:27.6486435-08:00" CRC="61F2DFC306983618C5B46FE33D0D9E0F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="HPG_WalkwayEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

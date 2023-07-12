@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BF48252F471B0D16DF480D1766871ADD" />
+  <Asset Name="..\bluebeaconlightdam.ase" Type="Physical" Author="ngauvin" FileSize="6014" ModificationTime="2006-02-01T10:54:37.8262663-08:00" CRC="767C3CF6FC7B6BF0A3174B82AFC063B7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

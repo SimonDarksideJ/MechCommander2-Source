@@ -1,0 +1,268 @@
+//****************************************************************************************//
+//
+//		Ecounter 1 Razorbacks
+//
+//      MISSION:  Mc2_23
+//		This is the Unit(s) that wait for player at valley, then trigger all valley units to jump
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_23_EC1_Razors;
+
+	var
+
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState;
+		static PatrolPath			startPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+
+//**************NEW***********************
+		static boolean			EC1attackTest;
+		static real				timerDelay;
+		static boolean			Timer_Check;
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 300, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+		EC1attackTest = False;
+		Timer_Check = False;
+
+
+		startPatrolState[0] = PATROL_TYPE_LINEAR;
+		startPatrolState[1] = 2;    //?num points
+		startPatrolState[2] = -1;    //?num cycles
+		startPatrolState[3] = PATROL_DIRECTION_FORWARD;
+		startPatrolState[4] = -1;    //reset cur point
+		startPatrolState[5] = -1;    //reset cur cycle
+		startPatrolState[6] = CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED;
+		startPatrolPath[0, 0] = -3520.000;
+		startPatrolPath[0, 1] = 5568.000;
+		startPatrolPath[1, 0] = -3136.000;
+		startPatrolPath[1, 1] = 5312.000;
+		
+
+		willRequestHelp = false; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 200; //?in meters
+		defenderHelpRadius = 225; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+		// Trigger for EC5 Movers to Powerup and wait for 2 minutes
+		if (Valley_Trap_triggered) then
+			if (Not EC1attackTest) then
+				EC1attackTest= true;
+				timerDelay = getTime + 10; //Wait 10 secs before attacking
+//				mcprint ("1st Check");
+			else
+				if ((getTime > timerDelay) AND (Not Timer_Check)) then
+//					mcPrint("2nd Check");
+					if (curStateHandle <> AttackStateHandle) then
+//						mcprint("3rd Check");
+						Timer_Check = True;
+						trans ValleyRun;
+					endif;
+				endif;
+			endif;
+		endif;
+		
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+
+//----------------------------------------------------------------------------------------
+
+state ValleyRun;
+
+	code
+
+		//coreRun = True;
+
+
+		update;
+		setDebugString(-1, 3, " ValleyRun    ");
+		corePatrol(startPatrolState, startPatrolPath, AttackStateHandle);
+		resetOrders(1);
+//		mcprint ("done this");
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+
+		integer		tacticState;
+
+	code
+
+
+		update;
+		Valley_Trap_triggered = TRUE;
+		setDebugString(-1, 3, " ATTACK    ");
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_FIRE_FROM_HERE, tacticState);
+//		coreAttack(0, TACORDER_PARAM_PURSUE);
+    if (random(100) < 95) then
+       coreAttack(0, TACORDER_PARAM_PURSUE + TACORDER_PARAM_JUMP);
+    else
+       coreAttack(0, TACORDER_PARAM_PURSUE);
+    endif;
+
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+
+		update;
+		setDebugString(-1, 3, " GuardingArea     ");
+		coreGuard(startPosition, -1, AttackStateHandle);
+		resetOrders(1);
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

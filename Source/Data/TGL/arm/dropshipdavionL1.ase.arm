@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CA4A37C10D588E68F7E3E11B6FDCC3CE" />
+  <Asset Name="..\dropshipdavionL1.ase" Type="Physical" Author="ngauvin" FileSize="142548" ModificationTime="2006-02-01T10:54:49.0919634-08:00" CRC="AD9EBBBE8D4D5C448B51AA0A528DEF5B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_DropshipDavion.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

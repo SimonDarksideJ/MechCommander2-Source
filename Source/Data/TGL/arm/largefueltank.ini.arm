@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0A9057BC09A9E1A6D9EF8ABD36F7206A" />
+  <Asset Name="..\largefueltank.ini" Type="Physical" Author="franksav" FileSize="637" ModificationTime="2006-03-03T01:28:32.8986099-08:00" CRC="58FB5B1545C56AE0F5F2859994FD1E43" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="LargeFuelTank.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LargeFuelTankL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LargeFuelTankL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LargeFuelTankX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="LargeFuelTankdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="LargeFuelTankDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Large Fuel Tank" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

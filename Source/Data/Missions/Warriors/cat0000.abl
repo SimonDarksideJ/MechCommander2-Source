@@ -1,0 +1,708 @@
+//***************************************************************************
+
+module CAttackBrain0000x : integer;
+
+	const
+
+		#include_ "cconst.abi"
+
+		//---------------------------------------------------------------------------------------
+		// Patrol Constants (if you want to use patrol paths to put Attacker in sight of targets)
+
+		NUM_PATROL_STEPS = 4;	// SET THIS CONSTANT TO DEFINE # STEPS (WAY POINTS).
+
+		NUM_PATROL_CYCLES = 2;	// SET this if PatrolType is cycleing. MAX IS 2,147,483,647.
+		
+		//  Use these to set VAR PatrolType. DON'T CHANGE THEIR VALUES, OK?!!!
+		PATROL_AND_STOP = 0;		// NON-cycling
+		PATROL_CIRCLE = 1;			// cycling
+		PATROL_BACK_N_FORTH = 2;	// cycling
+
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;		// Meters... Set this to distance Clanner will give up.
+
+		HANG_OUT = 0;
+		CONTINUE_PATROL = 1;
+		HUNT_N_KILL = 2;
+		WITHDRAW_WHEN_DONE = 3;
+
+	type
+
+		#include_ "ctype.abi"	
+
+	var
+
+		#include_ "cvar.abi"
+
+		char[60]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		static integer		PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+
+		static integer		pathStep;
+		static integer		pathCycles;
+		static integer						PatrolType;
+		static real[NUM_PATROL_STEPS,2]		PatrolPath;
+		static boolean						PatrolForward;
+		static boolean						InitialForward;
+		boolean								MakeTurn;
+		static boolean 						Stopped;
+		static boolean		Patrol;
+
+		static boolean						HangOut;
+		static boolean						HangHere;
+		static real[3]						HangOutPoint;
+		static boolean						HangSpeed;
+
+
+		integer				TempNum;
+		integer				HitNum;
+		integer				NumNear;
+		integer				NumOnHitList;
+		IntList				TempList;
+		IntList				HitList;
+		IntList				HKList;
+		IntList				TempHKList;
+		static real			HungerRange;
+		static boolean		AttackInOrder;
+		static real			FreezeTargetRange;
+		static integer		PostHitListMode;
+
+		static boolean			WithdrawAtPoint;
+		static real[3]			WithdrawPoint;
+		static boolean			InWithdrawMode;
+		static boolean			Withdraw;
+		static boolean			LetMeWithdraw;
+ 		static boolean			WithdrawSpeed;
+
+		real					closestDistance;
+		real					thisDistance;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+		integer	x;
+		integer	y;
+		integer	objstatus;
+		integer	start;
+		integer	stop;
+
+	code
+
+		#include_ "cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// 
+		setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 5000.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 350.0);
+		setRealMemory(MI_PRIORITY, 5.0); // Used by guard brain only at this point.
+		setRealMemory(MI_MIN_ACTION, 10.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+
+		//-----------------------------------------------------------------------
+		// Enter/Change any Patrol Attributes here
+
+		Patrol = TRUE;		// set this to TRUE to use patrol path to put him in range of targets
+
+		PatrolType = PATROL_CIRCLE;		// use patrol constants to set patrol type
+										// PATROL_AND_STOP	PATROL_CIRCLE	 PATROL_BACK_N_FORTH
+
+		PatrolForward = TRUE;			// Set to False if you want to do it all in reverse
+
+		MoveSpeed = WALK;			// Set to WALK or RUN constant
+
+		PatrolPath[0,0] = 0;		//Have a pair of these lines for every step X,Y
+		PatrolPath[0,1] = 0;	//and increment the first number once for each pair.
+
+		PatrolPath[1,0] = -2000;
+		PatrolPath[1,1] = 0;
+
+		PatrolPath[2,0] = 0;
+		PatrolPath[2,1] = 2000;
+
+		PatrolPath[3,0] = 2000;		//Make sure you don't have any extra PatrolPath assignment pairs.
+		PatrolPath[3,1] = 0;
+
+		//-----------------------------------------------------------------------
+		// Enter/Change any Hunter Killer Attributes here
+
+		HunterKiller = TRUE;	// Set this to TRUE to make it KNOW where its HitList targets are.
+		HungerRange = getRealMemory(MI_ENGAGE_RADIUS);  //Edit MI_ENGAGE_RADIUS above
+		FreezeTargetRange = 300.0;	// Set this to range within which he will stick to this target
+		AttackInOrder = FALSE;	// Set this to TRUE to make him go after players before allies
+
+		//-----------------------------------------------------------------------
+		// Enter/Change any HangOut Attributes here (used if PostHitListMode == HANG_OUT)
+
+		HangHere = FALSE;	// Set this to true if specifiying coordinates, else
+							// he'll just hang out where he last guarded.
+
+		HangSpeed = WALK;	// Enter WALK or RUN to set the speed he moves when hanging out
+
+		HangOutPoint[0] = 0.0;	// X
+		HangOutPoint[1] = 0.0;	// Y
+		HangOutPoint[2] = 0.0;	// Z
+
+
+		//--------------------------------------
+		// Set up attack brain attributes here
+		AttackOrder = IN_ORDER;	// Set this to PREFERENCE_ORDER  ANY_ORDER	IN_ORDER
+		InOrderIndex = 0;		// This is where to start if AttackOrder = IN_ORDER
+		IgnoreNonInOrderTargets = TRUE; // If IN_ORDER and TRUE he'll only attack targets on his current hitlist
+		IdentifyContacts = FALSE;	// Set this to make him move to identify sensor contacts
+		IgnoreNonHitListTargets = TRUE;	// If TRUE, he will only attack targets on his hitlist.
+
+		PostHitListMode = HANG_OUT;	// Set this to HANG_OUT CONTINUE_PATROL HUNT_N_KILL or WITHDRAW_WHEN_DONE to 
+									// determine his activity after all the targets on his Hit List(s) are destroyed
+
+		//--------------------------------------
+		// Edit HitList using object/group ID contants, getTerrainObjectPartId(block,vertex),
+		// or your own defined object lists (OBJ_LIST1 OBJ_LIST2 OBJ_LIST3).  These will effect
+		// target selection based on what AttackOrder (above) is set to.  PREFERENCE_ORDER means
+		// that those objects that make up HitList[0] are more likely to be chosen than those
+		// in HitList[1] and so on.  ANY_ORDER means that objects defined in any of the lists
+		// are all as likely to be chosen.  IN_ORDER means that only 
+
+		NumHitLists = 2;	// Max is NUM_HIT_LISTS which is 8
+		HitList[0] = OBJ_LIST1;
+		HitList[1] = PLAYER_FORCE;
+		
+		//----------------------------------------------------
+		// if OBJ_LIST1 is used on HitList, edit the list here
+
+		t = 0; // first list
+		ObjectListSize[t] = 1;
+// ex.	ObjectList[t,0] = getTerrainObjectPartId(78,0);  // enter in block & vertex #'s
+//		ObjectList[t,1] = ALLIED_VEHICLE0_LANCE0;					// OR object #
+
+		ObjectList[t,0] = getTerrainObjectPartId(78,0);
+
+		//----------------------------------------------------
+		// if OBJ_LIST2 is used on HitList, edit the list here
+
+		t = 1; // second list
+		ObjectListSize[t] = 3;
+
+		//----------------------------------------------------
+		// if OBJ_LIST3 is used on HitList, edit the list here
+
+		t = 2; // third list
+		ObjectListSize[t] = 3;
+
+		//--------------------
+		// Preference Ratings
+		PreferenceRatings[0] = 800.0;
+		PreferenceRatings[1] = 700.0;
+		PreferenceRatings[2] = 600.0;
+		PreferenceRatings[3] = 500.0;
+		PreferenceRatings[4] = 400.0;
+		PreferenceRatings[5] = 300.0;
+		PreferenceRatings[6] = 200.0;
+		PreferenceRatings[7] = 100.0;
+
+		//-----------------------------------------------------------------------
+		// If you want to withdraw at some point, edit this.
+
+		LetMeWithdraw = FALSE;  // Set this to TRUE to let it happen.  Note: Using the PostHitListMode of WITHDRAW_WHEN_DONE
+								// will override this setting.  Setting this to TRUE will simply let him withdraw if some other
+								// circumstances arrise that may prompt a withdraw
+
+		WithdrawSpeed = RUN;	// Enter WALK or RUN to set the speed he moves when withdrawing
+								// Note:  This depends on use of WithdrawAtPoint below.
+
+		WithdrawAtPoint = FALSE;  // Set this to TRUE if specifying withdraw coordinates.
+		WithdrawPoint[0] = 4500.0; // X  Enter your coordinates here.
+		WithdrawPoint[1] = 4500.0; // Y
+		WithdrawPoint[2] = 0.0; // Z
+
+		//******************************
+		// Don't change this stuff.
+		//--------------------------
+
+		pathCycles = 0;
+		Stopped = FALSE;
+		MovingToObjective = FALSE;
+		InitialForward = PatrolForward;
+
+		if (PatrolForward) then
+			pathStep = 0;
+		else
+			pathStep = NUM_PATROL_STEPS - 1;
+		endif;
+		moveToPosition[0] = PatrolPath[pathStep,0];
+		moveToPosition[1] = PatrolPath[pathStep,1];
+		moveToPosition[2] = 0.0;
+
+//		moveToPosition[0] = StartPoint[0];
+//		moveToPosition[1] = StartPoint[1];
+//		moveToPosition[2] = StartPoint[2];
+
+		InWithdrawMode = FALSE;
+		Withdraw = FALSE;
+		HangOut = FALSE;
+
+		PrimaryTarget = 0;
+
+		AttackOrders = TRUE; // This makes the whole HitList target selection thing work.
+
+		//---------------------------------
+		// Build AttackList
+		for t = 0 to (NumHitLists - 1) do
+		// if a groupID of some sort
+		IF (((HitList[t] > 499) AND (HitList[t] < 503)) OR ((HitList[t] > 0) AND (HitList[t] < 493))) THEN
+
+			if ((HitList[t] > 499) AND (HitList[t] < 503)) then
+				Switch (HitList[t])
+					case PLAYER_FORCE :
+						start = 512;
+						stop = 543; // Assuming player force is no more than 32
+						endcase;
+					case ALLIED_FORCE :
+						start = 1168;
+						stop = 1823;
+						endcase;
+					case CLAN_FORCE :
+						start = 1824;
+						stop = 2643;
+						endcase;
+				endSwitch;
+			else
+				if ((HitList[t] > 0) AND (HitList[t] < 165)) then
+					start = ((HitList[t] - 1) * 4) + 512;
+					stop = start + 3;
+				else
+					if ((HitList[t] > 164) AND (HitList[t] < 329)) then
+						start = ((HitList[t] - 165) * 4) + 1168;
+						stop = start + 3;				
+					else
+						if ((HitList[t] > 328) AND (HitList[t] < 493)) then
+							start = ((HitList[t] - 329) * 5) + 1824;
+							stop = start + 4;
+						endif;
+					endif;
+				endif;
+			endif;
+			y = 0;
+			for x = start to stop do
+				objstatus = ObjectStatus(x);
+				if ((objstatus <> 1) AND (objstatus <> 2) AND (objstatus <> -1)) then
+					AttackList[t,y] = x;
+					y = y + 1;
+				endif;
+			endfor;
+			AttackList[t,y] = 0; // Terminate array with 0
+
+		ELSE
+
+			// else if greater than 0, assume it's an object ID
+
+			if (HitList[t] > 0) then
+				AttackList[t,0] = HitList[t];
+				setPotentialContact(HitList[t],3);
+				objectChangeSides(HitList[t],1);
+				AttackList[t,1] = 0; // Terminate array with 0
+			else // it's probably a list ID
+				aReal = HitList[t];
+				aReal = abs(aReal);
+				x = trunc(aReal);
+//				assert(x <= NUM_OBJ_LISTS,86,"Invalid ObjectList# in HitList");
+				x = x - 1;
+				for y = 0 to (ObjectListSize[x] - 1) do
+					AttackList[t,y] = ObjectList[x,y];
+					setPotentialContact(ObjectList[x,y],3);
+					objectChangeSides(ObjectList[x,y],1);
+				endfor;
+				AttackList[t,(ObjectListSize[x])] = 0; // Terminate array with 0
+			endif;
+
+		ENDIF;
+
+	endfor;
+
+endfunction;
+
+#include_ "cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include_ "cmain.abi"
+
+	if (AttackOrders) then
+		NumOnHitList = UpdateAttackList;
+	endif;
+
+	if ((AttackOrders) AND (NumOnHitList == 0)) then
+		AttackOrders = FALSE; // ATTACK ORDERS ACCOMPLISHED
+		switch (PostHitListMode)
+			case CONTINUE_PATROL:
+				Patrol = TRUE;
+				HunterKiller = FALSE;
+				HangOut = FALSE;
+				endcase;
+			case HUNT_N_KILL:
+				Patrol = FALSE;
+				HunterKiller = TRUE;
+				HangOut = FALSE;
+				endcase;
+			case HANG_OUT:
+				Patrol = FALSE;
+				HunterKiller = FALSE;
+				HangOut = TRUE;
+				endcase;
+			case WITHDRAW_WHEN_DONE:
+				Patrol = FALSE;
+				HunterKiller = FALSE;
+				HangOut = FALSE;
+				Withdraw = TRUE;
+				endcase;
+		endswitch;
+	endif;
+
+//********************************************
+// AttackOrders / HunterKiller Loop
+//********************************************
+	if ((AttackOrders) AND (HunterKiller)) then
+
+			if ((CurrentTarget == 0) or (distancetoObject(CurrentTarget,Me) > FreezeTargetRange)) then
+				switch (AttackOrder)
+					case IN_ORDER:
+						aInteger = 0;
+						while (AttackList[InOrderIndex,aInteger] <> 0) do
+							HKList[aInteger] = AttackList[InOrderIndex,aInteger];
+							aInteger = aInteger + 1;
+						endwhile;
+						HitNum = aInteger;
+						NumNear = OrderByDistance(HKList, HitNum, Me, NullPoint, HungerRange);
+						endcase;
+
+					case PREFERENCE_ORDER:
+						HitNum = 0;
+						for bInteger = 0 to (NumHitLists - 1) do
+							aInteger = 0;
+							while (AttackList[bInteger,aInteger] <> 0) do
+								TempHKList[aInteger] = AttackList[bInteger,aInteger];
+								aInteger = aInteger + 1;
+							endwhile;
+							NumNear = OrderByDistance(TempHKList, aInteger, Me, NullPoint, HungerRange);
+							HitNum = concatIntList(HKList,HitNum,TempHKList,NumNear);
+						endfor;
+						endcase;
+
+					case ANY_ORDER:
+						HitNum = 0;
+						for bInteger = 0 to (NumHitLists - 1) do
+							aInteger = 0;
+							while (AttackList[bInteger,aInteger] <> 0) do
+								TempHKList[aInteger] = AttackList[bInteger,aInteger];
+								aInteger = aInteger + 1;
+							endwhile;
+							NumNear = OrderByDistance(TempHKList, aInteger, Me, NullPoint, HungerRange);
+							HitNum = concatIntList(HKList,HitNum,TempHKList,NumNear);
+						endfor;
+						HitNum = OrderByDistance(HKList, HitNum, Me, NullPoint, HungerRange);
+						endcase;
+				endswitch;
+
+				if (HitNum > 0) then
+					if (CurrentTarget <> HKList[0]) then
+						orderAttackObject(HKList[0],ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+						CurrentTarget = HKList[0];
+						setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+						MovingToObjective = FALSE;
+						MovingToIdentify = FALSE;
+					endif;
+				endif;
+			endif;
+
+	endif;  //End of AttackOrders Hunter Killer Loop
+
+//********************************************
+// Post AttackOrders / HunterKiller Loop
+//********************************************
+
+	if ((NOT AttackOrders) AND (HunterKiller)) then
+		if ((CurrentTarget == 0) or (distancetoObject(CurrentTarget,Me) > FreezeTargetRange)) then
+			TempNum = BuildActiveUnitList(TempHKList,PLAYER_FORCE);
+			NumNear = OrderByDistance(TempHKList, TempNum, Me, NullPoint, HungerRange);
+			HitNum = ConcatIntList(HKList,0,TempHKList,NumNear);
+			TempNum = BuildActiveUnitList(TempHKList,ALLIED_FORCE);
+			NumNear = OrderByDistance(TempHKList, TempNum, Me, NullPoint, HungerRange);
+			HitNum = ConcatIntList(HKList,HitNum,TempHKList,NumNear);
+			if (NOT AttackInOrder) then
+				HitNum = OrderByDistance(HKList, HitNum, Me, NullPoint, HungerRange);
+			endif;
+			if (HitNum > 0) then
+				if (CurrentTarget <> HKList[0]) then
+					orderAttackObject(HKList[0],ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, TRUE);
+					CurrentTarget = HKList[0];
+					setIntegerMemory(MC_MODE, COMBAT_MODE_DESTROY);
+					MovingToObjective = FALSE;
+				endif;
+			endif;
+		endif;
+	endif;
+
+//********************************************
+// Patrol Loop
+//********************************************
+
+	if ((NOT HunterKiller) AND (Patrol)) then
+			if (CurrentTarget == 0) then			  
+					MakeTurn = FALSE;
+					if ((NOT Stopped) AND (distanceToPosition(CUR_OBJECT_ID, moveToPosition) < MIN_DISTANCE)) then
+						MovingtoObjective = FALSE;
+						if (PatrolForward) then
+							pathStep = pathStep + 1;
+							if (pathStep > NUM_PATROL_STEPS - 1) then
+								if (PatrolType > 0) then // if cycling patrol
+									MakeTurn = TRUE;
+									Switch (PatrolType)
+										case PATROL_CIRCLE:
+											pathStep = 0;
+											PatrolForward = TRUE;
+											pathCycles = pathCycles + 1;
+											dString = "Cycles = ";
+											concat(dString,pathCycles);
+											print(dSTring);
+											if (pathCycles >= NUM_PATROL_CYCLES) then
+												Stopped = TRUE;
+												dString = "Stopped.";
+												print(dString);
+											endif;									
+											endcase;
+										case PATROL_BACK_N_FORTH:
+											pathStep = NUM_PATROL_STEPS - 2;
+											PatrolForward = FALSE;
+											dString = "Reversing";
+											print(dString);
+											if (NOT InitialForward) then  // if started in reverse
+												pathCycles = pathCycles + 1;  // complete cycle
+												dString = "Cycles = ";
+												concat(dString,pathCycles);
+												print(dSTring);
+												if (pathCycles >= NUM_PATROL_CYCLES) then
+													Stopped = TRUE;
+													dString = "Stopped.";
+													print(dString);
+												endif;
+											endif;
+											endcase;
+									endSwitch;
+									else
+										Stopped = TRUE;
+									dString = "Stopped.";
+									print(dString);
+								endif;					
+							else
+								MakeTurn = TRUE;
+							endif;
+
+						else // Patrol Reverse
+							pathStep = pathStep - 1;
+							if (pathStep < 0 ) then
+								if (PatrolType > 0) then // if cycling patrol
+									MakeTurn = TRUE;
+									Switch (PatrolType)
+										case PATROL_CIRCLE:
+											pathStep = NUM_PATROL_STEPS - 1;
+											PatrolForward = FALSE;
+											pathCycles = pathCycles + 1;
+											dString = "Cycles = ";
+											concat(dString,pathCycles);
+											print(dSTring);
+											if (pathCycles >= NUM_PATROL_CYCLES) then
+												Stopped = TRUE;
+												dString = "Stopped.";
+												print(dString);
+											endif;									
+											endcase;
+										case PATROL_BACK_N_FORTH:
+											pathStep = 1;
+											PatrolForward = TRUE;
+											dString = "Reversing";
+											print(dString);
+											if (InitialForward) then  // if initially moving forward
+												pathCycles = pathCycles + 1;  // complete cycle
+												dString = "Cycles = ";
+												concat(dString,pathCycles);
+												print(dSTring);
+												if (pathCycles >= NUM_PATROL_CYCLES) then
+													Stopped = TRUE;
+													dString = "Stopped.";
+													print(dString);
+												endif;
+											endif;
+											endcase;
+									endSwitch;
+								else
+									Stopped = TRUE;
+									dString = "Stopped.";
+									print(dString);
+								endif;
+							else
+								MakeTurn = TRUE;
+							endif;
+						endif;
+					endif;
+
+
+					if ((NOT Stopped) AND (CurrentTarget == 0) AND (NOT MovingToObjective) AND (NOT MovingToIdentify)) then
+						if (MakeTurn) then
+							moveToPosition[0] = PatrolPath[pathStep,0];
+							moveToPosition[1] = PatrolPath[pathStep,1];
+							moveToPosition[2] = 0.0;
+							dString = "Moving to Step ";
+							concat(dString,pathStep);
+							print(dString);
+						endif;
+						orderMoveTo(moveToPosition,MoveSpeed);
+						MovingToObjective = TRUE;
+					endif;
+			endif;
+	endif;	// End of Patrol Loop
+
+//********************************************
+// AttackOrders / Not HunterKiller OR Patrol Loop
+//********************************************
+
+	if ((AttackOrders) AND (NOT HunterKiller) AND (NOT Patrol)) then
+		// I'm not patrolling, so give me orders to get me near my targets.
+		if ((NOT MovingToObjective) AND (NOT MovingToIdentify)) then
+			OrderMoveToObject(AttackList[0,0],MoveSpeed);
+			MovingToObjective = TRUE;
+		endif;
+	endif;
+
+//********************************************
+// HangOut Loop
+//********************************************
+
+	if (HangOut) then	// This guy will guard whatever point he is currently at.
+						// You may modify this point or even give him a set of
+						// points to move to and guard.
+
+		MoveSpeed = HangSpeed;
+
+		setIntegerMemory(MI_OBJECT, GUARD_OBJECTIVE_POINT);
+
+		if (NOT HangHere) then
+			getObjectPosition(CUR_OBJECT_ID, HangOutPoint);
+		endif;
+		setRealMemory(MI_COORD_X, HangOutPoint[0]);
+		setRealMemory(MI_COORD_Y, HangOutPoint[1]);
+		setRealMemory(MI_COORD_Z, HangOutPoint[2]);
+		GuardPoint[0] = HangOutPoint[0];
+		GuardPoint[1] = HangOutPoint[1];
+		GuardPoint[2] = HangOutPoint[2];
+		setIntegerMemory(MI_MODE, COMBAT_MODE_GUARD);
+		GuardDistance = distanceToPosition(CUR_OBJECT_ID, GuardPoint);			
+
+	endif;
+
+//********************************************
+// Withdraw Loop
+//********************************************
+	if (Withdraw) then
+			// Withraw will make him leave the mission area. If you want him to move to specific
+			// point to exit, set WithdrawAtPoint to TRUE (above) and edit the coordinates.
+
+		if (CurrentTarget <> 0) then
+			breakChallenge(CurrentTarget);
+		endif;
+
+		MoveSpeed = WithdrawSpeed;
+
+		if (WithdrawAtPoint) then
+
+			if ((NOT InWithdrawMode) AND (NOT MovingToObjective)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderMoveTo(WithdrawPoint,MoveSpeed);
+				MovingToObjective = TRUE;
+			endif;
+												  
+			if ((NOT InWithdrawMode) AND (distancetoposition(Me,WithdrawPoint) <= MIN_DISTANCE)) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw;
+				InWithdrawMode = TRUE;
+			endif;
+
+		else // Not WithdrawAtPoint
+
+			if (NOT InWithdrawMode) then
+				setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+				setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+				setRealMemory(MI_MIN_ACTION, 0.0);  // Set this to Zero and he will not attack anyone.
+				orderWithdraw;
+				InWithdrawMode = TRUE;
+			endif;
+
+		endif;
+
+	endif; // End of Withdraw Loop
+
+	CurrentCombatMode = getIntegerMemory(MC_MODE);		
+
+		#include_ "cend.abi"
+			
+endmodule.
+
+//***************************************************************************

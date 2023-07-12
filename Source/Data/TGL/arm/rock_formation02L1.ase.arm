@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C51A87C00D92FD0944FB7855365A9FCA" />
+  <Asset Name="..\rock_formation02L1.ase" Type="Physical" Author="ngauvin" FileSize="27834" ModificationTime="2006-02-01T10:55:18.3421506-08:00" CRC="D8FA932607ED2DA63B60FAFB622EED4C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Rocky.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

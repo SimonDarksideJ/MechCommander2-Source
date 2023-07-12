@@ -1,0 +1,256 @@
+Component Table,Type,Name,crit hits,Recycle (if ammo = #shots),Heat,Weight,Damage (if ammo = explosive dam),BR,RP,Range,Location Head,Location CT,Location LT,Location RT,Location LA,Location RA,Location LL,Location RL,"Missile type (0=Energy,1=Ballistic,LRM,ST,SRM)","Fields (1=streak,2=inferno,4=LBX,8=Artillery)",Special FX ID,Ammo Master ID,Logistics Icon 1,Logistics Icon 2,String Index,Mechlipidia String,Icon X ,Icon Y
+0,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32000,34000,,
+1,Engine,Fusion Engine,6,NA,NA,0,NA,0,0,0,No,6,No,No,No,No,No,No,na,0,0,0,0,0,32001,34001,,
+2,Removed,XL Fusion Engine,12,na,na,0,na,0,1000,0,No,6,3,3,No,No,No,No,na,0,0,0,0,0,32002,34002,,
+3,Removed,C XL Fusion Engine,10,na,na,0,na,0,1000,0,No,6,2,2,No,No,No,No,na,0,0,0,0,0,32003,34003,,
+4,Actuator,Arm Actuator,3,NA,NA,0.00,NA,0.00,0,0,No,No,No,No,Yes,Yes,No,No,na,0,0,0,0,0,32004,34004,,
+5,Actuator,Leg Actuator,3,NA,NA,0.00,NA,0.00,0,0,No,No,No,No,No,No,Yes,Yes,na,0,0,0,0,0,32005,34005,,
+6,Cockpit,Cockpit,1,NA,NA,0.00,NA,0.00,0,0,1,No,No,No,No,No,No,No,na,0,0,0,0,0,32006,34006,,
+7,HeatSink,Heat Sink,1,na,na,1,4,0,2000,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,MCL_MC_HEATSINK.tga,MCL_MC_HEATSINK,32007,34006,1,1
+8,Removed,Double Heat Sink,3,na,na,1,2,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32008,34008,,
+9,Removed,C Double Heat Sink,2,na,na,1,2,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32009,34009,,
+10,JumpJet,Jump Jets,2,N/A,7.00,0.00,NA,0.00,6000,0,No,No,No,No,No,No,Yes,Yes,na,0,0,0,MCL_MC_JumpJets.tga,MCL_MC_JumpJets,32010,34010,2,2
+11,Removed,Medium Jump Jet,1,na,na,1,1,200,1500,0,No,Yes,Yes,Yes,No,No,Yes,Yes,na,0,0,0,0,0,32011,34011,,
+12,Removed,Small Jump Jet,1,na,na,0.5,1,400,750,0,No,Yes,Yes,Yes,No,No,Yes,Yes,na,0,0,0,0,0,32012,34012,,
+13,Sensors,Standard Sensors,1,N/A,0.00,0.00,1.00,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32013,34013,,
+14,Sensors,Extended Sensors,2,N/A,0.00,0.00,400.00,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32014,34014,,
+15,Sensors,Advanced Sensors,2,N/A,0.00,0.00,550.00,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32015,34015,,
+16,Optics,Standard Optics,1,N/A,0.00,0.00,1.25,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32016,34016,,
+17,Sensors,Cyclops Sensors,3,N/A,0.00,0.00,800.00,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32017,34017,,
+18,Optics,Advanced Optics,2,N/A,0.00,0.00,1.50,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32018,34018,,
+19,Optics,Infrared Optics,1,N/A,0.00,0.00,1.00,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32019,34019,,
+20,Removed,Gyroscope IV,4,na,na,4,na,0,0,0,No,4,No,No,No,No,No,No,na,0,0,0,0,0,32020,34020,,
+21,Removed,Gyroscope III,4,na,na,3,na,0,0,0,No,4,No,No,No,No,No,No,na,0,0,0,0,0,32021,34021,,
+22,Gyroscope,Gyroscope II,4,NA,NA,0.00,NA,0.00,0,0,No,4,No,No,No,No,No,No,na,0,0,0,0,0,32022,34022,,
+23,Removed,Gyroscope I,4,na,na,1,na,0,0,0,No,4,No,No,No,No,No,No,na,0,0,0,0,0,32023,34023,,
+24,Removed,Power Amplifier,0,na,na,0.1,na,0,0,0,No,No,No,No,No,No,No,No,na,0,0,0,0,0,32024,34024,,
+25,Bulk,Armor Plating,1,N/A,0.00,2.00,32.00,0.00,3000,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,MCL_MC_ArmorPlating.tga,MCL_MC_ArmorPlating,32025,34025,1,1
+26,Removed,Vehicle Ferro-Fibrous Armor,2,na,na,0,na,0,0,0,No,No,No,No,No,No,No,No,na,0,0,0,0,0,32026,34026,,
+27,Removed,C Ferro-Fibrous Armor,7,na,na,0,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32027,34027,,
+28,Removed,C Vehicle Ferro-Fibrous,1,na,na,0,na,0,0,0,No,No,No,No,No,No,No,No,na,0,0,0,0,0,32028,34028,,
+29,Removed,Endosteal Int Str,14,na,na,0,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32029,34029,,
+30,Removed,C Endosteal Int Str,7,na,na,0,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32030,34030,,
+31,Removed,Case,1,na,na,0.5,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32031,34031
+32,Removed,C Case,0,na,na,0,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32032,34032
+33,Actuator,Shoulder,1,NA,NA,0.00,NA,0.00,0,0,No,No,No,No,Yes,Yes,No,No,na,0,0,0,0,0,32033,34033
+34,Actuator,Hip,1,NA,NA,0.00,NA,0.00,0,0,No,No,No,No,No,No,Yes,Yes,na,0,0,0,0,0,32034,34034
+35,LifeSupport,LifeSupport,2,NA,NA,0.00,NA,0.00,0,0,2,No,No,No,No,No,No,No,na,0,0,0,0,0,32035,34035
+36,Sensors,Vehicle Sensors,1,N/A,0.00,0.00,0.00,0.00,1000,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32013,34013
+37,Optics,Advanced Infrared optics,2,N/A,0.00,0.00,1.25,0.00,500,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32037,34037
+38,ECM,Mk. I ECM Suite,1,350.00,0.00,0.00,0.50,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32038,34038
+39,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32039,34039
+40,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32040,34040
+41,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32041,34041
+42,Removed,Mk. II ECM Suite,2,400.00,0.00,0.00,0.70,0.00,1000,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32042,34042
+43,Probe,Active Probe,1,N/A,0.00,0.00,NA,0.00,500,0,Yes,No,No,No,No,No,No,No,na,0,0,0,0,0,32043,34043
+44,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32044,34044
+45,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32045,34045
+46,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32046,34046
+47,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32047,34047
+48,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32048,34048
+49,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32049,34049
+50,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32050,34050
+51,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32051,34051
+52,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32052,34052
+53,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32053,34053
+54,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32054,34054
+55,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32055,34055
+56,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32056,34056
+57,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32057,34057
+58,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32058,34058
+59,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32059,34059
+60,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32060,34060
+61,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32061,34061
+62,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32062,34062
+63,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32063,34063
+64,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32064,34064
+65,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32065,34065
+66,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32066,34066
+67,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32067,34067
+68,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32068,34068
+69,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32069,34069
+70,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32070,34070
+71,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32071,34071
+72,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32072,34072
+73,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32073,34073
+74,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32074,34074
+75,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32075,34075
+76,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32076,34076
+77,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32077,34077
+78,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32078,34078
+79,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32079,34079
+80,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32080,34080
+81,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32081,34081
+82,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32082,34082
+83,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32083,34083
+84,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32084,34084
+85,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32085,34085
+86,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32086,34086
+87,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32087,34087
+88,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32088,34088
+89,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32089,34089
+90,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32090,34090
+91,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32091,34091
+92,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32092,34092
+93,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32093,34093
+94,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32094,34094
+95,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32095,34095,,
+96,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32096,34096,,
+97,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32097,34097,,
+98,Removed,Rail Gun,4,7.5,0.2,25,20,6548,32430,0,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,29,198,0,0,32098,34098,,
+99,BallisticWeapon,Light Gauss Rifle,4,6.67,1.00,12.00,6.00,527.84,7200,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,28,199,MCL_MC_LightGaussRifle.tga,MCL_MC_LightGaussRifle,32099,34099,2,3
+100,BallisticWeapon,Light Autocannon (AC5),4,3.00,1.00,8.00,2.00,266.32,3500,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,7,200,MCL_MC_LightAutocannon.tga,MCL_MC_LightAutocannon,32100,34100,2,2
+101,BallisticWeapon,Autocannon (AC10),8,5.70,2.00,12.00,6.00,419.13,5300,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,18,201,MCL_MC_MediumAutocannon.tga,MCL_MC_MediumAutocannon,32101,34101,2,3
+102,BallisticWeapon,Heavy Autocannon (AC20),12,5.88,7.00,16.00,12.00,545.11,7100,short,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,19,202,MCL_MC_HeavyAutoCannon.tga,MCL_MC_HeavyAutoCannon,32102,34102,2,4
+103,BallisticWeapon,Light Ultra Autocannon (AC5),6,2.20,1.00,8.00,2.00,363.16,5500,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,7,203,MCL_MC_UltraLightAutocannon.tga,MCL_MC_UltraLightAutocannon,32103,34103,2,2
+104,BallisticWeapon,Gauss Rifle,7,7.14,1.00,16.00,10.00,982.72,15300,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,10,204,MCL_MC_GaussRifle.tga,MCL_MC_GaussRifle,32104,34104,2,4
+105,Removed,Machine Gun,1,1,0,0.5,0.1,5,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1,0,11,205,0,0,32105,34105,,
+106,Removed,Anti-Missile System,1,10,1,1,0,32,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1,0,6,206,0,0,32106,34106,,
+107,Removed,Light LBX Autocannon,4,1.75,1,8.5,0.5,609,3270,0,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1,4,22,207,0,0,32107,34107,,
+108,BallisticWeapon,Ultra Autocannon (AC10),8,4.00,4.00,12.00,6.00,597.27,8000,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,18,208,MCL_MC_UltraMediumAutocannon.tga,MCL_MC_UltraMediumAutocannon,32108,34108,2,3
+109,BallisticWeapon,Clan Heavy Ultra Autocannon (AC20),12,3.70,8.00,16.00,12.00,866.29,14200,short,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,19,212,MCL_MC_ClanUltraHeavyAutocannon.tga,MCL_MC_ClanUltraHeavyAutocannon,32109,34109,2,4
+110,BallisticWeapon,Clan Light Ultra Autocannon (AC5),4,1.80,1.00,8.00,2.00,443.86,7500,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,7,210,MCL_MC_ClanUltraLightAutocannon.tga,MCL_MC_ClanUltraLightAutocannon,32110,34110,2,2
+111,BallisticWeapon,Clan Ultra Autocannon (AC10),6,3.52,3.00,12.00,6.00,678.71,10200,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,18,211,MCL_MC_ClanUltraMediumAutocannon.tga,MCL_MC_ClanUltraMediumAutocannon,32111,34111,2,3
+112,BallisticWeapon,Heavy Ultra Autocannon (AC20),12,4.17,8.00,16.00,12.00,768.65,11800,short,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,19,209,MCL_MC_UltraHeavyAutocannon.tga,MCL_MC_UltraHeavyAutocannon,32112,34112,2,4
+113,BallisticWeapon,Clan Gauss Rifle,6,6.25,1.00,16.00,10.00,1122.66,18500,long,No,Yes,Yes,Yes,Yes,Yes,No,No,1,0,10,213,MCL_MC_ClanGaussRifle.tga,MCL_MC_ClanGaussRifle,32113,34113,2,4
+114,BallisticWeapon,MG Array,1,2.50,0.00,2.00,1.00,44.77,900,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,11,0,MCL_MC_MGArray.tga,MCL_MC_MGArray,32114,34114,1,1
+115,Removed,C Anti-Missile System,1,10,1,1,0,63,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1,0,6,215,0,0,32115,34115,,
+116,Removed,C Light LBX,4,1.75,1,6.5,0.5,594,3560,0,No,Yes,Yes,Yes,Yes,Yes,No,No,1,4,25,216,0,0,32116,34116,,
+117,Removed,C LBX Autocannon,8,4,1,11,2,1491,8480,0,No,Yes,Yes,Yes,Yes,Yes,No,No,1,4,24,217,0,0,32117,34117,,
+118,Removed,C Heavy LBX Autocannon,12,6,1,15,5,2465,12850,0,No,Yes,Yes,Yes,Yes,Yes,No,No,1,4,23,218,0,0,32118,34118,,
+119,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32119,34119,,
+120,MissileWeapon,LRM5 Rack,2,9.50,2.00,4.00,3.00,174.46,1700,long,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,9,220,MCL_MC_LRMRack.tga,MCL_MC_LRMRack,32120,34120,1,1
+121,Removed,LR Missile/15,4,5,1.6,9.5,1,136,4100,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,LRM,0,9,221,0,0,32121,34121,,
+122,Removed,LR Missile/20,7,3.75,1.5,13,1,181,5400,0,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,9,222,0,0,32122,34122,,
+123,MissileWeapon,Swarm LRM5 Rack,2,9.50,2.00,4.00,3.00,261.69,2600,long,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,74,231,MCL_MC_SwarmLRMRack.tga,MCL_MC_SwarmLRMRack,32123,34123,1,1
+124,MissileWeapon,SRM2 Pack,1,3.57,2.00,2.00,1.00,37.63,500,short,No,Yes,Yes,Yes,Yes,Yes,No,No,SRM,0,8,223,,,32124,34124,1,1
+125,MissileWeapon,Streak SRM2 Pack,1,3.30,2.00,2.00,2.00,103.76,2000,short,No,Yes,Yes,Yes,Yes,Yes,No,No,ST,1,8,225,MCL_MC_StreakSRMPack.tga,MCL_MC_StreakSRMPack,32125,34125,1,1
+126,Removed,Heavy Thunderbolt,1,6,2,16,12,3741,18230,0,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,27,226,0,0,32126,34126,,
+127,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32127,34127,,
+128,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32128,34128,,
+129,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32129,34129,,
+130,MissileWeapon,Clan LRM5 Rack,2,4.75,4.00,4.00,3.00,348.92,4500,long,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,9,230,MCL_MC_ClanLRMRack.tga,MCL_MC_ClanLRMRack,32130,34130,1,1
+131,Removed,C LR Missile/15,3,5,1.67,5.5,1.15,164,4920,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,LRM,0,9,231,0,0,32131,34131,,
+132,Removed,C LR Missile/20,6,3.75,1.5,8,1.15,220,6600,0,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,0,9,232,0,0,32132,34132,,
+133,Removed,C SR Missile Pack,2,3,1,2.5,1,183,740,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,SRM,0,8,233,0,0,32133,34133,,
+134,Removed,C SR Missile/6,3,2.5,1.33,3.5,1.15,59,1800,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,SRM,0,8,234,0,0,32134,34134,,
+135,MissileWeapon,Clan Streak SRM2 Pack,1,3.10,2.00,2.00,2.00,110.45,2200,short,No,Yes,Yes,Yes,Yes,Yes,No,No,ST,1,8,235,MCL_MC_ClanStreakSRMPack.tga,MCL_MC_ClanStreakSRMPack,32135,34135,1,1
+136,Removed,C ST-SR Missile/6,3,2.5,1.33,5,1.15,119,3600,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,ST,1,8,236,0,0,32136,34136,,
+137,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32137,34137,,
+138,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32138,34138,,
+139,EnergyWeapon,Clan Heavy Laser,1,5.00,7.00,2.00,5.00,196.61,4700,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,29,0,MCL_MC_ClanHeavyLaser.tga,MCL_MC_ClanHeavyLaser,32139,34139,1,1
+140,EnergyWeapon,Large Laser,2,5.00,8.00,4.00,4.00,276.40,3800,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,15,0,MCL_MC_LargeLaser.tga,MCL_MC_LargeLaser,32140,34140,1,2
+141,EnergyWeapon,ER Large Laser,2,5.00,12.00,4.00,4.00,407.32,5300,long,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,17,0,MCL_MC_ERLargeLaser.tga,MCL_MC_ERLargeLaser,32141,34141,1,2
+142,EnergyWeapon,Large Pulse Laser,2,1.80,10.00,4.00,2.00,301.19,5000,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,16,0,MCL_MC_PulseLargeLaser.tga,MCL_MC_PulseLargeLaser,32142,34142,1,2
+143,EnergyWeapon,ER Laser,1,4.20,5.00,2.00,2.50,174.46,3000,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,14,0,MCL_MC_ERLaser.tga,MCL_MC_ERLaser,32143,34143,1,1
+144,EnergyWeapon,Pulse Laser,1,2.85,4.00,2.00,2.00,100.12,2000,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,13,0,MCL_MC_PulseLaser.tga,MCL_MC_PulseLaser,32144,34144,1,1
+145,EnergyWeapon,PPC,3,6.67,10.00,6.00,7.00,441.04,5700,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,4,0,MCL_MC_PPC.tga,MCL_MC_PPC,32145,34145,1,3
+146,EnergyWeapon,ER PPC,3,6.67,15.00,6.00,7.00,649.96,8000,long,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,5,0,MCL_MC_ERPPC.tga,MCL_MC_ERPPC,32146,34146,1,3
+147,EnergyWeapon,Clan Heavy Large Laser,2,5.56,18.00,4.00,9.00,742.81,15000,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,30,0,MCL_MC_ClanHeavyLargeLaser.tga,MCL_MC_ClanHeavyLargeLaser,32147,34147,1,2
+148,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32148,34148,,
+149,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32149,34149,,
+150,EnergyWeapon,Clan ER Large Laser,2,4.00,12.00,4.00,4.00,509.15,7700,long,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,2,0,MCL_MC_ClanERLargeLaser.tga,MCL_MC_ClanERLargeLaser,32150,34150,1,2
+151,EnergyWeapon,Clan Large Pulse Laser,2,1.60,10.00,4.00,2.00,338.84,6000,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,16,0,MCL_MC_ClanPulseLargeLaser.tga,MCL_MC_ClanPulseLargeLaser,32151,34151,1,2
+152,EnergyWeapon,Clan ER Laser,1,3.30,5.00,2.00,2.50,222.04,4500,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,1,0,MCL_MC_ClanERLaser.tga,MCL_MC_ClanERLaser,32152,34152,1,1
+153,EnergyWeapon,Clan Pulse Laser,1,2.50,4.00,2.00,2.00,114.14,2400,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,13,0,MCL_MC_ClanPulseLaser.tga,MCL_MC_ClanPulseLaser,32153,34153,1,1
+154,EnergyWeapon,Clan ER PPC,3,4.55,15.00,6.00,7.00,952.79,14900,long,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,5,0,MCL_MC_ClanERPPC.tga,MCL_MC_ClanERPPC,32154,34154,1,3
+155,EnergyWeapon,Flamer Array,1,5.80,7.00,2.00,3.50,104.72,1800,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,3,0,MCL_MC_FlamerArray.tga,MCL_MC_FlamerArray,32155,34155,1,1
+156,EnergyWeapon,Laser,1,4.20,3.00,2.00,2.50,91.82,1700,short,No,Yes,Yes,Yes,Yes,Yes,No,No,0,0,12,0,MCL_MC_Laser.tga,MCL_MC_Laser,32156,34156,1,1
+157,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,,0,0,0,32157,34157,,
+158,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32158,34158,,
+159,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32159,34159,,
+160,BallisticWeapon,Long Tom Cannon,12,7.14,20.00,24.00,15.00,3057.92,29300,long,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,8,31,227,MCL_MC_LongTomCannon.tga,MCL_MC_LongTomCannon,32160,34160,2,5
+161,MissileWeapon,Thunderbolt Missile,10,6.00,8.00,20.00,13.00,1356.99,16400,medium,No,Yes,Yes,Yes,Yes,Yes,No,No,LRM,8,27,228,MCL_MC_ThunderBoltMissile.tga,MCL_MC_ThunderBoltMissile,32161,34161,2,4
+162,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32162,34162,,
+163,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32163,34163,,
+164,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32164,34164,,
+165,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32165,34165,,
+166,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32166,34166,,
+167,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32167,34167,,
+168,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32168,34168,,
+169,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32169,34169,,
+170,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32170,34170,,
+171,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32171,34171,,
+172,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32172,34172,,
+173,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32173,34173,,
+174,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32174,34174,,
+175,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32175,34175
+176,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32176,34176
+177,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32177,34177
+178,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32178,34178
+179,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32179,34179
+180,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32180,34180
+181,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32181,34181
+182,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32182,34182
+183,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32183,34183
+184,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32184,34184
+185,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32185,34185
+186,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32186,34186
+187,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32187,34187
+188,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32188,34188
+189,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32189,34189
+190,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32190,34190
+191,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32191,34191,,
+192,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32192,34192,,
+193,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32193,34193,,
+194,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32194,34194,,
+195,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32195,34195,,
+196,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32196,34196,,
+197,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32197,34197,,
+198,Removed,Rail Gun Ammo,1,5,na,5,15,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32198,34198,,
+199,Ammo,Light Gauss Rifle Ammo,1,34.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32199,34199,0,0
+200,Ammo,Light Autocannon (AC5) Ammo,1,75.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32200,34200,0,0
+201,Ammo,Autocannon (AC10) Ammo,1,39.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32201,34201,0,0
+202,Ammo,Heavy Autocannon (AC20) Ammo,1,38.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32202,34202,0,0
+203,Ammo,Light Ultra Autocannon (AC5) Ammo,1,102.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32203,34203,0,0
+204,Ammo,Gauss Rifle Ammo,1,32.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32204,34204,0,0
+205,Ammo,MG Array Ammo,1,72.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32205,34205,0,0
+206,Removed,Anti-Missile Ammo,1,0,na,2,24,11,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32206,34206,,
+207,Removed,Lt. LBX Ammo,1,2,na,1,260,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32207,34207,,
+208,Ammo,Ultra Autocannon (AC10) Ammo,1,56.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32208,34208,0,0
+209,Ammo,Heavy Ultra Autocannon (AC20) Ammo,1,54.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32209,34209,0,0
+210,Ammo,Clan Light Ultra Autocannon (AC5) Ammo,1,125.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32210,34210,0,0
+211,Ammo,Clan Ultra Autocannon (AC10) Ammo,1,64.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32211,34211,0,0
+212,Ammo,Clan Heavy Ultra Autocannon (AC20) Ammo,1,61.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32212,34212,0,0
+213,Ammo,Clan Gauss Rifle Ammo,1,36.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32213,34213,0,0
+214,Removed,C M Gun Ammo,1,0.2,na,0.25,2000,1,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32214,34214,,
+215,Removed,C Anti-Missile Ammo,1,0,na,2,48,21,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32215,34215,,
+216,Removed,C Lt. LBX Ammo,1,2,na,2,260,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32216,34216,,
+217,Removed,C LBX Ammo,1,5,na,2.5,90,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32217,34217,,
+218,Removed,C Hvy. LBX Ammo,1,7.5,na,2.5,35,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32218,34218,,
+219,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32219,34219,,
+220,Ammo,LRM5 Rack Ammo,1,24.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32220,34220,0,0
+221,Removed,LRM/15 Pack,1,1,na,3,24,6,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32221,34221,,
+222,Removed,LRM/20 Pack,1,1,na,4,24,6,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32222,34222,,
+223,Ammo,SRM2 Pack Ammo,1,63.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32223,34223,0,0
+224,Removed,SRM/6 Pack,1,2,na,3,50,3,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32224,34224,,
+225,Ammo,Streak SRM2 Pack Ammo,1,68.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32225,34225,0,0
+226,Removed,Heavy Thunderbolt Ammo,1,1,na,5,32,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32226,34226,,
+227,Ammo,Long Tom Cannon Ammo,1,50.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32227,34227,0,0
+228,Ammo,Thunderbolt Missile Ammo,1,30.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32228,34228,0,0
+229,undefined,undefined,0,na,na,0,na,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32229,34229,,
+230,Ammo,Clan LRM5 Rack Ammo,1,47.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32230,34230,0,0
+231,Ammo,Swarm LRM5 Rack Ammo,1,24.00,NA,0.00,1.00,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32231,34231,0,0
+232,Removed,C LRM/20 Pack,1,1,na,4,24,7,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32232,34232,,
+233,Removed,C SRM Ammo,1,2,na,0.5,83,0,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32233,34233,,
+234,Removed,C SRM/6 Pack,1,2,na,3,50,3,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32234,34234,,
+235,Ammo,Clan Streak SRM2 Pack Ammo,1,73.00,NA,0.00,0.50,NA,NA,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32235,34235,0,0
+236,Removed,C ST-SRM/2 Pack,1,2,na,1.5,25,5,0,0,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,na,0,0,0,0,0,32236,34236,,
+237,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32237,34237,,
+238,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32238,34238,,
+239,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32239,34239
+240,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32240,34240
+241,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32241,34241
+242,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32242,34242
+243,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32243,34243
+244,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32244,34244
+245,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32245,34245
+246,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32246,34246
+247,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32247,34247
+248,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32248,34248
+249,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32249,34249
+250,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32250,34250
+251,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32251,34251
+252,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32252,34252
+253,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,32253,34253
+254,undefined,undefined,0,na,na,0,na,0,0,0,0,0,0,0,0,0,0,0,na,0,0,0,0,0,,

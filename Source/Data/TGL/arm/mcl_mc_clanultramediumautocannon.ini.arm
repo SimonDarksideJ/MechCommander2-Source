@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="584EC712F0BD1E1AB6B1562C49754864" />
+  <Asset Name="..\mcl_mc_clanultramediumautocannon.ini" Type="Physical" Author="franksav" FileSize="169" ModificationTime="2006-03-03T01:28:35.2735947-08:00" CRC="E207F509EA47279138C9905B9C041704" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_ClanUltraMediumAutoCannon.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

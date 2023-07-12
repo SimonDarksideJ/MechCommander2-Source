@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="245FF262C9212DD5872E373E4EF4DA4A" />
+  <Asset Name="..\SRMPopup.ini" Type="Physical" Author="franksav" FileSize="1230" ModificationTime="2006-03-03T01:28:51.476616-08:00" CRC="B7B6A2A537E823FA525CF6895BC24A3F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="SRMPopup.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SRMPopupX.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmpopup.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmpopupopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmpopupopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="srmpopupopen.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="PopupDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PopupDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Popup SRM Turret" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

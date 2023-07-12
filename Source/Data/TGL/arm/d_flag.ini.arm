@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CFE23ED9FC2F70CA5C98F5C5980FE5A0" />
+  <Asset Name="..\d_flag.ini" Type="Physical" Author="franksav" FileSize="315" ModificationTime="2006-03-03T01:28:19.8674433-08:00" CRC="E7BED253644A0B6480A178D8CAB89D32" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="d_flag.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="d_flagL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="d_flagL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="d_flagX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="D_FlagDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="D_flagDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Davion Flag" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

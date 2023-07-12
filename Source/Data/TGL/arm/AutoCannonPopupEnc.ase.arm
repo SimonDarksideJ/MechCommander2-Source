@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="89F55192405CEB7F8B883A96012CD17F" />
+  <Asset Name="..\AutoCannonPopupEnc.ase" Type="Physical" Author="ngauvin" FileSize="44551" ModificationTime="2006-02-01T10:54:36.5762583-08:00" CRC="AB3F18653893E4F68A1C9872003F9C4D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\LRM6.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turretbase.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Popupcase.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

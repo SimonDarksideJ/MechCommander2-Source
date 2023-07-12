@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="25260BFD2414CE57E2683D8F98460922" />
+  <Asset Name="..\vultureFallForwardDam.ase" Type="Physical" Author="ngauvin" FileSize="116179" ModificationTime="2006-02-01T10:55:36.9672698-08:00" CRC="E6AB49A9C14D7799351B9D0AE2C0C16E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_MechDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

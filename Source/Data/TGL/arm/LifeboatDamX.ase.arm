@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9842BDF533896FC39DCABB0E0326E83C" />
+  <Asset Name="..\LifeboatDamX.ase" Type="Physical" Author="ngauvin" FileSize="23451" ModificationTime="2006-02-01T10:55:08.3420866-08:00" CRC="F6312D3B7A57FAC164C9610E56B3B712" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

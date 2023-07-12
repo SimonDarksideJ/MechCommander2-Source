@@ -1,0 +1,103 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  21500   'Towed Turret'  Type:  417 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     21500 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                417 
+st Name =                                                  "Towed Turret"
+ul VehicleTypeID =                                          417 
+l NameIndex =                                               0 
+l DescIndex =                                               524 
+f CurTonnage =                                              35 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          3500 
+l BattleRating =                                            35 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           0 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 4.75 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         15 
+uc CurArmorPoints =                                         15 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             2 
+uc NumAmmo =                                                1 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               101 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               101 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:5]
+uc MasterID =                                               201 
+l Amount =                                                 -1 
+
+FITEnd

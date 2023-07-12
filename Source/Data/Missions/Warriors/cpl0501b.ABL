@@ -1,0 +1,278 @@
+//***************************************************************************
+
+module CPatrolBrain0501b : integer;
+
+	const
+
+		#include "data\missions\warriors\cconst.abi"	
+
+		NUM_PATROL_STEPS = 2;	// SET THIS CONSTANT TO DEFINE # STEPS (WAY POINTS).
+
+		NUM_PATROL_CYCLES = 75;	// SET this if PatrolType is cycleing. MAX IS 2,147,483,647.
+		
+		//  Use these to set VAR PatrolType. DON'T CHANGE THEIR VALUES, OK?!!!
+		PATROL_AND_STOP = 0;		// NON-cycling
+		PATROL_CIRCLE = 1;			// cycling
+		PATROL_BACK_N_FORTH = 2;	// cycling
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;		// Meters... Set this to distance Clanner will give up.
+
+	type
+
+		#include "data\missions\warriors\ctype.abi"	
+
+	var
+
+		#include "data\missions\warriors\cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		integer				PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+		static integer		pathStep;
+		static integer		pathCycles;
+
+		static integer						PatrolType;
+		static real[NUM_PATROL_STEPS,2]		PatrolPath;
+		static boolean						PatrolForward;
+		static boolean						InitialForward;
+		boolean								MakeTurn;
+		static boolean 						Stopped;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include "data\missions\warriors\cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// This guy is just guarding his area but is under no compunction to return there.
+		setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 200.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 350.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 0.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+		setIntegerMemory(MI_OBJECT, 0);
+
+		PatrolType = patrol_back_n_forth;
+										// use patrol constants to set patrol type
+										// PATROL_AND_STOP	PATROL_CIRCLE	 PATROL_BACK_N_FORTH
+
+		PatrolForward = TRUE;			// Set to False if you want to do it all in reverse
+
+		PatrolPath[0,0] = -1429;		//Have a pair of these lines for every step X,Y
+		PatrolPath[0,1] = -3012;	//and increment the first number once for each pair.
+
+		PatrolPath[1,0] = -1478;		//Have a pair of these lines for every step X,Y
+		PatrolPath[1,1] = -2248;	//and increment the first number once for each pair.
+
+
+		//*********************
+		// Don't change this
+		//--------------------
+		pathCycles = 0;
+		Stopped = FALSE;
+		MovingToObjective = FALSE;
+		InitialForward = PatrolForward;
+
+		if (PatrolForward) then
+			pathStep = 0;
+		else
+			pathStep = NUM_PATROL_STEPS - 1;
+		endif;
+		moveToPosition[0] = PatrolPath[pathStep,0];
+		moveToPosition[1] = PatrolPath[pathStep,1];
+		moveToPosition[2] = 0.0;
+
+endfunction;
+
+#include "data\missions\warriors\cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include "data\missions\warriors\cmain.abi"
+
+
+		//**************************************************************************
+		// Patrol Code - Don't mess with this, but you may append to it.
+		//--------------------------------------------------------------------------
+		// They will remain in Combat_Mode_Wait until they see a contact.
+
+		if (CurrentTarget > 0) then
+			MovingToObjective = FALSE;
+		endif;
+
+		MakeTurn = FALSE;
+		if ((NOT Stopped) AND (distanceToPosition(CUR_OBJECT_ID, moveToPosition) < MIN_DISTANCE)) then
+			MovingtoObjective = FALSE;
+			if (PatrolForward) then
+				pathStep = pathStep + 1;
+				if (pathStep > NUM_PATROL_STEPS - 1) then
+					if (PatrolType > 0) then // if cycling patrol
+						MakeTurn = TRUE;
+						Switch (PatrolType)
+							case PATROL_CIRCLE:
+								pathStep = 0;
+								PatrolForward = TRUE;
+								pathCycles = pathCycles + 1;
+								dString = "Cycles = ";
+								concat(dString,pathCycles);
+								print(dSTring);
+								if (pathCycles >= NUM_PATROL_CYCLES) then
+									Stopped = TRUE;
+									dString = "Stopped.";
+									print(dString);
+								endif;									
+								endcase;
+							case PATROL_BACK_N_FORTH:
+								pathStep = NUM_PATROL_STEPS - 2;
+								PatrolForward = FALSE;
+								dString = "Reversing";
+								print(dString);
+								if (NOT InitialForward) then  // if started in reverse
+									pathCycles = pathCycles + 1;  // complete cycle
+									dString = "Cycles = ";
+									concat(dString,pathCycles);
+									print(dSTring);
+									if (pathCycles >= NUM_PATROL_CYCLES) then
+										Stopped = TRUE;
+										dString = "Stopped.";
+										print(dString);
+									endif;
+								endif;
+								endcase;
+						endSwitch;
+					else
+						Stopped = TRUE;
+						dString = "Stopped.";
+						print(dString);
+					endif;					
+				else
+					MakeTurn = TRUE;
+				endif;
+
+			else // Patrol Reverse
+				pathStep = pathStep - 1;
+				if (pathStep < 0 ) then
+					if (PatrolType > 0) then // if cycling patrol
+						MakeTurn = TRUE;
+						Switch (PatrolType)
+							case PATROL_CIRCLE:
+								pathStep = NUM_PATROL_STEPS - 1;
+								PatrolForward = FALSE;
+								pathCycles = pathCycles + 1;
+								dString = "Cycles = ";
+								concat(dString,pathCycles);
+								print(dSTring);
+								if (pathCycles >= NUM_PATROL_CYCLES) then
+									Stopped = TRUE;
+									dString = "Stopped.";
+									print(dString);
+								endif;									
+								endcase;
+							case PATROL_BACK_N_FORTH:
+								pathStep = 1;
+								PatrolForward = TRUE;
+								dString = "Reversing";
+								print(dString);
+								if (InitialForward) then  // if initially moving forward
+									pathCycles = pathCycles + 1;  // complete cycle
+									dString = "Cycles = ";
+									concat(dString,pathCycles);
+									print(dSTring);
+									if (pathCycles >= NUM_PATROL_CYCLES) then
+										Stopped = TRUE;
+										dString = "Stopped.";
+										print(dString);
+									endif;
+								endif;
+								endcase;
+						endSwitch;
+					else
+						Stopped = TRUE;
+						dString = "Stopped.";
+						print(dString);
+					endif;
+				else
+					MakeTurn = TRUE;
+				endif;
+			endif;
+		endif;
+
+
+		if ((NOT Stopped) AND (CurrentTarget == 0) AND (NOT MovingToObjective)) then
+			if (MakeTurn) then
+				moveToPosition[0] = PatrolPath[pathStep,0];
+				moveToPosition[1] = PatrolPath[pathStep,1];
+				moveToPosition[2] = 0.0;
+				dString = "Moving to Step ";
+				concat(dString,pathStep);
+				print(dString);
+			endif;
+			orderMoveTo(moveToPosition);
+			MovingToObjective = TRUE;
+		endif;
+
+		#include "data\missions\warriors\cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

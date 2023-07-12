@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C3C2C4F1EA3667C8C29921DF4DD66E4F" />
+  <Asset Name="..\artilleryPiece.ase" Type="Physical" Author="ngauvin" FileSize="69711" ModificationTime="2006-02-01T10:54:35.1074989-08:00" CRC="61C82D6878A231B3523E09FB325159DD" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Howitzer.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,1361 @@
+FITini 
+
+
+
+// audio insert for options
+
+
+
+
+
+b ChildCoordinatesAreRelative = 1
+
+
+[Buttons]
+l Buttoncount = 16
+
+
+
+[Button0] // master digital low vol
+l XLocation = 73
+l YLocation = 52
+l Width = 11
+l Height = 19
+l ID = 101
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 127
+l VNormal = 75
+
+l UPressed = 127
+l VPressed = 75
+
+l UHighlight = 127
+l VHighlight = 75
+
+l UDisabled = 127
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button1] // master digital high vol
+l XLocation = 255
+l YLocation = 52
+l Width = 11
+l Height = 19
+l ID = 102
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 139
+l VNormal = 75
+
+l UPressed = 139
+l VPressed = 75
+
+l UHighlight = 139
+l VHighlight = 75
+
+l UDisabled = 139
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button2] // music low vol
+l XLocation = 73
+l YLocation = 100
+l Width = 11
+l Height = 19
+l ID = 101
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 127
+l VNormal = 75
+
+l UPressed = 127
+l VPressed = 75
+
+l UHighlight = 127
+l VHighlight = 75
+
+l UDisabled = 127
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button3] // music high vol
+l XLocation = 255
+l YLocation = 100
+l Width = 11
+l Height = 19
+l ID = 102
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 139
+l VNormal = 75
+
+l UPressed = 139
+l VPressed = 75
+
+l UHighlight = 139
+l VHighlight = 75
+
+l UDisabled = 139
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button4] // sfx low vol
+l XLocation = 73
+l YLocation = 149
+l Width = 11
+l Height = 19
+l ID = 101
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 127
+l VNormal = 75
+
+l UPressed = 127
+l VPressed = 75
+
+l UHighlight = 127
+l VHighlight = 75
+
+l UDisabled = 127
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button5] // sfx high vol
+l XLocation = 255
+l YLocation = 149
+l Width = 11
+l Height = 19
+l ID = 102
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 139
+l VNormal = 75
+
+l UPressed = 139
+l VPressed = 75
+
+l UHighlight = 139
+l VHighlight = 75
+
+l UDisabled = 139
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+[Button6] // radio low vol
+l XLocation = 73
+l YLocation = 198
+l Width = 11
+l Height = 19
+l ID = 101
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 127
+l VNormal = 75
+
+l UPressed = 127
+l VPressed = 75
+
+l UHighlight = 127
+l VHighlight = 75
+
+l UDisabled = 127
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button7] // radio high vol
+l XLocation = 255
+l YLocation = 198
+l Width = 11
+l Height = 19
+l ID = 102
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 139
+l VNormal = 75
+
+l UPressed = 139
+l VPressed = 75
+
+l UHighlight = 139
+l VHighlight = 75
+
+l UDisabled = 139
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button8] // computer message low vol
+l XLocation = 73
+l YLocation = 247
+l Width = 11
+l Height = 19
+l ID = 101
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 127
+l VNormal = 75
+
+l UPressed = 127
+l VPressed = 75
+
+l UHighlight = 127
+l VHighlight = 75
+
+l UDisabled = 127
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button9] // computer message high vol.
+l XLocation = 255
+l YLocation = 247
+l Width = 11
+l Height = 19
+l ID = 102
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 11
+l VHeight = 19
+
+l UNormal = 139
+l VNormal = 75
+
+l UPressed = 139
+l VPressed = 75
+
+l UHighlight = 139
+l VHighlight = 75
+
+l UDisabled = 139
+l VDisabled = 75
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button10] // reset button
+l XLocation = 449
+l YLocation = 254
+l Width = 150
+l Height = 32
+l ID = 309
+
+l XTextLocation = 460
+l YTextLocation = 260
+l TextWidth = 127
+l TextHeight = 19
+l color  = 0xffff0000
+b TextOutline = FALSE
+
+l ID = 26175
+l TextID = 26536
+l Font = 26537 // use AgencyFB14
+
+l HelpCaption = 27103
+l HelpDesc = 26609
+
+st FileName = "mcl_options_6.tga"
+
+l UWidth = 150
+l VHeight = 32
+
+l UNormal = 80
+l VNormal = 210
+
+l UPressed = 80
+l VPressed = 210
+
+l UHighlight = 80
+l VHighlight = 210
+
+l UDisabled = 80
+l VDisabled = 210
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffAF0000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffAF0000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffAF0000
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffAF0000
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button11] // master digital slider
+
+l XLocation = 86 
+l YLocation = 52
+l Width = 14
+l Height = 17
+
+l XLowLimit = 86 // lower limit in slider's horizontal travel
+l XHighLimit = 239 // upper limit in slider's horizontal travel
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 14
+l VHeight = 17
+
+l UNormal = 127
+l VNormal = 94
+
+l UPressed = 127
+l VPressed = 94
+
+l UHighlight = 127
+l VHighlight = 94
+
+l UDisabled = 127
+l VDisabled = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8a00
+f NormalTime1 = 15
+l NormalColor1 = 0xffFF8a00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button12] // music slider
+
+l XLocation = 86 
+l YLocation = 100
+l Width = 14
+l Height = 17
+
+l XLowLimit = 86 // lower limit in slider's horizontal travel
+l XHighLimit = 239 // upper limit in slider's horizontal travel
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 14
+l VHeight = 17
+
+l UNormal = 127
+l VNormal = 94
+
+l UPressed = 127
+l VPressed = 94
+
+l UHighlight = 127
+l VHighlight = 94
+
+l UDisabled = 127
+l VDisabled = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8a00
+f NormalTime1 = 15
+l NormalColor1 = 0xffFF8a00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+[Button13] // sfx slider
+
+l XLocation = 86 
+l YLocation = 149
+l Width = 14
+l Height = 17
+
+l XLowLimit = 86 // lower limit in slider's horizontal travel
+l XHighLimit = 239 // upper limit in slider's horizontal travel
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 14
+l VHeight = 17
+
+l UNormal = 127
+l VNormal = 94
+
+l UPressed = 127
+l VPressed = 94
+
+l UHighlight = 127
+l VHighlight = 94
+
+l UDisabled = 127
+l VDisabled = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8a00
+f NormalTime1 = 15
+l NormalColor1 = 0xffFF8a00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+[Button14] // radio slider
+
+l XLocation = 86 
+l YLocation = 198
+l Width = 14
+l Height = 17
+
+l XLowLimit = 86 // lower limit in slider's horizontal travel
+l XHighLimit = 239 // upper limit in slider's horizontal travel
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 14
+l VHeight = 17
+
+l UNormal = 127
+l VNormal = 94
+
+l UPressed = 127
+l VPressed = 94
+
+l UHighlight = 127
+l VHighlight = 94
+
+l UDisabled = 127
+l VDisabled = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8a00
+f NormalTime1 = 15
+l NormalColor1 = 0xffFF8a00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+[Button15] // computer message slider
+
+l XLocation = 86 
+l YLocation = 247
+l Width = 14
+l Height = 17
+
+l XLowLimit = 86 // lower limit in slider's horizontal travel
+l XHighLimit = 239 // upper limit in slider's horizontal travel
+
+st FileName = "mcl_options_1.tga"
+
+b AnimateBmp = 1
+
+l UWidth = 14
+l VHeight = 17
+
+l UNormal = 127
+l VNormal = 94
+
+l UPressed = 127
+l VPressed = 94
+
+l UHighlight = 127
+l VHighlight = 94
+
+l UDisabled = 127
+l VDisabled = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffFF8a00
+f NormalTime1 = 15
+l NormalColor1 = 0xffFF8a00
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFF8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 5
+
+[Static0] // master volume slider bar
+l XLocation = 72
+l YLocation = 51
+l Width = 195
+l Height = 21
+l UNormal = 0
+l VNormal = 227
+l UWidth = 195
+l VHeight = 21
+st FileName = "mcl_options_1.tga"
+
+[Static1] // music volume slider bar
+l XLocation = 72
+l YLocation = 99
+l Width = 195
+l Height = 21
+l UNormal = 0
+l VNormal = 227
+l UWidth = 195
+l VHeight = 21
+st FileName = "mcl_options_1.tga"
+
+[Static2] // sfx volume slider bar
+l XLocation = 72
+l YLocation = 148
+l Width = 195
+l Height = 21
+l UNormal = 0
+l VNormal = 227
+l UWidth = 195
+l VHeight = 21
+st FileName = "mcl_options_1.tga"
+
+[Static3] // radio volume slider bar
+l XLocation = 72
+l YLocation = 197
+l Width = 195
+l Height = 21
+l UNormal = 0
+l VNormal = 227
+l UWidth = 195
+l VHeight = 21
+st FileName = "mcl_options_1.tga"
+
+[Static4] // computer message volume slider bar
+l XLocation = 72
+l YLocation = 246
+l Width = 195
+l Height = 21
+l UNormal = 0
+l VNormal = 227
+l UWidth = 195
+l VHeight = 21
+st FileName = "mcl_options_1.tga"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 16
+
+[Text0] // "MASTER DIGITAL VOLUME"
+l XLocation = 26
+l YLocation = 32
+l Width = 416
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26549 // use agency fb 11
+l TextID = 26548
+l Alignment = 0
+
+[Text1] // "LOW" -for master digital volume
+l XLocation = 5
+l YLocation = 54
+l Width = 63
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font =  26559// use agency fb 11
+l TextID = 26558
+l Alignment = 1
+
+[Text2] // "HIGH" -for master digital volume
+l XLocation = 272
+l YLocation = 54
+l Width = 92
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font = 26561 // use agency fb 11
+l TextID = 26560
+l Alignment = 0
+
+[Text3] // "MUSIC VOLUME"
+l XLocation = 26
+l YLocation = 80
+l Width = 416
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26551 // use agency fb 11
+l TextID = 26550
+l Alignment = 0
+
+[Text4] // "LOW" -for music vol
+l XLocation = 5
+l YLocation = 102
+l Width = 63
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font =  26559// use agency fb 11
+l TextID = 26558
+l Alignment = 1
+
+[Text5] // "HIGH" -for music vol
+l XLocation = 272
+l YLocation = 102
+l Width = 92
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font = 26561 // use agency fb 11
+l TextID = 26560
+l Alignment = 0
+
+[Text6] // "SFX VOLUME"
+l XLocation = 26
+l YLocation = 129
+l Width = 416
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26553 // use agency fb 11
+l TextID = 26552
+l Alignment = 0
+
+[Text7] // "LOW" -for sfx vol
+l XLocation = 5
+l YLocation = 151
+l Width = 63
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font =  26559// use agency fb 11
+l TextID = 26558
+l Alignment = 1
+
+[Text8] // "HIGH" -for sfx vol
+l XLocation = 272
+l YLocation = 151
+l Width = 92
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font = 26561 // use agency fb 11
+l TextID = 26560
+l Alignment = 0
+
+[Text9]// "RADIO VOLUME"
+l XLocation = 26
+l YLocation = 178
+l Width = 416
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26555 // use agency fb 11
+l TextID = 26554
+l Alignment = 0
+
+[Text10] // "LOW" -for radio
+l XLocation = 5
+l YLocation = 200
+l Width = 63
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font =  26559// use agency fb 11
+l TextID = 26558
+l Alignment = 1
+
+[Text11] // "HIGH" -for radio
+l XLocation = 272
+l YLocation = 200
+l Width = 92
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font = 26561 // use agency fb 11
+l TextID = 26560
+l Alignment = 0
+
+[Text12]// "COMPUTER VOLUME"
+l XLocation = 26
+l YLocation = 227
+l Width = 416
+l Height = 17
+l Color = -30208
+b outline = FALSE
+l Font = 26557 // use agency fb 11
+l TextID = 26556
+l Alignment = 0
+
+[Text13] // "LOW" -for computer
+l XLocation = 5
+l YLocation = 249
+l Width = 63
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font =  26559// use agency fb 11
+l TextID = 26558
+l Alignment = 1
+
+[Text14] // "HIGH" -for computer
+l XLocation = 272
+l YLocation = 249
+l Width = 92
+l Height = 17
+l Color = -3774976
+b outline = FALSE
+l Font = 26561 // use agency fb 11
+l TextID = 26560
+l Alignment = 0
+
+
+
+[Text15] // help text
+l XLocation = 51
+l YLocation = 306
+l Width = 505
+l Height = 55
+l Color = 0xffffffff
+b outline = FALSE
+l Font = 26562 // use agency fb 11
+l TextID = 27000
+l Alignment = 0
+
+
+[Rects]
+l Rectcount = 5
+
+[Rect0] // master
+l XLocation = 24
+l YLocation = 31
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26610
+
+[Rect1] // music
+l XLocation = 24
+l YLocation = 80
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26611
+
+[Rect2] // sound effects
+l XLocation = 24
+l YLocation = 129
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26612
+
+[Rect3] // radio chatter
+l XLocation = 24
+l YLocation = 178
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26613
+
+[Rect4] // computer message
+l XLocation = 24
+l YLocation = 226
+l Width = 272
+l Height = 42
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26614
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FITend 

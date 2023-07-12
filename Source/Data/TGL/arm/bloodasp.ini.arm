@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="39DFDB03F6863D7762E9FDC90CC939E5" />
+  <Asset Name="..\bloodasp.ini" Type="Physical" Author="franksav" FileSize="4115" ModificationTime="2006-03-03T01:28:13.4924841-08:00" CRC="52C6BA21291FB50B74E0E6CDBF2EBE5F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="BloodAsp.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="BloodAspL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="BloodAspL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="BloodAspX.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodasp.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="bloodaspFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="bloodaspFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="bloodaspFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Blood Asp" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

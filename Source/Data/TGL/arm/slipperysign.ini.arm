@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="50546DF36554E9DE4A32767A6664C2B7" />
+  <Asset Name="..\slipperysign.ini" Type="Physical" Author="franksav" FileSize="343" ModificationTime="2006-03-03T01:28:50.5859967-08:00" CRC="6609A9AE75A10F30AE78D12253E65AA2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="slipperysign.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="slipperysignL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="slipperysignL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="slipperysignX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="slipperysigndam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="slipperysignDamX.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

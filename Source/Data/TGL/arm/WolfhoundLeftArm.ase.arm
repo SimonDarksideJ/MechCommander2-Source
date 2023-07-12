@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="37B0E065999AA410DC88FE5F11E4C76F" />
+  <Asset Name="..\WolfhoundLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="21911" ModificationTime="2006-02-01T10:55:39.7797878-08:00" CRC="971B1C61FC5467AEA7F17F065BD3FF7B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\WolfhoundRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C14C04AD71E80E469EBB9772F98C9C29" />
+  <Asset Name="..\hub.ini" Type="Physical" Author="franksav" FileSize="531" ModificationTime="2006-03-03T01:28:27.8673921-08:00" CRC="05EDC8C6F74F238B7B59780EBFFC1C12" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="hub.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HubL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HubL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HubX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="hubdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="HubDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hub" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

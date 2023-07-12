@@ -1,0 +1,84 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      MechWarrior:  80   Name: Vixen  Callsign: WICKED
+//
+//      Creation Date: 5/14/98   By: david abzug
+//
+// -------------------------------------------------------------------------
+
+
+
+[General]
+st Brain = "pbrain"
+st Name =                                                  "Wicked"
+l Rank =                                                    3 
+st Callsign =                                              "WICKED"
+ul ID =                                                     80 
+l NameIndex =                                               29 
+l DescIndex =                                               42022 
+ul HeadIcon =                                               0 
+l paintScheme =                                             31 
+st pilotAudio =                                            "piloty"
+st pilotVideo =                                            "PILOT29"
+l PictureIndex = 24
+
+[PersonalityTraits]
+c Professionalism =                                         50 
+c Decorum =                                                 50 
+c Aggressiveness =                                          50 
+c Courage =                                                 50 
+
+[Skills]
+c Piloting =                                           55 
+c Sensors =                                            49 
+c Gunnery =                                             53
+
+[SpecialtySkills]
+c LightMechSpecialist= 0
+c MediumMechSpecialist= 0
+c LaserSpecialist= 1
+c LightACSpecialist= 0
+c MediumACSpecialist= 0
+c SRMSpecialist= 0
+c SmallArmsSpecialist= 0
+c ReconSpecialist= 0
+c ToughnessSpecialist= 0
+c HevayMechSpecialist= 0
+c PulseLaserSpecialist= 0
+c ERLaserSpecialist= 0
+c LRMSpecialist= 1
+c PPCSpecialist= 0
+c Scout= 0
+c LongJump = 0 
+c AssaultMechSpecialist= 0
+c GaussSpecialist= 0
+c HeavyACSpecialist= 0
+c ShortRangeSpecialist= 0
+c MediumRangeSpecialist= 0
+c LongRangeSpecialist= 0
+c Deadeye= 0
+c SharpShooter = 0
+
+[Awards]
+c CampaignRibbon1 = 0
+c CampaignRibbon1WithHonors = 0
+c CampaignRibbon2 = 0
+c CampaignRibbon2WithHonors = 0
+c CampaignRibbon3 = 0
+c CampaignRibbon3WithHonors = 0
+c PurpleHeart = 0
+c Valor = 0
+c UncommonValor = 0
+
+[Affinities]
+c MechClass =                                               0 
+c MechType =                                                0 
+c WeaponClass =                                             0 
+uc[2] WeaponTypes =                                        0,0
+
+[Status]
+c Wounds =                                                  0 
+
+FITEnd

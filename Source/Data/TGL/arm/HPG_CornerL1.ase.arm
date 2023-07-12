@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D484F33E18638EC85FB41077C16C4183" />
+  <Asset Name="..\HPG_CornerL1.ase" Type="Physical" Author="ngauvin" FileSize="20315" ModificationTime="2006-02-01T10:54:57.7013935-08:00" CRC="C40964BC19B98041CE6DCDBAB2377894" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\HPG_Office2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_HPG_Office1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

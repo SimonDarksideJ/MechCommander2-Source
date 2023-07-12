@@ -1,0 +1,230 @@
+FITini 
+
+// CHAT BOX
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Rects]
+l Rectcount = 7
+
+[Rect0] // background to obscure help area
+l XLocation = 143
+l YLocation = 446
+l Width = 462
+l Height = 134
+l Color = 0x00000000
+b outline = FALSE
+
+[Rect1] //  second background to obscure help area
+l XLocation = 606
+l YLocation = 540
+l Width = 49
+l Height = 54
+l Color = 0x00000000
+b outline = TRUE
+
+[Rect2] // list box for player names, chat text, etc
+// has a blue scroll bar
+// normal text should be 0xffffffff
+// team only text should be 0xff22A300, and should be preceded by [Team Only]
+// there should be a 12p high rectangle behind each player's name, with 1p added to the beginning and the end of the player's name
+l XLocation = 145
+l YLocation = 447
+l Width = 459
+l Height = 131
+l Color = 0x00000000  
+b outline = TRUE
+
+[Rect3] // line between chat text and edit box 
+l XLocation = 147
+l YLocation = 578
+l Width = 455
+l Height = 0
+l Color = 0xff002f55
+b outline = TRUE
+
+
+[Rect4] // vertical thin rect 1  to obscure original screen
+l XLocation = 143
+l YLocation = 446
+l Width = 2
+l Height = 149
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect5] // horizontal thin rect to obscure original screen
+l XLocation = 145
+l YLocation = 446
+l Width = 461
+l Height = 1
+l Color = 0xff000000
+b outline = FALSE
+
+
+
+[Rect6] // vertical thin rect 2 to obscure original screen
+l XLocation = 604
+l YLocation = 447
+l Width = 2
+l Height = 148
+l Color = 0xff000000
+b outline = FALSE
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 7
+
+[Static0]
+l XLocation = 133
+l YLocation = 436
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static1]
+l XLocation = 389
+l YLocation = 436
+l Width = 227
+l Height = 10
+l UNormal = 0
+l VNormal = 10
+l UWidth = 227
+l VHeight = 10
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static2]
+l XLocation = 133
+l YLocation = 446
+l Width = 10
+l Height = 149
+l UNormal = 0
+l VNormal = 30
+l UWidth = 10
+l VHeight = 149
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static3]
+l XLocation = 606
+l YLocation = 446
+l Width = 10
+l Height = 84
+l UNormal = 10
+l VNormal = 30
+l UWidth = 10
+l VHeight = 84
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static4]
+l XLocation = 606
+l YLocation = 530
+l Width = 60
+l Height = 70
+l UNormal = 20
+l VNormal = 30
+l UWidth = 60
+l VHeight = 70
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static5]
+l XLocation = 133
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 20
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+[Static6]
+l XLocation = 389
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 25
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_chatwidget_01.tga"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[EnterAnim]  // use when chat appears on screen
+
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = -133
+f Time1 = 0.15
+l Pos1X = 0
+l Pos1Y = 0
+
+
+[LeaveAnim]  // use when chat leaves 
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = .15
+l Pos1X = 0
+l Pos1Y = -133
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+FITend 

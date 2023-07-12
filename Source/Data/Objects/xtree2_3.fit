@@ -1,0 +1,21 @@
+FITini
+
+// This is the tree data file
+
+[ObjectClass]
+l ObjectTypeNum = 0
+
+[ObjectType]
+st Name 			= "Xtree2_3"	// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 0x7
+l Appearance		= 0x020002F4
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 42			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 30			// Extent Radius in Meters
+
+[TreeData]
+ul DmgLevel			= 1
+			
+FITend

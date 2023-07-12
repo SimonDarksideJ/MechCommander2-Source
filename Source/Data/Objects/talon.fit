@@ -1,0 +1,24 @@
+FITini
+
+// This is the standard mech Object file.
+// It has a very small amount of data in it now.
+// Mainly, it points to the big data file in the
+// objects directory which stores all of the mech
+// information including all player variants as well
+
+[ObjectClass]
+l ObjectTypeNum = 2
+
+[ObjectType]
+st Name							= "thor"		// Text string giving a descriptive name  (only 8 chars long!!)
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 12			// Extent Radius in Meters
+st AppearanceName					= "talon"
+
+[MechData]
+st FileName						= "mech_talon"
+
+FITEnd
+
+

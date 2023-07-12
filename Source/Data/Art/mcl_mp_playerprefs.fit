@@ -1,0 +1,1128 @@
+FITini 
+
+
+
+//multiplayer player preferences screen
+
+
+
+[Buttons]
+l Buttoncount = 4
+
+[Button0] // main menu
+
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+l ID = 57
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 27107 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27113
+
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 106
+
+l UPressed = 0
+l VPressed = 145
+
+l UHighlight = 0
+l VHighlight = 106
+
+l UDisabled = 0
+l VDisabled = 145
+
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737s
+
+
+
+
+
+[Button1] // "BASE COLOR" tab
+
+l XLocation = 162
+l YLocation = 280
+
+l Width = 121
+l Height = 106
+l ID = 200
+
+l XTextLocation = 167
+l YTextLocation = 284
+l TextWidth = 115
+l TextHeight = 17
+l color  = 0xffFF8A00
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26334
+l Font = 26335 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 121
+l VHeight = 106
+
+l UNormal = 121
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UDisabled = 121
+l VDisabled = 0
+
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26408
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff43311C
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+[Button2] // "STRIPE COLOR" tab
+l XLocation = 162
+l YLocation = 390
+l Width = 121
+l Height = 106
+l ID = 201
+
+
+l XTextLocation = 167
+l YTextLocation = 394
+l TextWidth = 115
+l TextHeight = 17
+l color  = 0xffFF8A00
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26336
+l Font = 26337 // use AgencyFB11
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 121
+l VHeight = 106
+
+l UNormal = 121
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UDisabled = 121
+l VDisabled = 0
+
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+l HelpCaption = 0
+l HelpDesc = 26409
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff43311C
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff43311C
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffFF8A00
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+[Button5] // "CANCEL" button
+l ID = 51
+l XLocation = 5
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 19
+l YTextLocation = 550
+l TextWidth = 99
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27300
+l Font = 27301 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26410
+
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 186
+
+l UPressed = 128
+l VPressed = 164
+
+l UHighlight = 0
+l VHighlight = 186
+
+l UDisabled = 128
+l VDisabled = 186
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+[Button3] // "ACCEPT" button
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 100
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27303
+l Font = 27301 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26411
+
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 186
+
+l UPressed = 128
+l VPressed = 186
+
+l UHighlight = 0
+l VHighlight = 186
+
+l UDisabled = 128
+l VDisabled = 186
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[Rects]
+l Rectcount = 40
+
+
+[Rect0]// outline for blown-up insignia
+l XLocation = 371
+l YLocation = 182
+l Width = 68
+l Height = 68
+l Color = -12373732
+b outline = TRUE
+
+[Rect1] // outline for color picker area
+l XLocation = 282
+l YLocation = 280
+l Width = 177
+l Height = 215
+l Color = -3774976
+b outline = TRUE
+l HelpDesc = 26342
+
+[Rect2] // outline for mech animation
+l XLocation = 469
+l YLocation = 280
+l Width = 168
+l Height = 216
+l Color = -12373732
+b outline = TRUE
+
+[Rect3] // color rect 8, row 4
+l XLocation = 429
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xff2c2c2c
+b outline = FALSE
+
+
+[Rect4] // color rect 1, row 1
+l XLocation = 296
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xffe83030
+b outline = FALSE
+
+[Rect5]// color rect 2, row 1
+l XLocation = 315
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xffd79418
+b outline = FALSE
+
+[Rect6]// color rect 3, row 1
+l XLocation = 334
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xfffae525
+b outline = FALSE
+
+[Rect7]// color rect 4, row 1
+l XLocation = 353
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xff30e830
+b outline = FALSE
+
+[Rect8]// color rect 5, row 1
+l XLocation = 372
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xff2fe88b
+b outline = FALSE
+
+[Rect9] // color rect 6, row 1
+l XLocation = 391
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xff30e7e8
+b outline = FALSE
+
+[Rect10] // color rect 7, row 1
+l XLocation = 410
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xff2f30e8
+b outline = FALSE
+
+[Rect11] // color rect 8, row 1
+l XLocation = 429
+l YLocation = 294
+l Width = 16
+l Height = 45
+l Color = 0xffe830e7
+b outline = FALSE
+
+[Rect12] // color rect 1, row 2
+l XLocation = 296
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff990f0f
+b outline = FALSE
+
+[Rect13]// color rect 2, row 2
+l XLocation = 315
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff98770e
+b outline = FALSE
+
+[Rect14]// color rect 3, row 2
+l XLocation = 334
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff98990f
+b outline = FALSE
+
+[Rect15]// color rect 4, row 2
+l XLocation = 353
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff398b1c
+b outline = FALSE
+
+[Rect16]// color rect 5, row 2
+l XLocation = 372
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff1d8b54
+b outline = FALSE
+
+[Rect17]// color rect 6, row 2
+l XLocation = 391
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff1c8b8b
+b outline = FALSE
+
+[Rect18]// color rect 7, row 2
+l XLocation = 410
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff1d1c8b
+b outline = FALSE
+
+[Rect19] // color rect 8, row 2
+l XLocation = 429
+l YLocation = 342
+l Width = 16
+l Height = 45
+l Color = 0xff8b1d8c
+b outline = FALSE
+
+[Rect20] // color rect 1, row 3
+l XLocation = 296
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff4e0705
+b outline = FALSE
+
+[Rect21]// color rect 2, row 3
+l XLocation = 315
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff5b3713
+b outline = FALSE
+
+[Rect22]// color rect 3, row 3
+l XLocation = 334
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff4c4c06
+b outline = FALSE
+
+[Rect23]// color rect 4, row 3
+l XLocation = 353
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff244c0b
+b outline = FALSE
+
+[Rect24]// color rect 5, row 3
+l XLocation = 372
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff064c2a
+b outline = FALSE
+
+[Rect25]// color rect 6, row 3
+l XLocation = 391
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff064c4c
+b outline = FALSE
+
+[Rect26] // color rect 7, row 3
+l XLocation = 410
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff07083e
+b outline = FALSE
+
+[Rect27] // color rect 8, row 3
+l XLocation = 429
+l YLocation = 390
+l Width = 16
+l Height = 45
+l Color = 0xff4d044d
+b outline = FALSE
+
+[Rect28]// color rect 1, row 4
+l XLocation = 296
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xffffffff
+b outline = FALSE
+
+[Rect29] // color rect 2, row 4
+l XLocation = 315
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xff999999
+b outline = FALSE
+
+[Rect30]// color rect 3, row 4
+l XLocation = 334
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xff666666
+b outline = FALSE
+
+[Rect31]// color rect 4, row 4
+l XLocation = 353
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xffe8e797
+b outline = FALSE
+
+[Rect32]// color rect 5, row 4
+l XLocation = 372
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xff9d8b75
+b outline = FALSE
+
+[Rect33]// color rect 6, row 4
+l XLocation = 391
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xffc8a56f
+b outline = FALSE
+
+[Rect34] // color rect 7, row 4
+l XLocation = 410
+l YLocation = 438
+l Width = 16
+l Height = 45
+l Color = 0xff8e6336
+b outline = FALSE
+
+
+[Rect35]// rect for base color
+l XLocation = 183
+l YLocation = 313
+l Width = 60
+l Height = 60
+l Color = -1
+b outline = FALSE
+
+
+[Rect36]// rect for stripe color
+l XLocation = 182
+l YLocation = 423
+l Width = 60
+l Height = 60
+l Color = -1
+b outline = FALSE
+
+
+
+[Rect37]// player name
+l XLocation = 161
+l YLocation = 78
+l Width = 200
+l Height = 40
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26339
+
+[Rect38]// unit name
+l XLocation = 161
+l YLocation = 135
+l Width = 200
+l Height = 40
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26340
+
+[Rect39]// unit insignia
+l XLocation = 161
+l YLocation = 192
+l Width = 200
+l Height = 56
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26341
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 22
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 170
+l VNormal = 145
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 202
+l VNormal = 145
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 188
+l Height = 63
+l UNormal = 0
+l VNormal = 176
+l UWidth = 188
+l VHeight = 63
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static6]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 212
+l VNormal = 145
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static7]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 31
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 31
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static8]
+l XLocation = 256
+l YLocation = 40
+l Width = 170
+l Height = 31
+l UNormal = 0
+l VNormal = 145
+l UWidth = 170
+l VHeight = 31
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static9]
+l XLocation = 614
+l YLocation = 48
+l Width = 186
+l Height = 23
+l UNormal = 0
+l VNormal = 190
+l UWidth = 186
+l VHeight = 23
+st FileName = "mcl_mp_playerprefs_4.tga"
+
+[Static10]
+l XLocation = 0
+l YLocation = 71
+l Width = 151
+l Height = 245
+l UNormal = 0
+l VNormal = 0
+l UWidth = 151
+l VHeight = 245
+st FileName = "mcl_mp_playerprefs_2.tga"
+
+[Static11]
+l XLocation = 647
+l YLocation = 71
+l Width = 153
+l Height = 245
+l UNormal = 0
+l VNormal = 0
+l UWidth = 153
+l VHeight = 245
+st FileName = "mcl_mp_playerprefs_3.tga"
+
+[Static12] // static for blown-up insignia 
+// file will come from whatever tga is selected in the insignia drop-down
+l XLocation = 373
+l YLocation = 184
+l Width = 64
+l Height = 64
+
+[Static13]
+l XLocation = 0
+l YLocation = 316
+l Width = 151
+l Height = 190
+l UNormal = 0
+l VNormal = 0
+l UWidth = 151
+l VHeight = 190
+st FileName = "mcl_mp_playerprefs_4.tga"
+
+[Static14]
+l XLocation = 647
+l YLocation = 316
+l Width = 153
+l Height = 190
+l UNormal = 0
+l VNormal = 0
+l UWidth = 153
+l VHeight = 190
+st FileName = "mcl_mp_playerprefs_5.tga"
+
+[Static15]
+l XLocation = 0
+l YLocation = 506
+l Width = 143
+l Height = 94
+l UNormal = 0
+l VNormal = 0
+l UWidth = 143
+l VHeight = 94
+st FileName = "mcl_mp_playerprefs_6.tga"
+
+[Static16]
+l XLocation = 143
+l YLocation = 506
+l Width = 256
+l Height = 40
+l UNormal = 0
+l VNormal = 55
+l UWidth = 256
+l VHeight = 40
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static17]
+l XLocation = 399
+l YLocation = 506
+l Width = 248
+l Height = 40
+l UNormal = 0
+l VNormal = 95
+l UWidth = 248
+l VHeight = 40
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static18]
+l XLocation = 647
+l YLocation = 506
+l Width = 153
+l Height = 94
+l UNormal = 0
+l VNormal = 94
+l UWidth = 153
+l VHeight = 94
+st FileName = "mcl_mp_playerprefs_6.tga"
+
+[Static19]
+l XLocation = 143
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 135
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+[Static20]
+l XLocation = 399
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 140
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_playerprefs_1.tga"
+
+
+[Static21] // x for non-selectable color rectangles
+// this x is for the ulhc rect
+l XLocation = 296 // add 19p for every rectangle to the right- 8 to a row
+l YLocation = 294 // add 48 p for every rectangle below- 4 to a column
+l Width = 16
+l Height = 45
+l UNormal = 176
+l VNormal = 106
+l UWidth = 16
+l VHeight = 45
+st FileName = "mcl_mp_playerprefs_7.tga"
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 6
+
+
+
+[Text0]// help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 26333 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+[Text1]// "PLAYER PREFERENCES" header
+l XLocation = 18
+l YLocation = 12
+l Width = 402
+l Height = 26
+l Color = -30195
+b outline = FALSE
+l Font = 26324 // use agencyfb17
+l TextID = 26323 
+l Alignment = 0
+l HelpDesc = 26338
+
+
+[Text2] // "PLAYER NAME" header
+l XLocation = 162
+l YLocation = 76
+l Width = 350
+l Height = 24
+l Color = -30208
+b outline = FALSE
+l Font = 26326 // use agencyfb14
+l TextID = 26325 
+l Alignment = 0
+l HelpDesc = 0
+
+[Text3] // "UNIT NAME" header
+l XLocation = 162
+l YLocation = 133
+l Width = 350
+l Height = 24
+l Color = -30208
+b outline = FALSE
+l Font = 26328 // use agencyfb14
+l TextID = 26327 
+l Alignment = 0
+l HelpDesc = 0
+
+[Text4] // "UNIT INSIGNIA" header
+l XLocation = 162
+l YLocation = 190
+l Width = 350
+l Height = 24
+l Color = -30208
+b outline = FALSE
+l Font = 26330 // use agencyfb14
+l TextID = 26329 
+l Alignment = 0
+l HelpDesc = 0
+
+[Text5] // "PLAYER COLORS" header
+l XLocation = 162
+l YLocation = 256
+l Width = 350
+l Height = 24
+l Color = -30208
+b outline = FALSE
+l Font = 26332 // use agencyfb14
+l TextID = 26331 
+l Alignment = 0
+l HelpDesc = 0
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 3
+
+
+
+
+[ComboBox0] // player name drop down
+
+l XLocation = 162
+l YLocation = 100
+
+st FileName = "mcl_mp_playerprefs_combobox1.fit"
+
+
+[ComboBox1] // unit name drop down
+
+l XLocation = 162
+l YLocation = 157
+
+st FileName = "mcl_mp_playerprefs_combobox2.fit"
+
+
+
+[ComboBox2] // ip address number drop down
+
+l XLocation = 162
+l YLocation = 214
+
+st FileName = "mcl_mp_playerprefs_combobox3.fit"
+
+
+
+
+
+
+FITend 

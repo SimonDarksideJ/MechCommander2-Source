@@ -1,0 +1,180 @@
+//***************************************************************************
+
+module CPatrol1 : integer;
+
+	const
+
+		#include "data\missions\warriors\cconst.abi"	
+
+
+		STEP1 = 0;
+		STEP2 = 1;
+		STEP3 = 2;
+
+		STEP_1_POS_X = 2400.0;
+		STEP_1_POS_Y = -7700.0;
+		STEP_1_POS_Z = 0.0;
+
+		STEP_2_POS_X = -1400.0;
+		STEP_2_POS_Y = -7200.0;
+		STEP_2_POS_Z = 0.0;
+
+		STEP_3_POS_X = -6397.0;
+		STEP_3_POS_Y = 1583.0;
+		STEP_3_POS_Z = 0.0;
+
+		MIN_DISTANCE = 30.0;
+
+		BREAK_CHALLENGE_DISTANCE = 500;
+
+	type
+
+		#include "data\missions\warriors\ctype.abi"	
+
+	var
+
+		#include "data\missions\warriors\cvar.abi"
+
+		char[40]			dstring;
+		integer				IssuedCombatMode;
+		integer				CurrentCombatMode;
+		integer				GuardObjective;
+		real[3]				GuardPoint;
+		real				GuardEngageRadius;
+		real				GuardDisengageRadius;
+		real				GuardDistance;
+		real				GuardPriority;
+		real				GuardObjectCF;
+		integer				PrimaryTarget;
+		integer				CurrentTarget;
+
+		static integer		Me;
+		static real[3]		StartPoint;
+		static real[4]		FireRange;
+		static boolean		MovingToObjective;
+		static IntList		attackerList;
+		static RealList		attackerTimeList;
+		static integer		numAttackers;
+		static integer 		GuardObjectId;
+		static real[3]		moveToPosition;
+		static integer		pathStep;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	var
+
+		integer t;
+
+	code
+
+		#include "data\missions\warriors\cinit.abi"
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+		//--------------------------------------------------------
+		// Record our start position, so we may return when nec...
+		getObjectPosition(CUR_OBJECT_ID, StartPoint);
+		MovingToObjective = FALSE;
+
+		numAttackers = 0;
+
+		//------------------------------------------------------------
+		// Set up the initial and current  orders for this clan pilot.
+		// Note that we're setting stuff in the brain cells, since
+		// none of this clan system is hardcoded in the
+		// game...
+
+		//--------------------------------------------------------------------------------
+		// This guy is just guarding his area but is under no compunction to return there.
+		setIntegerMemory(MI_MODE, COMBAT_MODE_WAIT);
+		setRealMemory(MI_COORD_X, StartPoint[0]);
+		setRealMemory(MI_COORD_Y, StartPoint[1]);
+		setRealMemory(MI_COORD_Z, StartPoint[2]);
+		setRealMemory(MI_ENGAGE_RADIUS, 200.0);
+		setRealMemory(MI_DISENGAGE_RADIUS, 350.0);
+		setRealMemory(MI_PRIORITY, 5.0);
+		setRealMemory(MI_MIN_ACTION, 0.0);
+		setIntegerMemory(MC_MODE, COMBAT_MODE_WAIT);
+
+		//--------------------------------------------------------
+		// Setup misc. data dependent upon game system settings...
+		getFireRanges(FireRange);
+		setIntegerMemory(MI_OBJECT, 0);
+
+		pathStep = STEP1;
+		moveToPosition[0] = STEP_1_POS_X;
+		moveToPosition[1] = STEP_1_POS_Y;
+		moveToPosition[2] = STEP_1_POS_Z;
+		MovingToObjective = FALSE;
+
+endfunction;
+
+#include "data\missions\warriors\cfunc.abi"
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+		#include "data\missions\warriors\cmain.abi"
+
+
+		//**************************************************************************
+		// New Magic CODE
+
+		//--------------------------------------------------------------------------
+		// These guys don't care about the buildings.  They are on Patrol.
+		// Give them MoveTo Orders.  They will come out of the moveTo if conditions require it.
+		// If they have no target, they resume their patrol.
+
+		if (distanceToPosition(CUR_OBJECT_ID, moveToPosition) < MIN_DISTANCE) then
+			pathStep = pathStep+1;
+			if (pathStep > STEP3) then
+				pathStep = STEP1;
+			endif;
+			MovingToObjective = FALSE;
+		endif;
+
+		if ((CurrentTarget == 0) AND (NOT MovingToObjective)) then
+			switch (pathStep)
+				case STEP1:
+					moveToPosition[0] = STEP_1_POS_X;
+					moveToPosition[1] = STEP_1_POS_Y;
+					moveToPosition[2] = STEP_1_POS_Z;
+					endcase;
+
+				case STEP2:
+					moveToPosition[0] = STEP_2_POS_X;
+					moveToPosition[1] = STEP_2_POS_Y;
+					moveToPosition[2] = STEP_2_POS_Z;
+					endcase;
+
+				case STEP3:
+					moveToPosition[0] = STEP_3_POS_X;
+					moveToPosition[1] = STEP_3_POS_Y;
+					moveToPosition[2] = STEP_3_POS_Z;
+					endcase;
+			endswitch;
+
+			orderMoveTo(moveToPosition);
+			MovingToObjective = TRUE;
+		endif;
+
+		if (CurrentTarget <> 0) then
+			MovingToObjective = FALSE;
+		endif;
+
+
+		#include "data\missions\warriors\cend.abi"
+			
+endmodule.
+
+//***************************************************************************
+

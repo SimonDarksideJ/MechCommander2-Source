@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2323EA24536021F47D659CAD67474945" />
+  <Asset Name="..\aerospotterL1.ase" Type="Physical" Author="ngauvin" FileSize="47769" ModificationTime="2006-02-01T10:54:33.6074893-08:00" CRC="FD29EC1F5C36777ADBE73E2382DBFB64" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\AerospotterL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

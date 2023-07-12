@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EB9F31D478BEE399681E2C55F057B1AC" />
+  <Asset Name="..\mc2_04_warrior43" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\ShaYu.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\ShaYu.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWGreen.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_04_E2_shayus2.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

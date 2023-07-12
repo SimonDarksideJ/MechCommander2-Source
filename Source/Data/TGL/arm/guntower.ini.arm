@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1E6402C244E7DFE35CC4B143212D0659" />
+  <Asset Name="..\guntower.ini" Type="Physical" Author="franksav" FileSize="604" ModificationTime="2006-03-03T01:28:25.0861599-08:00" CRC="6B5E297B8FBB434F473698A6D8CD97E8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="guntower.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="guntowerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="guntowerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="guntowerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="guntowerdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="guntowerdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Gun Tower" ObjectType="Building" BuildingType="Editor Turret" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,22 @@
+FITini
+
+// This is the Barrels Object
+
+[ObjectClass]
+l ObjectTypeNum = 0				//Misc Terrain Object
+
+[ObjectType]
+st Name 		= "barrels"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type			= 0x7
+l Appearance		= 0x020000F8
+l Duration		= -1			// Lasts forever = -1
+l MaxDamage		= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 42			// Object Class Number of explosion for this building
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 15			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName = 223
+ul DmgLevel		= 1			// How much damage before changing to destroyed shape
+
+FITend

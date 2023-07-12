@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="41A987E02A23413C1E3B8409627930FD" />
+  <Asset Name="..\QuonsetEnc.ase" Type="Physical" Author="ngauvin" FileSize="26364" ModificationTime="2006-02-01T10:55:16.6546398-08:00" CRC="C8730CFDAEF309C7D34344C850390251" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Quonset.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

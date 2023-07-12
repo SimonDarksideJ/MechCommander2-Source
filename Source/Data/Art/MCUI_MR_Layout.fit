@@ -1,0 +1,4266 @@
+FITini
+
+// MISSION RESULTS AREA- 
+
+
+
+
+// four parts: Salvage Area, Pilot Review, Promotion Gadget Left, and Promotion Gadget Right
+// each part is broken into five sections: statics, rects, buttons, text, and misc. (animations, etc)
+
+
+
+
+[SalvageAreaStatics]
+
+l staticCount = 32
+
+
+
+
+[SalvageAreaStatic0]  // ONE  horizontal top left 
+
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 256
+l VHeight = 8
+
+
+
+
+[SalvageAreaStatic1]  // TWO  horizontal top middle
+
+
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 8
+
+l UWidth  = 256
+l VHeight = 8
+
+
+
+
+[SalvageAreaStatic2]  // THREE  horizontal top right
+
+
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 16
+
+l UWidth  = 256
+l VHeight = 8
+
+
+
+
+[SalvageAreaStatic3]  // FOUR  vertical top left
+
+l XLocation = 0
+l YLocation = 8
+l Width = 24
+l Height = 46
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 48
+l VNormal = 170
+
+l UWidth  = 24
+l VHeight = 46
+
+
+
+
+
+[SalvageAreaStatic4]  // FIVE I'll label the rest later....
+
+l XLocation = 579
+l YLocation = 8
+l Width = 31
+l Height = 31
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 96
+l VNormal = 0
+l UWidth  = 31
+l VHeight = 31
+
+
+
+
+[SalvageAreaStatic5]  // SIX
+
+l XLocation = 755
+l YLocation = 8
+l Width = 13
+l Height = 31
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 48
+l VNormal = 216
+
+l UWidth  = 13
+l VHeight = 31
+
+
+
+
+[SalvageAreaStatic6]  // EIGHT
+
+l XLocation = 579
+l YLocation = 39
+l Width = 189
+l Height = 15
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 213
+l UWidth  = 189
+l VHeight = 15
+
+
+
+
+[SalvageAreaStatic7]  // NINE
+
+l XLocation = 0
+l YLocation = 54
+l Width = 256
+l Height = 16
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 24
+
+l UWidth  = 256
+l VHeight = 16
+
+
+
+
+[SalvageAreaStatic8]  // TEN
+
+l XLocation = 256
+l YLocation = 54
+l Width = 256
+l Height = 16
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 40
+l UWidth  = 256
+l VHeight = 16
+
+
+
+
+[SalvageAreaStatic9]  // ELEVEN
+
+l XLocation = 512
+l YLocation = 54
+l Width = 256
+l Height = 16
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 56
+l UWidth  = 256
+l VHeight = 16
+
+
+
+
+
+[SalvageAreaStatic10]  // TWELVE
+
+l XLocation = 0
+l YLocation = 70
+l Width = 24
+l Height = 256
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 24
+l VHeight = 256
+
+
+
+
+
+[SalvageAreaStatic11]  // THIRTEEN
+
+l XLocation = 776
+l YLocation = 70
+l Width = 24
+l Height = 256
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 24
+l VNormal = 0
+
+l UWidth  = 24
+l VHeight = 256
+
+
+
+
+
+[SalvageAreaStatic12]  // FOURTEEN
+
+l XLocation = 0
+l YLocation = 326
+l Width = 24
+l Height = 170
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 48
+l VNormal = 0
+l UWidth  = 24
+l VHeight = 170
+
+
+
+
+
+
+[SalvageAreaStatic13]  // SIXTEEN
+
+l XLocation = 776
+l YLocation = 326
+l Width = 24
+l Height = 170
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 72
+l VNormal = 0
+
+l UWidth  = 24
+l VHeight = 170
+
+
+
+
+
+[SalvageAreaStatic14]  // SEVENTEEN
+
+l XLocation = 0
+l YLocation = 496
+l Width = 256
+l Height = 19
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 72
+
+l UWidth  = 256
+l VHeight = 19
+
+
+
+
+
+
+[SalvageAreaStatic15]  // EIGHTEEN
+
+l XLocation = 256
+l YLocation = 496
+l Width = 256
+l Height = 19
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 91
+l UWidth  = 256
+l VHeight = 19
+
+
+
+
+
+
+[SalvageAreaStatic16]  // TWENTY
+
+l XLocation = 512
+l YLocation = 496
+l Width = 256
+l Height = 19
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 110
+l UWidth  = 256
+l VHeight = 19
+
+
+
+
+[SalvageAreaStatic17]  // TWENTYONE
+
+l XLocation = 768
+l YLocation = 496
+l Width = 32
+l Height = 104
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 96
+l VNormal = 101
+
+l UWidth  = 32
+l VHeight = 104
+
+
+
+
+
+[SalvageAreaStatic18]  // TWENTYTWO
+
+l XLocation = 0
+l YLocation = 515
+l Width = 24
+l Height = 57
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 72
+l VNormal = 170
+l UWidth  = 24
+l VHeight = 57
+
+
+
+
+
+
+[SalvageAreaStatic19]  // TWENTYTHREE
+
+l XLocation = 544
+l YLocation = 515
+l Width = 224
+l Height = 9
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 228
+l UWidth  = 224
+l VHeight = 9
+
+
+
+
+
+
+[SalvageAreaStatic20]  // TWENTYFOUR
+
+l XLocation = 544
+l YLocation = 524
+l Width = 86
+l Height = 48
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 128
+l VNormal = 0
+l UWidth  = 86
+l VHeight = 48
+
+
+
+
+
+
+[SalvageAreaStatic21]  // TWENTYFIVE
+
+l XLocation = 749
+l YLocation = 524
+l Width = 19
+l Height = 48
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 164
+l VNormal = 131
+l UWidth  = 19
+l VHeight = 48
+
+
+
+
+
+
+[SalvageAreaStatic22]  // TWENTYSIX
+
+l XLocation = 0
+l YLocation = 572
+l Width = 256
+l Height = 28
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 129
+l UWidth  = 256
+l VHeight = 28
+
+
+
+
+
+
+[SalvageAreaStatic23]  // TWENTYSEVEN
+
+l XLocation = 256
+l YLocation = 572
+l Width = 256
+l Height = 28
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 157
+l UWidth  = 256
+l VHeight = 28
+
+
+
+
+
+
+[SalvageAreaStatic24]  // TWENTYEIGHT
+
+l XLocation = 512
+l YLocation = 572
+l Width = 256
+l Height = 28
+
+st FileName = "MCUI_MR_1"
+
+l UNormal = 0
+l VNormal = 185
+l UWidth  = 256
+l VHeight = 28
+
+
+
+[SalvageAreaStatic25]  // Weight Mech Attribute Icon
+
+l XLocation = 519
+l YLocation = 125
+l Width = 96
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 96
+l VHeight = 32
+
+
+
+[SalvageAreaStatic26]  // Armor Mech Attribute Icon
+
+l XLocation = 519
+l YLocation = 203
+l Width = 96
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 32
+l UWidth  = 96
+l VHeight = 32
+
+
+
+[SalvageAreaStatic27]  // Speed Mech Attribute Icon
+
+l XLocation = 517
+l YLocation = 242
+l Width = 96
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 64
+l UWidth  = 96
+l VHeight = 32
+
+
+
+[SalvageAreaStatic28]  // Jump Distance Mech Attribute Icon
+
+l XLocation = 517
+l YLocation = 281
+l Width = 96
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 0
+l VNormal = 96
+l UWidth  = 96
+l VHeight = 32
+
+
+
+[SalvageAreaStatic29]  // cbills icon
+
+l XLocation = 611
+l YLocation = 9
+l Width = 30
+l Height = 30	
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 214
+l VNormal = 0
+l UWidth  = 30
+l VHeight = 30
+
+
+
+
+[SalvageAreaStatic30]  // SEVEN
+
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 70
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 96
+l VNormal = 31
+l UWidth  = 32
+l VHeight = 70
+
+
+
+[SalvageAreaStatic31]  // RANGE Mech Attribute Icon
+
+l XLocation = 517
+l YLocation = 164
+l Width = 96
+l Height = 32
+
+st FileName = "MCUI_MR_11"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 96
+l VHeight = 32
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+[SalvageAreaRects]
+
+l rectCount = 22
+
+
+
+[SalvageAreaRect0] // full black box for title bar
+l left = 24
+l right = 578
+l top = 8
+l bottom = 53
+l color  = 0xff000000
+
+
+
+[SalvageAreaRect1] // full black box for cbills screen
+l left = 610
+l right = 754
+l top = 8
+l bottom = 38
+l color  = 0xff000000
+
+
+
+[SalvageAreaRect2] // full black box for help area
+l left = 24
+l right = 543
+l top = 515
+l bottom = 571
+l color  = 0xff000000
+
+
+
+[SalvageAreaRect3] // outline Box that holds mechs to be salvaged
+l left = 29 // this should hold the MCUI_MR_SalvageAreaEntryBox.fit
+l right = 361
+l top = 95
+l bottom = 490
+l color  = 0xff002F55	
+b outline = 1
+
+
+[SalvageAreaRect4] // outline scrollbar box for salvageable mechs area
+l left = 344
+l right = 359
+l top = 97
+l bottom = 488
+l color  = 0x00000000	// changed to be clear
+b outline = 1
+
+
+[SalvageAreaRect5] // outline box for mech info 
+l left = 367
+l right = 770
+l top = 95
+l bottom = 490
+l color  = 0x00000000	// changed to be clear
+b outline = 1
+
+
+[SalvageAreaRect6] // outline box around mech info 3d animations
+l left = 373
+l right = 500
+l top = 120
+l bottom = 317
+l color  = 0xff002F55	
+b outline = 1
+
+
+[SalvageAreaRect7] // outline box around mech meters
+l left = 511
+l right = 764
+l top = 120
+l bottom = 317
+l color  = 0xff002F55
+b outline = 1
+
+
+[SalvageAreaRect8] // outline box around mech payload
+l left = 373
+l right = 764
+l top = 348
+l bottom = 490
+l color  = 0xff002F55
+b outline = 1
+
+
+[SalvageAreaRect9] //  outline scrollbar box for mech payload
+l left = 747
+l right = 762
+l top = 312
+l bottom = 482
+l color  = 0x00000000 // changed to be clear
+b outline = 1
+
+
+
+
+[SalvageAreaRect10] //  outline around main header
+l left = 29
+l right = 573
+l top = 13
+l bottom = 49
+l color  = 0xff43311c
+b outline = 1
+
+
+[SalvageAreaRect11] //  deco rect for main header box
+l left = 566
+l right = 573
+l top = 42
+l bottom = 20
+l color  = 0xff43311c
+b outline = 1
+
+
+[SalvageAreaRect12] //  deco box for main header box
+l left = 566
+l right = 573
+l top = 13
+l bottom = 49
+l color  = 0xff43311c
+b outline = 1
+
+
+[SalvageAreaRect13] //  title
+l XLocation = 28
+l YLocation = 10
+l Width = 545
+l Height = 38
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45052
+
+[SalvageAreaRect14] //  c-bills
+l XLocation = 610
+l YLocation = 10
+l Width = 146
+l Height = 38
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45053
+
+[SalvageAreaRect15] //  salvage list
+l XLocation = 31
+l YLocation = 94
+l Width = 331
+l Height = 391
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45055
+
+[SalvageAreaRect16] //  tonnage
+l XLocation = 519
+l YLocation = 123
+l Width = 119
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45056
+
+[SalvageAreaRect17] //  range
+l XLocation = 519
+l YLocation = 163
+l Width = 240
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45057
+
+[SalvageAreaRect18] //  armor
+l XLocation = 519
+l YLocation = 201
+l Width = 240
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45054
+
+[SalvageAreaRect19] //  speed
+l XLocation = 519
+l YLocation = 241
+l Width = 240
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45058
+
+[SalvageAreaRect20] //  jump
+l XLocation = 519
+l YLocation = 280
+l Width = 240
+l Height = 32
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45059
+
+[SalvageAreaRect21] //  current selection
+l XLocation = 372
+l YLocation = 95
+l Width = 130
+l Height = 220
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45060
+
+[SalvageAreaRect21] //  'mech loadout
+l XLocation = 372
+l YLocation = 327
+l Width = 392
+l Height = 160
+l Color = 0
+b outline = FALSE
+l HelpDesc = 45061
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// THESE SHOULD BE OVERRIDDEN BY MCUI_MR_SalvageAreaEntryBox.fit
+
+// the next things below here are pieces that go into the entry box.  They should all have the same color animation information applied to them as the outline rectangle.
+
+
+
+[WeightIcon]		// in salvage list box
+l XLocation = 295 // again, numbers from upper left of entry box
+l YLocation = 4
+l Width = 15
+l Height = 15
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 214
+l VNormal = 30
+l UWidth  = 15
+l VHeight = 15
+
+[CBillsIcon]		// in salvage list box
+l XLocation =  295 // numbers from upper left of entry box
+l YLocation = 27
+l Width = 15
+l Height = 15
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 229
+l VNormal = 30
+l UWidth  = 15
+l VHeight = 15
+
+[MechNameText]
+l XLocation = 89 // numbers from upper left of entry box
+l YLocation = 3 // Use AgencyFB14
+l Color = 0xff005392 // this is the color the box should normally be
+l Font = 28000
+
+[VariantNameText]
+l XLocation = 89 // numbers from upper left of entry box
+l YLocation = 26 // Use AgencyFB14
+l Color = 0xff005392 // this is the color the box should normally be
+l Font = 28001
+
+[WeightText]
+l XLocation = 291 // numbers from upper left of entry box
+l YLocation = 6 //  Right Justify. Use AgencyFB14
+l Color = 0xff005392 // this is the color the box should normally be
+l Font = 28002
+l Alignment = 1 
+
+[CBillsText]
+l XLocation = 291 // numbers from upper left of entry box
+l YLocation = 25 //  Right Justify. Use AgencyFB14
+l Color = 0xff005392 // this is the color the box should normally be
+l Font = 28003
+l Alignment = 1
+
+[MechEntryIcon]
+l XLocation = 50 //  Mech icon goes here, coords are from upper left of entry box
+l YLocation = 17 // use MCUI_Med4 icons
+l Width = 32
+l Height = 38
+
+
+
+// THis SHOULD BE OVERRIDDEN BY MCUI_MR_SalvageAreaEntryBox.fit
+
+[SalvageAreaCheckBoxButton] // This is the check box for the salvageable mechs.   
+l ID = xxx
+l XLocation = 2 //The coordinates are for the first entry in the scrolling area. If there is more than one,it gets added 1 pixel below the previous box, or 47p from the original starting point
+l YLocation = 0
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 94
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l UPressed = 205
+l VPressed = 48
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = .5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 205
+l VHighlight = 94
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 48
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l UDisabled = 205
+l VDisabled = 94
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 0.2
+l DisabledColor1 = 0xff6b6b6b
+
+
+[SalvageAreaButtons]
+
+l buttonCount = 1
+
+[SalvageAreaButton0] // DONE button in lower right corner  
+//this button has three parts- pixel art, rectangle, and text
+// maybe it should be in the misc. section since it's so non-standard?
+
+
+
+l ID = 101
+l XLocation = 626 // pixel art
+l YLocation = 519 // pixel art doesn't take color animation
+l Width = 128   
+l Height = 64
+
+l XTextLocation = 637 // rect  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 536 // 
+l TextWidth = 105
+l TextHeight = 29
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 45040
+l Font = 28004
+
+
+l HelpCaption = 45038
+l HelpDesc = 45039
+
+st FileName = "MCUI_MR_5"
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 128
+
+b AnimateBmp = 0 		// animate the rect and the text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l UPressed = 0
+l VPressed = 192
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UDisabled = 0
+l VDisabled = 192
+
+l DisabledColor = 0xff6b6b6b
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+// below here are listed text entries for the salvageable mech screen.
+
+
+
+[SalvageAreaTexts]
+
+l TextEntryCount = 4
+
+
+
+[SalvageAreaText0]  // big Title text
+
+l XLocation = 36 //  Left Justify. 
+l YLocation = 20 //  Use AgencyFB20
+l color  = 0xffFF8A00
+l TextID = 45035
+l Font = 28005
+
+[SalvageAreaText1]  // Check the mechs you wish to salvage...
+
+l XLocation = 30 //  Left Justify. 
+l YLocation = 73 //  Use AgencyFB14
+l color  = 0xffFFFFFF
+l Font = 28006
+l TextID = 45036
+
+[SalvageAreaText2]  // Help Text
+
+l XLocation = 30 //  Left Justify 
+l YLocation = 519 //  Use AgencyFB11
+l Width = 510
+l Height = 55
+l color  = 0xffffffff
+l Font = 28007
+l TextID = 0
+ 
+
+
+[SalvageAreaText3]  // Cbills readout
+
+l XLocation = 750 //  RIGHT Justify 
+l YLocation = 12 //  Use AgencyFB17
+l color  = 0xffffffff
+l Font = 28008
+l Alignment = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[SalvageAreaMechTexts]
+
+l TextEntryCount = 7
+
+
+[SalvageAreaMechText0]  // MECH NAME
+
+l XLocation = 373 //  Left Justify. 
+l YLocation = 96 //  Use AgencyFB14
+l color  = 0xffC66600  // All Caps
+l Font = 28009
+l TextID = 0	// needs to be replaced
+
+[SalvageAreaMechText1]  // MECH PAYLOAD
+
+l XLocation = 373 //  Left Justify. 
+l YLocation = 326 //  Use AgencyFB14
+l color  = 0xffC66600  // All Caps
+l Font = 28010
+l TextID = 45037
+
+
+
+[SalvageAreaMechText2]  // Weight number
+
+l XLocation = 617 //  Left Justify. 
+l YLocation = 140 //  Use AgencyFB14
+l color  = 0xff005392
+l Font = 28011
+l TextID = 0	
+
+
+[SalvageAreaMechText3]  // armor number
+
+l XLocation = 733 //  Left Justify. 
+l YLocation = 219 //  Use AgencyFB14
+l color  = 0xff005392 
+l Font = 28012
+l TextID = 0	
+
+
+[SalvageAreaMechText4]  // speed number
+
+l XLocation = 733 //  Left Justify. 
+l YLocation = 258 //  Use AgencyFB14
+l color  = 0xff005392
+l Font = 28013
+l TextID = 0	
+
+
+[SalvageAreaMechText5]  // jump distance  number
+
+l XLocation = 733 //  Left Justify. 
+l YLocation = 297 //  Use AgencyFB14
+l color  = 0xff005392
+l Font = 28014
+l TextID = 0	
+
+
+[SalvageAreaMechText6]  // range short, med, or long
+
+l XLocation = 617 //  Left Justify. 
+l YLocation = 179 //  Use AgencyFB14
+l color  = 0xff005392 
+l Font = 28015	
+l TextID = xxx
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+// below here is misc. stuff for the salvageable mech area.
+
+
+
+[AttributeMeter] // meters for the mech info area of salvage area
+
+l AttributeMeterCount = 3
+
+[AttributeMeter0] // for armor
+l XLocation = 617
+l YLocation = 203
+l Width = 110
+l Height = 32
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+
+
+[AttributeMeter1] // for speed
+l XLocation = 617
+l YLocation = 242
+l Width = 110
+l Height = 32
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+[AttributeMeter2] // for jump distance
+l XLocation = 617
+l YLocation = 281
+l Width = 110
+l Height = 32
+l UnitWidth = 5
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+
+
+
+
+
+
+// THIS SHOULD BE OVERRIDDEN BY MCUI_MR_SalvageAreaEntryBox.fit
+
+[SalvageAreaMechEntryBox] // This is the salvageable mech entry box. mouse over it, nothing happens to the check box.  mouse over the check box, the entry box mimics the check box.  
+l ID = xxx
+l XLocation = 35 //The coordinates are for the first entry in the scrolling area. If there is more than one,it gets added 1 pixel below the previous box, or 47p from the original starting point
+l YLocation = 97
+l Width = 264 // these numbers describe an outline rect that everything under here goes into
+l Height = 45
+l Color = 0xff005392 // this is the color the box should normally be
+
+l HelpCaption = 45041
+l HelpDesc = 45042
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5c96c2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5c96c2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledColor = 0xff6b6b6b
+
+
+[SalvageAreaFadeInAnimation] // Full rect that fades out at first appearance of salvage area
+
+l left = 0
+l right = 800
+l top = 0
+l bottom = 600
+
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Color0  = 0xff000000
+f Time1 = 1.0
+l Color0  = 0xff000000 // this needs to be black with a 100% transparency
+
+
+
+
+
+
+[SalvageAreaDoneAnimation]  //Screen slides to the left when the DONE button is pressed
+//measure from left of  SalvageAreaStatic0
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = .7
+l Pos1X = -800
+l Pos1Y = 0
+
+[PilotAreaBeginAnimation]  //Screen slides to the left when the DONE button is pressed
+//measure from left of  SalvageAreaStatic0
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 800
+l Pos0Y = 0
+f Time1 = .7
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+
+
+// when a mech is checked on or off, the cbills readout number 
+// should change color and visibly count down or up, then change back
+// to the original color
+
+l CbillsAnimationColor = 0xffffffff
+
+
+
+
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+
+
+
+// below here is information for the Pilot review area
+
+
+
+
+[PilotReviewStatics]
+
+l staticCount = 18
+
+[PilotReviewStatic0]  // A
+
+l XLocation = 0
+l YLocation = 0
+l Width = 24
+l Height = 256
+
+st FileName = "MCUI_MR_3"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 24
+l VHeight = 256
+
+
+
+
+
+[PilotReviewStatic1]  // B
+
+l XLocation = 24
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 0
+
+l UWidth  = 256
+l VHeight = 8
+
+
+
+[PilotReviewStatic2]  // C
+
+l XLocation = 280
+l YLocation = 0
+l Width = 256
+l Height = 8
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 8
+l UWidth  = 256
+l VHeight = 8
+
+
+
+[PilotReviewStatic3]  // D
+
+l XLocation = 536
+l YLocation = 0
+l Width = 56
+l Height = 8
+
+st FileName = "MCUI_MR_5"
+
+
+
+l UNormal = 112
+l VNormal = 103
+l UWidth  = 56
+l VHeight = 8
+
+
+
+[PilotReviewStatic4]  // E
+
+l XLocation = 592
+l YLocation = 0
+l Width = 208
+l Height = 256
+
+st FileName = "MCUI_MR_3"
+
+l UNormal = 48
+l VNormal = 0
+l UWidth  = 208
+l VHeight = 256
+
+
+
+[PilotReviewStatic5]  // F
+
+l XLocation = 24
+l YLocation = 54
+l Width = 256
+l Height = 16
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 16
+
+l UWidth  = 256
+l VHeight = 16
+
+
+
+
+[PilotReviewStatic6]  // G
+
+l XLocation = 280
+l YLocation = 54
+l Width = 256
+l Height = 16
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 32
+
+l UWidth  = 256
+l VHeight = 16
+
+
+
+
+[PilotReviewStatic7]  // H
+
+l XLocation = 536
+l YLocation = 54
+l Width = 56
+l Height = 16
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 56
+l VNormal = 103
+l UWidth  = 56
+l VHeight = 16
+
+
+
+
+[PilotReviewStatic8]  // I
+
+l XLocation = 0
+l YLocation = 256
+l Width = 24
+l Height = 256
+
+st FileName = "MCUI_MR_3"
+
+l UNormal = 24
+l VNormal = 0
+l UWidth  = 24
+l VHeight = 256
+
+
+
+
+[PilotReviewStatic9]  // J
+
+l XLocation = 592
+l YLocation = 256
+l Width = 208
+l Height = 256
+
+st FileName = "MCUI_MR_4"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 208
+l VHeight = 256
+
+
+
+
+[PilotReviewStatic10]  // K
+
+l XLocation = 0
+l YLocation = 512
+l Width = 24
+l Height = 88
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 128
+l VNormal = 48
+
+l UWidth  = 24
+l VHeight = 88
+
+
+
+
+[PilotReviewStatic11]  // L
+
+l XLocation = 24
+l YLocation = 575
+l Width = 256
+l Height = 25
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 48
+
+l UWidth  = 256
+l VHeight = 25
+
+
+
+[PilotReviewStatic12]  // M
+
+l XLocation = 280
+l YLocation = 575
+l Width = 256
+l Height = 25
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 73
+l UWidth  = 256
+l VHeight = 25
+
+
+
+
+[PilotReviewStatic13]  // N
+
+l XLocation = 536
+l YLocation = 575
+l Width = 56
+l Height = 25 
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 103
+l UWidth  = 56
+l VHeight = 25
+
+
+
+
+[PilotReviewStatic14]  // O
+
+l XLocation = 592
+l YLocation = 512
+l Width = 208
+l Height = 5
+
+st FileName = "MCUI_MR_5"
+
+l UNormal = 0
+l VNormal = 98
+l UWidth  = 208
+l VHeight = 5
+
+
+
+[PilotReviewStatic15]  // P
+
+l XLocation = 592
+l YLocation = 517
+l Width = 53
+l Height = 83
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 152
+l VNormal = 48
+l UWidth  = 53
+l VHeight = 83
+
+
+
+[PilotReviewStatic16]  // Q
+
+l XLocation = 764
+l YLocation = 517
+l Width = 36
+l Height = 83
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 128
+l VNormal = 136
+
+l UWidth  = 36
+l VHeight = 83
+
+
+
+[PilotReviewStatic17]  // R
+
+l XLocation = 645
+l YLocation = 571
+l Width = 119
+l Height = 29
+
+st FileName = "MCUI_MR_2"
+
+l UNormal = 61
+l VNormal = 227
+l UWidth  = 119
+l VHeight = 29
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[PilotReviewRects]
+
+l rectCount = 4
+
+[PilotReviewRect0] // outline rect for main screen 
+l left = 29
+l right = 586
+l top = 75
+l bottom = 569
+l color  = 0xff002F55	
+b outline = 1
+
+
+[PilotReviewRect1] // outline rect for scroll bar
+l left = 569
+l right = 584
+l top = 77
+l bottom = 567
+l color  = 0xff002F55	
+b outline = 1
+
+
+[PilotReviewRect2] // full rect for title bar
+l left = 24
+l right = 591
+l top = 8
+l bottom = 53
+l color  = 0xff000000	
+
+[PilotReviewRect3] // around title 
+l XLocation = 28
+l YLocation = 12
+l Width = 559
+l Height = 36
+l color  = 0xff43311C
+b outline = 1
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+//below here are listed buttons for Pilot Review
+
+
+
+
+[PilotReviewButtons]
+
+l buttonCount = 1
+
+
+
+
+
+
+[PilotReviewButton0] // DONE button in lower right corner  
+// this button has three parts- pixel art, rectangle, and text
+// maybe it should be in the misc. section since it's so non-standard?
+
+
+
+l ID = xxx
+l XLocation = 641 // pixel art
+l YLocation = 512 // pixel art doesn't take color animation
+l Width = 128   
+l Height = 64
+
+l XTextLocation = 652 // rect  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 529 // 
+l TextWidth = 104
+l TextHeight = 28
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 45040
+l Font = 28016
+
+
+l HelpCaption = 45038
+l HelpDesc = 45039
+
+
+b AnimateBmp = 0 		// animate the rect and the text only
+b AnimateText = 1		
+
+
+st FileName = "MCUI_MR_5"
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 0
+l VNormal = 128
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l UPressed = 0
+l VPressed = 192
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 0
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UDisabled = 0
+l VDisabled = 192
+
+l DisabledColor = 0xff373737
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+//text for pilot review below this point
+
+
+
+
+[PilotReviewTexts]
+
+l TextEntryCount= 1
+
+
+
+[PilotReviewText0]  // big Title text - PILOT REVIEW
+
+l XLocation = 36 //  Left Justify. 
+l YLocation = 17 //  Use AgencyFB28
+l color  = 0xffFF8A00 // ALL CAPS
+l TextID = 27013
+l Font = 28017
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+// miscellaneous stuff for pilot review below this point
+
+[PilotReviewMisc]
+
+l PilotReviewSmallSkip = 5  // use between boxes in KIA area, between medals in Medals Awarded area, etc
+l PilotReviewMedSkip = 15   // Use between in Active Duty area, between pilot info, Medals Awarded, Promoted header
+l PilotReviewLargeSkip = 30 // use between KIA area and Active Duty area
+
+
+l KIAHeaderXLocation = 36 //  Left Justify. 
+l color  = 0xffFF8A00 // ALL CAPS.  Use AgencyFB17
+l Font = 28018
+
+
+
+
+[PilotReviewKIABox] 
+
+l left = 26// coords are for the first KIA entry in the scrolling area. 
+l top = 0
+l right = 252 // outline rect sizes
+l bottom = 87
+l color  = 0xff981500
+
+[KIABoxPilotIcon]  // Use pilots from MCUI_Med2
+
+l XLocation = 5 
+l YLocation = 5
+l Width = 24
+l Height = 35
+
+
+[KIABoxPilotIconRect] // one p rect around pilot icon
+l XLocation = 5 
+l YLocation = 5
+l Width = 24
+l Height = 35
+l color  = 0xff981500
+
+
+
+[KIABoxDeadIcon]  // 
+
+l left = 5
+l right = 30
+l top = 46
+l bottom = 82
+l color  = 0xff981500
+
+
+[KIAPilotNameText]
+l XLocation = 36 // NAME: numbers from upper left of entry box
+l YLocation = 3 // Use AgencyFB14  Left Justify
+l Color = 0xffC61C00
+l Font = 28019
+
+[KIARankText]
+l XLocation = 36 // RANK: numbers from upper left of entry box
+l YLocation = 26 // Use AgencyFB14  Left Justify
+l Color = 0xffC61C00
+l Font = 28020
+
+[KIAMissionsText]
+l XLocation = 36 // MISSIONS: numbers from upper left of entry box
+l YLocation = 48 //  Left Justify. Use AgencyFB14
+l Color = 0xffC61C00
+l Font = 28021
+
+[KIAKillsText]
+l XLocation = 36// KILLS: numbers from upper left of entry box
+l YLocation = 70 //  Left Justify. Use AgencyFB14
+l Color = 0xffC61C00
+l Font = 28022
+
+
+
+
+[ActiveDutyHeader]
+l XLocation =  29 //  Left Justify. 
+l YLocation = 0
+l color  = 0xffFF8A00 // ALL CAPS.  Use AgencyFB17
+
+
+
+[ActiveDutyBox] 
+
+l left = 59
+l top = 0
+l right = 275 // outline rect sizes
+l bottom = 121
+l color  = 0xff002F55
+
+[ActiveDutyBoxPilotIcon]  // Use pilots from MCUI_Med2
+
+l XLocation = 7 // coordinates from upper left of ActiveDutyBox
+l YLocation = 7
+l Width = 24
+l Height = 35
+
+
+[ActiveDutyBoxPilotIconRect] // one p rect around pilot icon
+l XLocation = 7 // coordinates from upper left of ActiveDutyBox
+l YLocation = 7
+l Width = 25
+l Height = 36
+l color  = 0xff002F55
+
+
+
+
+
+
+
+[ActiveDutyBoxRect0] // one p rect around rank icon
+l left = 6
+l right = 57
+l top = 54
+l bottom = 70
+l color  = 0xff002F55
+
+
+[ActiveDutyBoxRect1] // one p rect around gunnery skill icon
+l left = 6
+l right = 57
+l top = 76
+l bottom = 92
+l color  = 0xff002F55
+
+
+[ActiveDutyBoxRect2] // one p rect around piloting icon
+l left = 6
+l right = 57
+l top = 98
+l bottom = 114
+l color  = 0xff002F55
+
+
+
+
+[ActiveDutyBoxRect3] // rect for gunnery skill meter
+l left = 60
+l right = 103
+l top = 76
+l bottom = 92
+l color  = 0x00000000
+
+
+[ActiveDutyBoxRect4] // rect for piloting skill meter
+l left = 60
+l right = 103
+l top = 98
+l bottom = 114
+l color  = 0x00000000
+
+
+
+
+
+
+[ActiveDutyBoxRankIcon0] // green
+
+l XLocation = 7
+l YLocation = 55
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 153
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[ActiveDutyBoxRankIcon1] // regular
+
+l XLocation = 7
+l YLocation = 55
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 168
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[ActiveDutyBoxRankIcon2]  // veteran
+
+l XLocation = 7
+l YLocation = 55
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 183
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[ActiveDutyBoxRankIcon3] // elite
+
+
+l XLocation = 7
+l YLocation = 55
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 198
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+[ActiveDutyBoxRankIcon4] //ace
+
+
+l XLocation = 7
+l YLocation = 55
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 213
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+
+
+[ActiveDutyBoxSkill0] //gunnery
+
+
+l XLocation = 7
+l YLocation = 77
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 108
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+[ActiveDutyBoxSkill1] // piloting
+
+
+l XLocation = 7
+l YLocation = 99
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 123
+l UWidth = 50
+l VHeight = 15 
+
+st FileName = "MCUI_Med2"
+
+
+
+
+
+
+
+[ActiveDutyBoxSkillMeter0]
+l XLocation = 60
+l YLocation = 76
+l Width = 74
+l Height = 16
+
+l UnitWidth = 3
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+[ActiveDutyBoxSkillMeter1]
+l XLocation = 60
+l YLocation = 98
+l Width = 74
+l Height = 16
+l UnitWidth = 3
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+
+
+
+// kill icons info- use medium size icons
+[KillIcons]
+l XLocation = 227
+l YLocation = 25
+l Width = 32
+l Height = 38
+
+l KillIconSkip = 1 // both vert and horiz.
+
+
+
+
+[ActivePilotNameText]
+l XLocation = 38 // NAME: numbers from upper left of entry box
+l YLocation = 4 // Use AgencyFB14  Left Justify
+l Color = 0xffff8a00
+l Font = 28023
+
+[ActiveMissionsText]
+l XLocation = 38 // MISSIONS: numbers from upper left of entry box
+l YLocation = 30 //  Left Justify. Use AgencyFB14
+l Color = 0xff005392
+l Font = 28024
+
+[ActiveRankText]
+l XLocation = 63 //  numbers from upper left of entry box
+l YLocation = 57 //  Left Justify. Use AgencyFB14
+l Color = 0xff005392
+l Font = 28025
+
+[ActiveGunneryText]
+l XLocation = 140 // numbers from upper left of entry box
+l YLocation = 79 //  Left Justify. Use AgencyFB14
+l Color = 0xff005392
+l Font = 28026
+
+[ActivePilotingText]
+l XLocation = 140 // numbers from upper left of entry box
+l YLocation = 100 //  Left Justify. Use AgencyFB14
+l Color = 0xff005392
+l Font = 28027
+
+[ActiveKillsNameText]
+l XLocation = 225 // NAME: numbers from upper left of entry box
+l YLocation = -2 // Use AgencyFB14  Left Justify  ALL CAPS
+l Color = 0xff5c96c2
+l Font = 28028
+
+
+
+// end of ActiveDutyBox area
+
+
+
+
+//medal information below here
+[MedalAwardedHeader]
+l XLocation = 9 //  Left Justify. 
+l YLocation = 152
+l color  = 0xff5c96c2   // ALL CAPS.  Use AgencyFB17
+l Font = 28029
+
+
+[MedalDescriptionText]
+l XLocation = 83 // NAME: numbers from upper left of related medal
+l YLocation = 183 // Use AgencyFB14  Left Justify  
+l Width = 438
+l Height = 64
+l Color = 0xff005392
+l Font = 28030
+
+
+[MedalIcon0]  // campaign ribbon 1
+
+l XLocation = 10
+l YLocation = 186
+l Width = 64
+l Height = 64
+
+l UNormal= 0
+l VNormal= 0
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+[MedalIcon1]  // campaign 2 
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 128
+l VNormal= 0
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+[MedalIcon2]  // campaign 3 
+
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 0
+l VNormal= 64
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+[MedalIcon3]  // campaign ribbon 1 with honors
+
+l XLocation = 10
+l YLocation = 186
+l Width = 64
+l Height = 64
+
+l UNormal= 64
+l VNormal= 0
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+
+
+[MedalIcon4]  // campaign 2 with honors
+
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 192
+l VNormal= 0
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+
+
+
+[MedalIcon5]  // campaign 3 with honors
+
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 64
+l VNormal= 64
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon6]  // purple heart
+
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 128
+l VNormal= 64
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon7]  // valor
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 192
+l VNormal= 64
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon8]  // uncommon valor
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 0
+l VNormal= 128
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon9]  // mission specific 1
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 64
+l VNormal= 128
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+[MedalIcon10]  // mission specific 2
+
+l XLocation = 10
+l YLocation = 186             
+l Width = 64
+l Height = 64
+
+l UNormal= 128
+l VNormal= 128
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+//end of medal information
+
+
+[MedalIcon11]  // mission specific 3
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 192
+l VNormal= 128
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+//end of medal information
+
+
+
+[MedalIcon12]  // mission specific 4
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 0
+l VNormal= 192
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+[MedalIcon13]  // liao
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 64
+l VNormal= 192
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon14]  // davion
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 128
+l VNormal= 192
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+
+
+
+[MedalIcon15]  // steiner
+
+l XLocation = 10
+l YLocation = 186              
+l Width = 64
+l Height = 64
+
+l UNormal= 192
+l VNormal= 192
+l UWidth = 64
+l VHeight = 64
+
+st FileName = "MCUI_MR_10"
+
+//end of medal information
+
+
+
+
+
+[PromotionHeader]
+l XLocation = 9 //  Left Justify. 
+l YLocation = 128
+l color  = 0xff5c96c2 // ALL CAPS.  Use AgencyFB17
+l Font = 28031
+
+
+
+// Pilot Review statistics appear in sequence.  
+// The upper left corner of each new piece should appear between 
+// 0 and 305 pixels from the top of the main screen info scroll box
+
+// If a new piece would be placed below 305 p, then the pieces above 
+// should animate upwards at a rate of 150 pixels per second until 
+// there's room to fit the new piece.
+
+// There should be a pause between each new piece that arrives- .5 seconds
+// for most pieces, .1 seconds for kill markers.
+
+
+
+
+// When Pilot skill levels are increased,
+// each new meter bar should flash white
+// to black several times,then stay white
+// until next mission's pilot review
+
+[SkillMeterAnimation]
+l AnimationTimeStamps= 13
+f Time0 = 0.0
+l Color0  = 0xffffffff  // white
+f Time1 = 0.2
+l Color1  = 0xffffffff  // white
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xffffffff  // white
+f Time5 = 0.7
+l Color5  = 0xffffffff  // white
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xffffffff  // white
+f Time9 = 1.2
+l Color9  = 0xffffffff  // white
+f Time10 = 1.3
+l Color10  = 0xff000000  // black
+f Time11 = 1.4
+l Color11  = 0xff000000  // black
+
+f Time12 = 1.5
+l Color12  = 0xffffffff  // white
+
+
+
+
+// When the Medal Awarded Header appears, it should flash several times: 
+
+[MedalAwardedAnimation]
+l AnimationTimeStamps= 13
+f Time0 = 0.0
+l Color0  = 0xff5c96c2  // orange
+f Time1 = 0.2
+l Color1  = 0xff5c96c2  // orange
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xff5c96c2  // orange
+f Time5 = 0.7
+l Color5  = 0xff5c96c2  // orange
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xff5c96c2  // orange
+f Time9 = 1.2
+l Color9  = 0xff5c96c2  // orange
+f Time10 = 1.3
+l Color10  = 0xff000000  // black
+f Time11 = 1.4
+l Color11  = 0xff000000  // black
+
+f Time12 = 1.5
+l Color12  = 0xff5c96c2  // orange
+
+
+
+
+// When the Pilot Promoted to (blank) Header Appears, it should flash several times: 
+
+[PilotPromotedHeaderAnimation]
+l AnimationTimeStamps= 13
+f Time0 = 0.0
+l Color0  = 0xff5c96c2  // orange
+f Time1 = 0.2
+l Color1  = 0xff5c96c2  // orange
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xff5c96c2  // orange
+f Time5 = 0.7
+l Color5  = 0xff5c96c2  // orange
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xff5c96c2  // orange
+f Time9 = 1.2
+l Color9  = 0xff5c96c2  // orange
+f Time10 = 1.3
+l Color10  = 0xff000000  // black
+f Time11 = 1.4
+l Color11  = 0xff000000  // black
+
+f Time12 = 1.5
+l Color12  = 0xff5c96c2  // orange
+
+
+
+[PilotReviewDisabledAnimation] // Full rect that fades in when Pilot Promoted Gadget is about to appear
+
+l left = 0
+l right = 800
+l top = 0
+l bottom = 600
+
+
+l AnimationTimeStamps= 2
+f Time0 = 0.0
+l Color0  = 0xff000000  // this needs to be invisible black 
+f Time1 = 1.0
+l Color0  = 0xff000000  // this needs to be black, 75% visible
+
+
+
+
+[PilotReviewFadeOutAnimation] // Full rect that fades in when Pilot Review Done Button is pressed.
+
+l left = 0
+l right = 800
+l top = 0
+l bottom = 600
+
+
+l NumTimeStamps = 2
+f Time0 = 0.0
+l Color0  = 0xff000000  // this needs to be invisible black
+f Time1 = 1.0
+l Color0  = 0xff000000  // this needs to be fully visible black
+
+
+
+//end of Pilot Review Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+
+
+
+//start of Promotion Gadget Left Side information
+
+
+[PromoteGadgetLeftStatics]
+
+l staticCount = 21
+
+
+[PromoteGadgetLeftStatic0]  // AA
+
+l XLocation = 0
+l YLocation = 70
+l Width = 256
+l Height = 61
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 256
+l VHeight = 61
+
+
+
+[PromoteGadgetLeftStatic1]  // BB
+
+l XLocation = 252
+l YLocation = 40
+l Width = 128
+l Height = 30
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 0
+l VNormal = 198
+
+l UWidth  = 128
+l VHeight = 30
+
+
+
+
+[PromoteGadgetLeftStatic2]  // CC
+
+l XLocation = 0
+l YLocation = 1301
+l Width = 33
+l Height = 25
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 74
+l VNormal = 77
+l UWidth  = 144
+l VHeight = 61
+
+
+
+
+[PromoteGadgetLeftStatic3]  // DD
+
+l XLocation = 0
+l YLocation = 131
+l Width = 33
+l Height = 25
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 0
+l VNormal = 228
+l UWidth  = 33
+l VHeight = 25
+
+
+
+
+
+[PromoteGadgetLeftStatic4]  // EE
+
+l XLocation = 309
+l YLocation = 131
+l Width = 91
+l Height = 25
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 33
+l VNormal = 228
+l UWidth  = 91
+l VHeight = 25
+
+
+
+
+
+
+[PromoteGadgetLeftStatic5]  // GG
+
+l XLocation = 0
+l YLocation = 156
+l Width = 256
+l Height = 25
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 0
+l VNormal = 61
+l UWidth  = 256
+l VHeight = 26
+
+
+
+
+
+
+
+[PromoteGadgetLeftStatic6]  // HH
+
+l XLocation = 256
+l YLocation = 156
+l Width = 94
+l Height = 25
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 124
+l VNormal = 228
+l UWidth  = 94
+l VHeight = 25
+
+
+
+
+
+
+
+[PromoteGadgetLeftStatic7]  // II
+
+l XLocation = 0
+l YLocation = 181
+l Width = 33
+l Height = 256
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 33
+l VHeight = 256
+
+
+
+
+
+
+
+[PromoteGadgetLeftStatic8]  // JJ
+
+l XLocation = 309
+l YLocation = 181
+l Width = 41
+l Height = 256
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 33
+l VNormal = 0
+l UWidth  = 41
+l VHeight = 256
+
+
+
+
+
+
+[PromoteGadgetLeftStatic9]  // KK
+
+l XLocation = 0
+l YLocation = 437
+l Width = 256
+l Height = 112
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 0
+l VNormal = 86
+l UWidth  = 256
+l VHeight = 112
+
+
+
+
+
+
+[PromoteGadgetLeftStatic10]  // LL
+
+l XLocation = 256
+l YLocation = 437
+l Width = 144
+l Height = 112
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 74
+l VNormal = 138
+l UWidth  = 144
+l VHeight = 112
+
+
+
+
+
+
+[PromoteGadgetLeftStatic11]  // MM
+
+l XLocation = 252
+l YLocation = 549
+l Width = 128
+l Height = 30
+
+st FileName = "MCUI_MR_6"
+
+l UNormal = 129|
+l VNormal = 198
+l UWidth  = 127
+l VHeight = 30
+
+
+
+
+
+
+
+
+
+
+[PromoteGadgetLeftStatic12]  // green
+
+l XLocation = 45
+l YLocation = 234
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 153
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[PromoteGadgetLeftStatic13]  // regular
+
+l XLocation = 45
+l YLocation = 234
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 168
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[PromoteGadgetLeftStatic14]  // veteran
+
+l XLocation = 45
+l YLocation = 234
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 183
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+[PromoteGadgetLeftStatic15]  // elite
+
+
+l XLocation = 45
+l YLocation = 234
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 198
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+[PromoteGadgetLeftStatic16]  //ace
+
+
+l XLocation = 45
+l YLocation = 234
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 213
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+
+
+
+[PromoteGadgetLeftStatic17]  //gunnery
+
+
+l XLocation = 45
+l YLocation = 256
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 108
+l UWidth = 50
+l VHeight = 15
+
+st FileName = "MCUI_Med2"
+
+
+[PromoteGadgetLeftStatic18]  // piloting
+
+
+l XLocation = 45
+l YLocation = 278
+l Width = 50
+l Height = 15
+
+l UNormal= 206
+l VNormal= 123
+l UWidth = 50
+l VHeight = 15 
+
+st FileName = "MCUI_Med2"
+
+
+
+
+
+[PromoteGadgetLeftStatic19]  // 
+
+
+l XLocation = 256
+l YLocation = 70
+l Width = 144
+l Height = 61
+
+l UNormal= 74
+l VNormal= 77
+l UWidth = 144
+l VHeight = 61
+
+st FileName = "MCUI_MR_7"
+
+
+
+[PromoteGadgetLeftStatic20]  // arrow box for selected skills
+
+l XLocation = 38
+l YLocation = 343
+l Width = 13
+l Height = 94
+
+l UNormal= 183
+l VNormal= 131
+l UWidth = 13
+l VHeight = 94
+
+st FileName = "MCUI_MR_2"
+
+
+
+
+// end of promoteleft statics
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+// start of rects area
+
+
+
+
+[PromoteGadgetLeftRects]
+
+l rectCount = 9
+
+[PromoteGadgetLeftRect0] // Full rect for Title Header
+l XLocation = 33
+l YLocation =  131
+l Width = 266
+l Height = 114
+l color  = 0xff000000	
+
+[PromoteGadgetLeftRect1] // full rect for pilot info screen
+l left = 33
+l right = 308
+l top = 181
+l bottom = 437
+l color  = 0xff000000
+
+[PromoteGadgetLeftRect2] // outline rect for  pilot info
+l XLocation = 38
+l YLocation = 186
+l Width = 264
+l Height = 113
+l color  = 0xff002F55
+b outline = 1
+
+[PromoteGadgetLeftRect3] // outline rect for pilot picture
+l left = 44
+l right = 70
+l top = 192
+l bottom = 229
+l color  = 0xff002F55
+b outline = 1
+
+[PromoteGadgetLeftRect4] // outline rect for rank icon
+l left = 44
+l right = 95
+l top = 233
+l bottom = 249
+l color  = 0xff002F55
+b outline = 1
+
+[PromoteGadgetLeftRect5] // outline for gunnery skill icon
+l left = 44
+l right = 95
+l top = 255
+l bottom = 271
+l color  = 0xff002F55
+b outline = 1
+
+[PromoteGadgetLeftRect6] // outline for gunnery skill meter
+l left = 98
+l right = 141
+l top = 255
+l bottom = 271
+l color  = 0x000000
+b outline = 1
+
+[PromoteGadgetLeftRect7] // outline for piloting skill icon
+l left = 44
+l right = 95
+l top = 277
+l bottom = 293
+l color  = 0xff002F55
+b outline = 1
+b outline = 1
+
+
+[PromoteGadgetLeftRect8] // outline for piloting skill meter
+l left = 98
+l right = 141
+l top = 277
+l bottom = 293
+l color  = 0x000000
+b outline = 1
+
+
+
+
+
+
+
+
+
+
+//end of promotion gadget  left rects area
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+// start of promotion gadget left text entry area
+
+
+
+[PromoteGadgetLeftTexts]
+
+l TextEntryCount = 12
+
+
+
+[PromoteGadgetLeftText0]  // title bar
+
+l XLocation = 38 //  Left Justify. 
+l YLocation = 131 //  Use AgencyFB17
+l color  = 0xffFF8A00 // ALL CAPS
+l Font = 28031
+l TextID = 27022
+
+[PromoteGadgetLeftText1]  // pilot info area pilot name
+
+l XLocation = 76 //  Left Justify. 
+l YLocation = 190 //  Use AgencyFB14
+l color  = 0xffff8a00 // 
+l Font = 28032
+
+[PromoteGadgetLeftText2]  // pilot info missions entry
+
+l XLocation = 76  //  Left Justify. 
+l YLocation = 217 //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28033
+
+[PromoteGadgetLeftText3]  // rank title
+
+l XLocation = 100 //  Left Justify. 
+l YLocation = 237 //  Use AgencyFB11
+l color  = 0xff005392 // 
+l Font = 28034
+
+[PromoteGadgetLeftText4]  // gunnery skill number
+
+l XLocation = 177 //  Left Justify. 
+l YLocation = 259 //  Use AgencyFB11
+l color  = 0xff005392 // 
+l Font = 28035
+
+[PromoteGadgetLeftText5]  // piloting skill number
+
+l XLocation = 177 //  Left Justify. 
+l YLocation = 281 //  Use AgencyFB11
+l color  = 0xff005392 // 
+l Font = 28036
+
+[PromoteGadgetLeftText6]  // specialty skill entry 4
+
+l XLocation = 52 //  Left Justify. 
+l YLocation = 412  //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28037
+
+
+[PromoteGadgetLeftText7]  // specialty skill header
+
+l XLocation = 38 //  Left Justify. 
+l YLocation = 322 //  Use AgencyFB14
+l color  = 0xffc66600 // ALL CAPS
+l Font = 28037
+l TextID = 27023
+
+[PromoteGadgetLeftText8]  // specialty skill entry 1
+l XLocation = 52 //  Left Justify. 
+l YLocation = 347 //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28037
+
+[PromoteGadgetLeftText9]  // specialty skill entry 2
+
+l XLocation = 52  //  Left Justify. 
+l YLocation = 368 //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28037
+
+[PromoteGadgetLeftText10]  // specialty skill entry 3
+
+l XLocation = 52 //  Left Justify. 
+l YLocation = 390 //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28037
+
+[PromoteGadgetLeftText11]  // specialty skill entry 4
+
+l XLocation = 52 //  Left Justify. 
+l YLocation = 412 //  Use AgencyFB14
+l color  = 0xff005392 // 
+l Font = 28037
+
+
+
+
+
+// end of promotion gadget left text entry area
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+//  start of promotion gadget left miscellany area
+
+
+
+[PromoteGadgetLeftSkillMeter0] // Gunnery
+
+l XLocation = 98
+l YLocation = 255
+l Width = 74
+l Height = 16
+
+l UnitWidth = 3
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+[PromoteGadgetLeftSkillMeter1] Piloting
+l XLocation = 98
+l YLocation = 277
+l Width = 74
+l Height = 16
+
+l UnitWidth = 3
+l Skip = 1
+l NumberUnits = 18
+l ColorMin = 0xff005392
+l ColorMax = 0xffC9E5FF
+l Color  = 0xff002F55
+
+
+
+
+
+
+[PromoteGadgetLeftEnterAnimation]  // This animation occurs when the promotion gadget is called up
+//measure from left of piece AA, PromoteGadgetLeftStatic0
+
+l AnimationTimeStamps= 6
+f Time0 = 0.0
+l Pos0X = -400
+l Pos0Y = 0
+f Time1 = 0.5
+l Pos1X = 0
+l Pos1Y = 0
+f Time2 = 0.6
+l Pos2X = -30
+l Pos2Y = 0
+f Time3 = 0.75
+l Pos3X = 0
+l Pos3Y = 0
+f Time4 = 0.85
+l Pos4X = -15
+l Pos4Y = 0
+f Time5 = 1.1
+l Pos5X = 0
+l Pos5Y = 0
+
+
+
+[PromoteGadgetLeftExitAnimation]  // This animation occurs when the "confirm" button is pressed
+//measure from left of piece AA, PromoteGadgetLeftStatic0
+
+l AnimationTimeStamps= 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.5
+l Pos1X = -400
+l Pos1Y = 0
+
+
+// When a new specialty skill level is selected
+// the new skill should appear in the next specialty skill slot
+// below the existing ones.  It should flash several times,
+// then remain white until the next time the promotion gadget appears
+
+
+[SkillSelectionAnimation]
+l AnimationTimeStamps= 13
+f Time0 = 0.0
+l Color0  = 0xffffffff  // white
+f Time1 = 0.2
+l Color1  = 0xffffffff  // white
+f Time2 = 0.3
+l Color2  = 0xff000000  // black
+f Time3 = 0.4
+l Color3  = 0xff000000  // black
+
+f Time4 = 0.5
+l Color4  = 0xffffffff  // white
+f Time5 = 0.7
+l Color5  = 0xffffffff  // white
+f Time6 = 0.8
+l Color6  = 0xff000000  // black
+f Time7 = 0.9
+l Color7  = 0xff000000  // black
+
+f Time8 = 1.0
+l Color8  = 0xffffffff  // white
+f Time9 = 1.2
+l Color9  = 0xffffffff  // white
+f Time10 = 1.3
+l Color10  = 0xff000000  // black
+f Time11 = 1.4
+l Color11  = 0xff000000  // black
+
+f Time12 = 1.5
+l Color12  = 0xffffffff  // white
+
+
+
+
+
+//end of promote gadget left misc. info
+//end of promote gadget left info
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+
+
+
+
+//start of Promotion Gadget Right information
+
+[PromoteGadgetRightStatics]
+
+l staticCount = 11
+
+
+[PromoteGadgetRightStatic0]  // AAA
+
+l XLocation = 350
+l YLocation = 140
+l Width = 256
+l Height = 41
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 0
+l UWidth  = 256
+l VHeight = 41
+
+
+
+[PromoteGadgetRightStatic1]  // BBB
+
+l XLocation = 606
+l YLocation = 140
+l Width = 194
+l Height = 41
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 127
+l UWidth  = 194
+l VHeight = 41
+
+
+
+
+[PromoteGadgetRightStatic2]  // CCC
+
+l XLocation = 619
+l YLocation = 63
+l Width = 181
+l Height = 77
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 74
+l VNormal = 0
+l UWidth  = 181
+l VHeight = 77
+
+
+
+
+[PromoteGadgetRightStatic3]  // DDD
+
+l XLocation = 340
+l YLocation = 181
+l Width = 42
+l Height = 256
+
+st FileName = "MCUI_MR_4"
+
+l UNormal = 208
+l VNormal = 0
+
+l UWidth  = 42
+l VHeight = 256
+
+
+
+
+[PromoteGadgetRightStatic4]  // EEE top half
+
+l XLocation = 766
+l YLocation = 181
+l Width = 34
+l Height = 128
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 222
+l VNormal = 119
+
+l UWidth  = 34
+l VHeight = 128
+
+
+
+
+[PromoteGadgetRightStatic5]  // EEE bottom  half
+
+l XLocation = 766
+l YLocation = 309
+l Width = 34
+l Height = 128
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 222
+l VNormal = 128
+
+l UWidth  = 34
+l VHeight = 128
+
+
+
+
+
+
+[PromoteGadgetRightStatic6]  // FFF
+
+l XLocation = 350
+l YLocation = 437
+l Width = 256
+l Height = 44
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 41
+l UWidth  = 256
+l VHeight = 44
+
+
+
+
+[PromoteGadgetRightStatic7]  // GGG
+
+l XLocation = 606
+l YLocation = 437
+l Width = 194
+l Height = 44
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 168
+l UWidth  = 194
+l VHeight = 44
+
+
+
+
+[PromoteGadgetRightStatic8]  // HHH
+
+l XLocation = 520
+l YLocation = 481
+l Width = 121
+l Height = 42
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 212
+l UWidth  = 121
+l VHeight = 42
+
+
+
+
+[PromoteGadgetRightStatic9]  // III
+
+l XLocation = 562
+l YLocation = 523
+l Width = 238
+l Height = 42
+
+st FileName = "MCUI_MR_8"
+
+l UNormal = 0
+l VNormal = 85
+l UWidth  = 238
+l VHeight = 42
+
+
+
+
+[PromoteGadgetRightStatic10]  // JJJ
+
+l XLocation = 771
+l YLocation = 481
+l Width = 29
+l Height = 42
+
+st FileName = "MCUI_MR_7"
+
+l UNormal = 218
+l VNormal = 77
+l UWidth  = 29
+l VHeight = 42
+
+
+
+
+
+
+// end of promote gadget right statics
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+// start of promote gadget right rects area
+
+
+
+
+[PromoteGadgetRightRects]
+
+l rectCount = 3
+
+
+[PromoteGadgetRightRect0] // full rect for skill selection screen
+l left = 382
+l right = 765
+l top = 227
+l bottom = 437
+l color  = 0x00000000
+
+
+[PromoteGadgetRightRect1] // full rect for underneath confirm button
+l left = 641
+l right = 770
+l top = 457
+l bottom = 523
+l color  = 0xff000000
+
+
+[PromoteGadgetRightRect2] // outline rect for skill selection screen
+// this is the scroll box that holds the MCUI_MR_SpecialtySkillEntryBox.fit
+l left = 382
+l right = 761
+l top = 208
+l bottom = 432
+l color  = 0xff002F55
+b outline = 1
+
+
+
+//end of promote gadget right rects area
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+//start of promotion gadget buttons
+
+
+
+[PromoteGadgetRightButtons]
+
+l buttonCount = 1
+
+
+[PromoteGadgetRightButton0] // confirm button in lower right corner  
+// this button has three parts- pixel art, rectangle, and text
+// maybe it should be in the misc. section since it's so non-standard?
+
+
+
+l ID = 101
+l XLocation = 642 // pixel art
+l YLocation = 458 // pixel art doesn't take color animation
+l Width = 128   
+l Height = 64
+
+l XTextLocation = 655 //  outline rect  when dealing with text, center in rect  use AgencyFB17. Use same color as rect.
+l YTextLocation = 474 // 
+l TextWidth = 102
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+
+b AnimateBmp = 0 // animate the rect and the text only
+b AnimateText = 1		
+
+
+l TextID = 45040
+l Font = 28038
+
+
+l HelpCaption = 45038
+l HelpDesc = 45039
+
+st FileName = "MCUI_MR_5"
+
+l UWidth = 128
+l VHeight = 64
+
+l UNormal = 128
+l VNormal = 128
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l UPressed = 128
+l VPressed = 192
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l UHighlight = 128
+l VHighlight = 128
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UDisabled = 128
+l VDisabled = 192
+
+l DisabledColor = 0xff373737
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this button should be overridden by the MCUI_MR_SpecialtySkillEntryBox.fit
+[PromoteGadgetRightRadioButton] // This is the radio button for the skill entries   
+l ID = xxx
+l XLocation = 5 //The coordinates are for the first entry in the scrolling area. If there is more than one,it gets added 1 pixel below the previous box, or 47p from the original starting point
+l YLocation = 5
+l Width = 46
+l Height = 46
+b outline = FALSE
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+
+l UNormal = 205
+l VNormal = 186
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l UPressed = 205
+l VPressed = 140
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5c96c2
+
+
+
+
+l UHighlight = 205
+l VHighlight = 186
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+
+l UHighlightPressed = 205
+l VHighlightPressed = 140
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l UDisabled = 205
+l VDisabled = 48
+
+l DisabledColor = 0xff373737
+
+
+// end of pilot promotion gadget right buttons
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+// start of promotion gadget right text entry area
+
+
+
+[PromoteGadgetRightTexts]
+
+l TextEntryCount = 1
+
+
+
+
+[PromoteGadgetRightText0]  // Select one specialty skill from below....
+
+l XLocation = 385 //  Left Justify. 
+l YLocation = 183 //  Use AgencyFB14
+l color  = 0xffffffff // 
+l Font = 28039
+l TextID = 27021
+
+
+
+// end of promotion gadget right text entry area
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+//  start of promotion gadget right miscellany area
+
+
+
+l PromoteGadgetRightHeaderSkip = 5 // Add before and after skill headers
+
+l PromoteGadgetRightSkillEntrySkip = 1 // Add after each skill entry box
+
+
+[PromoteGadgetRightSkillHeaderEntry]  // Use this info for Regular Skill, Veteran Skill, Elite Skill, Ace Skill Headers in skill selection box
+
+l YLocation = 209 //  Use AgencyFB14  
+l color  = 0xffC66600 // Left Justify.
+
+
+
+[PromoteGadgetRightSkillEntryOutline] 
+l ID = xxx
+l XLocation = 53 // The coordinates are for the first entry in the scrolling area. If there is more than one,it gets added 1 pixel below the previous box, or 47p from the original starting point
+l YLocation = 0
+l Width = 301 // these numbers describe an outline rect that everything under here goes into
+l Height = 55
+l Color = 0xff005392 // this is the color the box should normally be
+b Outline = TRUE
+
+
+
+
+
+[PromoteGadgetRightSkillEntryBox] 
+l ID = xxx
+l XLocation = 4 
+l YLocation = 0
+l Width = 303 
+l Height = 55
+l Color = 0xff005392 
+b Outline = TRUE
+
+
+l HelpCaption = xxx
+l HelpDesc = xxx
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = .5
+l PressedColor1 = 0xff5C96C2
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledColor = 0xff6b6b6b
+
+
+
+
+
+
+// this should be overridden by the MCUI_MR_SpecialtySkillEntryBox.fit
+// the next things below here are pieces that go into the entry box.  They should all have the same color animation information applied to them as the outline rectangle.
+
+[SkillTypeIcon0]
+l XLocation = 60 // skill type icon goes here, coords are from upper left of entry box
+l YLocation = 12 // weapon skill
+l Width = 32
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 96
+l VNormal = 0
+l UWidth  = 32   
+l VHeight = 32
+
+// this should be overridden by the MCUI_MR_SpecialtySkillEntryBox.fit
+[SkillTypeIcon1]
+l XLocation = 60 // skill type icon goes here, coords are from upper left of entry box
+l YLocation = 12 // mech skill
+l Width = 32
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 96
+l VNormal = 32
+l UWidth  = 32   
+l VHeight = 32
+
+
+[SkillTypeIcon2]
+l XLocation = 60 // skill type icon goes here, coords are from upper left of entry box
+l YLocation = 12 // range skill
+l Width = 32
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 96
+l VNormal = 64
+l UWidth  = 32   
+l VHeight = 32
+
+
+[SkillTypeIcon3]
+l XLocation = 60 // skill type icon goes here, coords are from upper left of entry box
+l YLocation = 12 // misc skill
+l Width = 32
+l Height = 32
+
+st FileName = "MCUI_MR_9"
+
+l UNormal = 96
+l VNormal = 96
+l UWidth  = 32   
+l VHeight = 32
+
+
+[SkillDescriptionText]
+l XLocation = 100// numbers from upper left of entry box
+l YLocation = 6 // Use ArialNarrow8
+l Width = 249
+l Height = 49
+l Font = 28040
+l Alignment = 0
+
+
+
+
+
+
+
+
+
+[PromoteGadgetRightEnterAnimation]  // This animation occurs when the promotion gadget is called up
+//measure from left of piece AAA, PromoteGadgetRightStatic0
+
+l AnimationTimeStamps= 6
+f Time0 = 0.0
+l Pos0X = 451
+l Pos0Y = 0
+f Time1 = 0.5
+l Pos1X = 0
+l Pos1Y = 0
+f Time2 = 0.6
+l Pos2X = 30
+l Pos2Y = 0
+f Time3 = 0.75
+l Pos3X = 0
+l Pos3Y = 0
+f Time4 = 0.85
+l Pos4X = 15
+l Pos4Y = 0
+f Time5 = 1.1
+l Pos5X = 0
+l Pos5Y = 0
+
+
+
+[PromoteGadgetRightExitAnimation]  // This animation occurs when the "confirm" button is pressed
+//measure from left of piece AAA, PromoteGadgetRightStatic0
+
+l AnimationTimeStamps= 3
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.5
+l Pos1X = 451
+l Pos1Y = 0
+f Time2 = 0
+l Pos2X = 451
+l Pos2Y = 0
+
+
+
+
+
+
+
+
+// end of promotion gadget right misc. info area
+// end of promotion gadget right area
+
+
+
+
+
+
+
+
+F

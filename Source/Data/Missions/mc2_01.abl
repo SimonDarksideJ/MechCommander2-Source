@@ -1,0 +1,754 @@
+//*********************************************************************************
+
+module mc2_01 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+		static real				SpecialVOTimer;
+		
+		static boolean			StopPlayingVO;
+
+
+//********************** NEW **************************************
+			eternal boolean		patrol1_triggered;
+			eternal boolean		patrol2_triggered;
+			eternal boolean		patrol3_triggered;
+			static real				PatrolTimerDelay;
+			eternal boolean		patrols_Area_Trigger;
+			static integer		PatrolsAreaTrigger;
+			eternal boolean		Starslayer_Trigger;
+			static boolean		Starslayer_VO_Check;
+			static real				StarslayerVOTimerDelay;
+			static boolean		Starslayer_Vo;
+			eternal boolean		infantry1_triggered;
+			eternal boolean		HangarAttacked;
+
+			eternal boolean   Bandits_Equipped_Trigger;
+			static boolean    Bandits_Equipped_Trigger_Check;
+			static real				Bandits_EquippedVOTimerDelay;
+			static boolean		Bandits_Equipped_Vo;
+			
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+			static real				CombatMusicTimerDelay;
+			static boolean		sensorTrigger1;
+			static boolean		sensorTrigger2;
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			
+//---------------------------------------
+// TUTORIAL STUFF
+        eternal integer missionTutorialStage;
+        eternal real    startTime;
+        eternal real    currentTime;
+        eternal real[3] camStartPos;
+        eternal real[3] camWay1Pos;
+        eternal real[3] camEndPos;
+        eternal real[3] camStartRot;
+        static boolean	forceMovieTOEnd;	//Trigger used to check if Player Has Press <ESC> during movie
+        static boolean	cancelMovie;		//Trigger used to start the Cancel Movie Process
+        eternal real[3] camStartingPos;		//Array Used to Store the Camera Starting Position
+		eternal real[3] camStartingRot;		//Array Used to Store the Camera Starting Rotation
+		static boolean		play2ndMovie;	//Trigger used to Decide if we played the 2nd movie already
+		eternal real	play2ndMovieTimer;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+		SpecialVOTimer = -1;
+
+//*************************NEW**********************************
+		patrol1_triggered = FALSE; //GT, used to get patrol to patrol
+		patrol2_triggered = FALSE; //GT, used to get patrol to patrol
+		patrol3_triggered = FALSE; //GT, used to get patrol to patrol
+
+		infantry1_triggered = FALSE;
+		HangarAttacked =  FALSE;
+
+		patrols_Area_Trigger = FALSE; //LT, used to get patrollers to patrol
+		Starslayer_Trigger = FALSE;
+		Starslayer_VO_Check = FALSE;
+		Starslayer_Vo = FALSE;
+
+		Bandits_Equipped_Trigger = FALSE;
+		Bandits_Equipped_Trigger_Check = FALSE;
+		Bandits_Equipped_Vo = FALSE;
+		play2ndMovie = False;
+		
+		StopPlayingVO = False; 
+	
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 sensorTrigger1 = FALSE;
+	 sensorTrigger2 = FALSE;
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+
+//---------------------------------------
+// TUTORIAL STUFF
+        missionTutorialStage = 0;
+        startTime = 0.0;
+        currentTime = 0.0;
+        cancelMovie = False;
+
+
+//***************NEW CAMERA WORK***********************
+
+
+//        camStartPos[0] = 4376.333;
+//        camStartPos[1] = 2154.667;
+//        camStartPos[2] = 257.647;
+
+        camStartPos[0] = 3648.000;
+        camStartPos[1] = 448.000;
+        camStartPos[2] = 257.647;
+
+        camWay1Pos[0] = 2538.667;
+        camWay1Pos[1] = -1728.000;
+        camWay1Pos[2] = 256.000;
+
+        camEndPos[0] = 2453.333;
+        camEndPos[1] = -1984.000;
+        camEndPos[2] = 451.150;
+
+//        camEndPos[0] = 2325.333;
+//        camEndPos[1] = -2752.000;
+//        camEndPos[2] = 451.150;
+
+        camStartRot[0] = 0.0;	 //Angle
+        camStartRot[1] = 0.0;	 //Rotation
+        camStartRot[2] = 0.0;	 //Height
+
+       	getCameraPosition(camStartingPos); //Read Starting Pos
+		getCameraRotation(camStartingRot); //Read Starting ROt
+		camStartingRot[2] = 1200;		//For SomeReason I need to do this
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+// ***********************Mission 01 Stuff*****************************************
+
+
+
+
+
+			//*******************************************************
+			//Trigger for Patrollers to Start when player hits Area Trigger
+			if (checkObjectiveStatus(0) == 1) AND (NOT patrols_Area_Trigger) then
+				patrols_Area_Trigger = True;
+				patrol1_triggered = True;
+				patrol2_triggered = True;
+				patrol3_triggered = True;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for to Powerup and attack player
+			if (checkObjectiveStatus(7) == 1) AND (NOT Starslayer_Trigger) then
+				Starslayer_Trigger = True;
+				StarslayerVOTimerDelay = getTime + 30; //Wait 15 secs before playing VO
+			else
+				if ((getTime > StarslayerVOTimerDelay) AND (Not Starslayer_Vo)) then
+					Starslayer_Vo = True;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for to Powerup and attack player
+			if (Bandits_Equipped_Trigger) then
+			  if (NOT Bandits_Equipped_Trigger_Check) then
+					Bandits_Equipped_Trigger_Check = True;
+					Bandits_EquippedVOTimerDelay = getTime + 4; //Wait 15 secs before playing VO
+				else
+					if ((getTime > Bandits_EquippedVOTimerDelay) AND (Not Bandits_Equipped_Vo)) then
+						Bandits_Equipped_Vo = True;
+  				playWave("data\sound\mc2_01.WAV", -1); //Tac Officer VO plays
+					endif;
+				endif;
+			endif;
+
+
+
+					
+
+//---------------------------------------------------- Mission 01 Stuff End
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (not playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+			if (random(100) < 100) then
+				mcprint ("Playing Sensor Tune");
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			 else
+				playDigitalMusic(AmbientTune1);
+				mcprint ("Playing Ambient Tune Sensory style");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = false;
+			endif;
+		endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune1);
+			mcprint ("Playing Ambient Tune normal style");
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(2) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune4");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(4) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				if (random(100) < 70) then
+				  mcprint ("Playing Combat Tune4");
+					playDigitalMusic(CombatTune4);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(8) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger3) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune5");
+					playDigitalMusic(CombatTune5);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		playDigitalMusic(MissionStartTune1);
+		playMissionStartTune = false;
+	endif;
+
+        //-------------------------------------------------------------------------------
+        //Mission 1 Tutorial
+        //-------------------
+        setInvulnerable(false);
+
+		mcprint (missionTutorialStage);
+		
+		
+		if ((SpecialVOTimer == -1) and (checkObjectiveStatus(1) == 1)) then
+			SpecialVOTimer = getLogisticsTime - startTime;
+		endif;
+		
+		if (ForceMovieToEnd) and (Not cancelMovie) then
+			cancelMovie = True;
+			missionTutorialStage = -10;
+		endif;
+		
+		if (missionTutorialStage == -10) then		
+            //fadeToColor(4278190080,1.0);	//Fade to Black
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+		endif;
+		
+		if (missionTutorialStage == -9) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 700) then        //Wait 1 sec for Fade to Black
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+		
+		if (missionTutorialStage == -8) then	
+			setCameraGoalPosition(camEndPos,0.5);	//Jump Camera to End Position if It was moving
+			setCameraGoalRotation(camStartingRot, 0.5);	//Jump to Proper Camera Rotation if the Cam was rotating
+            setCameraPosition(camEndPos);			//Jump Camera to End Position
+            setCameraRotation(camStartingRot);			//Jump to proper Camera Rotation
+            missionTutorialStage = missionTutorialStage + 1;
+		endif;
+		
+		if (missionTutorialStage == -7) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 100) then        //Wait .1 sec for everything to settle
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+		
+		if (missionTutorialStage == -6) then	//Shows over Let start the ball rolling
+			fadeToColor(0,0.1);					//Blink In
+			endMovieMode;
+            missionTutorialStage = 9;			//Set Tut Stage to Proper Stage
+		endif;
+		
+		
+//------------^^^^^^^^^^^^^cancel Movie^^^^^^^^^^^^^^^^
+
+		if (missionTutorialStage == 0) then
+				//playWave("tut_1a",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 1) then
+            setCameraPosition(camStartPos);
+			SetMovieMode;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+			//Playing the 1st Movie
+        if (missionTutorialStage == 2) then
+            setCameraGoalPosition(camWay1Pos,6.0);
+            getCameraRotation(camStartRot);
+            camStartRot[1] = camStartRot[1] + 180.0;
+            camStartRot[0] = 18.0;
+            setCameraGoalRotation(camStartRot,0.1);
+			//freezeGui(True);
+			missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 3) then
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 4) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 6000) then        //15 Seconds - Let camera get where its going
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 5) then
+            setCameraGoalPosition(camEndPos,3.0);
+            getCameraRotation(camStartRot);
+            camStartRot[1] = camStartRot[1] - 180.0;
+            camStartRot[0] = 35.0;
+            setCameraGoalRotation(camStartRot,8.0);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 6) then
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 7) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //5 Seconds - Let camera get where its going
+				missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 8) then
+			cancelMovie = True;			//You've waited too long.. NO more cancel 4 u.
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 9)) then
+			EndMovieMode; //This turns off the Movie
+			//freezeGui(false);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 10) then
+			startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 11) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //26 Seconds
+				playVideo("V1A.bik");
+				startTime = GetLogisticsTime;
+				missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 12) then
+            currentTime = GetLogisticsTime - startTime;
+            if (NOT isPlayingVoiceOver AND (currentTime > 2000)) then        //10 Seconds
+			     playVideo("V1C.bik");
+				 missionTutorialStage = missionTutorialStage + 1;
+            endif;
+		endif;
+
+        if ((missionTutorialStage == 13)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 14)) then
+				startTime = GetLogisticsTime;
+				missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if ((missionTutorialStage == 15)) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 1500) then        //10 Seconds
+				if (Not (checkObjectiveStatus(0) == 1)) then
+					playWave("tut_1cii",-1);  //Go to airfield
+				endif;
+				missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if ((missionTutorialStage == 16)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (((checkObjectiveStatus(0) == 1) AND (missionTutorialStage == 17)) and (NOT isPlayingVoiceOver)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+			//Give the Betty time to clear out!!
+        if (missionTutorialStage == 18) then
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 19) then
+            currentTime = GetLogisticsTime - startTime;
+				if  (currentTime > 1500) then
+					if (NOt checkObjectiveStatus(1) == 1) then        //Ensures that the the VO is playing at the Proper time
+            				playWave("tut_1e",-1);		//destroy Hanger
+            		endif;
+					missionTutorialStage = missionTutorialStage + 1;
+				endif;
+        endif;
+
+        if (missionTutorialStage == 20) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 21)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if ((checkObjectiveStatus(1) == 1) AND (missionTutorialStage == 22)) then
+			missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+			//Give the Betty time to clear out!!
+        if (missionTutorialStage == 23) then
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 24) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //3 Seconds
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 25) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 26)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if ((checkObjectiveStatus(2) == 1) AND (missionTutorialStage == 27)) then
+            startTime = GetLogisticsTime;
+			missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (missionTutorialStage == 28) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //3 Seconds
+                missionTutorialStage = missionTutorialStage + 1;
+            endif;
+        endif;
+
+        if (missionTutorialStage == 29) then
+            playWave("tut_1gi",-1);
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (checkObjectiveStatus(3) == 1) AND (missionTutorialStage == 30)) then
+            startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT inCallout AND (missionTutorialStage == 31)) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //3 Seconds
+							playWave("tut_1h",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+		endif;
+
+        if (NOT isPlayingVoiceOver AND (missionTutorialStage == 32)) then
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT isPlayingVoiceOver AND (checkObjectiveStatus(4) == 1) AND (missionTutorialStage == 33)) then
+            startTime = GetLogisticsTime;
+						missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+				if (NOT isPlayingVoiceOver AND (missionTutorialStage == 34)) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //3 Seconds
+							playWave("tut_1hi",-1);
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+
+        if (NOT isPlayingVoiceOver AND (checkObjectiveStatus(8) == 1) AND (missionTutorialStage == 35)) then
+            startTime = GetLogisticsTime;
+            missionTutorialStage = missionTutorialStage + 1;
+        endif;
+
+        if (NOT inCallout AND (missionTutorialStage == 36)) then
+            currentTime = GetLogisticsTime - startTime;
+            if (currentTime > 3000) then        //3 Seconds
+							playVideo("V1D.bik");
+							missionTutorialStage = missionTutorialStage + 1;
+            endif;
+				endif;
+				
+				
+		//***************************************************
+		// Used to check if VO is playing.. Stop it if it is.
+		if (getMissionStatus <> 0) and (Not StopPlayingVO) then
+			stopVoiceOver;
+			missionTutorialStage = 10000;
+			StopPlayingVO = True;
+		endif;
+
+				// FIRST, Check if player pressed Esc through this movie
+				forceMovieToEnd = (forceMovieEnd == 1);
+
+        //DONE
+        //-------------------------------------------------------------------------------
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+
+             return (ScenarioResult);
+
+endmodule.
+//******************************************************************

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F532AA3BFC95AF3DBC5AF59145E2E358" />
+  <Asset Name="..\sandbagwallX.ase" Type="Physical" Author="ngauvin" FileSize="8334" ModificationTime="2006-02-01T10:55:26.9515807-08:00" CRC="44B89795F26830F81631723FEB6DD1A8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

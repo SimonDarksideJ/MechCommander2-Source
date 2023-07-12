@@ -1,0 +1,42 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=1
+
+[ObjectType]
+st Name="Rock2.fit"
+st AppearanceName="Rock2"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[BuildingData]
+ul DmgLevel=6
+f ExtentRadius=0.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30289
+l SetImpassable=1
+l XImpasse=0
+l YImpasse=0
+ul NormalEffectId=0
+ul BlownEffectId=0
+ul DamageEffectId=0
+b CanRefit=FALSE
+b MechBay=FALSE
+f TimeToBurnDamage=5.000000
+f BurnDamagePerTime=1.000000
+f DamageLvlForBurn=6.000000
+f SensorRange=-1.000000
+l TeamID=-1
+l Tonnage=20
+l BattleRating=20
+l NumMarines=0
+b blockLineOfFire=FALSE
+l LowTemplate=806354944
+l HighTemplate=4112
+l PotentialContact=0
+l BasePixelOffsetX=3
+l BasePixelOffsetY=58
+
+FITend 

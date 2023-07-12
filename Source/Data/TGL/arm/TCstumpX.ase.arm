@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="16A055CEEB6C595FA9832B8254B4BB86" />
+  <Asset Name="..\TCstumpX.ase" Type="Physical" Author="ngauvin" FileSize="7475" ModificationTime="2006-02-01T10:55:33.5141227-08:00" CRC="DA09586F5DD091C8E286A03938E88354" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_StumpX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

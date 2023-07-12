@@ -1,0 +1,1270 @@
+FITini 
+// Encyclopedia
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Buttons]
+l Buttoncount = 7
+
+
+
+
+
+
+
+
+
+[Button0] // mech category button
+
+l ID = 130
+
+l XLocation = 25
+l YLocation = 68
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27702
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_3.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 81
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UHighlightPressed = 0
+l VHighlightPressed = 81
+
+l UDisabled = 0
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+[Button1] // buildings category button
+
+l ID = 131
+
+l XLocation = 107
+l YLocation = 68
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27703
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_3.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 76
+l VNormal = 0
+
+l UPressed = 76
+l VPressed = 81
+
+l UHighlight = 76
+l VHighlight = 0
+
+l UHighlightPressed = 76
+l VHighlightPressed = 81
+
+l UDisabled = 76
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+
+
+[Button2] // vehicles
+
+l ID = 132
+
+l XLocation = 189
+l YLocation = 68
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27704
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_3.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 152
+l VNormal = 0
+
+l UPressed = 152
+l VPressed = 81
+
+l UHighlight = 152
+l VHighlight = 0
+
+l UHighlightPressed = 152
+l VHighlightPressed = 81
+
+l UDisabled = 152
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+
+
+
+
+[Button3] // weapons
+
+l ID = 133
+
+l XLocation = 25
+l YLocation = 156
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27705
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_4.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 81
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UHighlightPressed = 0
+l VHighlightPressed = 81
+
+l UDisabled = 0
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+
+
+
+
+
+
+
+
+[Button4] // personalities
+
+l ID = 134
+
+l XLocation = 107
+l YLocation = 156
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27706
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_4.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 76
+l VNormal = 0
+
+l UPressed = 76
+l VPressed = 81
+
+l UHighlight = 76
+l VHighlight = 0
+
+l UHighlightPressed = 76
+l VHighlightPressed = 81
+
+l UDisabled = 76
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+
+
+
+[Button5] // history 
+
+l ID = 135
+
+l XLocation = 189
+l YLocation = 156
+l Width = 76
+l Height = 81
+
+l HelpCaption = 0
+l HelpDesc = 27707
+
+b AnimateBmp = 1  
+
+st FileName = "mcl_en_4.tga"
+
+l UWidth = 76
+l VHeight = 81
+
+l UNormal = 152
+l VNormal = 0
+
+l UPressed = 152
+l VPressed = 81
+
+l UHighlight = 152
+l VHighlight = 0
+
+l UHighlightPressed = 152
+l VHighlightPressed = 81
+
+l UDisabled = 152
+l VDisabled = 0
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xFFFF8A00
+f NormalTime1 = 15
+l NormalColor1 = 0xFFFF8A00
+f NormalTime2 = 15.5
+l NormalColor2 = 0xFFFF8A00
+f NormalTime3 = 16.0
+l NormalColor3 = 0xFFFF8A00
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffFFAE4D
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xFFFF8A00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xFFFF8A00
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0x8A373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0x8A373737
+
+
+
+
+
+
+[Button6] // close button
+
+l ID = 136
+
+l XLocation = 666
+l YLocation = 536
+l Width = 128
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 100
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27708
+l Font = 27709 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27710
+
+st FileName = "mcl_en_2.tga"
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 74
+l VNormal = 80
+
+l UPressed = 74
+l VPressed = 139
+
+l UHighlight = 74
+l VHighlight = 80
+
+l UDisabled = 74
+l VDisabled = 139		
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Rects]
+l Rectcount = 8
+
+
+[Rect0] // subheading list box - use mcl_en_sub.fit for entry
+l XLocation = 25
+l YLocation = 268
+l Width = 240
+l Height = 243
+l Color = -12373732
+b outline = TRUE
+
+
+
+
+
+[Rect1] // black back 2
+l XLocation = 15
+l YLocation = 258
+l Width = 10
+l Height = 262
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect2] // black back 2
+l XLocation = 265
+l YLocation = 258
+l Width = 10
+l Height = 262
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect3] // black back 2
+l XLocation = 25
+l YLocation = 258
+l Width = 240
+l Height = 10
+l Color = 0xff000000
+b outline = FALSE
+
+
+
+[Rect4] // black back 2
+l XLocation = 25
+l YLocation = 511
+l Width = 240
+l Height = 10
+l Color = 0xff000000
+b outline = FALSE
+
+
+[Rect5] // header back
+l XLocation = 10
+l YLocation = 8
+l Width = 415
+l Height = 31
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect6] // help text area black 
+l XLocation = 143
+l YLocation = 546
+l Width = 512
+l Height = 51
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect7] // black back 1
+l XLocation = 15
+l YLocation = 58
+l Width = 259
+l Height = 190
+l Color = 0xff000000
+b outline = FALSE
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 34
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_en_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_en_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_en_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 143
+l VNormal = 203
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_en_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 68
+l VNormal = 198
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_en_2.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 188
+l Height = 32
+l UNormal = 0
+l VNormal = 163
+l UWidth = 188
+l VHeight = 32
+st FileName = "mcl_en_1.tga"
+
+[Static6]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 37
+l VNormal = 212
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_en_2.tga"
+
+[Static7]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_en_1.tga"
+
+[Static8]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 42
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_en_1.tga"
+
+[Static9]
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 8
+l UNormal = 143
+l VNormal = 195
+l UWidth = 102
+l VHeight = 8
+st FileName = "mcl_en_1.tga"
+
+
+[Static10]
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 60
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_en_1.tga"
+
+[Static11]
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+l UNormal = 188
+l VNormal = 163
+l UWidth = 32
+l VHeight = 10
+st FileName = "mcl_en_1.tga"
+
+[Static12]
+l XLocation = 0
+l YLocation = 58
+l Width = 15
+l Height = 190
+l UNormal = 59
+l VNormal = 0
+l UWidth = 15
+l VHeight = 190
+st FileName = "mcl_en_2.tga"
+
+[Static13]
+l XLocation = 275
+l YLocation = 58
+l Width = 10
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 10
+l VHeight = 256
+st FileName = "mcl_en_2.tga"
+
+[Static14]
+l XLocation = 788
+l YLocation = 58
+l Width = 12
+l Height = 256
+l UNormal = 10
+l VNormal = 0
+l UWidth = 12
+l VHeight = 256
+st FileName = "mcl_en_2.tga"
+
+[Static15]
+l XLocation = 0
+l YLocation = 248
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 70
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_en_1.tga"
+
+[Static16]
+l XLocation = 256
+l YLocation = 248
+l Width = 19
+l Height = 10
+l UNormal = 143
+l VNormal = 216
+l UWidth = 19
+l VHeight = 10
+st FileName = "mcl_en_1.tga"
+
+[Static17]
+l XLocation = 0
+l YLocation = 258
+l Width = 15
+l Height = 256
+l UNormal = 22
+l VNormal = 0
+l UWidth = 15
+l VHeight = 256
+st FileName = "mcl_en_2.tga"
+
+[Static18]
+l XLocation = 275
+l YLocation = 314
+l Width = 10
+l Height = 206
+l UNormal = 37
+l VNormal = 0
+l UWidth = 10
+l VHeight = 206
+st FileName = "mcl_en_2.tga"
+
+[Static19]
+l XLocation = 788
+l YLocation = 314
+l Width = 12
+l Height = 206
+l UNormal = 47
+l VNormal = 0
+l UWidth = 12
+l VHeight = 206
+st FileName = "mcl_en_2.tga"
+
+[Static20]
+l XLocation = 0
+l YLocation = 514
+l Width = 15
+l Height = 6
+l UNormal = 37
+l VNormal = 206
+l UWidth = 15
+l VHeight = 6
+st FileName = "mcl_en_2.tga"
+
+[Static21]
+l XLocation = 0
+l YLocation = 520
+l Width = 256
+l Height = 26
+l UNormal = 0
+l VNormal = 80
+l UWidth = 256
+l VHeight = 26
+st FileName = "mcl_en_1.tga"
+
+[Static22]
+l XLocation = 256
+l YLocation = 520
+l Width = 256
+l Height = 26
+l UNormal = 0
+l VNormal = 106
+l UWidth = 256
+l VHeight = 26
+st FileName = "mcl_en_1.tga"
+
+[Static23]
+l XLocation = 512
+l YLocation = 520
+l Width = 256
+l Height = 16
+l UNormal = 0
+l VNormal = 132
+l UWidth = 256
+l VHeight = 16
+st FileName = "mcl_en_1.tga"
+
+[Static24]
+l XLocation = 768
+l YLocation = 520
+l Width = 32
+l Height = 16
+l UNormal = 188
+l VNormal = 173
+l UWidth = 32
+l VHeight = 16
+st FileName = "mcl_en_1.tga"
+
+[Static25]
+l XLocation = 512
+l YLocation = 536
+l Width = 154
+l Height = 10
+l UNormal = 0
+l VNormal = 244
+l UWidth = 154
+l VHeight = 10
+st FileName = "mcl_en_1.tga"
+
+[Static26]
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 59
+l UNormal = 62
+l VNormal = 190
+l UWidth = 6
+l VHeight = 59
+st FileName = "mcl_en_2.tga"
+
+[Static27]
+l XLocation = 0
+l YLocation = 546
+l Width = 143
+l Height = 49
+l UNormal = 0
+l VNormal = 195
+l UWidth = 143
+l VHeight = 49
+st FileName = "mcl_en_1.tga"
+
+[Static28]
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 52
+l VNormal = 206
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_en_2.tga"
+
+[Static29]
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 148
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_en_1.tga"
+
+[Static30]
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 153
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_en_1.tga"
+
+[Static31]
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 158
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_en_1.tga"
+
+[Static32]
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+l UNormal = 143
+l VNormal = 211
+l UWidth = 32
+l VHeight = 5
+st FileName = "mcl_en_1.tga"
+
+[Static33]
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+l UNormal = 0
+l VNormal = 190
+l UWidth = 76
+l VHeight = 40
+st FileName = "mcl_en_3.tga"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // encyclopedia
+l XLocation = 18
+l YLocation = 12
+l Width = 405
+l Height = 26
+l Color = -30195
+b outline = FALSE
+l Font = 27701 // use agency fb 17
+l TextID = 27700
+l Alignment = 0
+
+l HelpDesc = 27737
+
+[Text1] // help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 27322 // arialnarrow8
+l TextID = 0
+l Alignment = 0
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[StartAnim]  // for use when encyclopedia moves in >>>>>
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = -600
+l Pos1Y = 0
+f Time2 = 0.3
+l Pos2X = -700
+l Pos2Y = 0
+f Time3 = 0.4
+l Pos3X = -750
+l Pos3Y = 0
+f Time4 = 0.5
+l Pos4X = -775
+l Pos4Y = 0
+f Time5 = 0.6
+l Pos5X = -800
+l Pos5Y = 0
+
+
+[CloseAnim]  // for use when Close button is pressed <<<<<<
+
+l AnimationTimeStamps = 6
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = 600
+l Pos1Y = 0
+f Time2 = 0.3
+l Pos2X = 700
+l Pos2Y = 0
+f Time3 = 0.4
+l Pos3X = 750
+l Pos3Y = 0
+f Time4 = 0.5
+l Pos4X = 775
+l Pos4Y = 0
+f Time5 = 0.6
+l Pos5X = 800
+l Pos5Y = 0
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 4
+
+
+
+[ComboBox0] // mech and vehicle info
+
+l XLocation = 285
+l YLocation = 58
+
+st FileName = "mcl_en_mechs.fit"
+
+
+
+[ComboBox1] // weapon info
+
+l XLocation = 285
+l YLocation = 58
+
+st FileName = "mcl_en_wep.fit"
+
+
+
+[ComboBox2] // personality and history info
+
+l XLocation = 285
+l YLocation = 58
+
+st FileName = "mcl_en_person.fit"
+
+
+
+[ComboBox3] // building info
+
+l XLocation = 285
+l YLocation = 58
+
+st FileName = "mcl_en_bldg.fit"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+FITend 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="80BDCB42C7DB9B7E20FD0CED8438BFC8" />
+  <Asset Name="..\mcl_mc_ClanGaussRifle.ase" Type="Physical" Author="ngauvin" FileSize="208924" ModificationTime="2006-02-01T10:55:10.592101-08:00" CRC="EC68C1D3EADC7678A6DF70A1D5D16A06" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\clanGauss.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

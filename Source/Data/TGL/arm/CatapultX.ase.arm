@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C640D5C6F0A190E3CF46793A0AF32989" />
+  <Asset Name="..\CatapultX.ase" Type="Physical" Author="ngauvin" FileSize="114241" ModificationTime="2006-02-01T10:54:40.3419074-08:00" CRC="C878C3B9A9080D85228E0D6AFD85889F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

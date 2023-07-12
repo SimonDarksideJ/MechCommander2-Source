@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="06EE7BE583C63434EFEBF3895F443C65" />
+  <Asset Name="..\SawhorseBarricade.ase" Type="Physical" Author="ngauvin" FileSize="7074" ModificationTime="2006-02-01T10:55:26.9828309-08:00" CRC="31B9B59606137C15409471881F4956D2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_cammo.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

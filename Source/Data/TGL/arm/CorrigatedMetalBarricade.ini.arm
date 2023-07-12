@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BFE6E0C16890C722258D54EC9B124A97" />
+  <Asset Name="..\CorrigatedMetalBarricade.ini" Type="Physical" Author="franksav" FileSize="405" ModificationTime="2006-03-03T01:28:17.9924553-08:00" CRC="4C8EE362FB9DE7C1CF749BDE9EEAB281" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="CorrigatedMetalBarricade.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="CorrigatedMetalBarricadeL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="CorrigatedMetalBarricadeL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="CorrigatedMetalBarricadeX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="CorrigatedMetalBarricadedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="CorrigatedMetalBarricadeDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Metal Barricade" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

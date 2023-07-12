@@ -1,0 +1,24 @@
+FITini
+
+// This is a sample Building Data File
+
+[ObjectClass]
+l ObjectTypeNum = 0
+
+[ObjectType]
+st Name 				= "tree"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type					= 0x14
+l Appearance			= 0x02000013
+l Duration				= -1				// Lasts forever = -1
+l MaxDamage			= 0					// Number of damage points before BOOM!
+l ExplosionObject		= 5					// Object Class Number of explosion for Mech
+l DestroyedObject		= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 30					// Extent Radius in Meters
+
+[BuildingData]
+ul DmgLevel			= 20
+ul BlownEffectId		= -1					//Sound Effect played when building dies.
+ul NormalEffectId		= -1				//Sound Effect played when building is normal.
+ul DamageEffectId		= -1				//Sound Effect Played when building is dmg/destroyed.
+			
+FITend

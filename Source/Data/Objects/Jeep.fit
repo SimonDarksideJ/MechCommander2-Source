@@ -1,0 +1,93 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name					="jeep"
+st AppearanceName				="jeep"
+l ExplosionObject				=700
+l DestroyedObject				=0
+f ExtentRadius				=10.000000
+
+[General]
+//Read by Type
+uc Chassis					=0
+b MineLayer					=FALSE
+b MineSweeper				=FALSE
+l RefitPoints				=0
+f ExplosionRadius				=0.0
+f ExplosionDamage				=0.0
+b PathLocks					=FALSE
+
+//Read by instance
+l DescIndex					=30336
+f CurTonnage				=5
+c Status					=0 
+l BattleRating				=25 
+l IconIndex					=5
+l EncyclopediaID 				=45229
+
+[InternalStructure]
+uc Front					=1
+uc Rear					=1
+uc Left					=1
+uc Right					=1
+uc Turret					=1
+
+[VehicleDynamics]
+f MaxAccel						=8.000000
+f MaxVelocity					=19.000000
+l MaxTurretYawRate				=150
+l MaxTurretYaw					=360
+l MaxVehicleYawRate				=720
+
+[Front]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=1 
+uc CurArmorPoints 				=1 
+
+[Left]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=1 
+uc CurArmorPoints 				=1 
+
+[Right]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=1 
+uc CurArmorPoints 				=1
+
+[Rear]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=1 
+uc CurArmorPoints 				=1 
+
+[Turret]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=1
+uc CurArmorPoints 				=1 
+
+[InventoryInfo]
+uc NumOther 					=4 
+uc NumWeapons 					=0
+uc NumAmmo 						=0 
+
+// Inventory Items -- Other
+
+[Item:0]
+uc MasterID 					=1 		//Engine
+		    
+[Item:1]    					
+uc MasterID 					=6 		//Cockpit
+		    
+[Item:2]    					
+uc MasterID 					=35 		//LifeSupport
+
+[Item:3]
+uc MasterID						=36		//Vehicle Sensor
+
+// Inventory Items -- Weapons
+
+// Inventory Items -- Ammo
+
+FITend 

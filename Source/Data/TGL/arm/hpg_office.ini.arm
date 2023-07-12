@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="935EC6B1BC16C4C68F0BF2A1B93A5552" />
+  <Asset Name="..\hpg_office.ini" Type="Physical" Author="franksav" FileSize="568" ModificationTime="2006-03-03T01:28:27.3517704-08:00" CRC="55EE4955013312F090C738903F3E7C54" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_Office.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_OfficeL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HPG_OfficeL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HPG_OfficeX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="HPG_Officedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="HPG_OfficeDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Comstar Office" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

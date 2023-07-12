@@ -1,0 +1,46 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//     	Marine Profile:  100   'Hicks'  Type:  3 
+//
+//      Creation Date: 12/17/97      Creator: Frank Savage
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "ElementalProfile"
+
+[General]
+ul ID =                                                     100 
+st Name =                                                  "Hicks"
+ul ElementalTypeID =                                        1
+uc Variation =                                              0 
+f CurTonnage =                                              25 
+l CurHealth =												1
+st icon =                                                  "na.gif"
+
+[Engine]
+uc MaxMoveSpeed =                                           3
+f JumpRange =                                             	0.0
+
+[InventoryInfo]
+uc NumOther =                                               0
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+// Weapons
+
+[Item:0]
+uc MasterID =                                               156		// ESLAS Laser
+uc FacesForward =                                           1 
+
+// Ammo
+
+FITEnd
+

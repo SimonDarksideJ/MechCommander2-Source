@@ -1,0 +1,616 @@
+FITini 
+
+// host game dialog
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons] 
+l Buttoncount = 2
+
+
+
+
+[Button0] // cancel button
+
+l ID = 8
+l XLocation = 181
+l YLocation = 407
+l Width = 128
+l Height = 59
+
+l XTextLocation = 195
+l YTextLocation = 421
+l TextWidth = 100
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27651
+l Font = 27655 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27208
+
+st FileName = "mcl_sm_4.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 118
+
+l UPressed = 128
+l VPressed = 118
+
+l UHighlight = 0
+l VHighlight = 118
+
+l UDisabled = 128
+l VDisabled = 118
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+
+
+[Button1] // save button. 
+l XLocation = 491
+l YLocation = 407
+l Width = 128
+l Height = 59
+l ID = 7
+
+
+l XTextLocation = 505
+l YTextLocation = 421
+l TextWidth = 100
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27209
+l Font = 27655 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 27208
+
+st FileName = "mcl_sm_4.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 118
+
+l UPressed = 128
+l VPressed = 118
+
+l UHighlight = 0
+l VHighlight = 118
+
+l UDisabled = 128
+l VDisabled = 118
+
+b AnimateBmp = 0 
+b AnimateText = 1
+
+l NormalAnimationTimeStamps = 4
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+f NormalTime2 = 7.5
+l NormalColor2 = 0xff005392
+f NormalTime3 = 8.0
+l NormalColor3 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.5
+l DisabledColor1 = 0xff373737
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+[Rects]
+l rectCount = 6
+
+[Rect0] // header background
+l XLocation = 181
+l YLocation = 131
+l Width = 438
+l Height = 32
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect1] // main area background 1
+l XLocation = 181
+l YLocation = 173
+l Width = 438
+l Height = 35
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect2] // main area background 2
+l XLocation = 181
+l YLocation = 208
+l Width = 15
+l Height = 24
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect3] // main area background 3
+l XLocation = 401
+l YLocation = 208
+l Width = 218
+l Height = 24
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect4] // main area background 4
+l XLocation = 181
+l YLocation = 232
+l Width = 438
+l Height = 155
+l Color = 0xff000000
+b outline = FALSE
+
+[Rect5] // rect around edit box
+l XLocation = 196
+l YLocation = 208
+l Width = 204
+l Height = 23
+l Color = 0xff43311c
+b outline = TRUE
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 20
+
+[Static0]
+l XLocation = 124
+l YLocation = 71
+l Width = 256
+l Height = 60
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static1]
+l XLocation = 380
+l YLocation = 71
+l Width = 256
+l Height = 60
+l UNormal = 0
+l VNormal = 60
+l UWidth = 256
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static2]
+l XLocation = 636
+l YLocation = 71
+l Width = 164
+l Height = 60
+l UNormal = 0
+l VNormal = 120
+l UWidth = 164
+l VHeight = 60
+st FileName = "mcl_sm_1.tga"
+
+[Static3]
+l XLocation = 124
+l YLocation = 131
+l Width = 57
+l Height = 32
+l UNormal = 181
+l VNormal = 185
+l UWidth = 57
+l VHeight = 32
+st FileName = "mcl_sm_2.tga"
+
+[Static4]
+l XLocation = 619
+l YLocation = 131
+l Width = 181
+l Height = 32
+l UNormal = 0
+l VNormal = 209
+l UWidth = 181
+l VHeight = 32
+st FileName = "mcl_sm_2.tga"
+
+[Static5]
+l XLocation = 124
+l YLocation = 163
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 180
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static6]
+l XLocation = 380
+l YLocation = 163
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 190
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static7]
+l XLocation = 636
+l YLocation = 163
+l Width = 164
+l Height = 10
+l UNormal = 0
+l VNormal = 200
+l UWidth = 164
+l VHeight = 10
+st FileName = "mcl_sm_1.tga"
+
+[Static8]
+l XLocation = 124
+l YLocation = 173
+l Width = 57
+l Height = 214
+l UNormal = 181
+l VNormal = 0
+l UWidth = 57
+l VHeight = 214
+st FileName = "mcl_sm_3.tga"
+
+[Static9]
+l XLocation = 619
+l YLocation = 173
+l Width = 181
+l Height = 214
+l UNormal = 0
+l VNormal = 0
+l UWidth = 181
+l VHeight = 214
+st FileName = "mcl_sm_3.tga"
+
+[Static10]
+l XLocation = 636
+l YLocation = 466
+l Width = 164
+l Height = 63
+l UNormal = 0
+l VNormal = 126
+l UWidth = 164
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+
+
+[Static11]
+l XLocation = 124
+l YLocation = 387
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 210
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_sm_1.tga"
+
+[Static12]
+l XLocation = 380
+l YLocation = 387
+l Width = 256
+l Height = 20
+l UNormal = 0
+l VNormal = 230
+l UWidth = 256
+l VHeight = 20
+st FileName = "mcl_sm_1.tga"
+
+[Static13]
+l XLocation = 636
+l YLocation = 387
+l Width = 164
+l Height = 20
+l UNormal = 0
+l VNormal = 189
+l UWidth = 164
+l VHeight = 20
+st FileName = "mcl_sm_2.tga"
+
+[Static14]
+l XLocation = 124
+l YLocation = 407
+l Width = 57
+l Height = 59
+l UNormal = 164
+l VNormal = 126
+l UWidth = 57
+l VHeight = 59
+st FileName = "mcl_sm_2.tga"
+
+[Static15]
+l XLocation = 309
+l YLocation = 407
+l Width = 182
+l Height = 59
+l UNormal = 0
+l VNormal = 59
+l UWidth = 182
+l VHeight = 59
+st FileName = "mcl_sm_4.tga"
+
+[Static16]
+l XLocation = 619
+l YLocation = 407
+l Width = 181
+l Height = 59
+l UNormal = 0
+l VNormal = 0
+l UWidth = 181
+l VHeight = 59
+st FileName = "mcl_sm_4.tga"
+
+[Static17]
+l XLocation = 124
+l YLocation = 466
+l Width = 256
+l Height = 63
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+[Static18]
+l XLocation = 380
+l YLocation = 466
+l Width = 256
+l Height = 63
+l UNormal = 0
+l VNormal = 63
+l UWidth = 256
+l VHeight = 63
+st FileName = "mcl_sm_2.tga"
+
+
+
+[Static19]
+l XLocation = 406
+l YLocation = 202
+l Width = 100
+l Height = 31
+l UNormal = 0
+l VNormal = 214
+l UWidth = 100
+l VHeight = 31
+st FileName = "mcl_sm_3.tga"
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 2
+
+[Text0] // main header text- SAVE VARIANT
+l XLocation = 188
+l YLocation = 135
+l Width = 425
+l Height = 26
+l Color = 0xffff8a00
+b outline = FALSE
+l Font = 26106 // agency fb 17
+l TextID = 26100
+l Alignment = 0
+
+[Text1] // "Enter a name for your new game:"
+l XLocation = 196
+l YLocation = 183
+l Width = 413
+l Height = 21
+l Color = 0xffff8a00
+b outline = FALSE
+l Font = 26110 // Agency Fb 11
+l TextID = 26101
+l Alignment = 0
+
+
+[Edits]
+l EditCount = 1
+
+[Edit0] // editable text for new game name goes here
+l XLocation = 197
+l YLocation = 209
+l Width = 203
+l Height = 22
+l Color = 0xffc66600
+l CursorColor = 0xffC66600
+l HighlightColor = 0xffC66600
+l SelectedColor = 0xff000000
+l OutlineColor = 0xffffffff	
+l Font = 27656 
+l TextID = 27000
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[InAnim]  
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 800
+l Pos0Y = 0
+f Time1 = 0.2
+l Pos1X = 0
+l Pos1Y = 0
+
+
+
+
+[OutAnim]  
+
+l AnimationTimeStamps = 2
+f Time0 = 0.0
+l Pos0X = 0
+l Pos0Y = 0
+f Time1 = 0.15
+l Pos1X = 800
+l Pos1Y = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[ComboBoxes]
+
+l ComboBoxCount = 1
+
+[ComboBox0] // max number of players
+l XLocation = 196
+l YLocation = 271
+st FileName = "mcl_mp_hostgamedialog_combobox0.fit"
+
+
+
+
+
+
+FITend 

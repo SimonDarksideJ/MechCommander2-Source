@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E998DF04244407798F3F7799B95E50DE" />
+  <Asset Name="..\AtlasLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="48394" ModificationTime="2006-02-01T10:54:35.6387523-08:00" CRC="ACD95B022B34B288AF4B205ACEA5513B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\AtlasRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

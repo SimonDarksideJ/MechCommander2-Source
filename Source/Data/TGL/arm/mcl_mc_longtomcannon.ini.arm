@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="284668A6F67EA8F59E3C895645F3AE8D" />
+  <Asset Name="..\mcl_mc_longtomcannon.ini" Type="Physical" Author="franksav" FileSize="157" ModificationTime="2006-03-03T01:28:35.6173425-08:00" CRC="3ED627BD8EB4CDCF8D7A934B25BE284B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mcl_mc_LongTomCannon.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

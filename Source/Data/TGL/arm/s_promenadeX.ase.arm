@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9C53C4ADF66F6219B773C0EA30FF1236" />
+  <Asset Name="..\s_promenadeX.ase" Type="Physical" Author="ngauvin" FileSize="40281" ModificationTime="2006-02-01T10:55:26.2953265-08:00" CRC="4B591DC71EEEC6C04143D5544CEDA87D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

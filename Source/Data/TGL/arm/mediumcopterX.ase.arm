@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="07A6F0FAE2E52DC8CADA46F98690FE47" />
+  <Asset Name="..\mediumcopterX.ase" Type="Physical" Author="ngauvin" FileSize="58997" ModificationTime="2006-02-01T10:55:12.5921138-08:00" CRC="5C7A65F7587AE9212D48B68A7EC38E27" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

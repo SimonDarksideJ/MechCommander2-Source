@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="678E5085582588CFE63044A776A191A9" />
+  <Asset Name="..\JaegermechX.ase" Type="Physical" Author="ngauvin" FileSize="126008" ModificationTime="2006-02-01T10:55:01.3107916-08:00" CRC="CDF8E9294D2E55369D5F9131ACED4E26" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

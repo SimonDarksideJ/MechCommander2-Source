@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CC185BFD438E9184B7735DC182A7CBAE" />
+  <Asset Name="..\MobileHQX.ase" Type="Physical" Author="ngauvin" FileSize="28885" ModificationTime="2006-02-01T10:55:13.5452449-08:00" CRC="D5CC06AB5CDFF974DFF40159FFF3CE4B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

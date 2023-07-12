@@ -1,0 +1,331 @@
+FITini 
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons]
+l ButtonCount = 1
+
+[Button0] // This is the radio button for the pilot skill entry box
+st Animation = "Animation2"  
+l ID = xxx
+l XLocation = 2
+l YLocation = 2
+l Width = 46
+l Height = 46
+b Toggle = 1
+
+l HelpCaption = 45044
+l HelpDesc = 45043
+
+st FileName = "MCUI_MR_2"
+
+l UWidth = 46
+l VHeight = 46
+
+l UNormal = 205
+l VNormal = 186
+
+l UPressed = 205
+l VPressed = 140
+
+l UHighlight = 205
+l VHighlight = 186
+
+l UHighlightPressed = 205
+l VHighlightPressed = 140
+
+l UDisabled = 205
+l VDisabled = 186
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l RectCount = 2
+
+[Rect0] // outline for skill entry box
+l XLocation = 49
+l YLocation = 2
+l Width = 309
+l Height = 46
+l Color = 0xffffffff
+b outline = TRUE
+st Animation = "Animation1"
+
+
+[Rect1] // outline for skill type  icon
+l XLocation = 55
+l YLocation = 8
+l Width = 34
+l Height = 34
+l Color = 0xffffffff
+b outline = TRUE
+st Animation = "Animation1"
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics] // these icons have to get turned on or off 
+// depending on the skill type of the entry box
+l StaticCount = 4
+
+[Static0] // weapon skill type icon
+l XLocation = 56
+l YLocation = 9
+l Width = 32
+l Height = 32
+l UNormal = 96
+l VNormal = 0
+l UWidth  = 32
+l VHeight = 32
+st FileName = "MCUI_MR_9"
+// don't animate
+
+
+[Static1] // mech skill type icon
+l XLocation = 56
+l YLocation = 9 
+l Width = 32
+l Height = 32
+l UNormal = 96
+l VNormal = 32
+l UWidth  = 32
+l VHeight = 32
+st FileName = "MCUI_MR_9"
+// don't animate
+
+
+
+[Static2] // range skill type icon
+l XLocation = 56
+l YLocation = 9 
+l Width = 32
+l Height = 32
+l UNormal = 96
+l VNormal = 64
+l UWidth  = 32
+l VHeight = 32
+st FileName = "MCUI_MR_9"
+// don't animate
+
+
+[Static3] // misc. skill type icon
+l XLocation = 56
+l YLocation = 9
+l Width = 32
+l Height = 32
+l UNormal = 96
+l VNormal = 96
+l UWidth  = 32
+l VHeight = 32
+st FileName = "MCUI_MR_9"
+// don't animate
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts]
+l TextCount = 4
+
+
+[Text0] // Skill Header and info Text 
+l XLocation = 94
+l YLocation = 6
+l Width = 259
+l Height = 38
+l Color = 0xff005392
+b outline = FALSE
+l Font = 28041 // use arialnarrow8
+l TextID = 0
+l Alignment = 0
+st Animation = "Animation0"
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Animation0] // medium blue
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff005392
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff005392
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff005392
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xff005392
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+
+[Animation1] // dark blue
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff002F55
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff002F55
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff002F55
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff002F55
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xff002F55
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+[Animation2] // blue for button
+l NormalAnimationTimeStamps = 1
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff005392
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffffffff
+f PressedTime2 = 0.2
+l PressedColor2 = 0xff005392
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffffffff
+
+l HighlightAnimationTimeStamps = 2
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff005392
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = FALSE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xff005392
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 1
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+FITend 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

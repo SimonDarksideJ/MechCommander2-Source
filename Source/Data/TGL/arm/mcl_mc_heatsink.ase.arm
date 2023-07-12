@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8157EE75326BC382A95061493679B285" />
+  <Asset Name="..\mcl_mc_heatsink.ase" Type="Physical" Author="ngauvin" FileSize="201865" ModificationTime="2006-02-01T10:55:11.0139787-08:00" CRC="B7200A8FD38EBE034D07BE147DB78028" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\heatsink.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

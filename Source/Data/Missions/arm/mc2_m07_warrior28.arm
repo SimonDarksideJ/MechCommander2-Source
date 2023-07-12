@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0E4A3DA2E1E8FEACA2928F41C4452E9D" />
+  <Asset Name="..\mc2_m07_warrior28" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Menshen.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Menshen.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\pmp_flash.fit" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

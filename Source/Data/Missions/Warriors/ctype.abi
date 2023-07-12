@@ -1,0 +1,12 @@
+//************************
+//Clan Type Include File 3/19
+//------------------------
+
+//----------------------------------------------------------------
+// I believe we shouldn't have more than 30 enemies at one time...
+IntList = integer[255];
+RealList = real[255];
+position = real[3];
+AttList = integer[NUM_HIT_LISTS,HIT_LIST_SIZE];
+ObjList = integer[NUM_OBJ_LISTS,HIT_LIST_SIZE];
+

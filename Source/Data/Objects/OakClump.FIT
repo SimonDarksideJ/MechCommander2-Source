@@ -1,0 +1,17 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=0
+
+[ObjectType]
+st Name="oakclump.fit"
+st AppearanceName="treeclump2"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TreeData]
+ul DmgLevel=15
+f ExtentRadius=0.000000
+
+FITend 

@@ -1,0 +1,32 @@
+FITini
+
+// This is the stgbox_a1 Building Data File
+
+[ObjectClass]
+l ObjectTypeNum = 1
+
+[ObjectType]
+st Name 			= "stgbox_a5"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 19
+l Appearance			= 0x0700013C
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject		= 42			// Object Class Number of explosion for this building
+l DestroyedObject		= 0			// Object Class Number of Destroyed shape for building
+f ExtentRadius			= 35			// Extent Radius in Meters
+
+[BuildingData]
+l BuildingName = 424
+ul DmgLevel			= 30
+ul BlownEffectId		= -1			//Sound Effect played when building dies.
+ul NormalEffectId		= -1			//Sound Effect played when building is normal.
+ul DamageEffectId		= -1			//Sound Effect Played when building is dmg/destroyed.
+//st NormalShadow			= "stgbox_a1_gt"		//Tile to draw under building -- Not Required
+//st DestroyedShadow		= "stgbox_a1_gt_dmg"	//Tile to draw under destroyed buiding -- Not required.
+l BasePixelOffsetX		= 21			//Where on tile to draw this building.
+l BasePixelOffsetY		= 55			//
+l CollisionOffsetX		= 46				//Some buildings were not rendered to spec.  This fixes the problem.
+l CollisionOffsetY		= 44
+l LowTemplate		= 0x38000000
+l HighTemplate		= 0x00003838
+FITendTemplate		= 0x00003838

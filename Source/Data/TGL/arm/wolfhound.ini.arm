@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F6EE4AC835CE2513BC6B401C8EE439B2" />
+  <Asset Name="..\wolfhound.ini" Type="Physical" Author="franksav" FileSize="3957" ModificationTime="2006-03-03T01:28:57.6172017-08:00" CRC="D64A1B08DBB4F510FECF1A698123AE88" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Wolfhound.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="WolfhoundL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="WolfhoundL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="WolfhoundX.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhound.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="wolfhoundFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="wolfhoundFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="wolfhoundFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Wolfhound" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

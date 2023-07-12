@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D0EC0E61057534E4F35C6BDF4C70A0AA" />
+  <Asset Name="..\watertowerdam.ase" Type="Physical" Author="ngauvin" FileSize="47219" ModificationTime="2006-02-01T10:55:37.7641499-08:00" CRC="869237BD4EC24C04BF7066F23C354BD7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_WaterTowerDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

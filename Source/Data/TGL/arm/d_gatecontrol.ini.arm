@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FF5BA6929D6E924C5337E61A06CB2FC7" />
+  <Asset Name="..\d_gatecontrol.ini" Type="Physical" Author="franksav" FileSize="775" ModificationTime="2006-03-03T01:28:19.914318-08:00" CRC="014E4BF3E1591D1BDA6E21277561AEAA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="D_GateControl.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="D_GateControlL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="D_GateControlL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="D_GateControlX.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_gatecontrol.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="D_GateControldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="D_GateControldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Gate Control" ObjectType="Building" BuildingType="Gate Control" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

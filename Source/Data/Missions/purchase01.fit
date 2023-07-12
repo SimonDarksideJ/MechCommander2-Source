@@ -1,0 +1,45 @@
+FITini
+
+[Components]
+
+b AllComponents = False
+
+l Component0 = 7		//Heat Sink
+l Component1 = 10		//Jump Jets
+l Component2 = 25		//Armor Plating
+l Component3 = 156		//Laser
+l Component4 = 145		//PPC
+l Component5 = 140		//Large Laser
+l Component6 = 155		//Flamer Array
+l Component7 = 100		//Light Autocannon (AC5)
+l Component8 = 101		//Autocannon (AC10)
+l Component9 = 102		//Heavy Autocannon (AC20)
+l Component10 = 114		//MG Array
+l Component11 = 125		//Streak SRM2 Pack
+l Component12 = 120		//LRM5 Rack
+
+[Mechs]
+
+st Mech0 = "werewolf"
+st Mech1 = "hunchback"
+st Mech2 = "bushwacker"
+
+[Pilots]
+
+st Pilot0 = "PMWChopper"
+st Pilot1 = "PMWCreep"
+st Pilot2 = "PMWFlash"
+st Pilot3 = "PMWHacksaw"
+st Pilot4 = "PMWHammer"
+st Pilot5 = "PMWJinx"
+st Pilot6 = "PMWLongshot"
+st Pilot7 = "PMWPsycho"
+st Pilot8 = "PMWShadow"
+st Pilot9 = "PMWCobra"
+st Pilot10 = "PMWDagger"
+st Pilot11 = "PMWPalerider"
+st Pilot12 = "PMWTwitch"
+st Pilot13 = "PMWWorm"
+st Pilot14 = "PMWMeat"
+
+FITend

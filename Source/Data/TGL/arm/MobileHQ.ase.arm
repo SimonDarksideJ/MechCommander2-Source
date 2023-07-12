@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="58699C0989E527C7AD2B56E7052AE4D8" />
+  <Asset Name="..\MobileHQ.ase" Type="Physical" Author="ngauvin" FileSize="65007" ModificationTime="2006-02-01T10:55:13.3108684-08:00" CRC="81E26930F20B9ABA14C2555FFB2F17C7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\MobileHQ.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

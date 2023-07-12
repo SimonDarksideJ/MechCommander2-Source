@@ -1,0 +1,21 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=11
+
+[ObjectType]
+st Name="mechdebristorso2"
+st AppearanceName="MechPiece_Torso2"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TerrainObjectData]
+ul DmgLevel=0
+f ExtentRadius=0.000000
+
+FITend 
+
+
+
+

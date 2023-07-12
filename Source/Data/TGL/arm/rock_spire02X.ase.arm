@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="55B880EB371D6287223AD9E425EBF95A" />
+  <Asset Name="..\rock_spire02X.ase" Type="Physical" Author="ngauvin" FileSize="27302" ModificationTime="2006-02-01T10:55:19.8265351-08:00" CRC="5F1AD9D87C86189090DAC0B88F016585" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="58C9513FD07D84C478A45ACB667C04AF" />
+  <Asset Name="..\s_gov2enc.ini" Type="Physical" Author="franksav" FileSize="386" ModificationTime="2006-03-03T01:28:44.5391604-08:00" CRC="D0E94311583AE1DD8CA45F527666887E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="s_gov2Enc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

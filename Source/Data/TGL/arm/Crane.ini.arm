@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1DCA99B3C20A784C6EC0A439057EC086" />
+  <Asset Name="..\Crane.ini" Type="Physical" Author="franksav" FileSize="543" ModificationTime="2006-03-03T01:28:18.5237019-08:00" CRC="120F27582FE3EBECDD2C64D1311CDEF7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="crane.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="craneL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="craneL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="craneX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="cranedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="cranedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Crane Prop" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

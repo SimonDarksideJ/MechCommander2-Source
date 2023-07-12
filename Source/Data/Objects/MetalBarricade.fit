@@ -1,0 +1,18 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=11
+
+[ObjectType]
+st Name="corrigatedmetalbarricade"
+st AppearanceName="corrigatedmetalbarricade"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TerrainObjectData]
+ul DmgLevel=1
+f ExtentRadius=20.000000
+
+FITend 
+

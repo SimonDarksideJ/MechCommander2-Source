@@ -1,0 +1,446 @@
+//*********************************************************************************
+
+module mc2_06 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+	    static Position	startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+	static boolean			startCam;
+	static boolean			endCam;
+	static real			velTime;
+	static real			zoomFOV;
+	static real			startFOV;
+	static integer			camObject;
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+			
+			//--------------------Mission Stuff
+				eternal boolean					goGroup1;
+				eternal boolean					goGroup2;
+				eternal boolean					goGroup3;
+				eternal boolean					goGroup4;
+				eternal boolean					goGroup5;
+				eternal boolean					goGroup6;		
+				eternal boolean					goGroup7;	
+				
+				eternal Integer					guard1;	
+				eternal Integer					guard2;	
+				eternal Integer					guard3;
+				eternal Integer					guard4;
+				eternal Integer					guard5;
+				eternal Integer					guard6;
+				eternal Integer					guard7;
+				
+				static real						group2Timer;
+				static real						group3Timer;
+
+				static boolean					Check_Diaz;
+				static boolean					Diaz_VO;
+				static real							Diaz_TimerDelay;
+
+				
+#include_ "sndvar.abi"
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]	cellLoc;
+
+	code
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+		
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+				//-------------------------------------------Mission INIT
+				goGroup1 = False;
+				goGroup2 = False;
+				goGroup3 = False;
+				goGroup4 = False;
+				goGroup5 = False;
+				goGroup6 = False;	
+				goGroup7 = False;
+				
+				guard1 = 0;
+				guard2 = 0;
+				guard3 = 0;
+				guard4 = 0;
+				guard5 = 0;
+				guard6 = 0;
+				guard7 = 0;
+				group2Timer = -1;
+				group3Timer = -1;
+
+				Check_Diaz = FALSE;
+				Diaz_VO = FALSE;
+
+#include_ "sndinit.abi"
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+
+				//***************************
+				//Triggering the 1st wave
+				if (getTime > 120) then
+					goGroup1 = True;
+				endif;
+
+				if (getTime > 120) then
+					goGroup2 = True;
+				endif;
+
+				//***************************
+				//Triggering the 2nd wave
+				if ((checkObjectiveStatus(4) == 1) and (group2Timer == -1)) then
+					group2Timer = getTime + 40;
+				endif;
+				
+				if ((checkObjectiveStatus(4) == 1) and (getTime > group2Timer)) then
+					goGroup3 = True;
+				endif;
+
+				if ((checkObjectiveStatus(4) == 1) and (getTime > group2Timer)) then
+					goGroup4 = True;
+				endif;
+
+				if ((checkObjectiveStatus(4) == 1) and (getTime > group2Timer + 60)) then
+					goGroup5 = True;
+				endif;
+
+				//***************************
+				//Triggering the 3rd wave
+				if ((checkObjectiveStatus(5) == 1) and (group3Timer == -1)) then
+					group3Timer = getTime + 40;
+				endif;
+				
+				if ((checkObjectiveStatus(5) == 1) and (getTime > group3Timer)) then
+					goGroup6 = True;
+				endif;
+
+				if ((checkObjectiveStatus(5) == 1) and (getTime > group3Timer + 110)) then
+					goGroup7 = True;
+				endif;
+
+			
+			//*******************************************************
+			//********* Used to play Diaz Congrats VO ***************	 		
+						if (checkObjectiveStatus (1) == 1) then
+							if 	(Not Check_Diaz) then
+									Diaz_TimerDelay = getTime + 4; //Wait 30 secs before Convoy Moves
+									Check_Diaz = True;
+							else
+								if 	((getTime > Diaz_TimerDelay) AND (Not Diaz_VO)) then
+									Diaz_VO = True;
+									playWave("mc2_06",-1);
+								endif;
+							endif;
+						endif;
+
+
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 5) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune0);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune3);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune3);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(4) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune3");
+					playDigitalMusic(CombatTune3);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune2");
+					playDigitalMusic(CombatTune2);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(5) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune2");
+					playDigitalMusic(CombatTune2);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune3");
+					playDigitalMusic(CombatTune3);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger3) then
+				if (random(100) < 90) then
+				  mcprint ("Playing Combat Tune3");
+					playDigitalMusic(CombatTune3);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing Combat Tune2");
+					playDigitalMusic(CombatTune2);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune10);
+			StartMusicTimer = getTime + 123; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+	
+ 	//-------------------------------------------------------------
+	
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

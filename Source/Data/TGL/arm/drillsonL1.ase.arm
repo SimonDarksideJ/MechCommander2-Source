@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2244A7CB98C069006A2AD1EF48A8B5EC" />
+  <Asset Name="..\drillsonL1.ase" Type="Physical" Author="ngauvin" FileSize="38793" ModificationTime="2006-02-01T10:54:48.7013359-08:00" CRC="A356D2EEECF5EE31D98A1677519ADDE5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\DrillsonL1.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

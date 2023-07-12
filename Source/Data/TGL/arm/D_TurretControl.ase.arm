@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="57260B293AD4A1CACC149FA0C543E8E3" />
+  <Asset Name="..\D_TurretControl.ase" Type="Physical" Author="ngauvin" FileSize="172744" ModificationTime="2006-02-01T10:54:48.56071-08:00" CRC="41A4221307F5E6AE690DB95E577113B5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_D_TurretControl.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\D_TurretControl2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\AD_TurretControl.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\D_TurretControl2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_D_TurretControl.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\D_TurretControl2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

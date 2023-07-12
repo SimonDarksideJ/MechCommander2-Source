@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9947D5FFDD4839BB2F6910830EA0A096" />
+  <Asset Name="..\Hangar.ini" Type="Physical" Author="franksav" FileSize="602" ModificationTime="2006-03-03T01:28:25.1642844-08:00" CRC="BE0F6D6F699AD45F0948BF1F89A3F507" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="hangar.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="hangarL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="hangarL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="hangarX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="hangardam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="hangarDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hangar" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

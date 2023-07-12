@@ -1,0 +1,19 @@
+//************************
+//Music INIT Include File
+//------------------------
+
+        //------------------
+        // Music
+        //------------------
+	playingMissionResultTune = false;
+	playingObjectiveTune = false;
+	playingDeathTune = false;
+	playingNONCombatTune = true;	//At the beginning, we are playing mission start tune!!
+	playingCombatTune = false;
+	playMissionStartTune = true;	//Make the ABL script play the mission start tune.
+	playingAmbientTune = false;		
+	playingSensorTune = false;
+	
+
+
+

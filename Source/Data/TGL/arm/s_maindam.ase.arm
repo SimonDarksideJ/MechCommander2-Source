@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="992121CC38C21789BDD938C14985D96D" />
+  <Asset Name="..\s_maindam.ase" Type="Physical" Author="ngauvin" FileSize="129727" ModificationTime="2006-02-01T10:55:25.5609468-08:00" CRC="915A50D225D2BC7BD23F28B05B46B290" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows2Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_windows3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

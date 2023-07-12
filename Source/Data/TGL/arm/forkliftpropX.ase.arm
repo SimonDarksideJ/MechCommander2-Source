@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="704918739687A3FB93DFDF607AD46E13" />
+  <Asset Name="..\forkliftpropX.ase" Type="Physical" Author="ngauvin" FileSize="23681" ModificationTime="2006-02-01T10:54:53.1544894-08:00" CRC="7E30A634BAE9F857FFF6F458F20DCA8E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

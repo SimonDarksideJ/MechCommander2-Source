@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7C90845631DBA69E3A0F05F43170B5AB" />
+  <Asset Name="..\shayu.ini" Type="Physical" Author="franksav" FileSize="4172" ModificationTime="2006-03-03T01:28:48.7891332-08:00" CRC="822BDC309F8D5F8F48028D74C10A6A53" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Shayu.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="ShayuL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="ShayuL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="ShayuX.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayu.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shayuFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shayuFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shayuFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Sha Yu" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="80E11D0727537E651D749443F1D8CD53" />
+  <Asset Name="..\l_guardhouse.ini" Type="Physical" Author="franksav" FileSize="575" ModificationTime="2006-03-03T01:28:30.1955022-08:00" CRC="93637BD277C1139F042D7340660D4EA9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="l_guardhouse.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="l_guardhouseL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="l_guardhouseL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="l_guardhouseX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_guardhousedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="l_guardhousedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Guard House" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

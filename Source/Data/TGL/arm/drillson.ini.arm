@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="374B8080EE20C5AD13AB1DC1CEDE71E5" />
+  <Asset Name="..\drillson.ini" Type="Physical" Author="franksav" FileSize="338" ModificationTime="2006-03-03T01:28:21.6643068-08:00" CRC="E8AECDAF5A98A068FEFBE7BCA8D649CF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="drillson.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="drillsonL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="drillsonL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="drillsonX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="drillsondam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Drillson" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

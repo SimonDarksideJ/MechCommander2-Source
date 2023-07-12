@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4642F23DBF2355735BDFE205600F0C54" />
+  <Asset Name="..\d_mediumgate.ini" Type="Physical" Author="franksav" FileSize="976" ModificationTime="2006-03-03T01:28:20.9768112-08:00" CRC="9890D9B5D426F8D426FCDC1E8D17C860" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="d_mediumgate.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="d_mediumgateL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="d_mediumgateL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="d_mediumgateX.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_mediumgate.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_mediumgateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_mediumgateopen.ase" />
+        <Relationship Type="Animation" RelatedAsset="d_mediumgateopen.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="d_mediumgatedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="d_mediumgatedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Medium Gate" ObjectType="Building" BuildingType="Editor Gate" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

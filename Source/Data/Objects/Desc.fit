@@ -1,0 +1,652 @@
+FITini
+//IS COMPONENTS
+
+[Desc13]		//SENSOR (BASIC)
+st DescString = "IS Sensors detect active enemy units within about 350 meters. It cannot detect Elementals or powered down 'Mechs.%nLOAD VAL:%fc8  0.0" 
+
+[Desc14]		//SENSOR (INTERMEDIATE)
+st DescString = "Intermediate IS sensors detect active enemy units within about 440 meters. It cannot detect Elementals or powered down 'Mechs. %nLOAD VAL:%fc8  0.5"
+
+[Desc15]		//SENSOR (ADVANCED)
+st DescString = "Advanced IS sensors detect active enemy units within about 525 meters. It cannot detect Elementals or powered-down 'Mechs. *Raven or Light Clan `Mechs Only.*  LOAD VAL:%fc8  1.0"
+
+[Desc37]		//BEAGLE ACTIVE PROBE
+st DescString = "The IS Beagle Active Probe allows all friendly units to detect powered-down 'Mechs within their sensor ranges. *Raven or Light Clan `Mechs Only.*%nLOAD VAL:%fc8  1.5"
+
+[Desc38]		//GUARDIAN ECM SUITE
+st DescString = "The IS Guardian ECM suite halves the range of any enemy sensor it contacts. *Raven or Light Clan `Mechs Only.*  %nLOAD VAL:%fc8  1.5"
+
+[Desc98]		//RAIL GUN (SL)
+st DescString = "A Star League era relic using lost technology, the Rail Gun electromagnetically hurls massive metal projectiles. It carries limited ammo. (15 shots) LOAD VAL:%fc8  30.0"
+
+[Desc99]		//LIGHT GAUSS RIFLE (IS)
+st DescString = "This new Inner Sphere design fires a smaller slug out to long range. It carries limited ammo. (50 shots)%nLOAD VAL:%fc8  13.5"
+
+[Desc100]		//LIGHT AUTOCANNON
+st DescString = "Sometimes referred to as an AC/5, the IS light autocannon fires rapidly at long range, but at the expense of damage. It carries limited ammo. (100 shots)  LOAD VAL:%fc8  9.5"
+
+[Desc101]		//AUTOCANNON
+st DescString = "The IS autocannon is a rapid-firing weapon that fires streams of high-explosive shells at medium range. It carries limited ammo. (40 shots)%nLOAD VAL:%fc8 15.5"
+
+[Desc102]		//HEAVY AUTOCANNON
+st DescString = "Also known as the AC/20, this IS autocannon is a short-range weapon capable of dealing enormous damage with one salvo. It carries very limited ammo. (13 shots)  LOAD VAL:%fc8 19.5"
+
+[Desc103]		//LIGHT ULTRA AUTOCANNON
+st DescString = "The IS light ultra autocannon fires at a faster rate than the standard light autocannon. It carries limited ammo. (112 shots)%nLOAD VAL:%fc8 11.0"
+
+[Desc104]		//GAUSS RIFLE
+st DescString = "The IS gauss rifle fires a solid slug at supersonic speeds that does significant damage at long range. It carries extremely limited ammo. (16 shots)  LOAD VAL:%fc8 16.5" 
+
+[Desc105]		//MACHINE GUN
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- MACHINE GUN"
+
+[Desc106]		//ANTI MISSILE SYSTEM
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- ANTI-MISSILE SYSTEM."
+
+[Desc107]		//LIGHT LBX AUTOCANNON (IS)
+st DescString = "This lighter version of the LBX Autocannon fires a smaller shotgun-like round into long range. It carries extended ammo. (260 shots) %nLOAD VAL:%fc8  9.5"
+
+[Desc108]		//LBX AUTOCANNON (IS)
+st DescString = "The shotgun-like LBX Autocannon fires a fragmenting round capable of striking multiple armor sections simultaneously. It carries limited ammo. (90 shots)  LOAD VAL:%fc8  14.5"
+
+[Desc109]		//HEAVY LBX AUTOCANNON (IS)
+st DescString = "This cannon fires a massive, short range, shotgun-like round capable of striking multiple armor sections simultaneously. It carries limited ammo. (35 shots) LOAD VAL:%fc8  19.5"
+
+[Desc120]		//LONG-RANGE MISSILES RACK
+st DescString = "The IS LRM Rack fires missiles that can fire over walls, buildings, or other terrain features at long range. It carries limited ammo. (24 shots)%nLOAD VAL:%fc8  4.0"
+
+[Desc121]		//LONG-RANGE MISSILES/15
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- LRM/15"
+
+[Desc122]		//LONG-RANGE MISSILES/20
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- LRM/20"
+
+[Desc123]		//SHORT-RANGE MISSILES PACK
+st DescString = "The IS SRM Pack fires short-range missiles that like LRMs also fire over obstacles. It carries limited ammo. (62 shots)%nLOAD VAL:%fc8  3.0" 
+
+[Desc124]		//SHORT-RANGE MISSILES/6
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- SRM/6"
+
+[Desc125]		//STREAK SHORT-RANGE MISSILES Pack
+st DescString = "An IS Streak SRM launcher does not fire its missiles unless guaranteed to hit. These missiles also fire over obstacles. It carries limited ammo. (62 shots)  LOAD VAL:%fc8  5.0" 
+
+[Desc139]		//LARGE X PULSE LASER (IS)
+st DescString = "This rapid firing energy weapon has the fastest recycle rate of any component available and is capable of striking targets at long range.%nLOAD VAL:%fc8  13.0"
+
+[Desc140]		//LARGE LASER
+st DescString = "Heftier than the standard IS laser, the large laser packs a heavier medium-range punch with the same recycle time.%nLOAD VAL:%fc8  9.5"
+
+[Desc141]		//LARGE ER LASER
+st DescString = "The IS extended-range variant of the large laser projects its destructive power out to long range. It weighs more than the standard IS large laser.  LOAD VAL:%fc8 11.0"
+
+[Desc142]		//LARGE PULSE LASER
+st DescString = "The pulse variant fires twice as often as the standard IS large laser but weighs more.%nLOAD VAL:%fc8 12.0"
+
+[Desc143]		//LASER
+st DescString = "The IS laser is a light, short-range weapon. Because it is an energy weapon, there is no chance of running out of ammo.%nLOAD VAL:%fc8  4.0" 
+
+[Desc144]		//PULSE LASER
+st DescString = "The pulse laser fires multiple high-energy beams at over twice the fire rate of the standard IS laser, though it weighs more.  %nLOAD VAL:%fc8  6.0"
+
+[Desc145]		//PARTICLE PROJECTOR CANNON
+st DescString = "Firing high-energy particle bolts, these medium-range IS particle projector cannons are among the most effective weapons available for BattleMechs.  LOAD VAL:%fc8 12.0"
+
+[Desc146]		//ER PARTICLE PROJECTOR CANNON
+st DescString = "A worthwhile upgrade to the PPC, the extended-range IS PPC fires the lethal energy bolt out to long-range.%nLOAD VAL:%fc8 15.5"
+
+[Desc147]		//HEAVY FLAMER
+st DescString = "The IS heavy flamer vents a stream of super-heated plasma making it an effective short-range weapon.%nLOAD VAL:%fc8  8.0"
+
+[Desc160]		//LONG TOM (IS)
+st DescString = "This terrifying, 'Mech mounted artillery piece fires explosive, area-effect warheads. It carries limited ammo. (25 shots)  LOAD VAL:%fc8  34.0"
+
+[Desc161]		//SNIPER CANNON (IS)
+st DescString = "This snub-nosed, medium-range 'Mech mounted artillery piece fires an explosive, area-effect warhead and carries limited ammo. (64 shots)  LOAD VAL:%fc8  17.0"
+
+//CLAN COMPONENTS
+
+[Desc16]		//SENSOR (STANDARD)
+st DescString = "Clan standard sensors detect active enemy units at a slightly longer range than IS Basic Sensors. It cannot detect Elementals or powered-down 'Mechs.  LOAD VAL:%fc8  0.0" 
+
+[Desc17]		//SENSOR (EXTENDED)
+st DescString = "Clan extended sensors detect active enemy units at a slightly shorter range than IS Advanced Sensors. It cannot detect Elementals or powered-down 'Mechs.  LOAD VAL:%fc8  0.5" 
+
+[Desc42]		//ECM SUITE
+st DescString = "The Clan ECM suite reduces the effectiveness by more than half of any enemy sensors it contacts. *Raven or Light Clan 'Mechs Only.*%nLOAD VAL:%fc8  1.0"
+
+[Desc43]		//ACTIVE PROBE
+st DescString = "The Clan Active Probe allows all friendly units to detect powered-down 'Mechs within their sensor ranges. *Raven or Light Clan 'Mechs Only.*%nLOAD VAL:%fc8  1.0"
+
+[Desc110]		//LIGHT ULTRA AUTOCANNON
+st DescString = "The Clan light ultra autocannon packs the same faster fire rate as the Inner Sphere version but weighs less. It carries limited ammo. (112 shots)  LOAD VAL:%fc8  8.5"
+
+[Desc111]		//ULTRA AUTOCANNON
+st DescString = "The Clan ultra autocannon fires at a faster rate than the Inner Sphere autocannon and weighs less. It carries limited ammo. (30 shots)%nLOAD VAL:%fc8 13.5"
+
+[Desc112]		//HEAVY ULTRA AUTOCANNON
+st DescString = "The Clan heavy ultra autocannon fires at a faster rate than the Inner Sphere heavy autocannon and weighs less. It carries very limited ammo. (10 shots)  LOAD VAL:%fc8 17.5"
+
+[Desc113]		//GAUSS RIFLE
+st DescString = "The Clan gauss rifle does the same damage at long range as the Inner Sphere version, but weighs less. It carries very limited ammo. (16 shots)  LOAD VAL:%fc8 13.5"
+
+[Desc114]		//MACHINE GUN
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- CLAN MACHINE GUN"
+
+[Desc115]		//ANTI MISSILE SYSTEM
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- CLAN ANTI-MISSILE SYSTEM."
+
+[Desc116]		//LIGHT LBX AUTOCANNON
+st DescString = "The Clan version of the Light LBX Autocannon fires at the same distance and does the same damage, but it weighs less. It carries limited ammo. (260 shots)  LOAD VAL:%fc8  8.5"
+
+[Desc117]		//LBX AUTOCANNON  
+st DescString = "The shotgun-like Clan LBX Autocannon fires a round capable of striking multiple armor sections but weighs less than the IS version. It carries limited ammo. (90 shots)  LOAD VAL:%fc8  13.5"
+
+[Desc118]		//HEAVY LBX AUTOCANNON
+st DescString = "The Clan Heavy LBX Autocannon fires the same shotgun-like, short range, slug as the IS version, but weighs less. It carries limited ammo. (35 shots)  LOAD VAL:%fc8  17.5"
+
+[Desc126]		//HEAVY THUNDERBOLT
+st DescString = "This launcher fires one medium-range, 'Mech crippling missile over obstacles.  It cannot arm itself at targets within 50m. It carries limited ammo. (32 shots)  LOAD VAL:%fc8  21.0"
+
+[Desc130]		//LONG-RANGE MISSILES/5
+st DescString = "The Clan LRM Rack fires the same number of long-range missiles at the same rate as the Inner Sphere version, but weighs less. It carries limited ammo. (24 shots)  LOAD VAL:%fc8  3.0"
+
+[Desc131]		//LONG-RANGE MISSILES/15
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- CLAN LRM/15"
+
+[Desc132]		//LONG-RANGE MISSILES/20
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- CLAN LRM/20"
+
+[Desc133]		//SHORT-RANGE MISSILES/2
+st DescString = "The Clan SRM fires missiles at a slightly faster rate than the Inner Sphere version and weighs less. It carries limited ammo. (83 shots)%nLOAD VAL:%fc8  3.0" 
+
+[Desc134]		//SHORT-RANGE MISSILES/6
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG--- CLAN SRM/6"
+
+[Desc135]		//STREAK SHORT-RANGE MISSILES/2
+st DescString = "A Clan Streak SRM Pack launcher does not fire its short-range missiles unless guaranteed to hit. It weighs less than the IS version and carries limited ammo. (83 shots)  LOAD VAL:%fc8  4.75" 
+
+[Desc136]		//STREAK SHORT-RANGE MISSILES/6
+st DescString = "IF YOU SEE THIS DESCRIPTION PLEASE REPORT IT AS A BUG---CLAN STREAK SRM/6"
+
+[Desc150]		//LARGE ER LASER
+st DescString = "The Clan extended-range large laser does damage out to long range. It weighs slightly less, but hits harder, than the Inner Sphere version.%nLOAD VAL:%fc8 10.0"
+
+[Desc151]		//LARGE PULSE LASER
+st DescString = "The Clan pulse variant fires at the same faster rate as the IS large pulse laser but weighs less.%nLOAD VAL:%fc8 11.0"
+ 
+[Desc152]		//ER LASER
+st DescString = "The Clan extended-range laser is a duplicate of the standard laser, but is effective out to medium range and weighs less.%nLOAD VAL:%fc8  3.5"
+
+[Desc153]		//PULSE LASER
+st DescString = "The Clan pulse laser fires at the same rate as the IS version but weighs less.%nLOAD VAL:%fc8  4.0"
+
+[Desc154]		//ER PARTICLE PROJECTOR CANNON
+st DescString = "This Clan version of the ER PPC weighs less and does more damage than the Inner Sphere version.%nLOAD VAL:%fc8 13.5"
+
+[Desc155]		//HEAVY FLAMER
+st DescString = "The Clan heavy flamer fires slightly more often than the Inner Sphere version, and weighs less.%nLOAD VAL:%fc8  7.0"
+
+//Pilots
+[Desc301]	//beast
+st DescString = "Beast, orphan and refugee from one of the Bandit Kingdoms, was one of the best gunners at boot camp, but the worst at poker."
+
+[Desc302]	//hawk
+st DescString = "Hawk prides himself on his ability to swoop in for the kill and in the fact that he can make any minor skirmish sound like an epic battle."
+
+[Desc303]	//Siren
+st DescString = "Self-named and a crack shot, it is Siren who most often walks away from the poker table with Beast's paycheck."
+
+[Desc304]	//Rooster
+st DescString = "Born and raised on a backwater world of the Lyran Commonwealth, Rooster can steer a `Mech through the tightest terrain."
+
+[Desc305]	//Isis
+st DescString = "Cool under fire, Isis earned high marks in training for battlefield awareness."
+
+[Desc306]	//Gunman
+st DescString = "Gunman enjoys living up to his name. He's happiest with an Alpha Strike."
+
+[Desc307]	//Mystique
+st DescString = "Mystique won't talk about her history, but no one questions her ability to make a `Mech all but fly." 
+
+[Desc308]	//Skater
+st DescString = "Few in training could match Skater's ability to pilot a `Mech, but far fewer appreciated his sense of humor." 
+
+[Desc309]	//Spice
+st DescString = "Spice's all-around athleticism helps her muscle even the toughest of `Mechs (and MechWarriors) into place." 
+
+[Desc310]	//Baron
+st DescString = "Distantly related by blood to the ruling Davion family, Baron and his sister Countess consider it their duty, honor, and right to fight the Jaguars."
+
+[Desc311]	//Fiend
+st DescString = "Don't let the name fool you, Fiend is anything but. He'll even lend you money, at a reasonable rate, if you need it." 
+
+[Desc312]	//Ronin
+st DescString = "Of distant Kurita descent, Ronin fought hard to get transferred to the Davion Guards when the first rumors of a counter-attack surfaced."
+
+[Desc313]	//Gator
+st DescString = "Prone to midday naps, Gator is none-the-less the man you need when that last, desperate shot has to count." 
+
+[Desc314]	//Rebel
+st DescString = "A Steiner-loyalist, Rebel wears that badge and her Maneuver Training citation with pride." 
+
+[Desc315]	//Hunter
+st DescString = "With a well chosen call-sign, Hunter knows how to move and shoot like few others."
+
+[Desc316]	//Lynx
+st DescString = "Sly and wily, Lynx welcomes the chance to jump his `Mech into places he shouldn't be. Fortunately he has the gunnery skills to save his own skin."
+
+[Desc317]	//Hitman
+st DescString = "A crack-shot and decent with sensors, Hitman welcomes the chance to pay back the Smoke Jaguars for their crimes."
+
+[Desc318]	//Countess
+st DescString = "Like her younger brother Baron, Countess views herself as one of the noble elite who believe themselves destined to regain the lost Davion glory."
+
+[Desc319]	//Scarab
+st DescString = "A techno-fiend, Scarab has his 'Mech's sensors and target-assistance electronics hot-wired to the frying point."
+
+[Desc320]	//Outlaw
+st DescString = "Outlaw entered the Davion military as an infantry grunt, but through luck and no little talent has earned himself a ride with the best of the best."
+
+[Desc321]	//Falcon
+st DescString = "Though her family name carries great weight in the Davion military, Falcon fights continuously to insure that she's treated no differently than anyone else."
+
+[Desc322]	//Burnout
+st DescString = "Tired of getting shot down, Burnout transferred from the aerospace corps to where the real action is. So far he hasn't been disappointed."
+
+[Desc323]	//Goblin
+st DescString = "Goblin is prepared to make any Smoke Jaguar he meets pay for the collective crimes of all the Clans. Fortunately, he has the ability to back that up."
+
+[Desc324]	//Mantis
+st DescString = "Mantis fought the Clans in the original invasion and has vowed not to let them get the better of her again."
+
+[Desc325]	//Dragon
+st DescString = "An avowed Kurita-phile, Dragon has been reviewing Clan tactics and is more than ready to take the battle to them."
+
+[Desc326]	//Blaze
+st DescString = "Though she's mellowed of late, Blaze is infamous for demanding the best of everything. The truth is, however, she's earned it."
+
+[Desc327]	//Thunder
+st DescString = "A Davion veteran, Thunder transferred from a command position in his old unit to get a crack at the Jaguars."
+
+[Desc328]	//Paingod
+st DescString = "A near legend among Inner Sphere forces, Paingod's goal is to pilot a captured Clan OmniMech into battle against them."
+
+[Desc329]	//Firestorm
+st DescString = "Put him at the controls of an assault-class BattleMech and you will understand the reason for his call-sign, Firestorm."
+
+[Desc330]	//Vixen
+st DescString = "Vixen's fought more battles than nearly anyone in the Davion Guard, and she's never seen the white of a cockpit parachute." 
+
+[Desc331]	// Apollo 
+st DescString = "Apollo 
+works hard at being the consummate MechWarrior. He spends more time retraining and reviewing cockpit films than any other pilot."
+ 
+[Desc332]	// Boomer
+st DescString = "Raised on an isolated Periphery world, Boomer's dialect is more than difficult to understand. Fortunately, he lets his `Mech do most of the talking."
+
+[Desc333]	// Detox
+st DescString = "You won't find this MechWarrior in the barracks- Detox's `Mech is his home. Unfortunately, that means the cleaning crews get hazard pay..."
+
+[Desc334]	// Ghost
+st DescString = "Quiet and aloof without tons of hardened metal around her, Ghost comes alive on the battlefield. Even then, however, she's one of the more reserved in the unit."
+
+[Desc335]	// Jinx
+st DescString = "Her nickname comes not from the effect she has on teammates, but on the bad luck that seems to fall on the enemy when she's around."
+
+[Desc336]	// Needle
+st DescString = "A military brat, Needle knows nothing but military life. But, unlike her siblings, she has no intention or pursuing promotion. She prefers the trenches."
+
+[Desc337]	// Pyro
+st DescString = "Pyro earned his name for reasons you can well imagine. His obsession, however, aptly conceals a sharp military mind and professional warrior."
+
+[Desc338]	// Sponge
+st DescString = "Sponge owns nothing that he did not beg, borrow, or steal from someone. Even his callsign, believe it or not, is lifted from someone in the Wolf Dragoons."
+
+[Desc339]	// Squid
+st DescString = "Squid's callsign is a holdover from his days as a green MechWarrior. A rookie no longer, Squid is looking forward to testing his mettle against the Clans."
+
+[Desc340]	// Toad
+st DescString = "The veteran Toad is even grumpier out of the cockpit than in. To that end, his superiors try and assign him to picket duty whenever practical."
+
+[Desc341]	// Vandal
+st DescString = "To many, it seems amazing that Vandal has lived as long as he has. If there is a risk to be taken on the battlefield, he charges to it."
+
+[Desc342]	// Wasp
+st DescString = "Wasp loves recon work, the lighter and faster the `Mech the better. Fortunately, few can pilot a speeding 25-ton piece of metal as she can."
+
+[Desc343]	// Spice
+st DescString = "<placeholder>  Experienced Spice."
+
+[Desc344]	// Baron
+st DescString = "<placeholder>  Experienced Baron."
+
+[Desc345]	// Fiend
+st DescString = "<placeholder>  Experienced Fiend."
+
+[Desc346]	// Ronin
+st DescString = "<placeholder>  Experienced Ronin."
+
+[Desc347]	// Gator
+st DescString = "<placeholder>  Experienced Gator."
+
+[Desc348]	// Rebel
+st DescString = "<placeholder>  Experienced Rebel."
+
+[Desc349]	// Hitman
+st DescString = "<placeholder>  Experienced Hitman."
+
+[Desc350]	// Burnout
+st DescString = "<placeholder>  Experienced Burnout."
+
+ //Mechs
+[Desc400]	//ATLAS-A
+st DescString = "The Atlas is the premiere IS assault-class `Mech. Fear it. This variant has extra armor and no jump-jets."
+
+[Desc401]	//ATLAS-W
+st DescString = "The Atlas is the premiere IS assault-class `Mech. Fear it. This variant has extra weapons and no jump-jets."
+
+[Desc402]	//ATLAS-J
+st DescString = "The Atlas is the premiere IS assault-class `Mech. Fear it. This rare variant has jump-jets at the expense of armor and weapons."
+
+[Desc403]	//AWESOME-A
+st DescString = "The Awesome assault-class `Mech was designed to spearhead assaults and absorb huge amounts of damage. This variant has extra armor and no jump-jets."
+
+[Desc404]	//AWESOME-W
+st DescString = "The Awesome assault-class `Mech was designed to spearhead assaults and absorb huge amounts of damage. This variant has extra weapons and no jump-jets."
+
+[Desc405]	//AWESOME-J
+st DescString = "The Awesome assault-class `Mech was designed to spearhead assaults. This rare variant has jump-jets at the expense of armor and weapons."
+
+[Desc406]	//CATAPULT-A
+st DescString = "The Catapult is a second-line, fire support 'Mech with a solid layer of armor. This variant has extra armor and no jump-jets."
+
+[Desc407]	//CATAPULT-W
+st DescString = "The Catapult is a second-line, fire support 'Mech with a solid layer of armor. This variant has extra weapons and no jump-jets."
+
+[Desc408]	//CATAPULT-J
+st DescString = "The Catapult is a second-line, fire support 'Mech with a solid layer of armor. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc409]	//COMMANDO-A
+st DescString = "Commandos are often dispatched singly or in pairs to scout ahead or to monitor enemy movement. This variant has extra armor and no jump-jets."
+
+[Desc410]	//COMMANDO-W
+st DescString = "Commandos are often dispatched singly or in pairs to scout ahead or to monitor enemy movement. This variant has extra weapons and no jump-jets."
+
+[Desc411]	//COMMANDO-J
+st DescString = "Commandos are often dispatched singly or in pairs to scout ahead or to monitor enemy movement. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc412]	//COUGAR-A
+st DescString = "This Clan light `Mech is an effective heavy scout or fast-attack front-line combat unit. This variant has extra armor and no jump-jets."
+
+[Desc413]	//COUGAR-W
+st DescString = "This Clan light `Mech is an effective heavy scout or fast-attack front-line combat unit. This variant has extra weapons and no jump-jets."
+
+[Desc414]	//COUGAR-J
+st DescString = "This Clan light `Mech is an effective heavy scout or fast-attack front-line combat unit. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc415]	//FIRESTARTER-A
+st DescString = "This `Mech is built for urban combat and carries effective short-range weaponry. This variant has extra armor and no jump-jets."
+
+[Desc416]	//FIRESTARTER-W
+st DescString = "This `Mech is built for urban combat and carries mixed medium and short-range weaponry. This variant has extra weapons and no jump-jets."
+
+[Desc417]	//FIRESTARTER-J
+st DescString = "This `Mech is built for urban combat and carries effective short-range weaponry. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc418]	//HOLLANDER-A
+st DescString = "The Hollander II's gauss rifle makes it an effective short-term light fire-support `Mech. This variant has extra armor and no jump-jets."
+
+[Desc419]	//HOLLANDER-W
+st DescString = "The Hollander II's gauss rifle makes it an effective short-term light fire-support `Mech. This variant has extra weapons and no jump-jets."
+
+[Desc420]	//HOLLANDER-J
+st DescString = "The Hollander II's gauss rifle makes it an effective short-term light fire-support `Mech. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc421]	//HUNCHBACK-A
+st DescString = "The Hunchback is renowned for its devastating short-range, street-fighting punch. This variant has extra armor and no jump-jets."
+
+[Desc422]	//HUNCHBACK-W
+st DescString = "The Hunchback is renowned for its devastating short-range, street-fighting punch. This variant has extra weapons and no jump-jets."
+
+[Desc423]	//HUNCHBACK-J
+st DescString = "The Hunchback is renowned for its devastating short-range, street-fighting punch. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc424]	//HUNCHBACK IIC-A 
+st DescString = "The Clan version of the Hunchback is a devastating close-attack `Mech. This variant has extra armor and no jump-jets."
+
+[Desc425]	//HUNCHBACK IIC-W
+st DescString = "The Clan version of the Hunchback is a devastating close-attack `Mech. This variant has extra weapons and no jump-jets."
+
+[Desc426]	//HUNCHBACK IIC-J
+st DescString = "The Clan version of the Hunchback is a devastating close-attack `Mech. This rare variant has jump-jets at the expense of armor and weapons."
+
+[Desc427]	//JAGERMECH-A
+st DescString = "The Jagermech is a long-range fire support `Mech capable of holding its own against most in its class. This variant has extra armor and no jump-jets."
+
+[Desc428]	//JAGERMECH-W
+st DescString = "The Jagermech is a long-range fire support `Mech capable of holding its own against most in its class. This variant has extra weapons and no jump-jets."
+
+[Desc429]	//JAGERMECH-J
+st DescString = "The Jagermech is a long-range fire support `Mech capable of holding its own against most in its class. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc430]	//LOKI-A
+st DescString = "A true multi-role design, the Loki is one of the most effective Clan OmniMechs. This variant has extra armor and no jump-jets."
+
+[Desc431]	//LOKI-W
+st DescString = "A true multi-role design, the Loki is one of the most effective Clan OmniMechs. This variant has extra weapons and no jump-jets."
+
+[Desc432]	//LOKI-J
+st DescString = "A true multi-role design, the Loki is one of the most effective Clan OmniMechs. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc433]	//MADCAT-A
+st DescString = "Perhaps the best-known Clan `Mech configuration, the Mad Cat is a powerful all-around fighter. This variant has extra armor and no jump-jets."
+
+[Desc434]	//MADCAT-W
+st DescString = "Perhaps the best-known Clan `Mech configuration, the Mad Cat is a powerful all-around fighter. This variant has extra weapons and no jump-jets."
+
+[Desc435]	//MADCAT-J
+st DescString = "Perhaps the best-known Clan `Mech configuration, the Mad Cat is a powerful all-around fighter. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc436]	//MASAKARI-A 
+st DescString = "The Masakari is an assault-class OmniMech normally piloted by Elite warriors. This variant has extra armor and no jump-jets."
+
+[Desc437]	//MASAKARI-W
+st DescString = "The Masakari is an assault-class OmniMech normally piloted by Elite warriors. This variant has extra weapons and no jump-jets."
+
+[Desc438]	//MASAKARI-J
+st DescString = "The Masakari is an assault-class OmniMech normally piloted by Elite warriors. This rare variant has jump-jets at the expense of armor and weapons."
+
+[Desc439]	//RAVEN-A
+st DescString = "The Raven scout `Mech is designed to mount sophisticated electronic warfare components. This variant has extra armor and no jump-jets."
+
+[Desc440]	//RAVEN-W 
+st DescString = "The Raven scout `Mech is designed to mount sophisticated electronic warfare components. This variant has extra weapons and no jump-jets."
+
+[Desc441]	//RAVEN-J
+st DescString = "The Raven scout `Mech is designed to mount sophisticated electronic warfare components. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc442]	//THOR-A 
+st DescString = "This heavy OmniMech is know and feared for its fierce medium and short range punch. This variant has extra armor and no jump-jets."
+
+[Desc443]	//THOR-W
+st DescString = "This heavy OmniMech is know and feared for its fierce medium and short range punch. This variant has extra weapons and no jump-jets."
+
+[Desc444]	//THOR-J
+st DescString = "This heavy OmniMech is know and feared for its fierce medium and short range punch. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc445]	//ULLER-A 
+st DescString = "Though used mostly as a Clan scout `Mech, the Uller can handle itself against any foe in its weight class. This variant has extra armor and no jump-jets."
+
+[Desc446]	//ULLER-W 
+st DescString = "Though used mostly as a Clan scout `Mech, the Uller can handle itself against any foe in its weight class. This variant has extra weapons and no jump-jets."
+
+[Desc447]	//ULLER-J
+st DescString = "Though used mostly as a scout `Mech, the Uller can handle itself against any foe in its weight class. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc448]	//VULTURE-A
+st DescString = "The Vulture serves mostly as a fire-support 'Mech, and its appearance often means LRMs are not far behind. This variant has extra armor and no jump-jets."
+
+[Desc449]	//VULTURE-W
+st DescString = "The Vulture serves mostly as a fire-support 'Mech, and its appearance often means LRMs are not far behind. This variant has extra weapons and no jump-jets."
+
+[Desc450]	//VULTURE-J
+st DescString = "The Vulture serves as a fire-support 'Mech, and its appearance often means LRMs are not far behind. This rare variant has jump-jets at the expense of armor and weapons."
+
+[Desc451]	//CENTURION-A
+st DescString = "One of the more common Inner Sphere designs, the Centurion is a workhorse design suited for many roles. This variant has extra armor and no jump-jets."
+
+[Desc452]	//CENTURION-W
+st DescString = "One of the more common Inner Sphere designs, the Centurion is a workhorse design suited for many roles. This variant has extra weapons and no jump-jets."
+
+[Desc453]	//CENTURION-J
+st DescString = "One of the more common Inner Sphere designs, the Centurion is a workhorse design suited for many roles. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc454] 	//STILETTO A
+st DescString = "The Stiletto, the fastest 'Mech in the IS arsenal, carries Intermediate Sensors. Its speed gives it unparalleled ability to evade combat. This variant has extra armor and no jump-jets."
+
+[Desc455] 	// STILETTO W
+st DescString = "The Stiletto, the fastest 'Mech in the IS arsenal, carries Intermediate Sensors. Its speed gives it unparalleled ability to evade combat. This variant has extra weapons and no jump-jets."
+
+[Desc456] 	// STILETTO J
+st DescString = "The Stiletto, the fastest 'Mech in the IS arsenal, carries Intermediate Sensors. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc457]	// BUSHWACKER A
+st DescString = "The IS Bushwacker is a fast, medium 'Mech with a versatile design that is well-armed and armored. This variant has extra armor and no jump-jets."
+
+[Desc458]	// BUSHWACKER W
+st DescString = "The IS Bushwacker is a fast, medium 'Mech with a versatile design that is well-armed and armored. This variant has extra weapons and no jump-jets."
+
+[Desc459]	// BUSHWACKER J
+st DescString = "The IS Bushwacker is a fast, medium 'Mech with a versatile design that is well-armed and armored. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc460]	//MAULER A
+st DescString = "This venerable IS assault 'Mech design delivers a high-volume of armor-shredding firepower at long-range. This variant has extra armor and no jump-jets."
+
+[Desc461]	// MAULER W
+st DescString = "This venerable IS assault 'Mech design delivers a high-volume of armor-shredding firepower at long-range. This variant has extra weapons and no jump-jets."
+
+[Desc462]	// MAULER J
+st DescString = "This venerable IS assault 'Mech design delivers a high-volume of armor-shredding firepower at long-range. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc463]	//SHADOW CAT A
+st DescString = "Technically a heavy scout, the Clan Shadow Cat is well armed and armored, and ideal for hazardous recon missions. This variant has extra armor and no jump-jets."
+
+[Desc464]	//SHADOW CAT W
+st DescString = "Technically a heavy scout, the Clan Shadow Cat is well armed and armored, and ideal for hazardous recon missions. This variant has extra weapons and no jump-jets."
+
+[Desc465]	//SHADOW CAT J
+st DescString = " Technically a heavy scout, the Clan Shadow Cat is well armed and armored, and ideal for hazardous recon missions. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc466]	//NOVA CAT A
+st DescString = "A short-range killing machine, the Clan Nova Cat was designed to butcher anything that gets too close. This variant has extra armor and no jump-jets."
+
+[Desc467]	//NOVA CAT W
+st DescString = "A short-range killing machine, the Clan Nova Cat was designed to butcher anything that gets too close. This variant has extra weapons and no jump-jets."
+
+[Desc468]	//NOVA CAT J
+st DescString = "A short-range killing machine, the Clan Nova Cat was designed to butcher anything that gets too close. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc469]	//TURKINA A
+st DescString = "The Clan Turkina assault 'Mech carries crippling long-range firepower, and can smash anything that gets too close. This variant has extra armor and no jump-jets."
+
+[Desc470]	//TURKINA W
+st DescString = "The Clan Turkina assault 'Mech carries crippling long-range firepower, and can smash anything that gets too close. This variant has extra weapons and no jump-jets."
+
+[Desc471]	//TURKINA J
+st DescString = "The Clan Turkina assault 'Mech carries crippling long-range firepower, and can smash anything that gets too close. This variant has jump-jets at the expense of armor and weapons."
+
+[Desc472]	// Katherine Furey's Vulture
+st DescString = "Star Captain Katherine Furey has customized her Vulture class 'Mech with more armor, an ER PPC, and a Star League relic weapon, the Rail Gun."
+
+[Desc473]	// Marcus Osis' Thor
+st DescString = " Star Captain Marcus Osis uses a <placeholder>."
+
+[Desc474]	// Burnell Wirth's Madcat
+st DescString = " Star Captain Burnell Wirth uses a <placeholder>."
+
+[Desc475]	// Jefferson Stiles' Nova Cat
+st DescString = " Star Captain Jefferson Stiles uses a <placeholder>."
+
+[Desc476]	// Kim Ward's Maskari
+st DescString = " Star Captain Kim Ward uses a <placeholder>."
+
+[Desc477]	// Marcus Kotare's Turkina
+st DescString = " Star Colonel Marcus Kotare uses a <placeholder>."
+
+//VEHICLES
+[Desc500]	// apc
+st DescString = "CUT FROM MULTIPLAYER. IF YOU SEE THIS, REPORT IT AS A BUG!"
+
+[Desc501]	// ARMORED CAR
+st DescString = "CUT FROM MULTIPLAYER. IF YOU SEE THIS, REPORT IT AS A BUG!."
+
+[Desc502]	// bulldog
+st DescString = "The Bulldog is a slow, tough short-range damage machine packing a heavy autocannon."
+
+[Desc503]	// condor
+st DescString = "The Condor is a well-balanced medium-range tank firing a large pulse laser."
+
+[Desc504]	// harasser
+st DescString = "The Harasser is a durable short-range combat mounting SRM packs. Its drivers use its speed to advantage by making quick, strafing runs and then moving to safety."
+
+[Desc505]	// j. edgar
+st DescString = "The J. Edgar is a lightly armored quick-strike tank firing pulse lasers. When operating in a group, its drivers favor a circling tactic that distracts the enemy."
+
+[Desc506]	// LRM carrier
+st DescString = " The LRM carrier is a dangerous, lightly armored missile boat firing LRM racks."
+
+[Desc507]	// minelayer
+st DescString = "The Minelayer is a defensive unit designed to delay and funnel enemy movement."
+
+[Desc508]	// minesweeper
+st DescString = "The Minesweeper clears a path through a minefield by safely detonating enemy mines. Each mine it safely detonates, however, reduces the vehicle's capability."
+
+[Desc509]	// Pegasus
+st DescString = "The Pegasus is an armed scout vehicle equipped with sensors."
+
+[Desc510]	// refit truck
+st DescString = "The Refit Truck makes field repairs to BattleMech armor and replenishes expended ammunition."
+
+[Desc511]	// rommel
+st DescString = "The Rommel is a thickly armored, medium-range heavy-strike tank firing twin autocannons."
+
+[Desc512]	// Saracen
+st DescString = "The Saracen is a fast long-range strike vehicle firing light autocannons. When operating in groups, their pilots tend to concentrate fire and then move on to the next victim."
+
+[Desc513]	// Savannah master
+st DescString = "The Savannah Master is an exceedingly high speed short-range fighter with poor armor. This vehicle moves in packs that swarm a target, impeding its ability to escape."
+
+[Desc514]	// shrek
+st DescString = "Though it moves slowly, beware the Shrek's multiple ER-PPCs. Beware! When this vehicle stops, it's about to fire!"
+
+[Desc515]	// SRM carrier
+st DescString = "The SRM carrier is a quick, lightly armored missile boat firing multiple SRM packs. It tends to move in for a close-range volley and then back off while the SRMs reload."
+
+[Desc516]	// striker
+st DescString = "The Striker is a long-range missile tank capable of taking and inflicting serious damage."
+
+[Desc517]	// swiftwind
+st DescString = "The Swiftwind is an unarmed, lightly armored scout vehicle equipped with sensors."
+
+[Desc518]	// von luckner
+st DescString = "The Von Luckner is a heavily armored, long-range assault vehicle firing a light autocannon and a gauss rifle. Beware! When this vehicle stops, it's about to fire!"
+
+[Desc550]	// centipede scout car
+st DescString = "This fast, heavily armed scout car is equipped with Guardian Electronic Countermeasures and advanced vehicle sensors."
+
+[Desc551]	// regulator heavy tank
+st DescString = "This swift and agile tank carries a massive gauss rifle capable of devastating most targets with one shot. It can use its speed to bring that weapon to bear on weak rear `Mech armor."
+
+[Desc552]	// manticore heavy tank
+st DescString = "The Manticore is a heavy tank carrying excellent armor protection and effective long and medium-range firepower."
+
+[Desc553]	// pilum heavy tank
+st DescString = "This version of the Pilum Heavy Tank trades some of its firepower for a larger powerplant, making it faster than any vehicle in its weight class."
+
+[Desc554]	// alacorn mkvii heavy tank
+st DescString = "A Star League era design, the Alacorn MKIV packs reasonable speed, superior armor, and a terrifying punch into one sleek package."
+
+[Desc555]	// ammo truck
+st DescString = "The Ammo Truck is an inexpensive, reasonably fast, explosive vehicle capable of replacing a 'Mech's ammunition but not armor. Command it like the Refit Truck."
+
+FITend

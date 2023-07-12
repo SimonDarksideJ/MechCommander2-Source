@@ -1,0 +1,83 @@
+//****************************************************************************************//
+//
+//    UNIVERSAL WARRIOR BRAIN     CREATED:11/3/98   BY:david abzug
+//                              by the MechCommander(TM) Data Entry Application
+//
+//   Modification, duplication & distribution is strictly limited to non-commercial
+//   enterprise unless otherwise indicated by FASA Interactive Technologies, Inc.
+//
+//           Copyright 1999 Microsoft Corporation
+//
+//****************************************************************************************//
+
+module SentryBrain : integer;
+
+		/*********************************************************************
+
+		 The following brain cells must be loaded:
+
+         R_ENGAGE_RADIUS		cell 2, real --> radius in meters
+         I_MOVE_SPEED			cell 9, integer --> 1 = FAST, 0 = SLOW
+		 I_TACTIC				cell 28, integer --> 0 thru 20
+
+		 In addition, the following static variables should be loaded:
+
+		 Location				real array, the sentry location
+
+		 *********************************************************************/
+
+
+//****************************************************************************************//
+
+const
+    #include_ "OConst.abi"
+    #include_ "UnitConst.abi"
+type
+
+var
+
+    //-------------------------------------
+    // Enter Additional Variables Here
+
+    static integer                  Order1Status;
+
+//----------------------------------------------------------------------------------------
+function Init;
+
+    code
+         #include_ "UBInit.abi"
+         //----------------------------------------
+         // Enter Initial Behavior Variations Here
+
+         // OrderStatus
+         Order1Status = INCOMPLETE;
+
+         SetEngageRadius(getRealMemory(R_ENGAGE_RADIUS));
+         SetDisEngageRadius(650);
+	     SetSpeed(getIntegerMemory(I_MOVE_SPEED) == 1);
+		 SetTactic(getIntegerMemory(I_TACTIC));
+
+endfunction;
+//----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
+// Main Code
+//----------------------------------------------------------------------------------------
+
+code
+
+    //Initialize Orders Library
+    initOrders;
+
+    if (TRUE) then
+         // Order  1 
+         if (Order1Status == INCOMPLETE) then
+              Order1Status = Sentry(myx, myy);
+              if (Order1Status == INCOMPLETE) then
+                   return(1);
+              endif;
+         endif;
+    endif;
+
+         return(1);
+endmodule.

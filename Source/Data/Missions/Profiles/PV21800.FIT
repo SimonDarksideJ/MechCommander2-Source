@@ -1,0 +1,118 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  21800   'Pegasus'  Type:  471 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     21800 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                471 
+st Name =                                                  "Pegasus"
+ul VehicleTypeID =                                          471 
+l NameIndex =                                               11 
+l DescIndex =                                               509 
+f CurTonnage =                                              15 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          870 
+l BattleRating =                                            35 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           21 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 3.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         12 
+uc CurArmorPoints =                                         12 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[InventoryInfo]
+uc NumOther =                                               4 
+uc NumWeapons =                                             3 
+uc NumAmmo =                                                3 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+[Item:3]
+uc MasterID =                                               18 
+
+// Weapons
+
+
+[Item:4]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:5]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:6]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:7]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:8]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:9]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+FITEnd

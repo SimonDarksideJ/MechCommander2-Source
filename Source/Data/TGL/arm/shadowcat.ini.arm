@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2D2D79B7077397F33B60C3C8EBEFF1C8" />
+  <Asset Name="..\shadowcat.ini" Type="Physical" Author="franksav" FileSize="3962" ModificationTime="2006-03-03T01:28:48.2578866-08:00" CRC="F4D176F4070A306712F1DE98AD2A238F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Shadowcat.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="ShadowcatL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="ShadowcatL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="ShadowcatX.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcat.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="shadowcatFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shadowcatFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="shadowcatFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Shadow Cat" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C186906F32CB985ECBF66C499CD73344" />
+  <Asset Name="..\s_quetragondamX.ase" Type="Physical" Author="ngauvin" FileSize="98283" ModificationTime="2006-02-01T10:55:26.3265767-08:00" CRC="3F9404D2F3081FF00D29F4D27F3B22A5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

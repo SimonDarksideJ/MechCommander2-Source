@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0E79BAEAC6BFB6294B166788E3E5F49A" />
+  <Asset Name="..\TinShack.ini" Type="Physical" Author="franksav" FileSize="556" ModificationTime="2006-03-03T01:28:53.8047261-08:00" CRC="8CDFD68641A3E9CD52FFDF42C768AAEE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="tinshack.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="TinShackL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="TinShackL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="TinShackX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="tinshackdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="TinShackDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Tin Shack" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

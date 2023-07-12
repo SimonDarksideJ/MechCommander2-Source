@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AA53648CB4E5B1D980A16339BDE499A5" />
+  <Asset Name="..\hpg_corner.ini" Type="Physical" Author="franksav" FileSize="564" ModificationTime="2006-03-03T01:28:26.8673985-08:00" CRC="C7B94C501634E00934C18C440A29F27D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_Corner.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_CornerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HPG_CornerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HPG_CornerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="HPG_Cornerdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Comstar Corner" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

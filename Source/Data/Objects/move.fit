@@ -1,0 +1,29 @@
+FITini
+
+//---------------------------------------------------------------------------
+//
+//				MapIcon:		Movement Indicator
+//
+//				BASE ID:	60
+//
+//---------------------------------------------------------------------------
+
+[ObjectClass]
+l ObjectTypeNum = 10
+
+[MapIcon]
+st MapIconSpriteName 	= "move"					//Name of Sprite .SHP file with waypoint icon in it.
+ul FrameCount 			= 14						//Number of frames of animation.
+f FrameRate 			= 30.0						//Frame Rate to playback animation at.
+	
+[ObjectType]
+st Name 							= "MOVE"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 								= 60			// ID number for this mech type
+l Appearance						= 0x00000000
+l Duration							= 1				// Lasts forever = -1
+l MaxDamage							= 0				// Number of damage points before BOOM!
+l ExplosionObject					= -1			// Object Class Number of explosion
+l DestroyedObject					= -1			// Object Class Number of Destroyed shape
+f ExtentRadius						= 0				// Extent Radius in Meters (0 Can't hit hit ever)
+
+FITEnd

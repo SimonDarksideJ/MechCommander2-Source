@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="104D76F5FEB281E3EB2FDFA241BD7493" />
+  <Asset Name="..\l_hqenc.ini" Type="Physical" Author="franksav" FileSize="148" ModificationTime="2006-03-03T01:28:30.6798741-08:00" CRC="4F7D6C3C34854221AFCFB4DD99C2D6EA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_HQenc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1094F8610BA6EBE80A9FBA8E693FFD1B" />
+  <Asset Name="..\m0101.fit" Type="Physical" Author="franksav" FileSize="5602" ModificationTime="2006-03-06T12:41:06.8641197-08:00" CRC="13BDAA4358B877016EEEE8E3CF4AFB55" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" IsSinglePlayer="No" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="m0101.pak" />
+        <Relationship Type="warrior" RelatedAsset="m0101_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="m0101_warrior02" />
+        <Relationship Type="ScenarioScript" RelatedAsset="m0101.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5A3B4F36EF5CE3E13CE4EC5E3B6258CB" />
+  <Asset Name="..\menshen.ini" Type="Physical" Author="franksav" FileSize="3953" ModificationTime="2006-03-03T01:28:36.8204598-08:00" CRC="D70BF541DD3ABAAF374BF8F5F68FA6AB" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Menshen.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="MenshenL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="MenshenL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="MenshenX.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshen.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="menshenFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="menshenFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="menshenFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="MenShen" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

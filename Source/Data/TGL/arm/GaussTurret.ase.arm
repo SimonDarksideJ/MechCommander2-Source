@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D9D3E40B426941F6E7F56E824CC0ABCD" />
+  <Asset Name="..\GaussTurret.ase" Type="Physical" Author="ngauvin" FileSize="58756" ModificationTime="2006-02-01T10:54:54.185746-08:00" CRC="38B904BC5528824D36ADEA25E55FAEFF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Turrets2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5100A97A613BC31B65F0DEB192CC074C" />
+  <Asset Name="..\crashnoseenc.ini" Type="Physical" Author="franksav" FileSize="389" ModificationTime="2006-03-03T01:28:18.7737003-08:00" CRC="788C6092D0685440B83E00F767BAF54F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="crashnoseEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

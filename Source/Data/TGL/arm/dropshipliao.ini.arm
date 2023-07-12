@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="ACAB61CA81C186C87A6ECB4BF3A89B7E" />
+  <Asset Name="..\dropshipliao.ini" Type="Physical" Author="franksav" FileSize="581" ModificationTime="2006-03-03T01:28:22.0549293-08:00" CRC="3A9160183330C69DBE533C26B72051DB" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="dropshipLiao.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="dropshipLiaoL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="dropshipLiaoL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="dropshipLiaoX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="dropshipLiaodam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="dropshipLiaodamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Liao Dropship" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

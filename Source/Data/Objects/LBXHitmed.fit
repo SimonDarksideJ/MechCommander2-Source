@@ -1,0 +1,26 @@
+FITini
+
+// This is the IS Medium LBX Hit Explosion Data File
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 					= "mlbxhit"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 902				// ID number for this object type
+l Appearance				= 0x020003D1		// dec= 977
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[ExplosionData]
+ul DmgLevel					= 2
+ul SoundEffectId			= 25
+l ExplosionRadius			= 30
+f DamageChunkSize			= 2.0
+		
+FITend
+

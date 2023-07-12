@@ -1,0 +1,3654 @@
+FITini 
+
+// comment code:
+// PlayerParam = used to signify pieces that are in each player-specific parameter row  
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Edits]
+l EditCount = 4
+
+[Edit0] // dropweight under map
+l XLocation = 627
+l YLocation = 204
+l Width = 122
+l Height = 17
+l Color = 0xff5C96C2// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xff5C96C2
+l SelectedColor = 0xff000000
+l Font = 26233 // agencyfb
+
+
+[Edit1] // cbills under map
+l XLocation = 627
+l YLocation = 230
+l Width = 122
+l Height = 17
+l Color = 0xff5C96C2// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xff5C96C2
+l SelectedColor = 0xff000000
+l Font = 26233 // arialnarrow8
+
+
+
+[Edit2] // time limit
+l XLocation = 627
+l YLocation = 256
+l Width = 109
+l Height = 18
+l Color = 0xff5C96C2// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xff5C96C2
+l SelectedColor = 0xff000000
+l Font = 26233 // arialnarrow8
+
+
+
+[Edit3] // resource points
+l XLocation = 627
+l YLocation = 282
+l Width = 122
+l Height = 17
+l Color = 0xff5C96C2// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xff5C96C2
+l SelectedColor = 0xff000000
+l Font = 26233 // arialnarrow8
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Buttons]
+l Buttoncount = 29
+
+[Button0] // main menu button
+
+l ID = 57 // MB_MSG_MAINMENU
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+st FileName = "mcl_mp_param_3.tga"
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 26176 // use AgencyFB17
+
+l HelpCaption = 27104
+l HelpDesc = 27113
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 128
+
+l UPressed = 0
+l VPressed = 168
+
+l UHighlight = 0
+l VHighlight = 128
+
+l UDisabled = 0
+l VDisabled = 168
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6B6B6B
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6B6B6B
+
+
+[Button1] // load map button 
+l ID = 101 // /*load map button*/
+l XLocation = 625
+l YLocation = 91
+l Width = 150
+l Height = 54
+
+l XTextLocation = 632
+l YTextLocation = 102
+l TextWidth = 138
+l TextHeight = 32
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26174
+l TextID = 26174
+l Font = 26177 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26343
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 150
+l VHeight = 54
+
+l UNormal = 86
+l VNormal = 118
+
+l UPressed = 86
+l VPressed = 118
+
+l UHighlight = 86
+l VHighlight = 118
+
+l UDisabled = 86
+l VDisabled = 118
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6B6B6B
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6B6B6B
+
+
+
+[Button2] // map info button
+l XLocation = 625
+l YLocation = 159
+l Width = 150
+l Height = 32
+l ID = 121
+
+l XTextLocation = 630
+l YTextLocation = 164
+l TextWidth = 140
+l TextHeight = 22
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID = 26175
+l Font = 26178 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26344
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 150
+l VHeight = 32
+
+l UNormal = 86
+l VNormal = 172
+
+l UPressed = 86
+l VPressed = 172
+
+l UHighlight = 86
+l VHighlight = 172
+
+l UDisabled = 86
+l VDisabled = 172
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff5c69c2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button3] // up button arrow for map info cbills
+l XLocation = 758
+l YLocation = 227
+l Width = 16
+l Height = 10
+l ID = 200
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 98
+
+l UPressed = 218
+l VPressed = 98
+
+l UHighlight = 218
+l VHighlight = 98
+
+l UDisabled = 218
+l VDisabled = 98
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button4] // down arrow button for map info cbills
+l XLocation = 758
+l YLocation = 238
+l Width = 16
+l Height = 10
+l ID = 201
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 108
+
+l UPressed = 218
+l VPressed = 108
+
+l UHighlight = 218
+l VHighlight = 108
+
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+[Button5] // up button arrow for map info time limit
+l XLocation = 758
+l YLocation = 253
+l Width = 16
+l Height = 10
+l ID = 202
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 98
+
+l UPressed = 218
+l VPressed = 98
+
+l UHighlight = 218
+l VHighlight = 98
+
+l UDisabled = 218
+l VDisabled = 98
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button6] // down arrow button for map info cbills
+l XLocation = 758
+l YLocation = 264
+l Width = 16
+l Height = 10
+l ID = 203
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 108
+
+l UPressed = 218
+l VPressed = 108
+
+l UHighlight = 218
+l VHighlight = 108
+
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button7] // up button arrow for map info cbills
+l XLocation = 758
+l YLocation = 279
+l Width = 16
+l Height = 10
+l ID = 204
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 98
+
+l UPressed = 218
+l VPressed = 98
+
+l UHighlight = 218
+l VHighlight = 98
+
+l UDisabled = 218
+l VDisabled = 98
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button8] // down arrow button for map info cbills
+l XLocation = 758
+l YLocation = 290
+l Width = 16
+l Height = 10
+l ID = 205
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 108
+
+l UPressed = 218
+l VPressed = 108
+
+l UHighlight = 218
+l VHighlight = 108
+
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button9] //  check box for airstrikes
+l XLocation = 513
+l YLocation = 319
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 206
+
+l XTextLocation = 530
+l YTextLocation = 316
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26161
+l TextID = 26161
+l Font = 26179  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button10] // check box for sensor probe
+l XLocation = 644
+l YLocation = 319
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 207	
+
+l XTextLocation = 661
+l YTextLocation = 316
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26167
+l TextID = 26167
+l Font = 26180  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+[Button11] // check box for minelayers
+l XLocation = 513
+l YLocation = 344
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 208
+
+
+l XTextLocation = 530
+l YTextLocation = 341
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26162
+l TextID = 26162
+l Font = 26181  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button12] // check box for repair vehicles
+l XLocation = 644
+l YLocation = 344
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 209
+
+
+l XTextLocation = 661
+l YTextLocation = 341
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26168
+l TextID = 26168
+l Font = 26182  // use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button13] // lock game button
+l XLocation = 102
+l YLocation = 420
+l Width = 128
+l Height = 59
+b Toggle = 1
+l ID = 210
+
+l color = 0
+b outline = FALSE
+l HelpDesc = 26370
+
+st FileName = "mcl_mp_param_3.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 128
+l VPressed = 64
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 0
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 15
+l NormalColor1 = 0xffffffff
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6b6b6b
+f PressedTime1 = 0.2
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xff6b6b6b
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xffffffff
+f DisabledTime1 = 15
+l DisabledColor1 = 0xffffffff
+
+[Button14] // remove player
+l XLocation = 279
+l YLocation = 420
+l Width = 128
+l Height = 59
+l ID = 211
+
+l color = 0
+b outline = FALSE
+l HelpDesc = 26371
+
+st FileName = "mcl_mp_param_3.tga"
+
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 128
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 64
+
+l UHighlight = 128
+l VHighlight = 0
+
+l UDisabled = 128
+l VDisabled = 0
+
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffffffff
+f NormalTime1 = 15
+l NormalColor1 = 0xffffffff
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff6b6b6b
+f PressedTime1 = 0.2
+l PressedColor1 = 0xffffffff
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xff6b6b6b
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xffffffff
+
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xffffffff
+f DisabledTime1 = 15
+l DisabledColor1 = 0xffffffff
+
+
+
+
+
+
+
+[Button15] // check box for scouts
+l XLocation = 513
+l YLocation = 369
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 212
+
+
+l XTextLocation = 530
+l YTextLocation = 366
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26163
+l TextID = 26163
+l Font = 26183  // use AgencyFB11
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+l Alignment = 0
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button16] // check box for recovery team
+l XLocation = 644
+l YLocation = 369
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 213
+
+
+l XTextLocation = 661
+l YTextLocation = 366
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26169
+l TextID = 26169
+l Font = 26184  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button17] // check box for guard towers
+l XLocation = 513
+l YLocation = 394
+l Width = 12
+l Height = 12  
+b Toggle = 1
+l ID = 214
+
+
+l XTextLocation = 530
+l YTextLocation = 391
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l TextID = 26164
+l Font = 26185  // use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button18] // check box for resource buildings
+l XLocation = 644
+l YLocation = 394
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 215
+
+
+l XTextLocation = 661
+l YTextLocation = 391
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26170
+l TextID = 26170
+l Font = 26186  // use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+[Button19] // check box for unlimited ammo
+l XLocation = 513
+l YLocation = 419
+l Width = 12
+l Height = 12  
+b Toggle = 1
+l ID = 216
+
+
+l XTextLocation = 530
+l YTextLocation = 416
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26165
+l TextID = 26165
+l Font = 26187  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button20] // check box for variants
+l XLocation = 644
+l YLocation = 419
+l Width = 12
+l Height = 12
+b Toggle = 1
+l ID = 217
+
+
+l XTextLocation = 661
+l YTextLocation = 416
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26171
+l TextID = 26171
+l Font = 26188  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button21] // check box for all tech
+l XLocation = 644
+l YLocation = 444
+l Width = 12
+l Height = 12  
+b Toggle = 1
+l ID = 218
+
+
+l XTextLocation = 661
+l YTextLocation = 441
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26166
+l TextID = 26166
+l Font = 26189  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button22] // use quickstart button
+l XLocation = 519
+l YLocation = 476
+l Width = 24
+l Height = 24
+b Toggle = 1
+l ID = 219
+
+l XTextLocation = 553
+l YTextLocation = 479
+l TextWidth = 221
+l TextHeight = 19
+l color  = 0xff005392
+b TextOutline = FALSE
+l Alignment = 0
+
+l TextID = 26172
+l Font = 26190 // use AgencyFB17
+
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 24
+l VHeight = 24
+
+l UNormal = 60
+l VNormal = 226
+
+l UPressed = 84
+l VPressed = 226
+
+l UHighlight = 60
+l VHighlight = 226
+
+l UHighlightPressed = 84
+l VHighlightPressed = 226
+
+l UDisabled = 84
+l VDisabled = 226
+
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button23] // back button
+
+l ID = 51 // MB_MSG_PREV
+l XLocation = 5
+l YLocation = 536
+l Width = 128
+l Height = 59
+
+l XTextLocation = 33
+l YTextLocation = 550
+l TextWidth = 86
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27101
+l Font = 26191 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26372
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 90
+l VNormal = 0
+
+l UPressed = 90
+l VPressed = 59
+
+l UHighlight = 90
+l VHighlight = 0
+
+l UDisabled = 90
+l VDisabled = 59
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xff5c69c2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button23Bmp0]
+
+// coordinates for back arrow
+l XLocation = 21
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392
+
+st FileName = "mcl_mp_param_3.tga"
+
+b AnimateBmp = 1
+
+l UNormal = 178
+l VNormal = 134
+
+l UWidth = 11
+l VHeight = 22
+
+
+[Button24] // next button
+
+l ID = 50 // MB_MSG_NEXT
+
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xffff0000
+b TextOutline = TRUE
+
+l TextID = 27171
+l Font = 26191 // use AgencyFB17
+
+l HelpCaption = 27100
+l HelpDesc = 26373
+
+st FileName = "mcl_mp_param_4.tga"
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 64
+
+l UPressed = 0
+l VPressed = 182
+
+l UHighlight = 0
+l VHighlight = 123
+
+l UDisabled = 0
+l VDisabled = 182
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = FALSE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC61C00
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC61C00
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xff000000
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC61C00
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xff000000
+f HighlightTime1 = 0.2
+l HighlightColor1 = 0xffC61C00
+f HighlightTime2 = 0.4
+l HighlightColor2 = 0xff000000
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = FALSE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 0.2
+l DisabledColor1 = 0xff373737
+
+
+[Button24Bmp0]
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xffC61C00  
+
+st FileName = "mcl_mp_param_3.tga"
+
+b AnimateBmp = 1
+
+l UNormal = 189
+l VNormal = 156
+l UWidth = 11
+l VHeight = 22
+
+
+[Button25] // player prefs button
+
+l XLocation = 428
+l YLocation = 8
+l Width = 176
+l Height = 40
+l UWidth = 176
+l VHeight = 40
+st FileName = "mcl_mp_param_3.tga"
+l ID = 120
+
+
+l XTextLocation = 437
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 26173
+l Font = 26192 // use AgencyFB17
+
+l HelpCaption = 27104
+l HelpDesc = 26374
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 128
+
+l UPressed = 0
+l VPressed = 168
+
+l UHighlight = 0
+l VHighlight = 128
+
+l UDisabled = 0
+l VDisabled = 168
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6B6B6B
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6B6B6B
+
+
+
+
+
+[Button26] // check box for rp's for kills
+l XLocation = 513
+l YLocation = 444
+l Width = 12
+l Height = 12  
+b Toggle = 1
+l ID = 220
+
+
+l XTextLocation = 530
+l YTextLocation = 441
+l TextWidth = 113
+l TextHeight = 17
+l color  = 0xff005392
+b TextOutline = FALSE
+
+l ID = 26166
+l TextID = 26222
+l Font = 26223  //  use AgencyFB11
+l Alignment = 0
+
+b AnimateBmp = 1 // animate the bmp  
+b AnimateText = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 12
+l VHeight = 12
+
+l UNormal = 218
+l VNormal = 86
+
+l UPressed = 230
+l VPressed = 86
+
+l UHighlight = 218
+l VHighlight = 86
+
+l UHighlightPressed = 230
+l VHighlightPressed = 86
+
+l UDisabled = 218
+l VDisabled = 86
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 15
+l NormalColor1 = 0xff005392
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff005392
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l HighlightPressedAnimationTimeStamps = 3
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffffffff
+f HighlightPressedTime1 = 0.5
+l HighlightPressedColor1 = 0xff5C96C2
+f HighlightPressedTime2 = 0.75
+l HighlightPressedColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff005392
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff005392
+
+
+[Button27] // up button arrow for map info drop weight
+l XLocation = 758
+l YLocation = 201
+l Width = 16
+l Height = 10
+l ID = 198
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 98
+
+l UPressed = 218
+l VPressed = 98
+
+l UHighlight = 218
+l VHighlight = 98
+
+l UDisabled = 218
+l VDisabled = 98
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button28] // down arrow button for map info drop weight
+l XLocation = 758
+l YLocation = 212
+l Width = 16
+l Height = 10
+l ID = 199
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 108
+
+l UPressed = 218
+l VPressed = 108
+
+l UHighlight = 218
+l VHighlight = 108
+
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff5C96C2
+f NormalTime1 = 15
+l NormalColor1 = 0xff5C96C2
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[Rects]
+l Rectcount = 46
+
+[Rect0] // outline around tac map
+l XLocation = 513
+l YLocation = 91
+l Width = 99
+l Height = 99
+l Color = -16765099
+b outline = TRUE
+l HelpDesc = 26388
+
+[Rect1] // outline around mission cbills
+l XLocation = 625
+l YLocation = 226
+l Width = 149
+l Height = 22
+l Color = -16765099
+b outline = TRUE
+
+[Rect2] // divider between mission cbills and up and down buttons
+l XLocation = 757
+l YLocation = 227
+l Width = 0
+l Height = 20
+l Color = -16699563
+b outline = TRUE
+
+[Rect3] // horizontal divider between mission cbill buttons
+l XLocation = 758
+l YLocation = 237
+l Width = 15
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+[Rect4] // outline around resource pts gadget
+l XLocation = 625
+l YLocation = 278
+l Width = 149
+l Height = 22
+l Color = -16765099
+b outline = TRUE
+
+[Rect5] // divider between resource pts and up/down buttons
+l XLocation = 757
+l YLocation = 279
+l Width = 0
+l Height = 20
+l Color = -16699563
+b outline = TRUE
+
+[Rect6] // horizontal divider between up/down buttons
+l XLocation = 758
+l YLocation = 289
+l Width = 15
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+
+
+[Rect7] // outline around time limit gadget
+l XLocation = 625
+l YLocation = 252
+l Width = 149
+l Height = 22
+l Color = -16765099
+b outline = TRUE
+
+[Rect8] // divider between time limit and up/down buttons
+l XLocation = 757
+l YLocation = 253
+l Width = 0
+l Height = 20
+l Color = -16699563
+b outline = TRUE
+
+[Rect9] // horizontal divider between time limit up/down buttons
+l XLocation = 758
+l YLocation = 263
+l Width = 15
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+[Rect10] // rectangle around host ip address readout.
+l XLocation = 25
+l YLocation = 489
+l Width = 456
+l Height = 19
+l Color = 0xff43311C
+b outline = TRUE
+
+
+
+
+[Rect11] // divider 2- cbills underline
+l XLocation = 513
+l YLocation = 248
+l Width = 110
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+
+[Rect12] // divider 3- time limit underline
+l XLocation = 513
+l YLocation = 274
+l Width = 110
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+
+[Rect13] // divider 4- resource pts underline
+l XLocation = 513
+l YLocation = 300
+l Width = 110
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+[Rect14] // outline around ip address
+l XLocation = 25
+l YLocation = 489
+l Width = 456
+l Height = 19
+l Color = 0xff43311c
+b outline = TRUE
+l HelpDesc = 26389
+
+
+[Rect15] // divider 5- drop weight underline
+l XLocation = 513
+l YLocation = 222
+l Width = 110
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+[Rect16] // drop weight outline
+l XLocation = 625
+l YLocation = 200
+l Width = 149
+l Height = 22
+l Color = -16634027
+b outline = TRUE
+
+
+[Rect17] // drop weight vert divider
+l XLocation = 757
+l YLocation = 201
+l Width = 0
+l Height = 20
+l Color = -16634027
+b outline = TRUE
+
+
+[Rect18] // drop weight horiz. divider
+l XLocation = 758
+l YLocation = 211
+l Width = 15
+l Height = 0
+l Color = -16634027
+b outline = TRUE
+
+
+[Rect19] // quickstart outline rect
+l XLocation = 513
+l YLocation = 470
+l Width = 260
+l Height = 35
+l Color = 0xff002f55
+b outline = TRUE
+l HelpDesc = 26390
+
+[Rect20] // player
+l XLocation = 23
+l YLocation = 85
+l Width = 197
+l Height = 323
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26383
+
+[Rect21] // team
+l XLocation = 225
+l YLocation = 85
+l Width = 39
+l Height = 323
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26384
+
+[Rect22] // faction
+l XLocation = 268
+l YLocation = 85
+l Width = 83
+l Height = 323
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26385
+
+[Rect23] // c-bills
+l XLocation = 359
+l YLocation = 85
+l Width = 63
+l Height = 323
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26386
+
+[Rect24] // ready
+l XLocation = 439
+l YLocation = 85
+l Width = 37
+l Height = 323
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26387
+
+[Rect25] // drop weight
+l XLocation = 510
+l YLocation = 203
+l Width = 265
+l Height = 19
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26391
+
+[Rect26] // c-bills
+l XLocation = 510
+l YLocation = 223
+l Width = 265
+l Height = 25
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26392
+
+[Rect27] // time limit
+l XLocation = 510
+l YLocation = 249
+l Width = 265
+l Height = 25
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26393
+
+[Rect28] // resource points
+l XLocation = 510
+l YLocation = 275
+l Width = 265
+l Height = 25
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26394
+
+[Rect29] // airstrikes
+l XLocation = 510
+l YLocation = 316
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26395
+
+[Rect30] // sensor probe
+l XLocation = 642
+l YLocation = 316
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26401
+
+[Rect31] // minelayer
+l XLocation = 510
+l YLocation = 342
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26396
+
+[Rect32] // repair truck
+l XLocation = 642
+l YLocation = 342
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26402
+
+[Rect33] // scout copter
+l XLocation = 510
+l YLocation = 368
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26397
+
+[Rect34] // salvage craft
+l XLocation = 642
+l YLocation = 368
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26403
+
+[Rect35] // fixed artillery
+l XLocation = 510
+l YLocation = 392
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26398
+
+[Rect36] // resource bldg
+l XLocation = 642
+l YLocation = 392
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26404
+
+[Rect37] // unlimited ammo
+l XLocation = 510
+l YLocation = 417
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26399
+
+[Rect38] // no variants
+l XLocation = 642
+l YLocation = 417
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26405
+
+[Rect39] // rp for mechs
+l XLocation = 510
+l YLocation = 442
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26400
+
+[Rect40] // all tech
+l XLocation = 642
+l YLocation = 442
+l Width = 120
+l Height = 16
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26406
+
+[Rect41] // deco rect near big buttons- 1-LEFT
+l XLocation = 20
+l YLocation = 425
+l Width = 76
+l Height = 48
+l Color = 0xff43311C
+b outline = TRUE
+l HelpDesc = 0
+
+
+[Rect42] // deco rect near big buttons- 2- under lock button
+l XLocation = 102
+l YLocation = 425
+l Width = 127
+l Height = 48
+l Color = 0xff43311C
+b outline = TRUE
+l HelpDesc = 26370
+
+[Rect43] // deco rect near big buttons- 3-MIDDLE
+l XLocation = 235
+l YLocation = 425
+l Width = 38
+l Height = 48
+l Color = 0xff43311C
+b outline = TRUE
+l HelpDesc = 0
+
+
+[Rect44] // deco rect near big buttons- 4-under cut button
+l XLocation = 279
+l YLocation = 425
+l Width = 127
+l Height = 48
+l Color = 0xff43311C
+b outline = TRUE
+l HelpDesc = 26371
+
+
+
+
+[Rect45] // deco rect near big buttons- 4-under cut button
+l XLocation = 412
+l YLocation = 425
+l Width = 75
+l Height = 48
+l Color = 0xff43311C
+b outline = TRUE
+l HelpDesc = 0
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+[Statics]
+l Staticcount = 33
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_param_1.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_param_1.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_param_1.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 188
+l VNormal = 159
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mp_param_1.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 80
+l VNormal = 0
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mp_param_2.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 188
+l Height = 32
+l UNormal = 0
+l VNormal = 159
+l UWidth = 188
+l VHeight = 32
+st FileName = "mcl_mp_param_1.tga"
+
+[Static6]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 80
+l VNormal = 32
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mp_param_2.tga"
+
+[Static7]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_mp_param_1.tga"
+
+[Static8]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 18
+l UNormal = 0
+l VNormal = 42
+l UWidth = 256
+l VHeight = 18
+st FileName = "mcl_mp_param_1.tga"
+
+[Static9]
+l XLocation = 512
+l YLocation = 40
+l Width = 102
+l Height = 8
+l UNormal = 0
+l VNormal = 245
+l UWidth = 102
+l VHeight = 8
+st FileName = "mcl_mp_param_1.tga"
+
+[Static10]
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 10
+l UNormal = 0
+l VNormal = 60
+l UWidth = 256
+l VHeight = 10
+st FileName = "mcl_mp_param_1.tga"
+
+[Static11]
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 10
+l UNormal = 188
+l VNormal = 167
+l UWidth = 32
+l VHeight = 10
+st FileName = "mcl_mp_param_1.tga"
+
+[Static12]
+l XLocation = 0
+l YLocation = 58
+l Width = 15
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 15
+l VHeight = 256
+st FileName = "mcl_mp_param_2.tga"
+
+[Static13]
+l XLocation = 493
+l YLocation = 58
+l Width = 10
+l Height = 256
+l UNormal = 15
+l VNormal = 0
+l UWidth = 10
+l VHeight = 256
+st FileName = "mcl_mp_param_2.tga"
+
+[Static14]
+l XLocation = 785
+l YLocation = 58
+l Width = 15
+l Height = 256
+l UNormal = 25
+l VNormal = 0
+l UWidth = 15
+l VHeight = 256
+st FileName = "mcl_mp_param_2.tga"
+
+[Static15] // tac map
+l XLocation = 515
+l YLocation = 93
+l Width = 96
+l Height = 96
+
+[Static16]
+l XLocation = 513
+l YLocation = 235
+l Width = 0
+l Height = 0
+l UNormal = 247
+l VNormal = 102
+l UWidth = 0
+l VHeight = 0
+st FileName = "mcl_mp_param_1.tga"
+
+[Static17]
+l XLocation = 0
+l YLocation = 314
+l Width = 15
+l Height = 190
+l UNormal = 40
+l VNormal = 0
+l UWidth = 15
+l VHeight = 190
+st FileName = "mcl_mp_param_2.tga"
+
+[Static18]
+l XLocation = 493
+l YLocation = 314
+l Width = 10
+l Height = 190
+l UNormal = 55
+l VNormal = 0
+l UWidth = 10
+l VHeight = 190
+st FileName = "mcl_mp_param_2.tga"
+
+[Static19]
+l XLocation = 785
+l YLocation = 314
+l Width = 15
+l Height = 222
+l UNormal = 65
+l VNormal = 0
+l UWidth = 15
+l VHeight = 222
+st FileName = "mcl_mp_param_2.tga"
+
+[Static20]
+l XLocation = 0
+l YLocation = 504
+l Width = 256
+l Height = 32
+l UNormal = 0
+l VNormal = 70
+l UWidth = 256
+l VHeight = 32
+st FileName = "mcl_mp_param_1.tga"
+
+[Static21]
+l XLocation = 256
+l YLocation = 504
+l Width = 247
+l Height = 42
+l UNormal = 0
+l VNormal = 102
+l UWidth = 247
+l VHeight = 42
+st FileName = "mcl_mp_param_1.tga"
+
+[Static22]
+l XLocation = 503
+l YLocation = 519
+l Width = 163
+l Height = 27
+l UNormal = 0
+l VNormal = 191
+l UWidth = 163
+l VHeight = 27
+st FileName = "mcl_mp_param_1.tga"
+
+[Static23]
+l XLocation = 666
+l YLocation = 519
+l Width = 119
+l Height = 17
+l UNormal = 0
+l VNormal = 218
+l UWidth = 119
+l VHeight = 17
+st FileName = "mcl_mp_param_1.tga"
+
+[Static24]
+l XLocation = 0
+l YLocation = 536
+l Width = 5
+l Height = 64
+l UNormal = 80
+l VNormal = 72
+l UWidth = 5
+l VHeight = 64
+st FileName = "mcl_mp_param_2.tga"
+
+[Static25]
+l XLocation = 133
+l YLocation = 536
+l Width = 123
+l Height = 10
+l UNormal = 0
+l VNormal = 235
+l UWidth = 123
+l VHeight = 10
+st FileName = "mcl_mp_param_1.tga"
+
+[Static26]
+l XLocation = 794
+l YLocation = 536
+l Width = 6
+l Height = 64
+l UNormal = 80
+l VNormal = 136
+l UWidth = 6
+l VHeight = 64
+st FileName = "mcl_mp_param_2.tga"
+
+[Static27]
+l XLocation = 133
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 40
+l VNormal = 190
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mp_param_2.tga"
+
+[Static28]
+l XLocation = 656
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 50
+l VNormal = 190
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mp_param_2.tga"
+
+[Static29]
+l XLocation = 5
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 144
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_param_1.tga"
+
+[Static30]
+l XLocation = 261
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 149
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_param_1.tga"
+
+[Static31]
+l XLocation = 517
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 154
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_param_1.tga"
+
+[Static32]
+l XLocation = 773
+l YLocation = 595
+l Width = 21
+l Height = 5
+l UNormal = 188
+l VNormal = 177
+l UWidth = 21
+l VHeight = 5
+st FileName = "mcl_mp_param_1.tga"
+
+
+
+
+[Static33]
+little static up near the main header area.
+l XLocation = 418
+l YLocation = 8
+l Width = 8
+l Height = 32
+l UNormal = 242
+l VNormal = 86
+l UWidth = 8
+l VHeight = 32
+st FileName = "mcl_mp_param_2.tga"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Texts]
+l Textcount = 14
+
+[Text0] // main header 
+l XLocation = 18
+l YLocation = 12
+l Width = 404
+l Height = 26
+l Color = -30208
+b outline = FALSE
+l Font = 26193  // use agencyfb17
+l TextID = 26150
+l Alignment = 0
+l HelpDesc = 26078
+
+[Text1] // map name header
+l XLocation = 513
+l YLocation = 63
+l Width = 267
+l Height = 22
+l Color = -9589796
+b outline = FALSE
+l Font = 26194 // use agencyfb14
+l TextID = 26051
+l Alignment = 0
+
+
+[Text2] // player header
+l XLocation = 25
+l YLocation = 63
+l Width = 196
+l Height = 19
+l Color = -30208
+b outline = FALSE
+l Font = 26195	 // use agencyfb14
+l TextID = 26151
+l Alignment = 0
+
+
+[Text3] //  team header 
+l XLocation = 226
+l YLocation = 66
+l Width = 38
+l Height = 19
+l Color = -30207
+b outline = FALSE
+l Font = 26196	 // use agencyfb11
+l TextID = 26152
+l Alignment = 2
+
+[Text4] // faction header
+l XLocation = 269
+l YLocation = 66
+l Width = 84
+l Height = 19
+l Color = -30206
+b outline = FALSE
+l Font = 26197 // use agencyfb11
+l TextID = 26153
+l Alignment = 2
+ 
+[Text5] // cbills header
+l XLocation = 356
+l YLocation = 66
+l Width = 68
+l Height = 19
+l Color = -30205
+b outline = FALSE
+l Font = 26198 // use agencyfb11
+l TextID = 26154
+l Alignment = 2
+
+[Text6] // ready header
+l XLocation = 433
+l YLocation = 66
+l Width = 52
+l Height = 19
+l Color = -30204
+b outline = FALSE
+l Font = 26199 // use agencyfb11
+l TextID = 26155
+l Alignment = 2
+
+[Text7] // mission type: whatever the mission type is -----defunct
+l XLocation = 513
+l YLocation = 85
+l Width = 267
+l Height = 18
+l Color = 0x00000000
+b outline = FALSE
+l Font = 26200// use agencyfb11
+l TextID = 26051
+l Alignment = 0
+
+
+
+[Text8] // c-bills map info header
+l XLocation = 513
+l YLocation = 230
+l Width = 109
+l Height = 18
+l Color = -16755822
+b outline = FALSE
+l Font = 26202 // use agency fb11 
+l TextID = 26156
+l Alignment = 0
+
+[Text9]// time limit map info header
+l XLocation = 513
+l YLocation = 256
+l Width = 109
+l Height = 18
+l Color = 0xff005392
+b outline = FALSE
+l Font = 26203 // use agency fb11
+l TextID = 26157
+l Alignment = 0
+
+[Text10] // resource pts header
+l XLocation = 513
+l YLocation = 282
+l Width = 109
+l Height = 18
+l Color = -16755822
+b outline = FALSE
+l Font = 26206 // use agency fb11
+l TextID = 26160
+l Alignment = 0
+
+[Text11] // host ip address readout
+l XLocation = 30
+l YLocation = 492
+l Width = 456
+l Height = 19
+l Color = 0xffc66600
+b outline = FALSE
+l Font = 26207 // use agency fb 11
+l TextID = 26051
+l Alignment = 0
+
+[Text12] // help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE 
+l Font = 26208 // support available header
+l TextID = 26051
+l Alignment = 0
+
+
+[Text13] // drop weight readout
+l XLocation = 513
+l YLocation = 204
+l Width = 109
+l Height = 18
+l Color = -16755822
+b outline = FALSE
+l Font = 26225 // use agency fb11 
+l TextID = 26224
+l Alignment = 0
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[PlayerParams]
+
+
+
+
+[playerparamEdits]
+l EditCount = 1
+
+[playerparamEdit0] // player param cbills
+l XLocation = 360
+l YLocation = 98
+l Width = 39
+l Height = 16
+l Color = 0xffc66600// text color  
+l CursorColor = 0xffffffff
+l HighlightColor = 0xffc66600
+l SelectedColor = 0xff000000
+l Font = 26233 // agencyfb
+
+
+
+
+
+// PlayerParam
+[PlayerParamsCBillsSpinnerUpButton]  // up arrow button for cbills gadget
+l XLocation = 405
+l YLocation = 91
+l Width = 16
+l Height = 10
+l ID = 250
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 98
+
+l UPressed = 218
+l VPressed = 98
+
+l UHighlight = 218
+l VHighlight = 98
+
+l UDisabled = 218
+l VDisabled = 98
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffff8a00
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+
+
+// PlayerParam
+[PlayerParamsCBillsSpinnerDownButton] // down arrow for c-bills gadget
+l XLocation = 405
+l YLocation = 109
+l Width = 16
+l Height = 10
+l ID = 251
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 16
+l VHeight = 10
+
+l UNormal = 218
+l VNormal = 108
+
+l UPressed = 218
+l VPressed = 108
+
+l UHighlight = 218
+l VHighlight = 108
+
+l UDisabled = 218
+l VDisabled = 108
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffc66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffc66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffff8a00
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffff8a00
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+// PlayerParam
+[PlayerParamsReadyButton] // check box for player ready
+l XLocation = 445
+l YLocation = 93
+l Width = 24
+l Height = 24
+b Toggle = 1
+
+st FileName = "mcl_mp_param_2.tga"
+
+l UWidth = 24
+l VHeight = 24
+
+l UNormal = 60
+l VNormal = 226
+
+l UPressed = 84
+l VPressed = 226
+
+l UHighlight = 60
+l VHighlight = 226
+
+l UHighlightPressed = 84
+l VHighlightPressed = 226
+
+l UDisabled = 60
+l VDisabled = 226
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 15
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffff8a00
+f PressedTime1 = 0.4
+l PressedColor1 = 0xffff8a00
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffC66600
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffC66600
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffC66600
+
+
+l HighlightPressedAnimationTimeStamps = 2
+b HighlightPressedAnimationLoops = TRUE
+f HighlightPressedTime0 = 0.0
+l HighlightPressedColor0 = 0xffff8a00
+f HighlightPressedTime1 = 0.4
+l HighlightPressedColor1 = 0xffff8a00
+
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+
+[PlayerParamsRects]
+l rectCount = 9
+
+// PlayerParam
+[PlayerParamsRect0] // player name, unit icon, etc outline 
+l XLocation = 25
+l YLocation = 87
+l Width = 195
+l Height = 35
+l Color = -12373730
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect1] // cbills box
+l XLocation = 358
+l YLocation = 87
+l Width = 63
+l Height = 35
+l Color = -12373732
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect2] // outline around ready button
+l XLocation = 439
+l YLocation = 87
+l Width = 35
+l Height = 35
+l Color = -11980516
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect3] // divider between unit icon and player color
+l XLocation = 60
+l YLocation = 88
+l Width = 0
+l Height = 33
+l Color = -12242660
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect4] // player color
+l XLocation = 62
+l YLocation = 89
+l Width = 14
+l Height = 32
+l Color = -65536 // whatever color the player picks
+b outline = FALSE
+
+// PlayerParam
+[PlayerParamsRect5] // divider between player color and team color
+l XLocation = 77
+l YLocation = 88
+l Width = 0
+l Height = 33
+l Color = -12111588
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect6] // team color
+l XLocation = 79
+l YLocation = 89
+l Width = 140
+l Height = 32
+l Color = -62452 // whatever color the player picks
+b outline = FALSE
+
+// PlayerParam
+[PlayerParamsRect7] // divider between # and buttons for player cbills
+l XLocation = 404
+l YLocation = 88
+l Width = 0
+l Height = 33
+l Color = 0xff43311c
+b outline = TRUE
+
+// PlayerParam
+[PlayerParamsRect8] // horizontal divider between player cbills buttons
+l XLocation = 405
+l YLocation = 104
+l Width = 16
+l Height = 0
+l Color = 0xff43311c
+b outline = TRUE
+
+
+
+
+
+
+
+[PlayerParamsStatics]
+l staticCount = 1
+
+// PlayerParam
+[PlayerParamsStatic0] // unit icon insignia
+l XLocation = 27
+l YLocation = 89
+l Width = 32
+l Height = 32
+
+l UNormal = 0
+l VNormal = 0
+l UWidth = 32
+l VHeight = 32
+
+
+
+[PlayerParamsTexts]
+l TextCount = 2
+
+
+// PlayerParam
+[PlayerParamsText0]  // Player name
+l XLocation = 82
+l YLocation = 91
+l Width = 135
+l Height = 18
+l Color = -1
+b outline = FALSE
+l Font = 26209 // use agencyfb11 - needs to have drop shadow
+l TextID = 26051
+l Alignment = 0
+
+
+
+// PlayerParam
+[PlayerParamsText1]  // unit name
+l XLocation = 82
+l YLocation = 109
+l Width = 135
+l Height = 12
+l Color = -1
+b outline = FALSE
+l Font = 26211 // use arialnarrow8- needs drop shadow
+l TextID = 26051 
+l Alignment = 0
+
+
+
+// PlayerParam
+[PlayerParamsTeamNumberDropList] // team number drop down
+
+l XLocation = 226
+l YLocation = 87
+
+st FileName = "mcl_mp_param_combobox0"
+
+// PlayerParam
+[PlayerParamsFactionDropList] // faction drop down
+
+l XLocation = 269
+l YLocation = 87
+
+st FileName = "mcl_mp_param_combobox1"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+FITend 

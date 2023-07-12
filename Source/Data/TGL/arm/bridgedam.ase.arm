@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9EB0F0452E3F448E95FEE0AAAD445CD3" />
+  <Asset Name="..\bridgedam.ase" Type="Physical" Author="ngauvin" FileSize="104028" ModificationTime="2006-02-01T10:54:37.9825173-08:00" CRC="2E528072E8D2B4E9BF67CF93DD418290" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Bridge.TGA" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="ED47C531054B04AC1C807794C5A5E54A" />
+  <Asset Name="..\MechPiece_Arm2.ini" Type="Physical" Author="franksav" FileSize="192" ModificationTime="2006-03-03T01:28:35.9298405-08:00" CRC="2FE927BC0A9C8EDA54C46C12497FD47C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="mechpiece_arm2.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="mechpiece_arm2X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Omnimech Arm" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

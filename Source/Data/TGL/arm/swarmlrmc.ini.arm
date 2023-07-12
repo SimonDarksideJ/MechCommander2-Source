@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E380975D2E2AD66DCA05448A825D86B9" />
+  <Asset Name="..\swarmlrmc.ini" Type="Physical" Author="franksav" FileSize="336" ModificationTime="2006-03-03T01:28:52.5859839-08:00" CRC="B9CE08023B7E169BEC049B41571AE514" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="SwarmLRMC.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="SrmcL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="SrmcL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SrmcX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="SwarmLRMCdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Swarm LRM Carrier" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

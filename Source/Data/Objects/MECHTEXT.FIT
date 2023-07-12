@@ -1,0 +1,62 @@
+FITini
+
+[Headings]
+st Heading0 = "Name"
+st Heading1 = "Tonnage"
+st Heading2 = "Top Speed"
+st Heading3 = "Normal Speed"
+st Heading4 = "Jump Range"
+st Heading5 = "Armor"
+st Heading6 = "Heat Sinks"
+st Heading7 = "Location"
+st Heading8 = "Internal"
+st Heading9 = "Structure"
+st Heading10 = "Rear"
+st Heading11 = "Weapon"
+st Heading12 = "Recycle"
+st Heading13 = "Status"
+st Heading14 = "Ammo"
+st Heading15 = "Fatigue"
+st Heading16 = "Morale"
+st Heading17 = "Wounds"
+st Heading18 = "Effectiveness"
+st Heading19 = "Current Orders"
+st Heading20 = "Time"
+
+[ArmorLocations]
+st Location0 = "Head"
+st Location1 = "Center Torso"
+st Location2 = "Left Torso"
+st Location3 = "Right Torso"
+st Location4 = "Left Arm"
+st Location5 = "Right Arm"
+st Location6 = "Left Leg"
+st Location7 = "Right Leg"
+
+[BodyLocations]
+st Location0 = "HEAD"
+st Location1 = "CTORSO"
+st Location2 = "LTORSO"
+st Location3 = "RTORSO"
+st Location4 = "LARM"
+st Location5 = "RARM"
+st Location6 = "LLEG"
+st Location7 = "RLEG"
+
+[BodyAbbreviations]
+st Location0 = "HD"
+st Location1 = "CT"
+st Location2 = "LT"
+st Location3 = "RT"
+st Location4 = "LA"
+st Location5 = "RA"
+st Location6 = "LL"
+st Location7 = "RL"
+
+[DamageStates]
+st State0 = "No Damage"
+st State1 = "Partial Damage"
+st State2 = "Destroyed"
+st State3 = "Disabled"
+
+FITend

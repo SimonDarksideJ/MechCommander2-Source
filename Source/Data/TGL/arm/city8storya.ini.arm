@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="05574217B62CDE494D761C538592D937" />
+  <Asset Name="..\city8storya.ini" Type="Physical" Author="franksav" FileSize="502" ModificationTime="2006-03-03T01:28:16.9299621-08:00" CRC="762A24B2A7E096CA80ECA91E4E11F664" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="City8StoryA.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="City8StoryX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="City8StoryAdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="City8StoryAdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="High Urban Concrete" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E2F67153153BC228F698170D8959828A" />
+  <Asset Name="..\redbeaconlight.ase" Type="Physical" Author="ngauvin" FileSize="6012" ModificationTime="2006-02-01T10:55:17.4358948-08:00" CRC="627E9E806CE034492B30D99F2AF03839" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Lightsnflags.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

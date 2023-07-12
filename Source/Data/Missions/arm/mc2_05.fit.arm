@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5D3D7812E3B87C6BDD6744E83685B510" />
+  <Asset Name="..\mc2_05.fit" Type="Physical" Author="franksav" FileSize="47185" ModificationTime="2006-03-06T12:42:39.0522097-08:00" CRC="F089FB283F25827478839710B5F132ED" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Bump In The Night" MissionAuthor="mantis" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="mc2_05.pak" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior09" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior10" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior11" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior12" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior13" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior14" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior15" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior16" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior17" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior18" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior19" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior20" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior21" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior22" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior23" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior24" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior25" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior26" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior27" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior28" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior29" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior30" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior31" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior32" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior33" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior34" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior35" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior36" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior37" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior38" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior39" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior40" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior41" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior42" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior43" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior44" />
+        <Relationship Type="warrior" RelatedAsset="mc2_05_warrior45" />
+        <Relationship Type="ScenarioScript" RelatedAsset="mc2_05.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Spotlight.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\PipeTank.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ThreeWayPipe.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\EndPipe.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_LightWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_LightPost.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_MediumGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_MediumWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_GateControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\QuonsetClean.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SawhorseBarricade.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RedBeaconLight.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LRMTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\HeavyIndustrial.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\IndustrialPlant.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ChemicalPlant.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ProcessingPlant.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\FactorySm.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\GeodesicDome.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\FactoryLg.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Streetlight.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RepairBay.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\FactoryMd.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\PurificationPlant.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\PowerGenerator.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RunwayLight.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\CratesWithTarp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WoodenCrates.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LiquidStorage.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\HQTent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LongTent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Tent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_TurretGenerator.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Quonset.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Quonset2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MediumAutoCannonTurret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LargeFuelTank.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\srmturret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\FourWayPipe.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\StraightPipe2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\CornerPipe.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WireFence.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WoodenFence.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Palm1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Cactus3.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WireFenceDiag.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Portable.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ExtractionMarker.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Prison.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WeaponsFacility.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_SpotlightControl.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

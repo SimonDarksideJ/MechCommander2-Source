@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3D080BC2682AEDC3074B938866841356" />
+  <Asset Name="..\highlander.ini" Type="Physical" Author="franksav" FileSize="4154" ModificationTime="2006-03-03T01:28:25.9142796-08:00" CRC="B2FE83D5378CB15CA8DD69E3B35BAF07" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Highlander.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HighlanderL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HighlanderL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HighlanderX.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlander.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="highlanderFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="highlanderFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="highlanderFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Highlander" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DDBD066FC2992F8B4757A38C45D27812" />
+  <Asset Name="..\hunterdam.ase" Type="Physical" Author="ngauvin" FileSize="37004" ModificationTime="2006-02-01T10:55:00.4982864-08:00" CRC="79142C2808FCD2DF156D6218A7A0F175" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_VehicleDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

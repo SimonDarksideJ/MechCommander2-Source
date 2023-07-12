@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E22893F4229D02934493FE26E77C84D7" />
+  <Asset Name="..\ThorLeftArm.ase" Type="Physical" Author="ngauvin" FileSize="18506" ModificationTime="2006-02-01T10:55:34.029751-08:00" CRC="475D985F672A810ACBBA339588F7E218" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ThorRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

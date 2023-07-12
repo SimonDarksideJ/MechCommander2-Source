@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="F7CDF49193460BA45DC297C95DCAEDC5" />
+  <Asset Name="..\mc2_21_warrior18" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\pv20500.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Storm.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Storm.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWRegular.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_21_dred.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

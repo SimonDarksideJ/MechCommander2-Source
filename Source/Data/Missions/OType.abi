@@ -1,0 +1,11 @@
+
+	TargList = integer[TARGET_LIST_SIZE];
+	TargListRatings = real[TARGET_LIST_SIZE];
+
+	position = real[3];
+	path = real[30,2];
+	IntList = integer[255];
+
+	BayList = integer[10];
+
+

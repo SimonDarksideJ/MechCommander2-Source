@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="E88E662C1D4D7F82B3A7E1479C5D770A" />
+  <Asset Name="..\MeetHall.ini" Type="Physical" Author="franksav" FileSize="556" ModificationTime="2006-03-03T01:28:36.6485859-08:00" CRC="81BCA6F31E0197FBBF88DBBCBD31FEBF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="meethall.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="meethallL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="meethallL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="meethallX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="meethalldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="meethallDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Meeting Hall" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

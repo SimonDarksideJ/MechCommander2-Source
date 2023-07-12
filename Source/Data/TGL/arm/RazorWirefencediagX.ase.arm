@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A8ABAC049CA471BCD57A8445ADA18375" />
+  <Asset Name="..\RazorWirefencediagX.ase" Type="Physical" Author="ngauvin" FileSize="3894" ModificationTime="2006-02-01T10:55:17.4046446-08:00" CRC="6FC7FD7B219A4FCD08EBA736E04DD340" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

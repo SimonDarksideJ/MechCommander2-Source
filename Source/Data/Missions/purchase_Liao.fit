@@ -1,0 +1,74 @@
+FITini
+
+[Components]
+
+b AllComponents = FALSE
+
+l Component0 = 7		//Heat Sink
+l Component1 = 10		//Jump Jets
+l Component2 = 25		//Armor Plating
+l Component3 = 156		//Laser
+l Component4 = 145		//PPC
+l Component5 = 140		//Large Laser
+l Component6 = 155		//Flamer Array
+l Component7 = 100		//Light Autocannon (AC5)
+l Component8 = 101		//Autocannon (AC10)
+l Component9 = 102		//Heavy Autocannon (AC20)
+l Component10 = 114		//MG Array
+l Component11 = 125		//Streak SRM2 Pack
+l Component12 = 120		//LRM5 Rack
+l Component13 = 99		//Light Gauss Rifle
+l Component14 = 104		//Gauss Rifle
+l Component15 = 144		//Pulse Laser
+l Component16 = 142		//Large Pulse Laser
+l Component17 = 143		//ER Laser
+l Component18 = 141		//ER Large Laser
+l Component19 = 146		//ER PPC
+l Component20 = 103		//Light Ultra Autocannon (AC5)
+l Component21 = 108		//Ultra Autocannon (AC10)
+l Component22 = 112		//Heavy Ultra Autocannon (AC20)
+l Component23 = 123		//Swarm LRM5 Rack
+l Component24 = 160		//Long Tom Cannon
+l Component25 = 161		//Thunderbolt Missile
+
+[Mechs]
+
+st Mech0 = "Anubis"
+st Mech1 = "Catapult"
+st Mech2 = "Cyclops"
+st Mech3 = "LaoHu"
+st Mech4 = "Raven"
+st Mech5 = "ShaYu"
+st Mech6 = "Starslayer"
+st Mech7 = "Menshen"
+
+[Pilots]
+
+st Pilot0 = "pmp_Chopper"
+st Pilot1 = "pmp_Claymore"
+st Pilot2 = "pmp_Creep"
+st Pilot3 = "pmp_Flash"
+st Pilot4 = "pmp_Hacksaw"
+st Pilot5 = "pmp_Hammer"
+st Pilot6 = "pmp_Jinx"
+st Pilot7 = "pmp_Longshot"
+st Pilot8 = "pmp_Psycho"
+st Pilot9 = "pmp_Shadow"
+st Pilot10 = "pmp_Cobra"
+st Pilot11 = "pmp_Dagger"
+st Pilot12 = "pmp_Palerider"
+st Pilot13 = "pmp_Payback"
+st Pilot14 = "pmp_Nuke"
+st Pilot15 = "pmp_Twitch"
+st Pilot16 = "pmp_Worm"
+st Pilot17 = "pmp_Bubba"
+st Pilot18 = "pmp_Scooter"
+st Pilot19 = "pmp_Steel"
+st Pilot20 = "pmp_Venom"
+st Pilot21 = "pmp_Wicked"
+st Pilot22 = "pmp_Ghost"
+st Pilot23 = "pmp_Meat"
+st Pilot24 = "pmp_Mother"
+st Pilot25 = "pmp_Rooster"
+
+FITend

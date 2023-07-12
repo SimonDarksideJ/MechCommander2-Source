@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="452B79EA2316AC1C1CE5D7C38DA1C11D" />
+  <Asset Name="..\birch1.ini" Type="Physical" Author="franksav" FileSize="299" ModificationTime="2006-03-03T01:28:13.0706118-08:00" CRC="F51F4FAE2EA308089315D1A81445A281" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Birch1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="birch1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="birch1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="birch1X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="stump.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="stumpX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Birch" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8627E9E13D6EFEAB0A9258535D080B50" />
+  <Asset Name="..\mc2_15_warrior19" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Bushwacker.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Bushwacker.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWVeteran.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_15_E2_MB_Mech3.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

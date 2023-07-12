@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="713B6DAA67C9B2D13D2242C1A419004A" />
+  <Asset Name="..\CargoTruck.ini" Type="Physical" Author="franksav" FileSize="293" ModificationTime="2006-03-03T01:28:15.0862239-08:00" CRC="4C8C9E03280A377D823A5206AF9B85D7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="cargotruck.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="cargotruckL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="cargotruckL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="cargotruckX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="cargotruckdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Cargo Truck" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

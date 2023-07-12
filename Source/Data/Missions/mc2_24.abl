@@ -1,0 +1,634 @@
+//*********************************************************************************
+
+module mc2_24 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+
+//********************** NEW **************************************
+			
+
+		static boolean			Rebel1VO;
+		static boolean			Rebel2VO;
+		static boolean			Rebel3VO;
+		static boolean			Rebel4VO;
+		static boolean			Rebel5VO;
+			
+		static boolean			FuelTruck_Boom_Check;	
+		static real					FuelTruck_VOTimerDelay;
+		
+		static boolean			Rebels_Dead_Check;
+		static real					Rebels_Dead_VOTimerDelay;
+
+		static boolean			East_TC_Check;
+		static real					East_TC_VOTimerDelay;
+
+		static boolean			West_TC_Check;
+		static real					West_TC_VOTimerDelay;
+
+		eternal boolean			Rebels_Attack;
+		static boolean			Rebels_Attack_Check;
+		static real					Rebels_Attack_TimerDelay;
+
+		eternal boolean			Rebel_Mech_Attack;
+		eternal boolean			TC1_Captured;
+		eternal boolean			TC2_Captured;
+		
+		eternal boolean			East_Area_Triggered;
+		eternal boolean			Center_Area_Triggered;
+
+		static integer			Trigger_Area_West;
+//		static integer			Trigger_Area_West2;
+		static integer			Trigger_Area_Center;
+		static boolean			Center_check;
+		
+		eternal boolean			Renard_Attack;
+		eternal boolean			Powered_Armor_Trigger;
+		static boolean			PA_Attack_Check;
+		static real					Renard_Attack_TimerDelay;
+		static real					Renard_VO2_TimerDelay;
+		static real					Renard_VO3_TimerDelay;
+		static real					Diaz_VO_TimerDelay;
+		static real					Diaz_VO_TimerDelay2;
+    static boolean			Renard1VO;
+    static boolean			Renard2VO;
+    static boolean			Renard3VO;
+    static boolean			startRenard3VO;
+		static boolean			DiazVO;
+		static boolean			DiazVO2;
+		static boolean			Diaz_VO_Check;
+		static boolean			Diaz_VO_Check2;
+		static boolean			Renard_VO2_Check;
+		static boolean			Renard_VO3_Check;
+		static integer			Rebel_Status;
+		static char[30]				dumbString;
+		static integer[128]			moverList;
+		static integer				numUnits, i;
+		
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+			
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+//----------------------------
+/*
+function printTeamStatus (integer teamNum);
+
+	var
+		integer numMates;
+		integer[128] mateList;
+		char[256] s;
+		static integer myStatus;
+
+	code
+
+		numMates = getUnitMates(teamNum, mateList);
+		s = "Team Status = ";
+		for i = 0 to (numMates - 1) do
+			myStatus = objectStatus(mateList[i]);
+			concat(s, myStatus);
+			concat(s, " ");
+		endfor;
+		mcprint(s);
+
+endfunction;
+*/
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+//*************************NEW**********************************
+		
+		
+			Rebel1VO = False;
+			Rebel2VO = False;
+			Rebel3VO = False;
+			Rebel4VO = False;
+			Rebel5VO = False;
+		
+			FuelTruck_Boom_Check = False;
+		
+			Rebels_Dead_Check = False;
+
+			East_TC_Check = False;
+
+			West_TC_Check = False;
+
+			Rebels_Attack = False;
+			Rebels_Attack_Check = False;
+			Rebel_Mech_Attack = False;
+			TC1_Captured = False;
+			TC2_Captured = False;
+		
+			East_Area_Triggered = False;
+			Center_Area_Triggered = False;
+		
+			Renard_Attack = False;
+			Powered_Armor_Trigger = False;
+			PA_Attack_Check = False;
+			Renard1VO = False;
+			Renard2VO = False;
+			Renard3VO = False;
+			startRenard3VO = False;
+			DiazVO = False;
+			DiazVO2 = False;
+			Diaz_VO_Check = False;
+			Diaz_VO_Check2 = False;
+			
+
+			worldLoc[0] = -2240.000;
+			worldLoc[1] = -3264.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			Trigger_Area_West = addTriggerArea(cellLoc[0] - 20, cellLoc[1] - 20, cellLoc[0] + 20, cellLoc[1] + 20, 2, 0);
+			
+//			worldLoc[0] = -832.000;
+//			worldLoc[1] = -3520.000;
+//			worldLoc[2] = 0.0;
+//			convertCoords(0, worldLoc, cellLoc);
+//			Trigger_Area_West2 = addTriggerArea(cellLoc[0] - 12, cellLoc[1] - 12, cellLoc[0] + 12, cellLoc[1] + 12, 2, 0);
+
+			worldLoc[0] = -64.000;
+			worldLoc[1] = 3392.000;
+			worldLoc[2] = 0.0;
+			convertCoords(0, worldLoc, cellLoc);
+			Trigger_Area_Center = addTriggerArea(cellLoc[0] - 10, cellLoc[1] - 10, cellLoc[0] + 10, cellLoc[1] + 10, 2, 0);
+
+		
+			
+			Center_check = FALSE;
+
+			numUnits = getUnitMates(120, moverList);
+			Rebel_Status = 0;
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+// ***********************Mission 23 Stuff*****************************************
+
+
+
+			//*******************************************************
+			// Tac play Opening VO
+			if ((getTime > 11) AND (Not Rebel1VO)) then
+				Rebel1VO = True;
+				playVideo("MC2_24A.bik");
+//				playWave("data\sound\mc2_24_0.wav", -1); //Tac Officer informing Player about Rebels
+			endif;
+
+			//*******************************************************
+			//Trigger for Rebels to attack
+			if (Not Rebels_Attack) then
+				if (Not Rebels_Attack_Check) then
+					Rebels_Attack_TimerDelay = getTime + 10; //Wait 30 secs before starting Rebels
+			 // 	mcprint ("Rebels Timer Delay started");
+					Rebels_Attack_Check = True;
+				else
+					if ((getTime > Rebels_Attack_TimerDelay) AND (Not Rebels_Attack)) then
+						Rebels_Attack = True;
+				 // 	mcprint ("Rebels on the attack");
+					endif;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger for Fuel Truck Destruction VO Trigger
+			if (checkObjectiveStatus(4) == 1) then
+				if (Not FuelTruck_Boom_Check) then
+					FuelTruck_VOTimerDelay = getTime + 2; //Wait 2 secs before playing VO
+					FuelTruck_Boom_Check = True;
+				else
+					if ((getTime > FuelTruck_VOTimerDelay) AND (Not Rebel2VO)) then
+						Rebel2VO = True;
+						playVideo("MC2_24B.bik");
+//						playWave("data\sound\mc2_24_1.wav", -1); //Tac Officer informing player wall breached
+						Rebel_Mech_Attack = True;
+						//mcprint ("Rebel Mech on the attack");
+					endif;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger for All Rebels Destruction VO Trigger
+			if (Rebel_Status == 1) then
+//					mcprint (Rebel_status);
+//			printTeamStatus (3);
+//			if (Rebel_Status == OBJ_STATUS_DISABLED) then
+				 // mcprint (Rebel_status);
+				if (Not Rebels_Dead_Check) then
+					Rebels_Dead_VOTimerDelay = getTime + 6; //Wait 2 secs before playing VO
+					Rebels_Dead_Check = True;
+				else
+					if ((getTime > Rebels_Dead_VOTimerDelay) AND (Not Rebel3VO)) then
+						Rebel3VO = True;
+mcprint("REBELDEAD");
+						playVideo("MC2_24C.bik");
+//						playWave("data\sound\mc2_24_2.wav", -1); //Tac Officer informing player Rebels dead
+					endif;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger for Rebels Capturing East TC VO Trigger
+			if (objectSide(126011) == OBJ_TEAM_1) then
+				if (Not East_TC_Check) then
+					East_TC_VOTimerDelay = getTime + 2; //Wait 2 secs before playing VO
+					East_TC_Check = True;
+				else
+					if ((getTime > East_TC_VOTimerDelay) AND (Not Rebel4VO)) then
+						Rebel4VO = True;
+						playWave("data\sound\mc2_24_3.wav", -1); //Tac Officer informing player wall breached
+						TC1_Captured = True;
+					endif;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger for Rebels Capturing West TC VO Trigger
+			if (objectSide(158318) == OBJ_TEAM_1) then
+				if (Not West_TC_Check) then
+					West_TC_VOTimerDelay = getTime + 2; //Wait 2 secs before playing VO
+					West_TC_Check = True;
+				else
+					if ((getTime > West_TC_VOTimerDelay) AND (Not Rebel5VO)) then
+						Rebel5VO = True;
+						playWave("data\sound\mc2_24_4.wav", -1); //Tac Officer informing player wall breached
+						TC2_Captured = True;
+					endif;
+				endif;
+			endif;
+
+
+
+			//*******************************************************
+			//Trigger for East Area Trigger
+			if (isTriggerAreaHit(Trigger_Area_West)) then
+				East_Area_Triggered = True;
+			endif;
+			//*******************************************************
+			//Trigger for East Area Trigger
+//			if (isTriggerAreaHit(Trigger_Area_West2)) then
+//				East_Area_Triggered = True;
+//			endif;
+
+
+			//*******************************************************
+			//Trigger for Center Area Trigger
+			if ((isTriggerAreaHit(Trigger_Area_Center)) and (NOT Center_check)) then
+				Center_check = TRUE;
+				Center_Area_Triggered = True;
+				mcprint ("Center Area Triggered");
+			endif;
+
+
+			//*******************************************************
+			//Trigger for Renard to attack and say first VO
+			if ((checkObjectiveStatus(3) == 1) or (checkObjectiveStatus(0) == 1)) then
+//			if (Powered_Armor_Trigger) then
+				if (Not PA_Attack_Check) then
+					Renard_Attack_TimerDelay = getTime + 2; //Wait 4 secs before starting Renard
+					PA_Attack_Check = True;
+				else
+					if ((getTime > Renard_Attack_TimerDelay) AND (Not Renard1VO)) then
+						Renard1VO = True;
+						playWave("data\sound\mc2_24_5.wav", -1); //Renard telling player he is coming
+						Renard_Attack = True;
+					endif;
+				endif;
+			endif;
+
+			//*******************************************************
+			//Trigger for Renard to say his second VO
+			if (Renard_Attack) then
+				if ((objectStatus(708) <> 1) and (objectStatus(708) <> 2)) then
+					if (Not Renard_VO2_Check) then
+						Renard_VO2_TimerDelay = getTime + 37; //Wait 15 secs before starting Renard
+						Renard_VO2_Check = True;
+					else
+						if ((getTime > Renard_VO2_TimerDelay) AND (Not Renard2VO)) then
+							Renard2VO = True;
+							playWave("data\sound\mc2_24_6.wav", -1); //Renard making fun of player 1
+							startRenard3VO = True;
+						endif;
+					endif;
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for Renard to say his third VO
+			if (startRenard3VO) then
+			  if ((objectStatus(708) <> 1) and (objectStatus(708) <> 2)) then
+					if (Not Renard_VO3_Check) then
+						Renard_VO3_TimerDelay = getTime + 37; //Wait 15 secs before starting Renard
+						Renard_VO3_Check = True;
+					else
+						if ((getTime > Renard_VO3_TimerDelay) AND (Not Renard3VO)) then
+							Renard3VO = True;
+							playWave("data\sound\mc2_24_7.wav", -1); //Renard making fun of player 2
+						endif;
+					endif
+				endif;
+			endif;
+
+
+			//*******************************************************
+			//Trigger for Tac Officer to say Renard's Dead
+			if (checkObjectiveStatus(1) == 1) then
+					if (Not Diaz_VO_Check) then
+						Diaz_VO_TimerDelay = getTime + 6; //Wait 2 secs before starting Renard
+						Diaz_VO_Check = True;
+					else
+						if ((getTime > Diaz_VO_TimerDelay) AND (Not DiazVO)) then
+							DiazVO = True;
+							playVideo("MC2_24D.bik");
+//							playWave("data\sound\mc2_24_8.wav", -1); //Tac Officer to say Renard's Dead
+						endif;
+					endif
+				endif;
+
+			if (checkObjectiveStatus(1) == 1) then
+					if (Not Diaz_VO_Check2) then
+						Diaz_VO_TimerDelay2 = getTime + 16; //Wait 2 secs before starting Renard
+						Diaz_VO_Check2 = True;
+					else
+						if ((getTime > Diaz_VO_TimerDelay2) AND (Not DiazVO2)) then
+							DiazVO2 = True;
+							playVideo("MC2_24E.bik");
+//							playWave("data\sound\mc2_24_8.wav", -1); //Tac Officer to say Renard's Dead
+						endif;
+					endif
+				endif;
+
+
+
+				//*******************************************************
+				//Hack to check If badits are dead
+
+				if (objectstatus(120) == 1) then
+					Rebel_Status = 1;
+				endif;
+
+
+
+
+
+//---------------------------------------------------- Mission 24 Stuff End
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (0) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 1;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 4) then
+				SensorPlayCount = SensorPlayCount + 1;
+			 // mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+	 // 		playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune1);
+		//		mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune1);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+	
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+			//	  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune6);
+			StartMusicTimer = getTime + 37; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+	
+
+
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

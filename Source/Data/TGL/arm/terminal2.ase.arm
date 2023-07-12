@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7A60CF5CF21623BCFA3906F22DCC5385" />
+  <Asset Name="..\terminal2.ase" Type="Physical" Author="ngauvin" FileSize="79653" ModificationTime="2006-02-01T10:55:33.6859988-08:00" CRC="9115C729EFBC1C274CB85EFF63EC5D82" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Terminal.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_Terminal.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

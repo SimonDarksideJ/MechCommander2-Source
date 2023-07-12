@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3F500124776D039439C1087AF7763EBD" />
+  <Asset Name="..\tut_04.fit" Type="Physical" Author="franksav" FileSize="11982" ModificationTime="2006-03-06T13:44:52.9198563-08:00" CRC="55B8049945CB0B94D25113FA2D86A026" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Tutorial Mission 4: Salvage and Repair" MissionAuthor="Team Dirty" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="tut_04.pak" />
+        <Relationship Type="warrior" RelatedAsset="tut_04_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="tut_04_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="tut_04_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="tut_04_warrior04" />
+        <Relationship Type="ScenarioScript" RelatedAsset="tut_04.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RPBuilding.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ExtractionMarker.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

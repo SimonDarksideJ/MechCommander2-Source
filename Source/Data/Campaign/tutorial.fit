@@ -1,0 +1,70 @@
+FITini
+
+
+[Campaign]
+
+l GroupCount = 1
+l CBills = 0
+l NameID = 60022
+st FinalVideo = ""
+
+[Group0]
+
+l NumberToComplete = 5
+l MissionCount = 5
+st OperationFile = "MCL_CM_optutorials"
+st Video = ""
+l Tune = 22
+
+
+[Group0Mission0]
+st FileName = "tut_01"
+b Mandatory = False
+st PurchaseFile = "Purchase"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 0
+b PlayPurchasing = 0
+b PlaySelection = 1
+
+[Group0Mission1]
+st FileName = "tut_02"
+b Mandatory = False
+st PurchaseFile = "Purchase"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 0
+b PlayPurchasing = 0
+b PlaySelection = 1
+
+[Group0Mission2]
+st FileName = "tut_03"
+b Mandatory = False
+st PurchaseFile = "Purchase"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 0
+b PlayPurchasing = 0
+b PlaySelection = 1
+
+[Group0Mission3]
+st FileName = "tut_04"
+b Mandatory = False
+st PurchaseFile = "Purchase"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 0
+b PlayPurchasing = 0
+b PlaySelection = 1
+
+[Group0Mission4]
+st FileName = "tut_05"
+b Mandatory = False
+st PurchaseFile = "Purchase"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 0
+b PlayPurchasing = 0
+b PlaySelection = 1
+
+FitEnd

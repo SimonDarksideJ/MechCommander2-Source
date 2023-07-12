@@ -1,0 +1,478 @@
+FITini 
+FITini 
+
+[Cameras]
+f ProjectionAngle = 48.250000
+f PositionX = -2306.073730
+f PositionY = -1557.284180
+f PositionZ = 0.000000
+b Ready = TRUE
+uc LightRed = 255
+uc LightGreen = 255
+uc LightBlue = 255
+uc AmbientBlue = 63
+uc AmbientGreen = 63
+uc AmbientRed = 63
+uc TerrainShadowColorEnabled = 1
+uc TerrainShadowBlue = 31
+uc TerrainShadowGreen = 31
+uc TerrainShadowRed = 31
+uc DayLightRed = 255
+uc DayLightGreen = 255
+uc DayLightBlue = 255
+uc DayAmbientBlue = 63
+uc DayAmbientGreen = 63
+uc DayAmbientRed = 63
+uc SunsetLightRed = 205
+uc SunsetLightGreen = 84
+uc SunsetLightBlue = 31
+uc NightLightRed = 64
+uc NightLightGreen = 64
+uc NightLightBlue = 64
+uc NightAmbientBlue = 32
+uc NightAmbientGreen = 32
+uc NightAmbientRed = 32
+uc SeenBlue = 255
+uc SeenGreen = 0
+uc SeenRed = 0
+uc BaseBlue = 47
+uc BaseGreen = 47
+uc BaseRed = 47
+f LightDirPitch = 60.000000
+f DayLightPitch = 60.000000
+f DayToNightTime = -1.000000
+f LightDirYaw = -17.000000
+f NewScale = 0.584832
+f StartRotation = -178.875000
+f[3] LODScales = 1.00, 0.50, 0.30,
+f ElevationAdjustFactor = 150.000000
+f ZoomMax = 1.000000
+f ZoomMin = 0.100000
+f FOVMax = 0.000000
+f FOVMin = 0.000000
+f FogStart = -100.000000
+f FogFull = -200.000000
+ul FogColor = 0
+f FogTransparency = 1.000000
+l UserMin = 0
+l UserMax = 500
+l BaseTerrain = 1
+
+[Water]
+f Elevation = 90.000000
+f Frequency = 4.000000
+f Ampliture = 10.000000
+ul AlphaShallow = 1056964608
+ul AlphaMiddle = -1358954496
+ul AlphaDeep = -16777216
+f AlphaDepth = 10.000000
+f ShallowDepth = 20.000000
+
+[Terrain]
+l UserMin = 0
+l UserMax = 500
+f TerrainMinX = -3840.000000
+f TerrainMinY = 3840.000000
+uc Noise = 1
+uc Threshold = 4
+f DetailTextureTilingFactor = 60.000000
+f WaterTextureTilingFactor = 48.000000
+f WaterDetailTilingFactor = 45.000000
+
+[Warriors]
+ul NumWarriors = 3
+
+[Parts]
+ul NumParts = 3
+
+[Warrior1]
+st Profile = "pmwshadow"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part1]
+ul ObjectNumber = 874
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 1
+f PositionX = -2368.000000
+f PositionY = -1600.000244
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -16711936
+ul HighlightColor1 = -16711936
+ul HighlightColor2 = -16711936
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Bushwacker"
+ul VariantNumber = 0
+ul SquadNum = 1
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 5
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior2]
+st Profile = "pmwflash"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part2]
+ul ObjectNumber = 47
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 2
+f PositionX = -2197.333252
+f PositionY = -1642.666870
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -16711936
+ul HighlightColor1 = -16711936
+ul HighlightColor2 = -16711936
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Hollander"
+ul VariantNumber = 0
+ul SquadNum = 2
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 6
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior3]
+st Profile = "pmwworm"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part3]
+ul ObjectNumber = 45
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 3
+f PositionX = -2282.666748
+f PositionY = -1429.333496
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -16711936
+ul HighlightColor1 = -16711936
+ul HighlightColor2 = -16711936
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Werewolf"
+ul VariantNumber = 0
+ul SquadNum = 3
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 7
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Teams]
+
+[Commander0Group:0]
+l[12] Mates = 1,2,3,0,0,0,0,0,0,0,0,0,
+
+[NavMarker0]
+f xPos = -1216.000000
+f yPos = 192.000000
+f radius = 256.000000
+
+[NavMarker1]
+f xPos = -2240.000000
+f yPos = -64.000000
+f radius = 256.000000
+
+[NavMarker2]
+f xPos = 448.000000
+f yPos = 832.000000
+f radius = 256.000000
+
+[NavMarker3]
+f xPos = 1856.000000
+f yPos = 2240.000000
+f radius = 256.000000
+
+[NavMarkers]
+ul NumNavMarkers = 4
+
+[Artillery]
+l NumLargeStrikes = 0
+l NumSmallStrikes = 0
+l NumSensorStrikes = 0
+l NumCameraStrikes = 0
+
+[MissionSettings]
+st MissionName = "Tutorial Mission 1"
+b MissionNameUseResourceString = TRUE
+ul MissionNameResourceStringID = 57045
+st Author = "Team Dirty"
+st Blurb = ""
+b BlurbUseResourceString = TRUE
+ul BlurbResourceStringID = 55025
+st Blurb2 = ""
+b Blurb2UseResourceString = TRUE
+ul Blurb2ResourceStringID = 56025
+f TimeLimit = -1.000000
+f DropWeightLimit = 300.000000
+l ResourcePoints = 0
+ul IsSinglePlayer = 1
+ul MaximumNumberOfTeams = 2
+ul MaximumNumberOfPlayers = 2
+uc scenarioTuneNum = 0
+st AVIFilename = ""
+l AdditionalCBills = 0
+ul NumRandomRPbuildings = 0
+st DownloadURL = ""
+ul MissionType = 0
+b AirStrikesEnabledDefault = TRUE
+b MineLayersEnabledDefault = TRUE
+b ScoutCoptersEnabledDefault = TRUE
+b SensorProbesEnabledDefault = TRUE
+b UnlimitedAmmoEnabledDefault = TRUE
+b AllTechEnabledDefault = TRUE
+b RepairVehicleEnabledDefault = TRUE
+b SalvageCraftEnabledDefault = TRUE
+b ResourceBuildingsEnabledDefault = TRUE
+b NoVariantsEnabledDefault = TRUE
+b ArtilleryPieceEnabledDefault = TRUE
+b RPsForMechsEnabledDefault = TRUE
+
+[Weather]
+ul MaxRainDrops = 0
+f StartingRainLevel = 0.000000
+l ChanceOfRain = 0
+f BaseLighteningChance = 0.000000
+
+[TheSky]
+l SkyNumber = 21
+
+[Objectives Version]
+ul Version = 3
+
+[Team0Objectives]
+ul NumObjectives = 4
+
+[Team0Objective0]
+st Title = "Move All Units to Nav Point 1"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50132
+st Description = "Move All Units to Nav Point 1"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50132
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = -2240.000000
+f MarkerY = -64.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective0Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = -2240.000000
+f TargetCenterY = -64.000000
+f TargetRadius = 256.000000
+
+[Team0Objective1]
+st Title = "Move All Units to Nav Point 2"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50133
+st Description = "Move All Units to Nav Point 2"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50133
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = TRUE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = -1216.000000
+f MarkerY = 192.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective1Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = -1216.000000
+f TargetCenterY = 192.000000
+f TargetRadius = 256.000000
+
+[Team0Objective2]
+st Title = "Move All Units to Nav Point 3"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50134
+st Description = "Move All Units to Nav Point 3"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50134
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = TRUE
+b DisplayMarker = TRUE
+f MarkerX = 448.000000
+f MarkerY = 832.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective2Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 448.000000
+f TargetCenterY = 832.000000
+f TargetRadius = 256.000000
+
+[Team0Objective3]
+st Title = "Move Any Unit to Nav Point 4"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50135
+st Description = "Move Any Unit to Nav Point 4"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50135
+ul Priority = 1
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = TRUE
+b DisplayMarker = TRUE
+f MarkerX = 1728.000000
+f MarkerY = 2240.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = ""
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective3Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 1856.000000
+f TargetCenterY = 2240.000000
+f TargetRadius = 256.000000
+
+[Team1Objectives]
+ul NumObjectives = 0
+
+[Team2Objectives]
+ul NumObjectives = 0
+
+[Team3Objectives]
+ul NumObjectives = 0
+
+[Team4Objectives]
+ul NumObjectives = 0
+
+[Team5Objectives]
+ul NumObjectives = 0
+
+[Team6Objectives]
+ul NumObjectives = 0
+
+[Team7Objectives]
+ul NumObjectives = 0
+
+[Player0]
+ul DefaultTeam = 0
+
+[Player1]
+ul DefaultTeam = 1
+
+[Player2]
+ul DefaultTeam = 0
+
+[Player3]
+ul DefaultTeam = 0
+
+[Player4]
+ul DefaultTeam = 0
+
+[Player5]
+ul DefaultTeam = 0
+
+[Player6]
+ul DefaultTeam = 0
+
+[Player7]
+ul DefaultTeam = 0
+
+[Music]
+uc scenarioTuneNum = 0
+
+[Script]
+st ScenarioScript = "tut_01"
+FITend 

@@ -1,0 +1,24 @@
+FITini
+
+// This is the  New Dummy Building Object
+
+[ObjectClass]
+l ObjectTypeNum = 11				//Misc Terrain Object
+
+[ObjectType]
+st Name 			= "newbldg"		// Text string giving a descriptive name  (only 8 chars long!!)
+l Type				= 19
+l Appearance		= 0x02000xxx
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 42			// Object Class Number of explosion for this building
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for building
+f ExtentRadius		= 35			// Extent Radius in Meters
+
+[TerrainObjectData]
+ul DmgLevel			= 20			// How much damage before changing to destroyed shape
+l SetImpassable		= 0
+l XImpasse			= 3
+l YImpasse			= 3
+
+FITend

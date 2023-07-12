@@ -1,0 +1,1235 @@
+FITini
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Buttons]
+l Buttoncount = 9
+
+[Button0] // main menu
+l ID = 57 // MB_MSG_MAINMENU
+l XLocation = 614
+l YLocation = 8
+l Width = 176
+l Height = 40
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+l XTextLocation = 623
+l YTextLocation = 17
+l TextWidth = 157
+l TextHeight = 21
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27104
+l Font = 26057 // use AgencyFB17
+
+l HelpCaption = 27104
+l HelpDesc = 27113
+
+l UWidth = 176
+l VHeight = 40
+
+l UNormal = 0
+l VNormal = 59
+
+l UPressed = 0
+l VPressed = 99
+
+l UHighlight = 0
+l VHighlight = 59
+
+l UDisabled = 0
+l VDisabled = 99
+
+b AnimateBmp = 0 // animate the rect, text only
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.5
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+
+
+
+
+
+
+
+[Button1] // join game
+
+l ID = 50
+l XLocation = 666
+l YLocation = 536
+l Width = 128   
+l Height = 59
+
+l XTextLocation = 680
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 26056
+l Font = 26058 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26073
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 128
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 128
+l VDisabled = 0
+
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.5
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button1Bmp0]
+// coordinates for next arrow
+l XLocation = 767
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392  
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+b AnimateBmp = 1
+
+l UNormal = 187
+l VNormal = 59
+
+l UWidth = 11
+l VHeight = 22
+
+
+
+[Button2] // host game
+l XLocation = 279
+l YLocation = 419
+l Width = 256
+l Height = 37
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+l XTextLocation = 286
+l YTextLocation = 426
+l TextWidth = 241
+l TextHeight = 22
+l color  = 0xffff88a0
+b TextOutline = FALSE
+
+l TextID = 26051
+l Font = 26059 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26074
+
+l UWidth = 256
+l VHeight = 37
+
+l UNormal = 0
+l VNormal = 139
+
+l UPressed = 0
+l VPressed = 176
+
+l UHighlight = 0
+l VHighlight = 213
+
+l UDisabled = 0
+l VDisabled = 139
+
+b AnimateBmp = 1 // animate the bmp and text 
+b AnimateText = 1		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xffC66600
+f NormalTime1 = 7.0
+l NormalColor1 = 0xffC66600
+
+l PressedAnimationTimeStamps = 4
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.1
+l PressedColor1 = 0xffC66600
+f PressedTime2 = 0.15
+l PressedColor2 = 0xffffffff
+f PressedTime3 = 0.5
+l PressedColor3 = 0xffFFAE4D
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.4
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff373737
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff373737
+
+[Button3] // back button
+l ID = 51 // MB_MSG_PREV
+l XLocation = 5
+l YLocation = 536
+l Width = 128
+l Height = 59
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+l XTextLocation = 33
+l YTextLocation = 550
+l TextWidth = 85
+l TextHeight = 30
+l color  = 0xff005392
+b TextOutline = TRUE
+
+l TextID = 27101
+l Font = 26060 // use AgencyFB17
+
+l HelpCaption = 0
+l HelpDesc = 26075
+
+l UWidth = 128
+l VHeight = 59
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 128
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 128
+l VDisabled = 0
+
+b AnimateBmp = 0 // animate the rect, arrow, and text only
+b AnimateText = 1		
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff005392
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff005392
+
+
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.0
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xff5C96C2
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = FALSE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xff5C96C2
+f HighlightTime2 = 0.5
+l HighlightColor2 = 0xffffffff
+
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff6b6b6b
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff6b6b6b
+
+
+[Button3Bmp0]
+
+// coordinates for back arrow
+l XLocation = 21
+l YLocation = 555
+l Width = 11
+l Height = 22
+l color  = 0xff005392
+
+st FileName = "mcl_mp_lanbrowser_4.tga"
+
+b AnimateBmp = 1
+
+l UNormal = 176
+l VNormal = 59
+
+l UWidth = 11
+l VHeight = 22
+
+
+[Button4] // sort by locked game
+l XLocation = 72
+l YLocation = 84
+l Width = 28
+l Height = 20
+
+st FileName = "mcl_mp_lanbrowser_5.tga"
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+l UWidth = 28
+l VHeight = 20
+
+l UNormal = 0
+l VNormal = 0
+
+l UPressed = 0
+l VPressed = 0
+
+l UHighlight = 0
+l VHighlight = 0
+
+l UDisabled = 0
+l VDisabled = 0
+
+b AnimateBmp = 1 
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff000000
+
+
+
+[Button5] // sort by game name
+l XLocation = 103
+l YLocation = 84
+l Width = 214
+l Height = 20
+l ID = 200
+
+st FileName = "mcl_mp_lanbrowser_5.tga"
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+l UWidth = 214
+l VHeight = 20
+
+l UNormal = 0
+l VNormal = 20
+
+l UPressed = 0
+l VPressed = 20
+
+l UHighlight = 0
+l VHighlight = 20
+
+l UDisabled = 0
+l VDisabled = 20
+
+b AnimateBmp = 1  
+		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff000000
+
+
+
+[Button6] // sort by players
+l XLocation = 320
+l YLocation = 84
+l Width = 101
+l Height = 20
+l ID = 201
+
+st FileName = "mcl_mp_lanbrowser_5.tga"
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+l UWidth = 101
+l VHeight = 20
+
+l UNormal = 0
+l VNormal = 40
+
+l UPressed = 0
+l VPressed = 40
+
+l UHighlight = 0
+l VHighlight = 40
+
+l UDisabled = 0
+l VDisabled = 40
+
+b AnimateBmp = 1  
+		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff000000
+
+
+
+
+[Button7] // sort by map name
+l XLocation = 424
+l YLocation = 84
+l Width = 215
+l Height = 20
+l ID = 202
+
+st FileName = "mcl_mp_lanbrowser_5.tga"
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+l UWidth = 215
+l VHeight = 20
+
+l UNormal = 0
+l VNormal = 60
+
+l UPressed = 0
+l VPressed = 60
+
+l UHighlight = 0
+l VHighlight = 60
+
+l UDisabled = 0
+l VDisabled = 60
+
+b AnimateBmp = 1  
+		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff000000
+
+
+[Button8] // sort by ping
+l XLocation = 642
+l YLocation = 84
+l Width = 84
+l Height = 20
+l ID = 203
+st FileName = "mcl_mp_lanbrowser_5.tga"
+
+l HelpCaption = 0
+l HelpDesc = 0
+
+l UWidth = 84
+l VHeight = 20
+
+l UNormal = 0
+l VNormal = 80
+
+l UPressed = 0
+l VPressed = 80
+
+l UHighlight = 0
+l VHighlight = 80
+
+l UDisabled = 0
+l VDisabled = 80
+
+b AnimateBmp = 1  
+		
+
+l NormalAnimationTimeStamps = 2
+b NormalAnimationLoops = TRUE
+f NormalTime0 = 0.0
+l NormalColor0 = 0xff000000
+f NormalTime1 = 7.0
+l NormalColor1 = 0xff000000
+
+l PressedAnimationTimeStamps = 2
+b PressedAnimationLoops = FALSE
+f PressedTime0 = 0.05
+l PressedColor0 = 0xffffffff
+f PressedTime1 = 0.5
+l PressedColor1 = 0xffC66600
+
+
+l HighlightAnimationTimeStamps = 3
+b HighlightAnimationLoops = TRUE
+f HighlightTime0 = 0.0
+l HighlightColor0 = 0xffffffff
+f HighlightTime1 = 0.5
+l HighlightColor1 = 0xffFFAE4D
+f HighlightTime2 = 0.75
+l HighlightColor2 = 0xffffffff
+
+l DisabledAnimationTimeStamps = 2
+b DisabledAnimationLoops = TRUE
+f DisabledTime0 = 0.0
+l DisabledColor0 = 0xff000000
+f DisabledTime1 = 15
+l DisabledColor1 = 0xff000000
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Statics]
+l Staticcount = 30
+
+[Static0]
+l XLocation = 0
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static1]
+l XLocation = 256
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 8
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static2]
+l XLocation = 512
+l YLocation = 0
+l Width = 256
+l Height = 8
+l UNormal = 0
+l VNormal = 16
+l UWidth = 256
+l VHeight = 8
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static3]
+l XLocation = 768
+l YLocation = 0
+l Width = 32
+l Height = 8
+l UNormal = 123
+l VNormal = 215
+l UWidth = 32
+l VHeight = 8
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static4]
+l XLocation = 0
+l YLocation = 8
+l Width = 10
+l Height = 32
+l UNormal = 129
+l VNormal = 132
+l UWidth = 10
+l VHeight = 32
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static5]
+l XLocation = 426
+l YLocation = 8
+l Width = 86
+l Height = 32
+l UNormal = 0
+l VNormal = 160
+l UWidth = 86
+l VHeight = 32
+st FileName = "mcl_mp_lanbrowser_3.tga"
+
+[Static6]
+l XLocation = 512
+l YLocation = 8
+l Width = 102
+l Height = 40
+l UNormal = 86
+l VNormal = 160
+l UWidth = 102
+l VHeight = 40
+st FileName = "mcl_mp_lanbrowser_3.tga"
+
+[Static7]
+l XLocation = 790
+l YLocation = 8
+l Width = 10
+l Height = 40
+l UNormal = 119
+l VNormal = 132
+l UWidth = 10
+l VHeight = 40
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static8]
+l XLocation = 0
+l YLocation = 40
+l Width = 256
+l Height = 38
+l UNormal = 0
+l VNormal = 24
+l UWidth = 256
+l VHeight = 38
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static9]
+l XLocation = 256
+l YLocation = 40
+l Width = 256
+l Height = 38
+l UNormal = 0
+l VNormal = 62
+l UWidth = 256
+l VHeight = 38
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static10]
+l XLocation = 512
+l YLocation = 48
+l Width = 256
+l Height = 30
+l UNormal = 0
+l VNormal = 100
+l UWidth = 256
+l VHeight = 30
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static11]
+l XLocation = 768
+l YLocation = 48
+l Width = 32
+l Height = 30
+l UNormal = 0
+l VNormal = 225
+l UWidth = 32
+l VHeight = 30
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static12]
+l XLocation = 0
+l YLocation = 78
+l Width = 59
+l Height = 256
+l UNormal = 0
+l VNormal = 0
+l UWidth = 59
+l VHeight = 256
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static13]
+l XLocation = 755
+l YLocation = 78
+l Width = 45
+l Height = 256
+l UNormal = 59
+l VNormal = 0
+l UWidth = 45
+l VHeight = 256
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static14]
+l XLocation = 81
+l YLocation = 88
+l Width = 12
+l Height = 12
+l UNormal = 240
+l VNormal = 0
+l UWidth = 12
+l VHeight = 12
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+
+[Static15]
+l XLocation = 0
+l YLocation = 334
+l Width = 59
+l Height = 132
+l UNormal = 104
+l VNormal = 0
+l UWidth = 59
+l VHeight = 132
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static16]
+l XLocation = 755
+l YLocation = 334
+l Width = 45
+l Height = 132
+l UNormal = 163
+l VNormal = 0
+l UWidth = 45
+l VHeight = 132
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static17]
+l XLocation = 0
+l YLocation = 466
+l Width = 256
+l Height = 70
+l UNormal = 0
+l VNormal = 130
+l UWidth = 256
+l VHeight = 70
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static18]
+l XLocation = 256
+l YLocation = 466
+l Width = 256
+l Height = 80
+l UNormal = 0
+l VNormal = 0
+l UWidth = 256
+l VHeight = 80
+st FileName = "mcl_mp_lanbrowser_3.tga"
+
+[Static19]
+l XLocation = 512
+l YLocation = 466
+l Width = 256
+l Height = 80
+l UNormal = 0
+l VNormal = 80
+l UWidth = 256
+l VHeight = 80
+st FileName = "mcl_mp_lanbrowser_3.tga"
+
+[Static20]
+l XLocation = 768
+l YLocation = 466
+l Width = 32
+l Height = 80
+l UNormal = 208
+l VNormal = 0
+l UWidth = 32
+l VHeight = 80
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static21]
+l XLocation = 0
+l YLocation = 536
+l Width = 5
+l Height = 59
+l UNormal = 104
+l VNormal = 132
+l UWidth = 5
+l VHeight = 59
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static22]
+l XLocation = 133
+l YLocation = 536
+l Width = 123
+l Height = 10
+l UNormal = 0
+l VNormal = 215
+l UWidth = 123
+l VHeight = 10
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static23]
+l XLocation = 133
+l YLocation = 546
+l Width = 10
+l Height = 49
+l UNormal = 109
+l VNormal = 132
+l UWidth = 10
+l VHeight = 49
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+[Static24]
+l XLocation = 656
+l YLocation = 546
+l Width = 144
+l Height = 49
+l UNormal = 0
+l VNormal = 200
+l UWidth = 144
+l VHeight = 49
+st FileName = "mcl_mp_lanbrowser_3.tga"
+
+[Static25]
+l XLocation = 0
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 200
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static26]
+l XLocation = 256
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 205
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static27]
+l XLocation = 512
+l YLocation = 595
+l Width = 256
+l Height = 5
+l UNormal = 0
+l VNormal = 210
+l UWidth = 256
+l VHeight = 5
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static28]
+l XLocation = 768
+l YLocation = 595
+l Width = 32
+l Height = 5
+l UNormal = 155
+l VNormal = 215
+l UWidth = 32
+l VHeight = 5
+st FileName = "mcl_mp_lanbrowser_2.tga"
+
+[Static29]// locked game icon
+l XLocation = 76
+l YLocation = 88
+l Width = 12
+l Height = 12
+l UNormal = 240
+l VNormal = 13
+l UWidth = 12
+l VHeight = 12
+st FileName = "mcl_mp_lanbrowser_1.tga"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 10
+
+[Rect0] // 
+l XLocation = 70
+l YLocation = 105
+l Width = 674
+l Height = 302
+l Color = 0xff43311c
+b outline = TRUE
+
+[Rect1] // 
+l XLocation = 101
+l YLocation = 105
+l Width = 0
+l Height = 302
+l Color = 0xff43311c
+b outline = TRUE
+
+
+[Rect2] // 
+l XLocation = 318
+l YLocation = 105
+l Width = 0
+l Height = 302
+l Color = 0xff43311c
+b outline = TRUE
+
+
+[Rect3] // 
+l XLocation = 422
+l YLocation = 105
+l Width = 0
+l Height = 302
+l Color = 0xff43311c
+b outline = TRUE
+
+
+[Rect4] // 
+l XLocation = 640
+l YLocation = 105
+l Width = 0
+l Height = 302
+l Color = 0xff43311c
+b outline = TRUE
+
+
+
+[Rect5] // 
+l XLocation = 107
+l YLocation = 80
+l Width = 217
+l Height = 324
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26069
+
+
+[Rect6] // 
+l XLocation = 324
+l YLocation = 80
+l Width = 103
+l Height = 324
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26070
+
+
+[Rect7] // 
+l XLocation = 428
+l YLocation = 80
+l Width = 103
+l Height = 324
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26071
+
+
+[Rect8] // 
+l XLocation = 646
+l YLocation = 80
+l Width = 318
+l Height = 324
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26072
+
+[Rect9] // 
+l XLocation = 72
+l YLocation = 80
+l Width = 28
+l Height = 324
+l Color = 0
+b outline = FALSE
+l HelpDesc = 26113
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Texts]
+l Textcount = 6
+
+[Text0] // main header
+l XLocation = 18
+l YLocation = 12
+l Width = 405
+l Height = 28
+l Color = -30208
+b outline = FALSE
+l Font = 26061 // use agencyfb17
+l TextID = 26050
+l Alignment = 0
+l HelpDesc = 26076
+
+[Text1] //  game name header
+l XLocation = 107
+l YLocation = 85
+l Width = 202
+l Height = 18
+l Color = -3774976
+b outline = FALSE
+l Font = 26062 // use agencyfb14
+l TextID = 26052
+l Alignment = 0
+
+[Text2] // number of players header
+l XLocation = 322
+l YLocation = 85
+l Width = 92
+l Height = 18
+l Color = -3774975
+b outline = FALSE
+l Font = 26063 // use agencyfb14
+l TextID = 26053
+l Alignment = 0
+
+[Text3] // map name header
+l XLocation = 428
+l YLocation = 85
+l Width = 205
+l Height = 18
+l Color = -3774974
+b outline = FALSE
+l Font = 26064  // use agencyfb14
+l TextID = 26054
+l Alignment = 0
+
+[Text4] // "PING" header
+l XLocation = 644
+l YLocation = 85
+l Width = 97
+l Height = 18
+l Color = -3774973
+b outline = FALSE
+l Font = 26065  // use agencyfb14
+l TextID = 26055
+l Alignment = 0
+
+[Text5] // help text
+l XLocation = 146
+l YLocation = 542
+l Width = 456
+l Height = 55
+l Color = -1
+b outline = FALSE
+l Font = 26066 // use arialnarrow 8
+l TextID = 26051
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+[GameList]
+
+l XLocation = 72
+l YLocation = 106
+
+st FileName = "mcl_mp_lanbrowsercombobox0"
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+FITend 

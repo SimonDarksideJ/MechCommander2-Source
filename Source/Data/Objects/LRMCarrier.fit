@@ -1,0 +1,124 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=3
+
+[ObjectType]
+st Name					="lrmcarrier"
+st AppearanceName				="lrmc"
+l ExplosionObject				=700
+l DestroyedObject				=0
+f ExtentRadius				=20.000000
+
+[General]
+//Read by Type
+uc Chassis					=0
+b MineLayer					=FALSE
+b MineSweeper				=FALSE
+l RefitPoints				=0
+f ExplosionRadius				=50.0
+f ExplosionDamage				=3.0
+l IconIndex 				=14
+//Read by instance
+l DescIndex					=30342
+f CurTonnage				=50 
+c Status					=0 
+l BattleRating				=25
+l EncyclopediaID 				=45203
+
+[InternalStructure]
+uc Front					=1
+uc Rear					=1
+uc Left					=1
+uc Right					=1
+uc Turret					=1
+
+[VehicleDynamics]
+f MaxAccel						=5.000000
+f MaxVelocity					=15.000000
+l MaxTurretYawRate				=90
+l MaxTurretYaw					=180
+l MaxVehicleYawRate				=720
+
+[Front]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=6 
+uc CurArmorPoints 				=6 
+
+[Left]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints					=6 
+uc CurArmorPoints 				=6 
+
+[Right]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=6 
+uc CurArmorPoints 				=6 
+
+[Rear]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=6 
+uc CurArmorPoints 				=6 
+
+[Turret]
+uc CurInternalStructure 			=1 
+uc MaxArmorPoints 				=3 
+uc CurArmorPoints 				=3 
+
+[InventoryInfo]
+uc NumOther 					=4
+uc NumWeapons 					=5 
+uc NumAmmo 						=5
+
+// Inventory Items -- Other
+
+[Item:0]
+uc MasterID 					=1		//Engine         
+										
+[Item:1]    					                                
+uc MasterID 					=6		//Cockpit       
+										
+[Item:2]    					                                
+uc MasterID 					=35		//LifeSupport   
+										
+[Item:3]
+uc MasterID						=36		//Vehicle Sensor
+
+// Inventory Items -- Weapons                                                   
+										
+[Item:4]                                                                        
+uc MasterID 					=120		//LRM5 Rack
+										
+[Item:5]                                                                        
+uc MasterID 					=120		//LRM5 Rack
+										
+[Item:6]    					                                
+uc MasterID 					=120		//LRM5 Rack
+										
+[Item:7]    					                                
+uc MasterID 					=120		//LRM5 Rack
+
+[Item:8]    					                                
+uc MasterID 					=120		//LRM5 Rack
+										
+										
+// Inventory Items -- Ammo                                                      
+										
+[Item:9]                                                                        
+uc MasterID 					=220		//LRM5 Ammo
+										
+[Item:10]    					                                
+uc MasterID 					=220		//LRM5 Ammo
+										
+[Item:11]    					                                
+uc MasterID 					=220		//LRM5 Ammo
+										
+[Item:12]   					                                
+uc MasterID 					=220		//LRM5 Ammo
+
+[Item:13]    					                                
+uc MasterID 					=220		//LRM5 Ammo
+										
+
+
+FITend 

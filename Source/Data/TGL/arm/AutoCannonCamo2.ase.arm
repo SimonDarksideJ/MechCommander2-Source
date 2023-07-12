@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BEB739A3C3CEDC05C8E6543D2B554F73" />
+  <Asset Name="..\AutoCannonCamo2.ase" Type="Physical" Author="ngauvin" FileSize="82574" ModificationTime="2006-02-01T10:54:36.0450049-08:00" CRC="1A5164F36BF6A73FA168DAAF8A2479F6" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Autocannon.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turretbase.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Tundra_Cliffs_1.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\Turrets.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

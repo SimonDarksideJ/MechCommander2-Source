@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="25AA2EB56457F0BFDA1FE88B466FEC2D" />
+  <Asset Name="..\RavenX.ase" Type="Physical" Author="ngauvin" FileSize="302017" ModificationTime="2006-02-01T10:55:17.2327685-08:00" CRC="BFD91EEA3E160F966F9AD1652A7909FC" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

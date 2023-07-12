@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3A709022A44B1CE4CCD677634CD5988F" />
+  <Asset Name="..\monsoon.ase" Type="Physical" Author="ngauvin" FileSize="101602" ModificationTime="2006-02-01T10:55:13.6546206-08:00" CRC="9120AE711CB36ADEAB43B3F039920C6C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Monsoon.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

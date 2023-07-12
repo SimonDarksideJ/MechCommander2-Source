@@ -1,0 +1,99 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20800   'Bulldog'  Type:  405 
+//
+//      Creation Date: 5/18/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20800 
+st Crew =                                                  "PCREWC"
+ul Chassis =                                                405 
+st Name =                                                  "Bulldog"
+ul VehicleTypeID =                                          405 
+l NameIndex =                                               1 
+l DescIndex =                                               502 
+f CurTonnage =                                              60 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          700 
+l BattleRating =                                            65 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           12 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 6.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         24 
+uc CurArmorPoints =                                         24 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         16 
+uc CurArmorPoints =                                         16 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                1 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               102 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:4]
+uc MasterID =                                               202 
+l Amount =                                                 -1 
+
+FITEnd

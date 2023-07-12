@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="82621DF56BD7639E5D21533536AA7A73" />
+  <Asset Name="..\ArmoredCar.ini" Type="Physical" Author="franksav" FileSize="293" ModificationTime="2006-03-03T01:28:11.7112455-08:00" CRC="6C6742D5F485FF1B7A331AC7876A8739" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="armoredCar.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="armoredCarL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="armoredCarL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="armoredCarX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="armoredCardam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Armored Car" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

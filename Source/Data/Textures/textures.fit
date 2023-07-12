@@ -1,0 +1,1225 @@
+ FITini
+
+[Main]
+l MaxTerrainTextures		= 3000
+l MaxTerrainTypes		= 255
+l MaxTerrainOverlays		= 17
+l MAXTerrainDetails		= 2
+l MaxterrainTransitions		= 2000
+ul TextureMemSize		= 20480000
+
+[DetailType0]
+l DetailId		= 0
+st DetailName		= "detail_1"
+l NumDetails		= 1
+f FrameRate		= 12.0
+f TilingFactor		= 115.0
+
+[DetailType1]
+l DetailId		= 1
+st DetailName		= "Detail_1"
+l NumDetails		= 1
+f FrameRate		= 0.0
+f TilingFactor		= 200.0
+
+[TerrainType0]
+l TerrainId 		= 0
+st TerrainName		= "water_ocean"
+l TerrainPriority	= 0
+st MaskName		= "mask00"
+ul TerrainTacRGB	= 0x002B5673
+l NameID		= 10016
+b UsedWithNewTexture	= true
+
+[TerrainType1]
+l TerrainId 		= 1
+st TerrainName		= "Undefined"
+l TerrainPriority	= 60
+st MaskName		= "mask06"
+ul TerrainTacRGB	= 0x004A573F
+l NameID		= 0
+
+[TerrainType2]
+l TerrainId 		= 2
+st TerrainName		= "Undefined"
+l TerrainPriority	= 50
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x0097885c
+l NameID		= 0
+
+[TerrainType3]
+l TerrainId 		= 3
+st TerrainName		= "Undefined"
+l TerrainPriority	= 17
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x0097885c
+l NameID		= 0
+
+
+[TerrainType4]
+l TerrainId 		= 4
+st TerrainName		= "Undefined"
+l TerrainPriority	= 4
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x0043462C
+l NameID		= 0
+
+
+[TerrainType5]
+l TerrainId 		= 5
+st TerrainName		= "Undefined"
+l TerrainPriority	= 5
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x0043452C
+l NameID		= 0
+
+
+[TerrainType6]
+l TerrainId 		= 6
+st TerrainName		= "Undefined"
+l TerrainPriority	= 6
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x003F4429
+l NameID		= 0
+
+
+[TerrainType7]
+l TerrainId 		= 7
+st TerrainName		= "Undefined"
+l TerrainPriority	= 18
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x0097885c
+l NameID		= 0
+
+
+[TerrainType8]
+l TerrainId 		= 8
+st TerrainName		= "Undefined"
+l TerrainPriority	= 61
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x005C6648
+l NameID		= 0
+
+
+[TerrainType9]
+l TerrainId 		= 9
+st TerrainName		= "Undefined"
+l TerrainPriority	= 62
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x006D754C
+l NameID		= 0
+
+[TerrainType10]
+l TerrainId 		= 10
+st TerrainName		= "cement_1"
+l TerrainPriority	= 151
+st MaskName		= "mask00"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10020
+
+
+[TerrainType11]
+l TerrainId 		= 11
+st TerrainName		= "Undefined"
+l TerrainPriority	= 50
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x006D6148
+l NameID		= 0
+
+
+[TerrainType12]
+l TerrainId 		= 12
+st TerrainName		= "Undefined"
+l TerrainPriority	= 54
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00896A3E
+l NameID		= 0
+
+
+[TerrainType13]
+l TerrainId 		= 13
+st TerrainName		= "cement_1"
+l TerrainPriority	= 152
+st MaskName		= "mask01"
+ul TerrainTacRGB	= 0x0054545C
+l NameID		= 10021
+b UsedWithNewTexture	= true
+
+
+[TerrainType14]
+l TerrainId 		= 14
+st TerrainName		= "cement_2"
+l TerrainPriority	= 153
+st MaskName		= "MASK00"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10022
+b UsedWithNewTexture	= true
+
+[TerrainType15]
+l TerrainId 		= 15
+st TerrainName		= "cement_2"
+l TerrainPriority	= 154
+st MaskName		= "MASK01"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10023
+b UsedWithNewTexture	= true
+
+
+[TerrainType16]
+l TerrainId 		= 16
+st TerrainName		= "cement_3"
+l TerrainPriority	= 155
+st MaskName		= "mask00"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10024
+b UsedWithNewTexture	= true
+
+
+[TerrainType17]
+l TerrainId 		= 17
+st TerrainName		= "cement_3"
+l TerrainPriority	= 156
+st MaskName		= "mask01"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10025
+b UsedWithNewTexture	= true
+
+
+[TerrainType18]
+l TerrainId 		= 18
+st TerrainName		= "cement_1"
+l TerrainPriority	= 157
+st MaskName		= "Mask08"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10026
+b UsedWithNewTexture	= true
+
+
+[TerrainType19]
+l TerrainId 		= 19
+st TerrainName		= "cement_2"
+l TerrainPriority	= 158
+st MaskName		= "mask08"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10027
+b UsedWithNewTexture	= true
+
+
+[TerrainType20]
+l TerrainId 		= 20
+st TerrainName		= "cement_3"
+l TerrainPriority	= 159
+st MaskName		= "MASK08"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 10069
+
+[TerrainType21]
+l TerrainId 		= 21
+st TerrainName		= "Undefined"
+l TerrainPriority	= 21
+st MaskName		= "MASK02"
+ul TerrainTacRGB	= 0x0097885c
+l NameID		= 0
+
+
+[TerrainType22]
+l TerrainId 		= 22
+st TerrainName		= "Undefined"
+l TerrainPriority	= 22
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x0049482A
+l NameID		= 0
+
+[TerrainType23]
+l TerrainId 		= 23
+st TerrainName		= "Undefined"
+l TerrainPriority	= 52
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x0097885c
+l NameID 		= 0
+
+[TerrainType24]
+l TerrainId 		= 24
+st TerrainName		= "Undefined"
+l TerrainPriority	= 24
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x0075663A
+l NameID		= 0
+
+
+[TerrainType25]
+l TerrainId 		= 25
+st TerrainName		= "Undefined"
+l TerrainPriority	= 25
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00817144
+l NameID		= 0
+
+
+[TerrainType26]
+l TerrainId 		= 26
+st TerrainName		= "Undefined"
+l TerrainPriority	= 26
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00907A50
+l NameID		= 0
+                          
+[TerrainType27]
+l TerrainId 		= 27
+st TerrainName		= "Undefined"
+l TerrainPriority	= 52
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x008F6F42
+l NameID		= 0
+
+
+[TerrainType28]
+l TerrainId 		= 28
+st TerrainName		= "Undefined"
+l TerrainPriority	= 53
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00967849
+l NameID		= 0
+
+[TerrainType29]
+l TerrainId 		= 29
+st TerrainName		= "Undefined"
+l TerrainPriority	= 29
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00575331
+l NameID		= 0
+
+[TerrainType30]
+l TerrainId 		= 30
+st TerrainName		= "Undefined"
+l TerrainPriority	= 30
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00675E37
+l NameID		= 0
+
+[TerrainType31]
+l TerrainId 		= 31
+st TerrainName		= "Undefined"
+l TerrainPriority	= 37
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x008C7442
+l NameID		= 0
+
+[TerrainType32]
+l TerrainId 		= 32
+st TerrainName		= "Undefined"
+l TerrainPriority	= 38
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00B48E55
+l NameID		= 0
+
+[TerrainType33]
+l TerrainId 		= 33
+st TerrainName		= "Undefined"
+l TerrainPriority	= 32
+st MaskName		= "MASK06"
+ul TerrainTacRGB	= 0x00CFA163
+l NameID		= 0
+
+[TerrainType34]
+l TerrainId 		= 34
+st TerrainName		= "Undefined"
+l TerrainPriority	= 33
+st MaskName		= "MASK02"
+ul TerrainTacRGB	= 0x00D7AC69
+l NameID		= 0
+
+[TerrainType35]
+l TerrainId 		= 35
+st TerrainName		= "Undefined"
+l TerrainPriority	= 34
+st MaskName		= "MASK02"
+ul TerrainTacRGB	= 0x00E3B675
+l NameID		= 0
+
+[TerrainType36]
+l TerrainId 		= 36
+st TerrainName		= "Undefined"
+l TerrainPriority	= 35
+st MaskName		= "MASK02"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType37]
+l TerrainId 		= 37
+st TerrainName		= "Undefined"
+l TerrainPriority	= 30
+st MaskName		= "MASK04"
+ul TerrainTacRGB	= 0x0051594D
+l NameID		= 0
+
+[TerrainType38]
+l TerrainId 		= 38
+st TerrainName		= "Undefined"
+l TerrainPriority	= 31
+st MaskName		= "MASK04"
+ul TerrainTacRGB	= 0x00656C62
+l NameID		= 0
+
+[TerrainType39]
+l TerrainId 		= 39
+st TerrainName		= "Undefined"
+l TerrainPriority	= 32
+st MaskName		= "MASK04"
+ul TerrainTacRGB	= 0x007E8373
+l NameID		= 0
+
+[TerrainType40]
+l TerrainId 		= 40
+st TerrainName		= "Undefined"
+l TerrainPriority	= 33
+st MaskName		= "MASK04"
+ul TerrainTacRGB	= 0x009D9D8C
+l NameID		= 0
+
+[TerrainType41]
+l TerrainId 		= 41
+st TerrainName		= "Undefined"
+l TerrainPriority	= 34
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00A7AB9F
+l NameID		= 0
+
+[TerrainType42]
+l TerrainId 		= 42
+st TerrainName		= "Undefined"
+l TerrainPriority	= 61
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x005E6254
+l NameID		= 0
+
+[TerrainType43]
+l TerrainId 		= 43
+st TerrainName		= "Undefined"
+l TerrainPriority	= 62
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x005E6254
+l NameID		= 0
+
+[TerrainType44]
+l TerrainId 		= 44
+st TerrainName		= "Undefined"
+l TerrainPriority	= 70
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x003e312a
+l NameID		= 0
+
+[TerrainType45]
+l TerrainId 		= 45
+st TerrainName		= "Undefined"
+l TerrainPriority	= 71
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x0046332a
+l NameID		= 0
+
+[TerrainType46]
+l TerrainId 		= 46
+st TerrainName		= "Undefined"
+l TerrainPriority	= 72
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00503e31
+l NameID		= 0
+
+[TerrainType47]
+l TerrainId 		= 47
+st TerrainName		= "Undefined"
+l TerrainPriority	= 73
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00584a36
+l NameID		= 0
+
+[TerrainType48]
+l TerrainId 		= 48
+st TerrainName		= "Undefined"
+l TerrainPriority	= 74
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00695f47
+l NameID		= 0
+
+[TerrainType49]
+l TerrainId 		= 49
+st TerrainName		= "Undefined"
+l TerrainPriority	= 75
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x002f2219
+l NameID		= 0
+
+[TerrainType50]
+l TerrainId 		= 50
+st TerrainName		= "Undefined"
+l TerrainPriority	= 76
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x002f2219
+l NameID		= 0
+
+[TerrainType51]
+l TerrainId 		= 51
+st TerrainName		= "Undefined"
+l TerrainPriority	= 77
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00484d2d
+l NameID		= 0
+
+[TerrainType52]
+l TerrainId 		= 52
+st TerrainName		= "Undefined"
+l TerrainPriority	= 78
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00484728
+l NameID		= 0
+
+[TerrainType53]
+l TerrainId 		= 53
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x0055512e
+l NameID		= 0
+
+[TerrainType54]
+l TerrainId 		= 54
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType55]
+l TerrainId 		= 55
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType56]
+l TerrainId 		= 56
+st TerrainName		= "Undefined"
+l TerrainPriority	= 80
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType57]
+l TerrainId 		= 57
+st TerrainName		= "Undefined"
+l TerrainPriority	= 81
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0 
+
+[TerrainType58]
+l TerrainId 		= 58
+st TerrainName		= "Undefined"
+l TerrainPriority	= 70
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType59]
+l TerrainId 		= 59
+st TerrainName		= "Undefined"
+l TerrainPriority	= 71
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType60]
+l TerrainId 		= 60
+st TerrainName		= "Undefined"
+l TerrainPriority	= 72
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType61]
+l TerrainId 		= 61
+st TerrainName		= "Undefined"
+l TerrainPriority	= 73
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType62]
+l TerrainId 		= 62
+st TerrainName		= "Undefined"
+l TerrainPriority	= 74
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType63]
+l TerrainId 		= 63
+st TerrainName		= "Undefined"
+l TerrainPriority	= 75
+st MaskName		= "MASK07"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType64]
+l TerrainId 		= 64
+st TerrainName		= "Undefined"
+l TerrainPriority	= 76
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType65]
+l TerrainId 		= 65
+st TerrainName		= "Undefined"
+l TerrainPriority	= 77
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType66]
+l TerrainId 		= 66
+st TerrainName		= "Undefined"
+l TerrainPriority	= 78
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType67]
+l TerrainId 		= 67
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType68]
+l TerrainId 		= 68
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType69]
+l TerrainId 		= 69
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK08"
+ul TerrainTacRGB	= 0x00828282
+l NameID		= 0
+b UsedWithNewTexture	= true
+
+[TerrainType70]
+l TerrainId 		= 70
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType71]
+l TerrainId 		= 71
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType72]
+l TerrainId 		= 72
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+[TerrainType73]
+l TerrainId 		= 73
+st TerrainName		= "Undefined"
+l TerrainPriority	= 79
+st MaskName		= "MASK03"
+ul TerrainTacRGB	= 0x00E4BD7E
+l NameID		= 0
+
+
+[OverlayType0]
+l OverlayId		= 0
+st OverlayName		= "dirtroad"
+l NumOverlays  = 15
+l OldOverlayNum		= 3534
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00918465
+l Overlay0Info	= 0x01000100
+l Overlay1Info	= 0x00010001
+l Overlay2Info 	= 0x01000001
+l Overlay3Info	= 0x00000101
+l Overlay4Info 	= 0x00010100
+l Overlay5Info	= 0x01010000
+l Overlay6Info	= 0x01010101
+l Overlay7Info 	= 0x01010001
+l Overlay8Info	= 0x01000101
+l Overlay9Info	= 0x00010101
+l Overlay10Info	= 0x01010100
+
+[OverlayType1]
+l OverlayId		= 1
+st OverlayName		= "pavedRoad"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x02000200
+l Overlay1Info	= 0x00020002
+l Overlay2Info 	= 0x02000002
+l Overlay3Info	= 0x00000202
+l Overlay4Info 	= 0x00020200
+l Overlay5Info	= 0x02020000
+l Overlay6Info	= 0x02020202
+l Overlay7Info 	= 0x02020002
+l Overlay8Info	= 0x02000202
+l Overlay9Info	= 0x00020202
+l Overlay10Info	= 0x02020200
+
+[OverlayType2]
+l OverlayId		= 2
+st OverlayName		= "rough"
+l NumOverlays		= 8
+l OldOverlayNum		= 3334
+b IsMLR			= f
+ul TerrainTacRGB	= 0xffffffff
+l Overlay0Info	= 0x03030303
+l Overlay1Info	= 0x03030303
+l Overlay2Info	= 0x03030303
+l Overlay3Info	= 0x03030303
+l Overlay4Info	= 0x03030303
+l Overlay5Info	= 0x03030303
+l Overlay6Info	= 0x03030303
+l Overlay7Info	= 0x03030303
+
+[OverlayType3]
+l OverlayId		= 3
+st OverlayName		= "droad2proad"
+l NumOverlays		= 4
+l OldOverlayNum		= 3572
+b IsMLR			= f
+ul TerrainTacRGB	= 0xffffffff
+l Overlay0Info	= 0x02010200
+l Overlay1Info	= 0x01020002
+l Overlay2Info  = 0x02000201
+l Overlay3Info	= 0x00020102
+
+[OverlayType4]
+l OverlayId		= 4
+st OverlayName		= "droad2proadcross"
+l NumOverlays		= 2
+l OldOverlayNum		= 3356
+b IsMLR			= f
+ul TerrainTacRGB	= 0xffffffff
+l Overlay0Info	= 0x01020102
+l Overlay1Info	= 0x02010201
+
+[OverlayType5]
+l OverlayId		= 5
+st OverlayName		= "2lanedirt"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x05000500
+l Overlay1Info	= 0x00050005
+l Overlay2Info 	= 0x05000005
+l Overlay3Info	= 0x00000505
+l Overlay4Info 	= 0x00050500
+l Overlay5Info	= 0x05050000
+l Overlay6Info	= 0x05050505
+l Overlay7Info 	= 0x05050005
+l Overlay8Info	= 0x05000505
+l Overlay9Info	= 0x00050505
+l Overlay10Info	= 0x05050500
+
+[OverlayType6]
+l OverlayId		= 6
+st OverlayName		= "Damagedroad"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x06000600
+l Overlay1Info	= 0x00060006
+l Overlay2Info 	= 0x06000006
+l Overlay3Info	= 0x00000606
+l Overlay4Info 	= 0x00060600
+l Overlay5Info	= 0x06060000
+l Overlay6Info	= 0x06060606
+l Overlay7Info 	= 0x06060006
+l Overlay8Info	= 0x06000606
+l Overlay9Info	= 0x00060606
+l Overlay10Info	= 0x06060600
+
+[OverlayType7]
+l OverlayId		= 7
+st OverlayName		= "runway"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x07000700
+l Overlay1Info	= 0x00070007
+l Overlay2Info 	= 0x07000007
+l Overlay3Info	= 0x00000707
+l Overlay4Info 	= 0x00070700
+l Overlay5Info	= 0x07070000
+l Overlay6Info	= 0x07070707
+l Overlay7Info 	= 0x07070007
+l Overlay8Info	= 0x07000707
+l Overlay9Info	= 0x00070707
+l Overlay10Info	= 0x07070700
+
+[OverlayType8]
+l OverlayId		= 8
+st OverlayName		= "X_DIRT_PAVED"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType9]
+l OverlayId		= 9
+st OverlayName		= "X_DIRT_2LANEDIRT"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType10]
+l OverlayId		= 10
+st OverlayName		= "X_DIRT_DAMAGED"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType11]
+l OverlayId		= 11
+st OverlayName		= "X_2LANEDIRT_PAVED"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType12]
+l OverlayId		= 12
+st OverlayName		= "X_DAMAGED_PAVED"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType13]
+l OverlayId		= 13
+st OverlayName		= "X_2LANEDIRT_DAMAGED"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType14]
+l OverlayId		= 14
+st OverlayName		= "Bridge"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x06000600
+l Overlay1Info	= 0x00060006
+l Overlay2Info 	= 0x06000006
+l Overlay3Info	= 0x00000606
+l Overlay4Info 	= 0x00060600
+l Overlay5Info	= 0x06060000
+l Overlay6Info	= 0x06060606
+l Overlay7Info 	= 0x06060006
+l Overlay8Info	= 0x06000606
+l Overlay9Info	= 0x00060606
+l Overlay10Info	= 0x06060600
+
+[OverlayType15]
+l OverlayId		= 15
+st OverlayName		= "X_PavedRoad_Bridge"
+l NumOverlays  = 50
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x08000800
+l Overlay1Info	= 0x00080008
+l Overlay2Info 	= 0x08000008
+l Overlay3Info	= 0x00000808
+l Overlay4Info 	= 0x00080800
+l Overlay5Info	= 0x08080000
+l Overlay6Info	= 0x08080808
+l Overlay7Info 	= 0x08080008
+l Overlay8Info	= 0x08000808
+l Overlay9Info	= 0x00080808
+l Overlay10Info	= 0x08080800
+l Overlay11Info	= 0x00080008
+l Overlay12Info 	= 0x08000008
+l Overlay13Info	= 0x00000808
+l Overlay14Info 	= 0x00080800
+l Overlay15Info	= 0x08080000
+l Overlay16Info	= 0x08080808
+l Overlay17Info 	= 0x08080008
+l Overlay18Info	= 0x08000808
+l Overlay19Info	= 0x00080808
+l Overlay20Info	= 0x08080800
+l Overlay21Info	= 0x00080008
+l Overlay22Info 	= 0x08000008
+l Overlay23Info	= 0x00000808
+l Overlay24Info 	= 0x00080800
+l Overlay25Info	= 0x08080000
+l Overlay26Info	= 0x08080808
+l Overlay27Info 	= 0x08080008
+l Overlay28Info	= 0x08000808
+l Overlay29Info	= 0x00080808
+l Overlay30Info	= 0x08080800
+l Overlay31Info	= 0x00080008
+l Overlay32Info 	= 0x08000008
+l Overlay33Info	= 0x00000808
+l Overlay34Info 	= 0x00080800
+l Overlay35Info	= 0x08080000
+l Overlay36Info	= 0x08080808
+l Overlay37Info 	= 0x08080008
+l Overlay38Info	= 0x08000808
+l Overlay39Info	= 0x00080808
+l Overlay40Info	= 0x08080800
+l Overlay41Info	= 0x00080008
+l Overlay42Info 	= 0x08000008
+l Overlay43Info	= 0x00000808
+l Overlay44Info 	= 0x00080800
+l Overlay45Info	= 0x08080000
+l Overlay46Info	= 0x08080808
+l Overlay47Info 	= 0x08080008
+l Overlay48Info	= 0x08000808
+l Overlay49Info	= 0x00080808
+
+[OverlayType16]
+l OverlayId		= 16
+st OverlayName		= "BridgeDAM"
+l NumOverlays  = 15
+l OldOverlayNum		= 3553
+b IsMLR			= f
+ul TerrainTacRGB	= 0x00383932
+l Overlay0Info	= 0x06000600
+l Overlay1Info	= 0x00060006
+l Overlay2Info 	= 0x06000006
+l Overlay3Info	= 0x00000606
+l Overlay4Info 	= 0x00060600
+l Overlay5Info	= 0x06060000
+l Overlay6Info	= 0x06060606
+l Overlay7Info 	= 0x06060006
+l Overlay8Info	= 0x06000606
+l Overlay9Info	= 0x00060606
+l Overlay10Info	= 0x06060600
+
+FITEnd
+
+

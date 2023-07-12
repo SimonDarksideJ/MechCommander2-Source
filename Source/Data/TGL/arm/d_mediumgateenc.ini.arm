@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2C8E2F33A01D91A8577C51DAA17AEABF" />
+  <Asset Name="..\d_mediumgateenc.ini" Type="Physical" Author="franksav" FileSize="150" ModificationTime="2006-03-03T01:28:20.9924361-08:00" CRC="B4015962DD3A605B733113060509566B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="d_mediumgateEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

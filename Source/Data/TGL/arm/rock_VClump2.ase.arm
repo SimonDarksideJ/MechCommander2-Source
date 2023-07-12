@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0E9937F532E5D889BA0E586E0FFEFD85" />
+  <Asset Name="..\rock_VClump2.ase" Type="Physical" Author="ngauvin" FileSize="27285" ModificationTime="2006-02-01T10:55:20.2327877-08:00" CRC="5B99B4451C3AB6A66F416232A5AC479F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Volcanic_Cliffs_1.TGA" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

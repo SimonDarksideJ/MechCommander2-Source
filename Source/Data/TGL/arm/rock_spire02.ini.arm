@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BDB2B74854A906591D8DA57DBD9FE46B" />
+  <Asset Name="..\rock_spire02.ini" Type="Physical" Author="franksav" FileSize="288" ModificationTime="2006-03-03T01:28:42.0548013-08:00" CRC="83FD75902D9BE20D7ED3B59AB8E6804D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="rock_spire02.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="rock_spire02L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="rock_spire02L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="rock_spire02X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Desert Rock Spire 2" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

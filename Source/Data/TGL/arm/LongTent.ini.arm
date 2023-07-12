@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="0B081C147690240ED29C161A367D3D3C" />
+  <Asset Name="..\LongTent.ini" Type="Physical" Author="franksav" FileSize="323" ModificationTime="2006-03-03T01:28:33.820479-08:00" CRC="B610D261AF182B90B51BA35630B7AC0B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="LongTent.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="LongTentL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="LongTentL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LongTentX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="LongTentDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="LongTentDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Long Tent" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

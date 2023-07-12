@@ -1,0 +1,30 @@
+FITini
+
+// This is a sample Component Data File.
+
+[General Data]
+st Name =					"Standard Heat Sink"	// Text string giving a descriptive name
+l Type =					100						// ID number for this component
+uc Tonnage =				2						// 1.0 ton (remember, in half-tons)
+
+[Critical Spaces]
+uc[9] NumCriticalSpaces =	1,						// Anywhere
+							0,						// Head
+							0,						// Left Arm
+							0,						// Right Arm
+							6,						// Center Torso
+							0,						// Left Torso
+							0,						// Right Torso
+							0,						// Left Leg
+							0						// Right Leg
+
+[Supply Data]
+l SupplyPoints =			??						// Units?
+l DeliveryTime =			??						// In hours?
+
+[Damage Levels]
+c DamageLevel =				-1						// Never damaged--only destroyed
+c DestroyLevel =			1						// If hit, destroyed
+
+FITEnd
+

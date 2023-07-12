@@ -1,0 +1,208 @@
+FITini 
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 7
+
+[Rect0] // mech description scroll box
+l XLocation = 178
+l YLocation = 35
+l Width = 315
+l Height = 207
+l Color = -16765099
+b outline = TRUE
+
+[Rect1] // mech stats scroll box
+l XLocation = 10
+l YLocation = 272
+l Width = 236
+l Height = 180
+l Color = -16699563
+b outline = TRUE
+
+[Rect2] // weapons loadout scroll box
+l XLocation = 256
+l YLocation = 272
+l Width = 237
+l Height = 180
+l Color = -16634027
+b outline = TRUE
+
+[Rect3] 
+l XLocation = 18
+l YLocation = 35
+l Width = 141
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+[Rect4] 
+l XLocation = 10
+l YLocation = 43
+l Width = 0
+l Height = 190
+l Color = 0xff002F55
+b outline = TRUE
+
+[Rect5] 
+l XLocation = 167
+l YLocation = 43
+l Width = 0
+l Height = 190
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect6] 
+l XLocation = 18
+l YLocation = 241
+l Width = 141
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 5
+
+[Static0]
+l XLocation = 10
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static1]
+l XLocation = 161
+l YLocation = 235
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+
+[Static2]
+l XLocation = 161
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+
+[Static3]
+l XLocation = 10
+l YLocation = 235
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+
+[Static4] // walking mech should be centered here
+l XLocation = 12
+l YLocation = 43
+l Width = 154
+l Height = 191
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Texts]
+l Textcount = 3
+
+[Text0] // mech or vehicle name header
+l XLocation = 10
+l YLocation = 9
+l Width = 483
+l Height = 22
+l Color = -10709310
+b outline = FALSE
+l Font = 27712 // use agency fb 14
+l TextID = 0
+l Alignment = 0
+ 
+[Text1] // mech stats header
+l XLocation = 10
+l YLocation = 248
+l Width = 236
+l Height = 22
+l Color = -10709309
+b outline = FALSE
+l Font = 27714 // use agency fb 14
+l TextID = 27713
+l Alignment = 0
+
+[Text2] // weapons loadout header
+l XLocation = 256
+l YLocation = 248
+l Width = 236
+l Height = 22
+l Color = -10709308
+b outline = FALSE
+l Font = 27716 // use agency fb 14
+l TextID = 27715
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+  
+FITend 

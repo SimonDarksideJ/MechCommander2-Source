@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="4EA7940AFB614973C03DC0CBDABFB9D0" />
+  <Asset Name="..\Shayu.ase" Type="Physical" Author="ngauvin" FileSize="174279" ModificationTime="2006-02-01T10:55:28.8265927-08:00" CRC="D2A0BFD6F1E8DDF0690C946069E58BB8" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ShaYuRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

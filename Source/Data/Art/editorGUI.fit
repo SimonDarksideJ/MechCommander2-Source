@@ -1,0 +1,113 @@
+FITini
+
+[CameraData]
+f RotationDegPerSec = 6000.0			//Actually degrees per frameLength
+f RotationIncrement = 11.25
+f ZoomIncrement = 10.0
+
+f ScrollIncrement = 5000.0
+f ScrollLeft = 5.0
+f ScrollRight = 5.0
+f ScrollUp = 5.0
+f ScrollDown = 5.0
+
+f BaseFrameLength = 15.0
+
+f MouseDragThreshold = 10				//In Pixels
+f MouseDoubleClickThreshold = 0.2		//In Seconds
+
+
+[Elements]
+l numElements = 0
+
+[Element0]
+l ElementType = 10 // menu
+st Font = "arial8.tga"
+l ItemCount = 7
+
+ul Item0Text = 10000
+l Item0SubCount = 5
+ul Item0Sub0 = 10001
+ul Item0Sub1 = 10002
+ul Item0Sub2 = 10003
+ul Item0Sub3 = 10005
+ul Item0Sub4 = 10051
+l Item0Sub0Message = 10001
+l Item0Sub1Message = 10002
+l Item0Sub2Message = 10003
+l Item0Sub3Message = 6
+l Item0Sub4Message = 10051
+
+ul Item1Text = 10006
+l Item1SubCount = 3
+ul Item1Sub0 = 10007
+ul Item1Sub1 = 10008
+ul Item1Sub2 = 10009
+l Item1Sub0Message = 10007
+l Item1Sub1Message = 10008
+
+ul Item2Text = 10011
+
+
+ul Item3Text = 10013 // Terrain
+l Item3SubCount = 12
+ul Item3Sub0 = 10512 // Grass
+ul Item3Sub1 = 10504 // Blue Water
+ul Item3Sub2 = 10505 // Green Water
+ul Item3Sub3 = 10506 //
+ul Item3Sub4 = 10507 //
+ul Item3Sub5 = 10508 //
+ul Item3Sub6 = 10509 //
+ul Item3Sub7 = 10510 //
+ul Item3Sub8 = 10511 //
+ul Item3Sub9 = 10512 //
+ul Item3Sub10 = 10513 //
+ul Item3Sub11 = 10514 //
+ul Item3Sub12 = 10515 //
+l Item3Sub0Message = 10503
+l Item3Sub1Message = 10504
+l Item3Sub2Message = 10505
+l Item3Sub3Message = 10506
+l Item3Sub4Message = 10507
+l Item3Sub5Message = 10508
+l Item3Sub6Message = 10509
+l Item3Sub7Message = 10510
+l Item3Sub8Message = 10511
+l Item3Sub9Message = 10512
+l Item3Sub1Message = 10513
+l Item3Sub1Message = 10514
+l Item3Sub1Message = 10515
+
+ul Item4Text = 10012
+l Item4SubCount = 3
+ul Item4Sub0 = 10500
+ul Item4Sub1 = 10501
+ul Item4Sub2 = 10502 
+l Item4Sub0Message = 10500
+l Item4Sub1Message = 10501
+l Item4Sub2Message = 10502
+
+ul Item5Text = 10014
+
+ul Item6Text = 10015
+l Item6SubCount = 5
+ul Item6Sub0 = 10050
+l Item6Sub0Message = 10050
+ul Item6Sub1 = 10052
+l Item6Sub1Message = 10052
+ul Item6Sub2 = 10053
+l Item6Sub2Message = 10053
+ul Item6Sub3 = 10054
+l Item6Sub3Message = 10054
+ul Itemb6Sub4 = 10055
+l Item6Sub4Message = 10055
+
+l ID = 1
+
+
+l textColor = 0xff000000
+l Color = 0xff9f9f9f
+l HighlightColor = 0xffffffff
+l ShadowColor = 0xff3f3f3f
+
+FITend

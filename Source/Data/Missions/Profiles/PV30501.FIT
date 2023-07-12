@@ -1,0 +1,99 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  30501   'Armed Flatbed'  Type:  423 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     30501 
+st Crew =                                                  "PCREWB"
+ul Chassis =                                                423 
+st Name =                                                  "Armed Flatbed"
+ul VehicleTypeID =                                          423 
+l NameIndex =                                               0 
+l DescIndex =                                               531 
+f CurTonnage =                                              40 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          4000 
+l BattleRating =                                            40 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           24 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 1.75 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         9 
+uc CurArmorPoints =                                         9 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         7 
+uc CurArmorPoints =                                         7 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         7 
+uc CurArmorPoints =                                         7 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         7 
+uc CurArmorPoints =                                         7 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                1 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               100 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:4]
+uc MasterID =                                               200 
+l Amount =                                                  134 
+
+FITEnd

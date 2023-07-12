@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7E64F281E1D1B91130917807655BF56B" />
+  <Asset Name="..\cactus4.ini" Type="Physical" Author="franksav" FileSize="318" ModificationTime="2006-03-03T01:28:14.91435-08:00" CRC="337A21CAA2E359785EEBDFB6EFB3C90A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="cactus4.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="cactus4L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="cactus4L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="cactus4X.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="cactus4dam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="cactus4damX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Spiked Cactus" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

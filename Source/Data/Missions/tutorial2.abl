@@ -1,0 +1,171 @@
+//*********************************************************************************
+
+module tutorial1 : integer;
+
+	const
+        pMissionSelectionScreen     = 1;
+        pBriefingScreen             = 11;
+        pMechBayScreen              = 21;
+        pPilotSelectionScreen       = 31;
+        pPurchaseMechScreen         = 20;
+        pMechLabScreen              = 22;
+        pLoadScreen                 = 41;
+
+	type
+
+	var
+        eternal boolean firstTimeMechBay;
+        eternal boolean firstTimeMissionSelect;
+        eternal boolean firstTimeBriefing;
+        eternal boolean firstTimePilotSelect;
+        eternal boolean firstTimePurchase;
+        eternal boolean firstTimeMechLab;
+        eternal boolean firstTimeLoadScreen;
+
+        eternal integer purchaseStage;
+        eternal integer pilotSelectStage;
+        eternal integer mechLabStage;
+
+        eternal real    startTime;
+        eternal real    currentTime;
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+	code
+        firstTimeMechBay = true;
+        firstTimeMissionSelect = true;
+        firstTimeBriefing = true;
+        firstTimePilotSelect = true;
+        firstTimePurchase = true;
+        firstTimeMechLab = true;
+        firstTimeLoadScreen = true;
+
+        purchaseStage = 0;
+        pilotSelectStage = 0;
+        mechLabStage = 0;
+
+        startTime = 0.0;
+        currentTime = 0.0;
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+    code
+
+        if (logisticsScreenId == pPurchaseMechScreen) then
+            if (firstTimePurchase) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimePurchase = false;
+            endif;
+
+            //WAIT 3 seconds to allow Betty to finish her shtick.
+            if (purchaseStage == 0) then
+                startTime = GetLogisticsTime;
+                purchaseStage = purchaseStage + 1;
+            endif;
+
+            if (purchaseStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    purchaseStage = purchaseStage + 1;
+                endif;
+            endif;
+
+            if (purchaseStage == 2) then
+                playWave("tut_5a",-1);
+                purchaseStage = purchaseStage + 1;
+            endif;
+
+        endif;
+
+        if (logisticsScreenId == pMechLabScreen) then
+            if (firstTimeMechLab) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimeMechLab = false;
+            endif;
+
+            //WAIT 3 seconds to allow Betty to finish her shtick.
+            if (mechLabStage == 0) then
+                startTime = GetLogisticsTime;
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (mechLabStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    mechLabStage = mechLabStage + 1;
+                endif;
+            endif;
+
+            if (mechLabStage == 2) then
+                playWave("tut_5b",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechLabStage == 3)) then
+            //    logisticsAnimationCallout(22,false,1.0,5);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechLabStage == 4)) then
+                playWave("tut_5c",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT isPlayingVoiceOver AND (mechLabStage == 5)) then
+            //    logisticsAnimationCallout(21,false,1.0,5);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+            if (NOT logisticsInCallout AND (mechLabStage == 6)) then
+                playWave("tut_5d",-1);
+                mechLabStage = mechLabStage + 1;
+            endif;
+
+        endif;
+
+        if (logisticsScreenId == pPilotSelectionScreen) then
+
+            if (firstTimePilotSelect) then
+                //Stop any playing voiceovers, NEW screen!!
+                StopVoiceOver;
+                firstTimePilotSelect = false;
+            endif;
+
+            //WAIT 3 seconds to allow Betty to finish her shtick.
+            if (pilotSelectStage == 0) then
+                startTime = GetLogisticsTime;
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+
+            if (pilotSelectStage == 1) then
+                currentTime = GetLogisticsTime - startTime;
+                if (currentTime > 3000) then                    //3 Seconds
+                    pilotSelectStage = pilotSelectStage + 1;
+                endif;
+            endif;
+
+            if (pilotSelectStage == 2) then
+            //    playWave("tut_5f",-1);
+                pilotSelectStage = pilotSelectStage + 1;
+            endif;
+        endif;
+
+        return (0);
+
+endmodule.
+//******************************************************************
+
+
+

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="65EA990E42AC969F1D7D4E1DEB3D2A98" />
+  <Asset Name="..\smallfueltank.ini" Type="Physical" Author="franksav" FileSize="580" ModificationTime="2006-03-03T01:28:50.695371-08:00" CRC="7A037DF6077153A42D54AF47504134D2" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="SmallFuelTank.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="SmallFuelTankL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="SmallFuelTankL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SmallFuelTankX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="SmallFuelTankDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="SmallFuelTankDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Fuel Tank" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

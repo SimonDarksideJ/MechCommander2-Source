@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  21100   'Mobile Artillery'  Type:  403 
+//
+//      Creation Date: 5/18/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     21100 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                403 
+st Name =                                                  "Mobile Artillery"
+ul VehicleTypeID =                                          403 
+l NameIndex =                                               27 
+l DescIndex =                                               522 
+f CurTonnage =                                              95 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          11000 
+l BattleRating =                                            3500 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           15 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 7.5 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         30 
+uc CurArmorPoints =                                         30 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         25 
+uc CurArmorPoints =                                         25 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         25 
+uc CurArmorPoints =                                         25 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         25 
+uc CurArmorPoints =                                         25 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

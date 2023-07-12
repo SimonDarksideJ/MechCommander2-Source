@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2F6866DD3554D16C284C92CA1E7BE928" />
+  <Asset Name="..\terminal2enc.ini" Type="Physical" Author="franksav" FileSize="386" ModificationTime="2006-03-03T01:28:53.0859807-08:00" CRC="F3E24C92ABA4C401D629F6B1A0002CF4" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="terminal2Enc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

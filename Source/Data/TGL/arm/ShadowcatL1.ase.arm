@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EC731D1CE090BBFC9C1C70A09274C5F2" />
+  <Asset Name="..\ShadowcatL1.ase" Type="Physical" Author="ngauvin" FileSize="135375" ModificationTime="2006-02-01T10:55:28.404715-08:00" CRC="43BA9111A4332465E239E279C15BEF75" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ShadowcatRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

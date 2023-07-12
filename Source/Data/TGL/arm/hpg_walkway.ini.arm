@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C10866097EAB8FBA63359198F3FDF7D5" />
+  <Asset Name="..\hpg_walkway.ini" Type="Physical" Author="franksav" FileSize="577" ModificationTime="2006-03-03T01:28:27.6017688-08:00" CRC="8C48F3C7721C72C8B3902E8F9E574A53" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_Walkway.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="HPG_WalkwayL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="HPG_WalkwayL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HPG_WalkwayX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="HPG_Walkwaydam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="HPG_WalkwayDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Comstar Walkway" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

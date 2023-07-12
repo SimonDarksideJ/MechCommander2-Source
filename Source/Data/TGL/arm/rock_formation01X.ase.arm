@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5E48210004491A7B4582092557C150B0" />
+  <Asset Name="..\rock_formation01X.ase" Type="Physical" Author="ngauvin" FileSize="26287" ModificationTime="2006-02-01T10:55:18.3421506-08:00" CRC="D1D44BCF4D02E32CC474E7AA6533D383" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

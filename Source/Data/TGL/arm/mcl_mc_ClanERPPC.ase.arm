@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8E3576A0F9FF8533A9C9E75C985C1C55" />
+  <Asset Name="..\mcl_mc_ClanERPPC.ase" Type="Physical" Author="ngauvin" FileSize="202828" ModificationTime="2006-02-01T10:55:10.592101-08:00" CRC="51B220BC97701F8F157D0F74C007F683" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\clanERPPC.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

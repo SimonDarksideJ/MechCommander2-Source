@@ -1,0 +1,23 @@
+FITini
+
+// This is the PPC and ER PPC Hit Explosion Data File
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 					= "ppchit"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 40				// ID number for this object type
+l Appearance				= 0x02000171
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[ExplosionData]
+ul DmgLevel					= 0
+ul SoundEffectId			= 24				// Need a new sound Effect for this!!!!!!!
+		
+FITend

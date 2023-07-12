@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5294B8D5B42A7E375C7DED689DF7A974" />
+  <Asset Name="..\milcheckpointX.ase" Type="Physical" Author="ngauvin" FileSize="10640" ModificationTime="2006-02-01T10:55:13.2796182-08:00" CRC="4212CA9A58F0E7CB945225936E768C36" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Crates.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

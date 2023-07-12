@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="72104329EC2FDB9A7190BA8D9D8EE731" />
+  <Asset Name="..\s_main.ini" Type="Physical" Author="franksav" FileSize="610" ModificationTime="2006-03-03T01:28:45.9610263-08:00" CRC="4FC463872912C53DD1D05A13FF708903" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_main.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_mainL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_mainL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_mainX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_maindam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_maindamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="High Command" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

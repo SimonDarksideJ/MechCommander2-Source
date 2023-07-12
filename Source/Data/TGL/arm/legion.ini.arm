@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DE89CD4A57F632A32509927887B128CF" />
+  <Asset Name="..\legion.ini" Type="Physical" Author="franksav" FileSize="334" ModificationTime="2006-03-03T01:28:32.9611095-08:00" CRC="DE384031365F0E09C4C982C0AC47DA1E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="legion.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="legionL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="legionL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="LegionX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="legiondam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Legion" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

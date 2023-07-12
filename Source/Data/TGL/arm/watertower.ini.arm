@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="8A6C4EED92AB8AE27C78DFF8BEADC839" />
+  <Asset Name="..\watertower.ini" Type="Physical" Author="franksav" FileSize="566" ModificationTime="2006-03-03T01:28:56.4609591-08:00" CRC="DE58C2259F6DC54AF4CF5B9BAEA58DC3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="watertower.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="WaterTowerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="WaterTowerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="WaterTowerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="watertowerdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="WaterTowerDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Water Tower" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

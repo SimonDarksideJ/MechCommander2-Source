@@ -1,0 +1,88 @@
+//***************************************************************************
+
+module TurretBrain0000x : integer;
+
+	const
+
+		ATTACK_TO_DESTROY = 1;
+		CT_ENEMY = 1;
+		CT_LOS = 2;
+		CT_NOT_CHALLENGED = 8;
+		CS_NONE = 0;
+		CS_CV = 1;
+		ATTACK_RANGED = 0;
+		FIRERANGE_OPTIMAL = -1;
+
+	type
+
+		IntList = integer[255];
+
+	var
+
+		static integer		Me;
+		real				distance;
+		real				closestDistance;
+		integer				closest;
+		integer				targetID;
+		integer				numTargets;
+		integer				x;
+		IntList				enemyList;
+		integer				ObjStatus;
+
+//---------------------------------------------------------------------------
+// INIT function
+//---------------------------------------------------------------------------
+
+function init;
+
+	code
+
+		//-------------------------
+		// Save my own object id...
+		Me = getId;
+
+endfunction;
+
+//---------------------------------------------------------------------------
+// DECISION mode - module main code
+//---------------------------------------------------------------------------
+
+	code
+
+//		orderAttackObject(512,ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, FALSE);		
+
+		numTargets = getContacts(enemyList, CT_ENEMY + CT_LOS, CS_CV);
+		if (numTargets > 0) then
+			closest = -1;
+			for x = 0 to (numTargets - 1) do
+				selectcontact(1,enemyList[x]);
+				targetID = getcontactId;
+				distance = distancetoobject(Me,targetID);
+				objStatus = objectstatus(targetID);
+				if ((objStatus <> 1) AND (objStatus <> 2) AND (objStatus <> -1)) then
+					if (distance > 0) then  // Error avoidance
+						if (closest == -1) then
+							closestdistance = distance;
+							closest = x;
+						else
+							if (distance < closestdistance) then
+								closestdistance = distance;
+								closest = x;
+							endif;
+						endif;
+					endif;
+				endif;
+			endfor;
+			if (closest <> -1) then			
+				orderwait(0.0,TRUE);
+				selectContact(1, enemyList[closest]);
+				orderAttackContact(ATTACK_TO_DESTROY, ATTACK_RANGED, FIRERANGE_OPTIMAL, FALSE);
+			endif;
+
+		endif;		
+
+		return(0);
+			
+endmodule.
+
+//***************************************************************************

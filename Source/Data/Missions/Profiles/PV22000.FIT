@@ -1,0 +1,107 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  22000   'VonLuckner'  Type:  473 
+//
+//      Creation Date: 5/14/98      Creator: Mike Lee
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     22000 
+st Crew =                                                  "PCREWB"
+ul Chassis =                                                473 
+st Name =                                                  "VonLuckner"
+ul VehicleTypeID =                                          473 
+l NameIndex =                                               21 
+l DescIndex =                                               518 
+f CurTonnage =                                              75 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          700 
+l BattleRating =                                            75 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           12 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 6.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         24 
+uc CurArmorPoints =                                         24 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         16 
+uc CurArmorPoints =                                         16 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             2 
+uc NumAmmo =                                                2 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               104 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               100 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:5]
+uc MasterID =                                               204 
+l Amount =                                                 -1 
+
+[Item:6]
+uc MasterID =                                               200 
+l Amount =                                                 -1 
+
+FITEnd

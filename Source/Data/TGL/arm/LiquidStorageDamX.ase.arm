@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FBFE259335D4C884CEE21D00110378F1" />
+  <Asset Name="..\LiquidStorageDamX.ase" Type="Physical" Author="ngauvin" FileSize="13334" ModificationTime="2006-02-01T10:55:09.1233416-08:00" CRC="53F939EC36EBD83E57FCEFEF0AC0F0E9" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_LiquidStorageDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

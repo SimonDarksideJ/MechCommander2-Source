@@ -1,0 +1,273 @@
+FITini
+
+
+[Campaign]
+
+l GroupCount = 13
+l CBills = 80000
+st FinalVideo = "cinema5.bik"
+l NameID = 60021
+
+[Group0]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op1_1"
+st Video = "STANDIN"
+st PreVideo = "cinema1.bik"
+l Tune = 22
+
+//FOR TEST ONLY!!! No logistics in first pass
+st ABLScript = "Tutorial0"
+
+[Group0Mission0]
+
+st FileName = "mc2_01"
+b	Mandatory = TRUE
+st PurchaseFile = "Purchase01"
+b PlayLogistics = 0
+b PlaySalvage = 0
+b PlayPilotPromotion = 1
+b PlayPurchasing = 0
+b PlaySelection = 0
+
+[Group1]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op1_2"
+st Video = "NODE_02"
+l Tune = 22
+st ABLScript = "Tutorial1"
+
+[Group1Mission0]
+st FileName = "mc2_02"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase02"
+b PlayLogistics = 1
+b PlaySalvage = 1
+b PlayPilotPromotion = 1
+b PlayPurchasing = 1
+
+
+[Group2]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op1_3"
+st Video = "NODE_03"
+l Tune = 22
+st ABLScript = "Tutorial2"
+
+[Group2Mission0]
+st FileName = "mc2_03"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase03"
+b PlayLogistics = 1
+b PlaySalvage = 1
+b PlayPilotPromotion = 1
+b PlayPurchasing = 1
+
+
+[Group3]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op1_4"
+st Video = "NODE_04"
+l Tune = 22
+
+[Group3Mission0]
+st FileName = "mc2_04"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase04"
+
+[Group4]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op1_5"
+st Video = "NODE_05"
+l Tune = 22
+
+[Group4Mission0]
+st FileName = "mc2_05"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase05"
+
+[Group5]
+
+l NumberToComplete = 2
+l MissionCount = 4
+st OperationFile = "MCL_CM_op1_6"
+st Video = "CHOICE_1"
+l Tune = 22
+
+[Group5Mission0]
+st FileName = "mc2_06"
+b Mandatory = False
+st PurchaseFile = "Purchase06"
+
+[Group5Mission1]
+st FileName = "mc2_07"
+b Mandatory = False
+st PurchaseFile = "Purchase07"
+
+[Group5Mission2]
+st FileName = "mc2_08"
+b Mandatory = False
+st PurchaseFile = "Purchase08"
+
+[Group5Mission3]
+st FileName = "mc2_09"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase09"
+b Hidden = TRUE
+st VideoOverride = "NODE_09.bik"
+
+[Group6]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op2_1"
+st Video = "NODE_10"
+l Tune = 20
+st PreVideo = "cinema2.bik"
+
+[Group6Mission0]
+st FileName = "mc2_10"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase10"
+
+[Group7]
+
+l NumberToComplete = 2
+l MissionCount = 3
+st OperationFile = "MCL_CM_op2_2"
+st Video = "CHOICE_2"
+l Tune = 20
+
+[Group7Mission0]
+st FileName = "mc2_11"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase11"
+
+[Group7Mission1]
+st FileName = "mc2_12"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase12"
+
+[Group7Mission2]
+st FileName = "mc2_13"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase13"
+b Hidden = TRUE
+st VideoOverride = "NODE_13.bik"
+
+[Group8]
+
+l NumberToComplete = 3
+l MissionCount = 4
+st OperationFile = "MCL_CM_op2_3"
+st Video = "CHOICE_3"
+l Tune = 20
+st PreVideo = "cinema3.bik"
+
+[Group8Mission0]
+st FileName = "mc2_14"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase14"
+
+
+[Group8Mission1]
+st FileName = "mc2_15"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase15"
+
+
+[Group8Mission2]
+st FileName = "mc2_16"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase16"
+
+[Group8Mission3]
+st FileName = "mc2_17"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase17"
+b Hidden = TRUE
+st VideoOverride = "NODE_17.bik"
+
+
+[Group9]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op3_1"
+st Video = "NODE_18"
+l Tune = 23
+st PreVideo = "cinema4.bik"
+
+[Group9Mission0]
+st FileName = "mc2_18"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase18"
+
+
+[Group10]
+
+l NumberToComplete = 2
+l MissionCount = 4
+st OperationFile = "MCL_CM_op3_2"
+st Video = "CHOICE_4"
+l Tune = 23
+
+[Group10Mission0]
+st FileName = "mc2_19"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase19"
+
+[Group10Mission1]
+st FileName = "mc2_20"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase20"
+
+[Group10Mission2]
+st FileName = "mc2_21"
+b Mandatory = FALSE
+st PurchaseFile = "Purchase21"
+
+[Group10Mission3]
+st FileName = "mc2_22"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase22"
+b Hidden = TRUE
+st VideoOverride = "NODE_22.bik"
+
+[Group11]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op3_3"
+st Video = "NODE_23"
+l Tune = 23
+
+[Group11Mission0]
+st FileName = "mc2_23"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase23"
+
+
+[Group12]
+
+l NumberToComplete = 1
+l MissionCount = 1
+st OperationFile = "MCL_CM_op3_4"
+st Video = "NODE_27"
+l Tune = 23
+
+[Group12Mission0]
+st FileName = "mc2_24"
+b Mandatory = TRUE
+st PurchaseFile = "Purchase24"
+
+FitEnd

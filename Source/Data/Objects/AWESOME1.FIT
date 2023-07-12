@@ -1,0 +1,19 @@
+FITini
+
+[ObjectClass]
+l ObjectTypeNum = 2
+
+[ObjectType]
+st Name							= "menshen"		// Descriptive name
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 12			// Extent Radius in Meters
+st AppearanceName					= "menshen"		// This is actually a Menshen in MC2
+
+[MechProfile]
+st ProfileName						= "menshen"
+f destructdamage					= 45
+f explosiondamage					= 20
+f explosionradius					= 80
+
+FITEnd

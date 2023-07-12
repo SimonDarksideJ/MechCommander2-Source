@@ -1,0 +1,8 @@
+FITini
+
+[Pilots]
+
+st Pilot0 = "PMWPayback"
+st Pilot1 = "PMWNuke"
+
+FITend

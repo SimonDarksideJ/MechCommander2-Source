@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="293829B819563DC52BE816A4EB0F0703" />
+  <Asset Name="..\S_SpotlightControldamX.ase" Type="Physical" Author="ngauvin" FileSize="16082" ModificationTime="2006-02-01T10:55:26.6390787-08:00" CRC="C4C1CC66957272B8F8378569701C622F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_S_SpotlightControlDAMX.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_Rubble.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

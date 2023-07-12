@@ -1,0 +1,85 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  30400   'Semi Tractor'  Type:  422 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     30400 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                422 
+st Name =                                                  "Semi Tractor"
+ul VehicleTypeID =                                          422 
+l NameIndex =                                               0 
+l DescIndex =                                               529 
+f CurTonnage =                                              40 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          4000 
+l BattleRating =                                            40 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           24 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 2 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         10 
+uc CurArmorPoints =                                         10 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         6 
+uc CurArmorPoints =                                         6 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         8 
+uc CurArmorPoints =                                         8 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             0 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+FITEnd

@@ -1,0 +1,433 @@
+//*********************************************************************************
+
+module mc2_13: integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+
+	type
+
+	var
+
+#include_ "sndvar.abi"
+
+            static boolean		Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+		static Position		startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+		static boolean			startCam;
+		static boolean			endCam;
+		static real				velTime;
+		static real				zoomFOV;
+		static real				startFOV;
+		static integer			camObject;
+
+//*******************************************NEW
+
+		eternal boolean			MainNorthAttacked; 	//Trigger Activated when HPG Northern Units are Attacked
+		eternal boolean			MainSouthAttacked; 	//Trigger activated when HPG Southern Units are Attacked
+		eternal boolean			WeapFac1Attacked; 	//Trigger Activated when Weapon Fac 1 is attacked
+		eternal boolean			WeapFac2Attacked;		//Trigger Activated when Weapon Fac 2 is attacked
+		eternal boolean			HPGAttacked;		//Trigger Activated when either HPG is attacked
+
+		eternal boolean			ClanBeenAttack;		//Trigger Activated when Clan Dudes gets attacked.
+		eternal integer			clanAreaTrigger;		//Area Trigger used for the Clan dudes
+		eternal integer			outerPatrol_1_ID;		//Part ID for Group 1 OuterPatrol Lead
+
+		static boolean			clanVO_Check;		//Trigger to play the Clan VO
+		//REMOVED static real				ClanVO_Timer;		//Timer to play Clan VO
+		static boolean			tacVO_Check;		//Trigger for the Tac to play the VO
+		static real				tacVO_Timer;		//Timer use for the Tac VO
+		static boolean			tacVO_Play;			//Trigger to check if the Tac VO has been played
+
+		static boolean			jasCVO_Check;		//Trigger for the Tac to play the VO
+		static real				jasCVO_Timer;		//Timer use for the Tac VO
+		static boolean			jasCVO_Play;		//Trigger to check if the Tac VO has been played
+
+		static boolean			weapFac1VO_Check;		//Trigger for the Tac to play the VO
+		static real				weapFac1VO_Timer;		//Timer use for the Tac VO
+		static boolean			weapFac1VO_Play;
+
+		static boolean			weapFac2VO_Check;		//Trigger for the Tac to play the VO
+		static real				weapFac2VO_Timer;		//Timer use for the Tac VO
+		static boolean			weapFac2VO_Play;
+
+
+		static boolean			weapFac3VO_Check;		//Trigger for the Tac to play the VO
+		static real				weapFac3VO_Timer;		//Timer use for the Tac VO
+		static boolean			weapFac3VO_Play;
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+			
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]		cellLoc;
+		
+		integer		moverID;
+		WorldPosition	moverPos;
+
+	code
+
+#include_ "sndinit.abi"
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+	//************************************
+
+		MainNorthAttacked = False; 		//Trigger Activated when HPG Northern Units are Attacked
+		MainSouthAttacked = False; 		//Trigger activated when HPG Southern Units are Attacked
+		WeapFac1Attacked = False; 		//Trigger Activated when Weapon Fac 1(East) is attacked
+		WeapFac2Attacked = False; 		//Trigger Activated when Weapon Fac 2(West) is attacked
+		HPGAttacked = False;			//Trigger Activated when either HPG is attacked
+		ClanBeenAttack = False;			//Trigger activated when Clan Dudes are attacked
+
+		clanVO_check = False;
+		tacVO_Check = False;
+		tacVO_Play = False;
+
+		jasCVO_Check = False;
+		jasCVO_Play = False;
+
+		weapFac1VO_Check = False;		//Trigger for the Tac to play the VO
+		weapFac1VO_Play = False;
+
+		weapFac2VO_Check = False;		//Trigger for the Tac to play the VO
+		weapFac2VO_Play = False;
+
+		weapFac3VO_Check = False;		//Trigger for the Tac to play the VO
+		weapFac3VO_Play = False;
+
+
+
+
+		worldLoc[0] = -1941;
+		worldLoc[1] = 4458;
+		worldLoc[2] = 0.0;
+		convertCoords(0, worldLoc, cellLoc);
+		clanAreaTrigger = addTriggerArea(cellLoc[0] -20, cellLoc[1] - 20, cellLoc[0] + 20, cellLoc[1] + 20, 2, 0);
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+
+		
+//--------------------------------------------------- Mission 13 Stuff
+
+			if (getObjectDamage(97900) > 0 )  OR (getObjectDamage(112316) > 0 ) Then
+				HPGAttacked = True;
+			endif;
+
+			if (isTriggerAreaHit(clanAreaTrigger)) then
+				ClanBeenAttack  = True;
+			endif;
+	
+			//*************************************************************************
+			//Play Clan VO
+			if (ClanBeenAttack) and (not clanVO_check) then
+				clanVO_check = True;
+				mcprint("Clan1");
+				playWave("data\sound\mc2_13_3.wav", -1); //Son attacks the player]
+			endif;
+
+			//*************************************************************************
+			//Play Clan Lose VO
+			if ((checkObjectiveStatus(6) == 1)) And (Not tacVO_Check) then
+				tacVO_Check = True;
+				tacVO_Timer = getTime + 6;
+			endif;
+				if ((getTime > tacVO_Timer) and (tacVO_Check)) and (Not tacVO_Play) then
+					tacVO_Play = True;
+					mcprint("Clan2");
+					playWave("data\sound\mc2_13_2.wav", -1); //Son attacks the player
+				endif;
+
+			//*************************************************************************
+			//HPG DOWN
+			if ((checkObjectiveStatus(0) == 1)) And (Not jasCVO_Check) then
+				jasCVO_Check = True;
+				jasCVO_Timer = getTime + 6;
+			endif;
+				if ((getTime > jasCVO_Timer) and (jasCVO_Check)) and (Not jasCVO_Play) then
+					jasCVO_Play = True;
+						playVideo("MC2_13B.bik");
+//					playWave("data\sound\mc2_13_4.wav", -1); //Son attacks the player
+				endif;
+		
+			//*************************************************************************
+			//Play Caps Weapon Fac 1
+			if ((checkObjectiveStatus(1) == 1)) And (Not weapFac1VO_Check) then
+				weapFac1VO_Check = True;
+				weapFac1VO_Timer = getTime + 9;
+			endif;
+				if ((getTime > weapFac1VO_Timer) and (weapFac1VO_Check)) and (Not weapFac1VO_Play) then
+					weapFac1VO_Play = True;
+						playVideo("W09.bik");
+//					playWave("data\sound\mc2_13_1.wav", -1); //Son attacks the player
+				endif;
+
+			//*************************************************************************
+			//Play Caps Weapon Fac 2
+			if ((checkObjectiveStatus(2) == 1)) And (Not weapFac2VO_Check) then
+				weapFac2VO_Check = True;
+				weapFac2VO_Timer = getTime + 9;
+			endif;
+				if ((getTime > weapFac2VO_Timer) and (weapFac2VO_Check)) and (Not weapFac2VO_Play) then
+					weapFac2VO_Play = True;
+						playVideo("W06.bik");
+//					playWave("data\sound\mc2_13_0.wav", -1); //Son attacks the player
+				endif;
+
+
+			//*************************************************************************
+			//Play Caps Weapon Fac 2
+			if ((checkObjectiveStatus(3) == 1)) And (Not weapFac3VO_Check) then
+				weapFac3VO_Check = True;
+				weapFac3VO_Timer = getTime + 9;
+			endif;
+				if ((getTime > weapFac3VO_Timer) and (weapFac3VO_Check)) and (Not weapFac3VO_Play) then
+					weapFac3VO_Play = True;
+						playVideo("W12.bik");
+//					playWave("data\sound\mc2_13_0.wav", -1); //Son attacks the player
+				endif;
+
+
+
+
+//---------------------------------------------------- Mission 13 Stuff End
+
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	
+	if (checkObjectiveStatus (5) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 0;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 2) then
+				SensorPlayCount = SensorPlayCount + 1;
+				mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune4);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+		//		playDigitalMusic(AmbientTune0);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+		//	playDigitalMusic(AmbientTune0);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(0) == 1)) then
+//	if ((NOT (checkObjectiveStatus(2) == 1)) AND (NOT (checkObjectiveStatus(3) == 1)) AND (NOT (checkObjectiveStatus(4) == 1))) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				  mcprint ("Playing Random Combat Tune");
+				playDigitalMusic(CombatTune0 + Random(NumCombatTunes));
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune6);
+			StartMusicTimer = getTime + 35; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+
+
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

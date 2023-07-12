@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="49DEC5241C088D0A4493FA77A82EDD3F" />
+  <Asset Name="..\s_promenade.ini" Type="Physical" Author="franksav" FileSize="574" ModificationTime="2006-03-03T01:28:46.7578962-08:00" CRC="CF0DF27A455EB23BBC05F04564A87A72" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="s_promenade.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="s_promenadeL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="s_promenadeL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="s_promenadeX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="s_promenadedam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="s_promenadedamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Small Promenade" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

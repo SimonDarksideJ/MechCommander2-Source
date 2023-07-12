@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="10694455B84A6E819E9A36421401B818" />
+  <Asset Name="..\hetzer.ini" Type="Physical" Author="franksav" FileSize="276" ModificationTime="2006-03-03T01:28:25.8674049-08:00" CRC="5021569998A4E50A84781B1626BD9260" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="hetzer.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="hetzerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="hetzerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="HetzerX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="hetzerdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Hetzer" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BD0CB6805C02A337D2EB0720CAE2777A" />
+  <Asset Name="..\crashnoseDamX.ase" Type="Physical" Author="ngauvin" FileSize="95944" ModificationTime="2006-02-01T10:54:43.9044302-08:00" CRC="4673CA9F1C9AFCCE458989D8F8118D8A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PanelsDamEdgeDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="65BCDC4A8CB847D669B5B2574109BCED" />
+  <Asset Name="..\l_heavygateenc.ini" Type="Physical" Author="franksav" FileSize="151" ModificationTime="2006-03-03T01:28:30.3517512-08:00" CRC="5EAC60EDAD56F16E012B90F6DCF4A134" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="l_heavygateEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

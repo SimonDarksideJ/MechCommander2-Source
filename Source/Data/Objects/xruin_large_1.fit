@@ -1,0 +1,25 @@
+FITini
+
+// This is the xruin_large data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xruin_large_1"
+l Type 				= 0x7
+l Appearance 		= 0x020002BF
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 0 			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 55 			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 221
+b BlocksLineOfFire 	= TRUE
+ul DmgLevel			= 0
+l LowTemplate		= 0x78700000
+l HighTemplate		= 0x38f8f8f8
+
+FITend

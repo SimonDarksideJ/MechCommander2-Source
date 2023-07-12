@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="126143D38EEA1198F151F7D7DB81F7C3" />
+  <Asset Name="..\slipperysign.ase" Type="Physical" Author="ngauvin" FileSize="22003" ModificationTime="2006-02-01T10:55:30.9359812-08:00" CRC="7199661C645AA277B38A1BDD8296733F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\signs.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

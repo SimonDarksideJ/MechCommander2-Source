@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="673EC3D3B3109FA6055632D91F7340FC" />
+  <Asset Name="..\s_LightWalldam.ase" Type="Physical" Author="ngauvin" FileSize="100399" ModificationTime="2006-02-01T10:55:25.0140683-08:00" CRC="DE221695E49F198718A9E9D19B030B44" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_S_WallDAM.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

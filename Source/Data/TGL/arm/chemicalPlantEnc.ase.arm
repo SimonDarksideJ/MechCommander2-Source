@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D1A3D70D54C357DEEE781F913C90BF42" />
+  <Asset Name="..\chemicalPlantEnc.ase" Type="Physical" Author="ngauvin" FileSize="72321" ModificationTime="2006-02-01T10:54:40.5606588-08:00" CRC="592636C4F4067502F716AD57FBAABA30" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_ChemicalPlant.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

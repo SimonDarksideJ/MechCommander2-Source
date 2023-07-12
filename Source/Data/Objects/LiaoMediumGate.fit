@@ -1,0 +1,29 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=22
+
+[ObjectType]
+st Name="LiaoMediumGate.fit"
+st AppearanceName="l_mediumgate"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=35.000000
+l EncyclopediaID = 45404
+
+[GateData]
+ul DmgLevel=35
+f LittleExtent=35.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30316
+l BuildingDescription = 45012
+ul NormalEffectId=0
+ul BlownEffectId=0
+ul DamageEffectId=0
+l TeamID=-1
+l Tonnage=20
+l BattleRating=20
+b blockLineOfFire=FALSE
+f OpenRadius=200.0f
+FITend 

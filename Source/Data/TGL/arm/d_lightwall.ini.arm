@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C2547E10D4D152E0835E090A507642C3" />
+  <Asset Name="..\d_lightwall.ini" Type="Physical" Author="franksav" FileSize="330" ModificationTime="2006-03-03T01:28:20.8361871-08:00" CRC="4122755942460DB695D5B20F8F0AEA9E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="D_LightWall.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="D_LightWallL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="D_LightWallL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="D_LightWallX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="D_LightWalldam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="D_LightWalldamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Light Wall" ObjectType="Building" BuildingType="Wall" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

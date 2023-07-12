@@ -1,0 +1,209 @@
+FITini 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 5
+
+
+[Rect0] // personality description scroll box
+l XLocation = 204
+l YLocation = 35
+l Width = 289
+l Height = 417
+l Color = -16765099
+b outline = TRUE
+
+
+[Rect1] 
+l XLocation = 18
+l YLocation = 290
+l Width = 167
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect2] 
+l XLocation = 193
+l YLocation = 43
+l Width = 0
+l Height = 239
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect3] 
+l XLocation = 10
+l YLocation = 43
+l Width = 0
+l Height = 239
+l Color = 0xff002F55
+b outline = TRUE
+
+
+[Rect4] 
+l XLocation = 18
+l YLocation = 35
+l Width = 167
+l Height = 0
+l Color = 0xff002F55
+b outline = TRUE
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Statics]
+l Staticcount = 9
+
+[Static0]
+l XLocation = 10
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static1]
+l XLocation = 187
+l YLocation = 35
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 80
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static2]
+l XLocation = 10
+l YLocation = 284
+l Width = 7
+l Height = 7
+l UNormal = 202
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static3]
+l XLocation = 187
+l YLocation = 284
+l Width = 7
+l Height = 7
+l UNormal = 209
+l VNormal = 87
+l UWidth = 7
+l VHeight = 7
+st FileName = "mcl_en_2.tga"
+
+[Static4] // personality picture is placed here
+l XLocation = 12
+l YLocation = 43
+l Width = 180
+l Height = 240
+
+[Static5]
+l XLocation = 10
+l YLocation = 301
+l Width = 128
+l Height = 128
+l UNormal = 0
+l VNormal = 0
+l UWidth = 128
+l VHeight = 128
+st FileName = "mcl_en_5.tga"
+
+[Static6]
+l XLocation = 138
+l YLocation = 301
+l Width = 56
+l Height = 64
+l UNormal = 0
+l VNormal = 162
+l UWidth = 56
+l VHeight = 64
+st FileName = "mcl_en_4.tga"
+
+[Static7]
+l XLocation = 138
+l YLocation = 365
+l Width = 56
+l Height = 64
+l UNormal = 56
+l VNormal = 162
+l UWidth = 56
+l VHeight = 64
+st FileName = "mcl_en_4.tga"
+
+[Static8]
+l XLocation = 10
+l YLocation = 429
+l Width = 184
+l Height = 23
+l UNormal = 0
+l VNormal = 226
+l UWidth = 184
+l VHeight = 23
+st FileName = "mcl_en_4.tga"
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+[Texts]
+l Textcount = 1
+
+[Text0] // personality or history name
+l XLocation = 10
+l YLocation = 9
+l Width = 483
+l Height = 22
+l Color = -10709309
+b outline = FALSE
+l Font = 27735 // use agency fb 14
+l TextID = 27000
+l Alignment = 0
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+FITend 

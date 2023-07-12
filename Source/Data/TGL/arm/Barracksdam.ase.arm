@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="3BADE0801C52F9E385C78543C8DE5D88" />
+  <Asset Name="..\Barracksdam.ase" Type="Physical" Author="ngauvin" FileSize="59120" ModificationTime="2006-02-01T10:54:36.7012591-08:00" CRC="46E13289A9448385B18AA8F242FB66A0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_BarracksDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

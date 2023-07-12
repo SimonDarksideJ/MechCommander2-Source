@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C8903E77D882FE2BFEC81C0E79A6AA0D" />
+  <Asset Name="..\rock_GFormation1L1.ase" Type="Physical" Author="ngauvin" FileSize="18475" ModificationTime="2006-02-01T10:55:18.9046542-08:00" CRC="9C729D10E8CB73E9DB45991040E8FFDA" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Grasslands_Cliffs_1.TGA" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

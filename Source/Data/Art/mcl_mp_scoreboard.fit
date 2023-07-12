@@ -1,0 +1,156 @@
+FITini 
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+[Rects]
+l Rectcount = 6
+
+
+[Rect0] // player color rect
+l XLocation = 38 
+l YLocation = 96
+l Width = 10
+l Height = 18
+l Color = // should be team color
+b outline = FALSE
+
+[Rect1] //  rect behind player name
+l XLocation = 50
+l YLocation = 96
+l Width = 129
+l Height = 18
+l Color = Oxff000000
+b outline = FALSE
+
+[Rect2] // rect behind team text
+l XLocation = 19
+l YLocation = 96
+l Width = 17
+l Height = 18
+l Color = Oxff000000
+b outline = FALSE
+
+[Rect3] // rect behind score text
+l XLocation = 183
+l YLocation = 96
+l Width = 70
+l Height = 18
+l Color = Oxff000000
+b outline = FALSE
+
+[Rect4] // rect behind kills text
+l XLocation = 257
+l YLocation = 96
+l Width = 70
+l Height = 18
+l Color = Oxff000000
+b outline = FALSE
+
+
+[Rect5] // rect behind losses text
+l XLocation = 331
+l YLocation = 96
+l Width = 70
+l Height = 18
+l Color = Oxff000000
+b outline = FALSE
+
+
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+[Texts]
+l Textcount = 5
+
+[Text0] // player 
+l XLocation = 53
+l YLocation = 98
+l Width = 129
+l Height = 18
+l Color = 0xffffffff // with a black drop shadow
+b outline = FALSE
+l Font = 26354 // use agencyfb11
+l TextID = 27000
+l Alignment = 0
+
+[Text1] // team 
+l XLocation = 19
+l YLocation = 98
+l Width = 17
+l Height = 18
+l Color = 0xffffffff // with a black drop shadow
+b outline = FALSE
+l Font = 26354 // use agencyfb11
+l TextID = 27000
+l Alignment = 2
+
+[Text2] // score 	
+l XLocation = 183
+l YLocation = 98
+l Width = 70
+l Height = 18
+l Color = 0xffffffff // with a black drop shadow
+b outline = FALSE
+l Font = 26354 // use agencyfb11
+l TextID = 27000
+l Alignment = 2
+
+
+
+[Text3] // kills 
+l XLocation = 257
+l YLocation = 98
+l Width = 70
+l Height = 18
+l Color = 0xffffffff // with a black drop shadow
+b outline = FALSE
+l Font = 26354 // use agencyfb11
+l TextID = 27000
+l Alignment = 2
+
+
+
+
+[Text4] // losses
+l XLocation = 331
+l YLocation = 98
+l Width = 70
+l Height = 18
+l Color = 0xffffffff // with a black drop shadow
+b outline = FALSE
+l Font = 26354 // use agencyfb11
+l TextID = 27000
+l Alignment = 2
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+FITend 

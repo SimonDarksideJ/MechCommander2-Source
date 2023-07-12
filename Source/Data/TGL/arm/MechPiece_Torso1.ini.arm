@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="94B4A87BF4E42CCCB5003AD478F0AB5B" />
+  <Asset Name="..\MechPiece_Torso1.ini" Type="Physical" Author="franksav" FileSize="275" ModificationTime="2006-03-03T01:28:36.0860895-08:00" CRC="949C22F989723A6DB53E9F3BB80DBA77" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="mechpiece_torso1.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="mechpiece_torso1L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="mechpiece_torso1L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="mechpiece_torso1X.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Atlas Debris" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

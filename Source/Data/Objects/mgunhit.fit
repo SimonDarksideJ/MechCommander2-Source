@@ -1,0 +1,23 @@
+FITini
+
+// This is the machine gun Explosion Data File
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 					= "mgunhit"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type						= 39				// ID number for this object type
+l Appearance				= 0x020001A3
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[ExplosionData]
+ul DmgLevel					= 0
+ul SoundEffectId			= 26
+		
+FITend

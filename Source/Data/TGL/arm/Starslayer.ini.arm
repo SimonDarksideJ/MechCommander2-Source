@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="9D388A390903C4651ED4E462C4A550D0" />
+  <Asset Name="..\Starslayer.ini" Type="Physical" Author="franksav" FileSize="3964" ModificationTime="2006-03-03T01:28:51.632865-08:00" CRC="EF995145E73F053A3542934698E8D12C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="StarSlayer.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="StarSlayerL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="StarSlayerL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="StarslayerX.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayer.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="starslayerFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="starslayerFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="starslayerFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Starslayer" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

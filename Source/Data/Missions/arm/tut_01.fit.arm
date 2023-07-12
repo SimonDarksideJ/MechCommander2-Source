@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="02BCA9915B51B95910EE029AF0917D45" />
+  <Asset Name="..\tut_01.fit" Type="Physical" Author="franksav" FileSize="10880" ModificationTime="2006-03-06T13:44:03.8570423-08:00" CRC="C4D9A77A5E6A48EBED8C6BF061774C46" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="Tutorial Mission 1" MissionAuthor="Team Dirty" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="tut_01.pak" />
+        <Relationship Type="warrior" RelatedAsset="tut_01_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="tut_01_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="tut_01_warrior03" />
+        <Relationship Type="ScenarioScript" RelatedAsset="tut_01.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Nav1.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

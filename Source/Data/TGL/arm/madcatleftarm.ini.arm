@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="2607D0F142962759170C5D787A43DEF7" />
+  <Asset Name="..\madcatleftarm.ini" Type="Physical" Author="franksav" FileSize="150" ModificationTime="2006-03-03T01:28:34.4610999-08:00" CRC="16BD63C965E99E0268AD0EF71BB39486" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="MadcatLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

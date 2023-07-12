@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="765F06C30D62E4AE21EF9DA8365996B1" />
+  <Asset Name="..\rock_clump01L1.ase" Type="Physical" Author="ngauvin" FileSize="27239" ModificationTime="2006-02-01T10:55:17.935898-08:00" CRC="BB12EE01A173E0171BAE838807EFEB6F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Rocky.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

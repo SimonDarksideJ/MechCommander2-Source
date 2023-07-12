@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C6DB561EE9E00A1FFCB02F8D59809CBD" />
+  <Asset Name="..\endpipeenc.ini" Type="Physical" Author="franksav" FileSize="145" ModificationTime="2006-03-03T01:28:22.6330506-08:00" CRC="420FC18FEB3428BF02CFE72F95DAFDA0" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="endpipeEnc.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

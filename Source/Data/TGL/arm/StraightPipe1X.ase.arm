@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DFC02D6500F88FDB402C158363AFFF9C" />
+  <Asset Name="..\StraightPipe1X.ase" Type="Physical" Author="ngauvin" FileSize="12493" ModificationTime="2006-02-01T10:55:32.5922418-08:00" CRC="F46CCD7E7635EB6C747DC0B846A40FC7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

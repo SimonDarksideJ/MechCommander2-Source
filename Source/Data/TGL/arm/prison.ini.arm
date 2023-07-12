@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="D78E23BAEE211DFA63978E57F3C029EB" />
+  <Asset Name="..\prison.ini" Type="Physical" Author="franksav" FileSize="548" ModificationTime="2006-03-03T01:28:39.1954446-08:00" CRC="CBD7DADC06D28B1F8104E86D8600920E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="Prison.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="PrisonL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="PrisonL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="PrisonX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="Prisondam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="PrisonDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Prison" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

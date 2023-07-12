@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="CA11BC3DC7D5EE8364227F56EE96263A" />
+  <Asset Name="..\Vulture.ase" Type="Physical" Author="ngauvin" FileSize="179970" ModificationTime="2006-02-01T10:55:36.8891443-08:00" CRC="868567789257AF41D838C7AF3B1B1D11" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\VutlureRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

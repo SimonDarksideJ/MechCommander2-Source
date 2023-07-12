@@ -1,0 +1,54 @@
+
+	        //------------------
+	        // GROUP PARTS
+	        //------------------
+	        PLAYER_LANCE0                = 1;
+	        PLAYER_LANCE1                = 2;
+	        PLAYER_LANCE2                = 3;
+	        PLAYER_LANCE3                = 4;
+	        PLAYER_LANCE4                = 5;
+	        PLAYER_LANCE5                = 6;
+	        PLAYER_LANCE6                = 7;
+	        PLAYER_LANCE7                = 8;
+	        MAX_PLAYER_LANCES		     = 32;
+
+	        ALLIED_LANCE0                = 329;
+	        ALLIED_LANCE1                = 330;
+	        ALLIED_LANCE2                = 331;
+	        ALLIED_LANCE3                = 332;
+	        ALLIED_LANCE4                = 333;
+	        ALLIED_LANCE5                = 334;
+	        ALLIED_LANCE6                = 335;
+	        ALLIED_LANCE7                = 336;
+	        MAX_ALLIED_LANCES		     = 32;
+
+	        CLAN_STAR0                   = 165;
+	        CLAN_STAR1                   = 166;
+	        CLAN_STAR2                   = 167;
+	        CLAN_STAR3                   = 168;
+	        CLAN_STAR4                   = 169;
+	        CLAN_STAR5                   = 170;
+	        CLAN_STAR6                   = 171;
+	        CLAN_STAR7                   = 172;
+	        MAX_CLAN_STARS			     = 32; 
+
+	        PLAYER_FORCE                 = 500;
+	        ALLIED_FORCE                 = 502;
+	        CLAN_FORCE                   = 501;
+
+
+          //------------------
+          // GENERIC PARTS
+          //------------------
+          PLAYER_VEHICLE0_LANCE0       = 512;
+
+          ALLIED_VEHICLE0_LANCE0       = 1280;
+
+          CLAN_VEHICLE0_STAR0          = 896;
+
+
+			MIN_MOVER_PART_ID			= 512;
+			MAX_MOVER_PART_ID			= 4095;
+			MAX_MOVER_GROUPS			= 32;
+			MAX_MOVER_GROUP_COUNT		= 12;
+

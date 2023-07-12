@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="328523D7E0178D90824AF3DAAC159135" />
+  <Asset Name="..\StraightPipe1DamX.ase" Type="Physical" Author="ngauvin" FileSize="16501" ModificationTime="2006-02-01T10:55:32.6078669-08:00" CRC="1E0FFC1EEFE5E6522565C3C2D7FF26D1" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_PipemapDamX.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

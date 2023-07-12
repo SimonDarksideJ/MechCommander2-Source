@@ -1,0 +1,97 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  215103   'Elemental 1'  Type:  400 
+//
+//      Creation Date: 2/10/98      Creator: tom dowd
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     215103 
+st Crew =                                                  "Null"
+ul Chassis =                                                400 
+st Name =                                                  "Elemental 1"
+ul VehicleTypeID =                                          400 
+uc Variation =                                              0 
+l DescIndex =                                              
+f CurTonnage =                                              25 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          1000 
+l ChassisBR =                                               150 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 0 
+ul Rating =                                                 0 
+uc MaxMoveSpeed =                                           3 
+
+[Armor]
+uc Type =                                                   0 
+f Tonnage =                                                 0 
+
+[Front]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Left]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Right]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Rear]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[Turret]
+uc CurInternalStructure =                                   0 
+uc MaxArmorPoints =                                         0 
+uc CurArmorPoints =                                         0 
+
+[InventoryInfo]
+uc NumOther =                                               1 
+uc NumWeapons =                                             2 
+uc NumAmmo =                                                1 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+// Weapons
+
+
+[Item:1]
+uc MasterID =                                               6 
+uc FacesForward =                                           0 
+
+[Item:2]
+uc MasterID =                                               35 
+uc FacesForward =                                           0 
+
+// Ammo
+
+
+[Item:3]
+uc MasterID =                                               18 
+l Amount =                                                  0 
+
+FITEnd

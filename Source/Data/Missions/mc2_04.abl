@@ -1,0 +1,676 @@
+//*********************************************************************************
+
+module mc2_04 : integer;
+
+	const
+
+		#include_ "misconst.abi"
+
+		#include_ "sndconst.abi"
+	type
+
+	var
+
+            static boolean                    Objective_0_Decided;
+
+            static integer      ScenarioResult;
+            eternal boolean     ExitTimerSet;
+            static integer      VictoryLevel;
+            char[40]            dstring;
+            eternal real        gametime;
+            static real         nextsecond;
+            integer             x;
+            integer             y;
+            Position            aPoint;
+	    static Position	startP;
+            eternal boolean     PlayerForceDead;
+            eternal boolean     ClanForceDead;
+            eternal boolean     AlliedForceDead;
+            eternal boolean     GeneralAlarm;
+            eternal boolean     Flag1;
+            eternal boolean     Flag2;
+            eternal boolean     Flag3;
+            eternal boolean     Flag4;
+            eternal boolean     Flag5;
+            eternal boolean     Flag6;
+            eternal boolean     Flag7;
+            eternal boolean     Flag8;
+            eternal boolean     Flag9;
+            eternal boolean     Flag10;
+            static boolean      PlayPASound;
+            static boolean      PlayGASound;
+            eternal integer     GeneralAlarmCounter;
+            boolean             PerimeterBreach;
+	
+	static boolean			startCam;
+	static boolean			endCam;
+	static real			velTime;
+	static real			zoomFOV;
+	static real			startFOV;
+	static integer			camObject;
+
+			eternal integer		FrontOfBaseTrigger;
+			eternal integer		NorthBridgeTrigger;
+			eternal integer		NorthBridge2Trigger;
+			eternal integer		CenterZoneTrigger;
+			eternal integer		SouthZoneTrigger;
+			eternal integer		NorthZoneTrigger;
+
+			eternal boolean		Group0AttacksFlag;
+			eternal boolean		Group1AttacksFlag;
+			eternal boolean		Group2AttacksFlag;
+			eternal boolean		Group3AttacksFlag;
+			eternal boolean		Group4RunAwayFlag;
+			eternal boolean		GoToBaseFlag;
+			eternal boolean		NorthBridgeFlag;
+			eternal boolean		NorthBridge2Flag;
+			eternal integer		ZoneEntered;
+
+			static boolean		BridgeVO;
+			eternal boolean		Group4RunVO;
+			eternal real		FactoryCapturedVO;
+
+#include_ "sndvar.abi"
+
+//**************************NEW***********************
+			eternal boolean		FoundPlayer;
+			static boolean		E1GroupAttackCheck;
+			static real				E1RunawayTime;
+			eternal boolean		E1RunAway;
+			eternal boolean		Convoy1_Start;
+			eternal boolean		Convoy2_Start;
+			eternal boolean		Convoy3_Start;
+			eternal boolean		Convoy4_Start;
+			eternal boolean		Convoy5_Start;
+			eternal boolean		Convoy6_Start;
+			eternal boolean		Convoy7_Start;
+			static boolean		ConvoyStart_VO_Check;
+			static real				ConvoyVOTimerDelay;
+			static boolean		ConvoyStart_Vo;
+			static boolean		Facility_Check;
+			static boolean		Facility2_Check;
+			eternal boolean		WF_VO_Trigger;
+			static boolean		WF_VO_Trigger_Check;
+			static boolean		WF_Vo;
+			static real				WF_VOTimerDelay;
+			eternal boolean		RI_Trigger;
+			static boolean		RI_Trigger_Check;
+			static boolean		RI;
+			static real				RI_TimerDelay;
+			static real				timerDelay;
+			
+			eternal boolean		Convoy1_Timer_Check;
+			eternal real			Convoy1_TimerDelay;
+			eternal boolean		Convoy2_Timer_Check;
+			eternal real			Convoy2_TimerDelay;
+			eternal boolean		Convoy3_Timer_Check;
+			eternal real			Convoy3_TimerDelay;
+			eternal boolean		Convoy4_Timer_Check;
+			eternal real			Convoy4_TimerDelay;
+			eternal boolean		Convoy5_Timer_Check;
+			eternal real			Convoy5_TimerDelay;
+			eternal boolean		Convoy6_Timer_Check;
+			eternal real			Convoy6_TimerDelay;
+			eternal boolean		Convoy7_Timer_Check;
+			eternal real			Convoy7_TimerDelay;
+			eternal boolean		Fire1_Found_Player;
+			eternal boolean		Fire2_Found_Player;
+			static boolean		Fire1AttackCheck;
+			static boolean		Fire2AttackCheck;
+			static boolean		Fire3AttackCheck;
+			static boolean		Fire4AttackCheck;
+			static boolean		Fire5AttackCheck;
+			static boolean		Fire6AttackCheck;
+			static boolean		Fire7AttackCheck;
+			
+			static boolean		obj4_check;
+			eternal boolean		chopper_trigger;
+			
+			static real				Bridge_VOTimerDelay;
+			static real				Bridge_VOTimerDelay2;
+			static real				Bridge_VOTimerDelay3;
+			static real				Bridge_VOTimerDelay4;
+			static boolean		BridgeVO2;
+			static boolean		BridgeVO3;
+			static boolean		BridgeVO4;
+			static boolean		BridgeVO_Check2;
+			static boolean		BridgeVO_Check3;
+			static boolean		BridgeVO_Check4;
+
+			
+			static boolean		obj4_2_check;
+			static real				chopperTimerDelay;
+			static boolean		Liao_VO_Trigger;
+			static boolean		Liao_Check;
+			
+			eternal boolean		Bridge_Shayu_Trigger;
+
+
+//---------------------------------------
+// MUSIC STUFF
+			eternal boolean		AttackMusicTrigger1;
+			eternal boolean		AttackMusicTrigger2;
+			eternal boolean		AttackMusicTrigger3;
+			static real				StartMusicTimer;
+			static boolean		StartMusicCheck;
+			static boolean		StartCheck;
+
+			static integer			SensorPlayCount;
+			static boolean			PlayCountCheck;
+			
+
+			
+
+
+//------------------------------------------------------------------
+//     Init Function    (automatically run first time through)
+//------------------------------------------------------------------
+
+function init;
+
+	var
+
+		real[3]		worldLoc;
+		integer[2]	cellLoc;
+
+	code
+		
+		ScenarioResult = PLAYING;
+		PlayerForceDead = FALSE;
+		ClanForceDead = FALSE;
+		AlliedForceDead = FALSE;
+		ExitTimerSet = FALSE;
+		VictoryLevel = 0; // New Scheme
+		NextSecond = 1.0;
+		GeneralAlarmCounter = -1;
+		GeneralAlarm = FALSE;
+		Flag1 = FALSE;
+		Flag2 = FALSE;
+		Flag3 = FALSE;
+		Flag4 = FALSE;
+		Flag5 = FALSE;
+		Flag6 = FALSE;
+		Flag7 = FALSE;
+		Flag8 = FALSE;
+		Flag9 = FALSE;
+		Flag10 = FALSE;
+		PlayPASound = FALSE;
+		PlayGASound = FALSE;
+
+		Objective_0_Decided = FALSE;
+	
+		startCam = FALSE;
+		endCam = FALSE;
+		velTime = 0;
+		zoomFOV = 75.0;
+		startFOV = 75.0;
+		camObject = -1;
+
+#include_ "sndinit.abi"
+
+
+//**************************NEW***********************
+		FoundPlayer = false;
+		E1GroupAttackCheck = false;
+		E1RunAway = false;
+		Convoy1_Start = false;
+		Convoy2_Start = false;
+		Convoy3_Start = false;
+		Convoy4_Start = false;
+		Convoy5_Start = false;
+		Convoy6_Start = false;
+		Convoy7_Start = false;
+		ConvoyStart_VO_Check = false;
+		ConvoyStart_Vo = false;
+		Facility_Check = false;
+		Facility2_Check = false;
+		WF_VO_Trigger = false;
+		WF_VO_Trigger_Check = false;
+		WF_Vo = false;
+		Fire1_Found_Player = false;
+		Fire2_Found_Player = false;
+		Convoy1_Timer_Check = false;
+		Convoy2_Timer_Check = false;
+		Fire1AttackCheck = false;
+		Fire2AttackCheck = false;
+		Fire3AttackCheck = false;
+		Fire4AttackCheck = false;
+		Fire5AttackCheck = false;
+		Fire6AttackCheck = false;
+		Fire7AttackCheck = false;
+		chopper_trigger = false;
+		
+		obj4_check = false;
+		
+		Bridge_Shayu_Trigger = false;
+
+		BridgeVO = false;
+		BridgeVO2 = false;
+		BridgeVO3 = false;
+		BridgeVO4 = false;
+
+		BridgeVO_Check2 = FALSE;
+		BridgeVO_Check3 = FALSE;
+		BridgeVO_Check4 = FALSE;
+		
+
+		NorthBridgeFlag = false;
+		NorthBridge2Flag = false;
+
+
+		RI_Trigger = false;
+		RI_Trigger_Check = false;
+		RI = false;
+		
+		chopper_trigger = false;
+		obj4_2_check = false;
+		Liao_VO_Trigger = false;
+		Liao_Check = false;
+
+
+
+//---------------------------------------
+// MUSIC STUFF
+	 AttackMusicTrigger1 = FALSE;
+	 AttackMusicTrigger2 = FALSE;
+	 AttackMusicTrigger3 = FALSE;
+	 StartMusicCheck = FALSE;
+		StartCheck = FALSE;
+
+			PlayCountCheck =  FALSE;
+
+
+
+endfunction;
+
+//------------------------------------------------------------------
+//     Main Code
+//------------------------------------------------------------------
+
+      code
+
+//********************************NEW****************************************
+
+		if (Fire1_Found_Player) then
+			if (NOT Fire1AttackCheck) then
+				Fire1AttackCheck = TRUE;
+				Convoy1_TimerDelay = getTime + 3;
+				else
+					if ((getTime > Convoy1_TimerDelay) AND (NOT Convoy1_Timer_Check)) then
+						Convoy1_Timer_Check = True;
+						Convoy1_Start = True;
+					endif;
+			endif;
+		endif;
+		
+		if (Convoy1_Start) then
+			if (NOT Fire2AttackCheck) then
+				Fire2AttackCheck = TRUE;
+				Convoy2_TimerDelay = getTime + 3;
+				else
+					if ((getTime > Convoy2_TimerDelay) AND (NOT Convoy2_Timer_Check)) then
+						Convoy2_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+		if (Convoy2_Start) then
+			if (NOT Fire3AttackCheck) then
+				Fire3AttackCheck = TRUE;
+				Convoy3_TimerDelay = getTime + 2;
+				else
+					if ((getTime > Convoy3_TimerDelay) AND (NOT Convoy3_Timer_Check)) then
+						Convoy3_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+		if (Convoy3_Start) then
+			if (NOT Fire4AttackCheck) then
+				Fire4AttackCheck = TRUE;
+				Convoy4_TimerDelay = getTime + 1;
+				else
+					if ((getTime > Convoy4_TimerDelay) AND (NOT Convoy4_Timer_Check)) then
+						Convoy4_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+		if (Convoy4_Start) then
+			if (NOT Fire5AttackCheck) then
+				Fire5AttackCheck = TRUE;
+				Convoy5_TimerDelay = getTime + 4;
+				else
+					if ((getTime > Convoy5_TimerDelay) AND (NOT Convoy5_Timer_Check)) then
+						Convoy5_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+		if (Convoy5_Start) then
+			if (NOT Fire6AttackCheck) then
+				Fire6AttackCheck = TRUE;
+				Convoy6_TimerDelay = getTime + 2;
+				else
+					if ((getTime > Convoy6_TimerDelay) AND (NOT Convoy6_Timer_Check)) then
+						Convoy6_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+		if (Convoy6_Start) then
+			if (NOT Fire7AttackCheck) then
+				Fire7AttackCheck = TRUE;
+				Convoy7_TimerDelay = getTime + 1;
+				else
+					if ((getTime > Convoy7_TimerDelay) AND (NOT Convoy7_Timer_Check)) then
+						Convoy7_Start = True;
+					endif;
+			endif;
+		endif;																																		
+
+
+     //*******************************************************
+			//VO that gets played at start of level
+			if (Fire1_Found_Player) OR (Fire2_Found_Player) then
+				if (Not ConvoyStart_VO_Check) then
+					ConvoyVOTimerDelay = getTime + 9; //Wait 13 secs before playing VO
+					ConvoyStart_VO_Check = True;
+				else
+					if ((getTime > ConvoyVOTimerDelay) AND (Not ConvoyStart_Vo)) then
+						ConvoyStart_Vo = True;
+							playVideo("MC2_04A.bik");
+					endif;
+				endif;
+			endif;	
+			
+			//*******************************************************
+			//Trigger for Bridge Shayu
+			if ((checkObjectiveStatus(4) == 1) Or (checkObjectiveStatus(5) == 1)) then
+				if (Not Bridge_Shayu_Trigger) then
+					Bridge_Shayu_Trigger = True;
+				endif;
+			endif;
+			
+			//*******************************************************
+			//Trigger for WF VO Trigger
+			if (checkObjectiveStatus(2) == 1) then
+				if (Not Facility_Check) AND (Not WF_VO_Trigger) then
+					WF_VO_Trigger = True;
+					Facility_Check = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			//VO that gets played when WF is captured
+			if (WF_VO_Trigger) then
+				if (Not WF_VO_Trigger_Check) then
+					WF_VOTimerDelay = getTime + 2; //Wait 2 secs before playing VO
+					WF_VO_Trigger_Check = True;
+				else
+					if ((getTime > WF_VOTimerDelay) AND (Not WF_Vo)) then
+						WF_Vo = True;
+							playVideo("W11.bik");
+						RI_Trigger = True;
+						chopper_trigger = True;
+					endif;
+				endif;
+			endif;
+		
+			//*******************************************************
+			//VO that gets played after VO that plays when WF is captured
+			if (RI_Trigger) then
+				if (Not RI_Trigger_Check) then
+					timerDelay = getTime + 18; //Wait 15 secs before playing VO
+				mcprint ("GoRI2ndTrigger");
+					RI_Trigger_Check = True;
+				else
+					if ((getTime > timerDelay) AND (Not RI)) then
+						RI = True;
+							playVideo("MC2_04D.bik");
+	//					chopper_trigger = True;
+					endif;
+				endif;
+			endif;
+  		
+				
+			//*******************************************************
+			//Trigger for EC3 WF VO Trigger
+			if ((checkObjectiveStatus(1) == 1) OR (checkObjectiveStatus(4) == 1) OR (checkObjectiveStatus(5) == 1)) then
+				if (Not Liao_Check) AND (Not WF_VO_Trigger) then
+					Liao_VO_Trigger = True;
+					Liao_Check = True;
+				endif;
+			endif;
+
+			//*******************************************************
+			//VO that gets played when any EC3 Events get triggered
+			if (Liao_VO_Trigger) then
+				if (Not NorthBridgeFlag) then
+					Bridge_VOTimerDelay = getTime + 4; //Wait 4 secs before playing VO
+					NorthBridgeFlag = True;
+				else
+					if ((getTime > Bridge_VOTimerDelay) AND (Not BridgeVO)) then
+						BridgeVO = True;
+						playWave("data\sound\mc2_04_0.WAV", -1); //Liao Operator VO plays
+					endif;
+				endif;
+			endif;	
+
+
+			if (BridgeVO) then
+				if (Not BridgeVO_Check2) then
+					Bridge_VOTimerDelay2 = getTime + 8; //Wait 4 secs before playing VO
+					BridgeVO_Check2 = True;
+				else
+					if ((getTime > Bridge_VOTimerDelay2) AND (Not BridgeVO2)) then
+						BridgeVO2 = True;
+							playVideo("MC2_04B.bik");
+//						playWave("data\sound\mc2_04_0.WAV", -1); //Liao Operator VO plays
+					endif;
+				endif;
+			endif;	
+
+
+			if (BridgeVO2) then
+				if (Not BridgeVO_Check3) then
+					Bridge_VOTimerDelay3 = getTime + 15; //Wait 4 secs before playing VO
+					BridgeVO_Check3 = True;
+				else
+					if ((getTime > Bridge_VOTimerDelay3) AND (Not BridgeVO3)) then
+						BridgeVO3 = True;
+						playWave("data\sound\mc2_04_1.WAV", -1); //Liao Operator VO plays
+					endif;
+				endif;
+			endif;	
+
+
+			if (BridgeVO3) then
+				if (Not BridgeVO_Check4) then
+					Bridge_VOTimerDelay4 = getTime + 8; //Wait 4 secs before playing VO
+					BridgeVO_Check4 = True;
+				else
+					if ((getTime > Bridge_VOTimerDelay4) AND (Not BridgeVO4)) then
+						BridgeVO4 = True;
+							playVideo("MC2_04C.bik");
+					endif;
+				endif;
+			endif;	
+
+
+	//-------------------------------------------------------------
+	//MUSIC CODE
+	// Generic Music Selection code based on mission events.
+	//
+	
+	if (getMissionWon) then
+		playDigitalMusic(MissionWonTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (getMissionLost) then
+		playDigitalMusic(MissionLostTune0);
+		playingMissionResultTune = true;
+		playingObjectiveTune = false;
+		playingDeathTune = false;
+		playingNONCombatTune = false;
+		playingAmbientTune = false;
+		playingSensorTune = false;
+		playingCombatTune = false;
+	endif;
+	
+	if (checkObjectiveStatus (2) == 1) AND (NOT PlayCountCheck) then
+    PlayCountCheck = TRUE;
+		SensorPlayCount = 3;
+	endif;
+	
+	
+	if (not playMissionStartTune) then
+		if (getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingAmbientTune))) then
+		 if (random(100) < 1) then
+			if (SensorPlayCount < 5) then
+				SensorPlayCount = SensorPlayCount + 1;
+				//mcprint (SensorPlayCount);
+				playDigitalMusic(SensorTune3);
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			else
+ // 			if (NOT playingCombatTune) then
+				playDigitalMusic(AmbientTune1);
+				mcprint ("Playing Ambient Tune Sensorstyle");
+				playingMissionResultTune = false;
+				playingObjectiveTune = false;
+				playingDeathTune = false;
+				playingNONCombatTune = true;
+				playingCombatTune = false;
+				playingAmbientTune = false;
+				playingSensorTune = true;
+			endif;
+		endif;
+	endif;
+		
+		if (NOT getSensorsActive and ((getCurrentMusicId == -1) or (playingCombatTune and not getPlayerInCombat) or (playingSensorTune))) then
+			playDigitalMusic(AmbientTune1);
+			playingMissionResultTune = false;
+			playingObjectiveTune = false;
+			playingDeathTune = false;
+			playingNONCombatTune = true;
+			playingAmbientTune = true;
+			playingSensorTune = false;
+			playingCombatTune = false;
+		endif;
+	endif;
+
+	if (NOT (checkObjectiveStatus(1) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger1) then
+				if (random(100) < 90) then
+				  mcprint ("Playing 1st Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing 2nd Combat Tune3");
+					playDigitalMusic(CombatTune3);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+
+	if (NOT (checkObjectiveStatus(2) == 1)) then
+	 if (getPlayerInCombat and ((getCurrentMusicId == -1) or playingNONCombatTune)) then
+			if (AttackMusicTrigger2) then
+				if (random(100) < 50) then
+				  mcprint ("Playing 1st Combat Tune0");
+					playDigitalMusic(CombatTune0);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				else
+				  mcprint ("Playing 2nd Combat Tune3");
+					playDigitalMusic(CombatTune3);
+					playingMissionResultTune = false;
+					playingObjectiveTune = false;
+					playingDeathTune = false;
+					playingNONCombatTune = false;
+					playingCombatTune = true;
+					playingAmbientTune = false;
+					playingSensorTune = false;
+				endif;
+			endif;
+	 endif;
+ endif;
+	
+	
+	//ALWAYS play mission start tune if we just started
+	if (playMissionStartTune and (gametime > 1)) then
+		if (NOT StartCheck) then
+			playDigitalMusic(MissionStartTune8);
+			StartMusicTimer = getTime + 34; //Setting Timer
+			//playMissionStartTune = true;
+			StartCheck = TRUE;
+		else
+			if (Not StartMusicCheck) and (getTime > StartMusicTimer) then
+				StartMusicCheck = TRUE;
+				playMissionStartTune = false;
+			endif;
+		endif;
+	endif;
+
+
+	
+ 	//-------------------------------------------------------------
+	
+            //------------------------------------------------
+            // Debug Window Game Clock Second Counter
+            // Note:  This is used by some included functions.
+            //------------------------------------------------
+            gametime = gettime;
+            If (gametime >= nextsecond) Then
+                  nextsecond = gametime + 1;
+                  If (GeneralAlarm) then
+                       GeneralAlarmCounter = GeneralAlarmCounter + 1;
+                  endif;
+                  // dstring = "Gametime: ";
+                  // concat(dstring,gametime);
+                  // Print (dstring);
+            endif;
+            if ((PlayGASound) and (NextSecond == gametime + 1)) then
+                  playSoundEffect(GENERAL_ALARM_SOUND);
+            endif;
+            if (PlayPASound) then
+                  playSoundEffect(PERIMETER_ALARM_SOUND);
+            endif;
+            PerimeterBreach = FALSE;
+
+            return (ScenarioResult);
+endmodule.
+//******************************************************************

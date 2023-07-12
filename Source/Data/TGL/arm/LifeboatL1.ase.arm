@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BE902C5CB8339921770A910E9F1C7EDB" />
+  <Asset Name="..\LifeboatL1.ase" Type="Physical" Author="ngauvin" FileSize="36817" ModificationTime="2006-02-01T10:55:08.3889619-08:00" CRC="D7DC4AB60C8F2AA8B667024DBDF0189C" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Lifeboat.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

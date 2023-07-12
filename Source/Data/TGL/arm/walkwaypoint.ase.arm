@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="5E846C1EF040FD0F36941FC5072B6472" />
+  <Asset Name="..\walkwaypoint.ase" Type="Physical" Author="ngauvin" FileSize="6380" ModificationTime="2006-02-01T10:55:37.4516479-08:00" CRC="6A42C2AA88AEF728CC47A29389FB460D" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Waypoints.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

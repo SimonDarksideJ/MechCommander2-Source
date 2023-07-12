@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7821473AE735C7577B1F86DDFB2186C0" />
+  <Asset Name="..\mechpiece_torso1X.ase" Type="Physical" Author="ngauvin" FileSize="58821" ModificationTime="2006-02-01T10:55:12.0296102-08:00" CRC="0E3BE228FF40BB27A5DAD0C2A9BD3AE3" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

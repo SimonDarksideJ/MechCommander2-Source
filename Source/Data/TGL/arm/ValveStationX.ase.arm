@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="76AB6309B896F1CED793EDAC34F8A421" />
+  <Asset Name="..\ValveStationX.ase" Type="Physical" Author="ngauvin" FileSize="36765" ModificationTime="2006-02-01T10:55:36.5922674-08:00" CRC="14712DF1DBC053BB9F9A55A21772ED6A" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

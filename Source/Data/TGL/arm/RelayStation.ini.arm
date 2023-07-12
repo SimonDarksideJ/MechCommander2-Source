@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="22B759B081D40C20AA1B2C23FBAC14E6" />
+  <Asset Name="..\RelayStation.ini" Type="Physical" Author="franksav" FileSize="583" ModificationTime="2006-03-03T01:28:40.5079362-08:00" CRC="2DF1C74D30E5FA0550EBA99AFAE6CE61" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="relaystation.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="relaystationL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="relaystationL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="relaystationX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="RelayStationDam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="RelayStationDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Relay Station" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

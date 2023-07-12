@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6E0AF174B707A4C5CC4A1A561D0E51CF" />
+  <Asset Name="..\SensorTower.ini" Type="Physical" Author="franksav" FileSize="777" ModificationTime="2006-03-03T01:28:48.0235131-08:00" CRC="6DFE60BE643E54BB579589E1C28A8575" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="SensorTower.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="SensorTowerAnimL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="SensorTowerAnimL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="SensorTowerAnimX.ase" />
+        <Relationship Type="Animation" RelatedAsset="sensortoweranim.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="SensorTowerdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="SensorTowerdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Sensor Tower" ObjectType="Building" BuildingType="Sensor Tower" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

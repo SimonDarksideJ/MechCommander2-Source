@@ -1,0 +1,139 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20900   'SRM Carrier'  Type:  425 
+//
+//      Creation Date: 5/18/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20900 
+st Crew =                                                  "PCREWD"
+ul Chassis =                                                425 
+st Name =                                                  "SRM Carrier"
+ul VehicleTypeID =                                          425 
+l NameIndex =                                               18 
+l DescIndex =                                               515 
+f CurTonnage =                                              60 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                         -250 
+l BattleRating =                                            55 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           18 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 1.5 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         6 
+uc CurArmorPoints =                                         6 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         4 
+uc CurArmorPoints =                                         4 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         5 
+uc CurArmorPoints =                                         5 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             6 
+uc NumAmmo =                                                6 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:4]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:5]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:6]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:7]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+[Item:8]
+uc MasterID =                                               123 
+uc FacesForward =                                           1 
+
+// Ammo
+
+
+[Item:9]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:10]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:11]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:12]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:13]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+[Item:14]
+uc MasterID =                                               223 
+l Amount =                                                 -1 
+
+FITEnd

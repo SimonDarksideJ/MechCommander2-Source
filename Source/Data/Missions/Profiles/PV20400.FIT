@@ -1,0 +1,92 @@
+FITini
+
+// -------------------------------------------------------------------------
+//
+//      Ground Vehicle Profile:  20400   'Elem. Carrier'  Type:  419 
+//
+//      Creation Date: 3/4/98      Creator: david abzug
+//
+//
+// -------------------------------------------------------------------------
+
+[Header]
+st FileType = "GroundVehicleProfile"
+
+
+[General]
+ul ID =                                                     20400 
+st Crew =                                                  "PCREWE"
+ul Chassis =                                                419 
+st Name =                                                  "Elem. Carrier"
+ul VehicleTypeID =                                          419 
+l NameIndex =                                               3 
+l DescIndex =                                               521 
+f CurTonnage =                                              65 
+st icon =                                                  "na.gif"
+c Status =                                                  0 
+l ResourcePoints =                                          6500 
+l BattleRating =                                            65 
+l Morale =                                                  0 
+l MoraleModifier =                                          0 
+
+[Engine]
+f Tonnage =                                                 1 
+ul Rating =                                                 1 
+uc MaxMoveSpeed =                                           15 
+
+[Armor]
+uc Type =                                                   1 
+f Tonnage =                                                 6.25 
+
+[Front]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         24 
+uc CurArmorPoints =                                         24 
+
+[Left]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Right]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[Rear]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         16 
+uc CurArmorPoints =                                         16 
+
+[Turret]
+uc CurInternalStructure =                                   1 
+uc MaxArmorPoints =                                         20 
+uc CurArmorPoints =                                         20 
+
+[InventoryInfo]
+uc NumOther =                                               3 
+uc NumWeapons =                                             1 
+uc NumAmmo =                                                0 
+
+// Inventory
+
+// Other
+
+
+[Item:0]
+uc MasterID =                                               1 
+
+[Item:1]
+uc MasterID =                                               6 
+
+[Item:2]
+uc MasterID =                                               35 
+
+// Weapons
+
+
+[Item:3]
+uc MasterID =                                               150 
+uc FacesForward =                                           1 
+
+FITEnd

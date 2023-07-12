@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EA31B3D63F95C26CDD36B0AFAA57C731" />
+  <Asset Name="..\urbanmechleftarm.ini" Type="Physical" Author="franksav" FileSize="155" ModificationTime="2006-03-03T01:28:55.2890916-08:00" CRC="D8D0AE09FB1D3BEE6A5ADB9530A1D429" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="Main Shape" RelatedAsset="urbanmechLeftArm.ase" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

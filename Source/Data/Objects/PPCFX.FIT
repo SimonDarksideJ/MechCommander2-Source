@@ -1,0 +1,47 @@
+FITini
+
+// This is the PPC FX File
+
+[ObjectClass]
+l ObjectTypeNum = 6
+
+[ObjectType]
+st Name 					= "ppc"				// Text string giving a descriptive name  (only 8 chars long!!)
+l Type 						= 4					// ID number for this mech type
+l Appearance				= 0x01000000
+l Duration					= -1				// Lasts forever = -1
+l MaxDamage					= 0					// Number of damage points before BOOM!
+l ExplosionObject			= 0					// Object Class Number of explosion for Mech
+l DestroyedObject			= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0					// Extent Radius in Meters
+l KeepMe					= 1
+
+[LaserData]
+uc PixelWidth 				= 1					//Width of laser beam
+uc NumStages				= 2					//Number of distinct laser stages
+ul DmgLevel					= 200				//Amount of Damage laser does
+ul SoundEffectId			= 10
+ul LaserHitEffect			= 40
+ul LaserMissEffect			= 398				//Effect to play when laser misses
+
+[FLaser0]										//FLaser means Friendly color
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 250				//Cool Color of stage
+uc StageHot					= 250				//Hot Color of Stage
+
+[FLaser1]
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 250				//Cool Color of stage
+uc StageHot					= 250				//Hot Color of Stage
+
+[ELaser0]										//ELaser means Enemy color
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 241				//Cool Color of stage
+uc StageHot					= 241				//Hot Color of Stage
+
+[ELaser1]
+f StageDuration				= 0.1				//Duration of this stage in seconds
+uc StageCool				= 241				//Cool Color of stage
+uc StageHot					= 241				//Hot Color of Stage
+
+FITend

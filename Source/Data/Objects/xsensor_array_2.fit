@@ -1,0 +1,28 @@
+FITini
+
+// This is the xsensor_array data file
+
+[ObjectClass]
+l ObjectTypeNum = 18
+
+[ObjectType]
+st Name 			= "xsensor_array_2"
+l Type 				= 0x7
+l Appearance 		= 0x020002CA
+l Duration			= -1			// Lasts forever = -1
+l MaxDamage			= 0				// Number of damage points before BOOM!
+l ExplosionObject	= 42			// Object Class Number of explosion for Mech
+l DestroyedObject	= 0				// Object Class Number of Destroyed shape for Mech
+f ExtentRadius		= 35			// Extent Radius in Meters
+
+[TreeData]
+l BuildingName 		= 208
+b BlocksLineOfFire 	= FALSE
+ul DmgLevel			= 22
+ul BlownEffectId	= -1			//Sound Effect played when building dies.
+ul NormalEffectId	= -1			//Sound Effect played when building is normal.
+ul DamageEffectId	= 73			//Sound Effect Played when building is dmg/destroyed.
+l LowTemplate		= 0x18000000
+l HighTemplate		= 0x00001038
+			
+FITend

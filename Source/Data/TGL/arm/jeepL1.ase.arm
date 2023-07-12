@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A84C5FB642836A153F24BB650C81C831" />
+  <Asset Name="..\jeepL1.ase" Type="Physical" Author="ngauvin" FileSize="25435" ModificationTime="2006-02-01T10:55:01.4826677-08:00" CRC="80B757CF4E2F332C9C3B08625D4AC918" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\jeep.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

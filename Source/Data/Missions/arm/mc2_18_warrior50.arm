@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="29D131D5B887DFB2BF92DD99962516AF" />
+  <Asset Name="..\mc2_18_warrior50" Type="Virtual" Author="franksav" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Warrior" />
+      <Relationships>
+        <Relationship Type="ObjectProfile" RelatedAsset="Profiles\PM101100.fit" />
+        <Relationship Type="CSVFile" RelatedAsset="..\Objects\Starslayer.cvs" />
+        <Relationship Type="AppearanceFile" RelatedAsset="..\TGL\Starslayer.ini" />
+        <Relationship Type="Profile" RelatedAsset="Warriors\PMWRegular.fit" />
+        <Relationship Type="Brain" RelatedAsset="Warriors\mc2_18_Gpatrol_Mechs.abl" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

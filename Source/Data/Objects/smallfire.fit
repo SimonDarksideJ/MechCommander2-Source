@@ -1,0 +1,38 @@
+FITini
+
+// This is the building medium fire Data File
+
+[ObjectClass]
+l ObjectTypeNum = 5
+
+[ObjectType]
+st Name 				= "mf"				// Text string giving a descriptive name  (only 8 chars long!!)
+l Type					= 41				// ID number for this object type
+l Appearance			= 0x02000239		// decimal 569
+l Duration				= -1				// Lasts forever = -1
+l MaxDamage				= 0					// Number of damage points before BOOM!
+l ExplosionObject		= 0					// Object Class Number of explosion for Mech
+l DestroyedObject		= 0					// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 0					// Extent Radius in Meters
+l KeepMe				= 1
+
+[FireData]
+ul DmgLevel				= 0
+ul SoundEffectId		= 22
+ul startLoopFrame		= 10
+ul endLoopFrame			= 26 // was 27
+ul numLoops				= 20
+f maxExtentRadius		= 150.0			//How big do I eventually get in terms of setting new fires
+f TimeToMaxExtent		= 10.0			//How long does it take me to get there.
+
+l TotalFireShapes 		= 1				//total number of little fires
+
+f FireOffsetX0			= 0.0
+l FireRandomOffsetX0	= 0.0
+f FireOffsetY0			= 0.0
+l FireRandomOffsetY0	= 0.0
+f FireDelay0			= 0.0
+l FireRandomdelay0		= 0.0
+
+FITend
+

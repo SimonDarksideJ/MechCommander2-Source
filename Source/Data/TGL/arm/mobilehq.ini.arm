@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="426FCD775E88461EF16A212232104988" />
+  <Asset Name="..\mobilehq.ini" Type="Physical" Author="franksav" FileSize="285" ModificationTime="2006-03-03T01:28:37.4298309-08:00" CRC="F00510FB5CA995700FC1301EA24C3615" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="MobileHQ.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="MobileHQL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="MobileHQL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="MobileHQX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="MobileHQdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Mobile HQ" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

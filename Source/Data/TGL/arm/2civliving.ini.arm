@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="EF55ECBF8BCA3AEED18F6C1229CDFA0E" />
+  <Asset Name="..\2civliving.ini" Type="Physical" Author="franksav" FileSize="566" ModificationTime="2006-03-03T01:28:10.3518792-08:00" CRC="1DE3ED9BFA333F3842C63DDD170B046E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="2civliving.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="2civlivingL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="2civlivingL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="2civlivingX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="2civlivingdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="2civlivingDamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Apartments" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

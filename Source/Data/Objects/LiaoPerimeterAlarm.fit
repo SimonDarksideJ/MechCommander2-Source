@@ -1,0 +1,46 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=1
+
+[ObjectType]
+st Name="PerimeterAlarm"
+st AppearanceName="PerimeterAlarm"
+l ExplosionObject=727
+l DestroyedObject=0
+f ExtentRadius=35.000000
+l EncyclopediaID = 45410
+
+
+[BuildingData]
+ul DmgLevel=7
+f ExtentRadius=150.000000
+f ExplosionRadius=0.000000
+f ExplosionDamage=0.000000
+l BuildingName=30211
+l BuildingDescription = 45002
+l SetImpassable=1
+l XImpasse=0
+l YImpasse=0
+ul NormalEffectId=0
+ul BlownEffectId=0
+ul DamageEffectId=0
+b CanRefit=FALSE
+b MechBay=FALSE
+f TimeToBurnDamage=5.000000
+f BurnDamagePerTime=1.000000
+f DamageLvlForBurn=61.000000
+f SensorRange=-1.000000
+l TeamID=-1
+l Tonnage=20
+l BattleRating=20
+l NumMarines=0
+b blockLineOfFire=FALSE
+l LowTemplate=940048384
+l HighTemplate=4120
+l PotentialContact=0
+l BasePixelOffsetX=6
+l BasePixelOffsetY=65
+f PerimeterAlarmRange=375.0
+f PerimeterAlarmTimer=10.0
+FITend 

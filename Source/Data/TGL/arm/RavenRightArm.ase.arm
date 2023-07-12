@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="6315361FA28322EA581E1FB4698B6EA9" />
+  <Asset Name="..\RavenRightArm.ase" Type="Physical" Author="ngauvin" FileSize="17268" ModificationTime="2006-02-01T10:55:17.0452673-08:00" CRC="DFCAF77E8E5711AE3B8F744FAE0CB8E7" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\RavenRGB.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

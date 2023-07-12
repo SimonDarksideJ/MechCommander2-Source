@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="29B9BD917F0C41AD6D337C0426426158" />
+  <Asset Name="..\thor.ini" Type="Physical" Author="franksav" FileSize="4119" ModificationTime="2006-03-03T01:28:53.195355-08:00" CRC="EC3127A9A80032DCF97A4B95DB7D0D1B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="thor.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="thorL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="thorL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="thorX.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorParkToStand.ase" />
+        <Relationship Type="Animation" RelatedAsset="thor.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorSTtoWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorStandToPark.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorWKtoRN.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorRun.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorRNToWK.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorWalk.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorWKtoST.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorLimpLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorLimpRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorIdle.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorFallBackward.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorHitFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorHitBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorHitLeft.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorHitRight.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorJump.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorGetupBack.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorGetupFront.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorFallForward.ase" />
+        <Relationship Type="Animation" RelatedAsset="thorFallBackward.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="thorFallBackwardDam.ase" />
+        <Relationship Type="Destroyed Shape" RelatedAsset="thorFallForwardDam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Thor" ObjectType="Mech" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

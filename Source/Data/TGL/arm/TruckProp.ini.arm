@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="1D2C87BF71FBCCB7B8B8EC3C8BCE86C9" />
+  <Asset Name="..\TruckProp.ini" Type="Physical" Author="franksav" FileSize="291" ModificationTime="2006-03-03T01:28:54.4609719-08:00" CRC="263EE98E1E45CBF11C52AF08E3853820" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="truckProp.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="TruckPropL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="TruckPropL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="TruckPropX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="truckPropdam.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Empty Truck" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

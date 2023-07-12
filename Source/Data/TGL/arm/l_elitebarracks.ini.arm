@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B1BCB60D7B723889A0A91CE25F3329B7" />
+  <Asset Name="..\l_elitebarracks.ini" Type="Physical" Author="franksav" FileSize="590" ModificationTime="2006-03-03T01:28:29.9298789-08:00" CRC="504F0B6D7B037C217786B632645F01FE" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="l_elitebarracks.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="l_elitebarracksL1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="l_elitebarracksL1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="l_elitebarracksX.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="l_elitebarracksdam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="l_elitebarracksdamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Elite Barracks" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

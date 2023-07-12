@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="DE9A4433EB24AC0D105088E938F06D99" />
+  <Asset Name="..\mcl_mc_ClanPulseLargeLaser.ase" Type="Physical" Author="ngauvin" FileSize="198584" ModificationTime="2006-02-01T10:55:10.7327269-08:00" CRC="A799D3B21090257C3AB0A916A4752380" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\ClanPulseLargeLaser.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

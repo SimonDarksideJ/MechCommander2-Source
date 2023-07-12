@@ -1,0 +1,329 @@
+//****************************************************************************************//
+//
+//		Brain Used for Enfield 
+//				
+//
+//      MISSION:  mc2_13
+//		
+//
+//****************************************************************************************//
+
+fsm mc2_13_OutPatl_Grp1_Escort;
+
+	var
+
+
+		static WorldPosition		startPosition;
+		static PatrolState		startPatrolState, HpgFacPatrolState;
+		static PatrolPath			startPatrolPath, HPGFacPatrolPath;
+		static boolean			willRequestHelp;
+		static real				lastHelpRequestTime;
+		static real				helpRequestFrequency;
+		static real				attackerHelpRadius;
+		static real				defenderHelpRadius;
+		static integer			AttackStateHandle;
+		static boolean			poweredDown;
+
+		static integer			numFunctionalWeapons;
+		static integer[20]		weaponList;
+		static boolean			startMission;
+		static boolean			isLeadDead;
+
+
+//****************************************************************************************
+
+function init;
+
+    code
+
+		setDebugWindow(-1, -1);
+
+		//---------------------------
+		// Grab his start position...
+		getObjectPosition(-1, startPosition);
+
+		//-------------------
+		// Look for movers...
+		setTargetPriority(0, TARGET_PRIORITY_CURTARGET, -1, 150, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(1, TARGET_PRIORITY_MOVER, 0, 300, CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL_OR_SENSOR + CONTACT_CRITERIA_NOT_DISABLED);
+		setTargetPriority(2, TARGET_PRIORITY_NONE, 0, 0, 0);
+
+		AttackStateHandle = getStateHandle("attack");
+		startMission= false;
+		isLeadDead = False;
+
+
+		//-------------------------------------------	
+		// Setup the Patrol here...	
+		//XL startPatrolState Start	
+
+		startPatrolState[0] = PATROL_TYPE_LINEAR;    	
+		startPatrolState[1] = 13;    //?num points	
+		startPatrolState[2] = -1;    //?num cycles	
+		startPatrolState[3] = PATROL_DIRECTION_FORWARD;    	
+		startPatrolState[4] = -1;    //reset cur point	
+		startPatrolState[5] = -1;    //reset cur cycle	
+		startPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED;    	
+
+		startPatrolPath[0, 0] = 2069.000;	
+		startPatrolPath[0, 1] = 5098.000;	
+		startPatrolPath[1, 0] = 3989.000;	
+		startPatrolPath[1, 1] = 5866.000;	
+		startPatrolPath[2, 0] = 4288.000;	
+		startPatrolPath[2, 1] = 3050.000;	
+		startPatrolPath[3, 0] = 3818.000;	
+		startPatrolPath[3, 1] = 661.000;	
+		startPatrolPath[4, 0] = 4202.000;	
+		startPatrolPath[4, 1] = -448.000;	
+		startPatrolPath[5, 0] = 4928.000;	
+		startPatrolPath[5, 1] = -2240.000;	
+		startPatrolPath[6, 0] = 3989.000;	
+		startPatrolPath[6, 1] = -3989.000;	
+		startPatrolPath[7, 0] = 2026.000;	
+		startPatrolPath[7, 1] = -2752.000;	
+		startPatrolPath[8, 0] = 832.000;	
+		startPatrolPath[8, 1] = -789.000;	
+		startPatrolPath[9, 0] = -2666.000;	
+		startPatrolPath[9, 1] = 448.000;	
+		startPatrolPath[10, 0] = -3690.000;	
+		startPatrolPath[10, 1] = 2069.000;	
+		startPatrolPath[11, 0] = -2197.000;	
+		startPatrolPath[11, 1] = 3733.000;	
+		startPatrolPath[12, 0] = -234.000;	
+		startPatrolPath[12, 1] = 4373.000;	
+			
+			
+		//XLs startPatrolPath end	
+	
+			
+			
+
+		HpgFacPatrolState[0] = PATROL_TYPE_LINEAR;    	
+		HpgFacPatrolState[1] = 3;    //?num points	
+		HpgFacPatrolState[2] = 1;    //?num cycles	
+		HpgFacPatrolState[3] = PATROL_DIRECTION_FORWARD;    	
+		HpgFacPatrolState[4] = -1;    //reset cur point	
+		HpgFacPatrolState[5] = -1;    //reset cur cycle	
+		HpgFacPatrolState[6] = 0 + CONTACT_CRITERIA_ENEMY + CONTACT_CRITERIA_VISUAL + CONTACT_CRITERIA_NOT_DISABLED;    	
+
+		HPGFacPatrolPath[0, 0] = -1258;	
+		HPGFacPatrolPath[0, 1] = 1856;	
+		HPGFacPatrolPath[1, 0] = -362;	
+		HPGFacPatrolPath[1, 1] = 1856;	
+		HPGFacPatrolPath[2, 0] = 1045;	
+		HPGFacPatrolPath[2, 1] = 1642;	
+			
+	
+		willRequestHelp = True; //?true or false
+		helpRequestFrequency = 20.0; //?in secs
+		attackerHelpRadius = 50; //?in meters
+		defenderHelpRadius = 50; //?in meters
+		lastHelpRequestTime = -100.0;
+						
+endfunction;
+
+
+//----------------------------------------------------------------------------------------
+
+function setWillRequestHelp (boolean setting);
+
+	code
+
+		if (setting and (not willRequestHelp)) then
+			lastHelpRequestTime = 0.0;
+		endif;
+		willRequestHelp = setting;
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+function update : integer;
+
+	var
+
+		boolean		processingPilotEvents;
+		boolean		thinking;
+		integer		pilotEventID;
+		integer		pilotState;
+		integer[20]		pilotEventParams;
+		integer		curTarget;
+		real			curTime;
+		real[3]		myPos;
+		real[3]		attackerPos;
+		real			distanceToAttacker;
+		integer		curStateHandle;
+
+
+	code
+
+		curTime = getTime;
+
+
+		//-----------------------------------
+		//
+		curStateHandle = getCurrentStateHandle;
+
+
+		//--------------------------------------------------
+		// Process the pilot events since the last update...
+		numFunctionalWeapons = getWeapons(weaponList, 1);
+		if (numFunctionalWeapons == 0) then
+			trans noWeapons;
+		endif;
+
+		//--------------------------------------------------
+		//Wait for ID
+		if (getTime > 5) and (Not startMission)then
+			startMission= True;
+			trans EscortingLead;
+		endif;
+
+
+		//--------------------------------------------------
+		// Check to see if Liao Son has died
+		if (getTime > 5) then
+			if ((objectStatus(outerPatrol_1_ID) == 1) or (objectStatus(outerPatrol_1_ID) == 2)) And (not isLeadDead)  then
+				isLeadDead = True;
+				trans GuardBase;
+			endif;
+		endif;
+
+
+		processingPilotEvents = TRUE;
+		while (processingPilotEvents) do
+			pilotEventID = getNextPilotEvent(pilotEventParams);
+			if (pilotEventID == PILOT_EVENT_NONE) then
+				processingPilotEvents = FALSE;
+			else
+				switch (pilotEventID)
+					case PILOT_EVENT_TARGETED:
+						curTarget = getTarget(-1);
+						if (lastHelpRequestTime < (curTime - helpRequestFrequency)) then
+							lastHelpRequestTime = curTime;
+							if (willRequestHelp) then
+								//distanceToAttacker = distanceToObject(-1, pilotEventParams[0]);
+								getObjectPosition(pilotEventParams[0], attackerPos);
+								getObjectPosition(-1, myPos);
+								requestHelp(pilotEventParams[0], myPos, attackerHelpRadius, attackerPos, defenderHelpRadius, 1);
+							endif;
+						endif;
+						numFunctionalWeapons = getWeapons(weaponList, 0);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0)) then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_ATTACK_ORDER:
+						curTarget = getTarget(-1);
+						if (curStateHandle <> AttackStateHandle) then
+							if ((numFunctionalWeapons > 0) and (curTarget == 0))then
+								coreAttack(pilotEventParams[0], TACORDER_PARAM_PURSUE);
+								setState(AttackStateHandle);
+							endif;
+						endif;
+						endcase;
+					case PILOT_EVENT_FIRED_WEAPON:
+						endcase;
+				endswitch;
+			endif;
+		endwhile;
+
+		return(0);
+
+endfunction;
+
+//----------------------------------------------------------------------------------------
+
+state noWeapons;
+
+	code
+
+		setDebugString(-1, 3, "   NO WEAPONS ");
+		if (objectClass(-1) == 2) then
+			coreEject;
+		else
+			corePower(false);
+		endif;
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state attack;
+
+	var
+
+		integer		tacticState;
+
+	code
+
+		update;
+		setDebugString(-1, 3, " ATTACK    ");
+//		coreAttackTactic(0, TACORDER_PARAM_NONE, TACTIC_RIGHT_FLANK, tacticState);
+		coreAttack(0, TACORDER_PARAM_PURSUE);
+		resetOrders(1);
+		transBack;
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state GuardBase;
+
+	var
+
+
+		WorldPosition		GuardBase;
+
+	code
+		guardBase[0] = 1380;
+		guardBase[1] = 1685;
+		guardBase[2] = 0;
+
+
+		update;
+		setDebugString(-1, 3, " GuardBase    ");
+		coreGuard(GuardBase, -1, attackstateHandle);
+		resetOrders(1);
+
+endstate;
+//----------------------------------------------------------------------------------------
+
+state EscortingLead;
+
+	var
+
+
+		WorldPosition		escortPos;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "   ESCORT    ");
+		
+		getObjectPosition(outerPatrol_1_ID, escortPos);
+		setMoveArea(escortPos, 100.0);
+		coreEscort(outerPatrol_1_ID, 40.0, 135.0, attackstateHandle);
+		resetOrders(1);
+
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+state start;
+
+	code
+
+		update;
+		setDebugString(-1, 3, "   Waiting    ");
+		
+endstate;
+
+//----------------------------------------------------------------------------------------
+
+endfsm.
+
+//****************************************************************************************

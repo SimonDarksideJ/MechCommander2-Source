@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="228688A929C701E57AE01CD843F464E5" />
+  <Asset Name="..\s_govResidencedam.ase" Type="Physical" Author="ngauvin" FileSize="24529" ModificationTime="2006-02-01T10:55:23.7953105-08:00" CRC="C67C8DCE6CAD8806521618D252C05E80" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\S_palace_rubble.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\S_wall3Dam.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_L_palace_rubble2.tga" />
+        <Relationship Type="Texture" RelatedAsset="128\A_S_doorDam.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

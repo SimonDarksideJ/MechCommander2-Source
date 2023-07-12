@@ -1,0 +1,67 @@
+FITini
+
+// This is the ground tile fire Data File
+
+[ObjectClass]
+l ObjectTypeNum = 5
+
+[ObjectType]
+st Name 				= "bb"			// Text string giving a descriptive name  (only 8 chars long!!)
+l Type					= 41			// ID number for this object type
+l Appearance				= 0x02000239		// decimal 569
+l Duration				= -1			// Lasts forever = -1
+l MaxDamage				= 0			// Number of damage points before BOOM!
+l ExplosionObject			= 0			// Object Class Number of explosion for Mech
+l DestroyedObject			= 0			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius				= 0			// Extent Radius in Meters
+l KeepMe				= 1
+
+[FireData]
+ul DmgLevel					= 0
+ul SoundEffectId			= 22
+ul startLoopFrame			= 10
+ul endLoopFrame				= 26 // was 27
+ul numLoops				= 20
+f maxExtentRadius			= 150.0			//How big do I eventually get in terms of setting new fires
+f TimeToMaxExtent			= 10.0			//How long does it take me to get there.
+
+l TotalFireShapes 	= 5			//total number of little fires
+
+f FireOffsetX0		= -30.0
+l FireRandomOffsetX0	= 20.0
+f FireOffsetY0		= -30.0
+l FireRandomOffsetY0	= 20.0
+f FireDelay0		= 0.0
+l FireRandomdelay0	= 15.0
+
+f FireOffsetX1		= 30.0
+l FireRandomOffsetX1	= 20.0
+f FireOffsetY1		= 30.0
+l FireRandomOffsetY1	= 20.0
+f FireDelay1		= 0.0
+l FireRandomdelay1	= 15.0
+
+f FireOffsetX2		= 30.0
+l FireRandomOffsetX2	= 20.0
+f FireOffsetY2		= -30.0
+l FireRandomOffsetY2	= 20.0
+f FireDelay2		= 0.0
+l FireRandomdelay2	= 15.0
+
+f FireOffsetX3		= -30.0
+l FireRandomOffsetX3	= 20.0
+f FireOffsetY3		= 30.0
+l FireRandomOffsetY3	= 20.0
+f FireDelay3		= 10.0
+l FireRandomdelay3	= 10.0
+
+f FireOffsetX4		= 0.0
+l FireRandomOffsetX4	= 20.0
+f FireOffsetY4		= 0.0
+l FireRandomOffsetY4	= 20.0
+f FireDelay4		= 0.0
+l FireRandomdelay4	= 0.0
+
+
+FITend
+

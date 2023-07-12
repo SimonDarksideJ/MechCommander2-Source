@@ -1,0 +1,18 @@
+FITini 
+
+[ObjectClass]
+l ObjectTypeNum=0
+
+[ObjectType]
+st Name="Birch2"
+st AppearanceName="Birch2"
+l ExplosionObject=42
+l DestroyedObject=0
+f ExtentRadius=0.000000
+
+[TreeData]
+ul DmgLevel=1
+f ExtentRadius=0.000000
+FITend 
+
+

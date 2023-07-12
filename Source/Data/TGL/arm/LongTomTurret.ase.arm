@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="FBBED5FA265D9B3651162A31D6ABFDC2" />
+  <Asset Name="..\LongTomTurret.ase" Type="Physical" Author="ngauvin" FileSize="47122" ModificationTime="2006-02-01T10:55:09.3577181-08:00" CRC="79BBD8ADC867B36ECB47D8D4B331B9EF" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Turrets2.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

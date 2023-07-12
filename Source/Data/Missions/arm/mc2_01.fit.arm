@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="42103BBBA37A1DF7F4F08D33F993C989" />
+  <Asset Name="..\mc2_01.fit" Type="Physical" Author="franksav" FileSize="50027" ModificationTime="2006-03-06T12:41:15.9891781-08:00" CRC="D03D52B6F22253F07168E54EF1D09596" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" MissionName="mc2_01" MissionAuthor="mantis" IsSinglePlayer="Yes" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="mc2_01.pak" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior05" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior06" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior07" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior08" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior09" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior10" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior11" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior12" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior13" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior14" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior15" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior16" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior17" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior18" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior19" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior20" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior21" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior22" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior23" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior24" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior25" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior26" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior27" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior28" />
+        <Relationship Type="warrior" RelatedAsset="mc2_01_warrior29" />
+        <Relationship Type="ScenarioScript" RelatedAsset="mc2_01.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Hangar.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Palm1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Maple2Dead.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_3.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\tc1_4.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Maple1Dead.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Maple3Dead.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\RunwayLight.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Quonset.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WireFenceDiag.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WireFence.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Quonset2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\GenericMilitary.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\privatejet.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SlayerP.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ShiloneP.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Portable.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LookoutTower.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\GeodesicDome.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LongTent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Tent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\HQTent.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\CorrigatedMetalBarricade.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SandBagBunker.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SandBagWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\DuneBuggyProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\OrdnanceTruckProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\SawhorseBarricade.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Rock_JClump1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Rock_JClump2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Rock_JClump3.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Palms.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ExtractionMarker.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Nav1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Leg2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Arm2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Junk1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LifeboatCrashed.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Junk2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Torso2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\ArmoredCarProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Junk4.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Legs.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Junk5.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Arm1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MechPiece_Leg1.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\CamoNetting.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\CratesWithTarp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\LifeboatRusted.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\TripodBarricade.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\JunkPile.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Lockers.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\TruckProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\MilCheckPoint.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WoodenCrates.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Oak1dead.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Oak3dead.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Rock_GField2.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Rock_GField3.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\dumpster.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\TroopTransportProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\JeepProp.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Motorcycle.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Junk6.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="7317955A1916917B11510EF421EFD7C0" />
+  <Asset Name="..\ai_glenn.fit" Type="Physical" Author="franksav" FileSize="7633" ModificationTime="2006-03-06T12:40:39.56707-08:00" CRC="B4EE92F8B0B9849CD258305ED9ACD043" />
+  <DataProviders>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Primary">
+      <Annotations Type="Mission" IsSinglePlayer="No" MissionType="Elimination" />
+      <Relationships>
+        <Relationship Type="PackedBinary" RelatedAsset="ai_glenn.pak" />
+        <Relationship Type="warrior" RelatedAsset="ai_glenn_warrior01" />
+        <Relationship Type="warrior" RelatedAsset="ai_glenn_warrior02" />
+        <Relationship Type="warrior" RelatedAsset="ai_glenn_warrior03" />
+        <Relationship Type="warrior" RelatedAsset="ai_glenn_warrior04" />
+        <Relationship Type="warrior" RelatedAsset="ai_glenn_warrior05" />
+        <Relationship Type="ScenarioScript" RelatedAsset="m0101.abl" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_MediumWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_MediumGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_LightWall.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_LightGate.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_TurretControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\srmturret.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\Barracks.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\WeaponsFacility.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\S_GateControl.ini" />
+        <Relationship Type="Object" RelatedAsset="..\TGL\L_TurretGenerator.ini" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

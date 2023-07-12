@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="BEA1D73E75A7395DFE8F998C71B47340" />
+  <Asset Name="..\shuttle.ase" Type="Physical" Author="ngauvin" FileSize="89507" ModificationTime="2006-02-01T10:55:30.0141003-08:00" CRC="EC7619B3CFE9C89588346302944D094E" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Shuttle.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

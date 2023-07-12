@@ -1,0 +1,5686 @@
+FITini 
+FITini 
+
+[Cameras]
+f ProjectionAngle = 46.328979
+f PositionX = 1814.528564
+f PositionY = 972.259033
+f PositionZ = 0.000000
+b Ready = TRUE
+uc LightRed = 255
+uc LightGreen = 255
+uc LightBlue = 255
+uc AmbientBlue = 128
+uc AmbientGreen = 128
+uc AmbientRed = 128
+uc TerrainShadowColorEnabled = 0
+uc TerrainShadowBlue = 128
+uc TerrainShadowGreen = 128
+uc TerrainShadowRed = 128
+uc DayLightRed = 255
+uc DayLightGreen = 255
+uc DayLightBlue = 255
+uc DayAmbientBlue = 128
+uc DayAmbientGreen = 128
+uc DayAmbientRed = 128
+uc SunsetLightRed = 254
+uc SunsetLightGreen = 68
+uc SunsetLightBlue = 5
+uc NightLightRed = 0
+uc NightLightGreen = 0
+uc NightLightBlue = 0
+uc NightAmbientBlue = 0
+uc NightAmbientGreen = 0
+uc NightAmbientRed = 0
+uc SeenBlue = 15
+uc SeenGreen = 64
+uc SeenRed = 128
+uc BaseBlue = 127
+uc BaseGreen = 95
+uc BaseRed = 95
+f LightDirPitch = 35.000000
+f DayLightPitch = 35.000000
+f DayToNightTime = -1.000000
+f LightDirYaw = -0.500000
+f NewScale = 0.584070
+f StartRotation = -178.875000
+f[3] LODScales = 1.00, 0.50, 0.30,
+f ElevationAdjustFactor = 150.000000
+f ZoomMax = 3.000000
+f ZoomMin = 0.100000
+f FOVMax = 90.000000
+f FOVMin = 20.000000
+f FogStart = -100.000000
+f FogFull = -200.000000
+ul FogColor = 11972532
+f FogTransparency = 0.686275
+l UserMin = 0
+l UserMax = 500
+l BaseTerrain = 2
+
+[Water]
+f Elevation = 83.000000
+f Frequency = 0.000000
+f Ampliture = 0.000000
+ul AlphaShallow = 1845493760
+ul AlphaMiddle = -1358954496
+ul AlphaDeep = -16777216
+f AlphaDepth = 20.000000
+f ShallowDepth = 20.000000
+
+[Terrain]
+l UserMin = 0
+l UserMax = 500
+f TerrainMinX = -7680.000000
+f TerrainMinY = 7680.000000
+uc Noise = 0
+uc Threshold = 0
+f DetailTextureTilingFactor = 30.000000
+f WaterTextureTilingFactor = 48.000000
+f WaterDetailTilingFactor = 45.000000
+
+[Warriors]
+ul NumWarriors = 73
+
+[Parts]
+ul NumParts = 73
+
+[Warrior1]
+st Profile = "pmp_bubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part1]
+ul ObjectNumber = 874
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 1
+f PositionX = 4160.000488
+f PositionY = -3392.000244
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -12686697
+ul HighlightColor1 = -723830
+ul HighlightColor2 = -4811159
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Bushwacker"
+ul VariantNumber = 0
+ul SquadNum = 42
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 75
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior2]
+st Profile = "pmp_bubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part2]
+ul ObjectNumber = 47
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 2
+f PositionX = 4117.333984
+f PositionY = -3520.000244
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -12686697
+ul HighlightColor1 = -723830
+ul HighlightColor2 = -4811159
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Hollander"
+ul VariantNumber = 0
+ul SquadNum = 43
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 76
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior3]
+st Profile = "pmp_bubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part3]
+ul ObjectNumber = 16
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 3
+f PositionX = 4245.333984
+f PositionY = -3477.333496
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -12686697
+ul HighlightColor1 = -723830
+ul HighlightColor2 = -4811159
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Hunchback"
+ul VariantNumber = 0
+ul SquadNum = 44
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 77
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior4]
+st Profile = "pmp_bubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part4]
+ul ObjectNumber = 45
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 4
+f PositionX = 4032.000244
+f PositionY = -3434.666992
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -12686697
+ul HighlightColor1 = -723830
+ul HighlightColor2 = -4811159
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Werewolf"
+ul VariantNumber = 0
+ul SquadNum = 45
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 78
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior5]
+st Profile = "pmp_bubba"
+st Brain = "PBrain"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part5]
+ul ObjectNumber = 45
+ul ControlType = 2
+b PlayerPart = TRUE
+c MyIcon = 0
+c TeamID = 0
+c CommanderID = 0
+ul Pilot = 5
+f PositionX = 4330.666992
+f PositionY = -3477.333496
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -12686697
+ul HighlightColor1 = -723830
+ul HighlightColor2 = -4811159
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM207300"
+st CSVFile = "Werewolf"
+ul VariantNumber = 0
+ul SquadNum = 267
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 79
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior6]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part6]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 6
+f PositionX = -1471.999756
+f PositionY = 2794.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 87
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 80
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior7]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part7]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 7
+f PositionX = -1472.000000
+f PositionY = 2752.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 88
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 81
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior8]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_shayus"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part8]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 8
+f PositionX = -1727.999756
+f PositionY = 3946.666748
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 89
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 82
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior9]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part9]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 9
+f PositionX = -5568.000000
+f PositionY = 2453.333252
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 90
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 83
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior10]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part10]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 10
+f PositionX = -5568.000000
+f PositionY = 2538.666504
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 92
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 84
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior11]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part11]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 11
+f PositionX = -5568.000000
+f PositionY = 1855.999756
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 93
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 85
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior12]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_anubis"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part12]
+ul ObjectNumber = 53
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 12
+f PositionX = -5269.333008
+f PositionY = 2240.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Anubis"
+ul VariantNumber = 0
+ul SquadNum = 97
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 86
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior13]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_shayus"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part13]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 13
+f PositionX = -5738.666504
+f PositionY = 2410.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 98
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 87
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior14]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part14]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 14
+f PositionX = -5013.333008
+f PositionY = 2794.666504
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 116
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 88
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior15]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part15]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 15
+f PositionX = -2154.666504
+f PositionY = 2880.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 123
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 89
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior16]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_cents"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior16Cell0]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior16Cell1]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior16Cell2]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Part16]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 16
+f PositionX = -2112.000000
+f PositionY = 2197.333252
+f Rotation = -90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 124
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 90
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior17]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part17]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 17
+f PositionX = -2154.666504
+f PositionY = 2666.666504
+f Rotation = -90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 132
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 91
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior18]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_cents"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior18Cell0]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior18Cell1]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior18Cell2]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Part18]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 18
+f PositionX = -2069.333252
+f PositionY = 3050.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 133
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 92
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior19]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_anubis2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part19]
+ul ObjectNumber = 53
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 19
+f PositionX = -3733.333252
+f PositionY = 5354.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Anubis"
+ul VariantNumber = 0
+ul SquadNum = 136
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 93
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior20]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part20]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 20
+f PositionX = -5013.333008
+f PositionY = 2880.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 138
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 94
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior21]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part21]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 21
+f PositionX = -3776.000000
+f PositionY = 4927.999512
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 139
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 95
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior22]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part22]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 22
+f PositionX = 3776.000244
+f PositionY = -1258.666992
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 140
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 96
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior23]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part23]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 23
+f PositionX = 3733.333496
+f PositionY = -1130.666992
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 141
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 97
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior24]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part24]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 24
+f PositionX = 3861.333496
+f PositionY = -1216.000366
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 142
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 98
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior25]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part25]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 25
+f PositionX = 3648.000244
+f PositionY = -1130.666992
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 143
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 99
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior26]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part26]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 26
+f PositionX = 3690.666992
+f PositionY = -1301.333618
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 144
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 100
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior27]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G1_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part27]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 27
+f PositionX = 3605.333496
+f PositionY = -1258.666992
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 145
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 101
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior28]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G2_fires"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part28]
+ul ObjectNumber = 247
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 28
+f PositionX = 2880.000244
+f PositionY = -533.333557
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Flea"
+ul VariantNumber = 0
+ul SquadNum = 147
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 102
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior29]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G2_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part29]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 29
+f PositionX = 3989.333496
+f PositionY = 1215.999756
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 149
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 103
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior30]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G2_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part30]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 30
+f PositionX = 3008.000244
+f PositionY = -448.000244
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 150
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 104
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior31]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G2_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part31]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 31
+f PositionX = 2837.333496
+f PositionY = -405.333588
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 151
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 105
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior32]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part32]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 32
+f PositionX = 3392.000244
+f PositionY = -277.333588
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 153
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 106
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior33]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part33]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 33
+f PositionX = 3264.000244
+f PositionY = -277.333588
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 154
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 107
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior34]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_LRMs"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part34]
+ul ObjectNumber = 201
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 34
+f PositionX = 4074.666992
+f PositionY = 1258.666382
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "LRMC"
+ul VariantNumber = 0
+ul SquadNum = 156
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 108
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior35]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_fires1"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior35Cell0]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior35Cell1]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Warrior35Cell2]
+l Cell = 0
+l MemType = 0
+f Value = 0.000000
+
+[Part35]
+ul ObjectNumber = 247
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 35
+f PositionX = 960.000244
+f PositionY = 1642.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Flea"
+ul VariantNumber = 0
+ul SquadNum = 159
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 109
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior36]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_fires3"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part36]
+ul ObjectNumber = 247
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 36
+f PositionX = 4032.000244
+f PositionY = 1301.333130
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Flea"
+ul VariantNumber = 0
+ul SquadNum = 160
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 110
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior37]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_cents"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part37]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 37
+f PositionX = 4074.666992
+f PositionY = 1173.333130
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 161
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 111
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior38]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy1"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part38]
+ul ObjectNumber = 181
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 38
+f PositionX = 1344.000366
+f PositionY = 1770.666504
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Jeep"
+ul VariantNumber = 0
+ul SquadNum = 170
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 112
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior39]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy6"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part39]
+ul ObjectNumber = 148
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 39
+f PositionX = 1557.333618
+f PositionY = 1983.999756
+f Rotation = -90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "FuelTruck"
+ul VariantNumber = 0
+ul SquadNum = 171
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 113
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior40]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy5"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part40]
+ul ObjectNumber = 150
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 40
+f PositionX = 1386.666992
+f PositionY = 1983.999756
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "CargoTruck"
+ul VariantNumber = 0
+ul SquadNum = 172
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 114
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior41]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_urbies"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part41]
+ul ObjectNumber = 246
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 41
+f PositionX = -618.666504
+f PositionY = 2666.666504
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "UrbanMech"
+ul VariantNumber = 0
+ul SquadNum = 177
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 115
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior42]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_urbies"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part42]
+ul ObjectNumber = 246
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 42
+f PositionX = -618.666504
+f PositionY = 2496.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "UrbanMech"
+ul VariantNumber = 0
+ul SquadNum = 178
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 116
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior43]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E2_shayus2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part43]
+ul ObjectNumber = 1
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 43
+f PositionX = -1642.666504
+f PositionY = 3904.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "ShaYu"
+ul VariantNumber = 0
+ul SquadNum = 180
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 117
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior44]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_fires2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part44]
+ul ObjectNumber = 247
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 44
+f PositionX = 1386.666992
+f PositionY = 1898.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Flea"
+ul VariantNumber = 0
+ul SquadNum = 181
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 118
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior45]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_anubis"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part45]
+ul ObjectNumber = 53
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 45
+f PositionX = -4032.000000
+f PositionY = 5098.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Anubis"
+ul VariantNumber = 0
+ul SquadNum = 188
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 119
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior46]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_anubis2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part46]
+ul ObjectNumber = 53
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 46
+f PositionX = -5354.666504
+f PositionY = 5013.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "Anubis"
+ul VariantNumber = 0
+ul SquadNum = 190
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 120
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior47]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_haras"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part47]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 47
+f PositionX = -5525.333008
+f PositionY = 1941.333130
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 191
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 121
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior48]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_scout_copters2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part48]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 48
+f PositionX = -2410.666504
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 192
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 122
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior49]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_scout_copters1"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part49]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 49
+f PositionX = -2240.000000
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 193
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 123
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior50]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_attck_copters1"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part50]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 50
+f PositionX = -2154.666504
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 194
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 124
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior51]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_attck_copters2"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part51]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 51
+f PositionX = -2026.666504
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 195
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 125
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior52]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_attck_copters3"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part52]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 52
+f PositionX = -2325.333252
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 198
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 126
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior53]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_attck_copters4"
+l NumCells = 0
+l NumStaticVars = 0
+
+[Part53]
+ul ObjectNumber = 234
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 53
+f PositionX = -2496.000000
+f PositionY = 7445.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 1
+st ObjectProfile = "PM101100"
+st CSVFile = "MediumCopter"
+ul VariantNumber = 0
+ul SquadNum = 199
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 127
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior54]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_cents"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior54Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior54Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior54Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part54]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 54
+f PositionX = -2624.000000
+f PositionY = 277.333099
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 264
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 128
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior55]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_cents"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior55Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior55Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior55Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part55]
+ul ObjectNumber = 328
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 55
+f PositionX = -2709.333252
+f PositionY = 277.333099
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Centipede"
+ul VariantNumber = 0
+ul SquadNum = 265
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 129
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior56]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E3_haras"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior56Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior56Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior56Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part56]
+ul ObjectNumber = 118
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 56
+f PositionX = -3178.666504
+f PositionY = 106.666664
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -8351129
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -32704
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Harasser"
+ul VariantNumber = 0
+ul SquadNum = 266
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 130
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior57]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior57Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior57Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior57Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part57]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 57
+f PositionX = -5781.333008
+f PositionY = 4714.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 276
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 131
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior58]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior58Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior58Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior58Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part58]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 58
+f PositionX = -5781.333008
+f PositionY = 4799.999512
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 277
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 132
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior59]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior59Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior59Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior59Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part59]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 59
+f PositionX = -5653.333008
+f PositionY = 5226.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 278
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 133
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior60]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior60Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior60Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior60Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part60]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 60
+f PositionX = -5824.000000
+f PositionY = 4970.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 279
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 134
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior61]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior61Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior61Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior61Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part61]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 61
+f PositionX = -5824.000000
+f PositionY = 4842.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 280
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 135
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior62]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E4_parmor"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior62Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior62Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior62Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part62]
+ul ObjectNumber = 242
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 62
+f PositionX = -5824.000000
+f PositionY = 4757.333008
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -1944008
+ul HighlightColor1 = -2968202
+ul HighlightColor2 = -2968202
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "PoweredArmor"
+ul VariantNumber = 0
+ul SquadNum = 281
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 136
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior63]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior63Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior63Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior63Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part63]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 63
+f PositionX = 960.000244
+f PositionY = 1770.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 282
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 137
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior64]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior64Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior64Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior64Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part64]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 64
+f PositionX = 1002.666931
+f PositionY = 1813.333130
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 283
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 138
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior65]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior65Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior65Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior65Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part65]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 65
+f PositionX = 618.666870
+f PositionY = 2197.333252
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 285
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 139
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior66]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior66Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior66Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior66Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part66]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 66
+f PositionX = 533.333557
+f PositionY = 2112.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 286
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 140
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior67]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior67Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior67Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior67Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part67]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 67
+f PositionX = 533.333557
+f PositionY = 2197.333252
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 287
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 141
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior68]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior68Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior68Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior68Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part68]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 68
+f PositionX = 576.000244
+f PositionY = 2112.000000
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 289
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 142
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior69]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_G3_infantry"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior69Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior69Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior69Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part69]
+ul ObjectNumber = 241
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 69
+f PositionX = 533.333557
+f PositionY = 2154.666504
+f Rotation = 0.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = 16777215
+ul HighlightColor1 = 12632256
+ul HighlightColor2 = 8421504
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Infantry"
+ul VariantNumber = 0
+ul SquadNum = 291
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 143
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior70]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy2"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior70Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior70Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior70Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part70]
+ul ObjectNumber = 149
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 70
+f PositionX = 1344.000366
+f PositionY = 1685.333130
+f Rotation = -180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "Truck"
+ul VariantNumber = 0
+ul SquadNum = 292
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 144
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior71]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy4"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior71Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior71Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior71Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part71]
+ul ObjectNumber = 150
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 71
+f PositionX = 1429.333618
+f PositionY = 1471.999756
+f Rotation = -90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "CargoTruck"
+ul VariantNumber = 0
+ul SquadNum = 294
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 145
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior72]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy3"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior72Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior72Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior72Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part72]
+ul ObjectNumber = 150
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 72
+f PositionX = 1344.000366
+f PositionY = 1557.333130
+f Rotation = 180.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "CargoTruck"
+ul VariantNumber = 0
+ul SquadNum = 295
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 146
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Warrior73]
+st Profile = "PMWGreen"
+st Brain = "mc2_04_E1_Convoy7"
+l NumCells = 3
+l NumStaticVars = 0
+
+[Warrior73Cell0]
+l Cell = 2
+l MemType = 1
+f Value = 150.000000
+
+[Warrior73Cell1]
+l Cell = 9
+l MemType = 0
+f Value = 0.000000
+
+[Warrior73Cell2]
+l Cell = 28
+l MemType = 0
+f Value = 0.000000
+
+[Part73]
+ul ObjectNumber = 150
+ul ControlType = 2
+b PlayerPart = FALSE
+c MyIcon = 0
+c TeamID = 1
+c CommanderID = 1
+ul Pilot = 73
+f PositionX = 1386.666992
+f PositionY = 2112.000000
+f Rotation = 90.000000
+l Active = 1
+l Exists = 1
+f Damage = 0.000000
+ul BaseColor = -5232600
+ul HighlightColor1 = -2245808
+ul HighlightColor2 = -16777216
+ul SelfRepairBehavior = 1
+ul ControlDataType = 2
+st ObjectProfile = "pv20500"
+st CSVFile = "CargoTruck"
+ul VariantNumber = 0
+ul SquadNum = 296
+ul NumAlternatives = 0
+ul AlternativeStartIndex = 147
+l[15] IndicesOfAlternatives = -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+
+[Teams]
+
+[Commander0Group:0]
+l[12] Mates = 1,2,3,4,5,0,0,0,0,0,0,0,
+
+[Commander1Group:0]
+l[12] Mates = 6,7,8,9,10,11,12,13,14,15,16,17,
+
+[Commander1Group:1]
+l[12] Mates = 18,19,20,21,22,23,24,25,26,27,28,29,
+
+[Commander1Group:2]
+l[12] Mates = 30,31,32,33,34,35,36,37,38,39,40,41,
+
+[Commander1Group:3]
+l[12] Mates = 42,43,44,45,46,47,48,49,50,51,52,53,
+
+[Commander1Group:4]
+l[12] Mates = 54,55,56,57,58,59,60,61,62,63,64,65,
+
+[Commander1Group:5]
+l[12] Mates = 66,67,68,69,70,71,72,73,0,0,0,0,
+
+[NavMarker0]
+f xPos = 1898.666992
+f yPos = 1173.333130
+f radius = 256.000000
+
+[NavMarkers]
+ul NumNavMarkers = 1
+
+[Forest0]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 20.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2581.330078
+f CenterY = -3029.330078
+b Random = TRUE
+f Radius = 263.878998
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest1]
+f TreeType0 = 20.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2581.330078
+f CenterY = -3029.330078
+b Random = TRUE
+f Radius = 263.878998
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest2]
+f TreeType0 = 15.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2544.760010
+f CenterY = -2901.330078
+b Random = TRUE
+f Radius = 474.812988
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest3]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 15.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2544.760010
+f CenterY = -2901.330078
+b Random = TRUE
+f Radius = 474.812988
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest4]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 15.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2599.620117
+f CenterY = -2873.899902
+b Random = TRUE
+f Radius = 581.991028
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest5]
+f TreeType0 = 10.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 5.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 5.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 5.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 5.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2869.330078
+f CenterY = -3125.330078
+b Random = TRUE
+f Radius = 207.384003
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest6]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 10.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 3.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2530.129883
+f CenterY = -2854.399902
+b Random = TRUE
+f Radius = 549.721008
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest7]
+f TreeType0 = 1.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 15.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 1.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2819.050049
+f CenterY = -3769.899902
+b Random = TRUE
+f Radius = 235.595001
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest8]
+f TreeType0 = 3.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 1.000000
+f TreeType5 = 15.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 3.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2802.419922
+f CenterY = -3698.419922
+b Random = TRUE
+f Radius = 271.903015
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest9]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 10.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 3221.330078
+f CenterY = -3349.330078
+b Random = TRUE
+f Radius = 128.000000
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest10]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 10.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 3221.330078
+f CenterY = -3349.330078
+b Random = TRUE
+f Radius = 181.018997
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest11]
+f TreeType0 = 10.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 3221.330078
+f CenterY = -3413.330078
+b Random = TRUE
+f Radius = 143.108002
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest12]
+f TreeType0 = 10.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 1.000000
+f TreeType5 = 1.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 1.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2811.729980
+f CenterY = -3669.330078
+b Random = TRUE
+f Radius = 252.455994
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest13]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 1.000000
+f TreeType5 = 1.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 1.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2821.330078
+f CenterY = -3541.330078
+b Random = TRUE
+f Radius = 362.391998
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest14]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 2592.969971
+f CenterY = -3046.790039
+b Random = TRUE
+f Radius = 271.653992
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest15]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2901.330078
+f CenterY = -3477.330078
+b Random = TRUE
+f Radius = 293.285004
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest16]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 3394.510010
+f CenterY = -3725.800049
+b Random = TRUE
+f Radius = 350.096985
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest17]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 3605.330078
+f CenterY = -4398.930176
+b Random = TRUE
+f Radius = 263.567993
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest18]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 2521.100098
+f CenterY = -2362.979980
+b Random = TRUE
+f Radius = 716.877991
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest19]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 2521.100098
+f CenterY = -2362.979980
+b Random = TRUE
+f Radius = 716.877991
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest20]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 3.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 3.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1664.000000
+f CenterY = -3018.669922
+b Random = TRUE
+f Radius = 669.625000
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest21]
+f TreeType0 = 5.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2312.530029
+f CenterY = -1250.130005
+b Random = TRUE
+f Radius = 412.191986
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest22]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 3317.330078
+f CenterY = -2021.329956
+b Random = TRUE
+f Radius = 571.762024
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest23]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 2489.899902
+f CenterY = -2736.760010
+b Random = TRUE
+f Radius = 389.726013
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest24]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 4.000000
+f DensityMax = 3.000000
+f CenterX = 4347.729980
+f CenterY = -1745.069946
+b Random = TRUE
+f Radius = 417.872009
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest25]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4296.529785
+f CenterY = -2222.929932
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest26]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4693.330078
+f CenterY = -2645.330078
+b Random = TRUE
+f Radius = 239.466003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest27]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4309.330078
+f CenterY = -917.333008
+b Random = TRUE
+f Radius = 367.652008
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest28]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4040.530029
+f CenterY = -1454.930054
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest29]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4399.689941
+f CenterY = 1.254940
+b Random = TRUE
+f Radius = 528.898010
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest30]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4885.330078
+f CenterY = -3904.000000
+b Random = TRUE
+f Radius = 248.787003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest31]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 5525.330078
+f CenterY = -676.392029
+b Random = TRUE
+f Radius = 410.957001
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest32]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 5218.129883
+f CenterY = 516.267029
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest33]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 3262.620117
+f CenterY = -677.848999
+b Random = TRUE
+f Radius = 504.588013
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest34]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 3027.050049
+f CenterY = 259.809998
+b Random = TRUE
+f Radius = 631.526978
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest35]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 720.409973
+f CenterY = -1065.030029
+b Random = TRUE
+f Radius = 277.445007
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest36]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 1378.130005
+f CenterY = -942.932983
+b Random = TRUE
+f Radius = 404.772003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest37]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 1403.729980
+f CenterY = -226.132996
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest38]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 860.445007
+f CenterY = 576.000000
+b Random = TRUE
+f Radius = 255.209000
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest39]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 469.333008
+f CenterY = 1130.670044
+b Random = TRUE
+f Radius = 367.652008
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest40]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = -337.066986
+f CenterY = 1732.270020
+b Random = TRUE
+f Radius = 272.433014
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest41]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 192.000000
+f CenterY = 1685.329956
+b Random = TRUE
+f Radius = 159.643997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest42]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = 1301.329956
+f CenterY = -2325.330078
+b Random = TRUE
+f Radius = 181.018997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest43]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 1705.540039
+f CenterY = 470.455994
+b Random = TRUE
+f Radius = 322.946991
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest44]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1152.000000
+f CenterY = 725.333008
+b Random = TRUE
+f Radius = 306.191010
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest45]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 942.932983
+f CenterY = 29.866699
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest46]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 1301.329956
+f CenterY = 2154.669922
+b Random = TRUE
+f Radius = 181.018997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest47]
+f TreeType0 = 7.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 3.000000
+f CenterX = 1301.329956
+f CenterY = 2154.669922
+b Random = TRUE
+f Radius = 181.018997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest48]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 853.333008
+f CenterY = 2090.669922
+b Random = TRUE
+f Radius = 156.766998
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest49]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 498.424011
+f CenterY = 2759.760010
+b Random = TRUE
+f Radius = 302.993011
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest50]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1066.670044
+f CenterY = 2709.330078
+b Random = TRUE
+f Radius = 214.397003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest51]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = -1066.670044
+f CenterY = 2986.669922
+b Random = TRUE
+f Radius = 156.766998
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest52]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 572.718018
+f CenterY = 3828.510010
+b Random = TRUE
+f Radius = 342.923004
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest53]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1219.880005
+f CenterY = 4063.030029
+b Random = TRUE
+f Radius = 271.653992
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest54]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1514.670044
+f CenterY = 2901.330078
+b Random = TRUE
+f Radius = 214.397003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest55]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2101.330078
+f CenterY = 2762.669922
+b Random = TRUE
+f Radius = 207.384003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest56]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 1557.329956
+f CenterY = 3498.669922
+b Random = TRUE
+f Radius = 293.285004
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest57]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 2551.800049
+f CenterY = 3881.030029
+b Random = TRUE
+f Radius = 593.807007
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest58]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = 4428.189941
+f CenterY = 5446.100098
+b Random = TRUE
+f Radius = 259.889008
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest59]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 4.000000
+f DensityMax = 4.000000
+f CenterX = 3963.729980
+f CenterY = 2487.469971
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest60]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 5.000000
+f DensityMax = 5.000000
+f CenterX = 4172.189941
+f CenterY = 1551.239990
+b Random = TRUE
+f Radius = 259.889008
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest61]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 5253.330078
+f CenterY = 506.666992
+b Random = TRUE
+f Radius = 222.854004
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest62]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 6850.509766
+f CenterY = -3198.750000
+b Random = TRUE
+f Radius = 626.799011
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest63]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 5717.330078
+f CenterY = -2517.330078
+b Random = TRUE
+f Radius = 239.466003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest64]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = 5333.330078
+f CenterY = -2645.330078
+b Random = TRUE
+f Radius = 239.466003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest65]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = -499.200012
+f CenterY = -2487.469971
+b Random = TRUE
+f Radius = 747.921021
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest66]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 5.000000
+f CenterX = -1191.109985
+f CenterY = -3160.889893
+b Random = TRUE
+f Radius = 502.151001
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest67]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 4.000000
+f CenterX = -1130.670044
+f CenterY = -4181.330078
+b Random = TRUE
+f Radius = 263.878998
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest68]
+f TreeType0 = 0.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 5.000000
+f TreeType4 = 0.000000
+f TreeType5 = 0.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 0.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 0.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 0.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 7.000000
+f CenterX = -2794.669922
+f CenterY = -1557.329956
+b Random = TRUE
+f Radius = 128.000000
+st Name = "Unanmed Forest -1"
+st FileName = ""
+
+[Forest69]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = -3584.000000
+f CenterY = 2584.379883
+b Random = TRUE
+f Radius = 527.210999
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest70]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -4522.669922
+f CenterY = 2858.669922
+b Random = TRUE
+f Radius = 470.302002
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest71]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -5034.669922
+f CenterY = 3754.669922
+b Random = TRUE
+f Radius = 503.937012
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest72]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -4602.669922
+f CenterY = 4090.669922
+b Random = TRUE
+f Radius = 222.854004
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest73]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 1.000000
+f CenterX = -5226.669922
+f CenterY = 4458.669922
+b Random = TRUE
+f Radius = 221.701996
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest74]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 1.000000
+f CenterX = -5674.669922
+f CenterY = 4842.669922
+b Random = TRUE
+f Radius = 192.000000
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest75]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -5674.669922
+f CenterY = 4842.669922
+b Random = TRUE
+f Radius = 192.000000
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest76]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -5559.470215
+f CenterY = 5380.270020
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest77]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -4778.669922
+f CenterY = 5546.669922
+b Random = TRUE
+f Radius = 239.466003
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest78]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = -3975.110107
+f CenterY = 5560.890137
+b Random = TRUE
+f Radius = 359.023010
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest79]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 3.000000
+f DensityMax = 3.000000
+f CenterX = -3516.120117
+f CenterY = 5412.850098
+b Random = TRUE
+f Radius = 473.815002
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest80]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -2346.669922
+f CenterY = 5610.669922
+b Random = TRUE
+f Radius = 263.878998
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest81]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -3198.879883
+f CenterY = 4071.300049
+b Random = TRUE
+f Radius = 681.429993
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest82]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 2.000000
+f DensityMax = 2.000000
+f CenterX = -3754.669922
+f CenterY = 3818.669922
+b Random = TRUE
+f Radius = 143.108002
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest83]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -7012.569824
+f CenterY = 6201.899902
+b Random = TRUE
+f Radius = 495.816010
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest84]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -5820.950195
+f CenterY = 2831.239990
+b Random = TRUE
+f Radius = 373.069000
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest85]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -6058.669922
+f CenterY = 1834.670044
+b Random = TRUE
+f Radius = 300.187012
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest86]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 0.001000
+f DensityMax = 1.000000
+f CenterX = -6411.700195
+f CenterY = 325.506012
+b Random = TRUE
+f Radius = 636.969971
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Forest87]
+f TreeType0 = 6.000000
+f TreeType1 = 0.000000
+f TreeType2 = 0.000000
+f TreeType3 = 0.000000
+f TreeType4 = 2.000000
+f TreeType5 = 2.000000
+f TreeType6 = 0.000000
+f TreeType7 = 0.000000
+f TreeType8 = 2.000000
+f TreeType9 = 0.000000
+f TreeType10 = 0.000000
+f TreeType11 = 2.000000
+f TreeType12 = 0.000000
+f TreeType13 = 0.000000
+f TreeType14 = 2.000000
+f HeightMin = 0.750000
+f HeightMax = 1.250000
+f DensityMin = 1.000000
+f DensityMax = 1.000000
+f CenterX = -2001.069946
+f CenterY = 1335.469971
+b Random = TRUE
+f Radius = 206.393997
+st Name = "Unanmed Forest -1"
+st FileName = "C:\MC2\MC2 Latest Build\data\terrain\mc2_04_forest1.fit"
+
+[Artillery]
+l NumLargeStrikes = 0
+l NumSmallStrikes = 0
+l NumSensorStrikes = 0
+l NumCameraStrikes = 0
+
+[MissionSettings]
+st MissionName = "mc2_04 Search and Destroy the Bandit Convoy"
+b MissionNameUseResourceString = TRUE
+ul MissionNameResourceStringID = 57004
+st Author = ""
+st Blurb = ""
+b BlurbUseResourceString = TRUE
+ul BlurbResourceStringID = 55004
+st Blurb2 = ""
+b Blurb2UseResourceString = TRUE
+ul Blurb2ResourceStringID = 56004
+f TimeLimit = -1.000000
+f DropWeightLimit = 205.000000
+l ResourcePoints = 16000
+ul IsSinglePlayer = 1
+ul MaximumNumberOfTeams = 2
+ul MaximumNumberOfPlayers = 2
+uc scenarioTuneNum = 2
+st AVIFilename = ""
+l AdditionalCBills = 0
+ul NumRandomRPbuildings = 0
+st DownloadURL = ""
+ul MissionType = 0
+b AirStrikesEnabledDefault = TRUE
+b MineLayersEnabledDefault = TRUE
+b ScoutCoptersEnabledDefault = TRUE
+b SensorProbesEnabledDefault = TRUE
+b UnlimitedAmmoEnabledDefault = TRUE
+b AllTechEnabledDefault = TRUE
+b RepairVehicleEnabledDefault = TRUE
+b SalvageCraftEnabledDefault = TRUE
+b ResourceBuildingsEnabledDefault = TRUE
+b NoVariantsEnabledDefault = TRUE
+b ArtilleryPieceEnabledDefault = TRUE
+b RPsForMechsEnabledDefault = TRUE
+
+[Weather]
+ul MaxRainDrops = 0
+f StartingRainLevel = 0.000000
+l ChanceOfRain = 0
+f BaseLighteningChance = 0.000000
+
+[TheSky]
+l SkyNumber = 1
+
+[Objectives Version]
+ul Version = 3
+
+[Team0Objectives]
+ul NumObjectives = 6
+
+[Team0Objective0]
+st Title = "1 - Move to Bandit Convoy's Last Known Location"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50018
+st Description = "1 - Move to Bandit Convoy's Last Known Location"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50018
+ul Priority = 1
+ul ResourcePoints = 14000
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = 1856.000000
+f MarkerY = 1130.666992
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = "Nav1"
+l ModelType = 14
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = 290
+f ModelScale = 1.000000
+
+[Team0Objective0Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 1856.000000
+f TargetCenterY = 1130.666992
+f TargetRadius = 256.000000
+
+[Team0Objective0Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "2"
+b Value = TRUE
+
+[Team0Objective1]
+st Title = "2 - Destroy Bandit Supply Convoy"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50019
+st Description = "2 - Destroy Bandit Supply Convoy"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50019
+ul Priority = 1
+ul ResourcePoints = 21000
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 1472.000000
+f MarkerY = 2112.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = "2"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 7
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = "CargoTruck"
+l ModelType = 5
+l BaseColor = -2245808
+l HighlightColor = -16777216
+l HighlightColor2 = -5232600
+ul ModelID Version = 2
+l ModelID = 150
+f ModelScale = 1.000000
+
+[Team0Objective1Condition0]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1344.000366
+f PositionY = 1770.666504
+ul CellX = 138
+ul CellY = 211
+ul Commander = 1
+ul Group = 32
+ul Mate = 0
+
+[Team0Objective1Condition1]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1344.000366
+f PositionY = 1685.333130
+ul CellX = 140
+ul CellY = 211
+ul Commander = 1
+ul Group = 64
+ul Mate = 0
+
+[Team0Objective1Condition2]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1344.000366
+f PositionY = 1557.333130
+ul CellX = 143
+ul CellY = 211
+ul Commander = 1
+ul Group = 66
+ul Mate = 0
+
+[Team0Objective1Condition3]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1429.333618
+f PositionY = 1471.999756
+ul CellX = 145
+ul CellY = 213
+ul Commander = 1
+ul Group = 65
+ul Mate = 0
+
+[Team0Objective1Condition4]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1386.666992
+f PositionY = 1983.999756
+ul CellX = 133
+ul CellY = 212
+ul Commander = 1
+ul Group = 34
+ul Mate = 0
+
+[Team0Objective1Condition5]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1557.333618
+f PositionY = 1983.999756
+ul CellX = 133
+ul CellY = 216
+ul Commander = 1
+ul Group = 33
+ul Mate = 0
+
+[Team0Objective1Condition6]
+ul ConditionSpecies = 3
+st ConditionSpeciesString = "DestroySpecificEnemyUnit"
+f PositionX = 1386.666992
+f PositionY = 2112.000000
+ul CellX = 130
+ul CellY = 212
+ul Commander = 1
+ul Group = 67
+ul Mate = 0
+
+[Team0Objective1Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "0"
+b Value = TRUE
+
+[Team0Objective2]
+st Title = "3 - Capture Weapon's Facility"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50020
+st Description = "3 - Capture Weapon's Facility"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50020
+ul Priority = 1
+ul ResourcePoints = 18000
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = TRUE
+f MarkerX = -3989.000000
+f MarkerY = 5056.000000
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = "WeaponsFacility"
+l ModelType = 14
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = 417
+f ModelScale = 0.400000
+
+[Team0Objective2Condition0]
+ul ConditionSpecies = 15
+st ConditionSpeciesString = "CaptureSpecificStructure"
+f PositionX = -3989.333252
+f PositionY = 5056.000000
+ul CellX = 61
+ul CellY = 86
+ul Commander = 1
+
+[Team0Objective3]
+st Title = "4 - Extract all surviving mechs"
+b TitleUseResourceString = TRUE
+ul TitleResourceStringID = 50021
+st Description = "4 - Extract all surviving mechs"
+b DescriptionUseResourceString = TRUE
+ul DescriptionResourceStringID = 50021
+ul Priority = 1
+ul ResourcePoints = 9500
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = TRUE
+b DisplayMarker = TRUE
+f MarkerX = -6677.330078
+f MarkerY = 6165.330078
+b HiddenTrigger = FALSE
+b ActivateOnFlag = TRUE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 0
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = "ExtractionMarker"
+l ModelType = 14
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = 289
+f ModelScale = 1.000000
+
+[Team0Objective3Condition0]
+ul ConditionSpecies = 21
+st ConditionSpeciesString = "MoveAllSurvivingMechsToArea"
+f TargetCenterX = -6677.333008
+f TargetCenterY = 6165.333008
+f TargetRadius = 256.000000
+
+[Team0Objective4]
+st Title = "Hidden Trigger to popup last 2 Objectives"
+b TitleUseResourceString = FALSE
+ul TitleResourceStringID = 50005
+st Description = "Hidden Trigger to popup last 2 Objectives"
+b DescriptionUseResourceString = FALSE
+ul DescriptionResourceStringID = 50005
+ul Priority = 2
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 0.000000
+f MarkerY = 0.000000
+b HiddenTrigger = TRUE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective4Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = 64.000000
+f TargetCenterY = 2368.000000
+f TargetRadius = 750.000000
+
+[Team0Objective4Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "0"
+b Value = TRUE
+
+[Team0Objective5]
+st Title = "2nd Hidden Trigger to popup last 2 Objectives"
+b TitleUseResourceString = FALSE
+ul TitleResourceStringID = 50005
+st Description = "2nd Hidden Trigger to popup last 2 Objectives"
+b DescriptionUseResourceString = FALSE
+ul DescriptionResourceStringID = 50005
+ul Priority = 2
+ul ResourcePoints = 0
+b PreviousPrimaryObjectiveMustBeComplete = FALSE
+b AllPreviousPrimaryObjectivesMustBeComplete = FALSE
+b DisplayMarker = FALSE
+f MarkerX = 0.000000
+f MarkerY = 0.000000
+b HiddenTrigger = TRUE
+b ActivateOnFlag = FALSE
+st ActivateFlagID = "0"
+b ResetStatusOnFlag = FALSE
+st ResetStatusFlagID = ""
+ul NumConditions = 1
+ul NumActions = 1
+ul NumFailureConditions = 0
+ul NumFailureActions = 0
+st ObjectiveModel = ""
+l ModelType = 0
+l BaseColor = -1
+l HighlightColor = -1
+l HighlightColor2 = -1
+ul ModelID Version = 2
+l ModelID = -1
+f ModelScale = 1.000000
+
+[Team0Objective5Condition0]
+ul ConditionSpecies = 18
+st ConditionSpeciesString = "MoveAnyUnitToArea"
+f TargetCenterX = -192.000000
+f TargetCenterY = 3904.000000
+f TargetRadius = 500.000000
+
+[Team0Objective5Action0]
+ul ActionSpecies = 4
+st ActionSpeciesString = "SetBooleanFlag"
+st FlagID = "0"
+b Value = TRUE
+
+[Team1Objectives]
+ul NumObjectives = 0
+
+[Team2Objectives]
+ul NumObjectives = 0
+
+[Team3Objectives]
+ul NumObjectives = 0
+
+[Team4Objectives]
+ul NumObjectives = 0
+
+[Team5Objectives]
+ul NumObjectives = 0
+
+[Team6Objectives]
+ul NumObjectives = 0
+
+[Team7Objectives]
+ul NumObjectives = 0
+
+[Player0]
+ul DefaultTeam = 0
+
+[Player1]
+ul DefaultTeam = 1
+
+[Player2]
+ul DefaultTeam = 0
+
+[Player3]
+ul DefaultTeam = 0
+
+[Player4]
+ul DefaultTeam = 0
+
+[Player5]
+ul DefaultTeam = 0
+
+[Player6]
+ul DefaultTeam = 0
+
+[Player7]
+ul DefaultTeam = 0
+
+[Music]
+uc scenarioTuneNum = 0
+
+[Script]
+st ScenarioScript = "mc2_04"
+FITend 

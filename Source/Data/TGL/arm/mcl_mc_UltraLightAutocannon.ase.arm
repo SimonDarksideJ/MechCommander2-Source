@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="80DC4824012837F6F5CAB1781EFC345C" />
+  <Asset Name="..\mcl_mc_UltraLightAutocannon.ase" Type="Physical" Author="ngauvin" FileSize="193142" ModificationTime="2006-02-01T10:55:11.7952337-08:00" CRC="D73E80D77D172F172CD5EA35D078EE0F" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\UltraLightAC.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

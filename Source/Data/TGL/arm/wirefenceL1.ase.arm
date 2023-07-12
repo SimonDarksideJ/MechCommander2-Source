@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="68DA58E453CA18D76AE84914828EA42B" />
+  <Asset Name="..\wirefenceL1.ase" Type="Physical" Author="ngauvin" FileSize="5132" ModificationTime="2006-02-01T10:55:39.4829109-08:00" CRC="57B9586749F6FE52AC2425640E8EC4E5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_wirefence.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

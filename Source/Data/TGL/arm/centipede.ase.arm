@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="C65BA022B5F1BA11BE17693EFF041682" />
+  <Asset Name="..\centipede.ase" Type="Physical" Author="ngauvin" FileSize="52717" ModificationTime="2006-02-01T10:54:40.4669082-08:00" CRC="5575F00EC2B675A6B86F3CF8B3AAF5A5" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\Centipede.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

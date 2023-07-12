@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="29B55D648E8519BB0F3EF1527A6EFBD2" />
+  <Asset Name="..\CamoNetting.ase" Type="Physical" Author="ngauvin" FileSize="25643" ModificationTime="2006-02-01T10:54:39.5450273-08:00" CRC="5C9274DEF07A4C4B487759BEA4ADCE67" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_cammo.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

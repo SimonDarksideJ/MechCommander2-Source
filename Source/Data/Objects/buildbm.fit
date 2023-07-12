@@ -1,0 +1,30 @@
+FITini
+
+// This is the Generic building explosion
+
+[ObjectClass]
+l ObjectTypeNum = 4
+
+[ObjectType]
+st Name 			= "stra"		// Text string giving a descriptive name  (only 8 chars long!!)
+l MaxDamage			= 0			// Number of damage points before BOOM!
+l ExplosionObject		= -1			// Object Class Number of explosion for Mech
+l DestroyedObject		= 0			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius			= 0			// Extent Radius in Meters
+
+[ExplosionData]
+ul DmgLevel			= 0
+ul SoundEffectId		= 35
+
+[LightData]
+f LightMinMaxRadius		= 50.0
+f LightMaxMaxRadius		= 150.0
+f LightOutMinRadius		= 250.0
+f LightOutMaxRadius		= 500.0
+ul LightRGB			= 0x00ffffff
+f MaxIntensity			= 1.0
+f MinIntensity			= 0.05
+f Duration			= 3.0
+
+FITend
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="B419C328CCCCE6DF71C5784648025B11" />
+  <Asset Name="..\trafcon2.ini" Type="Physical" Author="franksav" FileSize="655" ModificationTime="2006-03-03T01:28:53.8984755-08:00" CRC="3A9A909083C417999B53D2159F601B43" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Object Definition" Version="1.0" />
+      <Relationships>
+        <Relationship Type="LOD Shape" RelatedAsset="trafcon2.ase" LOD="00" />
+        <Relationship Type="LOD Shape" RelatedAsset="Trafcon2L1.ase" LOD="00" />
+        <Relationship Type="Main Shape" RelatedAsset="Trafcon2L1.ase" />
+        <Relationship Type="Shadow Shape" RelatedAsset="Trafcon2X.ase" />
+        <Relationship Type="Animation" RelatedAsset="trafcon2.ase" />
+        <Relationship Type="Damage Shape" RelatedAsset="trafcon2dam.ase" />
+        <Relationship Type="Damage Shadow Shape" RelatedAsset="Trafcon2DamX.ase" />
+      </Relationships>
+    </DataProvider>
+    <DataProvider Name="MC2Editor" Version="00.06.01.0614" Type="Secondary">
+      <Annotations DisplayName="Space Traffic Control" ObjectType="Building" BuildingType="Unspecial" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

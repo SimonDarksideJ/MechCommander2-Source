@@ -1,0 +1,38 @@
+FITini
+
+// MechWarrior iniFile
+
+[General]
+
+st Name =                       "Kermit"
+st Callsign =                   "KERMY"
+ul ID =                         1050
+ul Profile =					1000
+ul HeadIcon =					1050
+ul Video =						1500
+
+[PersonalityTraits]
+c Professionalism =				45
+c Decorum =						55
+c Aggressiveness =				60
+c Courage =						80
+
+[Skills]
+c Piloting =					50
+c Jumping =						50
+c Sensors =						50
+c TargetingShort =				50
+c TargetingMedium =				50
+c TargetingLong =				50
+
+[Affinities]
+c MechClass =					0
+c MechType =					1
+c WeaponClass =					2
+uc[2] WeaponTypes =				10,
+								15
+
+[Status]
+c Wounds =						0
+
+FITend

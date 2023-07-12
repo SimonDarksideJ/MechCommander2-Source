@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="A61AB5741CA29AB6A6FA1905B5DBA7E4" />
+  <Asset Name="..\civStorageCX.ase" Type="Physical" Author="ngauvin" FileSize="11851" ModificationTime="2006-02-01T10:54:42.7481728-08:00" CRC="434B1BE146F2F7E566B09B50C00E7F5B" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_CivStorageCL1X.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

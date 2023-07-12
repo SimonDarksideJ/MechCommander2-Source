@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="325020EC08032C53388BF04A226D6C26" />
+  <Asset Name="..\Junk5X.ase" Type="Physical" Author="ngauvin" FileSize="14542" ModificationTime="2006-02-01T10:55:02.3732984-08:00" CRC="84B8FDAC38B40FED7F1EF3E67EED8E41" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships>
+        <Relationship Type="Texture" RelatedAsset="128\A_Junk1X.tga" />
+      </Relationships>
+    </DataProvider>
+  </DataProviders>
+</ARM>

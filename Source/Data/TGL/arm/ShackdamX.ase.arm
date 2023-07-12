@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ARM xmlns="http://tempuri.org/ARMSchema.xsd">
+  <Header APIVersion="1.0.0.0" SchemaVersion="1.0" ARMHash="AC8A9C4F673CB257A7950D7BA00936B2" />
+  <Asset Name="..\ShackdamX.ase" Type="Physical" Author="ngauvin" FileSize="14277" ModificationTime="2006-02-01T10:55:28.092213-08:00" CRC="F21B1D33CF16CE6F58612E6494BBB521" />
+  <DataProviders>
+    <DataProvider Name="AseConv" Version="00.05.10.2712" Type="Primary">
+      <Annotations Type="Shape" />
+      <Relationships />
+    </DataProvider>
+  </DataProviders>
+</ARM>

@@ -1,0 +1,20 @@
+FITini
+
+[ObjectClass]
+l ObjectTypeNum = 2
+
+[ObjectType]
+st Name							= "Loki"		// Text string giving a descriptive name  (only 8 chars long!!)
+l ExplosionObject					= 41			// Object Class Number of explosion for Mech
+l DestroyedObject					= 101			// Object Class Number of Destroyed shape for Mech
+f ExtentRadius						= 12			// Extent Radius in Meters
+st AppearanceName					= "loki"
+
+[MechProfile]
+st ProfileName						= "loki"
+f destructdamage					= 55
+f explosiondamage					= 25
+f explosionradius					= 80
+
+FITEnd
+
